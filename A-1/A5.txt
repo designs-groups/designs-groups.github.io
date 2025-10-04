@@ -3,6 +3,7 @@
 # Group (autSubgroup): A5
 # Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 2, 0, 2 ]
 #---------------------------------------------------------------------------------
+This is the all the designs
 
 # Parameters:  [ 5, 10, 6, 3, 3 ]
 # Complement:  [ 5, 10, 4, 2, 1 ]
