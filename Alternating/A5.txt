@@ -1,0 +1,68 @@
+#---------------------------------------------------------------------------------
+# Flag-transitive 2-designs
+# Group (autSubgroup): A5
+# Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 2, 0, 2 ]
+#---------------------------------------------------------------------------------
+
+# Parameters:  [ 5, 10, 6, 3, 3 ]
+# Complement:  [ 5, 10, 4, 2, 1 ]
+# autGroup     S5
+# autSubgroup: A5
+# More information: [ autGroup , autSubgroup ]
+# Rank:             [ 2, 2 ]
+# 2-Homogeneous:    [ true, true ]
+# Point-stabiliser: [ "S4", "A4" ]
+# Block-stabiliser: [ "D12", "S3" ]
+# Orbit length point-stabiliser: [ 1^{1}4^{1} , 1^{1}4^{1} ]
+# Orbit length block-stabiliser: [ 2^{1}3^{1} , 2^{1}3^{1} ]
+# Point-transitive:     [ true, true ]
+# Block-transitive:     [ true, true ]
+# Flag-transitive:      [ true, true ]
+# Anti-flag-transitive: [ true, true ]
+# Point-primitive:      [ true, true ]
+# Point-primitive type: [ "2", "2" ]
+# Block-primitive:      [ true, true ]
+# Block-primitive type: [ "2", "2" ]
+# Flag-regular:         [ false, false ]
+# Base block:
+[ 2, 4, 5 ]
+# Generators of autGroup:
+[ (3,5), (1,4,5,2) ]
+# Generators of autSubgroup:
+[ (1,2,4), (1,3)(2,5) ]
+
+# Parameters:  [ 6, 10, 5, 3, 2 ]
+# Complement:  [ 6, 10, 5, 3, 2 ]
+# autGroup     A5
+# autSubgroup: A5
+# More information: [ autGroup , autSubgroup ]
+# Rank:             [ 2, 2 ]
+# 2-Homogeneous:    [ true, true ]
+# Point-stabiliser: [ "D10", "D10" ]
+# Block-stabiliser: [ "S3", "S3" ]
+# Orbit length point-stabiliser: [ 1^{1}5^{1} , 1^{1}5^{1} ]
+# Orbit length block-stabiliser: [ 3^{2} , 3^{2} ]
+# Point-transitive:     [ true, true ]
+# Block-transitive:     [ true, true ]
+# Flag-transitive:      [ true, true ]
+# Anti-flag-transitive: [ true, true ]
+# Point-primitive:      [ true, true ]
+# Point-primitive type: [ "2", "2" ]
+# Block-primitive:      [ true, true ]
+# Block-primitive type: [ "2", "2" ]
+# Flag-regular:         [ false, false ]
+# Base block:
+[ 1, 2, 3 ]
+# Generators of autGroup:
+[ (1,2)(5,6), (1,6,4,3,5) ]
+# Generators of autSubgroup:
+[ (1,4,3)(2,6,5), (1,3)(4,6) ]
+
+[ rec( autGroup := [ (3,5), (1,4,5,2) ], autStructures := [ "S5", "A5" ], autSubgroup := [ (1,2,4), (1,3)(2,5) ], baseBlock := [ 2, 4, 5 ],
+      blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 2, 5 ], [ 1, 3, 4 ], [ 1, 3, 5 ], [ 1, 4, 5 ], [ 2, 3, 4 ], [ 2, 3, 5 ],
+          [ 2, 4, 5 ], [ 3, 4, 5 ] ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 5, 10, 6, 3, 3 ],
+      parametersc := [ 5, 10, 4, 2, 1 ], r := 6, tSubsetStructure := rec( lambdas := [ 3 ], t := 2 ), v := 5 ),
+  rec( autGroup := [ (1,2)(5,6), (1,6,4,3,5) ], autStructures := [ "A5", "A5" ], autSubgroup := [ (1,4,3)(2,6,5), (1,3)(4,6) ], baseBlock := [ 1, 2, 3 ],
+      blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 5 ], [ 1, 4, 6 ], [ 1, 5, 6 ], [ 2, 3, 6 ], [ 2, 4, 5 ], [ 2, 5, 6 ],
+          [ 3, 4, 5 ], [ 3, 4, 6 ] ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 6, 10, 5, 3, 2 ],
+      parametersc := [ 6, 10, 5, 3, 2 ], r := 5, tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ), v := 6 ) ]

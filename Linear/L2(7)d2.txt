@@ -1,0 +1,153 @@
+#--------------------------------------------------------------------------------- 
+# Flag-transitive 2-designs 
+# Group (autSubgroup): L2(7).2
+# Number of non-isomorphic designs: 4
+#--------------------------------------------------------------------------------- 
+
+# Parameters:  [ 8, 28, 21, 6, 15 ]
+# Complement:  [ 8, 28, 7, 2, 1 ]
+# autGroup     S8
+# autSubgroup: PSL(3,2) : C2
+# More information: [ autGroup , autSubgroup ]
+# Rank:             [ 2, 2 ]
+# 2-Homogeneous:    [ true, true ]
+# Point-stabiliser: [ "S7", "C7 : C6" ]
+# Block-stabiliser: [ "C2 x S6", "D12" ]
+# Orbit length point-stabiliser: [ 1^{1}7^{1} , 1^{1}7^{1} ] 
+# Orbit length block-stabiliser: [ 2^{1}6^{1} , 2^{1}6^{1} ] 
+# Point-transitive:     [ true, true ]
+# Block-transitive:     [ true, true ]
+# Flag-transitive:      [ true, true ]
+# Anti-flag-transitive: [ true, true ]
+# Point-primitive:      [ true, true ]
+# Point-primitive type: [ "2", "2" ]
+# Block-primitive:      [ true, true ]
+# Block-primitive type: [ "2", "2" ]
+# Base block: 
+[ 1, 2, 3, 4, 5, 6 ]
+# Generators of autGroup: 
+[ (1,3,2,6,5,7,8,4), (1,6,4,2,8,7,5) ]
+# Generators of autSubgroup: 
+[ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ]
+
+# Parameters:  [ 8, 28, 14, 4, 6 ]
+# Complement:  [ 8, 28, 14, 4, 6 ]
+# autGroup     PSL(3,2) : C2
+# autSubgroup: PSL(3,2) : C2
+# More information: [ autGroup , autSubgroup ]
+# Rank:             [ 2, 2 ]
+# 2-Homogeneous:    [ true, true ]
+# Point-stabiliser: [ "C7 : C6", "C7 : C6" ]
+# Block-stabiliser: [ "A4", "A4" ]
+# Orbit length point-stabiliser: [ 1^{1}7^{1} , 1^{1}7^{1} ] 
+# Orbit length block-stabiliser: [ 4^{2} , 4^{2} ] 
+# Point-transitive:     [ true, true ]
+# Block-transitive:     [ true, true ]
+# Flag-transitive:      [ true, true ]
+# Anti-flag-transitive: [ true, true ]
+# Point-primitive:      [ true, true ]
+# Point-primitive type: [ "2", "2" ]
+# Block-primitive:      [ false, false ]
+# Block-primitive type: [ [ 1, 28 ], [ 1, 28 ] ]
+# Base block: 
+[ 1, 2, 3, 4 ]
+# Generators of autGroup: 
+[ (1,4,5,8,7,2,6,3), (1,2,3,8,4,7,5,6) ]
+# Generators of autSubgroup: 
+[ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ]
+
+# Parameters:  [ 8, 42, 21, 4, 9 ]
+# Complement:  [ 8, 42, 21, 4, 9 ]
+# autGroup     PSL(3,2) : C2
+# autSubgroup: PSL(3,2) : C2
+# More information: [ autGroup , autSubgroup ]
+# Rank:             [ 2, 2 ]
+# 2-Homogeneous:    [ true, true ]
+# Point-stabiliser: [ "C7 : C6", "C7 : C6" ]
+# Block-stabiliser: [ "D8", "D8" ]
+# Orbit length point-stabiliser: [ 1^{1}7^{1} , 1^{1}7^{1} ] 
+# Orbit length block-stabiliser: [ 4^{2} , 4^{2} ] 
+# Point-transitive:     [ true, true ]
+# Block-transitive:     [ true, true ]
+# Flag-transitive:      [ true, true ]
+# Anti-flag-transitive: [ true, true ]
+# Point-primitive:      [ true, true ]
+# Point-primitive type: [ "2", "2" ]
+# Block-primitive:      [ false, false ]
+# Block-primitive type: [ [ 1, 42 ], [ 1, 42 ] ]
+# Base block: 
+[ 1, 2, 3, 6 ]
+# Generators of autGroup: 
+[ (1,4,5,6,2,7), (1,8,2,7,6,4,5,3) ]
+# Generators of autSubgroup: 
+[ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ]
+
+# Parameters:  [ 8, 56, 21, 3, 6 ]
+# Complement:  [ 8, 56, 35, 5, 20 ]
+# autGroup     S8
+# autSubgroup: PSL(3,2) : C2
+# More information: [ autGroup , autSubgroup ]
+# Rank:             [ 2, 2 ]
+# 2-Homogeneous:    [ true, true ]
+# Point-stabiliser: [ "S7", "C7 : C6" ]
+# Block-stabiliser: [ "S5 x S3", "S3" ]
+# Orbit length point-stabiliser: [ 1^{1}7^{1} , 1^{1}7^{1} ] 
+# Orbit length block-stabiliser: [ 3^{1}5^{1} , 2^{1}3^{2} ] 
+# Point-transitive:     [ true, true ]
+# Block-transitive:     [ true, true ]
+# Flag-transitive:      [ true, true ]
+# Anti-flag-transitive: [ true, false ]
+# Point-primitive:      [ true, true ]
+# Point-primitive type: [ "2", "2" ]
+# Block-primitive:      [ true, false ]
+# Block-primitive type: [ "2", [ 1, 56 ] ]
+# Base block: 
+[ 1, 2, 3 ]
+# Generators of autGroup: 
+[ (1,8,6,3,4,7,5), (1,2,4)(3,8) ]
+# Generators of autSubgroup: 
+[ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ]
+
+lD := 
+[   rec( autGroup := Group([ (1,3,2,6,5,7,8,4), (1,6,4,2,8,7,5) ]), autStructures := [ "S8", "PSL(3,2) : C2" ], 
+        autSubgroup := Group([ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ]), blockSizes := [ 6 ], 
+        blocks := [ [ 1, 2, 3, 4, 5, 6 ], [ 1, 2, 3, 4, 5, 7 ], [ 1, 2, 3, 4, 5, 8 ], [ 1, 2, 3, 4, 6, 7 ], 
+            [ 1, 2, 3, 4, 6, 8 ], [ 1, 2, 3, 4, 7, 8 ], [ 1, 2, 3, 5, 6, 7 ], [ 1, 2, 3, 5, 6, 8 ], 
+            [ 1, 2, 3, 5, 7, 8 ], [ 1, 2, 3, 6, 7, 8 ], [ 1, 2, 4, 5, 6, 7 ], [ 1, 2, 4, 5, 6, 8 ], 
+            [ 1, 2, 4, 5, 7, 8 ], [ 1, 2, 4, 6, 7, 8 ], [ 1, 2, 5, 6, 7, 8 ], [ 1, 3, 4, 5, 6, 7 ], 
+            [ 1, 3, 4, 5, 6, 8 ], [ 1, 3, 4, 5, 7, 8 ], [ 1, 3, 4, 6, 7, 8 ], [ 1, 3, 5, 6, 7, 8 ], 
+            [ 1, 4, 5, 6, 7, 8 ], [ 2, 3, 4, 5, 6, 7 ], [ 2, 3, 4, 5, 6, 8 ], [ 2, 3, 4, 5, 7, 8 ], 
+            [ 2, 3, 4, 6, 7, 8 ], [ 2, 3, 5, 6, 7, 8 ], [ 2, 4, 5, 6, 7, 8 ], [ 3, 4, 5, 6, 7, 8 ] ], isBinary := true, 
+        isBlockDesign := true, isSimple := true, parameters := [ 8, 28, 21, 6, 15 ], parametersc := [ 8, 28, 7, 2, 1 ], 
+        r := 21, tSubsetStructure := rec( lambdas := [ 15 ], t := 2 ), v := 8 ), 
+    rec( autGroup := Group([ (1,4,5,8,7,2,6,3), (1,2,3,8,4,7,5,6) ]), 
+        autStructures := [ "PSL(3,2) : C2", "PSL(3,2) : C2" ], autSubgroup := Group([ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ])
+            , blockSizes := [ 4 ], blocks := [ [ 1, 2, 3, 4 ], [ 1, 2, 3, 5 ], [ 1, 2, 4, 7 ], [ 1, 2, 5, 8 ], 
+            [ 1, 2, 6, 7 ], [ 1, 2, 6, 8 ], [ 1, 3, 4, 8 ], [ 1, 3, 5, 6 ], [ 1, 3, 6, 7 ], [ 1, 3, 7, 8 ], 
+            [ 1, 4, 5, 6 ], [ 1, 4, 5, 7 ], [ 1, 4, 6, 8 ], [ 1, 5, 7, 8 ], [ 2, 3, 4, 6 ], [ 2, 3, 5, 7 ], 
+            [ 2, 3, 6, 8 ], [ 2, 3, 7, 8 ], [ 2, 4, 5, 6 ], [ 2, 4, 5, 8 ], [ 2, 4, 7, 8 ], [ 2, 5, 6, 7 ], 
+            [ 3, 4, 5, 7 ], [ 3, 4, 5, 8 ], [ 3, 4, 6, 7 ], [ 3, 5, 6, 8 ], [ 4, 6, 7, 8 ], [ 5, 6, 7, 8 ] ], 
+        isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 8, 28, 14, 4, 6 ], 
+        parametersc := [ 8, 28, 14, 4, 6 ], r := 14, tSubsetStructure := rec( lambdas := [ 6 ], t := 2 ), v := 8 ), 
+    rec( autGroup := Group([ (1,4,5,6,2,7), (1,8,2,7,6,4,5,3) ]), autStructures := [ "PSL(3,2) : C2", "PSL(3,2) : C2" ],
+        autSubgroup := Group([ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ]), blockSizes := [ 4 ], 
+        blocks := [ [ 1, 2, 3, 6 ], [ 1, 2, 3, 7 ], [ 1, 2, 3, 8 ], [ 1, 2, 4, 5 ], [ 1, 2, 4, 6 ], [ 1, 2, 4, 8 ], 
+            [ 1, 2, 5, 6 ], [ 1, 2, 5, 7 ], [ 1, 2, 7, 8 ], [ 1, 3, 4, 5 ], [ 1, 3, 4, 6 ], [ 1, 3, 4, 7 ], 
+            [ 1, 3, 5, 7 ], [ 1, 3, 5, 8 ], [ 1, 3, 6, 8 ], [ 1, 4, 5, 8 ], [ 1, 4, 6, 7 ], [ 1, 4, 7, 8 ], 
+            [ 1, 5, 6, 7 ], [ 1, 5, 6, 8 ], [ 1, 6, 7, 8 ], [ 2, 3, 4, 5 ], [ 2, 3, 4, 7 ], [ 2, 3, 4, 8 ], 
+            [ 2, 3, 5, 6 ], [ 2, 3, 5, 8 ], [ 2, 3, 6, 7 ], [ 2, 4, 5, 7 ], [ 2, 4, 6, 7 ], [ 2, 4, 6, 8 ], 
+            [ 2, 5, 6, 8 ], [ 2, 5, 7, 8 ], [ 2, 6, 7, 8 ], [ 3, 4, 5, 6 ], [ 3, 4, 6, 8 ], [ 3, 4, 7, 8 ], 
+            [ 3, 5, 6, 7 ], [ 3, 5, 7, 8 ], [ 3, 6, 7, 8 ], [ 4, 5, 6, 7 ], [ 4, 5, 6, 8 ], [ 4, 5, 7, 8 ] ], 
+        isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 8, 42, 21, 4, 9 ], 
+        parametersc := [ 8, 42, 21, 4, 9 ], r := 21, tSubsetStructure := rec( lambdas := [ 9 ], t := 2 ), v := 8 ), 
+    rec( autGroup := Group([ (1,8,6,3,4,7,5), (1,2,4)(3,8) ]), autStructures := [ "S8", "PSL(3,2) : C2" ], 
+        autSubgroup := Group([ (2,3)(4,5)(6,7), (1,4,2)(5,8,6) ]), blockSizes := [ 3 ], 
+        blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 2, 5 ], [ 1, 2, 6 ], [ 1, 2, 7 ], [ 1, 2, 8 ], [ 1, 3, 4 ], 
+            [ 1, 3, 5 ], [ 1, 3, 6 ], [ 1, 3, 7 ], [ 1, 3, 8 ], [ 1, 4, 5 ], [ 1, 4, 6 ], [ 1, 4, 7 ], [ 1, 4, 8 ], 
+            [ 1, 5, 6 ], [ 1, 5, 7 ], [ 1, 5, 8 ], [ 1, 6, 7 ], [ 1, 6, 8 ], [ 1, 7, 8 ], [ 2, 3, 4 ], [ 2, 3, 5 ], 
+            [ 2, 3, 6 ], [ 2, 3, 7 ], [ 2, 3, 8 ], [ 2, 4, 5 ], [ 2, 4, 6 ], [ 2, 4, 7 ], [ 2, 4, 8 ], [ 2, 5, 6 ], 
+            [ 2, 5, 7 ], [ 2, 5, 8 ], [ 2, 6, 7 ], [ 2, 6, 8 ], [ 2, 7, 8 ], [ 3, 4, 5 ], [ 3, 4, 6 ], [ 3, 4, 7 ], 
+            [ 3, 4, 8 ], [ 3, 5, 6 ], [ 3, 5, 7 ], [ 3, 5, 8 ], [ 3, 6, 7 ], [ 3, 6, 8 ], [ 3, 7, 8 ], [ 4, 5, 6 ], 
+            [ 4, 5, 7 ], [ 4, 5, 8 ], [ 4, 6, 7 ], [ 4, 6, 8 ], [ 4, 7, 8 ], [ 5, 6, 7 ], [ 5, 6, 8 ], [ 5, 7, 8 ], 
+            [ 6, 7, 8 ] ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 8, 56, 21, 3, 6 ],
+        parametersc := [ 8, 56, 35, 5, 20 ], r := 21, tSubsetStructure := rec( lambdas := [ 6 ], t := 2 ), v := 8 ) ];
