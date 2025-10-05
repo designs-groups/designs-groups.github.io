@@ -5,7 +5,7 @@
 #--------------------------------------------------------------------------------------------- 
 # parameters' list contains lists of the form ..  
 # 	[ [ v, b , r , k , lam ] , [ primitivity of Aut(D), primitivity of G ] , 
-# 	  [ flag-tranitivity of G , anti-flag-transitivity of G ] , is symmetric design ]  
+# 	  [ flag-tranitivity of G , anti-flag-transitivity of G ] , "sym" if D is symmetric ]  
 #--------------------------------------------------------------------------------------------- 
 
 parameters := [ 
