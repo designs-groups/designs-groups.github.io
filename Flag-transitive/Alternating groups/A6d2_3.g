@@ -2,16 +2,20 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A6.2_3 = M10
 # Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 6, 0, 6 ]
-#----------------------------------------------------------------------------------------- 
+#--------------------------------------------------------------------------------------------- 
+# parameters' list contains lists of the form ..  
+# 	[ [ v, b , r , k , lam ] , [ primitivity of Aut(D), primitivity of G ] , 
+# 	  [ flag-tranitivity of G , anti-flag-transitivity of G ] , is symmetric design ]  
+#--------------------------------------------------------------------------------------------- 
 
 parameters := [ 
-    [ [ 10, 30, 12, 4, 4 ], [ false, true ] ],
-    [ [ 10, 30, 18, 6, 10 ], [ false, true ] ],
-    [ [ 10, 36, 18, 5, 8 ], [ true, true ] ],
-    [ [ 10, 45, 36, 8, 28 ], [ true, true ] ],
-    [ [ 10, 120, 36, 3, 8 ], [ true, true ] ],
-    [ [ 10, 180, 72, 4, 24 ], [ false, true ] ]
-];
+    [ [ 10, 30, 12, 4, 4 ], [ false, true ], [ true, true ] ],
+    [ [ 10, 30, 18, 6, 10 ], [ false, true ], [ true, true ] ],
+    [ [ 10, 36, 18, 5, 8 ], [ true, true ], [ true, true ] ],
+    [ [ 10, 45, 36, 8, 28 ], [ true, true ], [ true, true ] ],
+    [ [ 10, 120, 36, 3, 8 ], [ true, true ], [ true, false ] ],
+    [ [ 10, 180, 72, 4, 24 ], [ false, true ], [ true, false ] ]
+]; 
 
 lD := [ 
     rec( autGroup := [ (1,3,9,10,5,6,8,4,7,2), (1,10,2,4,6,5,3,8)(7,9) ], 

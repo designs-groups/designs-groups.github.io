@@ -2,16 +2,20 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A6.2^2 = PΓL2(9) = PΓO3(9) = PΣO3(9)
 # Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 7, 0, 7 ]
-#----------------------------------------------------------------------------------------- 
+#--------------------------------------------------------------------------------------------- 
+# parameters' list contains lists of the form ..  
+# 	[ [ v, b , r , k , lam ] , [ primitivity of Aut(D), primitivity of G ] , 
+# 	  [ flag-tranitivity of G , anti-flag-transitivity of G ] , is symmetric design ]  
+#--------------------------------------------------------------------------------------------- 
 
 parameters := [ 
-    [ [ 10, 30, 12, 4, 4 ], [ false, true ] ],
-    [ [ 10, 30, 18, 6, 10 ], [ false, true ] ],
-    [ [ 10, 45, 36, 8, 28 ], [ true, true ] ],
-    [ [ 10, 72, 36, 5, 16 ], [ false, true ] ],
-    [ [ 10, 120, 36, 3, 8 ], [ true, true ] ],
-    [ [ 10, 180, 72, 4, 24 ], [ false, true ] ],
-    [ [ 36, 180, 40, 8, 8 ], [ false, true ] ]
+    [ [ 10, 30, 12, 4, 4 ], [ false, true ], [ true, true ] ],
+    [ [ 10, 30, 18, 6, 10 ], [ false, true ], [ true, true ] ],
+    [ [ 10, 45, 36, 8, 28 ], [ true, true ], [ true, true ] ],
+    [ [ 10, 72, 36, 5, 16 ], [ false, true ], [ true, true ] ],
+    [ [ 10, 120, 36, 3, 8 ], [ true, true ], [ true, false ] ],
+    [ [ 10, 180, 72, 4, 24 ], [ false, true ], [ true, false ] ],
+    [ [ 36, 180, 40, 8, 8 ], [ false, true ], [ true, false ] ]
 ];
 
 lD := [ 

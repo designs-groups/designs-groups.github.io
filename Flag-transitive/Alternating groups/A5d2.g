@@ -2,15 +2,19 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A5.2 = S5 = PΓL2(4) = ΣL2(4) = PΓO3(4) = PΣO3(4) = ΣO3(4)
 # Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 5, 1, 4 ]
-#------------------------------------------------------------------------------------- 
+#--------------------------------------------------------------------------------------------- 
+# parameters' list contains lists of the form ..  
+# 	[ [ v, b , r , k , lam ] , [ primitivity of Aut(D), primitivity of G ] , 
+# 	  [ flag-tranitivity of G , anti-flag-transitivity of G ] , is symmetric design ]  
+#--------------------------------------------------------------------------------------------- 
 
 parameters := [ 
-    [ [ 5, 10, 6, 3, 3 ], [ true, true ] ],
-    [ [ 6, 15, 10, 4, 6 ], [ true, true ] ],
-    [ [ 6, 20, 10, 3, 4 ], [ false, true ] ],
-    [ [ 10, 15, 6, 4, 2 ], [ true, true ] ],
-    [ [ 15, 15, 8, 8, 4 ], [ true, false ], "sym" ]
-]
+    [ [ 5, 10, 6, 3, 3 ], [ true, true ], [ true, true ] ],
+    [ [ 6, 15, 10, 4, 6 ], [ true, true ], [ true, true ] ],
+    [ [ 6, 20, 10, 3, 4 ], [ false, true ], [ true, true ] ],
+    [ [ 10, 15, 6, 4, 2 ], [ true, true ], [ true, false ] ],
+    [ [ 15, 15, 8, 8, 4 ], [ true, false ], [ true, false ], "sym" ]
+];
 
 lD := [ 
     rec( autGroup := [ (2,4,3), (1,5,2,3) ], autStructures := [ "S5", "S5" ], 

@@ -2,16 +2,20 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A6 = L2(9) = U2(9) = S2(9) = S4(2)' = O3(9) = O4-(3)
 # Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 7, 1, 6 ]
-#------------------------------------------------------------------------------------- 
+#--------------------------------------------------------------------------------------------- 
+# parameters' list contains lists of the form ..  
+# 	[ [ v, b , r , k , lam ] , [ primitivity of Aut(D), primitivity of G ] , 
+# 	  [ flag-tranitivity of G , anti-flag-transitivity of G ] , is symmetric design ]  
+#--------------------------------------------------------------------------------------------- 
 
 parameters := [ 
-    [ [ 6, 15, 10, 4, 6 ], [ true, true ] ],
-    [ [ 6, 20, 10, 3, 4 ], [ false, true ] ],
-    [ [ 10, 15, 6, 4, 2 ], [ true, true ] ],
-    [ [ 10, 15, 9, 6, 5 ], [ true, true ] ],
-    [ [ 10, 36, 18, 5, 8 ], [ true, true ] ],
-    [ [ 10, 60, 18, 3, 4 ], [ false, true ] ],
-    [ [ 15, 15, 8, 8, 4 ], [ true, true ], "sym" ]
+    [ [ 6, 15, 10, 4, 6 ], [ true, true ], [ true, true ] ],
+    [ [ 6, 20, 10, 3, 4 ], [ false, true ], [ true, true ] ],
+    [ [ 10, 15, 6, 4, 2 ], [ true, true ], [ true, true ] ],
+    [ [ 10, 15, 9, 6, 5 ], [ true, true ], [ true, true ] ],
+    [ [ 10, 36, 18, 5, 8 ], [ true, true ], [ true, true ] ],
+    [ [ 10, 60, 18, 3, 4 ], [ false, true ], [ true, false ] ],
+    [ [ 15, 15, 8, 8, 4 ], [ true, true ], [ true, false ], "sym" ]
 ];
 
 lD := [ 
