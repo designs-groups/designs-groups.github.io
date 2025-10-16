@@ -1,108 +1,132 @@
-#--------------------------------------------------------------------------------------- 
+#------------------------------------------------------------------------------------------------------------------------ 
 # Flag-transitive 2-designs 
 # Group (autSubgroup): M11
 # Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 16, 0, 16 ]
-#--------------------------------------------------------------------------------------------- 
-# parameters' list contains lists of the form ..  
-# 	[ [ v, b , r , k , lam ] , [ primitivity of Aut(D), primitivity of G ] , 
-# 	  [ flag-tranitivity of G , anti-flag-transitivity of G ] , "sym" if D is symmetric ]  
-#--------------------------------------------------------------------------------------------- 
+#------------------------------------------------------------------------------------------------------------------------ 
+# parameters is the list of parameter sets followed by their multiplicity, and ci which means that the design with this
+#  parameter set is the complement of the i-th design in the list lD of designs and designinfo.
+# designinfo contains lists of the form ..  
+#  [ [ v, b , r , k , lam ] , Aut(D) , G , point-stabiliser , block-stabiliser , 
+#.   [ primitivity of Aut(D), primitivity of G ] , [ flag-tranitivity of G , anti-flag-transitivity of G ] , 
+#    [ rank(Aut(D)) , rank(G) ], "sym" if D is symmetric, "ci" explained above ] 
+# lD is a list of non-isomorphic designs. For further considerateion, the set of block set must be bounded to each record 
+#  D by D.blocks := Orbit( Group( D.autSubgroup ) , D.baseBlock , OnSets ); 
+#------------------------------------------------------------------------------------------------------------------------ 
 
 parameters := [ 
-    [ [ 11, 55, 45, 9, 36 ], [ true, true ], [ true, true ] ],
-    [ [ 11, 66, 30, 5, 12 ], [ true, true ], [ true, true ] ],
-    [ [ 11, 66, 36, 6, 18 ], [ true, true ], [ true, true ] ],
-    [ [ 11, 165, 45, 3, 9 ], [ true, true ], [ true, true ] ],
-    [ [ 11, 165, 120, 8, 84 ], [ true, true ], [ true, true ] ],
-    [ [ 11, 330, 120, 4, 36 ], [ true, true ], [ true, false ] ],
-    [ [ 11, 396, 180, 5, 72 ], [ false, true ], [ true, false ] ],
-    [ [ 12, 22, 11, 6, 5 ], [ false, true ], [ true, true ] ],
-    [ [ 12, 66, 55, 10, 45 ], [ true, true ], [ true, true ] ],
-    [ [ 12, 110, 55, 6, 25 ], [ false, true ], [ true, true ] ],
-    [ [ 12, 132, 55, 5, 20 ], [ false, true ], [ true, false ] ],
-    [ [ 12, 165, 55, 4, 15 ], [ true, true ], [ true, true ] ],
-    [ [ 12, 165, 110, 8, 70 ], [ true, true ], [ true, true ] ],
-    [ [ 12, 220, 55, 3, 10 ], [ true, true ], [ true, false ] ],
-    [ [ 12, 330, 110, 4, 30 ], [ false, true ], [ true, false ] ],
-    [ [ 55, 1980, 144, 4, 8 ], [ false, true ], [ true, false ] ]
+    [ [ 11, 55, 45, 9, 36 ], 1 ],
+    [ [ 11, 66, 30, 5, 12 ], 1, "c3" ],
+    [ [ 11, 66, 36, 6, 18 ], 1, "c2" ],
+    [ [ 11, 165, 45, 3, 9 ], 1, "c5" ],
+    [ [ 11, 165, 120, 8, 84 ], 1, "c4" ],
+    [ [ 11, 330, 120, 4, 36 ], 1 ],
+    [ [ 11, 396, 180, 5, 72 ], 1 ],
+    [ [ 12, 22, 11, 6, 5 ], 1, "c8" ],
+    [ [ 12, 66, 55, 10, 45 ], 1 ],
+    [ [ 12, 110, 55, 6, 25 ], 1, "c10" ],
+    [ [ 12, 132, 55, 5, 20 ], 1 ],
+    [ [ 12, 165, 55, 4, 15 ], 1, "c13" ],
+    [ [ 12, 165, 110, 8, 70 ], 1, "c12" ],
+    [ [ 12, 220, 55, 3, 10 ], 1 ],
+    [ [ 12, 330, 110, 4, 30 ], 1 ],
+    [ [ 55, 1980, 144, 4, 8 ], 1 ]
+]; 
+
+designinfo := [ 
+    [ [ 11, 55, 45, 9, 36 ], "S11", "M11", "A6 . C2", "(C3 x C3) : QD16", [ true, true ], [ true, true ], [ 2, 2 ] ],
+    [ [ 11, 66, 30, 5, 12 ], "M11", "M11", "A6 . C2", "S5", [ true, true ], [ true, true ], [ 2, 2 ], "c3" ],
+    [ [ 11, 66, 36, 6, 18 ], "M11", "M11", "A6 . C2", "S5", [ true, true ], [ true, true ], [ 2, 2 ], "c2" ],
+    [ [ 11, 165, 45, 3, 9 ], "S11", "M11", "A6 . C2", "GL(2,3)", [ true, true ], [ true, true ], [ 2, 2 ], "c5" ],
+    [ [ 11, 165, 120, 8, 84 ], "S11", "M11", "A6 . C2", "GL(2,3)", [ true, true ], [ true, true ], [ 2, 2 ], "c4" ],
+    [ [ 11, 330, 120, 4, 36 ], "S11", "M11", "A6 . C2", "S4", [ true, true ], [ true, false ], [ 2, 2 ] ],
+    [ [ 11, 396, 180, 5, 72 ], "M11", "M11", "A6 . C2", "C5 : C4", [ false, true ], [ true, false ], [ 2, 2 ] ],
+    [ [ 12, 22, 11, 6, 5 ], "M11", "M11", "PSL(2,11)", "A6", [ false, true ], [ true, true ], [ 2, 2 ], "c8" ],
+    [ [ 12, 66, 55, 10, 45 ], "S12", "M11", "PSL(2,11)", "S5", [ true, true ], [ true, true ], [ 2, 2 ] ],
+    [ [ 12, 110, 55, 6, 25 ], "M11", "M11", "PSL(2,11)", "(S3 x S3) : C2", [ false, true ], [ true, true ], [ 2, 2 ], "c10" ],
+    [ [ 12, 132, 55, 5, 20 ], "M11", "M11", "PSL(2,11)", "A5", [ false, true ], [ true, false ], [ 2, 2 ] ],
+    [ [ 12, 165, 55, 4, 15 ], "M11", "M11", "PSL(2,11)", "GL(2,3)", [ true, true ], [ true, true ], [ 2, 2 ], "c13" ],
+    [ [ 12, 165, 110, 8, 70 ], "M11", "M11", "PSL(2,11)", "GL(2,3)", [ true, true ], [ true, true ], [ 2, 2 ], "c12" ],
+    [ [ 12, 220, 55, 3, 10 ], "S12", "M11", "PSL(2,11)", "S3 x S3", [ true, true ], [ true, false ], [ 2, 2 ] ],
+    [ [ 12, 330, 110, 4, 30 ], "M11", "M11", "PSL(2,11)", "S4", [ false, true ], [ true, false ], [ 2, 2 ] ],
+    [ [ 55, 1980, 144, 4, 8 ], "M11", "M11", "(C3 x C3) : QD16", "C2 x C2", [ false, true ], [ true, false ], [ 3, 3 ] ]
+]; 
+
+
+lD := [ rec( autGroup := [ (1,5,11,10,7,8,3)(2,4)(6,9), (1,7,9,4,3)(2,10)(5,11,8) ], autStabilizer := [ "A6 . C2", "(C3 x C3) : QD16" ], 
+        autStructures := [ "S11", "M11" ], autSubgroup := [ (1,2,3,5)(4,7,9,10), (2,4)(3,6)(5,8)(9,11) ], baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 9, 11 ], 
+        blockSizes := [ 9 ], flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 55, 45, 9, 36 ],
+        parametersc := [ 11, 55, 10, 2, 1 ], primitivity := [ true, true ], r := 45, rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 36 ], t := 2 ), 
+        v := 11 ), rec( autGroup := [ (1,5,9,11,6,4)(2,3,7)(8,10), (1,5,10,8,2,7,9,3,11,4,6) ], autStabilizer := [ "A6 . C2", "S5" ], 
+        autStructures := [ "M11", "M11" ], autSubgroup := [ (1,2,3,5)(4,7,9,10), (2,4)(3,6)(5,8)(9,11) ], baseBlock := [ 1, 3, 4, 5, 7 ], blockSizes := [ 5 ], 
+        flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 66, 30, 5, 12 ], 
+        parametersc := [ 11, 66, 36, 6, 18 ], primitivity := [ true, true ], r := 30, rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 12 ], t := 2 ), 
+        v := 11 ), rec( autGroup := [ (1,4,8,10,5,3,11,6)(2,7), (1,7,5,9,8,11,2,6)(4,10) ], autStabilizer := [ "A6 . C2", "S5" ], 
+        autStructures := [ "M11", "M11" ], autSubgroup := [ (1,2,3,5)(4,7,9,10), (2,4)(3,6)(5,8)(9,11) ], baseBlock := [ 2, 6, 8, 9, 10, 11 ], 
+        blockSizes := [ 6 ], flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 66, 36, 6, 18 ],
+        parametersc := [ 11, 66, 30, 5, 12 ], primitivity := [ true, true ], r := 36, rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 18 ], t := 2 ), 
+        v := 11 ), rec( autGroup := [ (2,8,4,7,3,11,10,9,5,6), (1,7,11,9,5)(2,4,3)(6,10,8) ], autStabilizer := [ "A6 . C2", "GL(2,3)" ], 
+        autStructures := [ "S11", "M11" ], autSubgroup := [ (1,2,3,5)(4,7,9,10), (2,4)(3,6)(5,8)(9,11) ], baseBlock := [ 7, 8, 10 ], blockSizes := [ 3 ], 
+        flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 165, 45, 3, 9 ], 
+        parametersc := [ 11, 165, 120, 8, 84 ], primitivity := [ true, true ], r := 45, rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 9 ], t := 2 ), 
+        v := 11 ), rec( autGroup := [ (1,2,5,11,6,7,4)(3,10,8,9), (1,4,10,11,8,9,6,5)(2,7,3) ], autStabilizer := [ "A6 . C2", "GL(2,3)" ], 
+        autStructures := [ "S11", "M11" ], autSubgroup := [ (1,2,3,5)(4,7,9,10), (2,4)(3,6)(5,8)(9,11) ], baseBlock := [ 1, 2, 3, 4, 5, 6, 9, 11 ], 
+        blockSizes := [ 8 ], flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true, 
+        parameters := [ 11, 165, 120, 8, 84 ], parametersc := [ 11, 165, 45, 3, 9 ], primitivity := [ true, true ], r := 120, rank := [ 2, 2 ], 
+        tSubsetStructure := rec( lambdas := [ 84 ], t := 2 ), v := 11 ), rec( autGroup := [ (1,7)(2,5)(3,9,8,11,10,4,6), (1,11,2,3,5,10,4,7,9,6) ], 
+        autStabilizer := [ "A6 . C2", "S4" ], autStructures := [ "S11", "M11" ], autSubgroup := [ (1,2,3,5)(4,7,9,10), (2,4)(3,6)(5,8)(9,11) ], 
+        baseBlock := [ 1, 4, 6, 11 ], blockSizes := [ 4 ], flagtransitivity := [ true, false ], isBinary := true, isBlockDesign := true, isSimple := true, 
+        parameters := [ 11, 330, 120, 4, 36 ], parametersc := [ 11, 330, 210, 7, 126 ], primitivity := [ true, true ], r := 120, rank := [ 2, 2 ], 
+        tSubsetStructure := rec( lambdas := [ 36 ], t := 2 ), v := 11 ), rec( autGroup := [ (1,7,2,6,4,3,8,11)(5,10), (1,9,7,8,2,10)(3,11)(4,6,5) ], 
+        autStabilizer := [ "A6 . C2", "C5 : C4" ], autStructures := [ "M11", "M11" ], autSubgroup := [ (1,2,3,5)(4,7,9,10), (2,4)(3,6)(5,8)(9,11) ], 
+        baseBlock := [ 2, 4, 5, 7, 9 ], blockSizes := [ 5 ], flagtransitivity := [ true, false ], isBinary := true, isBlockDesign := true, isSimple := true, 
+        parameters := [ 11, 396, 180, 5, 72 ], parametersc := [ 11, 396, 216, 6, 108 ], primitivity := [ false, true ], r := 180, rank := [ 2, 2 ], 
+        tSubsetStructure := rec( lambdas := [ 72 ], t := 2 ), v := 11 ), rec( autGroup := [ (1,4,7,2,10,9)(3,6,5)(8,12), (1,6,2)(3,10,12,4,8,11)(5,9) ], 
+        autStabilizer := [ "PSL(2,11)", "A6" ], autStructures := [ "M11", "M11" ], autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], 
+        baseBlock := [ 1, 3, 4, 9, 10, 12 ], blockSizes := [ 6 ], flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true,
+        parameters := [ 12, 22, 11, 6, 5 ], parametersc := [ 12, 22, 11, 6, 5 ], primitivity := [ false, true ], r := 11, rank := [ 2, 2 ], 
+        tSubsetStructure := rec( lambdas := [ 5 ], t := 2 ), v := 12 ), rec( autGroup := [ (1,4,5,3,9,10,6)(2,12,8), (1,7)(2,12,6,11,9,4)(3,10) ], 
+        autStabilizer := [ "PSL(2,11)", "S5" ], autStructures := [ "S12", "M11" ], autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], 
+        baseBlock := [ 2, 3, 4, 5, 6, 7, 8, 10, 11, 12 ], blockSizes := [ 10 ], flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, 
+        isSimple := true, parameters := [ 12, 66, 55, 10, 45 ], parametersc := [ 12, 66, 11, 2, 1 ], primitivity := [ true, true ], r := 55, rank := [ 2, 2 ], 
+        tSubsetStructure := rec( lambdas := [ 45 ], t := 2 ), v := 12 ), rec( autGroup := [ (1,5,11,7,3,8,6,4,2,12,10), (1,12,9,4,11,10,2,5)(3,8,7,6) ], 
+        autStabilizer := [ "PSL(2,11)", "(S3 x S3) : C2" ], autStructures := [ "M11", "M11" ], 
+        autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], baseBlock := [ 1, 3, 6, 7, 8, 11 ], blockSizes := [ 6 ], 
+        flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 110, 55, 6, 25 ], 
+        parametersc := [ 12, 110, 55, 6, 25 ], primitivity := [ false, true ], r := 55, rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 25 ], t := 2 ), 
+        v := 12 ), rec( autGroup := [ (1,3,9,2)(4,5,8,12)(6,10)(7,11), (1,6,8,5,9,11,3,4,2,12,10) ], autStabilizer := [ "PSL(2,11)", "A5" ], 
+        autStructures := [ "M11", "M11" ], autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], baseBlock := [ 2, 4, 6, 10, 11 ], 
+        blockSizes := [ 5 ], flagtransitivity := [ true, false ], isBinary := true, isBlockDesign := true, isSimple := true, 
+        parameters := [ 12, 132, 55, 5, 20 ], parametersc := [ 12, 132, 77, 7, 42 ], primitivity := [ false, true ], r := 55, rank := [ 2, 2 ], 
+        tSubsetStructure := rec( lambdas := [ 20 ], t := 2 ), v := 12 ), rec( autGroup := [ (2,3,4)(5,7,9,10,6,8)(11,12), (1,12,4,8,7,5,10,2,6,3,11) ], 
+        autStabilizer := [ "PSL(2,11)", "GL(2,3)" ], autStructures := [ "M11", "M11" ], 
+        autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], baseBlock := [ 6, 7, 8, 10 ], blockSizes := [ 4 ], 
+        flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 165, 55, 4, 15 ], 
+        parametersc := [ 12, 165, 110, 8, 70 ], primitivity := [ true, true ], r := 55, rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 15 ], t := 2 ), 
+        v := 12 ), rec( autGroup := [ (2,7,6)(3,4)(5,10,11,9,8,12), (1,2,6,4,9,8,11,3)(5,7,12,10) ], autStabilizer := [ "PSL(2,11)", "GL(2,3)" ], 
+        autStructures := [ "M11", "M11" ], autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], 
+        baseBlock := [ 1, 2, 3, 4, 5, 9, 11, 12 ], blockSizes := [ 8 ], flagtransitivity := [ true, true ], isBinary := true, isBlockDesign := true, 
+        isSimple := true, parameters := [ 12, 165, 110, 8, 70 ], parametersc := [ 12, 165, 55, 4, 15 ], primitivity := [ true, true ], r := 110, 
+        rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 70 ], t := 2 ), v := 12 ), 
+    rec( autGroup := [ (1,5,10,7,11,12,4,6)(8,9), (1,10,5,3,7,9,8,6,4)(2,11) ], autStabilizer := [ "PSL(2,11)", "S3 x S3" ], autStructures := [ "S12", "M11" ], 
+        autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], baseBlock := [ 3, 8, 12 ], blockSizes := [ 3 ], 
+        flagtransitivity := [ true, false ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 220, 55, 3, 10 ], 
+        parametersc := [ 12, 220, 165, 9, 120 ], primitivity := [ true, true ], r := 55, rank := [ 2, 2 ], tSubsetStructure := rec( lambdas := [ 10 ], t := 2 ),
+        v := 12 ), rec( autGroup := [ (1,4,6,5)(2,9,12,7,8,10,3,11), (1,11,8,5,6,10)(2,12,3)(4,7) ], autStabilizer := [ "PSL(2,11)", "S4" ], 
+        autStructures := [ "M11", "M11" ], autSubgroup := [ (1,2,3,12)(4,7,11,10)(5,9)(6,8), (1,10)(3,12)(5,8)(6,11) ], baseBlock := [ 3, 5, 7, 8 ], 
+        blockSizes := [ 4 ], flagtransitivity := [ true, false ], isBinary := true, isBlockDesign := true, isSimple := true, 
+        parameters := [ 12, 330, 110, 4, 30 ], parametersc := [ 12, 330, 220, 8, 140 ], primitivity := [ false, true ], r := 110, rank := [ 2, 2 ], 
+        tSubsetStructure := rec( lambdas := [ 30 ], t := 2 ), v := 12 ), 
+    rec( autGroup := [ (1,7,32,48,53)(2,43,39,4,45)(3,38,46,47,21)(5,44,51,13,33)(6,41,11,16,17)(8,25,27,15,14)(9,54,10,55,26)(12,37,29,40,36)(18,42,49,24,
+                23)(19,35,28,31,30)(20,50,34,52,22), (1,49,34,4,55,51,22,44)(2,19,15,30)(3,47,12,48,5,23,8,50)(6,46,13,21,39,20,9,33)(7,25,43,10,26,42,35,37)(11,
+                28,54,24,52,40,18,32)(16,27,29,38,53,45,17,41)(31,36) ], autStabilizer := [ "(C3 x C3) : QD16", "C2 x C2" ], autStructures := [ "M11", "M11" ], 
+        autSubgroup := [ (1,2,4,7)(3,6,10,15)(5,9)(8,13,19,26)(11,17,23,31)(12,18,25,34)(14,20,28,36)(16,22,29,27)(24,33,40,46)(30,38,37,44)(35,42)(39,45,43,
+                48)(41,47,52,55)(49,51,50,54), (1,3)(2,5)(4,8)(6,11)(7,12)(9,14)(10,16)(13,18)(15,21)(17,24)(19,27)(20,26)(22,30)(23,32)(25,35)(29,37)(31,39)(33,
+                41)(34,40)(36,43)(44,49)(45,50)(46,51)(47,53) ], baseBlock := [ 4, 7, 24, 55 ], blockSizes := [ 4 ], flagtransitivity := [ true, false ], 
+        isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 55, 1980, 144, 4, 8 ], parametersc := [ 55, 1980, 1836, 51, 1700 ], 
+        primitivity := [ false, true ], r := 144, rank := [ 3, 3 ], tSubsetStructure := rec( lambdas := [ 8 ], t := 2 ), v := 55 ) 
 ];
 
-lD := [ 
-    rec( autGroup := [ (1,4,9,3,6,10,2)(5,7,8,11), (1,10,7,9)(2,5)(3,4,8,6) ], autStructures := [ "S11", "M11" ], 
-        autSubgroup := [ (2,3,4,5)(6,8,9,10), (1,2)(4,6)(5,7)(9,11) ], baseBlock := [ 1, 2, 3, 5, 6, 7, 8, 9, 10 ], 
-        blockSizes := [ 9 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 55, 45, 9, 36 ], 
-        parametersc := [ 11, 55, 10, 2, 1 ], r := 45, tSubsetStructure := rec( lambdas := [ 36 ], t := 2 ), v := 11 ), 
-    rec( autGroup := [ (2,10,8,9)(3,6,7,4), (1,7,3,10,9)(2,4,5,11,6) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (2,3,4,5)(6,8,9,10), (1,2)(4,6)(5,7)(9,11) ], baseBlock := [ 1, 3, 5, 6, 10 ], blockSizes := [ 5 ], 
-        isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 66, 30, 5, 12 ], 
-        parametersc := [ 11, 66, 36, 6, 18 ], r := 30, tSubsetStructure := rec( lambdas := [ 12 ], t := 2 ), v := 11 ), 
-    rec( autGroup := [ (1,8,2,10,5,7,3,9)(6,11), (1,10,8,2,3)(4,11,7,6,5) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (2,3,4,5)(6,8,9,10), (1,2)(4,6)(5,7)(9,11) ], baseBlock := [ 2, 4, 7, 8, 9, 11 ], 
-        blockSizes := [ 6 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 66, 36, 6, 18 ], 
-        parametersc := [ 11, 66, 30, 5, 12 ], r := 36, tSubsetStructure := rec( lambdas := [ 18 ], t := 2 ), v := 11 ), 
-    rec( autGroup := [ (1,6,11,4,7,10,8,5,2,3), (1,8,9,4,6,3,5,10,11)(2,7) ], autStructures := [ "S11", "M11" ], 
-        autSubgroup := [ (2,3,4,5)(6,8,9,10), (1,2)(4,6)(5,7)(9,11) ], baseBlock := [ 4, 10, 11 ], blockSizes := [ 3 ], 
-        isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 165, 45, 3, 9 ], 
-        parametersc := [ 11, 165, 120, 8, 84 ], r := 45, tSubsetStructure := rec( lambdas := [ 9 ], t := 2 ), v := 11 ), 
-    rec( autGroup := [ (1,5,2,7,11)(3,9,8)(4,10), (1,6,2,10,11)(3,5,4,9,8,7) ], autStructures := [ "S11", "M11" ], 
-        autSubgroup := [ (2,3,4,5)(6,8,9,10), (1,2)(4,6)(5,7)(9,11) ], baseBlock := [ 1, 2, 3, 5, 6, 7, 8, 9 ], 
-        blockSizes := [ 8 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 165, 120, 8, 84 ]
-            , parametersc := [ 11, 165, 45, 3, 9 ], r := 120, tSubsetStructure := rec( lambdas := [ 84 ], t := 2 ), v := 11 ), 
-    rec( autGroup := [ (1,2,9,4,8)(5,11,6)(7,10), (1,5,11,2,6,10,7)(3,8,4) ], autStructures := [ "S11", "M11" ], 
-        autSubgroup := [ (2,3,4,5)(6,8,9,10), (1,2)(4,6)(5,7)(9,11) ], baseBlock := [ 1, 2, 5, 8 ], blockSizes := [ 4 ], 
-        isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 330, 120, 4, 36 ], 
-        parametersc := [ 11, 330, 210, 7, 126 ], r := 120, tSubsetStructure := rec( lambdas := [ 36 ], t := 2 ), v := 11 ), 
-    rec( autGroup := [ (1,5,8,2)(3,10,7,6), (1,5,2,8,3,10,7,4,9,11,6) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (2,3,4,5)(6,8,9,10), (1,2)(4,6)(5,7)(9,11) ], baseBlock := [ 3, 5, 7, 9, 10 ], blockSizes := [ 5 ], 
-        isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 11, 396, 180, 5, 72 ], 
-        parametersc := [ 11, 396, 216, 6, 108 ], r := 180, tSubsetStructure := rec( lambdas := [ 72 ], t := 2 ), v := 11 ), 
-    rec( autGroup := [ (1,9,8,11,12,2,7,5,10,3,4), (1,11,12,4,5,6,9,10)(2,3,8,7) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], baseBlock := [ 1, 3, 5, 9, 10, 11 ], 
-        blockSizes := [ 6 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 22, 11, 6, 5 ], 
-        parametersc := [ 12, 22, 11, 6, 5 ], r := 11, tSubsetStructure := rec( lambdas := [ 5 ], t := 2 ), v := 12 ), 
-    rec( autGroup := [ (1,6,10,3,5,12,2,8,9,11,7,4), (1,9,8,12,2,7,10,6)(4,5,11) ], autStructures := [ "S12", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], 
-        baseBlock := [ 2, 3, 4, 5, 6, 7, 8, 9, 11, 12 ], blockSizes := [ 10 ], isBinary := true, isBlockDesign := true, 
-        isSimple := true, parameters := [ 12, 66, 55, 10, 45 ], parametersc := [ 12, 66, 11, 2, 1 ], r := 55, 
-        tSubsetStructure := rec( lambdas := [ 45 ], t := 2 ), v := 12 ), 
-    rec( autGroup := [ (1,6,10)(2,4,9)(3,5,7), (1,7,3,4)(2,5,12,9,6,11,8,10) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], baseBlock := [ 1, 5, 6, 7, 8, 12 ], 
-        blockSizes := [ 6 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 110, 55, 6, 25 ],
-        parametersc := [ 12, 110, 55, 6, 25 ], r := 55, tSubsetStructure := rec( lambdas := [ 25 ], t := 2 ), v := 12 ), 
-    rec( autGroup := [ (1,5,7,12,4,3,2,10,11,6,9), (1,8,4,12)(2,3,9,11,10,7,6,5) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], baseBlock := [ 4, 7, 9, 11, 12 ], 
-        blockSizes := [ 5 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 132, 55, 5, 20 ],
-        parametersc := [ 12, 132, 77, 7, 42 ], r := 55, tSubsetStructure := rec( lambdas := [ 20 ], t := 2 ), v := 12 ), 
-    rec( autGroup := [ (1,4,6,10,9)(3,7,5,11,12), (1,9,4,11)(2,5)(3,10,6,8)(7,12) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], baseBlock := [ 6, 8, 9, 12 ], 
-        blockSizes := [ 4 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 165, 55, 4, 15 ],
-        parametersc := [ 12, 165, 110, 8, 70 ], r := 55, tSubsetStructure := rec( lambdas := [ 15 ], t := 2 ), v := 12 ), 
-    rec( autGroup := [ (1,6,11,2)(3,4,10,12)(5,7)(8,9), (1,9)(2,12,4)(5,7,10,8,11,6) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], baseBlock := [ 1, 2, 3, 4, 5, 7, 10, 11 ]
-            , blockSizes := [ 8 ], isBinary := true, isBlockDesign := true, isSimple := true, 
-        parameters := [ 12, 165, 110, 8, 70 ], parametersc := [ 12, 165, 55, 4, 15 ], r := 110, 
-        tSubsetStructure := rec( lambdas := [ 70 ], t := 2 ), v := 12 ), 
-    rec( autGroup := [ (1,5,2,11,8,6,7,3,12,4,10), (1,9,10,2,11,4,3,6,7,8) ], autStructures := [ "S12", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], baseBlock := [ 3, 5, 6 ], 
-        blockSizes := [ 3 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 220, 55, 3, 10 ],
-        parametersc := [ 12, 220, 165, 9, 120 ], r := 55, tSubsetStructure := rec( lambdas := [ 10 ], t := 2 ), v := 12 ), 
-    rec( autGroup := [ (1,9,6,7,12,2)(3,5,4)(8,10), (1,9)(2,4,12)(5,6,11,8,10,7) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (1,5,9,10)(2,7)(3,11)(4,8,12,6), (2,9)(3,7)(6,10)(8,12) ], baseBlock := [ 2, 5, 6, 8 ], 
-        blockSizes := [ 4 ], isBinary := true, isBlockDesign := true, isSimple := true, parameters := [ 12, 330, 110, 4, 30 ]
-            , parametersc := [ 12, 330, 220, 8, 140 ], r := 110, tSubsetStructure := rec( lambdas := [ 30 ], t := 2 ), v := 12 
-        ), 
-    rec( autGroup := [ (1,32,50,29)(2,44,41,23)(3,19,47,24)(4,7,10,35)(5,49,52,42)(6,33,18,13)(8,48,45,46)(9,17,30,40)(11,22,
-                28,39)(14,25)(16,51,34,43)(20,21,31,53)(26,54,27,38)(36,55), (1,44,25,38,11,17,3,48,52,24,26)(2,34,13,33,50,22,
-                5,15,49,47,36)(4,7,32,18,14,6,41,8,37,12,19)(9,31,35,45,42,20,23,54,27,43,28)(10,39,30,21,29,55,46,40,53,16,
-                51) ], autStructures := [ "M11", "M11" ], 
-        autSubgroup := [ (1,2,4,7)(3,6)(5,9,12,17)(8,11,15,22)(10,14,20,29)(13,19,27,38)(16,24,33,43)(18,26,36,34)(21,31,41,
-                50)(23,32)(25,35,44,53)(28,39,48,46)(30,40,49,42)(47,51,55,54), (1,3)(2,5)(4,8)(7,10)(9,13)(11,16)(12,18)(14,
-                21)(15,23)(17,25)(19,28)(20,30)(22,29)(24,34)(26,37)(31,33)(32,42)(35,45)(36,46)(38,47)(39,49)(41,51)(43,
-                52)(50,54) ], baseBlock := [ 3, 11, 12, 48 ], blockSizes := [ 4 ], isBinary := true, isBlockDesign := true, 
-        isSimple := true, parameters := [ 55, 1980, 144, 4, 8 ], parametersc := [ 55, 1980, 1836, 51, 1700 ], r := 144, 
-        tSubsetStructure := rec( lambdas := [ 8 ], t := 2 ), v := 55 ) 
-];
-
+# Design : 1
 # Parameters:  [ 11, 55, 45, 9, 36 ]
 # Complement:  [ 11, 55, 10, 2, 1 ]
 # autGroup:    S11
@@ -124,12 +148,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 1, 2, 3, 5, 6, 7, 8, 9, 10 ]
+[ 1, 2, 3, 4, 5, 6, 7, 9, 11 ]
 # Generators of autGroup: 
-[ ( 1, 4, 9, 3, 6,10, 2)( 5, 7, 8,11), ( 1,10, 7, 9)( 2, 5)( 3, 4, 8, 6) ]
+[ ( 1, 5,11,10, 7, 8, 3)( 2, 4)( 6, 9), ( 1, 7, 9, 4, 3)( 2,10)( 5,11, 8) ]
 # Generators of autSubgroup: 
-[ ( 2, 3, 4, 5)( 6, 8, 9,10), ( 1, 2)( 4, 6)( 5, 7)( 9,11) ]
+[ ( 1, 2, 3, 5)( 4, 7, 9,10), ( 2, 4)( 3, 6)( 5, 8)( 9,11) ]
 
+# Design : 2
 # Parameters:  [ 11, 66, 30, 5, 12 ]
 # Complement:  [ 11, 66, 36, 6, 18 ]
 # autGroup:    M11
@@ -151,12 +176,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 1, 3, 5, 6, 10 ]
+[ 1, 3, 4, 5, 7 ]
 # Generators of autGroup: 
-[ ( 2,10, 8, 9)( 3, 6, 7, 4), ( 1, 7, 3,10, 9)( 2, 4, 5,11, 6) ]
+[ ( 1, 5, 9,11, 6, 4)( 2, 3, 7)( 8,10), ( 1, 5,10, 8, 2, 7, 9, 3,11, 4, 6) ]
 # Generators of autSubgroup: 
-[ ( 2, 3, 4, 5)( 6, 8, 9,10), ( 1, 2)( 4, 6)( 5, 7)( 9,11) ]
+[ ( 1, 2, 3, 5)( 4, 7, 9,10), ( 2, 4)( 3, 6)( 5, 8)( 9,11) ]
 
+# Design : 3
 # Parameters:  [ 11, 66, 36, 6, 18 ]
 # Complement:  [ 11, 66, 30, 5, 12 ]
 # autGroup:    M11
@@ -178,12 +204,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 2, 4, 7, 8, 9, 11 ]
+[ 2, 6, 8, 9, 10, 11 ]
 # Generators of autGroup: 
-[ ( 1, 8, 2,10, 5, 7, 3, 9)( 6,11), ( 1,10, 8, 2, 3)( 4,11, 7, 6, 5) ]
+[ ( 1, 4, 8,10, 5, 3,11, 6)( 2, 7), ( 1, 7, 5, 9, 8,11, 2, 6)( 4,10) ]
 # Generators of autSubgroup: 
-[ ( 2, 3, 4, 5)( 6, 8, 9,10), ( 1, 2)( 4, 6)( 5, 7)( 9,11) ]
+[ ( 1, 2, 3, 5)( 4, 7, 9,10), ( 2, 4)( 3, 6)( 5, 8)( 9,11) ]
 
+# Design : 4
 # Parameters:  [ 11, 165, 45, 3, 9 ]
 # Complement:  [ 11, 165, 120, 8, 84 ]
 # autGroup:    S11
@@ -192,7 +219,7 @@ lD := [
 # Rank:             [ 2, 2 ]
 # 2-Homogeneous:    [ true, true ]
 # Point-stabiliser: [ "S10", "A6 . C2" ]
-# Block-stabiliser: [ "S3 x S8", "GL(2,3)" ]
+# Block-stabiliser: [ "S8 x S3", "GL(2,3)" ]
 # Orbit length point-stabiliser: [ 1^{1}10^{1} , 1^{1}10^{1} ] 
 # Orbit length block-stabiliser: [ 3^{1}8^{1} , 3^{1}8^{1} ] 
 # Point-transitive: 	[ true, true ]
@@ -205,12 +232,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 4, 10, 11 ]
+[ 7, 8, 10 ]
 # Generators of autGroup: 
-[ ( 1, 6,11, 4, 7,10, 8, 5, 2, 3), ( 1, 8, 9, 4, 6, 3, 5,10,11)( 2, 7) ]
+[ ( 2, 8, 4, 7, 3,11,10, 9, 5, 6), ( 1, 7,11, 9, 5)( 2, 4, 3)( 6,10, 8) ]
 # Generators of autSubgroup: 
-[ ( 2, 3, 4, 5)( 6, 8, 9,10), ( 1, 2)( 4, 6)( 5, 7)( 9,11) ]
+[ ( 1, 2, 3, 5)( 4, 7, 9,10), ( 2, 4)( 3, 6)( 5, 8)( 9,11) ]
 
+# Design : 5
 # Parameters:  [ 11, 165, 120, 8, 84 ]
 # Complement:  [ 11, 165, 45, 3, 9 ]
 # autGroup:    S11
@@ -219,7 +247,7 @@ lD := [
 # Rank:             [ 2, 2 ]
 # 2-Homogeneous:    [ true, true ]
 # Point-stabiliser: [ "S10", "A6 . C2" ]
-# Block-stabiliser: [ "S3 x S8", "GL(2,3)" ]
+# Block-stabiliser: [ "S8 x S3", "GL(2,3)" ]
 # Orbit length point-stabiliser: [ 1^{1}10^{1} , 1^{1}10^{1} ] 
 # Orbit length block-stabiliser: [ 3^{1}8^{1} , 3^{1}8^{1} ] 
 # Point-transitive: 	[ true, true ]
@@ -232,12 +260,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 1, 2, 3, 5, 6, 7, 8, 9 ]
+[ 1, 2, 3, 4, 5, 6, 9, 11 ]
 # Generators of autGroup: 
-[ ( 1, 5, 2, 7,11)( 3, 9, 8)( 4,10), ( 1, 6, 2,10,11)( 3, 5, 4, 9, 8, 7) ]
+[ ( 1, 2, 5,11, 6, 7, 4)( 3,10, 8, 9), ( 1, 4,10,11, 8, 9, 6, 5)( 2, 7, 3) ]
 # Generators of autSubgroup: 
-[ ( 2, 3, 4, 5)( 6, 8, 9,10), ( 1, 2)( 4, 6)( 5, 7)( 9,11) ]
+[ ( 1, 2, 3, 5)( 4, 7, 9,10), ( 2, 4)( 3, 6)( 5, 8)( 9,11) ]
 
+# Design : 6
 # Parameters:  [ 11, 330, 120, 4, 36 ]
 # Complement:  [ 11, 330, 210, 7, 126 ]
 # autGroup:    S11
@@ -258,15 +287,16 @@ lD := [
 # Block-primitive:  	[ true, false ]
 # Block-primitive type: [ "2", "0" ]
 # Block-imprimitivity class (autSubroup): 
-[ 1, 2, 9, 37, 121 ]
+[ 1, 27, 47, 85, 94, 117, 148, 152, 181, 198, 216, 236, 255, 268, 293 ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 1, 2, 5, 8 ]
+[ 1, 4, 6, 11 ]
 # Generators of autGroup: 
-[ ( 1, 2, 9, 4, 8)( 5,11, 6)( 7,10), ( 1, 5,11, 2, 6,10, 7)( 3, 8, 4) ]
+[ ( 1, 7)( 2, 5)( 3, 9, 8,11,10, 4, 6), ( 1,11, 2, 3, 5,10, 4, 7, 9, 6) ]
 # Generators of autSubgroup: 
-[ ( 2, 3, 4, 5)( 6, 8, 9,10), ( 1, 2)( 4, 6)( 5, 7)( 9,11) ]
+[ ( 1, 2, 3, 5)( 4, 7, 9,10), ( 2, 4)( 3, 6)( 5, 8)( 9,11) ]
 
+# Design : 7
 # Parameters:  [ 11, 396, 180, 5, 72 ]
 # Complement:  [ 11, 396, 216, 6, 108 ]
 # autGroup:    M11
@@ -287,18 +317,20 @@ lD := [
 # Block-primitive:  	[ false, false ]
 # Block-primitive type: [ "0", "0" ]
 # Block-imprimitivity class (autGroup): 
-[ 1, 5, 15, 33, 81, 190 ]
+[ 1, 12, 22, 33, 37, 44, 55, 65, 79, 85, 98, 100, 111, 124, 125, 149, 153, 170, 190, 195, 201, 203, 224, 234, 238, 242, 262, 283, 289, 301, 312, 324, 337, 
+  353, 371, 389 ]
 # Block-imprimitivity class (autSubroup): 
-[ 1, 10, 20, 30, 35, 44, 56, 70, 74, 86, 99, 103, 110, 123, 138, 146, 153, 160, 183, 197, 199, 217, 220, 233, 243, 244, 
-  266, 270, 292, 302, 312, 323, 331, 349, 364, 392 ]
+[ 1, 12, 22, 33, 37, 44, 55, 65, 79, 85, 98, 100, 111, 124, 125, 149, 153, 170, 190, 195, 201, 203, 224, 234, 238, 242, 262, 283, 289, 301, 312, 324, 337, 
+  353, 371, 389 ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 3, 5, 7, 9, 10 ]
+[ 2, 4, 5, 7, 9 ]
 # Generators of autGroup: 
-[ ( 1, 5, 8, 2)( 3,10, 7, 6), ( 1, 5, 2, 8, 3,10, 7, 4, 9,11, 6) ]
+[ ( 1, 7, 2, 6, 4, 3, 8,11)( 5,10), ( 1, 9, 7, 8, 2,10)( 3,11)( 4, 6, 5) ]
 # Generators of autSubgroup: 
-[ ( 2, 3, 4, 5)( 6, 8, 9,10), ( 1, 2)( 4, 6)( 5, 7)( 9,11) ]
+[ ( 1, 2, 3, 5)( 4, 7, 9,10), ( 2, 4)( 3, 6)( 5, 8)( 9,11) ]
 
+# Design : 8
 # Parameters:  [ 12, 22, 11, 6, 5 ]
 # Complement:  [ 12, 22, 11, 6, 5 ]
 # autGroup:    M11
@@ -324,12 +356,13 @@ lD := [
 [ 1, 22 ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 1, 3, 5, 9, 10, 11 ]
+[ 1, 3, 4, 9, 10, 12 ]
 # Generators of autGroup: 
-[ ( 1, 9, 8,11,12, 2, 7, 5,10, 3, 4), ( 1,11,12, 4, 5, 6, 9,10)( 2, 3, 8, 7) ]
+[ ( 1, 4, 7, 2,10, 9)( 3, 6, 5)( 8,12), ( 1, 6, 2)( 3,10,12, 4, 8,11)( 5, 9) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 9
 # Parameters:  [ 12, 66, 55, 10, 45 ]
 # Complement:  [ 12, 66, 11, 2, 1 ]
 # autGroup:    S12
@@ -351,12 +384,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 2, 3, 4, 5, 6, 7, 8, 9, 11, 12 ]
+[ 2, 3, 4, 5, 6, 7, 8, 10, 11, 12 ]
 # Generators of autGroup: 
-[ ( 1, 6,10, 3, 5,12, 2, 8, 9,11, 7, 4), ( 1, 9, 8,12, 2, 7,10, 6)( 4, 5,11) ]
+[ ( 1, 4, 5, 3, 9,10, 6)( 2,12, 8), ( 1, 7)( 2,12, 6,11, 9, 4)( 3,10) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 10
 # Parameters:  [ 12, 110, 55, 6, 25 ]
 # Complement:  [ 12, 110, 55, 6, 25 ]
 # autGroup:    M11
@@ -382,12 +416,13 @@ lD := [
 [ 1, 110 ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 1, 5, 6, 7, 8, 12 ]
+[ 1, 3, 6, 7, 8, 11 ]
 # Generators of autGroup: 
-[ ( 1, 6,10)( 2, 4, 9)( 3, 5, 7), ( 1, 7, 3, 4)( 2, 5,12, 9, 6,11, 8,10) ]
+[ ( 1, 5,11, 7, 3, 8, 6, 4, 2,12,10), ( 1,12, 9, 4,11,10, 2, 5)( 3, 8, 7, 6) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 11
 # Parameters:  [ 12, 132, 55, 5, 20 ]
 # Complement:  [ 12, 132, 77, 7, 42 ]
 # autGroup:    M11
@@ -408,17 +443,18 @@ lD := [
 # Block-primitive:  	[ false, false ]
 # Block-primitive type: [ "0", "0" ]
 # Block-imprimitivity class (autGroup): 
-[ 1, 11, 26, 42, 51, 66, 72, 86, 93, 103, 112 ]
+[ 1, 2, 5, 17, 32, 66 ]
 # Block-imprimitivity class (autSubroup): 
-[ 1, 2, 5, 9, 24, 59 ]
+[ 1, 2, 5, 17, 32, 66 ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 4, 7, 9, 11, 12 ]
+[ 2, 4, 6, 10, 11 ]
 # Generators of autGroup: 
-[ ( 1, 5, 7,12, 4, 3, 2,10,11, 6, 9), ( 1, 8, 4,12)( 2, 3, 9,11,10, 7, 6, 5) ]
+[ ( 1, 3, 9, 2)( 4, 5, 8,12)( 6,10)( 7,11), ( 1, 6, 8, 5, 9,11, 3, 4, 2,12,10) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 12
 # Parameters:  [ 12, 165, 55, 4, 15 ]
 # Complement:  [ 12, 165, 110, 8, 70 ]
 # autGroup:    M11
@@ -440,12 +476,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 6, 8, 9, 12 ]
+[ 6, 7, 8, 10 ]
 # Generators of autGroup: 
-[ ( 1, 4, 6,10, 9)( 3, 7, 5,11,12), ( 1, 9, 4,11)( 2, 5)( 3,10, 6, 8)( 7,12) ]
+[ ( 2, 3, 4)( 5, 7, 9,10, 6, 8)(11,12), ( 1,12, 4, 8, 7, 5,10, 2, 6, 3,11) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 13
 # Parameters:  [ 12, 165, 110, 8, 70 ]
 # Complement:  [ 12, 165, 55, 4, 15 ]
 # autGroup:    M11
@@ -467,12 +504,13 @@ lD := [
 # Block-primitive type: [ "2", "2" ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 1, 2, 3, 4, 5, 7, 10, 11 ]
+[ 1, 2, 3, 4, 5, 9, 11, 12 ]
 # Generators of autGroup: 
-[ ( 1, 6,11, 2)( 3, 4,10,12)( 5, 7)( 8, 9), ( 1, 9)( 2,12, 4)( 5, 7,10, 8,11, 6) ]
+[ ( 2, 7, 6)( 3, 4)( 5,10,11, 9, 8,12), ( 1, 2, 6, 4, 9, 8,11, 3)( 5, 7,12,10) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 14
 # Parameters:  [ 12, 220, 55, 3, 10 ]
 # Complement:  [ 12, 220, 165, 9, 120 ]
 # autGroup:    S12
@@ -493,15 +531,16 @@ lD := [
 # Block-primitive:  	[ true, false ]
 # Block-primitive type: [ "2", "0" ]
 # Block-imprimitivity class (autSubroup): 
-[ 1, 167 ]
+[ 1, 141 ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 3, 5, 6 ]
+[ 3, 8, 12 ]
 # Generators of autGroup: 
-[ ( 1, 5, 2,11, 8, 6, 7, 3,12, 4,10), ( 1, 9,10, 2,11, 4, 3, 6, 7, 8) ]
+[ ( 1, 5,10, 7,11,12, 4, 6)( 8, 9), ( 1,10, 5, 3, 7, 9, 8, 6, 4)( 2,11) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 15
 # Parameters:  [ 12, 330, 110, 4, 30 ]
 # Complement:  [ 12, 330, 220, 8, 140 ]
 # autGroup:    M11
@@ -522,17 +561,18 @@ lD := [
 # Block-primitive:  	[ false, false ]
 # Block-primitive type: [ "0", "0" ]
 # Block-imprimitivity class (autGroup): 
-[ 1, 96, 180, 216, 248 ]
+[ 1, 3, 6, 18, 21, 27, 43, 45, 50, 91, 122, 124, 130, 173, 229 ]
 # Block-imprimitivity class (autSubroup): 
-[ 1, 3, 5, 8, 11, 26, 33, 34, 50, 69, 113, 115, 130, 148, 204 ]
+[ 1, 3, 6, 18, 21, 27, 43, 45, 50, 91, 122, 124, 130, 173, 229 ]
 # Flag-regular:   	[ false, false ]
 # Base block: 
-[ 2, 5, 6, 8 ]
+[ 3, 5, 7, 8 ]
 # Generators of autGroup: 
-[ ( 1, 9, 6, 7,12, 2)( 3, 5, 4)( 8,10), ( 1, 9)( 2, 4,12)( 5, 6,11, 8,10, 7) ]
+[ ( 1, 4, 6, 5)( 2, 9,12, 7, 8,10, 3,11), ( 1,11, 8, 5, 6,10)( 2,12, 3)( 4, 7) ]
 # Generators of autSubgroup: 
-[ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ]
+[ ( 1, 2, 3,12)( 4, 7,11,10)( 5, 9)( 6, 8), ( 1,10)( 3,12)( 5, 8)( 6,11) ]
 
+# Design : 16
 # Parameters:  [ 55, 1980, 144, 4, 8 ]
 # Complement:  [ 55, 1980, 1836, 51, 1700 ]
 # autGroup:    M11
@@ -553,18 +593,17 @@ lD := [
 # Block-primitive:  	[ false, false ]
 # Block-primitive type: [ "0", "0" ]
 # Block-imprimitivity class (autGroup): 
-[ 1, 1386, 1821 ]
+[ 1, 1449, 1517 ]
 # Block-imprimitivity class (autSubroup): 
-[ 1, 1386, 1821 ]
+[ 1, 1094 ]
 # Flag-regular:   	[ true, true ]
 # Base block: 
-[ 3, 11, 12, 48 ]
+[ 4, 7, 24, 55 ]
 # Generators of autGroup: 
-[ ( 1,32,50,29)( 2,44,41,23)( 3,19,47,24)( 4, 7,10,35)( 5,49,52,42)( 6,33,18,13)( 8,48,45,46)( 9,17,30,40)(11,22,28,39)
-    (14,25)(16,51,34,43)(20,21,31,53)(26,54,27,38)(36,55), ( 1,44,25,38,11,17, 3,48,52,24,26)( 2,34,13,33,50,22, 5,15,49,
-     47,36)( 4, 7,32,18,14, 6,41, 8,37,12,19)( 9,31,35,45,42,20,23,54,27,43,28)(10,39,30,21,29,55,46,40,53,16,51) ]
+[ ( 1, 7,32,48,53)( 2,43,39, 4,45)( 3,38,46,47,21)( 5,44,51,13,33)( 6,41,11,16,17)( 8,25,27,15,14)( 9,54,10,55,26)(12,37,29,40,36)(18,42,49,24,23)
+    (19,35,28,31,30)(20,50,34,52,22), ( 1,49,34, 4,55,51,22,44)( 2,19,15,30)( 3,47,12,48, 5,23, 8,50)( 6,46,13,21,39,20, 9,33)( 7,25,43,10,26,42,35,37)
+    (11,28,54,24,52,40,18,32)(16,27,29,38,53,45,17,41)(31,36) ]
 # Generators of autSubgroup: 
-[ ( 1, 2, 4, 7)( 3, 6)( 5, 9,12,17)( 8,11,15,22)(10,14,20,29)(13,19,27,38)(16,24,33,43)(18,26,36,34)(21,31,41,50)(23,32)
-    (25,35,44,53)(28,39,48,46)(30,40,49,42)(47,51,55,54), ( 1, 3)( 2, 5)( 4, 8)( 7,10)( 9,13)(11,16)(12,18)(14,21)(15,23)
-    (17,25)(19,28)(20,30)(22,29)(24,34)(26,37)(31,33)(32,42)(35,45)(36,46)(38,47)(39,49)(41,51)(43,52)(50,54) ]
-
+[ ( 1, 2, 4, 7)( 3, 6,10,15)( 5, 9)( 8,13,19,26)(11,17,23,31)(12,18,25,34)(14,20,28,36)(16,22,29,27)(24,33,40,46)(30,38,37,44)(35,42)(39,45,43,48)
+    (41,47,52,55)(49,51,50,54), ( 1, 3)( 2, 5)( 4, 8)( 6,11)( 7,12)( 9,14)(10,16)(13,18)(15,21)(17,24)(19,27)(20,26)(22,30)(23,32)(25,35)(29,37)
+    (31,39)(33,41)(34,40)(36,43)(44,49)(45,50)(46,51)(47,53) ]
