@@ -1,35 +1,41 @@
-#------------------------------------------------------------------------------------------------------------------------  
-# Flag-transitive 2-designs 
-# Group (autSubgroup): A5 = L2(4) = L2(5) = U2(4) = U2(5) = S2(4) = S2(5) = O3(5) = O4-(2)
-# Number of non-isomorphic designs   [ total , symmetric, non-symmetric ]: [ 2, 0, 2 ]
-#------------------------------------------------------------------------------------------------------------------------- 
-# parameters is the list of parameter sets followed ci and/or  "sym". ci means that the design with this parameter set 
-#  is the complement of the i-th design and "sym" means D is symmetric.
-# designinfo contains lists with entries as below where A = Aut( D ) and a is a point and B is the base block ..  
-#  [ [ v, b , r , k , lam ] , 
-#    [ A , A_a , A_B, is A point-primtive, is A block-primtive, is A flag-trasnitive, is A anti-flag-trasnitive, Rank(A)],
-#    [ G , G_a , G_B, is G point-primtive, is G block-primtive, is G flag-trasnitive, is G anti-flag-trasnitive, Rank(G)],
-#    "ci" explained above,  "sym" if D is symmetric ] 
-# lD is a list of non-isomorphic designs. For further consideration, for each record D in lD the block set needs to be  
-#  binded by D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) );  
-#------------------------------------------------------------------------------------------------------------------------- 
+# ----------------------------------------------------------------------------------------------------
+#  Group (autSubgroup): A5 = L2(4) = L2(5) = U2(4) = U2(5) = S2(4) = S2(5) = O3(5) = O4-(2)
+# ----------------------------------------------------------------------------------------------------
 
-# parameter sets 
-# 1 : [ 5, 10, 6, 3, 3 ]
-# 2 : [ 6, 10, 5, 3, 2 ] c2
+# Flag-transitive 2-designs:                                    
+# --------------------------------------------------------------
+#                              Symmetric  Non-symmetric  Total  
+# Number of designs            0          2              2      
+# Point-primitive              0          2              2      
+# Point-impritive              0          0              0      
+# --------------------------------------------------------------
 
-designinfo := [ 
-    [ [ 5, 10, 6, 3, 3 ], [ "S5", "S4", "D12", true, true, true, true, 2 ], [ "A5", "A4", "S3", true, true, true, true, 2 ] ],
-    [ [ 6, 10, 5, 3, 2 ], [ "A5", "D10", "S3", true, true, true, true, 2 ], [ "A5", "D10", "S3", true, true, true, true, 2 ], "c2" ]
-]; 
+# Summary: 
+# -----------------------------------------------------------------------------------------------------
+# Nr  v  b   r  k  λ  G   Gα  GB  Aut(D)  rk(G)  rk(Aut(D))  point-primitive  complement  symmetric  
+# -----------------------------------------------------------------------------------------------------
+# 1   5  10  6  3  3   A5  A4   S3  S5      2      2           true                                    
+# 2   6  10  5  3  2   A5  D10  S3  A5      2      2           true             2                      
+# -----------------------------------------------------------------------------------------------------
 
+# Designs: 
+# ---------------------------------------------------------------------------------------------------------------------------------------
 lD := [ 
-    rec(  parameters := [ 5, 10, 6, 3, 3 ], autGroup := Group( [ (1,3,2,4), (1,5,4,3,2) ] ), autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ), baseBlock := [ 2, 4, 5 ], 
-    blockSizes := [ 3 ], isBlockDesign := true, isBinary := true, isSimple := true, v := 5,  r := 6,  tSubsetStructure := rec( lambdas := [ 3 ] , t := 2)  ),
-    rec(  parameters := [ 6, 10, 5, 3, 2 ], autGroup := Group( [ (1,2,5,3,6), (1,2,6,4,5) ] ), autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ), baseBlock := 
-    [ 1, 2, 3 ], blockSizes := [ 3 ], isBlockDesign := true, isBinary := true, isSimple := true, v := 6,  r := 5,  tSubsetStructure := rec( lambdas := [ 2 ] , t := 2)  )
+	rec( parameters := [ 5, 10, 6, 3, 3 ], v := 5, blockSizes := [ 3 ], r := 6, tSubsetStructure := rec( lambdas := [ 3 ], t := 2 ), 
+		isBinary := true, isBlockDesign := true, isSimple := true, 
+		autGroup := Group( [ (3,5,4), (1,5,3)(2,4) ]), 
+		autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ]), 
+		baseBlock := [ 2, 4, 5 ] ),
+	rec( parameters := [ 6, 10, 5, 3, 2 ], v := 6, blockSizes := [ 3 ], r := 5, tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ), 
+		isBinary := true, isBlockDesign := true, isSimple := true, 
+		autGroup := Group( [ (1,4,5,6,3), (1,5,4,6,2) ]), 
+		autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ]), 
+		baseBlock := [ 1, 2, 3 ] )
 ]; 
+for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
 
+# Further information: 
+# ----------------------------------------------------------------------------------------------------
 # Design: 1
 # Parameters:  [ 5, 10, 6, 3, 3 ]
 # Complement:  [ 5, 10, 4, 2, 1 ]
