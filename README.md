@@ -117,14 +117,17 @@ Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automo
 
 For the labelling of the type of the primitive permutation group, we follow the GAP notation, which we provide below for convenience.
 
-1 Affine. (HA)
-2 Almost simple. (AS)
-3a Diagonal, Socle consists of two normal subgroups. (HS)
-3b Diagonal, Socle is minimal normal. (SD)
-4a Product action with the first factor primitive of type 3a. (HC)
-4b Product action with the first factor primitive of type 3b. (CD)
-4c Product action with the first factor primitive of type 2. (PA)
-5 Twisted wreath product (TW)
+    Lable     ONan-Scott Type
+    ------------------------------------------------------------------------
+    1         Affine. (HA)                  
+    2         Almost simple. (AS)
+    3a        Diagonal, Socle consists of two normal subgroups. (HS)
+    3b        Diagonal, Socle is minimal normal. (SD)
+    4a        Product action with the first factor primitive of type 3a. (HC)
+    4b        Product action with the first factor primitive of type 3b. (CD)
+    4c        Product action with the first factor primitive of type 2. (PA)
+    5         Twisted wreath product (TW)   
+    -------------------------------------------------------------------------
 
 # Authors
 
