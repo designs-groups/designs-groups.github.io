@@ -8,7 +8,7 @@ You are free to:
 - **Adapt** — remix, transform, and build upon the material for any purpose, even commercially
 
 Under the following terms:
-- **Attribution** — If you have used this database for any purpose, please cite it as described below.
+- **Attribution** — If you have used this database for any purpose, please cite us as described below.
 
 Seyed Hassan Alavi and Ashraf Daneshkhah, Designs and Groups: constructions and classifications (database), 2025 (https://github.com/designs-groups/designs-groups.github.io).    
 
