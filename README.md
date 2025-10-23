@@ -91,8 +91,40 @@ Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automo
     gap> IsIsomorphicBlockDesign( lD[ 1 ] , lD[ 2 ] );
     false
 
-**(4)** Further information:
+**(4)** Further information: The final section of each file provides further information on 2-designs and their automorphism groups. It starts with the design number, which is the position of the design in the list lD, or equivalently, the row number in the Summary table in section 2. For example, the following is some information on the 12th design D with automorphism group G = U3(3). This design has parameter set [ 28, 336, 216, 18, 136 ] and its complement has parameter set [ 28, 336, 120, 10, 40 ]. The full automorphism group Aut(D) of D is autGroup = O(7,2) and as mentioned G = autSubgroup = U3(3). Form line 7, the property listed in the left is given in order for Aut(D) and G, respectively. For example, [ "S6xS3", "3xS3" ] in the line Block-stabiliser means the block-stabiliser of Aut(D) is isomorphic to S6xS3 and the block-stabiliser of G is 3xS3. For the Point-primitive type (repc. Block-primitive type), if the group is primitive, then the type of the primitive permutation group, according to the O'Nan-Scott classification, is provided; otherwise, we write "0". Therefore, in this case, both Aut(D) and G are point-primitive of type "2" (Almost Simple type), and Aut(D) is block-primitive of type "2" (Almost Simple type) while G is block-imprimitive. We also observe that the complement of D cannot be in the list lD as G = U3(3) is not anti-flag-transitive.              
 
+    Design: 12
+    Parameters:  [ 28, 336, 216, 18, 136 ]
+    Complement:  [ 28, 336, 120, 10, 40 ] 
+    autGroup:    O(7,2)
+    autSubgroup: PSU(3,3)
+    More information: [ autGroup , autSubgroup ]
+    Rank:             [ 2, 2 ]
+    2-Homogeneous:    [ true, true ]
+    Point-stabiliser: [ "O(5,3):2", "((3^2):3):8" ]
+    Block-stabiliser: [ "S6xS3", "3xS3" ]
+    Orbit structure point-stabiliser: [ 1^{1}27^{1} , 1^{1}27^{1} ] 
+    Orbit structure block-stabiliser: [ 10^{1}18^{1} , 1^{1}9^{1}18^{1} ] 
+    Point-transitive: 	[ true, true ]
+    Block-transitive: 	[ true, true ]
+    Flag-transitive:  	[ true, true ]
+    Anti-flag-transitive: [ true, false ]
+    Point-primitive:  	[ true, true ]
+    Point-primitive type: [ "2", "2" ]
+    Block-primitive:  	[ true, false ]
+    Block-primitive type: [ "2", "0" ]
+    Flag-regular:   	[ false, true ]
+
+For the labelling of the type of the primitive permutation group, we follow the GAP notation, which we provide below for convenience.
+
+1 Affine. (HA)
+2 Almost simple. (AS)
+3a Diagonal, Socle consists of two normal subgroups. (HS)
+3b Diagonal, Socle is minimal normal. (SD)
+4a Product action with the first factor primitive of type 3a. (HC)
+4b Product action with the first factor primitive of type 3b. (CD)
+4c Product action with the first factor primitive of type 2. (PA)
+5 Twisted wreath product (TW)
 
 # Authors
 
