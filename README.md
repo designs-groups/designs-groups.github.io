@@ -4,7 +4,7 @@ The study of designs has a long history, and recurring themes are issues of bala
 
 # Background
 
-A 2-(v, k, λ) design or a 2-design with parameter set (v, k, λ) is an incidence structure  D = (P, B) consisting of a set P of v points, and a set B of k-element subsets of P, called blocks, such that every 2-element subset of points lies in exactly λ blocks. The design is nontrivial if 2 < k < v−2, and it is symmetric if |B| = v. A flag of D is an incident pair (α,B) where α and B are a point and a block of D, respectively. An automorphism of a block design D is a permutation of the points that permutes the blocks and preserves the incidence relation. The set of all automorphisms of D denoted by Aut(D) forms a group. An automorphism group G  is a subgroup of Aut(D). The group G is called point-imprimitive if there is a nontrivial G-invariant point partition; otherwise, G is said to be point-primitive. In the same way, we can define similar terminologies. For example, G is called block-transitive (flag-transitive) if it is transitive on the set of blocks (flags) of D. 
+A 2-(v, k, λ) design or a 2-design with parameter set (v, k, λ) is an incidence structure  D = (𝒫, ℬ) consisting of a set 𝒫 of v points, and a set ℬ of size b consisting k-element subsets of 𝒫, called blocks, such that every 2-element subset of points lies in exactly λ blocks. The design is nontrivial if 2 < k < v−2, and it is symmetric if |ℬ| = v. A flag of D is an incident pair (α,B) where α and B are a point and a block of D, respectively. An automorphism of a block design D is a permutation of the points that permutes the blocks and preserves the incidence relation. The set of all automorphisms of D, denoted by Aut(D), forms a group. An automorphism group G is a subgroup of Aut(D). The group G is called point-imprimitive if there is a nontrivial G-invariant point partition; otherwise, G is said to be point-primitive. In the same way, we can define similar terminologies. For example, G is called block-transitive (flag-transitive) if it is transitive on the set of blocks (flags) of D. 
 
 The block designs constructed here are simple (no repeated blocks), binary (no repeated points in any block ), and  pairwise-balanced (each pair of distinct points lies in exactly a constant number λ of blocks). 
 
@@ -25,13 +25,13 @@ For example, the table below provides all information about the number of 2-desi
                            Point-primitive    0          1              1      
                            Point-impritive    1          3              4  
                            --------------------------------------------------------------
-                           Total              1           4             5 
+                           Total              1          4              5 
                            --------------------------------------------------------------
 
 
 
 
-
+**(2)** The second part is a table presenting information on designs, the first column is the number assigned to the design in the row (in the list of designs described in part 3 below). The second to sith column are the paraameters v, b, r, k and 
 
 
 For example, the total number of flag-transitive 2-designs.   
