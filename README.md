@@ -1,4 +1,4 @@
-# Designs and Groups: Constructions and Classifications
+# Designs and Groups: constructions and classifications
 
 The study of designs has a long history, and recurring themes are issues of balance and symmetry. The mutual importance of groups and designs has also been recognised for decades. As an important example, Witt designs as the Steiner systems, are better understood by their automorphism groups, which are the sporadic simple Mathieu groups discovered 70 years earlier. The main aim of this project is to study symmetries of these well-known incidence structures. In particular, we are interested in investigating transitive actions of automorphism groups of block designs, and on this page, we present a database for nontrivial 2-designs and their symmetries. 
 
