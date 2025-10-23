@@ -117,7 +117,7 @@ Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automo
 
 For the labelling of the type of the primitive permutation group, we follow the GAP notation, which we provide below for convenience.
 
-    Lable     ONan-Scott Type
+    Label     ONan-Scott Type
     ------------------------------------------------------------------------
     1         Affine. (HA)                  
     2         Almost simple. (AS)
