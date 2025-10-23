@@ -12,29 +12,70 @@ The block designs constructed here are simple (no repeated blocks), binary (no r
 
 At this stage, we are uploading and updating the data for 2-designs admitting flag-transitive, block-transitive, and/or point-transitive automorphism groups. In particular, we construct and classify 2-designs whose automorphism groups are almost simple. These data can be found in one of three folders named by flag-transitive (**ft), block-transitive (**bt), and point-transitive (**pt). In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3). For ease of access to these files, one can use the Table of subgroups.    
 
-In each file, the information about the 2-designs D with automorphism group G is presented in four main parts. 
+In each file, the information about the 2-designs D with automorphism group G is presented in four main sections. 
 
 **(1)** Statistics: The number of symmetric designs and the number of non-symmetric designs (point-primitive, block-primitive, etc.) are provided.
 For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive.
 
-                           Number of 2-designs:
-                           --------------------------------------------------------------
-                                             Symmetric  Non-symmetric  Total
-                           Point-primitive    0          4              4      
-                           Point-impritive    1          0              1  
-                           Point-primitive    0          1              1      
-                           Point-impritive    1          3              4  
-                           --------------------------------------------------------------
-                           Total              1          4              5 
-                           --------------------------------------------------------------
+    Number of 2-designs:
+    --------------------------------------------------------------
+                      Symmetric  Non-symmetric  Total
+    Point-primitive    0          4              4      
+    Point-impritive    1          0              1  
+    Point-primitive    0          1              1      
+    Point-impritive    1          3              4  
+    --------------------------------------------------------------
+    Total              1          4              5 
+    --------------------------------------------------------------
 
 
+**(2)** Summary: The second section is a table presenting information on designs; the first column is the number assigned to the design in the row (in the list of designs described in section 3 below). The second to the sixth columns present the parameters v, b, r, k, and λ, respectively. The next columns are the group G, the point-stabiliser Gα, the block-stabiliser GB, Aut(D), the rank of G, and the rank of Aut(D). The thirteenth and fourteenth columns say that if D is point-primitive and/or block-primitive, respectively. The fifteenth  column, named complement, indicates the design number, which is the complement of the design in the row. The last column records whether the design is symmetric or not.    
+
+Below is the table for A5.2 = S5. The design in line 3 is isomorphic to its complement. It is point-primitive but not block-primitive   
+
+    Summary: 
+    -------------------------------------------------------------------------------------------------------------------------
+    Nr  v   b   r   k  λ  G   Gα  GB   Aut(D)  rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  
+    -------------------------------------------------------------------------------------------------------------------------
+    1   5   10  6   3  3   S5  S4   D12  S5      2      2           true             true                                    
+    2   6   15  10  4  6   S5  5:4  D8   S6      2      2           true             false                                   
+    3   6   20  10  3  4   S5  5:4  S3   S6      2      2           true             false            3                      
+    4   10  15  6   4  2   S5  D12  D8   S6      3      2           true             false                                   
+    5   15  15  8   8  4   S5  D8   D8   A8      4      2           false            false                        true       
+    -------------------------------------------------------------------------------------------------------------------------
+
+**(3)** Designs: In this 
 
 
-**(2)** The second part is a table presenting information on designs; the first column is the number assigned to the design in the row (in the list of designs described in part 3 below). The second to the sixth columns present the parameters v, b, r, k, and λ, respectively. The next columns are the group G, the point-stabiliser Gα, the block-stabiliser GB, Aut(D), the rank of G, and the rank of Aut(D). The thirteenth and fourteenth columns say that if D is point-primitive and/or block-primitive, respectively. The fifteenth  column, named complement, indicates the design number, which is the complement of the design in the row. The last column records whether the design is symmetric or not.    
+lD := [ 
+  rec( parameters:=[ 5, 10, 6, 3, 3 ],
+    autGroup := Group( [ (1,2,3,4,5), (1,4,5,3) ] ),
+    autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ),
+    baseBlock := [ 2, 4, 5 ],
+    blockSizes := [ 3 ],
+    isBinary := true,
+    isBlockDesign := true,
+    isSimple := true,
+    r := 6,
+    tSubsetStructure := rec( lambdas := [ 3 ],t := 2 ),
+    v:= 5),
+ rec( parameters:=[ 6, 10, 5, 3, 2 ],
+    autGroup := Group( [ (1,3,2)(4,5,6), (1,3,5,4,2) ] ),
+    autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ),
+    baseBlock := [ 1, 2, 3 ],
+    blockSizes := [ 3 ],
+    isBinary := true,
+    isBlockDesign := true,
+    isSimple := true,
+    r := 5,
+    tSubsetStructure := rec(
+    lambdas := [ 2 ],
+    t := 2 ),
+    v:= 6)
+  ]; 
+for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-
-For example, the total number of flag-transitive 2-designs.   
+**(4)** Further information:
 
 
 # Authors
