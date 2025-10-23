@@ -8,7 +8,7 @@ A 2-(v, k, λ) design or a 2-design with parameter set (v, k, λ) is an incidenc
 
 The block designs constructed here are simple (no repeated blocks), binary (no repeated points in any block ), and  pairwise-balanced (each pair of distinct points lies in exactly a constant number λ of blocks). 
 
-# How to read the database
+# How to Read the Database
 
 At this stage, we are uploading and updating the data for 2-designs admitting flag-transitive, block-transitive, and/or point-transitive automorphism groups. In particular, we construct and classify 2-designs whose automorphism groups are almost simple. These data can be found in one of three folders named by flag-transitive, block-transitive, and point-transitive. In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3). For ease of access to these files, one can use the Table of subgroups.    
 
