@@ -1,6 +1,6 @@
 # Designs and Groups: Constructions and Classifications
 
-The study of designs has a long history, and recurring themes are issues of balance and symmetry. The mutual importance of groups and designs has also been recognised for decades. As an important example, Witt designs as the Steiner systems, are better understood by their automorphism groups, which are the sporadic simple Mathieu groups discovered 70 years earlier. The main aim of this project is to study symmetries of these well-known incidence structures. In particular, we are interested in investigating transitive actions of automorphism groups of block designs, and on this page, we present a database for 2-designs there symmetries. 
+The study of designs has a long history, and recurring themes are issues of balance and symmetry. The mutual importance of groups and designs has also been recognised for decades. As an important example, Witt designs as the Steiner systems, are better understood by their automorphism groups, which are the sporadic simple Mathieu groups discovered 70 years earlier. The main aim of this project is to study symmetries of these well-known incidence structures. In particular, we are interested in investigating transitive actions of automorphism groups of block designs, and on this page, we present a database for nontrivial 2-designs and their symmetries. 
 
 # Background
 
@@ -44,36 +44,52 @@ Below is the table for A5.2 = S5. The design in line 3 is isomorphic to its comp
     5   15  15  8   8  4   S5  D8   D8   A8      4      2           false            false                        true       
     -------------------------------------------------------------------------------------------------------------------------
 
-**(3)** Designs: In this 
+**(3)** Designs: In this section, we present a list, namely, lD of 2-designs. Each design is presented as a record as in the format one can construct by the GAP package DESIGN;  however, in the record presented here, we have some modifications. For each design D, we have added three components, namely, parameters, autGroup and baseBlock, indicating the parameter set [v,b,r,k,λ] of D, Aut(D), and the base block B, where ℬ = B^G and G = D.autSubgroup. For saving space, we have unbinded the block set from each design; however, for further use, we have added a loop at the end of the list lD, which binds the block set to each design. Therefore, one can use these designs for further consideration. 
 
+Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automorphism group. 
 
-lD := [ 
-  rec( parameters:=[ 5, 10, 6, 3, 3 ],
-    autGroup := Group( [ (1,2,3,4,5), (1,4,5,3) ] ),
-    autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ),
-    baseBlock := [ 2, 4, 5 ],
-    blockSizes := [ 3 ],
-    isBinary := true,
-    isBlockDesign := true,
-    isSimple := true,
-    r := 6,
-    tSubsetStructure := rec( lambdas := [ 3 ],t := 2 ),
-    v:= 5),
- rec( parameters:=[ 6, 10, 5, 3, 2 ],
-    autGroup := Group( [ (1,3,2)(4,5,6), (1,3,5,4,2) ] ),
-    autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ),
-    baseBlock := [ 1, 2, 3 ],
-    blockSizes := [ 3 ],
-    isBinary := true,
-    isBlockDesign := true,
-    isSimple := true,
-    r := 5,
-    tSubsetStructure := rec(
-    lambdas := [ 2 ],
-    t := 2 ),
-    v:= 6)
-  ]; 
-for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+    lD := [ 
+        rec( parameters:=[ 5, 10, 6, 3, 3 ],
+            autGroup := Group( [ (1,2,3,4,5), (1,4,5,3) ] ),
+            autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ),
+            baseBlock := [ 2, 4, 5 ],
+            blockSizes := [ 3 ],
+            isBinary := true,
+            isBlockDesign := true,
+            isSimple := true,
+            r := 6,
+            tSubsetStructure := rec( lambdas := [ 3 ],t := 2 ),
+            v:= 5), 
+        rec( parameters:=[ 6, 10, 5, 3, 2 ],
+            autGroup := Group( [ (1,3,2)(4,5,6), (1,3,5,4,2) ] ),
+            autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ),
+            baseBlock := [ 1, 2, 3 ],
+            blockSizes := [ 3 ],
+            isBinary := true,
+            isBlockDesign := true,
+            isSimple := true,
+            r := 5,
+            tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ),
+            v:= 6)
+    ]; 
+    for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+
+ As noted above, lD contains 2-designs with no block sets,  but if we sue the loop ``for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;'', then we can have all 2-designs with the same format as in the GAP package DESIGN:  
+
+    gap> for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+    gap> lD;
+    [ rec( autGroup := Group([ (1,2,3,4,5), (1,4,5,3) ]), autSubgroup := Group([ (1,2,4), (1,3)(2,5) ]), 
+          baseBlock := [ 2, 4, 5 ], blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 2, 5 ], [ 1, 3, 4 ], 
+              [ 1, 3, 5 ], [ 1, 4, 5 ], [ 2, 3, 4 ], [ 2, 3, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ], isBinary := true, 
+          isBlockDesign := true, isSimple := true, parameters := [ 5, 10, 6, 3, 3 ], r := 6, 
+          tSubsetStructure := rec( lambdas := [ 3 ], t := 2 ), v := 5 ), 
+      rec( autGroup := Group([ (1,3,2)(4,5,6), (1,3,5,4,2) ]), autSubgroup := Group([ (1,4,3)(2,6,5), (1,3)(4,6) ]), 
+          baseBlock := [ 1, 2, 3 ], blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 5 ], [ 1, 4, 6 ], 
+              [ 1, 5, 6 ], [ 2, 3, 6 ], [ 2, 4, 5 ], [ 2, 5, 6 ], [ 3, 4, 5 ], [ 3, 4, 6 ] ], isBinary := true, 
+          isBlockDesign := true, isSimple := true, parameters := [ 6, 10, 5, 3, 2 ], r := 5, 
+          tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ), v := 6 ) ]
+    gap> IsIsomorphicBlockDesign( lD[ 1 ] , lD[ 2 ] );
+    false
 
 **(4)** Further information:
 
