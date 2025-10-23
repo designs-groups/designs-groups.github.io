@@ -10,7 +10,7 @@ You are free to:
 Under the following terms:
 - **Attribution** — If you have used this database for any purpose, please cite it as described below.
 
-Seyed Hassan Alavi and Ashraf Daneshkhah, Designs and Groups: constructions and classifications, 2025 (https://github.com/designs-groups/designs-groups.github.io).    
+Seyed Hassan Alavi and Ashraf Daneshkhah, Designs and Groups: constructions and classifications (database), 2025 (https://github.com/designs-groups/designs-groups.github.io).    
 
 
 **License URL:** [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/)  
