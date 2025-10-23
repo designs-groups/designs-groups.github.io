@@ -10,9 +10,9 @@ The block designs constructed here are simple (no repeated blocks), binary (no r
 
 # How to read the database
 
-At this stage, we are uploading and updating the data for 2-designs admitting flag-transitive, block-transitive, and/or point-transitive automorphism groups. In particular, we construct and classify 2-designs whose automorphism groups are an almost simple groups. These data can be found in one of three folders named by flag-transitive (**ft), block-transitive (**bt), and point-transitive (**pt). In each folder, there are some subfolders and one can find some files named by a group name G (for example, U3(3).g). This means that the 2-design stored in the file is constructed by the group G. For ease of access to these files, one can use the Table of subgroups.    
+At this stage, we are uploading and updating the data for 2-designs admitting flag-transitive, block-transitive, and/or point-transitive automorphism groups. In particular, we construct and classify 2-designs whose automorphism groups are almost simple. These data can be found in one of three folders named by flag-transitive (**ft), block-transitive (**bt), and point-transitive (**pt). In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3). For ease of access to these files, one can use the Table of subgroups.    
 
-For each group in each file, the information about the 2-designs D with automorphism group G is presented in four main parts. 
+In each file, the information about the 2-designs D with automorphism group G is presented in four main parts. 
 
 1. Statistics: the number of symmetric designs and non-symmetric designs (point-primitive, block-primitive, etc.)
 For example, the table below provides all information about the number of 2-designs with automorphism group L2(8)=PSL(2,8).  
