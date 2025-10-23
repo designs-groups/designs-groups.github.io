@@ -14,61 +14,21 @@ At this stage, we are uploading and updating the data for 2-designs admitting fl
 
 In each file, the information about the 2-designs D with automorphism group G is presented in four main parts. 
 
-1. Statistics: the number of symmetric designs and non-symmetric designs (point-primitive, block-primitive, etc.)
-For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive.   
+**(1)** Statistics: the number of symmetric designs and non-symmetric designs (point-primitive, block-primitive, etc.) are provided.
+For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive.
 
-\# Number of 2-designs: <br>                                   
-\# -------------------------------------------------------------- <br>
-\#                              Symmetric  Non-symmetric  Total
-\# --------------------------------------------------------------
-\# Point-primitive              0          4              4      
-\# Point-impritive              1          0              1  
-\#
-\# Point-primitive              0          1              1      
-\# Point-impritive              1          3              4    
-\# --------------------------------------------------------------
-\# Total                        1           4             5
-\# --------------------------------------------------------------
+                           Number of 2-designs:
+                           --------------------------------------------------------------
+                                             Symmetric  Non-symmetric  Total
+                           Point-primitive    0          4              4      
+                           Point-impritive    1          0              1  
+                           Point-primitive    0          1              1      
+                           Point-impritive    1          3              4  
+                           --------------------------------------------------------------
+                           Total              1           4             5 
+                           --------------------------------------------------------------
 
-<table border="1" cellspacing="0" cellpadding="4">
-  <caption><strong>Number of designs</strong></caption>
-  <tr>
-    <th></th>
-    <th>Symmetric</th>
-    <th>Non-symmetric</th>
-    <th>Total</th>
-  </tr>
-  <tr>
-    <td>Point-primitive</td>
-    <td>0</td>
-    <td>4</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <td>Point-imprimitive</td>
-    <td>1</td>
-    <td>0</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>Block-primitive</td>
-    <td>0</td>
-    <td>1</td>
-    <td>1</td>
-  </tr>
-  <tr>
-    <td>Block-imprimitive</td>
-    <td>1</td>
-    <td>3</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <th>Total</th>
-    <th>1</th>
-    <th>4</th>
-    <th>5</th>
-  </tr>
-</table>
+
 
 
 
