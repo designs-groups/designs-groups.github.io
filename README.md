@@ -10,7 +10,7 @@ The block designs constructed here are simple (no repeated blocks), binary (no r
 
 # How to read the database
 
-At this stage, we are uploading and updating the data for 2-designs admitting flag-transitive, block-transitive, and/or point-transitive automorphism groups. In particular, we construct and classify 2-designs whose automorphism groups are almost simple. These data can be found in one of three folders named by flag-transitive (**ft), block-transitive (**bt), and point-transitive (**pt). In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3). For ease of access to these files, one can use the Table of subgroups.    
+At this stage, we are uploading and updating the data for 2-designs admitting flag-transitive, block-transitive, and/or point-transitive automorphism groups. In particular, we construct and classify 2-designs whose automorphism groups are almost simple. These data can be found in one of three folders named by flag-transitive, block-transitive, and point-transitive. In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3). For ease of access to these files, one can use the Table of subgroups.    
 
 In each file, the information about the 2-designs D with automorphism group G is presented in four main sections. 
 
@@ -74,7 +74,7 @@ Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automo
     ]; 
     for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
- As noted above, lD contains 2-designs with no block sets,  but if we sue the loop ``for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;'', then we can have all 2-designs with the same format as in the GAP package DESIGN:  
+ As noted above, lD contains 2-designs with no block sets,  but if we run the loop: ``for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;'', then we can have all 2-designs with the same format as in the GAP package DESIGN:  
 
     gap> for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
     gap> lD;
@@ -139,7 +139,7 @@ Any comments about the data are welcome. If you have found important information
 
 # Acknowledgment 
 
-In the preparation of this database, we use the computer software GAP. Our findings heavily depend on the use of GAP packages in particular, DESIGN and GRAPE included packages.
+In the preparation of this database, we use the computer software GAP. In addition to using the known methods for studying symmetries of block designs and at some point,  developing techniques in both design theory and group theory, our findings heavily depend on the use of GAP packages, in particular, DESIGN and GRAPE.
 
 [GAP2025] The GAP Group, GAP -- Groups, Algorithms, and Programming, Version 4.15.1; 2025. (https://www.gap-system.org)
 
