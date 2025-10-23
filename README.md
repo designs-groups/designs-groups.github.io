@@ -30,6 +30,47 @@ For example, the table below provides all information about the number of 2-desi
 \# Total                        1           4             5
 \# --------------------------------------------------------------
 
+<table border="1" cellspacing="0" cellpadding="4">
+  <caption><strong>Number of designs</strong></caption>
+  <tr>
+    <th></th>
+    <th>Symmetric</th>
+    <th>Non-symmetric</th>
+    <th>Total</th>
+  </tr>
+  <tr>
+    <td>Point-primitive</td>
+    <td>0</td>
+    <td>4</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>Point-imprimitive</td>
+    <td>1</td>
+    <td>0</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Block-primitive</td>
+    <td>0</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>Block-imprimitive</td>
+    <td>1</td>
+    <td>3</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <th>Total</th>
+    <th>1</th>
+    <th>4</th>
+    <th>5</th>
+  </tr>
+</table>
+
+
 
 
 
