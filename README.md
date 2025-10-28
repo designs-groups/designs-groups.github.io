@@ -14,7 +14,7 @@ At this stage, we are uploading and updating the data for 2-designs admitting fl
 
 In each file, the information about the 2-designs D with automorphism group G is presented in four main sections. 
 
-**1.** Statistics: The number of designs is provided (symmetric, non-symmetric, point-primitive, block-primitive). 
+**1.** The number of designs is provided is a table (symmetric, non-symmetric, point-primitive, block-primitive, etc). 
 For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive.
 
     Number of 2-designs:
