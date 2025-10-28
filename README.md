@@ -91,31 +91,31 @@ Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automo
     gap> IsIsomorphicBlockDesign( lD[ 1 ] , lD[ 2 ] );
     false
 
-**(4)** Further information: The final section of each file provides further information on 2-designs and their automorphism groups. It starts with the design number, which is the position of the design in the list lD, or equivalently, the row number in the Summary table in section 2. For example, the following is some information on the 12th design D with automorphism group G = U3(3). This design has parameter set [ 28, 336, 216, 18, 136 ] and its complement has parameter set [ 28, 336, 120, 10, 40 ]. The full automorphism group Aut(D) of D is autGroup = O(7,2) and as mentioned G = autSubgroup = U3(3). Form line 7, the property listed in the left is given in order for Aut(D) and G, respectively. For example, [ "S6xS3", "3xS3" ] in the line Block-stabiliser means the block-stabiliser of Aut(D) is isomorphic to S6xS3 and the block-stabiliser of G is 3xS3. For the Point-primitive type (repc. Block-primitive type), if the group is primitive, then the type of the primitive permutation group, according to the O'Nan-Scott classification, is provided; otherwise, we write "0". Therefore, in this case, both Aut(D) and G are point-primitive of type "2" (Almost Simple type), and Aut(D) is block-primitive of type "2" (Almost Simple type) while G is block-imprimitive. We also observe that the complement of D cannot be in the list lD as G = U3(3) is not anti-flag-transitive.              
+**(4)** Further information: The final section of each file provides further information on 2-designs and their automorphism groups. It starts with the design number, which is the position of the design in the list lD, or equivalently, the row number in the Summary table in section 2. For example, let D be the 12th design D with automorphism group G = U3(3). This design has parameter set [v, b, r, k, λ] = [ 28, 336, 216, 18, 136 ] and its complement has parameter set [ 28, 336, 120, 10, 40 ]. The full automorphism group Aut(D) of D is autGroup = O(7,2), and here G = autSubgroup = U3(3). For the Point-primitive type (repc. Block-primitive type), if G (or Aut(D)) is primitive, then the type of the primitive permutation group is provided according to the O'Nan-Scott classification; otherwise, we write "0". Therefore, in this case, both Aut(D) and G are point-primitive of type "2" (Almost Simple type), and Aut(D) is block-primitive of type "2" (Almost Simple type) while G is block-imprimitive. We also observe that the complement of D cannot be in the list lD as G = U3(3) is not anti-flag-transitive.              
 
      Design: 12
      ------------------------------------------------------------------
      Parameter set: [ 28, 336, 216, 18, 136 ]
      Complement:    [ 28, 336, 120, 10, 40 ]
      ------------------------------------------------------------------
-                                       G                 Aut(D)        
+                                          G                 Aut(D)        
      ------------------------------------------------------------------
-     Structure                         PSU(3,3)          O(7,2)        
-     Rank                              2                 2             
-     2-Homogeneous                     true              true          
-     Point-stabiliser                  ((3^2):3):8       O(5,3):2      
-     Block-stabiliser                  3xS3              S3xS6         
-     Orbit structure point-stabiliser  1^{1}27^{1}       1^{1}27^{1}   
-     Orbit structure block-stabiliser  1^{1}9^{1}18^{1}  10^{1}18^{1}  
-     Point-transitive                  true              true          
-     Block-transitive                  true              true          
-     Flag-transitive                   true              true          
-     Anti-flag-transitive              false             true          
-     Flag-regular                      true              false         
-     Point-primitive                   true              true          
-     Point-primitive type              2                 2             
-     Block-primitive                   false             true          
-     Block-primitive type              0                 2             
+     Structure                            PSU(3,3)          O(7,2)        
+     Rank                                 2                 2             
+     2-Homogeneous                        true              true          
+     Point-stabiliser                     ((3^2):3):8       O(5,3):2      
+     Block-stabiliser                     3xS3              S3xS6         
+     Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}   
+     Orbit structure of block-stabiliser  1^{1}9^{1}18^{1}  10^{1}18^{1}  
+     Point-transitive                     true              true          
+     Block-transitive                     true              true          
+     Flag-transitive                      true              true          
+     Anti-flag-transitive                 false             true          
+     Flag-regular                         true              false         
+     Point-primitive                      true              true          
+     Point-primitive type                 2                 2             
+     Block-primitive                      false             true          
+     Block-primitive type                 0                 2             
      ------------------------------------------------------------------
 
     
