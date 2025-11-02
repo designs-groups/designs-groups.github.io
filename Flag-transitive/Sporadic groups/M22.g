@@ -12,8 +12,8 @@
 # Point-primitive    1          49             50     
 # Point-imprimitive  0          0              0      
 #                                                     
-# Point-primitive    1          10             11     
-# Point-imprimitive  0          39             39     
+# Block-primitive    1          10             11     
+# Block-imprimitive  0          39             39     
 # ----------------------------------------------------
 # Total              1          49             50     
 # ----------------------------------------------------
