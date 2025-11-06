@@ -87,7 +87,7 @@ For the labelling of the type of the primitive permutation group, we follow the 
     5         Twisted wreath product (TW)   
     -------------------------------------------------------------------------
 
-**4.** Designs: In this section, we present a list, namely, lD of 2-designs. Each design is presented as a record as in the format one can construct by the GAP package DESIGN;  however, in the record presented here, we have some modifications. For each design D, we have added three components, namely, parameters, autGroup and baseBlock, indicating the parameter set [v,b,r,k,λ] of D, Aut(D), and the base block B, where ℬ = B^G and G = D.autSubgroup. For saving space, we have unbinded the block set from each design; however, for further consideration, we have added a loop at the end of the list lD, which binds the block set to each design. Therefore, one can use these designs for further consideration. 
+**4.** Designs: In this section, we present a list lD of 2-designs. Each design is presented as a record which can be recognised by the GAP package DESIGN;  however, in the record presented here, we have some modifications. For each design D, we have added three components, namely, parameters, autGroup and baseBlock, indicating the parameter set [v,b,r,k,λ] of D, Aut(D), and the base block B, where ℬ = B^G and G = D.autSubgroup. For saving space, we have unbinded the block set from each design; however, for further consideration, we have added a loop at the end of the list lD, which binds the block set to each design. Therefore, one can use these designs for further consideration. 
 
 Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automorphism group. 
 
@@ -117,7 +117,7 @@ Below is the list lD of all 2-designs admitting G = A5 as flag-transitive automo
     ]; 
     for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
- As noted above, lD contains 2-designs with no block sets,  but if we run the loop: ``for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;'', then we can have all 2-designs with the same format as in the GAP package DESIGN:  
+ As noted above, lD contains 2-designs with no block sets,  but if we run the loop below, then we can have all 2-designs with the same structure as in the GAP package DESIGN:  
 
     gap> for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
     gap> lD;
