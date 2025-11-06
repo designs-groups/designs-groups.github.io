@@ -33,7 +33,7 @@
 
 lD := [ 
  rec( parameters:= [ 5, 10, 6, 3, 3 ],
-  autGroup := Group( [ (1,4,2,3), (1,5,4) ] ),
+  autGroup := Group( [ (1,2), (1,4,2,5,3) ] ),
   autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ),
   baseBlock := [ 2, 4, 5 ],
   blockSizes := [ 3 ],
@@ -46,7 +46,7 @@ lD := [
   t := 2 ),
   v:= 5),
  rec( parameters:= [ 6, 10, 5, 3, 2 ],
-  autGroup := Group( [ (3,4)(5,6), (1,2,4)(3,5,6) ] ),
+  autGroup := Group( [ (1,2,4)(3,5,6), (1,3,4,2,6) ] ),
   autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ),
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
