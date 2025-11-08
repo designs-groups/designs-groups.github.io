@@ -1,4 +1,4 @@
-# Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_data.g");
+# Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_subs.g");
 
 # l := Subgroups( "HS");
 l:= rec(
