@@ -21,47 +21,14 @@
 # 2. Summary: 
 # -----------
 
-# ----------------------------------------------------------------------------------------------------------------------
-# Nr  v  b   r  k  λ  G   Gα  GB  Aut(D)  rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  
-# ----------------------------------------------------------------------------------------------------------------------
-# 1   5  10  6  3  3   A5  A4   S3  S5      2      2           true             true                                    
-# 2   6  10  5  3  2   A5  D10  S3  A5      2      2           true             true             2                      
-# ----------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r  k  λ  G   Gα  GB  Aut(D)  rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comments  
+# --------------------------------------------------------------------------------------------------------------------------------
+# 1   5  10  6  3  3   A5  A4   S3  S5      2      2           true             true                                              
+# 2   6  10  5  3  2   A5  D10  S3  A5      2      2           true             true             2                                
+# --------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Designs: 
-# -----------
-
-lD := [ 
- rec( parameters:= [ 5, 10, 6, 3, 3 ],
-  autGroup := Group( [ (1,2), (1,4,2,5,3) ] ),
-  autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ),
-  baseBlock := [ 2, 4, 5 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 5),
- rec( parameters:= [ 6, 10, 5, 3, 2 ],
-  autGroup := Group( [ (1,2,4)(3,5,6), (1,3,4,2,6) ] ),
-  autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ),
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 5,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 6)
-]; 
-for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
-
-# 4. Further information: 
+# 3. Further information: 
 # -----------------------
 
 # Design: 1
@@ -113,3 +80,38 @@ for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) );
 # Block-primitive                      true        true        
 # Block-primitive type                 2           2           
 # -------------------------------------------------------------
+
+# 4. Designs: 
+# -----------
+
+lD := [ 
+ rec(
+  autGroup := SymmetricGroup( [ 1 .. 5 ] ),
+  autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ),
+  baseBlock := [ 2, 4, 5 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  parameters := [ 5, 10, 6, 3, 3 ],
+  r := 6,
+  tSubsetStructure := rec(
+      lambdas := [ 3 ],
+      t := 2 ),
+  v := 5 ), 
+ rec(
+  autGroup := Group( [ (1,2)(3,4), (2,3)(4,5), (3,4)(5,6) ] ),
+  autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ),
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  parameters := [ 6, 10, 5, 3, 2 ],
+  r := 5,
+  tSubsetStructure := rec(
+      lambdas := [ 2 ],
+      t := 2 ),
+  v := 6 )
+]; 
+for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 

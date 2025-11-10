@@ -216,9 +216,9 @@
 
 lD := [ 
  rec(
-  autGroup := Group( [ (2,6,5)(3,4,7), (1,4,7,2)(3,6) ] ),
-  autSubgroup := Group( [ (1,2,4)(3,5,6), (1,3)(6,7) ] ),
-  baseBlock := [ 1, 4, 6 ],
+  autGroup := Group( [ (1,2)(5,7), (2,3)(4,7), (3,5)(6,7), (3,6)(5,7) ] ),
+  autSubgroup := Group( [ (1,2,4)(5,6,7), (1,3)(4,5) ] ),
+  baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -230,9 +230,9 @@ lD := [
       t := 2 ),
   v := 7 ), 
  rec(
-  autGroup := Group( [ (2,5,6)(3,7,4), (1,4)(2,3,7,5) ] ),
-  autSubgroup := Group( [ (1,2,4)(3,5,6), (1,3)(6,7) ] ),
-  baseBlock := [ 2, 3, 5, 7 ],
+  autGroup := Group( [ (1,2)(5,7), (2,3)(4,7), (3,5)(6,7), (3,6)(5,7) ] ),
+  autSubgroup := Group( [ (1,2,4)(5,6,7), (1,3)(4,5) ] ),
+  baseBlock := [ 3, 5, 6, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -244,9 +244,9 @@ lD := [
       t := 2 ),
   v := 7 ), 
  rec(
-  autGroup := Group( [ (2,4,3,6)(5,7), (1,5,2,3,6,7,4) ] ),
-  autSubgroup := Group( [ (1,2,4)(3,5,6), (1,3)(6,7) ] ),
-  baseBlock := [ 2, 4, 7 ],
+  autGroup := Group( [ (1,2)(5,7), (2,3)(4,7), (3,5)(6,7), (3,6)(5,7) ] ),
+  autSubgroup := Group( [ (1,2,4)(5,6,7), (1,3)(4,5) ] ),
+  baseBlock := [ 2, 5, 7 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -258,9 +258,9 @@ lD := [
       t := 2 ),
   v := 7 ), 
  rec(
-  autGroup := Group( [ (1,3,8,2)(4,7,5,6), (1,7,3,6,4,5,2) ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 1, 3, 5, 7 ],
+  autGroup := Group( [ (1,2)(6,8), (2,3)(7,8), (3,4)(6,8), (3,5)(4,7), (5,6)(7,8), (5,7)(6,8) ] ),
+  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 1, 2, 6, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -272,9 +272,9 @@ lD := [
       t := 2 ),
   v := 8 ), 
  rec(
-  autGroup := Group( [ (1,2,8,6)(3,4,7,5), (1,3,6,7,2,4,5,8) ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 2, 3, 4, 6, 7, 8 ],
+  autGroup := SymmetricGroup( [ 1 .. 8 ] ),
+  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -286,9 +286,9 @@ lD := [
       t := 2 ),
   v := 8 ), 
  rec(
-  autGroup := Group( [ (3,4,7,5,6,8), (2,3)(4,8)(5,7), (1,2)(4,8)(6,7) ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 1, 2, 5, 8 ],
+  autGroup := Group( [ (1,2)(4,7)(5,8), (2,3)(4,7)(6,8), (3,4,8,6,5,7) ] ),
+  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 1, 2, 4, 5 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -300,9 +300,9 @@ lD := [
       t := 2 ),
   v := 8 ), 
  rec(
-  autGroup := Group( [ (1,5,2,7,6,8,3,4), (1,7)(2,4,5,6) ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 2, 3, 4 ],
+  autGroup := SymmetricGroup( [ 1 .. 8 ] ),
+  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 3, 5, 8 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -314,4 +314,4 @@ lD := [
       t := 2 ),
   v := 8 )
 ]; 
-for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
