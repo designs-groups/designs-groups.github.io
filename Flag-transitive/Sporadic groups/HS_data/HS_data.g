@@ -8,10 +8,10 @@
 # [ subdegs , nBB , norb , ndes ] : [ 2599, 4814, 4635, 26 ]
 # [ L1 , L2 , L3 , LD1 , L4 ] : [ 724, 12074, 724, 4, 190 ]
 
-Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_data_Li.g");
-Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_data-l1-details_summary.g");
-Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_data-l1-parameters.g");
-Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_data-l1-possibilities.g");
-Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_subs.g");
+Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_Li.g");
+Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_l1-details-summary.g");
+Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_l1-parameters.g");
+Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_l1-possibilities.g");
+Read("/Users/Alavi/Documents/GitHub/designs-groups.github.io/Flag-transitive/Sporadic groups/HS_data/HS_l1-subgroups.g");
 
 
