@@ -22,7 +22,7 @@
 # -----------
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b     r    k   λ    G         Gα     GB  Aut(D)       rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comments  
+# Nr  v   b     r    k   λ    G          Gα     GB   Aut(D)       rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comments  
 # ------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   24  276   253  22  231  PSL(2,23)  23:11  D22  S24          2      2           true             true                                              
 # 2   24  506   253  12  121  PSL(2,23)  23:11  A4   PSL(2,23)    2      2           true             false            2                                
