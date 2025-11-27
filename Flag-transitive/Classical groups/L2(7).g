@@ -24,8 +24,8 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα   GB  Aut(D)        rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comments                                           
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   PSL(3,2)  S4   S4  PSL(3,2)      2      2           true             true             2           true       PG(2,2), Hadamard, Palay parameters                
-# 2   7  7   4   4  2   PSL(3,2)  S4   S4  PSL(3,2)      2      2           true             true             1           true       complement of PG(2,2), Hadamard, Palay parameters  
+# 1   7  7   3   3  1   PSL(3,2)  S4   S4  PSL(3,2)      2      2           true             true             2           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   4   4  2   PSL(3,2)  S4   S4  PSL(3,2)      2      2           true             true             1           true       complement of PG(2,2), Hadamard or Paley parameters  
 # 3   7  28  12  3  4   PSL(3,2)  S4   S3  PSL(3,2)      2      2           true             false                                                                                      
 # 4   8  14  7   4  3   PSL(3,2)  7:3  A4  2^3:PSL(3,2)  2      2           true             false            4                                                                         
 # 5   8  28  21  6  15  PSL(3,2)  7:3  S3  S8            2      2           true             false                                                                                      

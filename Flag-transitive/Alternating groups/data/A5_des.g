@@ -1,0 +1,12 @@
+lD := [ 
+    rec( autGroup := S5, autGroupInfo := [ [ (1,3,4)(2,5), (1,5,4) ], "S5", "S4", "D12", 2, true, true, true, true, true, false, true, "2", [  ], true, "2", [  ], [ [ 1 ], [ 2, 3, 4, 5 ] ], "1^{1}4^{1}", [ [ 1, 3 ], [ 2, 4, 5 ] ], 
+          "2^{1}3^{1}" ], autStabilizerBlock := [ [ (3,4,5), (1,2)(4,5) ], 6, 10, 6, true, "S3" ], autStabilizerPoint := [ [ (3,4,5), (2,4)(3,5) ], 12, 5, 8, true, "A4" ], autStructures := [ "S5", "A5" ], autSubgroup := A5, 
+      autSubgroupInfo := [ [ (1,2,4), (1,3)(2,5) ], "A5", "A4", "S3", 2, true, true, true, true, true, false, true, "2", [  ], true, "2", [  ], [ [ 1 ], [ 2, 5, 3, 4 ] ], "1^{1}4^{1}", [ [ 1, 3 ], [ 2, 5, 4 ] ], 
+          "2^{1}3^{1}", 8, 6 ], baseBlock := [ 2, 4, 5 ], blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 2, 5 ], [ 1, 3, 4 ], [ 1, 3, 5 ], [ 1, 4, 5 ], [ 2, 3, 4 ], [ 2, 3, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ], 
+      isBinary := true, isBlockDesign := true, isSimple := true, isSymmetric := false, parameters := [ 5, 10, 6, 3, 3 ], parametersc := [ 5, 10, 4, 2, 1 ], r := 6, tSubsetStructure := rec( lambdas := [ 3 ], t := 2 ), v := 5 ), 
+    rec( autGroup := A5, autGroupInfo := [ [ (2,5,4,3,6), (1,4,2)(3,6,5) ], "A5", "D10", "S3", 2, true, true, true, true, true, false, true, "2", [  ], true, "2", [  ], [ [ 1 ], [ 2, 4, 3, 6, 5 ] ], 
+          "1^{1}5^{1}", [ [ 1, 2, 3 ], [ 4, 5, 6 ] ], "3^{2}" ], autStabilizerBlock := [ [ (3,4,5), (1,2)(4,5) ], 6, 10, 6, true, "S3" ], autStabilizerPoint := [ [ (1,3)(4,5), (1,4)(2,3) ], 10, 6, 7, true, "D10" ], 
+      autStructures := [ "A5", "A5" ], autSubgroup := A5, autSubgroupInfo := [ [ (1,4,3)(2,6,5), (1,3)(4,6) ], "A5", "D10", "S3", 2, true, true, true, true, true, false, true, "2", [  ], true, "2", [  ], 
+          [ [ 1 ], [ 2, 6, 5, 3, 4 ] ], "1^{1}5^{1}", [ [ 1, 3, 2 ], [ 4, 5, 6 ] ], "3^{2}", 7, 6 ], baseBlock := [ 1, 2, 3 ], blockSizes := [ 3 ], 
+      blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 5 ], [ 1, 4, 6 ], [ 1, 5, 6 ], [ 2, 3, 6 ], [ 2, 4, 5 ], [ 2, 5, 6 ], [ 3, 4, 5 ], [ 3, 4, 6 ] ], 
+      isBinary := true, isBlockDesign := true, isSimple := true, isSymmetric := false, parameters := [ 6, 10, 5, 3, 2 ], parametersc := [ 6, 10, 5, 3, 2 ], r := 5, tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ), v := 6 ) ]
