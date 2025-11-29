@@ -15,7 +15,7 @@ At this stage, we are uploading and updating the data for 2-designs admitting fl
 In each file, the information about the 2-designs D with automorphism group G is presented in four main sections. 
 
 **1.** The number of designs is provided is a table (symmetric, non-symmetric, point-primitive, block-primitive, etc). 
-For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive.
+For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive. We clarify whether we have a complete classification.  
 
     Number of 2-designs: 
     --------------------------------------------------------------
@@ -27,6 +27,7 @@ For example, the table below provides all information about the number of 2-desi
     --------------------------------------------------------------
     Total              1          4              5 
     --------------------------------------------------------------
+    Remark: all designs
 
 **2.** Summary: The second section is a table presenting information on designs; the first column is the number assigned to the design in the row, and it is indeed the design number presented in section 4 (see below). The parameters v, b, r, k, and λ are presented in the second column to the sixth one, respectively. The next columns are the group G, the point-stabiliser Gα, the block-stabiliser GB, Aut(D), the rank of G, and the rank of Aut(D). The next two columns namely nr(Gα) and nr(GB) are the numbers of the positions of the point-stabiliser Gα and the block-stabiliser GB in the list of subgroups of G (up to conjugation), respectively. This list is not provided here. Fifteenth and sixteenth columns say that if D is point-primitive and/or block-primitive, respectively. The seventeenth  column, named complement, indicates the design number, which is the complement of the design in the row. The eighteenth column records whether the design is symmetric or not. The last column is a place for further comments if applicable.    
 
