@@ -2,6 +2,7 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A7.2 = S7
 # ----------------------------------------------------------------------------------------------------
+# Remark: all designs
 
 # 1. Number of designs: 
 # ---------------------
