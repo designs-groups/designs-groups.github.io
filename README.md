@@ -10,12 +10,12 @@ The block designs constructed here are simple (no repeated blocks), binary (no r
 
 # How to Read the Database
 
-At this stage, we are uploading and updating the data for 2-designs admitting flag-transitive, block-transitive, and/or point-transitive automorphism groups. In particular, we construct and classify 2-designs whose automorphism groups are almost simple. These data can be found in one of three folders named by flag-transitive, block-transitive, and point-transitive. In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3). For ease of access to these files, one can use the Table of subgroups.    
+Here the data for 2-designs admitting block-transitive automorphism groups. In particular, we construct and classify 2-designs with flag-trasitive automorphism groups. These data can be found in one of three folders named by ``Block-transitive'' and ``Flag-transitive''. In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3).    
 
 In each file, the information about the 2-designs D with automorphism group G is presented in four main sections. 
 
 **1.** The number of designs is provided is a table (symmetric, non-symmetric, point-primitive, block-primitive, etc). 
-For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive. We clarify whether we have a complete classification.  
+For example, the table below provides all information about the number of 2-designs with automorphism group A5.2 = S5. Therefore, there are in total 5 flag-transitive 2-designs, one is symmetric, and the remaining four designs are non-symmetric. The symmetric design is point-imprimitive and block-imprimitive. All non-symmetric designs are point-primitive; among them, three are block-imprimitive.
 
     Number of 2-designs: 
     --------------------------------------------------------------
@@ -27,7 +27,6 @@ For example, the table below provides all information about the number of 2-desi
     --------------------------------------------------------------
     Total              1          4              5 
     --------------------------------------------------------------
-    Remark: all designs
 
 **2.** Summary: The second section is a table presenting information on designs; the first column is the number assigned to the design in the row, and it is indeed the design number presented in section 4 (see below). The parameters v, b, r, k, and λ are presented in the second column to the sixth one, respectively. The next columns are the group G, the point-stabiliser Gα, the block-stabiliser GB, Aut(D), the rank of G, and the rank of Aut(D). The next two columns namely nr(Gα) and nr(GB) are the numbers of the positions of the point-stabiliser Gα and the block-stabiliser GB in the list of subgroups of G (up to conjugation), respectively. This list is not provided here. Fifteenth and sixteenth columns say that if D is point-primitive and/or block-primitive, respectively. The seventeenth  column, named complement, indicates the design number, which is the complement of the design in the row. The eighteenth column records whether the design is symmetric or not. The last column is a place for further comments if applicable.    
 
