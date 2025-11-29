@@ -30,7 +30,7 @@ For example, the table below provides all information about the number of 2-desi
 
 **2.** Summary: The second section is a table presenting information on designs; the first column is the number assigned to the design in the row (in the list of designs presented in section 4 below). The parameters v, b, r, k, and λ are presented in the second column to the sixth one, respectively. The next columns are the group G, the point-stabiliser Gα, the block-stabiliser GB, Aut(D), the rank of G, and the rank of Aut(D). The next two columns namely nr(Gα) and nr(GB) are the numbers of the positions of the point-stabiliser Gα and the block-stabiliser GB in the list of subgroups of G (up to conjugation), respectively. This list is not provided here. Fifteenth and sixteenth columns say that if D is point-primitive and/or block-primitive, respectively. The seventeenth  column, named complement, indicates the design number, which is the complement of the design in the row. The eighteenth column records whether the design is symmetric or not. The last column is a place for further comments if applicable.    
 
-Below is the table for A5.2 = S5. The design in line 3 is isomorphic to its complement. It is point-primitive but not block-primitive.   
+Below is the table for A5.2 = S5. The design in line 3 is isomorphic to its complement. It is point-primitive but not block-primitive. The parameters of the fifth design is the parameter of the complement of PG(3,2) or Hadamard design.   
 
     Summary:
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
