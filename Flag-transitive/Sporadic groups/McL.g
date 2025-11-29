@@ -2,6 +2,7 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): McL
 # ----------------------------------------------------------------------------------------------------
+# Remark: there exists no 2-design admitting McL as its flag-transitive automorphism group
 
 # 1. Number of designs: 
 # ---------------------
