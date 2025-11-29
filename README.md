@@ -146,6 +146,7 @@ In the preparation of this database, we use the computer software GAP. In additi
 [GAP2025] The GAP Group, GAP -- Groups, Algorithms, and Programming, Version 4.15.1; 2025. (https://www.gap-system.org)
 
 [Soi25] Soicher, L. H., GRAPE, GRaph Algorithms using PErmutation groups, Version 4.9.3 (2025) (GAP package), https://gap-packages.github.io/grape.
+
 [Soi24] Soicher, L. H., DESIGN, The Design Package for GAP, Version 1.8.2 (2024) (GAP package), https://gap-packages.github.io/design.
 
 
