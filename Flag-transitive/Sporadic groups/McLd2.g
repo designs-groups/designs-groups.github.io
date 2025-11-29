@@ -1,8 +1,8 @@
 # ----------------------------------------------------------------------------------------------------
 # Flag-transitive 2-designs 
-# Group (autSubgroup): McL.2
+# Group (autSubgroup): McL:2
 # ----------------------------------------------------------------------------------------------------
-# Remark: there exists no 2-design admitting J1 as its flag-transitive automorphism group
+# Remark: there exists no 2-design admitting McL:2 as its flag-transitive automorphism group
 
 # 1. Number of designs: 
 # ---------------------
