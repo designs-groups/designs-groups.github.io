@@ -2,6 +2,7 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): J1
 # ----------------------------------------------------------------------------------------------------
+# Remark: there exist no 2-design admitting J1 as its flag-transitive automorphism group
 
 # 1. Number of designs: 
 # ---------------------
