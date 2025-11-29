@@ -2,6 +2,7 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A6.2_2 = PGL2(9) = SO3(9)
 # ----------------------------------------------------------------------------------------------------
+# Remark: all designs
 
 # 1. Number of designs: 
 # ---------------------
