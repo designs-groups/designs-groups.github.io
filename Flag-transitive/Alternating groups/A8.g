@@ -2,7 +2,7 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A8
 # ----------------------------------------------------------------------------------------------------
-
+# Remark: all designs
 
 # 1. Number of designs: 
 # ---------------------
