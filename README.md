@@ -34,7 +34,7 @@ Below is the table for A5.2 = S5. The design in line 3 is isomorphic to its comp
 
     Summary:
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    Nr  v   b   r   k  λ  G   Gα  GB   Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)  nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                      
+    Nr  v   b   r   k  λ   G   Gα   GB   Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)  nr(GB) point-primitive  block-primitive  complement  symmetric  comments                                      
     --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     1   5   10  6   3  3   S5  S4   D12  S5      2      2           17      15     true             true                                                                                  
     2   6   15  10  4  6   S5  5:4  D8   S6      2      2           16      12     true             false                                                                                 
