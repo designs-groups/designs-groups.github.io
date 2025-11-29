@@ -33,7 +33,17 @@ For example, the table below provides all information about the number of 2-desi
 
 Below is the table for A5.2 = S5. The design in line 3 is isomorphic to its complement. It is point-primitive but not block-primitive   
 
-    Summary: 
+    Summary:
+    # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b   r   k  λ  G   Gα  GB   Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)  nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                      
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   5   10  6   3  3   S5  S4   D12  S5      2      2           17      15     true             true                                                                                  
+# 2   6   15  10  4  6   S5  5:4  D8   S6      2      2           16      12     true             false                                                                                 
+# 3   6   20  10  3  4   S5  5:4  S3   S6      2      2           16      10     true             false            3                                                                    
+# 4   10  15  6   4  2   S5  D12  D8   S6      3      2           15      12     true             false                                                                                 
+# 5   15  15  8   8  4   S5  D8   D8   A8      4      2           12      12     false            false                        true       complement of PG(3,2) or Hadamard parameters  
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
     --------------------------------------------------------------------------------------------------------------------------------
     Nr  v   b   r   k  λ  G   Gα  GB   Aut(D)  rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comment
     --------------------------------------------------------------------------------------------------------------------------------
