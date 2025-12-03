@@ -2,6 +2,7 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): M11
 # ----------------------------------------------------------------------------------------------------
+# Remark: all designs
 
 # 1. Number of designs: 
 # ---------------------
