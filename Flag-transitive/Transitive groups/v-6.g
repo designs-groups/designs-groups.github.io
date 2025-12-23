@@ -1,10 +1,11 @@
 # ----------------------------------------------------------------------------------------------------
 # Flag-transitive 2-designs 
-# Transitive groups on 6 points
+# Tranitive groups on 6 points 
 # ----------------------------------------------------------------------------------------------------
+# Remark: all designs 
 
-# 1. Number of designs: 
-# ---------------------
+# 1. Number of non-isomorphic designs: 
+# ------------------------------------
 
 # ----------------------------------------------------
 #                    Symmetric  Non-symmetric  Total  
@@ -12,8 +13,8 @@
 # Point-primitive    0          3              3      
 # Point-imprimitive  0          0              0      
 #                                                     
-# Block-primitive    0          1              1      
-# Block-imprimitive  0          2              2      
+# Block-primitive    0          2              2      
+# Block-imprimitive  0          1              1      
 # ----------------------------------------------------
 # Total              0          3              3      
 # ----------------------------------------------------
@@ -21,16 +22,30 @@
 # 2. Summary: 
 # -----------
 
-# ---------------------------------------------------------------------------------------------------------------------------------
-# Nr  v  b   r   k  λ   G   Gα   GB  Aut(D)  rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comments  
-# ---------------------------------------------------------------------------------------------------------------------------------
-# 1   6  10  5   3  2   A5  D10  S3  A5      2      2           true             true             1                                
-# 2   6  15  10  4  6   S5  5:4  D8  S6      2      2           true             false                                             
-# 3   6  20  10  3  4   S5  5:4  S3  S6      2      2           true             false            3                                
-# ---------------------------------------------------------------------------------------------------------------------------------
+#    Isomorphic designs:
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r   k  λ   G   Gα   GB     Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments  
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   6  10  5   3  2   A5  D10  S3     A5      2      2           12     7        6       true             true             1                                
+# 2   6  15  10  4  6   S6  S5   2xS4   S6      2      2           16     53       49      true             true                                              
+# 3   6  20  10  3  4   S6  S5   S3xS3  S6      2      2           16     53       45      true             false            3                                
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
-# -----------------------
+#    All designs:
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r   k  λ   G   Gα   GB       Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments  
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   6  10  5   3  2   A5  D10  S3       A5      2      2           12     7        6       true             true             1                                
+# 2   6  20  10  3  4   S5  5:4  S3       S6      2      2           14     16       10      true             false            2                                
+# 3   6  15  10  4  6   S5  5:4  D8       S6      2      2           14     16       12      true             false                                             
+# 4   6  20  10  3  4   A6  A5   (3^2):2  S6      2      2           15     20       16      true             false            4                                
+# 5   6  15  10  4  6   A6  A5   S4       S6      2      2           15     20       17      true             true                                              
+# 6   6  20  10  3  4   S6  S5   S3xS3    S6      2      2           16     53       45      true             false            6                                
+# 7   6  15  10  4  6   S6  S5   2xS4     S6      2      2           16     53       49      true             true                                              
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Further information (up to isomorphism): 
+# -------------------------------------------
 
 # Design: 1
 # -------------------------------------------------------------
@@ -64,11 +79,11 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            S5          S6          
+# Structure                            S6          S6          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     5:4         S5          
-# Block-stabiliser                     D8          2xS4        
+# Point-stabiliser                     S5          S5          
+# Block-stabiliser                     2xS4        2xS4        
 # Orbit structure of point-stabiliser  1^{1}5^{1}  1^{1}5^{1}  
 # Orbit structure of block-stabiliser  2^{1}4^{1}  2^{1}4^{1}  
 # Point-transitive                     true        true        
@@ -78,8 +93,8 @@
 # Flag-regular                         false       false       
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
-# Block-primitive                      false       true        
-# Block-primitive type                 0           2           
+# Block-primitive                      true        true        
+# Block-primitive type                 2           2           
 # -------------------------------------------------------------
 
 # Design: 3
@@ -89,11 +104,11 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            S5          S6          
+# Structure                            S6          S6          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     5:4         S5          
-# Block-stabiliser                     S3          S3xS3       
+# Point-stabiliser                     S5          S5          
+# Block-stabiliser                     S3xS3       S3xS3       
 # Orbit structure of point-stabiliser  1^{1}5^{1}  1^{1}5^{1}  
 # Orbit structure of block-stabiliser  3^{2}       3^{2}       
 # Point-transitive                     true        true        
@@ -107,51 +122,48 @@
 # Block-primitive type                 0           0           
 # -------------------------------------------------------------
 
-# 4. Designs: 
-# -----------
+# 4. Designs (up to isomorphism): 
+# -------------------------------
 
 lD := [ 
- rec(
-  autGroup := Group( [ (1,2)(4,5), (2,3)(5,6), (3,6)(4,5) ] ),
-  autSubgroup := L(6) = PSL(2,5) = A_5(6),
-  baseBlock := [ 1, 3, 4 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  parameters := [ 6, 10, 5, 3, 2 ],
-  r := 5,
-  tSubsetStructure := rec(
-      lambdas := [ 2 ],
-      t := 2 ),
-  v := 6 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 6 ] ),
-  autSubgroup := L(6):2 = PGL(2,5) = S_5(6),
-  baseBlock := [ 3, 4, 5, 6 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  parameters := [ 6, 15, 10, 4, 6 ],
-  r := 10,
-  tSubsetStructure := rec(
-      lambdas := [ 6 ],
-      t := 2 ),
-  v := 6 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 6 ] ),
-  autSubgroup := L(6):2 = PGL(2,5) = S_5(6),
+ rec( parameters:= [ 6, 10, 5, 3, 2 ],
+  autGroup := Group( [ (2,5,6,3,4), (1,6,2,5,4) ] ),
+  autSubgroup := Group( [ (1,2,3,4,6), (1,4)(5,6) ] ),
   baseBlock := [ 1, 3, 5 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 6, 20, 10, 3, 4 ],
+  r := 5,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 6),
+ rec( parameters:= [ 6, 15, 10, 4, 6 ],
+  autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  baseBlock := [ 1, 2, 5, 6 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
   r := 10,
   tSubsetStructure := rec(
-      lambdas := [ 4 ],
-      t := 2 ),
-  v := 6 )
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 6),
+ rec( parameters:= [ 6, 20, 10, 3, 4 ],
+  autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  baseBlock := [ 1, 5, 6 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 10,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 6)
 ]; 
 for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 

@@ -1,10 +1,11 @@
 # ----------------------------------------------------------------------------------------------------
 # Flag-transitive 2-designs 
-# Transitive groups on 11 points
+# Tranitive groups on 11 points 
 # ----------------------------------------------------------------------------------------------------
+# Remark: all designs 
 
-# 1. Number of designs: 
-# ---------------------
+# 1. Number of non-isomorphic designs: 
+# ------------------------------------
 
 # ----------------------------------------------------
 #                    Symmetric  Non-symmetric  Total  
@@ -12,8 +13,8 @@
 # Point-primitive    2          16             18     
 # Point-imprimitive  0          0              0      
 #                                                     
-# Block-primitive    2          10             12     
-# Block-imprimitive  0          6              6      
+# Block-primitive    2          11             13     
+# Block-imprimitive  0          5              5      
 # ----------------------------------------------------
 # Total              2          16             18     
 # ----------------------------------------------------
@@ -21,56 +22,93 @@
 # 2. Summary: 
 # -----------
 
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b    r    k  λ    G          Gα    GB           Aut(D)     rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comments                                          
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   11  11   5    5  2    11:5       5     5            PSL(2,11)  3      2           true             true             2           true       Hadamard, Kantor, Palay parameters                
-# 2   11  11   6    6  3    PSL(2,11)  A5    A5           PSL(2,11)  2      2           true             true             1           true       complement of Hadamard, Kantor, Paley parameters  
-# 3   11  22   10   5  4    11:10      10    5            11:10      2      2           true             false                                                                                     
-# 4   11  55   15   3  3    PSL(2,11)  A5    D12          PSL(2,11)  2      2           true             true                                                                                      
-# 5   11  55   20   4  6    PSL(2,11)  A5    A4           PSL(2,11)  2      2           true             false                                                                                     
-# 6   11  55   30   6  15   PSL(2,11)  A5    D12          PSL(2,11)  2      2           true             true                                                                                      
-# 7   11  55   45   9  36   S11        S10   2xS9         S11        2      2           true             true                                                                                      
-# 8   11  66   30   5  12   M11        A6.2  S5           M11        2      2           true             true             10                                                                       
-# 9   11  66   30   5  12   PSL(2,11)  A5    D10          PSL(2,11)  2      2           true             false            10                                                                       
-# 10  11  66   36   6  18   M11        A6.2  S5           M11        2      2           true             true             8                                                                        
-# 11  11  110  30   3  6    PSL(2,11)  A5    S3           PSL(2,11)  2      2           true             false                                                                                     
-# 12  11  165  45   3  9    M11        A6.2  GL(2,3)      S11        2      2           true             true             13                                                                       
-# 13  11  165  120  8  84   M11        A6.2  GL(2,3)      S11        2      2           true             true             12                                                                       
-# 14  11  330  120  4  36   M11        A6.2  S4           S11        2      2           true             false            15                                                                       
-# 15  11  330  210  7  126  A11        A10   2^2:(A7:S3)  S11        2      2           true             true             14                                                                       
-# 16  11  396  180  5  72   M11        A6.2  5:4          M11        2      2           true             false                                                                                     
-# 17  11  462  210  5  84   A11        A10   A5:S6        S11        2      2           true             true             18                                                                       
-# 18  11  462  252  6  126  A11        A10   A5:S6        S11        2      2           true             true             17                                                                       
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#    Isomorphic designs:
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b    r    k  λ    G          Gα    GB     Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                            
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   11  11   5    5  2    PSL(2,11)  A5    A5     PSL(2,11)  2      2           5      14       15      true             true             2           true       Hadamard, Kantor or Paley parameters                
+# 2   11  11   6    6  3    PSL(2,11)  A5    A5     PSL(2,11)  2      2           5      14       15      true             true             1           true       complement of Hadamard, Kantor or Paley parameters  
+# 3   11  22   10   5  4    11:10      10    5      11:10      2      2           4      4        3       true             false                                                                                       
+# 4   11  55   15   3  3    PSL(2,11)  A5    D12    PSL(2,11)  2      2           5      14       12      true             true                                                                                        
+# 5   11  55   20   4  6    PSL(2,11)  A5    A4     PSL(2,11)  2      2           5      14       11      true             false                                                                                       
+# 6   11  55   30   6  15   PSL(2,11)  A5    D12    PSL(2,11)  2      2           5      14       12      true             true                                                                                        
+# 7   11  55   45   9  36   S11        S10   2xS9   S11        2      2           8      3092     3090    true             true                                                                                        
+# 8   11  66   30   5  12   M11        A6.2  S5     M11        2      2           6      38       34      true             true             10                                                                         
+# 9   11  66   30   5  12   PSL(2,11)  A5    D10    PSL(2,11)  2      2           5      14       9       true             false                                                                                       
+# 10  11  66   36   6  18   M11        A6.2  S5     M11        2      2           6      38       34      true             true             8                                                                          
+# 11  11  110  30   3  6    PSL(2,11)  A5    S3     PSL(2,11)  2      2           5      14       7       true             false                                                                                       
+# 12  11  165  45   3  9    S11        S10   S8xS3  S11        2      2           8      3092     3086    true             true             13                                                                         
+# 13  11  165  120  8  84   S11        S10   S8xS3  S11        2      2           8      3092     3086    true             true             12                                                                         
+# 14  11  330  120  4  36   S11        S10   S7xS4  S11        2      2           8      3092     3084    true             true             15                                                                         
+# 15  11  330  210  7  126  S11        S10   S7xS4  S11        2      2           8      3092     3084    true             true             14                                                                         
+# 16  11  396  180  5  72   M11        A6.2  5:4    M11        2      2           6      38       21      true             false                                                                                       
+# 17  11  462  210  5  84   S11        S10   S6xS5  S11        2      2           8      3092     3080    true             true             18                                                                         
+# 18  11  462  252  6  126  S11        S10   S6xS5  S11        2      2           8      3092     3080    true             true             17                                                                         
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
-# -----------------------
+#    All designs:
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b    r    k  λ    G          Gα    GB           Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                            
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   11  11   5    5  2    11:5       5     5            PSL(2,11)  3      2           3      2        2       true             true                         true       Hadamard, Kantor or Paley parameters                
+# 2   11  22   10   5  4    11:10      10    5            11:10      2      2           4      4        3       true             false                                                                                       
+# 3   11  55   30   6  15   PSL(2,11)  A5    D12          PSL(2,11)  2      2           5      14       12      true             true                                                                                        
+# 4   11  11   6    6  3    PSL(2,11)  A5    A5           PSL(2,11)  2      2           5      14       15      true             true             8           true       complement of Hadamard, Kantor or Paley parameters  
+# 5   11  55   15   3  3    PSL(2,11)  A5    D12          PSL(2,11)  2      2           5      14       12      true             true                                                                                        
+# 6   11  55   20   4  6    PSL(2,11)  A5    A4           PSL(2,11)  2      2           5      14       11      true             false                                                                                       
+# 7   11  110  30   3  6    PSL(2,11)  A5    S3           PSL(2,11)  2      2           5      14       7       true             false                                                                                       
+# 8   11  11   5    5  2    PSL(2,11)  A5    A5           PSL(2,11)  2      2           5      14       15      true             true             4           true       Hadamard, Kantor or Paley parameters                
+# 9   11  66   30   5  12   PSL(2,11)  A5    D10          PSL(2,11)  2      2           5      14       9       true             false                                                                                       
+# 10  11  66   30   5  12   M11        A6.2  S5           M11        2      2           6      38       34      true             true             11                                                                         
+# 11  11  66   36   6  18   M11        A6.2  S5           M11        2      2           6      38       34      true             true             10                                                                         
+# 12  11  165  45   3  9    M11        A6.2  GL(2,3)      S11        2      2           6      38       27      true             true             13                                                                         
+# 13  11  165  120  8  84   M11        A6.2  GL(2,3)      S11        2      2           6      38       27      true             true             12                                                                         
+# 14  11  55   45   9  36   M11        A6.2  3^2:QD16     S11        2      2           6      38       35      true             true                                                                                        
+# 15  11  330  120  4  36   M11        A6.2  S4           S11        2      2           6      38       23      true             false                                                                                       
+# 16  11  396  180  5  72   M11        A6.2  5:4          M11        2      2           6      38       21      true             false                                                                                       
+# 17  11  330  210  7  126  A11        A10   2^2:(A7:S3)  S11        2      2           7      787      783     true             true             21                                                                         
+# 18  11  165  45   3  9    A11        A10   3:S8         S11        2      2           7      787      784     true             true             22                                                                         
+# 19  11  462  252  6  126  A11        A10   A5:S6        S11        2      2           7      787      781     true             true             20                                                                         
+# 20  11  462  210  5  84   A11        A10   A5:S6        S11        2      2           7      787      781     true             true             19                                                                         
+# 21  11  330  120  4  36   A11        A10   2^2:(A7:S3)  S11        2      2           7      787      783     true             true             17                                                                         
+# 22  11  165  120  8  84   A11        A10   3:S8         S11        2      2           7      787      784     true             true             18                                                                         
+# 23  11  55   45   9  36   A11        A10   S9           S11        2      2           7      787      786     true             true                                                                                        
+# 24  11  165  120  8  84   S11        S10   S8xS3        S11        2      2           8      3092     3086    true             true             28                                                                         
+# 25  11  462  210  5  84   S11        S10   S6xS5        S11        2      2           8      3092     3080    true             true             29                                                                         
+# 26  11  330  120  4  36   S11        S10   S7xS4        S11        2      2           8      3092     3084    true             true             27                                                                         
+# 27  11  330  210  7  126  S11        S10   S7xS4        S11        2      2           8      3092     3084    true             true             26                                                                         
+# 28  11  165  45   3  9    S11        S10   S8xS3        S11        2      2           8      3092     3086    true             true             24                                                                         
+# 29  11  462  252  6  126  S11        S10   S6xS5        S11        2      2           8      3092     3080    true             true             25                                                                         
+# 30  11  55   45   9  36   S11        S10   2xS9         S11        2      2           8      3092     3090    true             true                                                                                        
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 3. Further information (up to isomorphism): 
+# -------------------------------------------
 
 # Design: 1
-# --------------------------------------------------------------
+# ---------------------------------------------------------------
 # Parameter set: [ 11, 11, 5, 5, 2 ]
 # Complement:    [ 11, 11, 6, 6, 3 ]
-# --------------------------------------------------------------
-#                                      G           Aut(D)       
-# --------------------------------------------------------------
-# Structure                            11:5        PSL(2,11)    
-# Rank                                 3           2            
-# 2-Homogeneous                        true        true         
-# Point-stabiliser                     5           A5           
-# Block-stabiliser                     5           A5           
-# Orbit structure of point-stabiliser  1^{1}5^{2}  1^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{1}5^{2}  5^{1}6^{1}   
-# Point-transitive                     true        true         
-# Block-transitive                     true        true         
-# Flag-transitive                      true        true         
-# Anti-flag-transitive                 false       true         
-# Flag-regular                         true        false        
-# Point-primitive                      true        true         
-# Point-primitive type                 1           2            
-# Block-primitive                      true        true         
-# Block-primitive type                 1           2            
-# --------------------------------------------------------------
+# ---------------------------------------------------------------
+#                                      G            Aut(D)       
+# ---------------------------------------------------------------
+# Structure                            PSL(2,11)    PSL(2,11)    
+# Rank                                 2            2            
+# 2-Homogeneous                        true         true         
+# Point-stabiliser                     A5           A5           
+# Block-stabiliser                     A5           A5           
+# Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
+# Orbit structure of block-stabiliser  5^{1}6^{1}   5^{1}6^{1}   
+# Point-transitive                     true         true         
+# Block-transitive                     true         true         
+# Flag-transitive                      true         true         
+# Anti-flag-transitive                 true         true         
+# Flag-regular                         false        false        
+# Point-primitive                      true         true         
+# Point-primitive type                 2            2            
+# Block-primitive                      true         true         
+# Block-primitive type                 2            2            
+# ---------------------------------------------------------------
 
 # Design: 2
 # ---------------------------------------------------------------
@@ -329,11 +367,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            M11          S11          
+# Structure                            S11          S11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A6.2         S10          
-# Block-stabiliser                     GL(2,3)      S8xS3        
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S8xS3        S8xS3        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  3^{1}8^{1}   3^{1}8^{1}   
 # Point-transitive                     true         true         
@@ -354,11 +392,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            M11          S11          
+# Structure                            S11          S11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A6.2         S10          
-# Block-stabiliser                     GL(2,3)      S8xS3        
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S8xS3        S8xS3        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  3^{1}8^{1}   3^{1}8^{1}   
 # Point-transitive                     true         true         
@@ -373,29 +411,29 @@
 # ---------------------------------------------------------------
 
 # Design: 14
-# -------------------------------------------------------------------
+# ---------------------------------------------------------------
 # Parameter set: [ 11, 330, 120, 4, 36 ]
 # Complement:    [ 11, 330, 210, 7, 126 ]
-# -------------------------------------------------------------------
-#                                      G                Aut(D)       
-# -------------------------------------------------------------------
-# Structure                            M11              S11          
-# Rank                                 2                2            
-# 2-Homogeneous                        true             true         
-# Point-stabiliser                     A6.2             S10          
-# Block-stabiliser                     S4               S4xS7        
-# Orbit structure of point-stabiliser  1^{1}10^{1}      1^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{1}4^{1}6^{1}  4^{1}7^{1}   
-# Point-transitive                     true             true         
-# Block-transitive                     true             true         
-# Flag-transitive                      true             true         
-# Anti-flag-transitive                 false            true         
-# Flag-regular                         false            false        
-# Point-primitive                      true             true         
-# Point-primitive type                 2                2            
-# Block-primitive                      false            true         
-# Block-primitive type                 0                2            
-# -------------------------------------------------------------------
+# ---------------------------------------------------------------
+#                                      G            Aut(D)       
+# ---------------------------------------------------------------
+# Structure                            S11          S11          
+# Rank                                 2            2            
+# 2-Homogeneous                        true         true         
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S7xS4        S7xS4        
+# Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
+# Orbit structure of block-stabiliser  4^{1}7^{1}   4^{1}7^{1}   
+# Point-transitive                     true         true         
+# Block-transitive                     true         true         
+# Flag-transitive                      true         true         
+# Anti-flag-transitive                 true         true         
+# Flag-regular                         false        false        
+# Point-primitive                      true         true         
+# Point-primitive type                 2            2            
+# Block-primitive                      true         true         
+# Block-primitive type                 2            2            
+# ---------------------------------------------------------------
 
 # Design: 15
 # ---------------------------------------------------------------
@@ -404,11 +442,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            A11          S11          
+# Structure                            S11          S11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A10          S10          
-# Block-stabiliser                     2^2:(A7:S3)  S7xS4        
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S7xS4        S7xS4        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  4^{1}7^{1}   4^{1}7^{1}   
 # Point-transitive                     true         true         
@@ -454,11 +492,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            A11          S11          
+# Structure                            S11          S11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A10          S10          
-# Block-stabiliser                     A5:S6        S6xS5        
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S6xS5        S6xS5        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  5^{1}6^{1}   5^{1}6^{1}   
 # Point-transitive                     true         true         
@@ -479,11 +517,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            A11          S11          
+# Structure                            S11          S11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A10          S10          
-# Block-stabiliser                     A5:S6        S6xS5        
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S6xS5        S6xS5        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  5^{1}6^{1}   5^{1}6^{1}   
 # Point-transitive                     true         true         
@@ -497,261 +535,243 @@
 # Block-primitive type                 2            2            
 # ---------------------------------------------------------------
 
-# 4. Designs: 
-# -----------
+# 4. Designs (up to isomorphism): 
+# -------------------------------
 
 lD := [ 
- rec(
-  autGroup := Group( [ ( 1, 2)( 5, 8)( 7,10)( 9,11), ( 2, 3)( 4,11)( 5, 6)( 7,10), ( 3, 6)( 5, 8)( 7, 9)(10,11), ( 3, 7,10)( 4, 8, 5)( 6,11, 9) ] ),
-  autSubgroup := F_55(11)=11:5,
-  baseBlock := [ 2, 4, 5, 6, 10 ],
+ rec( parameters:= [ 11, 11, 5, 5, 2 ],
+  autGroup := Group( [ ( 1, 2, 4, 7,11)( 5, 9,10, 8, 6), ( 1, 8)( 2, 3)( 4, 9)( 7,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
+  baseBlock := [ 2, 5, 9, 10, 11 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 11, 5, 5, 2 ],
   r := 5,
   tSubsetStructure := rec(
-      lambdas := [ 2 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,11)( 5, 8)( 9,10), ( 2, 3)( 4, 6)( 5, 8)( 7,10), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 3, 5, 8)( 4,11, 7)( 6, 9,10) ] ),
-  autSubgroup := L(11)=PSL(2,11)(11),
-  baseBlock := [ 2, 3, 5, 6, 7, 11 ],
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 11, 6, 6, 3 ],
+  autGroup := Group( [ ( 2, 4)( 3, 9)( 5,10)( 7,11), ( 1, 3,11,10, 6)( 2, 7, 5, 8, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
+  baseBlock := [ 1, 3, 4, 6, 7, 8 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 11, 6, 6, 3 ],
   r := 6,
   tSubsetStructure := rec(
-      lambdas := [ 3 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 3,11)( 4,10)( 5, 9)( 6, 8), ( 2, 3, 5, 9, 6,11,10, 8, 4, 7) ] ),
-  autSubgroup := F_110(11)=11:10,
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 22, 10, 5, 4 ],
+  autGroup := Group( [ ( 2, 3, 5, 9, 6,11,10, 8, 4, 7), ( 1, 2)( 3,11)( 4,10)( 5, 9)( 6, 8) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 2, 4, 8, 5,10, 9, 7, 3, 6) ] ),
   baseBlock := [ 2, 4, 5, 6, 10 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 22, 10, 5, 4 ],
   r := 10,
   tSubsetStructure := rec(
-      lambdas := [ 4 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,11)( 5, 8)( 9,10), ( 2, 3)( 4, 6)( 5, 8)( 7,10), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 3, 5, 8)( 4,11, 7)( 6, 9,10) ] ),
-  autSubgroup := L(11)=PSL(2,11)(11),
-  baseBlock := [ 4, 7, 9 ],
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 55, 15, 3, 3 ],
+  autGroup := Group( [ ( 1, 3, 9)( 2, 7,10)( 4, 5,11), ( 1,10, 5, 8, 9, 2)( 3, 4,11)( 6, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
+  baseBlock := [ 3, 9, 10 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 55, 15, 3, 3 ],
   r := 15,
   tSubsetStructure := rec(
-      lambdas := [ 3 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,11)( 5, 8)( 9,10), ( 2, 3)( 4, 6)( 5, 8)( 7,10), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 3, 5, 8)( 4,11, 7)( 6, 9,10) ] ),
-  autSubgroup := L(11)=PSL(2,11)(11),
-  baseBlock := [ 2, 5, 10, 11 ],
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 55, 20, 4, 6 ],
+  autGroup := Group( [ ( 2, 3, 8)( 4,11,10)( 6, 9, 7), ( 1, 2, 9, 8, 6)( 3, 4,10, 7, 5) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
+  baseBlock := [ 2, 6, 7, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 55, 20, 4, 6 ],
   r := 20,
   tSubsetStructure := rec(
-      lambdas := [ 6 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,11)( 5, 8)( 9,10), ( 2, 3)( 4, 6)( 5, 8)( 7,10), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 3, 5, 8)( 4,11, 7)( 6, 9,10) ] ),
-  autSubgroup := L(11)=PSL(2,11)(11),
-  baseBlock := [ 2, 5, 6, 8, 10, 11 ],
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 55, 30, 6, 15 ],
+  autGroup := Group( [ ( 1,10, 4)( 2, 6, 5)( 3, 7,11), ( 1,11,10, 2, 6, 9, 7, 3, 5, 8, 4) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
+  baseBlock := [ 1, 2, 5, 6, 7, 8 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 55, 30, 6, 15 ],
   r := 30,
   tSubsetStructure := rec(
-      lambdas := [ 15 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := S11,
-  baseBlock := [ 1, 2, 3, 4, 6, 7, 8, 9, 11 ],
+  lambdas := [ 15 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 55, 45, 9, 36 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 2, 3, 4, 6, 7, 8, 9, 10, 11 ],
   blockSizes := [ 9 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 55, 45, 9, 36 ],
   r := 45,
   tSubsetStructure := rec(
-      lambdas := [ 36 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 5, 7)( 6, 8)( 9,11), ( 2, 3)( 5,11)( 6, 7)( 8, 9), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 4, 5,10, 8)( 6, 9, 7,11), ( 4, 6,10, 7)( 5,11, 8, 9) ] ),
-  autSubgroup := M(11),
-  baseBlock := [ 2, 3, 8, 9, 10 ],
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 66, 30, 5, 12 ],
+  autGroup := Group( [ ( 2,10)( 3, 9,11, 7, 4, 6, 8, 5), ( 1, 2, 8)( 3,11, 7)( 5,10, 9) ] ),
+  autSubgroup := Group( [ ( 1, 3, 4, 2)( 5,11, 7, 6), ( 1,10, 3, 9, 2, 7)( 4, 6,11)( 5, 8) ] ),
+  baseBlock := [ 1, 2, 3, 9, 11 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 66, 30, 5, 12 ],
   r := 30,
   tSubsetStructure := rec(
-      lambdas := [ 12 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,11)( 5, 8)( 9,10), ( 2, 3)( 4, 6)( 5, 8)( 7,10), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 3, 5, 8)( 4,11, 7)( 6, 9,10) ] ),
-  autSubgroup := L(11)=PSL(2,11)(11),
-  baseBlock := [ 1, 2, 3, 7, 10 ],
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 66, 30, 5, 12 ],
+  autGroup := Group( [ ( 1, 3, 5, 8, 2)( 4, 6, 7,11,10), ( 1, 7, 9)( 2, 3,10)( 4,11, 8) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
+  baseBlock := [ 2, 3, 4, 8, 11 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 66, 30, 5, 12 ],
   r := 30,
   tSubsetStructure := rec(
-      lambdas := [ 12 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 5, 7)( 6, 8)( 9,11), ( 2, 3)( 5,11)( 6, 7)( 8, 9), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 4, 5,10, 8)( 6, 9, 7,11), ( 4, 6,10, 7)( 5,11, 8, 9) ] ),
-  autSubgroup := M(11),
-  baseBlock := [ 1, 4, 5, 6, 7, 11 ],
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 66, 36, 6, 18 ],
+  autGroup := Group( [ ( 2,10, 6, 8)( 4,11, 9, 5), ( 1, 4, 9, 2, 3,11, 5, 6)( 7, 8) ] ),
+  autSubgroup := Group( [ ( 1, 3, 4, 2)( 5,11, 7, 6), ( 1,10, 3, 9, 2, 7)( 4, 6,11)( 5, 8) ] ),
+  baseBlock := [ 4, 5, 6, 7, 8, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 66, 36, 6, 18 ],
   r := 36,
   tSubsetStructure := rec(
-      lambdas := [ 18 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,11)( 5, 8)( 9,10), ( 2, 3)( 4, 6)( 5, 8)( 7,10), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 3, 5, 8)( 4,11, 7)( 6, 9,10) ] ),
-  autSubgroup := L(11)=PSL(2,11)(11),
-  baseBlock := [ 1, 3, 6 ],
+  lambdas := [ 18 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 110, 30, 3, 6 ],
+  autGroup := Group( [ ( 1,10, 5)( 2, 8, 4, 7, 6,11)( 3, 9), ( 1,11, 3)( 2, 7, 8)( 4, 9, 5) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
+  baseBlock := [ 1, 4, 11 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 110, 30, 3, 6 ],
   r := 30,
   tSubsetStructure := rec(
-      lambdas := [ 6 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := M(11),
-  baseBlock := [ 5, 7, 10 ],
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 165, 45, 3, 9 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 1, 2, 5 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 165, 45, 3, 9 ],
   r := 45,
   tSubsetStructure := rec(
-      lambdas := [ 9 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := M(11),
-  baseBlock := [ 1, 2, 3, 4, 6, 8, 9, 11 ],
+  lambdas := [ 9 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 165, 120, 8, 84 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 3, 4, 6, 7, 8, 9, 10, 11 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 165, 120, 8, 84 ],
   r := 120,
   tSubsetStructure := rec(
-      lambdas := [ 84 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := M(11),
-  baseBlock := [ 3, 6, 9, 11 ],
+  lambdas := [ 84 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 330, 120, 4, 36 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 3, 6, 7, 11 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 330, 120, 4, 36 ],
   r := 120,
   tSubsetStructure := rec(
-      lambdas := [ 36 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := A11,
-  baseBlock := [ 1, 2, 4, 6, 7, 9, 10 ],
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 330, 210, 7, 126 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 1, 2, 4, 5, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 330, 210, 7, 126 ],
   r := 210,
   tSubsetStructure := rec(
-      lambdas := [ 126 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 5, 7)( 6, 8)( 9,11), ( 2, 3)( 5,11)( 6, 7)( 8, 9), ( 3, 4)( 5, 7)( 6, 9)( 8,11), ( 4, 5,10, 8)( 6, 9, 7,11), ( 4, 6,10, 7)( 5,11, 8, 9) ] ),
-  autSubgroup := M(11),
-  baseBlock := [ 1, 3, 4, 8, 10 ],
+  lambdas := [ 126 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 396, 180, 5, 72 ],
+  autGroup := Group( [ ( 1,10,11, 8)( 4, 7, 6, 5), ( 1,11, 9, 8, 4)( 2,10, 3, 6, 5) ] ),
+  autSubgroup := Group( [ ( 1, 3, 4, 2)( 5,11, 7, 6), ( 1,10, 3, 9, 2, 7)( 4, 6,11)( 5, 8) ] ),
+  baseBlock := [ 1, 2, 3, 6, 10 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 396, 180, 5, 72 ],
   r := 180,
   tSubsetStructure := rec(
-      lambdas := [ 72 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := A11,
-  baseBlock := [ 2, 3, 5, 7, 9 ],
+  lambdas := [ 72 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 462, 210, 5, 84 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 3, 6, 7, 8, 11 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 462, 210, 5, 84 ],
   r := 210,
   tSubsetStructure := rec(
-      lambdas := [ 84 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := A11,
-  baseBlock := [ 1, 4, 6, 8, 10, 11 ],
+  lambdas := [ 84 ],
+  t := 2 ),
+  v:= 11),
+ rec( parameters:= [ 11, 462, 252, 6, 126 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 1, 2, 4, 5, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 462, 252, 6, 126 ],
   r := 252,
   tSubsetStructure := rec(
-      lambdas := [ 126 ],
-      t := 2 ),
-  v := 11 )
+  lambdas := [ 126 ],
+  t := 2 ),
+  v:= 11)
 ]; 
-for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
