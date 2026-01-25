@@ -1,7 +1,8 @@
-#----------------------------------------------------------------------------------------------------- 
+# ##################################################################################################### 
 # Flag-transitive 2-designs 
 # Group (autSubgroup): L2(7) = L3(4) = U2(7) = S2(7) = O3(7)
-# ----------------------------------------------------------------------------------------------------
+# #####################################################################################################
+# Remark: all designs 
 
 # 1. Number of designs: 
 # ---------------------
@@ -21,18 +22,17 @@
 # 2. Summary: 
 # -----------
 
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v  b   r   k  λ   G         Gα   GB  Aut(D)        rk(G)  rk(Aut(D))  point-primitive  block-primitive  complement  symmetric  comments                                           
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   PSL(3,2)  S4   S4  PSL(3,2)      2      2           true             true             2           true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   4   4  2   PSL(3,2)  S4   S4  PSL(3,2)      2      2           true             true             1           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 3   7  28  12  3  4   PSL(3,2)  S4   S3  PSL(3,2)      2      2           true             false                                                                                      
-# 4   8  14  7   4  3   PSL(3,2)  7:3  A4  2^3:PSL(3,2)  2      2           true             false            4                                                                         
-# 5   8  28  21  6  15  PSL(3,2)  7:3  S3  S8            2      2           true             false                                                                                      
-# 6   8  42  21  4  9   PSL(3,2)  7:3  4   PSL(3,2):2    2      2           true             false            6                                                                         
-# 7   8  56  21  3  6   PSL(3,2)  7:3  3   S8            2      2           true             false                                                                                      
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r   k  λ  G         Gα  GB  Aut(D)        rk(G)  rk(Aut(D))  nr(Gα)  nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                             
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   7  7   3   3  1   PSL(3,2)  S4   S4  PSL(3,2)      2      2           14       14      true             true             2           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   4   4  2   PSL(3,2)  S4   S4  PSL(3,2)      2      2           14       14      true             true             1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 3   7  28  12  3  4   PSL(3,2)  S4   S3  PSL(3,2)      2      2           14       7       true             false                                                                                        
+# 4   8  14  7   4  3   PSL(3,2)  7:3  A4  2^3:PSL(3,2)  2      2           12       10      true             false            4                                                                           
+# 5   8  28  21  6  15  PSL(3,2)  7:3  S3  S8            2      2           12       7       true             false                                                                                        
+# 6   8  42  21  4  9   PSL(3,2)  7:3  4   PSL(3,2):2    2      2           12       6       true             false            6                                                                           
+# 7   8  56  21  3  6   PSL(3,2)  7:3  3   S8            2      2           12       3       true             false                                                                                        
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information: 
 # -----------------------
@@ -49,7 +49,7 @@
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
 # Block-stabiliser                     S4          S4          
-# Orbit structure of point-stabiliser  1^{1}6^{1}  1^{1}6^{1}  
+# Orbit structure of point-stabiliser  3^{1}4^{1}  1^{1}6^{1}  
 # Orbit structure of block-stabiliser  3^{1}4^{1}  3^{1}4^{1}  
 # Point-transitive                     true        true        
 # Block-transitive                     true        true        
@@ -74,7 +74,7 @@
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
 # Block-stabiliser                     S4          S4          
-# Orbit structure of point-stabiliser  1^{1}6^{1}  1^{1}6^{1}  
+# Orbit structure of point-stabiliser  3^{1}4^{1}  1^{1}6^{1}  
 # Orbit structure of block-stabiliser  3^{1}4^{1}  3^{1}4^{1}  
 # Point-transitive                     true        true        
 # Block-transitive                     true        true        
@@ -99,7 +99,7 @@
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
 # Block-stabiliser                     S3          S3          
-# Orbit structure of point-stabiliser  1^{1}6^{1}  1^{1}6^{1}  
+# Orbit structure of point-stabiliser  3^{1}4^{1}  1^{1}6^{1}  
 # Orbit structure of block-stabiliser  1^{1}3^{2}  1^{1}3^{2}  
 # Point-transitive                     true        true        
 # Block-transitive                     true        true        
@@ -217,9 +217,9 @@
 
 lD := [ 
  rec(
-  autGroup := Group( [ (1,2)(5,7), (2,3)(4,7), (3,5)(6,7), (3,6)(5,7) ] ),
-  autSubgroup := Group( [ (1,2,4)(5,6,7), (1,3)(4,5) ] ),
-  baseBlock := [ 1, 2, 4 ],
+  autGroup := Group( [ (1,2)(5,6), (2,3)(6,7), (2,4)(3,5), (4,6)(5,7), (4,5)(6,7) ] ),
+  autSubgroup := Group( [ (1,2,3)(5,6,7), (2,4)(3,5) ] ),
+  baseBlock := [ 2, 4, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -231,9 +231,9 @@ lD := [
       t := 2 ),
   v := 7 ), 
  rec(
-  autGroup := Group( [ (1,2)(5,7), (2,3)(4,7), (3,5)(6,7), (3,6)(5,7) ] ),
-  autSubgroup := Group( [ (1,2,4)(5,6,7), (1,3)(4,5) ] ),
-  baseBlock := [ 3, 5, 6, 7 ],
+  autGroup := Group( [ (1,2)(5,6), (2,4)(3,5), (4,6)(5,7), (4,7)(5,6) ] ),
+  autSubgroup := Group( [ (1,2,3)(5,6,7), (2,4)(3,5) ] ),
+  baseBlock := [ 1, 3, 5, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -245,9 +245,9 @@ lD := [
       t := 2 ),
   v := 7 ), 
  rec(
-  autGroup := Group( [ (1,2)(5,7), (2,3)(4,7), (3,5)(6,7), (3,6)(5,7) ] ),
-  autSubgroup := Group( [ (1,2,4)(5,6,7), (1,3)(4,5) ] ),
-  baseBlock := [ 2, 5, 7 ],
+  autGroup := Group( [ (1,2)(5,6), (2,4)(3,5), (4,5)(6,7) ] ),
+  autSubgroup := Group( [ (1,2,3)(5,6,7), (2,4)(3,5) ] ),
+  baseBlock := [ 3, 5, 7 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -259,9 +259,9 @@ lD := [
       t := 2 ),
   v := 7 ), 
  rec(
-  autGroup := Group( [ (1,2)(6,8), (2,3)(7,8), (3,4)(6,8), (3,5)(4,7), (5,6)(7,8), (5,7)(6,8) ] ),
-  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 1, 2, 6, 8 ],
+  autGroup := Group( [ (1,2)(5,6), (2,3)(6,7), (3,4)(7,8), (3,8)(5,6), (4,6)(5,7), (4,7)(5,6) ] ),
+  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 1, 2, 3, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -274,8 +274,8 @@ lD := [
   v := 8 ), 
  rec(
   autGroup := SymmetricGroup( [ 1 .. 8 ] ),
-  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8 ],
+  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 2, 4, 5, 6, 7, 8 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -287,9 +287,9 @@ lD := [
       t := 2 ),
   v := 8 ), 
  rec(
-  autGroup := Group( [ (1,2)(4,7)(5,8), (2,3)(4,7)(6,8), (3,4,8,6,5,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 1, 2, 4, 5 ],
+  autGroup := Group( [ (1,2)(4,8)(6,7), (2,3)(4,8)(5,7), (3,4,7,5,6,8) ] ),
+  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 1, 3, 4, 5 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -302,8 +302,8 @@ lD := [
   v := 8 ), 
  rec(
   autGroup := SymmetricGroup( [ 1 .. 8 ] ),
-  autSubgroup := Group( [ (1,3,2)(5,6,8), (1,3)(2,8)(4,5)(6,7) ] ),
-  baseBlock := [ 3, 5, 8 ],
+  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
+  baseBlock := [ 2, 5, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
