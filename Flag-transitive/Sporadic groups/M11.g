@@ -449,11 +449,11 @@
 # 4. Designs: 
 # -----------
 
-lD := [ 
+lD_M11 := [ 
  rec(
   autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := Group( [ (1,4,3,8)(2,5,6,9), ( 2,10)( 4,11)( 5, 7)( 8, 9) ] ),
-  baseBlock := [ 2, 3, 4, 5, 6, 7, 8, 10, 11 ],
+  autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
+  baseBlock := [ 1, 2, 3, 4, 5, 7, 9, 10, 11 ],
   blockSizes := [ 9 ],
   isBinary := true,
   isBlockDesign := true,
@@ -465,9 +465,9 @@ lD := [
       t := 2 ),
   v := 11 ), 
  rec(
-  autGroup := Group( [ ( 1, 2)( 6, 8)( 7, 9)(10,11), ( 2, 3)( 6, 9)( 7,10)( 8,11), ( 3, 4)( 6, 8)( 7,11)( 9,10), ( 4, 5)( 6,10)( 7, 9)( 8,11), ( 4, 6, 5,10)( 7, 8, 9,11), ( 4, 7, 5, 9)( 6,11,10, 8) ] ),
-  autSubgroup := Group( [ (1,4,3,8)(2,5,6,9), ( 2,10)( 4,11)( 5, 7)( 8, 9) ] ),
-  baseBlock := [ 2, 5, 8, 10, 11 ],
+  autGroup := Group( [ ( 1, 2)( 5,11)( 6, 8)( 7,10), ( 2, 3)( 5,10)( 6,11)( 7, 8), ( 3, 4)( 5, 6)( 7,10)( 8,11), ( 4, 5, 9,10)( 6, 7, 8,11), ( 4, 6, 9, 8)( 5,11,10, 7) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
+  baseBlock := [ 1, 2, 3, 7, 11 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -479,9 +479,9 @@ lD := [
       t := 2 ),
   v := 11 ), 
  rec(
-  autGroup := Group( [ ( 1, 2)( 6, 8)( 7, 9)(10,11), ( 2, 3)( 6, 9)( 7,10)( 8,11), ( 3, 4)( 6, 8)( 7,11)( 9,10), ( 4, 5)( 6,10)( 7, 9)( 8,11), ( 4, 6, 5,10)( 7, 8, 9,11), ( 4, 7, 5, 9)( 6,11,10, 8) ] ),
-  autSubgroup := Group( [ (1,4,3,8)(2,5,6,9), ( 2,10)( 4,11)( 5, 7)( 8, 9) ] ),
-  baseBlock := [ 1, 3, 4, 6, 7, 9 ],
+  autGroup := Group( [ ( 1, 2)( 5,11)( 6, 8)( 7,10), ( 2, 3)( 5,10)( 6,11)( 7, 8), ( 3, 4)( 5, 6)( 7,10)( 8,11), ( 4, 5, 9,10)( 6, 7, 8,11), ( 4, 6, 9, 8)( 5,11,10, 7) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
+  baseBlock := [ 4, 5, 6, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -494,8 +494,8 @@ lD := [
   v := 11 ), 
  rec(
   autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := Group( [ (1,4,3,8)(2,5,6,9), ( 2,10)( 4,11)( 5, 7)( 8, 9) ] ),
-  baseBlock := [ 1, 2, 9 ],
+  autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
+  baseBlock := [ 2, 6, 8 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -508,8 +508,8 @@ lD := [
   v := 11 ), 
  rec(
   autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := Group( [ (1,4,3,8)(2,5,6,9), ( 2,10)( 4,11)( 5, 7)( 8, 9) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 10, 11 ],
+  autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
+  baseBlock := [ 1, 3, 4, 5, 7, 9, 10, 11 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
@@ -522,8 +522,8 @@ lD := [
   v := 11 ), 
  rec(
   autGroup := SymmetricGroup( [ 1 .. 11 ] ),
-  autSubgroup := Group( [ (1,4,3,8)(2,5,6,9), ( 2,10)( 4,11)( 5, 7)( 8, 9) ] ),
-  baseBlock := [ 3, 7, 8, 10 ],
+  autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
+  baseBlock := [ 1, 5, 7, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -535,9 +535,9 @@ lD := [
       t := 2 ),
   v := 11 ), 
  rec(
-  autGroup := Group( [ ( 1, 2)( 6, 8)( 7, 9)(10,11), ( 2, 3)( 6, 9)( 7,10)( 8,11), ( 3, 4)( 6, 8)( 7,11)( 9,10), ( 4, 5)( 6,10)( 7, 9)( 8,11), ( 4, 6, 5,10)( 7, 8, 9,11), ( 4, 7, 5, 9)( 6,11,10, 8) ] ),
-  autSubgroup := Group( [ (1,4,3,8)(2,5,6,9), ( 2,10)( 4,11)( 5, 7)( 8, 9) ] ),
-  baseBlock := [ 2, 4, 5, 6, 8 ],
+  autGroup := Group( [ ( 1, 2)( 5,11)( 6, 8)( 7,10), ( 2, 3)( 5,10)( 6,11)( 7, 8), ( 3, 4)( 5, 6)( 7,10)( 8,11), ( 4, 5, 9,10)( 6, 7, 8,11), ( 4, 6, 9, 8)( 5,11,10, 7) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
+  baseBlock := [ 2, 3, 4, 7, 9 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -680,4 +680,4 @@ lD := [
       t := 2 ),
   v := 55 )
 ]; 
-for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_M11 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
