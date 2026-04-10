@@ -2,7 +2,8 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): M12
 # ####################################################################################################
-# Remark: all designs 
+# Remark: all designs
+#         lD_M12 is the list of designs  
 
 # 1. Number of designs: 
 # ---------------------
