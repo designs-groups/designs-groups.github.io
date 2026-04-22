@@ -2,7 +2,8 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): 2B2(8):3 = Sz(8):3
 # ####################################################################################################
-# Remark: all designs 
+# Remark: all designs
+#         lD_Sz8d3 is the list of the designs 
 
 # 1. number of designs: 
 # ---------------------

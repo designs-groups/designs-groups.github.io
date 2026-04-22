@@ -2,7 +2,8 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): G23
 # ####################################################################################################
-# Remark: all designs 
+# Remark: all designs
+#         lD_G23 is the list of the designs 
 
 # 1. number of designs: 
 # ---------------------
