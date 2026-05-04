@@ -114,11 +114,11 @@ Below is the list lD_A5 of all 2-designs admitting G = A5 as flag-transitive aut
             tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ),
             v:= 6)
     ]; 
-    for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+    for D in lD_A5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
  As noted above, lD_A5 contains 2-designs with no block sets,  but if we run the loop below, then we can obtain all 2-designs with the same structure as in the GAP package DESIGN:  
 
-    gap> for D in lD do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+    gap> for D in lD_A5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
     gap> lD;
     [ rec( autGroup := Group([ (1,2,3,4,5), (1,4,5,3) ]), autSubgroup := Group([ (1,2,4), (1,3)(2,5) ]), 
           baseBlock := [ 2, 4, 5 ], blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 2, 5 ], [ 1, 3, 4 ], 
