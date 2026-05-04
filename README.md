@@ -10,7 +10,7 @@ The block designs constructed here are simple (no repeated blocks), binary (no r
 
 # How to Read the Database
 
-Here the data for 2-designs admitting block-transitive automorphism groups. In particular, we construct and classify 2-designs with flag-trasitive automorphism groups. These data can be found in one of three folders named by "Block-transitive" and "Flag-transitive". In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by the group G = U3(3).         
+Here the data for 2-designs admitting block-transitive automorphism groups. In particular, we construct and classify 2-designs with flag-trasitive automorphism groups. These data can be found in one of three folders named by "Block-transitive" and "Flag-transitive". In each folder, there are some subfolders and one can find some files named by a group name G, for example, "U3(3).g". This means that the 2-design stored in this file is constructed by taking G = U3(3) as their automorphism group.         
 
 In each file, the information about the 2-designs D with automorphism group G is presented in four main sections. We may include some remark in the header. If there is no remarks or the term "all designs" presented, then it means that we have a complete classification of the designs with G as their block-transitive (flag-tranitive) automorphism group, otherwise, we present some information on the current status of classification.
 
