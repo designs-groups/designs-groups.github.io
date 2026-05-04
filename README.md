@@ -139,7 +139,7 @@ The data files of the designs constructed by groups have been prepared by Seyed 
 
 # Feedback
 
-Any comments about the data are welcome. If you have found important information missing or if there is a mistake, let us know and we will try to address it as soon as possible. Messages concerning the data should be sent to Seyed Hassan Alavi.
+Any comments about the data are welcome. If you have found important information missing or if there is a mistake, let us know and we will try to fix it as soon as possible. Messages concerning the data should be sent to Seyed Hassan Alavi.
 
 # Acknowledgment 
 
@@ -154,12 +154,10 @@ In the preparation of this database, we use the computer software GAP. In additi
 
 # Conflict of Interests and Attribution
 
-The database presented here is obtained by the owners and contributors. While all designs have been independently constructed, some may have been previously discovered, constructed and published by other mathematicians, and these can be found in the literature or various sources. 
-
- 
+The database presented here is obtained by the owners. While all designs have been independently constructed, some may have been previously discovered, constructed and published by other mathematicians. 
 We provide a dedicated bibliography file listing all references and sources that we are aware of. While we strive for completeness and accuracy, there may be missing or uncredited references. 
 
-If you notice any missing citations or prior sources, we would be grateful if you let us know. Contributions that improve the scholarly integrity of this project are warmly welcome.
+We would be grateful if one notify us any missing citations or prior sources. Contributions that improve the scholarly integrity of this project are warmly welcome.
 
 # How to cite
 
