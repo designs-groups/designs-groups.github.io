@@ -24,7 +24,7 @@
 # -----------
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v    b      r     k   λ   G   Gα       GB       Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)  nr(GB)  point-primitive  block-primitive  complement  symmetric  comments  
+# Nr  v    b      r     k   λ    G   Gα        GB       Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   100  25200  3024  12  336  HJ  PSU(3,3)  3xD8     HJ:2    3      3           2        82      true             false                                             
 # 2   100  25200  3024  12  336  HJ  PSU(3,3)  S4       HJ:2    3      3           2        80      true             false                                             
