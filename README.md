@@ -33,16 +33,17 @@ For example, the table below provides all information about the number of 2-desi
 
 Below is the table for A5.2 = S5. The design in line 3 is isomorphic to its complement. It is point-primitive but not block-primitive. The parameter set of the fifth design is the parameter set of the complement of PG(3,2) or Hadamard design.   
 
- Summary:
- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Nr  v   b   r   k  λ   G   Gα   GB   Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                      
- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 1   5   10  6   3  3   S5  S4   D12  S5      2      2           3        5       true             true                                    complete                                      
- 2   6   15  10  4  6   S5  5:4  D8   S6      2      2           4        8       true             false                                   complete                                      
- 3   6   20  10  3  4   S5  5:4  S3   S6      2      2           4        10      true             false            3                      complete                                      
- 4   10  15  6   4  2   S5  D12  D8   S6      3      2           5        8       true             false                                                                                 
- 5   15  15  8   8  4   S5  D8   D8   A8      4      2           8        8       false            false                        true       complement of PG(3,2) or Hadamard parameters  
- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+     Summary:
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     Nr  v   b   r   k  λ   G   Gα   GB   Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                      
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+     1   5   10  6   3  3   S5  S4   D12  S5      2      2           3        5       true             true                                    complete                                      
+     2   6   15  10  4  6   S5  5:4  D8   S6      2      2           4        8       true             false                                   complete                                      
+     3   6   20  10  3  4   S5  5:4  S3   S6      2      2           4        10      true             false            3                      complete                                      
+     4   10  15  6   4  2   S5  D12  D8   S6      3      2           5        8       true             false                                                                                 
+     5   15  15  8   8  4   S5  D8   D8   A8      4      2           8        8       false            false                        true       complement of PG(3,2) or Hadamard parameters  
+    ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **3.** Further information: This section provides further information on 2-designs and their automorphism groups. It starts with the design number, which is the position of the design in the list lD in section 4, or equivalently, the row number in the Summary table in section 2. For example, let D be the 12th design D with automorphism group G = U3(3), see table below. This design has parameter set [v, b, r, k, λ] = [ 28, 336, 216, 18, 136 ] and its complement has parameter set [ 28, 336, 120, 10, 40 ]. The full automorphism group Aut(D) of D is autGroup = O(7,2), and here G = autSubgroup = U3(3). For the Point-primitive type (respectively, Block-primitive type), if G (or Aut(D)) is primitive, then the type of the primitive permutation group is provided according to the O'Nan-Scott classification; otherwise, we write "0". Therefore, in this case, both Aut(D) and G are point-primitive of type "2" (Almost Simple type), and Aut(D) is block-primitive of type "2" (Almost Simple type) while G is block-imprimitive. We also observe that the complement of D cannot be in the list lD as G = U3(3) is not anti-flag-transitive.              
 
