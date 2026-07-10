@@ -206,18 +206,24 @@ Transitive-group tables continue to be sorted numerically by `v`.
 
 ## Visit counter
 
-Every page shows the shared visit count as plain text directly below the
+Every page shows one shared live counter as plain text directly below the
 Updated line:
 
 ```text
 Updated: 11 July 2026
-Visits: 1234
+Visits: 157
 ```
 
-The displayed count has no badge, border, background, or box. Page views and
-data-access clicks are still counted. The GitHub Pages workflow refreshes the
-plain-text total during each build, and the browser also attempts a live
-plain-text refresh when the counter API is accessible.
+The visible counter has no badge, border, background, or box.
+
+The live counter continues from the previous displayed value 156. Each page
+load increments the shared counter once. A data-access action also increments
+the same shared counter when a user opens a row, uses the first-column data
+link, activates a row by keyboard, or uses the Download `.g` control.
+
+The browser uses CounterAPI V1 with a dedicated project namespace. The returned
+counter value is added to the preserved baseline 156 and written directly into
+the plain-text footer span.
 
 ## Data-access counting
 
