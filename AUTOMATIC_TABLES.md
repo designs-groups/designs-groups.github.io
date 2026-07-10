@@ -163,3 +163,11 @@ multiple lines, only the first non-empty remark line is placed in the table.
 For every table in the Flag-transitive database, the `Flag-transitive` column
 is set automatically equal to the `Total` number of designs. This is enforced
 by the table builder for every future rebuild.
+
+
+## Zero counts
+
+Numerical property columns use `0` when no design in the corresponding data
+file has that property. An em dash is not used for design counts. This applies
+to Point-primitive, Point-imprimitive, Block-primitive, Block-imprimitive,
+Flag-transitive, and Anti-flag-transitive counts.

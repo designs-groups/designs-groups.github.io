@@ -903,3 +903,10 @@ h2 {
   padding-top: 0;
   border-top: none;
 }
+
+
+/* Left-align the first two columns in table bodies only; headers stay unchanged. */
+.database-table tbody th:first-child,
+.database-table tbody td.list-name {
+  text-align: left;
+}
