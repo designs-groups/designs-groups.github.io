@@ -494,4 +494,4 @@ lD_A11 :=  [
       t := 2 ),
   v := 55 )
 ]; 
-for D in lD_A11 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od
+for D in lD_A11 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
