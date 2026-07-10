@@ -325,16 +325,11 @@ def page_for_source(source_path, folder_pages, overrides):
     return matches[0][1]
 
 
-def row_sort_key(row: RowData):
-    if is_transitive_source(row.source_path):
-        return (0, int(row.v), row.list_name.casefold())
-
-    tokens = re.findall(
-        r"\d+|[A-Za-z]+|[^A-Za-z0-9]+",
-        row.group_label,
-    )
-
+def natural_text_key(text: str):
+    """Natural key for the base group name."""
+    tokens = re.findall(r"\d+|[A-Za-z]+|[^A-Za-z0-9]+", text)
     key = []
+
     for token in tokens:
         if token.isdigit():
             key.append((1, int(token)))
@@ -343,7 +338,49 @@ def row_sort_key(row: RowData):
         else:
             key.append((2, token))
 
-    return (1, tuple(key))
+    return tuple(key)
+
+
+def extension_component_sort_key(component: str):
+    """Sort one colon-separated extension component."""
+    component = component.strip()
+
+    m = re.fullmatch(r"(\d+)", component)
+    if m:
+        return (int(m.group(1)), 0, 0, 0, "")
+
+    m = re.fullmatch(r"(\d+)_(\d+)", component)
+    if m:
+        return (int(m.group(1)), 0, 1, int(m.group(2)), "")
+
+    m = re.fullmatch(r"(\d+)\^(\d+)", component)
+    if m:
+        return (int(m.group(1)), 0, 2, int(m.group(2)), "")
+
+    m = re.fullmatch(r"([A-Za-z]+)(\d+)", component)
+    if m:
+        letters, number = m.groups()
+        return (int(number), 1, 0, 0, letters.casefold())
+
+    return (10**9, 2, 0, 0, natural_text_key(component))
+
+
+def group_sort_key(group: str):
+    """Sort a group name by base group and colon-extension structure."""
+    parts = [part.strip() for part in group.split(":")]
+    base = parts[0]
+    extensions = tuple(
+        extension_component_sort_key(part) for part in parts[1:]
+    )
+
+    return (natural_text_key(base), extensions)
+
+
+def row_sort_key(row: RowData):
+    if is_transitive_source(row.source_path):
+        return (0, int(row.v), row.list_name.casefold())
+
+    return (1, group_sort_key(row.group_label))
 
 
 

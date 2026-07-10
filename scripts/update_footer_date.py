@@ -11,9 +11,9 @@ DOCS = ROOT / "docs"
 date_label = datetime.now(timezone.utc).strftime("%-d %B %Y")
 
 footer_pattern = re.compile(
-    r'(<footer class="site-footer">\s*<div class="footer-inner">)'
+    r'(<footer class="site-footer">.*?<div class="footer-text">)'
     r'(.*?)'
-    r'(</div>\s*</footer>)',
+    r'(</div>.*?</footer>)',
     flags=re.S,
 )
 
@@ -24,9 +24,17 @@ for page in DOCS.rglob("*.html"):
 
     def repl(match: re.Match[str]) -> str:
         inner = match.group(2)
-        inner = re.sub(r'<br>\s*Updated:\s*[^<\n]+', '', inner)
-        inner = inner.rstrip() + f"<br>\n    Updated: {date_label}\n  "
-        return match.group(1) + inner + match.group(3)
+        updated_inner, count = re.subn(
+            r'Updated:\s*[^<\n]+',
+            f'Updated: {date_label}',
+            inner,
+            count=1,
+        )
+
+        if count != 1:
+            raise RuntimeError(f"Updated date not found in footer of {page}")
+
+        return match.group(1) + updated_inner + match.group(3)
 
     updated, count = footer_pattern.subn(repl, text, count=1)
 

@@ -178,3 +178,33 @@ Flag-transitive, and Anti-flag-transitive counts.
 Clicking anywhere on a database table row opens the corresponding raw `.g`
 file in a new browser tab. The direct link in the first column also opens in
 a new tab. The Download `.g` button continues to download the file.
+
+
+## Group ordering
+
+Non-transitive database tables use a group-notation-aware sort order. A base
+group is listed before its colon extensions. Indexed variants such as `2_1`,
+`2_2` are ordered by index, power variants such as `2^2` follow the indexed
+variants, and longer extension chains follow their prefix.
+
+For example:
+
+```text
+L3(4)
+L3(4):2_1
+L3(4):2_2
+L3(4):2^2
+L3(4):3
+L3(4):3:2_1
+L3(4):3:2_2
+L3(4):S3
+L3(4):D12
+```
+
+Transitive-group tables continue to be sorted numerically by `v`.
+
+
+## Visit counter
+
+All pages display one shared site-wide visit counter on the right side of the
+footer. The same counter key is used across all pages.
