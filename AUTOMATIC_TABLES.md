@@ -206,9 +206,9 @@ Transitive-group tables continue to be sorted numerically by `v`.
 
 ## Visit counter
 
-All pages display one shared site-wide visit counter on the right side of the
-footer. The same counter key is used across all pages.
-
+All pages display the shared site-wide Visits counter directly below the
+Updated line in the normal footer text flow. It is not placed in a separate
+right-side footer box.
 
 ## Data-access counting
 
