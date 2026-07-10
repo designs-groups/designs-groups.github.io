@@ -2,7 +2,9 @@
 # Flag-transitive 2-designs 
 # Tranitive groups on 6 points 
 # ####################################################################################################
-# Remark: all designs 
+# Remarks:      all designs 
+#               lD_6 is the list of the designs
+# References:    
 
 # 1. number of non-isomorphic designs: 
 # ------------------------------------
@@ -26,23 +28,23 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G   Gα   GB     Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments  
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   6  10  5   3  2   A5  D10  S3     A5      2      2           12     1        3       true             true             1                                
-# 2   6  15  10  4  6   S6  S5   2xS4   S6      2      2           16     1        5       true             true                                    complete  
-# 3   6  20  10  3  4   S6  S5   S3xS3  S6      2      2           16     1        3       true             false            3                      complete  
+# 1   6  10  5   3  2   A5  D10  S3     A5      2      2           12     1        6       true             true                                              
+# 2   6  15  10  4  6   S6  S5   2xS4   S6      2      2           16     1        11      true             true                                    complete  
+# 3   6  20  10  3  4   S6  S5   S3xS3  S6      2      2           16     1        4       true             false            3                      complete  
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ  G   Gα  GB       Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  complement  symmetric  comments  
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   6  10  5   3  2   A5  D10  S3       A5      2      2           12     1        3       true             true             1                                
-# 2   6  10  5   3  2   A5  D10  S3       A5      2      2           12     1        3       true             true             1                                
-# 3   6  15  10  4  6   S5  5:4  D8       S6      2      2           14     1        4       true             false                                   complete  
-# 4   6  20  10  3  4   S5  5:4  S3       S6      2      2           14     1        1       true             false            4                      complete  
-# 5   6  15  10  4  6   A6  A5   S4       S6      2      2           15     1        3       true             true                                    complete  
-# 6   6  20  10  3  4   A6  A5   (3^2):2  S6      2      2           15     1        1       true             false            6                      complete  
-# 7   6  15  10  4  6   S6  S5   2xS4     S6      2      2           16     1        5       true             true                                    complete  
-# 8   6  20  10  3  4   S6  S5   S3xS3    S6      2      2           16     1        3       true             false            8                      complete  
+# 1   6  10  5   3  2   A5  D10  S3       A5      2      2           12     1        6       true             true                                              
+# 2   6  10  5   3  2   A5  D10  S3       A5      2      2           12     1        6       true             true             1                                
+# 3   6  15  10  4  6   S5  5:4  D8       S6      2      2           14     1        3       true             false                                   complete  
+# 4   6  20  10  3  4   S5  5:4  S3       S6      2      2           14     1        6       true             false                                   complete  
+# 5   6  15  10  4  6   A6  A5   S4       S6      2      2           15     1        6       true             true                                    complete  
+# 6   6  20  10  3  4   A6  A5   (3^2):2  S6      2      2           15     1        1       true             false                                   complete  
+# 7   6  15  10  4  6   S6  S5   2xS4     S6      2      2           16     1        11      true             true                                    complete  
+# 8   6  20  10  3  4   S6  S5   S3xS3    S6      2      2           16     1        4       true             false            8                      complete  
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
@@ -128,9 +130,9 @@
 
 lD_6 :=  [
  rec( parameters:= [ 6, 10, 5, 3, 2 ],
-  autGroup := Group( [ (2,3)(5,6), (1,4,6)(2,5,3) ] ),
+  autGroup := Group( [ (1,3,2,4,5), (1,6,5,4,3) ] ),
   autSubgroup := Group( [ (1,2,3,4,6), (1,4)(5,6) ] ),
-  baseBlock := [ 1, 3, 5 ],
+  baseBlock := [ 3, 5, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -174,9 +176,9 @@ for D in lD_6 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) 
 
 lD_6_all :=  [
  rec( parameters:= [ 6, 10, 5, 3, 2 ],
-  autGroup := Group( [ (2,3)(5,6), (1,4,6)(2,5,3) ] ),
+  autGroup := Group( [ (1,3,2,4,5), (1,6,5,4,3) ] ),
   autSubgroup := Group( [ (1,2,3,4,6), (1,4)(5,6) ] ),
-  baseBlock := [ 1, 3, 5 ],
+  baseBlock := [ 3, 5, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -187,9 +189,9 @@ lD_6_all :=  [
   t := 2 ),
   v:= 6),
  rec( parameters:= [ 6, 10, 5, 3, 2 ],
-  autGroup := Group( [ (2,4,3,6,5), (1,4)(2,3) ] ),
+  autGroup := Group( [ (1,2,3)(4,5,6), (1,4,2,6,3) ] ),
   autSubgroup := Group( [ (1,2,3,4,6), (1,4)(5,6) ] ),
-  baseBlock := [ 2, 4, 6 ],
+  baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -215,7 +217,7 @@ lD_6_all :=  [
  rec( parameters:= [ 6, 20, 10, 3, 4 ],
   autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,6), (1,2)(3,4)(5,6) ] ),
-  baseBlock := [ 1, 3, 4 ],
+  baseBlock := [ 1, 4, 5 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,

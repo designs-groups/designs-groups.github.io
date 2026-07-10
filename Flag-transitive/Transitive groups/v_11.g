@@ -2,7 +2,9 @@
 # Flag-transitive 2-designs 
 # Tranitive groups on 11 points 
 # ####################################################################################################
-# Remark: all designs 
+# Remarks:      all designs 
+#               lD_11 is the list of the designs
+# References:    
 
 # 1. number of non-isomorphic designs: 
 # ------------------------------------
@@ -13,8 +15,8 @@
 # Point-primitive    2          16             18     
 # Point-imprimitive  0          0              0      
 #                                                     
-# Block-primitive    2          10             12     
-# Block-imprimitive  0          6              6      
+# Block-primitive    2          11             13     
+# Block-imprimitive  0          5              5      
 # ----------------------------------------------------
 # Total              2          16             18     
 # ----------------------------------------------------
@@ -23,64 +25,64 @@
 # -----------
 
 #    Non-isomorphic designs:
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b    r    k  λ    G          Gα    GB       Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                            
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   11  11   5    5  2    PSL(2,11)  A5    A5       PSL(2,11)  2      2           5      1        9       true             true             2           true       Hadamard, Kantor or Paley parameters                
-# 2   11  11   6    6  3    PSL(2,11)  A5    A5       PSL(2,11)  2      2           5      1        9       true             true             1           true       complement of Hadamard, Kantor or Paley parameters  
-# 3   11  22   10   5  4    11:10      10    5        11:10      2      2           4      1        1       true             false                                                                                       
-# 4   11  55   15   3  3    PSL(2,11)  A5    D12      PSL(2,11)  2      2           5      1        7       true             true                                                                                        
-# 5   11  55   20   4  6    PSL(2,11)  A5    A4       PSL(2,11)  2      2           5      1        8       true             false                                                                                       
-# 6   11  55   30   6  15   PSL(2,11)  A5    D12      PSL(2,11)  2      2           5      1        7       true             true                                                                                        
-# 7   11  55   45   9  36   S11        S10   2xS9     S11        2      2           8      1        11      true             true                                    complete                                            
-# 8   11  66   30   5  12   M11        A6.2  S5       M11        2      2           6      1        15      true             true             10                                                                         
-# 9   11  66   30   5  12   PSL(2,11)  A5    D10      PSL(2,11)  2      2           5      1        6       true             false                                                                                       
-# 10  11  66   36   6  18   M11        A6.2  S5       M11        2      2           6      1        15      true             true             8                                                                          
-# 11  11  110  30   3  6    PSL(2,11)  A5    S3       PSL(2,11)  2      2           5      1        3       true             false                                                                                       
-# 12  11  165  45   3  9    S11        S10   S3xS8    S11        2      2           8      1        7       true             true                                    complete                                            
-# 13  11  165  120  8  84   M11        A6.2  GL(2,3)  S11        2      2           6      1        9       true             true                                    complete                                            
-# 14  11  330  120  4  36   M11        A6.2  S4       S11        2      2           6      1        4       true             false                                   complete                                            
-# 15  11  330  210  7  126  S11        S10   S4xS7    S11        2      2           8      1        2       true             true                                    complete                                            
-# 16  11  396  180  5  72   M11        A6.2  5:4      M11        2      2           6      1        3       true             false                                                                                       
-# 17  11  462  210  5  84   S11        S10   S5xS6    S11        2      2           8      1        1       true             true             18                     complete                                            
-# 18  11  462  252  6  126  S11        S10   S5xS6    S11        2      2           8      1        1       true             true             17                     complete                                            
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b    r    k  λ    G          Gα    GB     Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                            
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   11  11   5    5  2    PSL(2,11)  A5    A5     PSL(2,11)  2      2           5      1        10      true             true             2           true       Hadamard, Kantor or Paley parameters                
+# 2   11  11   6    6  3    PSL(2,11)  A5    A5     PSL(2,11)  2      2           5      1        10      true             true             1           true       complement of Hadamard, Kantor or Paley parameters  
+# 3   11  22   10   5  4    11:10      10    5      11:10      2      2           4      1        2       true             false                                                                                       
+# 4   11  55   15   3  3    PSL(2,11)  A5    D12    PSL(2,11)  2      2           5      1        12      true             true                                                                                        
+# 5   11  55   20   4  6    PSL(2,11)  A5    A4     PSL(2,11)  2      2           5      1        1       true             false                                                                                       
+# 6   11  55   30   6  15   PSL(2,11)  A5    D12    PSL(2,11)  2      2           5      1        12      true             true                                                                                        
+# 7   11  55   45   9  36   S11        S10   2xS9   S11        2      2           8      1        11      true             true                                    complete                                            
+# 8   11  66   30   5  12   M11        A6.2  S5     M11        2      2           6      1        19      true             true             10                                                                         
+# 9   11  66   30   5  12   PSL(2,11)  A5    D10    PSL(2,11)  2      2           5      1        3       true             false                                                                                       
+# 10  11  66   36   6  18   M11        A6.2  S5     M11        2      2           6      1        19      true             true             8                                                                          
+# 11  11  110  30   3  6    PSL(2,11)  A5    S3     PSL(2,11)  2      2           5      1        5       true             false                                                                                       
+# 12  11  165  45   3  9    S11        S10   S3xS8  S11        2      2           8      1        12      true             true             13                     complete                                            
+# 13  11  165  120  8  84   S11        S10   S3xS8  S11        2      2           8      1        12      true             true             12                     complete                                            
+# 14  11  330  120  4  36   S11        S10   S4xS7  S11        2      2           8      1        13      true             true             15                     complete                                            
+# 15  11  330  210  7  126  S11        S10   S4xS7  S11        2      2           8      1        13      true             true             14                     complete                                            
+# 16  11  396  180  5  72   M11        A6.2  5:4    M11        2      2           6      1        15      true             false                                                                                       
+# 17  11  462  210  5  84   S11        S10   S5xS6  S11        2      2           8      1        14      true             true             18                     complete                                            
+# 18  11  462  252  6  126  S11        S10   S5xS6  S11        2      2           8      1        14      true             true             17                     complete                                            
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b    r    k  λ   G          Gα   GB           Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                            
+# Nr  v   b    r    k  λ    G          Gα    GB           Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                            
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   11  11   5    5  2    11:5       5     5            PSL(2,11)  3      2           3      1        1       true             true                         true       Hadamard, Kantor or Paley parameters                
-# 2   11  11   5    5  2    11:5       5     5            PSL(2,11)  3      2           3      1        1       true             true                         true       Hadamard, Kantor or Paley parameters                
-# 3   11  22   10   5  4    11:10      10    5            11:10      2      2           4      1        1       true             false                                                                                       
-# 4   11  11   5    5  2    PSL(2,11)  A5    A5           PSL(2,11)  2      2           5      1        9       true             true             5           true       Hadamard, Kantor or Paley parameters                
-# 5   11  11   6    6  3    PSL(2,11)  A5    A5           PSL(2,11)  2      2           5      1        9       true             true             4           true       complement of Hadamard, Kantor or Paley parameters  
-# 6   11  55   15   3  3    PSL(2,11)  A5    D12          PSL(2,11)  2      2           5      1        7       true             true                                                                                        
-# 7   11  55   20   4  6    PSL(2,11)  A5    A4           PSL(2,11)  2      2           5      1        8       true             false                                                                                       
-# 8   11  55   30   6  15   PSL(2,11)  A5    D12          PSL(2,11)  2      2           5      1        7       true             true                                                                                        
-# 9   11  110  30   3  6    PSL(2,11)  A5    S3           PSL(2,11)  2      2           5      1        3       true             false                                                                                       
-# 10  11  66   30   5  12   PSL(2,11)  A5    D10          PSL(2,11)  2      2           5      1        6       true             false                                                                                       
-# 11  11  55   45   9  36   M11        A6.2  3^2:QD16     S11        2      2           6      1        16      true             true                                    complete                                            
-# 12  11  66   30   5  12   M11        A6.2  S5           M11        2      2           6      1        15      true             true             13                                                                         
-# 13  11  66   36   6  18   M11        A6.2  S5           M11        2      2           6      1        15      true             true             12                                                                         
-# 14  11  165  45   3  9    M11        A6.2  GL(2,3)      S11        2      2           6      1        9       true             true             15                     complete                                            
-# 15  11  165  120  8  84   M11        A6.2  GL(2,3)      S11        2      2           6      1        9       true             true             14                     complete                                            
-# 16  11  330  120  4  36   M11        A6.2  S4           S11        2      2           6      1        4       true             false                                   complete                                            
-# 17  11  396  180  5  72   M11        A6.2  5:4          M11        2      2           6      1        3       true             false                                                                                       
-# 18  11  55   45   9  36   A11        A10   S9           S11        2      2           7      1        6       true             true                                    complete                                            
-# 19  11  165  45   3  9    A11        A10   3:S8         S11        2      2           7      1        4       true             true             20                     complete                                            
-# 20  11  165  120  8  84   A11        A10   3:S8         S11        2      2           7      1        4       true             true             19                     complete                                            
-# 21  11  330  120  4  36   A11        A10   2^2:(A7:S3)  S11        2      2           7      1        2       true             true             22                     complete                                            
-# 22  11  330  210  7  126  A11        A10   2^2:(A7:S3)  S11        2      2           7      1        2       true             true             21                     complete                                            
-# 23  11  462  210  5  84   A11        A10   A5:S6        S11        2      2           7      1        1       true             true             24                     complete                                            
-# 24  11  462  252  6  126  A11        A10   A5:S6        S11        2      2           7      1        1       true             true             23                     complete                                            
+# 1   11  11   5    5  2    11:5       5     5            PSL(2,11)  3      2           3      1        2       true             true                         true       Hadamard, Kantor or Paley parameters                
+# 2   11  11   5    5  2    11:5       5     5            PSL(2,11)  3      2           3      1        2       true             true                         true       Hadamard, Kantor or Paley parameters                
+# 3   11  22   10   5  4    11:10      10    5            11:10      2      2           4      1        2       true             false                                                                                       
+# 4   11  11   5    5  2    PSL(2,11)  A5    A5           PSL(2,11)  2      2           5      1        10      true             true             5           true       Hadamard, Kantor or Paley parameters                
+# 5   11  11   6    6  3    PSL(2,11)  A5    A5           PSL(2,11)  2      2           5      1        10      true             true             4           true       complement of Hadamard, Kantor or Paley parameters  
+# 6   11  55   15   3  3    PSL(2,11)  A5    D12          PSL(2,11)  2      2           5      1        12      true             true                                                                                        
+# 7   11  55   20   4  6    PSL(2,11)  A5    A4           PSL(2,11)  2      2           5      1        1       true             false                                                                                       
+# 8   11  55   30   6  15   PSL(2,11)  A5    D12          PSL(2,11)  2      2           5      1        12      true             true                                                                                        
+# 9   11  110  30   3  6    PSL(2,11)  A5    S3           PSL(2,11)  2      2           5      1        5       true             false                                                                                       
+# 10  11  66   30   5  12   PSL(2,11)  A5    D10          PSL(2,11)  2      2           5      1        3       true             false                                                                                       
+# 11  11  55   45   9  36   M11        A6.2  3^2:QD16     S11        2      2           6      1        18      true             true                                    complete                                            
+# 12  11  66   30   5  12   M11        A6.2  S5           M11        2      2           6      1        19      true             true             13                                                                         
+# 13  11  66   36   6  18   M11        A6.2  S5           M11        2      2           6      1        19      true             true             12                                                                         
+# 14  11  165  45   3  9    M11        A6.2  GL(2,3)      S11        2      2           6      1        20      true             true                                    complete                                            
+# 15  11  165  120  8  84   M11        A6.2  GL(2,3)      S11        2      2           6      1        20      true             true                                    complete                                            
+# 16  11  330  120  4  36   M11        A6.2  S4           S11        2      2           6      1        13      true             false                                   complete                                            
+# 17  11  396  180  5  72   M11        A6.2  5:4          M11        2      2           6      1        15      true             false                                                                                       
+# 18  11  55   45   9  36   A11        A10   S9           S11        2      2           7      1        4       true             true                                    complete                                            
+# 19  11  165  45   3  9    A11        A10   3:S8         S11        2      2           7      1        5       true             true                                    complete                                            
+# 20  11  165  120  8  84   A11        A10   3:S8         S11        2      2           7      1        5       true             true                                    complete                                            
+# 21  11  330  120  4  36   A11        A10   2^2:(A7:S3)  S11        2      2           7      1        6       true             true                                    complete                                            
+# 22  11  330  210  7  126  A11        A10   2^2:(A7:S3)  S11        2      2           7      1        6       true             true                                    complete                                            
+# 23  11  462  210  5  84   A11        A10   A5:S6        S11        2      2           7      1        7       true             true                                    complete                                            
+# 24  11  462  252  6  126  A11        A10   A5:S6        S11        2      2           7      1        7       true             true                                    complete                                            
 # 25  11  55   45   9  36   S11        S10   2xS9         S11        2      2           8      1        11      true             true                                    complete                                            
-# 26  11  165  45   3  9    S11        S10   S3xS8        S11        2      2           8      1        7       true             true             27                     complete                                            
-# 27  11  165  120  8  84   S11        S10   S3xS8        S11        2      2           8      1        7       true             true             26                     complete                                            
-# 28  11  330  120  4  36   S11        S10   S4xS7        S11        2      2           8      1        2       true             true             29                     complete                                            
-# 29  11  330  210  7  126  S11        S10   S4xS7        S11        2      2           8      1        2       true             true             28                     complete                                            
-# 30  11  462  210  5  84   S11        S10   S5xS6        S11        2      2           8      1        1       true             true             31                     complete                                            
-# 31  11  462  252  6  126  S11        S10   S5xS6        S11        2      2           8      1        1       true             true             30                     complete                                            
+# 26  11  165  45   3  9    S11        S10   S3xS8        S11        2      2           8      1        12      true             true             27                     complete                                            
+# 27  11  165  120  8  84   S11        S10   S3xS8        S11        2      2           8      1        12      true             true             26                     complete                                            
+# 28  11  330  120  4  36   S11        S10   S4xS7        S11        2      2           8      1        13      true             true             29                     complete                                            
+# 29  11  330  210  7  126  S11        S10   S4xS7        S11        2      2           8      1        13      true             true             28                     complete                                            
+# 30  11  462  210  5  84   S11        S10   S5xS6        S11        2      2           8      1        14      true             true             31                     complete                                            
+# 31  11  462  252  6  126  S11        S10   S5xS6        S11        2      2           8      1        14      true             true             30                     complete                                            
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
@@ -393,11 +395,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            M11          S11          
+# Structure                            S11          S11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A6.2         S10          
-# Block-stabiliser                     GL(2,3)      S8xS3        
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S3xS8        S3xS8        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  3^{1}8^{1}   3^{1}8^{1}   
 # Point-transitive                     true         true         
@@ -412,29 +414,29 @@
 # ---------------------------------------------------------------
 
 # Design: 14
-# -------------------------------------------------------------------
+# ---------------------------------------------------------------
 # Parameter set: [ 11, 330, 120, 4, 36 ]
 # Complement:    [ 11, 330, 210, 7, 126 ]
-# -------------------------------------------------------------------
-#                                      G                Aut(D)       
-# -------------------------------------------------------------------
-# Structure                            M11              S11          
-# Rank                                 2                2            
-# 2-Homogeneous                        true             true         
-# Point-stabiliser                     A6.2             S10          
-# Block-stabiliser                     S4               S7xS4        
-# Orbit structure of point-stabiliser  1^{1}10^{1}      1^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{1}4^{1}6^{1}  4^{1}7^{1}   
-# Point-transitive                     true             true         
-# Block-transitive                     true             true         
-# Flag-transitive                      true             true         
-# Anti-flag-transitive                 false            true         
-# Flag-regular                         false            false        
-# Point-primitive                      true             true         
-# Point-primitive type                 2                2            
-# Block-primitive                      false            true         
-# Block-primitive type                 0                2            
-# -------------------------------------------------------------------
+# ---------------------------------------------------------------
+#                                      G            Aut(D)       
+# ---------------------------------------------------------------
+# Structure                            S11          S11          
+# Rank                                 2            2            
+# 2-Homogeneous                        true         true         
+# Point-stabiliser                     S10          S10          
+# Block-stabiliser                     S4xS7        S4xS7        
+# Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
+# Orbit structure of block-stabiliser  4^{1}7^{1}   4^{1}7^{1}   
+# Point-transitive                     true         true         
+# Block-transitive                     true         true         
+# Flag-transitive                      true         true         
+# Anti-flag-transitive                 true         true         
+# Flag-regular                         false        false        
+# Point-primitive                      true         true         
+# Point-primitive type                 2            2            
+# Block-primitive                      true         true         
+# Block-primitive type                 2            2            
+# ---------------------------------------------------------------
 
 # Design: 15
 # ---------------------------------------------------------------
@@ -541,9 +543,9 @@
 
 lD_11 :=  [
  rec( parameters:= [ 11, 11, 5, 5, 2 ],
-  autGroup := Group( [ ( 1,10, 4, 8, 9)( 3, 5,11, 7, 6), ( 1,10, 3)( 2, 9, 7)( 4, 5, 8) ] ),
+  autGroup := Group( [ ( 1, 3,10, 7, 2)( 4, 8,11, 5, 6), ( 1,11, 4)( 3, 5, 9)( 6, 8,10) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 3, 7, 8, 9, 11 ],
+  baseBlock := [ 2, 6, 7, 8, 10 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -554,9 +556,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 11, 6, 6, 3 ],
-  autGroup := Group( [ ( 1, 6,10)( 2, 4, 5)( 7, 8, 9), ( 1,10, 8, 9, 4)( 2,11, 6, 7, 3) ] ),
+  autGroup := Group( [ ( 1, 9, 7, 8, 6,11,10, 5, 3, 2, 4), ( 1, 3,10, 7, 2)( 4, 8,11, 5, 6) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 4, 5, 6, 10 ],
+  baseBlock := [ 1, 3, 4, 5, 9, 11 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -567,7 +569,7 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 22, 10, 5, 4 ],
-  autGroup := Group( [ ( 2, 3, 5, 9, 6,11,10, 8, 4, 7), ( 1, 2)( 3,11)( 4,10)( 5, 9)( 6, 8) ] ),
+  autGroup := Group( [ ( 1, 8, 9, 6, 4,10, 3, 2, 5, 7), ( 1, 2, 5, 3, 8)( 4,11,10, 7, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 2, 4, 8, 5,10, 9, 7, 3, 6) ] ),
   baseBlock := [ 2, 4, 5, 6, 10 ],
   blockSizes := [ 5 ],
@@ -580,9 +582,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 55, 15, 3, 3 ],
-  autGroup := Group( [ ( 1, 6, 2, 5, 7, 8)( 3, 9,10)( 4,11), ( 1, 7,10, 9, 3)( 4, 8,11, 6, 5) ] ),
+  autGroup := Group( [ ( 1, 2, 7)( 3,10, 9)( 5, 8, 6), ( 1, 5, 7, 9, 6)( 2,10, 8, 4,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 1, 9, 11 ],
+  baseBlock := [ 2, 3, 10 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -593,9 +595,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 55, 20, 4, 6 ],
-  autGroup := Group( [ ( 1, 6)( 2, 8)( 3,10)( 5, 7), ( 1, 8, 6, 3, 5,11)( 2, 4,10)( 7, 9) ] ),
+  autGroup := Group( [ ( 1, 8, 2)( 4,10, 7)( 6,11, 9), ( 1,11)( 2, 3, 7, 6, 4,10)( 5, 8, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 3, 7, 8, 11 ],
+  baseBlock := [ 2, 6, 8, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -606,9 +608,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 55, 30, 6, 15 ],
-  autGroup := Group( [ ( 2, 7, 4)( 3, 6,10)( 5, 9, 8), ( 1, 6,10, 8, 4, 5, 3, 2, 9,11, 7) ] ),
+  autGroup := Group( [ ( 1, 4, 9)( 2, 6, 7)( 3, 5,11), ( 1, 6, 5, 8, 2,10, 9, 4, 3, 7,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 2, 3, 4, 5, 6, 8 ],
+  baseBlock := [ 1, 4, 7, 8, 9, 11 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -632,9 +634,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 66, 30, 5, 12 ],
-  autGroup := Group( [ ( 1, 4, 6, 7, 9,10, 8, 3, 5, 2,11), ( 1,11, 8)( 2, 3, 7)( 4, 6,10) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 2, 3, 4, 6, 9 ],
+  autGroup := Group( [ ( 1, 3,10, 6, 7, 5)( 2, 4, 8)( 9,11), ( 1, 6, 9, 3)( 2, 7, 5,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 1, 3, 7, 8, 10 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -645,9 +647,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 66, 30, 5, 12 ],
-  autGroup := Group( [ ( 1, 2, 8,10, 9,11, 3, 6, 4, 5, 7), ( 1, 4, 7)( 3, 6, 8)( 5, 9,10) ] ),
+  autGroup := Group( [ ( 2, 6, 8,11, 9)( 3,10, 4, 7, 5), ( 1, 6, 4,10,11, 8)( 2, 7)( 3, 5, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 5, 6, 10 ],
+  baseBlock := [ 1, 3, 5, 9, 11 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -658,9 +660,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 66, 36, 6, 18 ],
-  autGroup := Group( [ ( 1, 2, 3, 7, 8,10, 6, 4)( 5,11), ( 1,11, 4,10, 2, 5, 6, 8, 3, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 1, 5, 7, 8, 10, 11 ],
+  autGroup := Group( [ ( 1, 7,10, 4)( 2, 9, 8, 5), ( 1,10)( 3, 7, 6, 8, 4, 5, 9,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 2, 4, 5, 6, 9, 11 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -671,9 +673,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 110, 30, 3, 6 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 5, 9, 4, 7, 6)( 8,11), ( 1, 6, 7)( 2,11,10)( 3, 8, 4) ] ),
+  autGroup := Group( [ ( 1, 4)( 2, 9, 7,10,11, 8)( 3, 6, 5), ( 1, 8)( 3, 5)( 4,10)( 6,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 2, 5, 10 ],
+  baseBlock := [ 1, 7, 9 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -698,8 +700,8 @@ lD_11 :=  [
   v:= 11),
  rec( parameters:= [ 11, 165, 120, 8, 84 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 2, 3, 5, 6, 7, 9, 10, 11 ],
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
@@ -711,8 +713,8 @@ lD_11 :=  [
   v:= 11),
  rec( parameters:= [ 11, 330, 120, 4, 36 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 2, 3, 8, 11 ],
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
+  baseBlock := [ 8, 9, 10, 11 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -736,9 +738,9 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 396, 180, 5, 72 ],
-  autGroup := Group( [ ( 1, 6,11, 8, 9)( 3, 4, 7,10, 5), ( 1,11,10, 6, 7, 4, 3, 5)( 2, 9) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 1, 2, 3, 4, 11 ],
+  autGroup := Group( [ ( 1, 2, 7, 3,10, 8, 9, 5, 4, 6,11), ( 1, 3)( 2, 5,10, 4, 6,11, 8, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 2, 4, 5, 6, 9 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -782,7 +784,7 @@ for D in lD_11 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_11_all :=  [
  rec( parameters:= [ 11, 11, 5, 5, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 8, 5)( 4, 9,11, 6, 7), ( 1, 9, 3,10, 8,11)( 2, 5)( 4, 7, 6) ] ),
+  autGroup := Group( [ ( 1, 9,11, 6, 7, 3)( 2, 4)( 5, 8,10), ( 1,11, 7, 4, 2)( 5, 6, 8,10, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 3, 9, 5, 4)( 2, 6, 7,10, 8) ] ),
   baseBlock := [ 3, 7, 8, 9, 11 ],
   blockSizes := [ 5 ],
@@ -795,7 +797,7 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 11, 5, 5, 2 ],
-  autGroup := Group( [ ( 2, 8, 9, 7, 5)( 3,10,11, 6, 4), ( 1, 9, 7)( 2, 4)( 3, 5, 8, 6,11,10) ] ),
+  autGroup := Group( [ ( 1, 3, 4, 2, 5, 8,10, 9,11, 6, 7), ( 1,10)( 3, 7)( 4, 9)( 5,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 3, 9, 5, 4)( 2, 6, 7,10, 8) ] ),
   baseBlock := [ 2, 4, 5, 6, 10 ],
   blockSizes := [ 5 ],
@@ -808,7 +810,7 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 22, 10, 5, 4 ],
-  autGroup := Group( [ ( 2, 3, 5, 9, 6,11,10, 8, 4, 7), ( 1, 2)( 3,11)( 4,10)( 5, 9)( 6, 8) ] ),
+  autGroup := Group( [ ( 1, 8, 9, 6, 4,10, 3, 2, 5, 7), ( 1, 2, 5, 3, 8)( 4,11,10, 7, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 2, 4, 8, 5,10, 9, 7, 3, 6) ] ),
   baseBlock := [ 2, 4, 5, 6, 10 ],
   blockSizes := [ 5 ],
@@ -821,9 +823,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 11, 5, 5, 2 ],
-  autGroup := Group( [ ( 1,10, 4, 8, 9)( 3, 5,11, 7, 6), ( 1,10, 3)( 2, 9, 7)( 4, 5, 8) ] ),
+  autGroup := Group( [ ( 1, 3,10, 7, 2)( 4, 8,11, 5, 6), ( 1,11, 4)( 3, 5, 9)( 6, 8,10) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 3, 7, 8, 9, 11 ],
+  baseBlock := [ 2, 6, 7, 8, 10 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -834,9 +836,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 11, 6, 6, 3 ],
-  autGroup := Group( [ ( 1, 6,10)( 2, 4, 5)( 7, 8, 9), ( 1,10, 8, 9, 4)( 2,11, 6, 7, 3) ] ),
+  autGroup := Group( [ ( 1, 9, 7, 8, 6,11,10, 5, 3, 2, 4), ( 1, 3,10, 7, 2)( 4, 8,11, 5, 6) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 4, 5, 6, 10 ],
+  baseBlock := [ 1, 3, 4, 5, 9, 11 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -847,9 +849,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 55, 15, 3, 3 ],
-  autGroup := Group( [ ( 1, 6, 2, 5, 7, 8)( 3, 9,10)( 4,11), ( 1, 7,10, 9, 3)( 4, 8,11, 6, 5) ] ),
+  autGroup := Group( [ ( 1, 2, 7)( 3,10, 9)( 5, 8, 6), ( 1, 5, 7, 9, 6)( 2,10, 8, 4,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 1, 9, 11 ],
+  baseBlock := [ 2, 3, 10 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -860,9 +862,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 55, 20, 4, 6 ],
-  autGroup := Group( [ ( 1, 6)( 2, 8)( 3,10)( 5, 7), ( 1, 8, 6, 3, 5,11)( 2, 4,10)( 7, 9) ] ),
+  autGroup := Group( [ ( 1, 8, 2)( 4,10, 7)( 6,11, 9), ( 1,11)( 2, 3, 7, 6, 4,10)( 5, 8, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 3, 7, 8, 11 ],
+  baseBlock := [ 2, 6, 8, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -873,9 +875,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 55, 30, 6, 15 ],
-  autGroup := Group( [ ( 2, 7, 4)( 3, 6,10)( 5, 9, 8), ( 1, 6,10, 8, 4, 5, 3, 2, 9,11, 7) ] ),
+  autGroup := Group( [ ( 1, 4, 9)( 2, 6, 7)( 3, 5,11), ( 1, 6, 5, 8, 2,10, 9, 4, 3, 7,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 2, 3, 4, 5, 6, 8 ],
+  baseBlock := [ 1, 4, 7, 8, 9, 11 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -886,9 +888,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 110, 30, 3, 6 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 5, 9, 4, 7, 6)( 8,11), ( 1, 6, 7)( 2,11,10)( 3, 8, 4) ] ),
+  autGroup := Group( [ ( 1, 4)( 2, 9, 7,10,11, 8)( 3, 6, 5), ( 1, 8)( 3, 5)( 4,10)( 6,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 2, 5, 10 ],
+  baseBlock := [ 1, 7, 9 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -899,9 +901,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 66, 30, 5, 12 ],
-  autGroup := Group( [ ( 1, 2, 8,10, 9,11, 3, 6, 4, 5, 7), ( 1, 4, 7)( 3, 6, 8)( 5, 9,10) ] ),
+  autGroup := Group( [ ( 2, 6, 8,11, 9)( 3,10, 4, 7, 5), ( 1, 6, 4,10,11, 8)( 2, 7)( 3, 5, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2,10)( 3, 4)( 5, 9)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 5, 6, 10 ],
+  baseBlock := [ 1, 3, 5, 9, 11 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -913,8 +915,8 @@ lD_11_all :=  [
   v:= 11),
  rec( parameters:= [ 11, 55, 45, 9, 36 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 2, 3, 4, 5, 6, 7, 9, 10, 11 ],
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 1, 2, 3, 4, 5, 7, 8, 10, 11 ],
   blockSizes := [ 9 ],
   isBinary := true,
   isBlockDesign := true,
@@ -925,9 +927,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 66, 30, 5, 12 ],
-  autGroup := Group( [ ( 1, 4, 6, 7, 9,10, 8, 3, 5, 2,11), ( 1,11, 8)( 2, 3, 7)( 4, 6,10) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 2, 3, 4, 6, 9 ],
+  autGroup := Group( [ ( 1, 3,10, 6, 7, 5)( 2, 4, 8)( 9,11), ( 1, 6, 9, 3)( 2, 7, 5,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 1, 3, 7, 8, 10 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -938,9 +940,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 66, 36, 6, 18 ],
-  autGroup := Group( [ ( 1, 2, 3, 7, 8,10, 6, 4)( 5,11), ( 1,11, 4,10, 2, 5, 6, 8, 3, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 1, 5, 7, 8, 10, 11 ],
+  autGroup := Group( [ ( 1, 7,10, 4)( 2, 9, 8, 5), ( 1,10)( 3, 7, 6, 8, 4, 5, 9,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 2, 4, 5, 6, 9, 11 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -952,8 +954,8 @@ lD_11_all :=  [
   v:= 11),
  rec( parameters:= [ 11, 165, 45, 3, 9 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 1, 4, 8 ],
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 6, 7, 9 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -965,8 +967,8 @@ lD_11_all :=  [
   v:= 11),
  rec( parameters:= [ 11, 165, 120, 8, 84 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 2, 3, 5, 6, 7, 9, 10, 11 ],
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 1, 2, 3, 4, 5, 8, 10, 11 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
@@ -978,8 +980,8 @@ lD_11_all :=  [
   v:= 11),
  rec( parameters:= [ 11, 330, 120, 4, 36 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 2, 3, 8, 11 ],
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 1, 3, 8, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -990,9 +992,9 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 396, 180, 5, 72 ],
-  autGroup := Group( [ ( 1, 6,11, 8, 9)( 3, 4, 7,10, 5), ( 1,11,10, 6, 7, 4, 3, 5)( 2, 9) ] ),
-  autSubgroup := Group( [ ( 1, 3)( 2, 6,10, 7,11, 8, 5, 4), ( 1, 7, 6, 9)( 2,11, 4, 3) ] ),
-  baseBlock := [ 1, 2, 3, 4, 11 ],
+  autGroup := Group( [ ( 1, 2, 7, 3,10, 8, 9, 5, 4, 6,11), ( 1, 3)( 2, 5,10, 4, 6,11, 8, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 5,10, 9, 3, 8, 4, 6, 7,11), ( 1, 8, 5,11, 2, 9, 7,10, 6, 4, 3) ] ),
+  baseBlock := [ 2, 4, 5, 6, 9 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,

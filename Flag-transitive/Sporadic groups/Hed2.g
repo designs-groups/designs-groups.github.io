@@ -1,8 +1,8 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Group (autSubgroup): Hed2
+# Group (autSubgroup): He:2
 # ####################################################################################################
-# Remark: there exists no 2-design admitting Hed2 as its flag-transitive automorphism group
+# Remark: there exists no 2-design admitting He:2 as its flag-transitive automorphism group
 
 # 1. number of designs: 
 # ---------------------

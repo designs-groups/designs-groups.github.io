@@ -2,7 +2,8 @@
 # Flag-transitive 2-designs 
 # Tranitive groups on 2 points 
 # ####################################################################################################
-# Remark: all designs 
+# Remark:       there exists no 2-design admitting flag-transitive automorphism group on 2 points
+# References:    
 
 # 1. number of non-isomorphic designs: 
 # ------------------------------------
