@@ -2,7 +2,8 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): U3(5)
 # ####################################################################################################
-# Remark: all designs 
+# Remark:       all designs
+#               lD_U35 is the list of the designs 
 
 # 1. Number of designs: 
 # ---------------------

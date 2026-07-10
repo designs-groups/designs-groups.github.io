@@ -2,7 +2,8 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): S4(4) = O5(4)
 # ####################################################################################################
-# Remark: all designs 
+# Remark:       all designs
+#               lD_S44 is the list of the designs 
 
 # 1. Number of designs: 
 # ---------------------

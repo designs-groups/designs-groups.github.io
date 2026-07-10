@@ -2,7 +2,8 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): U3(4).4
 # #####################################################################################################
-# Remark: all designs 
+# Remark:       all designs
+#               lD_U34d4 is the list of the designs  
 
 # ----------------------------------------------------------------------------------------------------
 # Flag-transitive 2-designs 
