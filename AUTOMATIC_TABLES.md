@@ -206,9 +206,18 @@ Transitive-group tables continue to be sorted numerically by `v`.
 
 ## Visit counter
 
-All pages display the shared site-wide Visits counter directly below the
-Updated line in the normal footer text flow. It is not placed in a separate
-right-side footer box.
+Every page shows the shared visit count as plain text directly below the
+Updated line:
+
+```text
+Updated: 11 July 2026
+Visits: 1234
+```
+
+The displayed count has no badge, border, background, or box. Page views and
+data-access clicks are still counted. The GitHub Pages workflow refreshes the
+plain-text total during each build, and the browser also attempts a live
+plain-text refresh when the counter API is accessible.
 
 ## Data-access counting
 

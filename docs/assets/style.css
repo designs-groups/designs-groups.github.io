@@ -971,15 +971,26 @@ h2 {
   display: inline;
 }
 
-.footer-visits-line a {
-  display: inline-flex;
-  align-items: center;
-  margin: 0;
+
+
+/* Plain-text visit count: no badge, border, background, or box. */
+.footer-visits-line {
+  display: block;
+  margin-top: 2px;
+  width: auto;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
 }
 
-.footer-visits-line img {
-  display: block;
-  height: 20px;
-  width: auto;
+.footer-visits-number {
+  display: inline;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
   margin: 0;
+  color: inherit;
+  font: inherit;
 }

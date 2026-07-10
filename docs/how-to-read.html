@@ -16,6 +16,46 @@
 
 <script>
 
+
+function recordPageVisit() {
+  const tracker = document.createElement("img");
+  tracker.alt = "";
+  tracker.setAttribute("aria-hidden", "true");
+  tracker.style.display = "none";
+  tracker.onload = tracker.onerror = () => tracker.remove();
+  tracker.src =
+    "https://hits.sh/designs-groups.github.io.svg" +
+    "?page_view=" + Date.now() + "-" + Math.random();
+  document.body.appendChild(tracker);
+}
+
+async function refreshVisitCount() {
+  const targets = document.querySelectorAll(".footer-visits-number");
+  if (!targets.length) return;
+
+  try {
+    const response = await fetch(
+      "https://hits.sh/api/urns/designs-groups.github.io",
+      { cache: "no-store" }
+    );
+    if (!response.ok) return;
+
+    const data = await response.json();
+    if (typeof data.total !== "number") return;
+
+    for (const target of targets) {
+      target.textContent = String(data.total);
+    }
+  } catch (error) {
+    // Keep the build-time value when live refresh is unavailable.
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  recordPageVisit();
+  refreshVisitCount();
+});
+
 function recordDataAccess() {
   const tracker = document.createElement("img");
   tracker.alt = "";
@@ -285,13 +325,7 @@ false</code></pre>
       <strong>Designs and Groups</strong> — constructions and classifications<br>
     Seyed Hassan Alavi and Ashraf Daneshkhah<br>
     Updated: 10 July 2026
-      <div class="footer-visits-line">
-        <span class="footer-visits-label">Visits:</span>
-        <a href="https://hits.sh/designs-groups.github.io/" target="_blank" rel="noopener noreferrer"
-           aria-label="View visit statistics">
-          <img src="https://hits.sh/designs-groups.github.io.svg?label=Visits&amp;color=1f5f99&amp;labelColor=17365d" alt="Site visits">
-        </a>
-      </div>
+      <div class="footer-visits-line">Visits: <span class="footer-visits-number">…</span></div>
     </div>
   </div>
 </footer>
