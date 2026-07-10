@@ -880,10 +880,6 @@ h2 {
 
 
 /* Separate Software and Packages from Licence with a larger white gap */
-.sidebar-license {
-  margin-top: 0;
-}
-
 .sidebar-package a,
 .sidebar-license a {
   background: var(--navy);
@@ -898,4 +894,12 @@ h2 {
 
 
 /* Keep Licence spacing consistent with other sidebar items. */
-.sidebar-license { margin-top: 0; }
+
+/* Equal vertical spacing for dark sidebar navigation boxes. */
+.sidebar-how,
+.sidebar-package,
+.sidebar-license {
+  margin-top: 10px;
+  padding-top: 0;
+  border-top: none;
+}

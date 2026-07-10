@@ -156,3 +156,10 @@ continue to use `G` in the first column and natural alphabetical ordering.
 The Comments column is generated from the remarks section in each `.g` file.
 Both `Remark:` and `Remarks:` are accepted. If the heading is followed by
 multiple lines, only the first non-empty remark line is placed in the table.
+
+
+## Flag-transitive column
+
+For every table in the Flag-transitive database, the `Flag-transitive` column
+is set automatically equal to the `Total` number of designs. This is enforced
+by the table builder for every future rebuild.

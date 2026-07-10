@@ -250,7 +250,11 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
         point_imprimitive=point_imprim[2] if point_imprim else "—",
         block_primitive=block_prim[2] if block_prim else "—",
         block_imprimitive=block_imprim[2] if block_imprim else "—",
-        flag_transitive=flag_trans[2] if flag_trans else "—",
+        flag_transitive=(
+            total
+            if source_path.startswith("Flag-transitive/")
+            else (flag_trans[2] if flag_trans else "—")
+        ),
         anti_flag_transitive=anti_flag,
         comment=comment,
         refkeys=parse_reference_keys(lines),
