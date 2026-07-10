@@ -294,7 +294,7 @@
 # 4. Designs: 
 # -----------
 
-lD_L33_L33 := [ 
+lD_L33 := [ 
  rec(
   autGroup := Group( [ ( 1, 2)( 5, 7)( 8, 9)(11,12), ( 2, 3)( 5, 6)( 9,10)(12,13), ( 2,10, 6)( 4,11, 8)( 7,13,12), ( 3, 8)( 4, 5)( 9,11)(12,13), ( 3, 9, 5)( 4,11, 8)( 7,12,13), 
       ( 4,11)( 5, 9)( 6,10)(12,13), ( 4,12)( 6,10)( 7, 8)(11,13) ] ),
@@ -459,4 +459,4 @@ lD_L33_L33 := [
       t := 2 ),
   v := 144 )
 ]; 
-for D in lD_L33_L33 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+for D in lD_L33 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
