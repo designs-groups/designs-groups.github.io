@@ -17,6 +17,7 @@ CONFIG_PATH = ROOT / "data" / "table_sources.json"
 class RowData:
     source_path: str
     group_label: str
+    v: str
     list_name: str
     total: str
     symmetric: str
@@ -53,6 +54,43 @@ def parse_group_label(lines: list[str], filename_stem: str) -> str:
         if m:
             return m.group(1).split("=", 1)[0].strip()
     return filename_stem
+
+
+def is_transitive_source(source_path: str) -> bool:
+    return (
+        source_path.startswith("Flag-transitive/Transitive groups/")
+        or source_path.startswith("Block-transitive/Transitive groups/")
+    )
+
+
+def parse_v(lines: list[str], text: str, filename_stem: str) -> str:
+    """Read the number of points v for Transitive groups table rows."""
+
+    patterns = [
+        r"^v\s*(?::=|=|:)\s*(\d+)\s*;?\s*$",
+        r"^(?:Number of points|Number of Points|Points|Degree)\s*:\s*(\d+)\s*$",
+        r"^Design parameter(?:s)?\s*:\s*\[\s*(\d+)\s*,",
+        r"^Parameters?\s*:\s*\[\s*(\d+)\s*,",
+    ]
+
+    for line in lines:
+        stripped = line.strip()
+        for pattern in patterns:
+            m = re.match(pattern, stripped, re.I)
+            if m:
+                return m.group(1)
+
+    # Also accept a GAP assignment in the file body.
+    m = re.search(r"(?m)^\s*v\s*:=\s*(\d+)\s*;", text)
+    if m:
+        return m.group(1)
+
+    # Fallback for files named by degree, e.g. 15.g or v15.g.
+    m = re.fullmatch(r"(?:v)?(\d+)", filename_stem, re.I)
+    if m:
+        return m.group(1)
+
+    return "—"
 
 
 def parse_list_name(lines: list[str], text: str) -> str:
@@ -132,6 +170,14 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
     if total_row is None:
         raise RuntimeError(f"Could not parse Total row from {source_path}")
 
+    parsed_v = parse_v(lines, text, path.stem)
+    if is_transitive_source(source_path) and parsed_v == "—":
+        raise RuntimeError(
+            f"Could not determine v for Transitive groups data file: {source_path}. "
+            "Add a header such as '# v: 15', a GAP assignment 'v := 15;', "
+            "or use a numeric filename such as '15.g'."
+        )
+
     symmetric, nonsymmetric, total = total_row
 
     anti_lines = [
@@ -162,6 +208,7 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
     return RowData(
         source_path=source_path,
         group_label=parse_group_label(lines, path.stem),
+        v=parsed_v,
         list_name=parse_list_name(lines, text),
         total=total,
         symmetric=symmetric,
@@ -242,7 +289,13 @@ def page_for_source(source_path, folder_pages, overrides):
 
 
 def row_sort_key(row: RowData):
-    tokens = re.findall(r"\d+|[A-Za-z]+|[^A-Za-z0-9]+", row.group_label)
+    if is_transitive_source(row.source_path):
+        return (0, int(row.v), row.list_name.casefold())
+
+    tokens = re.findall(
+        r"\d+|[A-Za-z]+|[^A-Za-z0-9]+",
+        row.group_label,
+    )
 
     key = []
     for token in tokens:
@@ -253,14 +306,20 @@ def row_sort_key(row: RowData):
         else:
             key.append((2, token))
 
-    return tuple(key)
+    return (1, tuple(key))
 
 
 
 def build_row(row, repository, branch):
     url = raw_url(repository, branch, row.source_path)
     filename = Path(row.source_path).name
-    label = math_label(row.group_label)
+
+    if is_transitive_source(row.source_path):
+        label = html.escape(row.v)
+        aria_label = f"Open data file for v = {row.v}"
+    else:
+        label = math_label(row.group_label)
+        aria_label = f"Open data file for {row.group_label}"
 
     cells = [
         row.total,
@@ -286,7 +345,7 @@ def build_row(row, repository, branch):
 
     return f'''<tr class="linked-row" tabindex="0"
     data-source-path="{source_attr}"
-    aria-label="Open data file for {label}"
+    aria-label="{html.escape(aria_label, quote=True)}"
     onclick="window.location.href='{url_attr}'"
     onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();window.location.href='{url_attr}';}}">
   <th><a href="{url_attr}" onclick="event.stopPropagation();">{label}</a></th>

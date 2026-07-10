@@ -128,3 +128,22 @@ On every build, before table generation:
 
 These transformations occur in the GitHub Actions build workspace. They are used
 for the deployed website but are not committed back to the repository.
+
+
+## Transitive groups tables
+
+The Flag-transitive and Block-transitive `Transitive groups` tables use `v`
+(number of points) in the first column instead of the group name `G`.
+
+For those files, the builder reads `v` from common forms such as:
+
+```text
+# v: 15
+v := 15;
+# Number of points: 15
+# Degree: 15
+```
+
+A numeric filename such as `15.g` or `v15.g` is also accepted as a fallback.
+Rows in these two tables are sorted numerically by `v`. Other database tables
+continue to use `G` in the first column and natural alphabetical ordering.
