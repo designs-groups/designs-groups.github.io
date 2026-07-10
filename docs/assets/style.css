@@ -951,3 +951,38 @@ h2 {
     margin-left: 0;
   }
 }
+
+
+/* Full-cell native links for database rows.
+   Headings are unaffected. */
+.database-table tbody th,
+.database-table tbody td:not(.references) {
+  padding: 0;
+}
+
+.database-table tbody .row-cell-link {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  padding: 7px 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.database-table tbody .row-cell-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.database-table tbody td.file-actions {
+  padding: 0;
+}
+
+.database-table tbody td.file-actions .file-download-button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  text-decoration: none;
+}

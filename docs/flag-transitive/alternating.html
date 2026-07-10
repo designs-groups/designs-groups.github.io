@@ -15,6 +15,20 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
 <script>
+
+function recordDataAccess() {
+  const tracker = document.createElement("img");
+  tracker.alt = "";
+  tracker.setAttribute("aria-hidden", "true");
+  tracker.style.display = "none";
+  tracker.onload = tracker.onerror = () => tracker.remove();
+  tracker.src =
+    "https://hits.sh/designs-groups.github.io.svg" +
+    "?label=Visits&color=1f5f99&labelColor=17365d" +
+    "&data_access=" + Date.now() + "-" + Math.random();
+  document.body.appendChild(tracker);
+}
+
 async function downloadRawFile(url, filename) {
   try {
     const response = await fetch(url);
@@ -109,16 +123,16 @@ async function downloadRawFile(url, filename) {
           
 <tr class="linked-row" tabindex="0"
     aria-label="Open data file for \(A_5\)"
-    onclick="window.open(\'https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g\', \'_blank\', \'noopener\')"
-    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();window.open('https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g', '_blank', 'noopener');}">
-  <th><a href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">\(A_5\)</a></th>
-  <td class="list-name"><code>lD_A5</code></td>
-  <td>2</td><td>0</td><td>2</td><td>2</td><td>0</td><td>2</td><td>0</td><td>2</td><td>2</td>
+    onclick="recordDataAccess(); window.open(\'https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g\', \'_blank\', \'noopener\')"
+    onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();recordDataAccess();window.open('https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g', '_blank', 'noopener');}">
+  <th><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">\(A_5\)</a></th>
+  <td class="list-name"><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();"><code>lD_A5</code></a></td>
+  <td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">2</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">0</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">2</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">2</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">0</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">2</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">0</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">2</a></td><td><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">2</a></td>
   <td class="file-actions">
-    <button class="download file-download-button" onclick="event.stopPropagation(); downloadRawFile('https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g', 'A5.g');">Download .g</button>
+    <a class="download file-download-button" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.preventDefault(); event.stopPropagation(); recordDataAccess(); downloadRawFile('https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g', 'A5.g');">Download .g</a>
   </td>
-  <td class="comments">All designs</td>
-  <td class="references" data-refkeys="">—</td>
+  <td class="comments"><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">All designs</a></td>
+  <td class="references" data-refkeys="" data-url="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g"><a class="row-cell-link" href="https://raw.githubusercontent.com/designs-groups/designs-groups.github.io/main/Flag-transitive/Alternating%20groups/A5.g" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">—</a></td>
 </tr>
 
         </tbody>

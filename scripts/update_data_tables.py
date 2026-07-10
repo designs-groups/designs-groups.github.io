@@ -407,30 +407,36 @@ def build_row(row, repository, branch):
         row.anti_flag_transitive,
     ]
 
+    url_attr = html.escape(url, quote=True)
     numeric_cells = "".join(
-        f"<td>{html.escape(value)}</td>" for value in cells
+        (
+            f'<td><a class="row-cell-link" href="{url_attr}" '
+            f'target="_blank" rel="noopener noreferrer" '
+            f'onclick="event.stopPropagation(); recordDataAccess();">'
+            f'{html.escape(value)}</a></td>'
+        )
+        for value in cells
     )
     comment = html.escape(row.comment)
     list_name = html.escape(row.list_name)
     source_attr = html.escape(row.source_path, quote=True)
     ref_attr = html.escape(row.refkeys, quote=True)
-    url_attr = html.escape(url, quote=True)
     filename_attr = html.escape(filename, quote=True)
 
     return f'''<tr class="linked-row" tabindex="0"
     data-source-path="{source_attr}"
     aria-label="{html.escape(aria_label, quote=True)}"
-    onclick="window.open('{url_attr}', '_blank', 'noopener')"
-    onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();window.open('{url_attr}', '_blank', 'noopener');}}">
-  <th><a href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{label}</a></th>
-  <td class="list-name"><code>{list_name}</code></td>
+    onclick="recordDataAccess(); window.open('{url_attr}', '_blank', 'noopener')"
+    onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();recordDataAccess();window.open('{url_attr}', '_blank', 'noopener');}}">
+  <th><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{label}</a></th>
+  <td class="list-name"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();"><code>{list_name}</code></a></td>
   {numeric_cells}
   <td class="file-actions">
-    <button class="download file-download-button"
-      onclick="event.stopPropagation(); downloadRawFile('{url_attr}', '{filename_attr}');">Download .g</button>
+    <a class="download file-download-button" href="{url_attr}" target="_blank" rel="noopener noreferrer"
+      onclick="event.preventDefault(); event.stopPropagation(); recordDataAccess(); downloadRawFile('{url_attr}', '{filename_attr}');">Download .g</a>
   </td>
-  <td class="comments">{comment}</td>
-  <td class="references" data-refkeys="{ref_attr}">—</td>
+  <td class="comments"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{comment}</a></td>
+  <td class="references" data-refkeys="{ref_attr}" data-url="{url_attr}"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">—</a></td>
 </tr>'''
 
 

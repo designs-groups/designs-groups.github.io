@@ -15,6 +15,20 @@
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
 <script>
+
+function recordDataAccess() {
+  const tracker = document.createElement("img");
+  tracker.alt = "";
+  tracker.setAttribute("aria-hidden", "true");
+  tracker.style.display = "none";
+  tracker.onload = tracker.onerror = () => tracker.remove();
+  tracker.src =
+    "https://hits.sh/designs-groups.github.io.svg" +
+    "?label=Visits&color=1f5f99&labelColor=17365d" +
+    "&data_access=" + Date.now() + "-" + Math.random();
+  document.body.appendChild(tracker);
+}
+
 async function downloadRawFile(url, filename) {
   try {
     const response = await fetch(url);

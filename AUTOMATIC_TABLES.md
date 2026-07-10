@@ -208,3 +208,29 @@ Transitive-group tables continue to be sorted numerically by `v`.
 
 All pages display one shared site-wide visit counter on the right side of the
 footer. The same counter key is used across all pages.
+
+
+## Data-access counting
+
+The site-wide Visits counter also receives a hit whenever a user accesses a
+data file through any of these routes:
+
+- clicking anywhere on a database row;
+- clicking the direct group or `v` link in the first column;
+- clicking the Download `.g` button;
+- activating a row from the keyboard.
+
+These access events use the same site-wide counter as ordinary page loads.
+
+
+## Native right-click menu on database tables
+
+The body cells of every database row use genuine HTML links. Right-clicking
+inside a data cell therefore opens the browser's native link context menu,
+with options such as Open Link in New Tab, Open Link in New Window, and Copy
+Link. Table headings are not links.
+
+The Download `.g` control is also a genuine link, while its normal left-click
+behavior still downloads the file. Empty References cells link to the raw data
+file; populated References cells keep their bibliography links and open them
+in a new tab.

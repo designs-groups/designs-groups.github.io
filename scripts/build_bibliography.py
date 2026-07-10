@@ -328,7 +328,8 @@ def write_reference_map(sorted_keys: list[str]) -> dict[str, int]:
 
 def update_table_reference_cells(mapping: dict[str, int]) -> None:
     pattern = re.compile(
-        r'<td class="references" data-refkeys="([^"]*)">.*?</td>',
+        r'<td class="references" data-refkeys="([^"]*)" '
+        r'data-url="([^"]*)">.*?</td>',
         flags=re.S,
     )
 
@@ -341,6 +342,7 @@ def update_table_reference_cells(mapping: dict[str, int]) -> None:
 
         def repl(match: re.Match[str]) -> str:
             raw_keys = match.group(1)
+            data_url = match.group(2)
             keys = [
                 item.strip()
                 for item in raw_keys.split(",")
@@ -350,7 +352,12 @@ def update_table_reference_cells(mapping: dict[str, int]) -> None:
             if not keys:
                 return (
                     f'<td class="references" '
-                    f'data-refkeys="{html.escape(raw_keys,quote=True)}">—</td>'
+                    f'data-refkeys="{html.escape(raw_keys,quote=True)}" '
+                    f'data-url="{html.escape(data_url,quote=True)}">'
+                    f'<a class="row-cell-link" href="{html.escape(data_url,quote=True)}" '
+                    f'target="_blank" rel="noopener noreferrer" '
+                    f'onclick="event.stopPropagation(); recordDataAccess();">—</a>'
+                    f'</td>'
                 )
 
             links: list[str] = []
@@ -366,12 +373,15 @@ def update_table_reference_cells(mapping: dict[str, int]) -> None:
                 anchor = safe_anchor(key)
                 links.append(
                     f'<a href="{relative_bib}#ref-{anchor}" '
+                    f'target="_blank" rel="noopener noreferrer" '
+                    f'onclick="event.stopPropagation();" '
                     f'title="{html.escape(key, quote=True)}">[{number}]</a>'
                 )
 
             return (
                 f'<td class="references" '
-                f'data-refkeys="{html.escape(raw_keys,quote=True)}">'
+                f'data-refkeys="{html.escape(raw_keys,quote=True)}" '
+                f'data-url="{html.escape(data_url,quote=True)}">'
                 + ", ".join(links)
                 + "</td>"
             )
