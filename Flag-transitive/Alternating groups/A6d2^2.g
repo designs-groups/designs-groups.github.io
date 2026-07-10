@@ -2,8 +2,9 @@
 # Flag-transitive 2-designs  
 # Group (autSubgroup): A6.2^2 = PΓL2(9) = PΓO3(9) = PΣO3(9)
 # ####################################################################################################
-# Remark: all designs
-#         lD_A6V4 is the list of the designs.
+# Remark:       all designs
+#               lD_A6V4 is the list of the designs
+# References:   
 
 # 1. number of designs: 
 # ---------------------

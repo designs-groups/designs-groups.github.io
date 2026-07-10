@@ -2,8 +2,9 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A5.2 = S5 = PΓL2(4) = ΣL2(4) = PΓO3(4) = PΣO3(4) = ΣO3(4)
 # #################################################################################################### 
-# Remark: all designs
-#         lD_S5 is the list of the designs.
+# Remark:       all designs
+#               lD_S5 is the list of the designs
+# References:   
 
 # 1. Number of designs: 
 # ---------------------

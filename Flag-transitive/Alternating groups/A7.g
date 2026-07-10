@@ -2,8 +2,9 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A7
 # ####################################################################################################
-# Remark: all designs 
-#         lD_A7 is the list of the designs.
+# Remark:       all designs 
+#               lD_A7 is the list of the designs
+# References:   
 
 # 1. number of designs: 
 # ---------------------

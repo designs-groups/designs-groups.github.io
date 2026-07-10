@@ -2,8 +2,9 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A9.2 = S9
 # ####################################################################################################
-# Remark: all designs
-#         lD_S9 is the list of the designs.
+# Remark:       all designs
+#               lD_S9 is the list of the designs
+# References:   
 
 # 1. Number of designs: 
 # ---------------------

@@ -2,8 +2,9 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A8 = L4(2) = O6+(2)
 # ####################################################################################################
-# Remark: all designs 
-#         lD_A8 is the list of the designs.
+# Remark:       all designs 
+#               lD_A8 is the list of the designs
+# References:   
 
 # 1. number of designs: 
 # ---------------------
