@@ -947,22 +947,39 @@ h2 {
 }
 
 
-/* Visits appears as a normal footer line below Updated. */
+
+
+/* Footer: Visits is always directly below Updated on every page. */
 .site-footer .footer-inner {
-  display: block;
+  display: block !important;
 }
 
-.footer-visits {
-  margin-top: 4px;
+.site-footer .footer-text {
+  display: block !important;
 }
 
-.footer-visits a {
-  display: inline-block;
-  line-height: 1;
+.footer-visits-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-top: 2px;
+  width: auto;
 }
 
-.footer-visits img {
+.footer-visits-label {
+  display: inline;
+}
+
+.footer-visits-line a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+}
+
+.footer-visits-line img {
   display: block;
   height: 20px;
   width: auto;
+  margin: 0;
 }
