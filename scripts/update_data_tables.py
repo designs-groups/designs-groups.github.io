@@ -383,9 +383,9 @@ def build_row(row, repository, branch):
     return f'''<tr class="linked-row" tabindex="0"
     data-source-path="{source_attr}"
     aria-label="{html.escape(aria_label, quote=True)}"
-    onclick="window.location.href='{url_attr}'"
-    onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();window.location.href='{url_attr}';}}">
-  <th><a href="{url_attr}" onclick="event.stopPropagation();">{label}</a></th>
+    onclick="window.open('{url_attr}', '_blank', 'noopener')"
+    onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();window.open('{url_attr}', '_blank', 'noopener');}}">
+  <th><a href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">{label}</a></th>
   <td class="list-name"><code>{list_name}</code></td>
   {numeric_cells}
   <td class="file-actions">

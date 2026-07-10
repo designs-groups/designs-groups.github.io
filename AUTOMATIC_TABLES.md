@@ -171,3 +171,10 @@ Numerical property columns use `0` when no design in the corresponding data
 file has that property. An em dash is not used for design counts. This applies
 to Point-primitive, Point-imprimitive, Block-primitive, Block-imprimitive,
 Flag-transitive, and Anti-flag-transitive counts.
+
+
+## Opening data files
+
+Clicking anywhere on a database table row opens the corresponding raw `.g`
+file in a new browser tab. The direct link in the first column also opens in
+a new tab. The Download `.g` button continues to download the file.
