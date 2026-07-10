@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Database of flag-transitive and block-transitive 2-designs and their symmetries.">
+  <title>Block-transitive designs | Designs and Groups</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+async function downloadRawFile(url, filename) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Download failed");
+    const blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = objectUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(objectUrl);
+  } catch (error) {
+    window.open(url, "_blank", "noopener");
+  }
+}
+</script>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <p class="site-title">Designs and Groups</p>
+    <p class="site-subtitle">Constructions and classifications</p>
+  </div>
+</header>
+<nav class="top-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+<a href="../index.html">Home</a>
+<a href="../flag-transitive/index.html">Flag-transitive</a>
+<a href="../block-transitive/index.html" aria-current="page">Block-transitive</a>
+<a href="../how-to-read.html">How to read</a>
+<a href="../how-to-cite.html">How to cite</a>
+<a href="../software.html">Software and Packages</a>
+<a href="../bibliography.html">Bibliography</a>
+<a href="../authors.html">About authors</a>
+<a href="../contact.html">Contact us</a>
+<a href="../licence.html">Licence</a>
+  </div>
+</nav>
+<main>
+
+<div class="page-grid">
+  <article class="content-panel">
+    <div class="breadcrumbs"><a href="../index.html">Home</a> › Block-transitive designs</div>
+    <h1>Block-transitive designs</h1>
+    <p>
+      This section collects nontrivial \(2\)-designs admitting a block-transitive
+      automorphism group. The database is organised by group class, providing a
+      direct route from a family of groups to the corresponding design summaries
+      and computational data files.
+    </p>
+    <ul class="catalogue-list">
+      <li><a href="alternating.html">Alternating groups</a></li>
+<li><a href="classical.html">Classical groups</a></li>
+<li><a href="exceptional.html">Exceptional groups</a></li>
+<li><a href="sporadic.html">Sporadic groups</a></li>
+<li><a href="transitive.html">Transitive groups</a></li>
+<li><a href="primitive.html">Primitive groups</a></li>
+<li><a href="imprimitive.html">Imprimitive groups</a></li>
+    </ul>
+  </article>
+  
+
+
+<aside>
+  <section class="sidebar-box">
+    <h3>Block-transitive designs</h3>
+    <ul class="sidebar-links">
+      <li><a href="alternating.html">Alternating groups</a></li><li><a href="classical.html">Classical groups</a></li><li><a href="exceptional.html">Exceptional groups</a></li><li><a href="sporadic.html">Sporadic groups</a></li><li><a href="transitive.html">Transitive groups</a></li><li><a href="primitive.html">Primitive groups</a></li>
+<li><a href="imprimitive.html">Imprimitive groups</a></li>
+      <li class="sidebar-how"><a href="../how-to-read.html">How to read</a></li>
+      <li class="sidebar-how"><a href="../how-to-cite.html">How to cite</a></li>
+      <li class="sidebar-package"><a href="../software.html">Software and Packages</a></li>
+      <li class="sidebar-license"><a href="../licence.html">Licence</a></li>
+    </ul>
+  </section>
+
+  <section class="report-box">
+  <h3>Report an error</h3>
+  <p>Found an error or missing reference?</p>
+  <p><a href="../contact.html">Contact us</a></p>
+</section>
+
+</aside>
+
+
+
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <strong>Designs and Groups</strong> — constructions and classifications<br>
+    Seyed Hassan Alavi and Ashraf Daneshkhah<br>
+    Updated: 10 July 2026
+  </div>
+</footer>
+</body>
+</html>
