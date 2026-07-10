@@ -1,0 +1,67 @@
+name: Build and deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out website repository
+        uses: actions/checkout@v4
+
+      - name: Install bibliography build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-base texlive-binaries pandoc
+
+      - name: Add missing References headers to GAP files
+        run: python3 scripts/add_references_headers.py --data-root .
+
+      - name: Normalize BibTeX keys and GAP references
+        run: python3 scripts/normalize_bibtex_keys.py --data-root .
+
+      - name: Rebuild database tables from GAP files
+        run: python3 scripts/update_data_tables.py --data-root .
+
+      - name: Rebuild bibliography from BibTeX
+        run: python3 scripts/build_bibliography.py
+
+      - name: Update footer date
+        run: python3 scripts/update_footer_date.py
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

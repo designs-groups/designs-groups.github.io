@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Database of flag-transitive and block-transitive 2-designs and their symmetries.">
+  <title>Software and Packages | Designs and Groups</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+async function downloadRawFile(url, filename) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Download failed");
+    const blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = objectUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(objectUrl);
+  } catch (error) {
+    window.open(url, "_blank", "noopener");
+  }
+}
+</script>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <p class="site-title">Designs and Groups</p>
+    <p class="site-subtitle">Constructions and classifications</p>
+  </div>
+</header>
+<nav class="top-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+<a href="index.html">Home</a>
+<a href="flag-transitive/index.html">Flag-transitive</a>
+<a href="block-transitive/index.html">Block-transitive</a>
+<a href="how-to-read.html">How to read</a>
+<a href="how-to-cite.html">How to cite</a>
+<a href="software.html" aria-current="page">Software and Packages</a>
+<a href="bibliography.html">Bibliography</a>
+<a href="authors.html">About authors</a>
+<a href="contact.html">Contact us</a>
+<a href="licence.html">Licence</a>
+  </div>
+</nav>
+<main>
+<div class="page-grid">
+  <article class="content-panel">
+    <div class="breadcrumbs"><a href="index.html">Home</a> › Software and Packages</div>
+    <h1>Software and Packages</h1>
+
+    <p>
+      The computations underlying this database were carried out with
+      <a href="https://www.gap-system.org/">GAP</a> and make substantial use of
+      the DESIGN and GRAPE packages. The project also draws on methods from design
+      theory, finite group theory, permutation group theory, and computational
+      algebra.
+    </p>
+
+    <p>
+      We gratefully acknowledge the developers and maintainers of GAP and its
+      packages, whose work makes this database possible.
+    </p>
+
+    <h2>Software resources</h2>
+    <ul class="resource-list">
+      <li>
+        <strong>GAP — Groups, Algorithms, and Programming</strong><br>
+        A system for computational discrete algebra, with particular emphasis on
+        computational group theory.<br>
+        <a href="https://www.gap-system.org/">GAP website</a>
+      </li>
+      <li>
+        <strong>DESIGN — The Design Package for GAP</strong><br>
+        A GAP package for constructing, classifying, partitioning, and studying
+        block designs.<br>
+        <a href="https://gap-packages.github.io/design/">DESIGN package page</a>
+      </li>
+      <li>
+        <strong>GRAPE — GRaph Algorithms using PErmutation groups</strong><br>
+        A GAP package for computing with graphs and groups, including structures
+        arising from groups, finite geometries, and designs.<br>
+        <a href="https://gap-packages.github.io/grape/">GRAPE package page</a>
+      </li>
+    </ul>
+
+    <h2>References</h2>
+    <ul class="reference-list">
+      <li>
+        The GAP Group, <em>GAP — Groups, Algorithms, and Programming</em>,
+        Version 4.15.1, 2025.
+      </li>
+      <li>
+        L. H. Soicher, <em>GRAPE: GRaph Algorithms using PErmutation groups</em>,
+        Version 4.9.3, 2025.
+      </li>
+      <li>
+        L. H. Soicher, <em>DESIGN: The Design Package for GAP</em>,
+        Version 1.8.2, 2024.
+      </li>
+    </ul>
+  </article>
+  
+<aside>
+  <section class="sidebar-box">
+    <h3>Database</h3>
+    <ul class="sidebar-links">
+      <li><a href="flag-transitive/index.html">Flag-transitive designs</a></li>
+      <li><a href="block-transitive/index.html">Block-transitive designs</a></li>
+      <li class="sidebar-how"><a href="how-to-read.html">How to read</a></li>
+      <li class="sidebar-how"><a href="how-to-cite.html">How to cite</a></li>
+      <li class="sidebar-package"><a href="software.html">Software and Packages</a></li>
+      <li class="sidebar-license"><a href="licence.html">Licence</a></li>
+    </ul>
+  </section>
+
+  <section class="report-box">
+    <h3>Report an error</h3>
+    <p>Found an error or missing reference?</p>
+    <p><a href="contact.html">Contact us</a></p>
+  </section>
+</aside>
+
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <strong>Designs and Groups</strong> — constructions and classifications<br>
+    Seyed Hassan Alavi and Ashraf Daneshkhah<br>
+    Updated: 10 July 2026
+  </div>
+</footer>
+</body>
+</html>
