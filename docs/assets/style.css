@@ -881,7 +881,7 @@ h2 {
 
 /* Separate Software and Packages from Licence with a larger white gap */
 .sidebar-license {
-  margin-top: 14px;
+  margin-top: 0;
 }
 
 .sidebar-package a,
@@ -895,3 +895,7 @@ h2 {
   background: var(--blue);
   color: white;
 }
+
+
+/* Keep Licence spacing consistent with other sidebar items. */
+.sidebar-license { margin-top: 0; }

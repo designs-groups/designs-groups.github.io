@@ -118,6 +118,39 @@ def parse_list_name(lines: list[str], text: str) -> str:
     return "—"
 
 
+def parse_comment(lines: list[str]) -> str:
+    """Return the first remark line from a Remark: or Remarks: section."""
+    for i, line in enumerate(lines):
+        m = re.match(r"^Remarks?\s*:\s*(.*)$", line.strip(), re.I)
+        if not m:
+            continue
+
+        inline = m.group(1).strip()
+        if inline:
+            return inline
+
+        for next_line in lines[i + 1:]:
+            value = next_line.strip()
+            if not value:
+                continue
+
+            if re.match(
+                r"^(References?|Number of designs|Summary|Further information|Designs)\s*:",
+                value,
+                re.I,
+            ):
+                break
+
+            if re.match(r"^\d+\.\s+", value):
+                break
+
+            return value
+
+        break
+
+    return "—"
+
+
 def parse_reference_keys(lines: list[str]) -> str:
     """Read comma- or semicolon-separated BibTeX keys from References lines.
 
@@ -201,17 +234,9 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
     else:
         anti_flag = "—"
 
-    comment = ""
-    for line in lines:
-        m = re.match(r"^Remark\s*:\s*(.*)$", line, re.I)
-        if m:
-            comment = m.group(1).strip()
-            break
-
-    if comment:
+    comment = parse_comment(lines)
+    if comment != "—":
         comment = comment[:1].upper() + comment[1:]
-    else:
-        comment = "—"
 
     return RowData(
         source_path=source_path,

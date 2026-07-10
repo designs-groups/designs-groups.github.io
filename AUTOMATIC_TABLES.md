@@ -149,3 +149,10 @@ v := 15;
 The repository filename format `v_02.g`, `v_03.g`, and so on is supported directly. Numeric forms such as `15.g`, `v15.g`, and `v-15.g` are also accepted.
 Rows in these two tables are sorted numerically by `v`. Other database tables
 continue to use `G` in the first column and natural alphabetical ordering.
+
+
+## Comments column
+
+The Comments column is generated from the remarks section in each `.g` file.
+Both `Remark:` and `Remarks:` are accepted. If the heading is followed by
+multiple lines, only the first non-empty remark line is placed in the table.
