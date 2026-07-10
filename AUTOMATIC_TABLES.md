@@ -135,15 +135,17 @@ for the deployed website but are not committed back to the repository.
 The Flag-transitive and Block-transitive `Transitive groups` tables use `v`
 (number of points) in the first column instead of the group name `G`.
 
-For those files, the builder reads `v` from common forms such as:
+For those files, the builder reads `v` from the current repository header and filename formats as well as other common forms such as:
 
 ```text
+# Tranitive groups on 2 points
+# Transitive groups on 15 points
 # v: 15
 v := 15;
 # Number of points: 15
 # Degree: 15
 ```
 
-A numeric filename such as `15.g` or `v15.g` is also accepted as a fallback.
+The repository filename format `v_02.g`, `v_03.g`, and so on is supported directly. Numeric forms such as `15.g`, `v15.g`, and `v-15.g` are also accepted.
 Rows in these two tables are sorted numerically by `v`. Other database tables
 continue to use `G` in the first column and natural alphabetical ordering.

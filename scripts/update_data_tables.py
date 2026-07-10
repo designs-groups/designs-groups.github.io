@@ -64,11 +64,17 @@ def is_transitive_source(source_path: str) -> bool:
 
 
 def parse_v(lines: list[str], text: str, filename_stem: str) -> str:
-    """Read the number of points v for Transitive groups table rows."""
+    """Read the number of points v for Transitive groups table rows.
+
+    The current repository uses filenames such as v_02.g and header lines such
+    as 'Tranitive groups on 2 points'. Both the historical misspelling
+    'Tranitive' and the corrected spelling 'Transitive' are accepted.
+    """
 
     patterns = [
         r"^v\s*(?::=|=|:)\s*(\d+)\s*;?\s*$",
-        r"^(?:Number of points|Number of Points|Points|Degree)\s*:\s*(\d+)\s*$",
+        r"^(?:Number of points|Points|Degree)\s*:\s*(\d+)\s*$",
+        r"^(?:Transitive|Tranitive)\s+groups?\s+on\s+(\d+)\s+points?\s*$",
         r"^Design parameter(?:s)?\s*:\s*\[\s*(\d+)\s*,",
         r"^Parameters?\s*:\s*\[\s*(\d+)\s*,",
     ]
@@ -78,17 +84,19 @@ def parse_v(lines: list[str], text: str, filename_stem: str) -> str:
         for pattern in patterns:
             m = re.match(pattern, stripped, re.I)
             if m:
-                return m.group(1)
+                return str(int(m.group(1)))
 
     # Also accept a GAP assignment in the file body.
     m = re.search(r"(?m)^\s*v\s*:=\s*(\d+)\s*;", text)
     if m:
-        return m.group(1)
+        return str(int(m.group(1)))
 
-    # Fallback for files named by degree, e.g. 15.g or v15.g.
-    m = re.fullmatch(r"(?:v)?(\d+)", filename_stem, re.I)
+    # Repository filename formats:
+    #   v_02.g, v_03.g, ...
+    # Also accept 15.g, v15.g, v-15.g.
+    m = re.fullmatch(r"(?:v[_-]?)?0*(\d+)", filename_stem, re.I)
     if m:
-        return m.group(1)
+        return str(int(m.group(1)))
 
     return "—"
 
