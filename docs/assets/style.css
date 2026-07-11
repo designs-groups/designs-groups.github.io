@@ -1215,3 +1215,21 @@ h2 {
 .sidebar-box h3 a:hover {
   text-decoration: underline;
 }
+
+
+/* Sidebar title links stay white on catalogue branch pages. */
+.sidebar-box h3 a,
+.sidebar-box h3 a:visited,
+.sidebar-box h3 a:hover,
+.sidebar-box h3 a:focus {
+  color: #ffffff !important;
+}
+
+.sidebar-box h3 a {
+  text-decoration: none;
+}
+
+.sidebar-box h3 a:hover,
+.sidebar-box h3 a:focus {
+  text-decoration: underline;
+}

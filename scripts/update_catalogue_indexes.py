@@ -35,7 +35,9 @@ def source_path_from_raw_url(url: str, branch: str) -> str | None:
 def class_title(folder: str) -> str:
     title = folder.rsplit("/", 1)[1]
     if title == "Transitive groups":
-        return "Transitive groups (of degrees)"
+        return "Transitive groups (of degree)"
+    if title == "Primitive groups":
+        return "Primitive groups (of degree)"
     return title
 
 

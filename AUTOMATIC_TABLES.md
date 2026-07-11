@@ -299,3 +299,13 @@ On the landing pages, the Transitive groups section title is displayed as
 `Transitive groups (of degrees)` only in the page content, not in the sidebar.
 Transitive and Primitive catalogue grids use 20 full-width columns; all other
 catalogue grids use 12 full-width, borderless, left-aligned columns.
+
+
+
+## Sidebar heading links and singular degree wording
+
+The Flag-transitive and Block-transitive sidebar headings link back to their
+respective main landing pages, and their linked text is forced to remain white.
+
+The page-content headings use the singular wording `Transitive groups (of degree)`
+and `Primitive groups (of degree)`. Sidebar labels remain unchanged.
