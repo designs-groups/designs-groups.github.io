@@ -384,3 +384,11 @@ the class/action row instead. Underlines are removed from the class-title and
 On the Flag-transitive and Block-transitive main catalogue pages, conflicting
 separator rules are overridden so that each group-class header has exactly one
 full-width line below the class/action row and no extra line above it.
+
+
+
+## Catalogue top-and-bottom separator lines
+
+On the Flag-transitive and Block-transitive main catalogue pages, every
+group-class/action row is enclosed by one full-width separator line above and
+one full-width separator line below.
