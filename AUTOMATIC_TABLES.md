@@ -249,3 +249,10 @@ The Download `.g` control is also a genuine link, while its normal left-click
 behavior still downloads the file. Empty References cells link to the raw data
 file; populated References cells keep their bibliography links and open them
 in a new tab.
+
+
+## Live-counter script order
+
+The CounterAPI browser library is loaded before the inline code that constructs
+`new Counter(...)`. This order is required; otherwise the browser raises
+`Counter is not defined` and the visible total stays at its fallback value.
