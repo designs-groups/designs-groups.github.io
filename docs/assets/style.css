@@ -947,50 +947,22 @@ h2 {
 }
 
 
-
-
-/* Footer: Visits is always directly below Updated on every page. */
+/* Visits appears as a normal footer line below Updated. */
 .site-footer .footer-inner {
-  display: block !important;
-}
-
-.site-footer .footer-text {
-  display: block !important;
-}
-
-.footer-visits-line {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 5px;
-  margin-top: 2px;
-  width: auto;
-}
-
-.footer-visits-label {
-  display: inline;
-}
-
-
-
-/* Plain-text visit count: no badge, border, background, or box. */
-.footer-visits-line {
   display: block;
-  margin-top: 2px;
-  width: auto;
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
 }
 
-.footer-visits-number {
-  display: inline;
-  background: none;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  margin: 0;
-  color: inherit;
-  font: inherit;
+.footer-visits {
+  margin-top: 4px;
+}
+
+.footer-visits a {
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer-visits img {
+  display: block;
+  height: 20px;
+  width: auto;
 }

@@ -206,24 +206,9 @@ Transitive-group tables continue to be sorted numerically by `v`.
 
 ## Visit counter
 
-Every page shows one shared live counter as plain text directly below the
-Updated line:
-
-```text
-Updated: 11 July 2026
-Visits: 157
-```
-
-The visible counter has no badge, border, background, or box.
-
-The live counter continues from the previous displayed value 156. Each page
-load increments the shared counter once. A data-access action also increments
-the same shared counter when a user opens a row, uses the first-column data
-link, activates a row by keyboard, or uses the Download `.g` control.
-
-The browser uses CounterAPI V1 with a dedicated project namespace. The returned
-counter value is added to the preserved baseline 156 and written directly into
-the plain-text footer span.
+All pages display the shared site-wide Visits counter directly below the
+Updated line in the normal footer text flow. It is not placed in a separate
+right-side footer box.
 
 ## Data-access counting
 
@@ -249,24 +234,3 @@ The Download `.g` control is also a genuine link, while its normal left-click
 behavior still downloads the file. Empty References cells link to the raw data
 file; populated References cells keep their bibliography links and open them
 in a new tab.
-
-
-## Live-counter script order
-
-The CounterAPI browser library is loaded before the inline code that constructs
-`new Counter(...)`. This order is required; otherwise the browser raises
-`Counter is not defined` and the visible total stays at its fallback value.
-
-
-## Direct live visit counter
-
-The live visit counter uses the CounterAPI V1 REST endpoint directly rather
-than the JavaScript client library. The response parser accepts both `count`
-and `value` fields, including nested `data.count` and `data.value` variants.
-
-This avoids a response-shape mismatch in which a successful V1 response can
-contain `count` while code that reads only `value` leaves the visible fallback
-number unchanged.
-
-The footer remains plain text with no badge or box. Page loads and data-access
-actions increment the same counter.

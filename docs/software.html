@@ -13,71 +13,21 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
 <script>
 
-
-const VISIT_BASELINE = 156;
-const VISIT_COUNTER_URL =
-  "https://api.counterapi.dev/v1/" +
-  "designs-groups-github-io-20260711/site-visits/up";
-
-function setVisitNumber(value) {
-  document.querySelectorAll(".footer-visits-number").forEach((target) => {
-    target.textContent = String(value);
-  });
-}
-
-function extractCounterValue(data) {
-  const candidates = [
-    data && data.count,
-    data && data.value,
-    data && data.data && data.data.count,
-    data && data.data && data.data.value
-  ];
-
-  for (const candidate of candidates) {
-    const value = Number(candidate);
-
-    if (Number.isFinite(value)) {
-      return value;
-    }
-  }
-
-  return null;
-}
-
-async function incrementVisitCounter() {
-  try {
-    const response = await fetch(VISIT_COUNTER_URL, {
-      method: "GET",
-      cache: "no-store",
-      mode: "cors"
-    });
-
-    if (!response.ok) {
-      throw new Error("Counter request failed: " + response.status);
-    }
-
-    const data = await response.json();
-    const current = extractCounterValue(data);
-
-    if (current === null) {
-      throw new Error("Counter response did not contain a numeric count.");
-    }
-
-    setVisitNumber(VISIT_BASELINE + current);
-  } catch (error) {
-    console.warn("Visit counter update failed:", error);
-  }
-}
-
 function recordDataAccess() {
-  incrementVisitCounter();
+  const tracker = document.createElement("img");
+  tracker.alt = "";
+  tracker.setAttribute("aria-hidden", "true");
+  tracker.style.display = "none";
+  tracker.onload = tracker.onerror = () => tracker.remove();
+  tracker.src =
+    "https://hits.sh/designs-groups.github.io.svg" +
+    "?label=Visits&color=1f5f99&labelColor=17365d" +
+    "&data_access=" + Date.now() + "-" + Math.random();
+  document.body.appendChild(tracker);
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  incrementVisitCounter();
-});
 
 async function downloadRawFile(url, filename) {
   try {
@@ -97,6 +47,7 @@ async function downloadRawFile(url, filename) {
   }
 }
 </script>
+
 </head>
 <body>
 <header class="site-header">
@@ -205,7 +156,13 @@ async function downloadRawFile(url, filename) {
       <strong>Designs and Groups</strong> — constructions and classifications<br>
     Seyed Hassan Alavi and Ashraf Daneshkhah<br>
     Updated: 10 July 2026
-      <div class="footer-visits-line">Visits: <span class="footer-visits-number">156</span></div>
+      <div class="footer-visits">
+      <a href="https://hits.sh/designs-groups.github.io/" target="_blank" rel="noopener noreferrer"
+         aria-label="View visit statistics">
+        <img src="https://hits.sh/designs-groups.github.io.svg?label=Visits&amp;color=1f5f99&amp;labelColor=17365d"
+             alt="Site visits">
+      </a>
+    </div>
     </div>
   </div>
 </footer>

@@ -45,7 +45,6 @@ jobs:
       - name: Update footer date
         run: python3 scripts/update_footer_date.py
 
-
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
