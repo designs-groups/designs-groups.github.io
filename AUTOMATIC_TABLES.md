@@ -234,3 +234,25 @@ The Download `.g` control is also a genuine link, while its normal left-click
 behavior still downloads the file. Empty References cells link to the raw data
 file; populated References cells keep their bibliography links and open them
 in a new tab.
+
+
+## Catalogue landing pages
+
+The Flag-transitive and Block-transitive landing pages list the groups or
+degrees available under each group class. The group or degree link opens the
+raw `.g` data file. The Number of designs and Information links jump to the
+corresponding anchored row in the detailed table page.
+
+The catalogue is rebuilt automatically after the database tables are rebuilt.
+
+
+## Atlas-style landing pages and extra flag columns
+
+The Flag-transitive and Block-transitive landing pages use an Atlas-style
+inline list under each group class rather than a table. A remark box explains
+that group or degree names open raw `.g` data files, while the class heading
+and "Click for information" open the detailed table.
+
+The table builder adds `Flag-regular` to Flag-transitive database tables and
+`Flag-semiregular` to Block-transitive database tables. Missing counts are
+displayed as `0`.

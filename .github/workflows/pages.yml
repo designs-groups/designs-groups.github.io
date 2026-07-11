@@ -39,6 +39,9 @@ jobs:
       - name: Rebuild database tables from GAP files
         run: python3 scripts/update_data_tables.py --data-root .
 
+      - name: Rebuild catalogue landing pages
+        run: python3 scripts/update_catalogue_indexes.py --data-root .
+
       - name: Rebuild bibliography from BibTeX
         run: python3 scripts/build_bibliography.py
 

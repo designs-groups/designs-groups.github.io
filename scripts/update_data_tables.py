@@ -27,6 +27,8 @@ class RowData:
     block_primitive: str
     block_imprimitive: str
     flag_transitive: str
+    flag_regular: str
+    flag_semiregular: str
     anti_flag_transitive: str
     comment: str
     refkeys: str
@@ -188,13 +190,27 @@ def parse_reference_keys(lines: list[str]) -> str:
     return ",".join(keys)
 
 
+def row_anchor(source_path: str) -> str:
+    """Stable HTML anchor id for a database table row."""
+    anchor = re.sub(r"[^A-Za-z0-9_-]+", "-", source_path).strip("-")
+    return "row-" + anchor
+
+
 def math_label(group: str) -> str:
-    m = re.fullmatch(r"([A-Za-z]+)(\d+)", group)
-    if m:
-        letters, digits = m.groups()
-        return rf"\({html.escape(letters)}_{{{digits}}}\)"
-    escaped = group.replace("\\", r"\\")
-    return rf"\(\mathrm{{{html.escape(escaped)}}}\)"
+    """Render common finite-group notation as inline LaTeX."""
+    value = group.strip().replace("\\", r"\\")
+    value = re.sub(
+        r"([A-Za-z]+)(\d+)",
+        lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
+        value,
+    )
+    value = re.sub(
+        r"(\d+)_(\d+)",
+        lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
+        value,
+    )
+    return rf"\({html.escape(value)}\)"
+
 
 
 def parse_gap_file(path: Path, source_path: str) -> RowData:
@@ -207,6 +223,8 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
     block_prim = parse_three_count(lines, r"Block-primitive")
     block_imprim = parse_three_count(lines, r"Block-imprimitive")
     flag_trans = parse_three_count(lines, r"Flag-(?:transitive|trasnitive)")
+    flag_regular = parse_three_count(lines, r"Flag-regular")
+    flag_semiregular = parse_three_count(lines, r"Flag-semiregular")
 
     if total_row is None:
         raise RuntimeError(f"Could not parse Total row from {source_path}")
@@ -254,6 +272,16 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
             total
             if source_path.startswith("Flag-transitive/")
             else (flag_trans[2] if flag_trans else "0")
+        ),
+        flag_regular=(
+            flag_regular[2]
+            if source_path.startswith("Flag-transitive/") and flag_regular
+            else "0"
+        ),
+        flag_semiregular=(
+            flag_semiregular[2]
+            if source_path.startswith("Block-transitive/") and flag_semiregular
+            else "0"
         ),
         anti_flag_transitive=anti_flag,
         comment=comment,
@@ -404,8 +432,14 @@ def build_row(row, repository, branch):
         row.block_primitive,
         row.block_imprimitive,
         row.flag_transitive,
-        row.anti_flag_transitive,
     ]
+
+    if row.source_path.startswith("Flag-transitive/"):
+        cells.append(row.flag_regular)
+    elif row.source_path.startswith("Block-transitive/"):
+        cells.append(row.flag_semiregular)
+
+    cells.append(row.anti_flag_transitive)
 
     url_attr = html.escape(url, quote=True)
     numeric_cells = "".join(
@@ -422,8 +456,9 @@ def build_row(row, repository, branch):
     source_attr = html.escape(row.source_path, quote=True)
     ref_attr = html.escape(row.refkeys, quote=True)
     filename_attr = html.escape(filename, quote=True)
+    anchor_attr = html.escape(row_anchor(row.source_path), quote=True)
 
-    return f'''<tr class="linked-row" tabindex="0"
+    return f'''<tr id="{anchor_attr}" class="linked-row" tabindex="0"
     data-source-path="{source_attr}"
     aria-label="{html.escape(aria_label, quote=True)}"
     onclick="recordDataAccess(); window.open('{url_attr}', '_blank', 'noopener')"
@@ -521,7 +556,7 @@ def main() -> int:
             )
         else:
             rows_html = (
-                '<tr class="empty-row"><td colspan="14">'
+                '<tr class="empty-row"><td colspan="15">'
                 "No data files are currently available for this family."
                 "</td></tr>"
             )
