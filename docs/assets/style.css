@@ -1288,16 +1288,44 @@ h2 {
 }
 
 
-/* Main catalogue pages: one full-width line below the class/action row. */
+/* Main catalogue pages: exactly one full-width separator below each class/action row. */
 .catalogue-family {
   border-top: 0 !important;
-  padding-top: 8px;
+  border-bottom: 0 !important;
+  padding-top: 8px !important;
+  margin-top: 12px !important;
+}
+
+.catalogue-family::before,
+.catalogue-family::after,
+.catalogue-family-header::before,
+.catalogue-family-header::after {
+  border: 0 !important;
+  content: none !important;
+}
+
+.catalogue-family-header,
+.catalogue-family-header h2,
+.catalogue-family-header h2 a,
+.catalogue-family-actions,
+.catalogue-family-actions > a,
+.catalogue-family-actions > .catalogue-design-total {
+  border-top: 0 !important;
+}
+
+.catalogue-family-header h2,
+.catalogue-family-header h2 a,
+.catalogue-family-actions,
+.catalogue-family-actions > a,
+.catalogue-family-actions > .catalogue-design-total {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
 }
 
 .catalogue-family-header {
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 6px;
-  margin-bottom: 7px;
+  border-bottom: 1px solid var(--line) !important;
+  padding-bottom: 6px !important;
+  margin-bottom: 7px !important;
 }
 
 .catalogue-family-header h2 a,
@@ -1311,3 +1339,4 @@ h2 {
 .catalogue-family-actions > a:focus {
   text-decoration: none !important;
 }
+

@@ -376,3 +376,11 @@ On the Flag-transitive and Block-transitive main catalogue pages, the line above
 each group-class section is removed. A single full-width line is placed below
 the class/action row instead. Underlines are removed from the class-title and
 `Click for information` links in that row.
+
+
+
+## Single catalogue separator line
+
+On the Flag-transitive and Block-transitive main catalogue pages, conflicting
+separator rules are overridden so that each group-class header has exactly one
+full-width line below the class/action row and no extra line above it.
