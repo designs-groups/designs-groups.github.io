@@ -334,3 +334,36 @@ or filenames. In particular, `2B2(8)` and `^2B_2(8)` render as
 On the Flag-transitive and Block-transitive main catalogue pages, only the
 group-class titles such as Alternating groups, Classical groups, and Sporadic
 groups are displayed in bold. Group entries and sidebar labels are unchanged.
+
+
+
+## Group-order and notation recheck
+
+The group sorting and rendering were rechecked. Indexed extensions such as
+`2_1` and `2_2` are preserved in display, while compact exceptional names are
+canonicalized for sorting and rendering. In particular, `G23` sorts and renders
+as `G2(3)`, `2B2(8)` as `{}^2B_2(8)`, and `3D4(2)` as `{}^3D_4(2)`.
+
+
+
+## Aligned catalogue action columns
+
+On the Flag-transitive and Block-transitive main catalogue pages, the class
+title, `Click for information (number of designs with certain symmetries)`, and
+`Number of designs` text are aligned in fixed columns. On narrower screens the
+layout falls back to a single left-aligned column.
+
+
+
+## G-based flag-property columns
+
+The columns `Flag-regular`, `Flag-semiregular`, and
+`Anti-flag-transitive` are read from explicit lines in each `.g` file and are
+interpreted for the constructing group `G` (`BDautSubgroup(D)`), not for the
+full automorphism group `Aut(D)`. Accepted metadata includes forms such as
+`Flag-regular true`, `Flag-semiregular: [ true, false, true ]`,
+`Anti-flag-transitive: [ 1, 4, 7 ]`, or GAP-style assignments such as
+`antiFlagTransitive := 2;`.
+
+Three-number summary rows such as `Anti-flag-transitive 0 0 7` are ignored for
+these G-based columns.

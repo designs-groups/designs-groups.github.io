@@ -49,6 +49,102 @@ def parse_three_count(lines: list[str], label_pattern: str):
             return m.group(1), m.group(2), m.group(3)
     return None
 
+def property_value_to_count(value: str) -> str | None:
+    """Convert a .g metadata value to a count."""
+    value = value.strip().rstrip(";").strip()
+    if not value:
+        return None
+
+    lower = value.casefold()
+
+    # Lists of booleans or design indices, e.g. [ true, false ] or [1, 3].
+    list_match = re.search(r"\[(.*?)\]", value, re.S)
+    if list_match:
+        body = list_match.group(1).strip()
+        if not body:
+            return "0"
+
+        bools = re.findall(r"\b(true|false)\b", body, flags=re.I)
+        if bools:
+            return str(sum(1 for item in bools if item.casefold() == "true"))
+
+        nums = re.findall(r"\d+", body)
+        if nums:
+            return str(len(nums))
+
+        return None
+
+    # A pure integer is already the required count.
+    if re.fullmatch(r"\d+", value):
+        return str(int(value))
+
+    # For per-design property lines, each true contributes 1 and false 0.
+    if re.search(r"\btrue\b", lower):
+        return "1"
+
+    if re.search(r"\bfalse\b", lower):
+        return "0"
+
+    if re.search(r"\byes\b|\by\b", lower):
+        return "1"
+
+    if re.search(r"\bno\b|\bn\b", lower):
+        return "0"
+
+    return None
+
+
+def parse_g_property_count(lines: list[str], patterns: list[str]) -> str:
+    """Read a property count for the constructing group G.
+
+    This is used for columns such as Flag-regular, Flag-semiregular, and
+    Anti-flag-transitive.  The value is interpreted for G=BDautSubgroup(D),
+    not for Aut(D).
+
+    Accepted line styles include, for example:
+        Flag-regular: true
+        Flag-regular true
+        flagRegular := false;
+        Flag-semiregular: [ true, false, true ]
+        Anti-flag-transitive: [ 1, 4, 7 ]
+        antiFlagTransitive := 2;
+    """
+    count = 0
+    seen = False
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            continue
+
+        for pattern in patterns:
+            m = re.search(pattern, stripped, re.I)
+            if not m:
+                continue
+
+            # Ignore three-number summary rows such as
+            # "Anti-flag-transitive 0 0 7"; those may refer to Aut(D)
+            # and are not the requested G-property source.
+            after = stripped[m.end():].strip()
+            if re.fullmatch(r"\d+\s+\d+\s+\d+", after):
+                continue
+
+            value = after
+            value = re.sub(r"^\s*(?::=|=|:)\s*", "", value).strip()
+            if not value:
+                # Try assignment/value before the property name.
+                before = stripped[:m.start()].strip()
+                value = before
+
+            parsed = property_value_to_count(value)
+            if parsed is not None:
+                count += int(parsed)
+                seen = True
+                break
+
+    return str(count) if seen else "0"
+
+
 
 def parse_group_label(lines: list[str], filename_stem: str) -> str:
     for line in lines:
@@ -211,65 +307,59 @@ def row_anchor(source_path: str) -> str:
 def math_label(group: str) -> str:
     """Render common finite-group notation as inline LaTeX.
 
-    This handles ordinary families such as A6 and G2(3), indexed extensions
-    such as 2_1, and twisted exceptional notation such as ^2B2(8) and ^3D4(2).
+    Examples:
+        A6:2_1      -> \(A_{6}:2_{1}\)
+        L3(4):2_1   -> \(L_{3}(4):2_{1}\)
+        L3(4):D12   -> \(L_{3}(4):D_{12}\)
+        2B2(8)      -> \({}^{2}B_{2}(8)\)
+        G23         -> \(G_{2}(3)\)
+        3D4(2)      -> \({}^{3}D_{4}(2)\)
     """
     value = group.strip().replace("\\", r"\\")
-    value = value.replace("_", "")
 
-    # Insert the missing leading twist marker when the plain file/group label
-    # uses the standard exceptional abbreviations without the caret.
-    value = re.sub(r"(?<![A-Za-z0-9^])2B2(?=\()", r"^2B2", value)
-    value = re.sub(r"(?<![A-Za-z0-9^])2G2(?=\()", r"^2G2", value)
-    value = re.sub(r"(?<![A-Za-z0-9^])3D4(?=\()", r"^3D4", value)
+    # Canonical compact exceptional forms.
+    value = re.sub(r"(?<![A-Za-z0-9^])2B_?2(?=\()", r"^2B2", value)
+    value = re.sub(r"(?<![A-Za-z0-9^])2G_?2(?=\()", r"^2G2", value)
+    value = re.sub(r"(?<![A-Za-z0-9^])3D_?4(?=\()", r"^3D4", value)
+    value = re.sub(r"\bG23\b", r"G2(3)", value)
 
-    # Twisted exceptional families: ^2B2(8), ^2B_2(8), ^2G2(27), ^3D4(2).
+    # Twisted exceptional notation: ^2B2(8), ^2B_2(8), ^3D4(2), etc.
     value = re.sub(
-        r"\^(\d+)([A-Za-z]+)(\d+)(?=\()",
+        r"\^(\d+)([A-Za-z]+)_?(\d+)(?=\()",
         lambda m: f"^{{{m.group(1)}}}{m.group(2)}_{{{m.group(3)}}}",
         value,
     )
 
-    # Letter+number family names only when followed by a field/order parenthesis:
-    # G2(3), L3(4), U4(2), PSp4(3), etc.
-    # This avoids turning G23 into G_{23}; it becomes G_{2}(3) through the
-    # correction below.
+    # Family names immediately followed by a field/order parenthesis.
     value = re.sub(
-        r"([A-Za-z]+)(\d+)(?=\()",
+        r"([A-Za-z]+)_?(\d+)(?=\()",
         lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
         value,
     )
 
-    # Sporadic and alternating/symmetric style names: M11, J1, Co1, A6, S6.
+    # Extension or family tokens such as A6, M11, S3, D12, Co1.
+    # Twisted families have already been handled above.
     value = re.sub(
-        r"\b(M|J|Co|Fi|HS|McL|He|Ru|Suz|ON|HN|Th|Ly|A|S)(\d+)\b",
+        r"\b(A|S|D|M|J|Co|Fi|HS|McL|He|Ru|Suz|ON|HN|Th|Ly)(\d+)\b",
         lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
         value,
     )
 
-    # Repair compact exceptional strings like G23 and F24 if they occur:
-    # G23 -> G_2(3), F24 -> F_4(2), E68 -> E_6(8), E78 -> E_7(8), E88 -> E_8(8).
+    # Indexed suffixes such as 2_1, 3_2.
     value = re.sub(
-        r"\b([GEF])_?([24678])(\d+)\b",
-        lambda m: f"{m.group(1)}_{{{m.group(2)}}}({m.group(3)})",
-        value,
-    )
-
-    # Indexed extension suffixes such as 2_1 or 3_2; after underscore removal
-    # this still catches labels already converted in older pages only through
-    # static cleanup below. New generated labels come from raw group labels.
-    value = re.sub(
-        r"(\d+)_(\d+)",
+        r"(?<!\{)(\d+)_(\d+)",
         lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
         value,
     )
 
-    # Remaining leading superscripts not already braced.
+    # Superscripts such as 2^2.
     value = re.sub(
         r"\^(\d+)",
         lambda m: f"^{{{m.group(1)}}}",
         value,
     )
+
+    # Leading twisted-group superscript uses an empty base.
     value = re.sub(r"^\^\{(\d+)\}", r"{}^{\1}", value)
 
     return rf"\({html.escape(value)}\)"
@@ -286,8 +376,6 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
     block_prim = parse_three_count(lines, r"Block-primitive")
     block_imprim = parse_three_count(lines, r"Block-imprimitive")
     flag_trans = parse_three_count(lines, r"Flag-(?:transitive|trasnitive)")
-    flag_regular = parse_three_count(lines, r"Flag-regular")
-    flag_semiregular = parse_three_count(lines, r"Flag-semiregular")
 
     if total_row is None:
         raise RuntimeError(f"Could not parse Total row from {source_path}")
@@ -302,18 +390,35 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
 
     symmetric, nonsymmetric, total = total_row
 
-    anti_lines = [
-        line for line in lines
-        if re.match(r"^Anti-flag-transitive\s+(true|false)\b", line, re.I)
-    ]
-    if anti_lines:
-        anti_count = sum(
-            1 for line in anti_lines
-            if re.match(r"^Anti-flag-transitive\s+true\b", line, re.I)
-        )
-        anti_flag = str(anti_count)
-    else:
-        anti_flag = "0"
+    # These three columns are read from explicit G-property lines in the .g
+    # file. They are not taken from the three-number Aut(D)-style summary rows.
+    flag_regular = parse_g_property_count(
+        lines,
+        [
+            r"Flag[-_ ]?regular",
+            r"flagRegular",
+            r"IsFlagRegular",
+            r"G[-_ ]?flag[-_ ]?regular",
+        ],
+    )
+    flag_semiregular = parse_g_property_count(
+        lines,
+        [
+            r"Flag[-_ ]?semiregular",
+            r"flagSemiregular",
+            r"IsFlagSemiregular",
+            r"G[-_ ]?flag[-_ ]?semiregular",
+        ],
+    )
+    anti_flag = parse_g_property_count(
+        lines,
+        [
+            r"Anti[-_ ]?flag[-_ ]?transitive",
+            r"antiFlagTransitive",
+            r"IsAntiFlagTransitive",
+            r"G[-_ ]?anti[-_ ]?flag[-_ ]?transitive",
+        ],
+    )
 
     comment = parse_comment(lines)
     if comment != "—":
@@ -337,20 +442,19 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
             else (flag_trans[2] if flag_trans else "0")
         ),
         flag_regular=(
-            flag_regular[2]
-            if source_path.startswith("Flag-transitive/") and flag_regular
+            flag_regular
+            if source_path.startswith("Flag-transitive/")
             else "0"
         ),
         flag_semiregular=(
-            flag_semiregular[2]
-            if source_path.startswith("Block-transitive/") and flag_semiregular
+            flag_semiregular
+            if source_path.startswith("Block-transitive/")
             else "0"
         ),
         anti_flag_transitive=anti_flag,
         comment=comment,
         refkeys=parse_reference_keys(lines),
     )
-
 
 def raw_url(repository: str, branch: str, source_path: str) -> str:
     encoded = urllib.parse.quote(source_path, safe="/")
@@ -416,14 +520,34 @@ def page_for_source(source_path, folder_pages, overrides):
     return matches[0][1]
 
 
-def normalize_group_sort_text(group: str) -> str:
+def canonical_group_sort_text(group: str) -> str:
     value = group.strip()
     value = value.replace("\\", "")
     value = value.replace("{", "").replace("}", "")
     value = value.replace("mathrm", "")
     value = value.replace(" ", "")
     value = value.replace(".", ":")
+    value = value.replace("{}^", "^")
+
+    # Remove family-rank underscores but preserve extension indices such as 2_1.
+    value = re.sub(r"([A-Za-z]+)_(\d+)(?=\()", r"\1\2", value)
+
+    # Canonical compact exceptional forms.
+    value = re.sub(r"(?<![A-Za-z0-9^])2B_?2(?=\()", r"^2B2", value)
+    value = re.sub(r"(?<![A-Za-z0-9^])2G_?2(?=\()", r"^2G2", value)
+    value = re.sub(r"(?<![A-Za-z0-9^])3D_?4(?=\()", r"^3D4", value)
+    value = re.sub(r"\^2B_?2(?=\()", r"^2B2", value)
+    value = re.sub(r"\^2G_?2(?=\()", r"^2G2", value)
+    value = re.sub(r"\^3D_?4(?=\()", r"^3D4", value)
+
+    # Compact G23 means G2(3) in this database notation.
+    value = re.sub(r"\bG23\b", r"G2(3)", value)
+
     return value
+
+
+def normalize_group_sort_text(group: str) -> str:
+    return canonical_group_sort_text(group)
 
 
 def split_top_level_extensions(group: str):
@@ -474,8 +598,7 @@ def extension_component_sort_key(component: str):
 
     m = re.fullmatch(r"(\d+)", value)
     if m:
-        n = int(m.group(1))
-        return (n, 0, 0, "")
+        return (int(m.group(1)), 0, 0, "")
 
     m = re.fullmatch(r"(\d+)_(\d+)", value)
     if m:
@@ -497,10 +620,8 @@ def extension_component_sort_key(component: str):
 def group_sort_key(group: str):
     """Sort group names by base group and top-level extensions.
 
-    Examples: G2(3) < G2(3):3 and
-    L3(4) < L3(4):2_1 < L3(4):2_2 < L3(4):2^2
-          < L3(4):3 < L3(4):3:2_1 < L3(4):3:2_2
-          < L3(4):S3 < L3(4):D12.
+    Base groups are placed before their extensions, and compact exceptional
+    labels are normalized before sorting.
     """
     parts = split_top_level_extensions(group)
     base = parts[0]
