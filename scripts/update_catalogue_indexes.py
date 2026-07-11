@@ -12,6 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
+GRID_COLUMNS = 12
 
 
 def load_table_tools():
@@ -60,33 +61,53 @@ def fallback_rows_from_table(page_rel: str, branch: str, tools):
     page = ROOT / page_rel
     if not page.exists():
         return []
+
     text = page.read_text(encoding="utf-8")
     rows = []
+
     for match in re.finditer(r'<tr[^>]*class="linked-row"[^>]*>.*?</tr>', text, flags=re.S):
         row_html = match.group(0)
-        href_match = re.search(r'<th><a[^>]*href="([^"]+)"[^>]*>(.*?)</a>', row_html, flags=re.S)
+        href_match = re.search(
+            r'<th><a[^>]*href="([^"]+)"[^>]*>(.*?)</a>',
+            row_html,
+            flags=re.S,
+        )
         if not href_match:
             continue
+
         url = href_match.group(1)
         label = href_match.group(2).strip()
-        sp = source_path_from_raw_url(url, branch)
-        if not sp:
+        source_path = source_path_from_raw_url(url, branch)
+        if not source_path:
             continue
+
         total = "—"
-        m_total = re.search(r'<td class="list-name">.*?</td>\s*<td><a[^>]*>(.*?)</a></td>', row_html, flags=re.S)
+        m_total = re.search(
+            r'<td class="list-name">.*?</td>\s*<td><a[^>]*>(.*?)</a></td>',
+            row_html,
+            flags=re.S,
+        )
         if not m_total:
-            m_total = re.search(r'<td class="list-name">.*?</td>\s*<td>(.*?)</td>', row_html, flags=re.S)
+            m_total = re.search(
+                r'<td class="list-name">.*?</td>\s*<td>(.*?)</td>',
+                row_html,
+                flags=re.S,
+            )
         if m_total:
             total = re.sub(r"<.*?>", "", m_total.group(1)).strip()
+
         rows.append({"label": label, "total": total, "url": url, "sort_key": label})
+
     return rows
 
 
 def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: str, tools):
     folder_path = data_root / folder
     rows = []
+
     if not folder_path.exists():
         return rows
+
     for path in sorted(folder_path.rglob("*.g")):
         source_path = path.relative_to(data_root).as_posix()
         row = tools.parse_gap_file(path, source_path)
@@ -96,54 +117,88 @@ def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: s
             "url": tools.raw_url(repository, branch, source_path),
             "sort_key": tools.row_sort_key(row),
         })
+
     return sorted(rows, key=lambda item: item["sort_key"])
+
+
+def build_group_grid(rows: list[dict]) -> str:
+    body_rows = []
+
+    if not rows:
+        empty_cells = [
+            '<td class="catalogue-empty">No data files are currently available for this class.</td>'
+        ] + ['<td></td>' for _ in range(GRID_COLUMNS - 1)]
+        body_rows.append('      <tr>' + ''.join(empty_cells) + '</tr>')
+    else:
+        for start in range(0, len(rows), GRID_COLUMNS):
+            chunk = rows[start:start + GRID_COLUMNS]
+            cells = [
+                '<td>' + data_link(item["url"], item["label"]) + '</td>'
+                for item in chunk
+            ]
+            while len(cells) < GRID_COLUMNS:
+                cells.append('<td></td>')
+            body_rows.append('      <tr>' + ''.join(cells) + '</tr>')
+
+    return (
+        '<table class="catalogue-group-grid" aria-label="Available groups or degrees">\\n'
+        '    <tbody>\\n'
+        + "\\n".join(body_rows)
+        + '\\n    </tbody>\\n'
+        '</table>'
+    )
 
 
 def build_family_section(index_page: Path, folder: str, page_rel: str, rows: list[dict]) -> str:
     title = html.escape(class_title(folder))
     table_href = table_link(index_page, page_rel)
     total_designs = sum(int(item["total"]) for item in rows if str(item["total"]).isdigit())
-    if rows:
-        group_items = "\n    ".join(
-            f'<span class="catalogue-group-item">{data_link(item["url"], item["label"])}</span>'
-            for item in rows
-        )
-    else:
-        group_items = '<span class="catalogue-empty">No data files are currently available for this class.</span>'
+    grid = build_group_grid(rows)
 
     return (
-        f'<section class="catalogue-family">\n'
-        f'  <div class="catalogue-family-header">\n'
-        f'    <h2><a href="{table_href}">{title}</a></h2>\n'
-        f'    <div class="catalogue-family-actions">\n'
-        f'      <a href="{table_href}">Click for information</a>\n'
-        f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\n'
-        f'    </div>\n'
-        f'  </div>\n'
-        f'  <div class="catalogue-group-row">\n'
-        f'    {group_items}\n'
-        f'  </div>\n'
+        f'<section class="catalogue-family">\\n'
+        f'  <div class="catalogue-family-header">\\n'
+        f'    <h2><a href="{table_href}">{title}</a></h2>\\n'
+        f'    <div class="catalogue-family-actions">\\n'
+        f'      <a href="{table_href}">Click for information '
+        f'(number of designs with certain symmetries)</a>\\n'
+        f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\\n'
+        f'    </div>\\n'
+        f'  </div>\\n'
+        f'  {grid}\\n'
         f'</section>'
+    )
+
+
+def landing_notice() -> str:
+    return (
+        '<p class="notice catalogue-notice">\\n'
+        '  The groups or degrees listed below are those for which data files are currently available in this part of the database. '
+        'Click a group or degree name to open the corresponding raw GAP file.<br>\\n'
+        '  The link <strong>Click for information (number of designs with certain symmetries)</strong> opens the detailed table for the corresponding group class, where the number of designs with each recorded symmetry property is displayed.\\n'
+        '</p>'
     )
 
 
 def replace_catalogue(page_text: str, catalogue_html: str) -> str:
     start = "<!-- CATALOGUE_GROUPS_START -->"
     end = "<!-- CATALOGUE_GROUPS_END -->"
-    remark = (
-        '<div class="catalogue-remark">\n'
-        '  <strong>Remark.</strong> The groups or degrees listed below are those for which\n'
-        '  data files are currently available in the database. Click a group name to open\n'
-        '  the corresponding raw GAP file. Use <em>Click for information</em>, or the class\n'
-        '  heading, to open the detailed table for that class.\n'
-        '</div>'
-    )
-    replacement = f"{start}\n{remark}\n{catalogue_html}\n{end}"
+    replacement = f"{start}\\n{landing_notice()}\\n{catalogue_html}\\n{end}"
+
     if start in page_text and end in page_text:
-        return re.sub(re.escape(start) + r".*?" + re.escape(end), replacement, page_text, count=1, flags=re.S)
-    updated, count = re.subn(r'<ul class="catalogue-list">.*?</ul>', replacement, page_text, count=1, flags=re.S)
+        pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), flags=re.S)
+        return pattern.sub(replacement, page_text, count=1)
+
+    updated, count = re.subn(
+        r'<ul class="catalogue-list">.*?</ul>',
+        replacement,
+        page_text,
+        count=1,
+        flags=re.S,
+    )
     if count != 1:
         raise RuntimeError("Could not find catalogue list or catalogue markers.")
+
     return updated
 
 
@@ -151,30 +206,37 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, required=True)
     args = parser.parse_args()
+
     tools = load_table_tools()
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     repository = config["repository"]
     branch = config.get("branch", "main")
     folder_pages = config["folder_pages"]
+
     families = [
         ("Flag-transitive", ROOT / "docs" / "flag-transitive" / "index.html"),
         ("Block-transitive", ROOT / "docs" / "block-transitive" / "index.html"),
     ]
+
     updated_pages = 0
     for prefix, index_page in families:
         sections = []
         for folder, page_rel in folder_pages.items():
             if not folder.startswith(prefix + "/"):
                 continue
+
             rows = rows_from_gap_files(args.data_root, folder, repository, branch, tools)
             if not rows:
                 rows = fallback_rows_from_table(page_rel, branch, tools)
+
             sections.append(build_family_section(index_page, folder, page_rel, rows))
+
         text = index_page.read_text(encoding="utf-8")
-        updated = replace_catalogue(text, "\n".join(sections))
+        updated = replace_catalogue(text, "\\n".join(sections))
         if updated != text:
             index_page.write_text(updated, encoding="utf-8")
             updated_pages += 1
+
     print(f"Updated {updated_pages} catalogue landing pages.")
     return 0
 

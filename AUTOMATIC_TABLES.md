@@ -256,3 +256,19 @@ and "Click for information" open the detailed table.
 The table builder adds `Flag-regular` to Flag-transitive database tables and
 `Flag-semiregular` to Block-transitive database tables. Missing counts are
 displayed as `0`.
+
+
+
+## Borderless catalogue grids and exceptional group notation
+
+The Flag-transitive and Block-transitive landing pages use the same `notice`
+box style as the detailed table pages, followed by an Atlas-style borderless
+12-column grid of available groups or degrees under each group class.
+
+Group and degree names in the grid open the corresponding raw `.g` file.
+The class heading and "Click for information (number of designs with certain
+symmetries)" open the detailed table for that class.
+
+Group-name rendering handles common exceptional notation, including `G2(3)` as
+`G_2(3)` and twisted notation such as `^2B2(8)` or `^2B_2(8)` as
+`{}^2B_2(8)`.

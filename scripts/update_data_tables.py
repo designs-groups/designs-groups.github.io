@@ -199,16 +199,38 @@ def row_anchor(source_path: str) -> str:
 def math_label(group: str) -> str:
     """Render common finite-group notation as inline LaTeX."""
     value = group.strip().replace("\\", r"\\")
+
+    # Twisted exceptional families: ^2B2(8), ^2B_2(8), ^2G2(27), ^3D4(2).
+    value = re.sub(
+        r"\^(\d+)([A-Za-z]+)_?(\d+)",
+        lambda m: f"^{{{m.group(1)}}}{m.group(2)}_{{{m.group(3)}}}",
+        value,
+    )
+
+    # Letter+number tokens: A6, G2, L3, M11, D12, etc.
     value = re.sub(
         r"([A-Za-z]+)(\d+)",
         lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
         value,
     )
+
+    # Existing indexed suffixes: 2_1, 3_2, etc.
     value = re.sub(
         r"(\d+)_(\d+)",
         lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
         value,
     )
+
+    # Remaining superscripts not already braced.
+    value = re.sub(
+        r"\^(\d+)",
+        lambda m: f"^{{{m.group(1)}}}",
+        value,
+    )
+
+    # Leading superscript notation uses empty base in LaTeX: {}^{2}B_{2}(8).
+    value = re.sub(r"^\^\{(\d+)\}", r"{}^{\1}", value)
+
     return rf"\({html.escape(value)}\)"
 
 
