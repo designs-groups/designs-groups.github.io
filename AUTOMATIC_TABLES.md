@@ -283,3 +283,19 @@ The previous `L3(4)` extension ordering is preserved.
 
 The catalogue landing pages use full-width, borderless, 14-column group grids.
 The catalogue notice is formatted as three lines.
+
+
+
+## Degree grids and sidebar links
+
+The Flag-transitive sidebar heading links back to the Flag-transitive landing
+page on the Flag-transitive branch pages.
+
+Transitive detailed table pages display `Degree` instead of `v`, and degree
+values are rendered as LaTeX and not bold. Primitive detailed table pages also
+use `Degree` as the first column heading.
+
+On the landing pages, the Transitive groups section title is displayed as
+`Transitive groups (of degrees)` only in the page content, not in the sidebar.
+Transitive and Primitive catalogue grids use 20 full-width columns; all other
+catalogue grids use 12 full-width, borderless, left-aligned columns.

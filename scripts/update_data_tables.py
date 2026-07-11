@@ -64,6 +64,18 @@ def is_transitive_source(source_path: str) -> bool:
         or source_path.startswith("Block-transitive/Transitive groups/")
     )
 
+def is_degree_source(source_path: str) -> bool:
+    return (
+        is_transitive_source(source_path)
+        or source_path.startswith("Flag-transitive/Primitive groups/")
+        or source_path.startswith("Block-transitive/Primitive groups/")
+    )
+
+
+def latex_degree(value: str) -> str:
+    return rf"\({html.escape(str(value))}\)"
+
+
 
 def parse_v(lines: list[str], text: str, filename_stem: str) -> str:
     """Read the number of points v for Transitive groups table rows.
@@ -475,6 +487,9 @@ def row_sort_key(row: RowData):
     if is_transitive_source(row.source_path):
         return (0, int(row.v), row.list_name.casefold())
 
+    if is_degree_source(row.source_path) and str(row.v).isdigit():
+        return (0, int(row.v), row.list_name.casefold())
+
     return (1, group_sort_key(row.group_label))
 
 
@@ -483,11 +498,13 @@ def build_row(row, repository, branch):
     url = raw_url(repository, branch, row.source_path)
     filename = Path(row.source_path).name
 
-    if is_transitive_source(row.source_path):
-        label = html.escape(row.v)
-        aria_label = f"Open data file for v = {row.v}"
+    if is_degree_source(row.source_path) and str(row.v) != "—":
+        label = latex_degree(row.v)
+        first_cell_class = "degree-cell"
+        aria_label = f"Open data file for degree {row.v}"
     else:
         label = math_label(row.group_label)
+        first_cell_class = "group-cell"
         aria_label = f"Open data file for {row.group_label}"
 
     cells = [
@@ -530,7 +547,7 @@ def build_row(row, repository, branch):
     aria-label="{html.escape(aria_label, quote=True)}"
     onclick="recordDataAccess(); window.open('{url_attr}', '_blank', 'noopener')"
     onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();recordDataAccess();window.open('{url_attr}', '_blank', 'noopener');}}">
-  <th><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{label}</a></th>
+  <th class="{first_cell_class}"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{label}</a></th>
   <td class="list-name"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();"><code>{list_name}</code></a></td>
   {numeric_cells}
   <td class="file-actions">

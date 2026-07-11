@@ -12,7 +12,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
-GRID_COLUMNS = 14
 
 
 def load_table_tools():
@@ -34,13 +33,48 @@ def source_path_from_raw_url(url: str, branch: str) -> str | None:
 
 
 def class_title(folder: str) -> str:
-    return folder.rsplit("/", 1)[1]
+    title = folder.rsplit("/", 1)[1]
+    if title == "Transitive groups":
+        return "Transitive groups (of degrees)"
+    return title
 
 
-def display_label(row, tools) -> str:
+def is_degree_family(folder: str) -> bool:
+    return folder.endswith("/Transitive groups") or folder.endswith("/Primitive groups")
+
+
+def grid_columns(folder: str) -> int:
+    return 20 if is_degree_family(folder) else 12
+
+
+def label_is_degree(label: str) -> bool:
+    value = re.sub(r"<.*?>", "", label).strip()
+    value = value.strip("\\() ")
+    return value.isdigit()
+
+
+def display_label(row, folder: str, tools) -> str:
+    if is_degree_family(folder) and str(row.v) != "—":
+        return tools.latex_degree(row.v)
     if tools.is_transitive_source(row.source_path):
-        return html.escape(row.v)
+        return tools.latex_degree(row.v)
     return tools.math_label(row.group_label)
+
+
+def normalize_fallback_label(label: str, source_path: str, tools) -> str:
+    if "Transitive groups" in source_path:
+        stem = Path(source_path).stem
+        m = re.search(r"(\d+)", stem)
+        if m:
+            return tools.latex_degree(m.group(1))
+
+    if "Primitive groups" in source_path:
+        plain = re.sub(r"<.*?>", "", label).strip()
+        plain = plain.strip("\\() ")
+        if plain.isdigit():
+            return tools.latex_degree(plain)
+
+    return label
 
 
 def table_link(index_page: Path, target_page_rel: str) -> str:
@@ -48,10 +82,11 @@ def table_link(index_page: Path, target_page_rel: str) -> str:
     return html.escape(target.relative_to(index_page.parent).as_posix(), quote=True)
 
 
-def data_link(url: str, label: str) -> str:
+def data_link(url: str, label: str, degree: bool) -> str:
     url_attr = html.escape(url, quote=True)
+    cls = "catalogue-degree-link" if degree else "catalogue-group-link"
     return (
-        f'<a class="catalogue-group-link" href="{url_attr}" '
+        f'<a class="{cls}" href="{url_attr}" '
         f'target="_blank" rel="noopener noreferrer" '
         f'onclick="recordDataAccess();">{label}</a>'
     )
@@ -68,7 +103,7 @@ def fallback_rows_from_table(page_rel: str, branch: str, tools):
     for match in re.finditer(r'<tr[^>]*class="linked-row"[^>]*>.*?</tr>', text, flags=re.S):
         row_html = match.group(0)
         href_match = re.search(
-            r'<th><a[^>]*href="([^"]+)"[^>]*>(.*?)</a>',
+            r'<th[^>]*><a[^>]*href="([^"]+)"[^>]*>(.*?)</a></th>',
             row_html,
             flags=re.S,
         )
@@ -80,6 +115,13 @@ def fallback_rows_from_table(page_rel: str, branch: str, tools):
         source_path = source_path_from_raw_url(url, branch)
         if not source_path:
             continue
+
+        label = normalize_fallback_label(label, source_path, tools)
+        degree = (
+            label_is_degree(label)
+            or "Transitive groups" in source_path
+            or "Primitive groups" in source_path
+        )
 
         total = "—"
         m_total = re.search(
@@ -98,6 +140,7 @@ def fallback_rows_from_table(page_rel: str, branch: str, tools):
 
         rows.append({
             "label": label,
+            "degree": degree,
             "total": total,
             "url": url,
             "sort_key": tools.group_sort_key(Path(source_path).stem),
@@ -116,8 +159,12 @@ def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: s
     for path in sorted(folder_path.rglob("*.g")):
         source_path = path.relative_to(data_root).as_posix()
         row = tools.parse_gap_file(path, source_path)
+        degree = is_degree_family(folder) or tools.is_transitive_source(row.source_path)
+        label = display_label(row, folder, tools)
+
         rows.append({
-            "label": display_label(row, tools),
+            "label": label,
+            "degree": degree,
             "total": row.total,
             "url": tools.raw_url(repository, branch, source_path),
             "sort_key": tools.row_sort_key(row),
@@ -126,27 +173,30 @@ def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: s
     return sorted(rows, key=lambda item: item["sort_key"])
 
 
-def build_group_grid(rows: list[dict]) -> str:
+def build_group_grid(folder: str, rows: list[dict]) -> str:
+    columns = grid_columns(folder)
+    class_extra = " catalogue-degree-grid" if is_degree_family(folder) else " catalogue-group-grid-standard"
     body_rows = []
 
     if not rows:
         empty_cells = [
             '<td class="catalogue-empty">No data files are currently available for this class.</td>'
-        ] + ['<td></td>' for _ in range(GRID_COLUMNS - 1)]
+        ] + ['<td></td>' for _ in range(columns - 1)]
         body_rows.append('      <tr>' + ''.join(empty_cells) + '</tr>')
     else:
-        for start in range(0, len(rows), GRID_COLUMNS):
-            chunk = rows[start:start + GRID_COLUMNS]
+        for start in range(0, len(rows), columns):
+            chunk = rows[start:start + columns]
             cells = [
-                '<td>' + data_link(item["url"], item["label"]) + '</td>'
+                '<td>' + data_link(item["url"], item["label"], item["degree"]) + '</td>'
                 for item in chunk
             ]
-            while len(cells) < GRID_COLUMNS:
+            while len(cells) < columns:
                 cells.append('<td></td>')
             body_rows.append('      <tr>' + ''.join(cells) + '</tr>')
 
     return (
-        '<table class="catalogue-group-grid" aria-label="Available groups or degrees">\n'
+        f'<table class="catalogue-group-grid{class_extra}" '
+        f'data-columns="{columns}" aria-label="Available groups or degrees">\n'
         '    <tbody>\n'
         + "\n".join(body_rows)
         + '\n    </tbody>\n'
@@ -158,7 +208,7 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
     title = html.escape(class_title(folder))
     table_href = table_link(index_page, page_rel)
     total_designs = sum(int(item["total"]) for item in rows if str(item["total"]).isdigit())
-    grid = build_group_grid(rows)
+    grid = build_group_grid(folder, rows)
 
     return (
         f'<section class="catalogue-family">\n'
