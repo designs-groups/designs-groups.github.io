@@ -1233,3 +1233,10 @@ h2 {
 .sidebar-box h3 a:focus {
   text-decoration: underline;
 }
+
+
+/* Bold only the group-class titles on the two main catalogue pages. */
+.catalogue-family h2,
+.catalogue-family h2 a {
+  font-weight: 700;
+}

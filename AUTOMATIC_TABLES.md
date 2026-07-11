@@ -309,3 +309,28 @@ respective main landing pages, and their linked text is forced to remain white.
 
 The page-content headings use the singular wording `Transitive groups (of degree)`
 and `Primitive groups (of degree)`. Sidebar labels remain unchanged.
+
+
+
+## Sidebar heading link correction
+
+The Block-transitive sidebar heading is linked back to the Block-transitive
+landing page on every Block-transitive branch page, including Alternating
+groups. The Flag-transitive sidebar heading is also checked in the same way.
+
+
+
+## Exceptional group notation fixes
+
+The group-name renderer repairs common compact exceptional labels in raw data
+or filenames. In particular, `2B2(8)` and `^2B_2(8)` render as
+`${}^{2}B_{2}(8)$`, `G23` or `G2(3)` renders as `$G_{2}(3)$`, and
+`3D4(2)` or `^3D_4(2)` renders as `${}^{3}D_{4}(2)$`.
+
+
+
+## Bold catalogue class titles
+
+On the Flag-transitive and Block-transitive main catalogue pages, only the
+group-class titles such as Alternating groups, Classical groups, and Sporadic
+groups are displayed in bold. Group entries and sidebar labels are unchanged.

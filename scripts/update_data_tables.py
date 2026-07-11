@@ -209,38 +209,67 @@ def row_anchor(source_path: str) -> str:
 
 
 def math_label(group: str) -> str:
-    """Render common finite-group notation as inline LaTeX."""
+    """Render common finite-group notation as inline LaTeX.
+
+    This handles ordinary families such as A6 and G2(3), indexed extensions
+    such as 2_1, and twisted exceptional notation such as ^2B2(8) and ^3D4(2).
+    """
     value = group.strip().replace("\\", r"\\")
+    value = value.replace("_", "")
+
+    # Insert the missing leading twist marker when the plain file/group label
+    # uses the standard exceptional abbreviations without the caret.
+    value = re.sub(r"(?<![A-Za-z0-9^])2B2(?=\()", r"^2B2", value)
+    value = re.sub(r"(?<![A-Za-z0-9^])2G2(?=\()", r"^2G2", value)
+    value = re.sub(r"(?<![A-Za-z0-9^])3D4(?=\()", r"^3D4", value)
 
     # Twisted exceptional families: ^2B2(8), ^2B_2(8), ^2G2(27), ^3D4(2).
     value = re.sub(
-        r"\^(\d+)([A-Za-z]+)_?(\d+)",
+        r"\^(\d+)([A-Za-z]+)(\d+)(?=\()",
         lambda m: f"^{{{m.group(1)}}}{m.group(2)}_{{{m.group(3)}}}",
         value,
     )
 
-    # Letter+number tokens: A6, G2, L3, M11, D12, etc.
+    # Letter+number family names only when followed by a field/order parenthesis:
+    # G2(3), L3(4), U4(2), PSp4(3), etc.
+    # This avoids turning G23 into G_{23}; it becomes G_{2}(3) through the
+    # correction below.
     value = re.sub(
-        r"([A-Za-z]+)(\d+)",
+        r"([A-Za-z]+)(\d+)(?=\()",
         lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
         value,
     )
 
-    # Existing indexed suffixes: 2_1, 3_2, etc.
+    # Sporadic and alternating/symmetric style names: M11, J1, Co1, A6, S6.
+    value = re.sub(
+        r"\b(M|J|Co|Fi|HS|McL|He|Ru|Suz|ON|HN|Th|Ly|A|S)(\d+)\b",
+        lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
+        value,
+    )
+
+    # Repair compact exceptional strings like G23 and F24 if they occur:
+    # G23 -> G_2(3), F24 -> F_4(2), E68 -> E_6(8), E78 -> E_7(8), E88 -> E_8(8).
+    value = re.sub(
+        r"\b([GEF])_?([24678])(\d+)\b",
+        lambda m: f"{m.group(1)}_{{{m.group(2)}}}({m.group(3)})",
+        value,
+    )
+
+    # Indexed extension suffixes such as 2_1 or 3_2; after underscore removal
+    # this still catches labels already converted in older pages only through
+    # static cleanup below. New generated labels come from raw group labels.
     value = re.sub(
         r"(\d+)_(\d+)",
         lambda m: f"{m.group(1)}_{{{m.group(2)}}}",
         value,
     )
 
-    # Remaining superscripts not already braced.
+    # Remaining leading superscripts not already braced.
     value = re.sub(
         r"\^(\d+)",
         lambda m: f"^{{{m.group(1)}}}",
         value,
     )
-
-    # Leading superscript notation uses empty base in LaTeX: {}^{2}B_{2}(8).
     value = re.sub(r"^\^\{(\d+)\}", r"{}^{\1}", value)
 
     return rf"\({html.escape(value)}\)"
