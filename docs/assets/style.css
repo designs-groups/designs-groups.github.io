@@ -1286,3 +1286,28 @@ h2 {
     text-align: left;
   }
 }
+
+
+/* Main catalogue pages: one full-width line below the class/action row. */
+.catalogue-family {
+  border-top: 0 !important;
+  padding-top: 8px;
+}
+
+.catalogue-family-header {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+  margin-bottom: 7px;
+}
+
+.catalogue-family-header h2 a,
+.catalogue-family-actions > a {
+  text-decoration: none !important;
+}
+
+.catalogue-family-header h2 a:hover,
+.catalogue-family-header h2 a:focus,
+.catalogue-family-actions > a:hover,
+.catalogue-family-actions > a:focus {
+  text-decoration: none !important;
+}

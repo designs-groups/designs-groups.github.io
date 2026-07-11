@@ -367,3 +367,12 @@ full automorphism group `Aut(D)`. Accepted metadata includes forms such as
 
 Three-number summary rows such as `Anti-flag-transitive 0 0 7` are ignored for
 these G-based columns.
+
+
+
+## Catalogue header-line cleanup
+
+On the Flag-transitive and Block-transitive main catalogue pages, the line above
+each group-class section is removed. A single full-width line is placed below
+the class/action row instead. Underlines are removed from the class-title and
+`Click for information` links in that row.
