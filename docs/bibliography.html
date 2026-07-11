@@ -13,17 +13,13 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
 <script>
 
 
 const VISIT_BASELINE = 156;
-const visitCounter = new Counter({
-  version: "v1",
-  namespace: "designs-groups-github-io-20260711",
-  timeout: 8000
-});
+const VISIT_COUNTER_URL =
+  "https://api.counterapi.dev/v1/" +
+  "designs-groups-github-io-20260711/site-visits/up";
 
 function setVisitNumber(value) {
   document.querySelectorAll(".footer-visits-number").forEach((target) => {
@@ -31,14 +27,45 @@ function setVisitNumber(value) {
   });
 }
 
+function extractCounterValue(data) {
+  const candidates = [
+    data && data.count,
+    data && data.value,
+    data && data.data && data.data.count,
+    data && data.data && data.data.value
+  ];
+
+  for (const candidate of candidates) {
+    const value = Number(candidate);
+
+    if (Number.isFinite(value)) {
+      return value;
+    }
+  }
+
+  return null;
+}
+
 async function incrementVisitCounter() {
   try {
-    const result = await visitCounter.up("site-visits");
-    const current = Number(result.value);
+    const response = await fetch(VISIT_COUNTER_URL, {
+      method: "GET",
+      cache: "no-store",
+      mode: "cors"
+    });
 
-    if (Number.isFinite(current)) {
-      setVisitNumber(VISIT_BASELINE + current);
+    if (!response.ok) {
+      throw new Error("Counter request failed: " + response.status);
     }
+
+    const data = await response.json();
+    const current = extractCounterValue(data);
+
+    if (current === null) {
+      throw new Error("Counter response did not contain a numeric count.");
+    }
+
+    setVisitNumber(VISIT_BASELINE + current);
   } catch (error) {
     console.warn("Visit counter update failed:", error);
   }
@@ -51,7 +78,6 @@ function recordDataAccess() {
 document.addEventListener("DOMContentLoaded", () => {
   incrementVisitCounter();
 });
-
 
 async function downloadRawFile(url, filename) {
   try {

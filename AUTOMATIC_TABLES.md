@@ -256,3 +256,17 @@ in a new tab.
 The CounterAPI browser library is loaded before the inline code that constructs
 `new Counter(...)`. This order is required; otherwise the browser raises
 `Counter is not defined` and the visible total stays at its fallback value.
+
+
+## Direct live visit counter
+
+The live visit counter uses the CounterAPI V1 REST endpoint directly rather
+than the JavaScript client library. The response parser accepts both `count`
+and `value` fields, including nested `data.count` and `data.value` variants.
+
+This avoids a response-shape mismatch in which a successful V1 response can
+contain `count` while code that reads only `value` leaves the visible fallback
+number unchanged.
+
+The footer remains plain text with no badge or box. Page loads and data-access
+actions increment the same counter.
