@@ -375,56 +375,101 @@ def page_for_source(source_path, folder_pages, overrides):
     return matches[0][1]
 
 
+def normalize_group_sort_text(group: str) -> str:
+    value = group.strip()
+    value = value.replace("\\", "")
+    value = value.replace("{", "").replace("}", "")
+    value = value.replace("mathrm", "")
+    value = value.replace(" ", "")
+    value = value.replace(".", ":")
+    return value
+
+
+def split_top_level_extensions(group: str):
+    value = normalize_group_sort_text(group)
+    parts = []
+    current = []
+    depth = 0
+
+    for char in value:
+        if char == "(":
+            depth += 1
+            current.append(char)
+        elif char == ")":
+            depth = max(0, depth - 1)
+            current.append(char)
+        elif char == ":" and depth == 0:
+            parts.append("".join(current))
+            current = []
+        else:
+            current.append(char)
+
+    parts.append("".join(current))
+    return parts
+
+
 def natural_text_key(text: str):
-    """Natural key for the base group name."""
-    tokens = re.findall(r"\d+|[A-Za-z]+|[^A-Za-z0-9]+", text)
+    value = normalize_group_sort_text(text)
     key = []
 
-    for token in tokens:
+    for token in re.findall(r"\^|\d+|[A-Za-z]+|.", value):
         if token.isdigit():
-            key.append((1, int(token)))
+            key.append((0, int(token)))
         elif token.isalpha():
-            key.append((0, token.casefold()))
-        else:
+            key.append((1, token.casefold()))
+        elif token == "^":
             key.append((2, token))
+        else:
+            key.append((3, token))
 
     return tuple(key)
 
 
 def extension_component_sort_key(component: str):
-    """Sort one colon-separated extension component."""
-    component = component.strip()
+    value = normalize_group_sort_text(component)
 
-    m = re.fullmatch(r"(\d+)", component)
+    if value in {"", "1"}:
+        return (0, 0, 0, "")
+
+    m = re.fullmatch(r"(\d+)", value)
     if m:
-        return (int(m.group(1)), 0, 0, 0, "")
+        n = int(m.group(1))
+        return (n, 0, 0, "")
 
-    m = re.fullmatch(r"(\d+)_(\d+)", component)
+    m = re.fullmatch(r"(\d+)_(\d+)", value)
     if m:
-        return (int(m.group(1)), 0, 1, int(m.group(2)), "")
+        return (int(m.group(1)), 1, int(m.group(2)), "")
 
-    m = re.fullmatch(r"(\d+)\^(\d+)", component)
+    m = re.fullmatch(r"(\d+)\^(\d+)", value)
     if m:
-        return (int(m.group(1)), 0, 2, int(m.group(2)), "")
+        return (int(m.group(1)), 2, int(m.group(2)), "")
 
-    m = re.fullmatch(r"([A-Za-z]+)(\d+)", component)
+    # Named extensions with a visible number: S3, D12, etc.
+    m = re.fullmatch(r"([A-Za-z]+)(\d+)", value)
     if m:
         letters, number = m.groups()
-        return (int(number), 1, 0, 0, letters.casefold())
+        return (int(number), 4, 0, letters.casefold())
 
-    return (10**9, 2, 0, 0, natural_text_key(component))
+    return (10**9, 5, 0, natural_text_key(value))
 
 
 def group_sort_key(group: str):
-    """Sort a group name by base group and colon-extension structure."""
-    parts = [part.strip() for part in group.split(":")]
+    """Sort group names by base group and top-level extensions.
+
+    Examples: G2(3) < G2(3):3 and
+    L3(4) < L3(4):2_1 < L3(4):2_2 < L3(4):2^2
+          < L3(4):3 < L3(4):3:2_1 < L3(4):3:2_2
+          < L3(4):S3 < L3(4):D12.
+    """
+    parts = split_top_level_extensions(group)
     base = parts[0]
-    extensions = tuple(
-        extension_component_sort_key(part) for part in parts[1:]
+    extensions = parts[1:]
+
+    return (
+        natural_text_key(base),
+        tuple(extension_component_sort_key(part) for part in extensions),
+        normalize_group_sort_text(group).casefold(),
     )
-
-    return (natural_text_key(base), extensions)
-
 
 def row_sort_key(row: RowData):
     if is_transitive_source(row.source_path):

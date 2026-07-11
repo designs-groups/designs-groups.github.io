@@ -12,7 +12,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
-GRID_COLUMNS = 12
+GRID_COLUMNS = 14
 
 
 def load_table_tools():
@@ -96,9 +96,14 @@ def fallback_rows_from_table(page_rel: str, branch: str, tools):
         if m_total:
             total = re.sub(r"<.*?>", "", m_total.group(1)).strip()
 
-        rows.append({"label": label, "total": total, "url": url, "sort_key": label})
+        rows.append({
+            "label": label,
+            "total": total,
+            "url": url,
+            "sort_key": tools.group_sort_key(Path(source_path).stem),
+        })
 
-    return rows
+    return sorted(rows, key=lambda item: item["sort_key"])
 
 
 def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: str, tools):
@@ -141,10 +146,10 @@ def build_group_grid(rows: list[dict]) -> str:
             body_rows.append('      <tr>' + ''.join(cells) + '</tr>')
 
     return (
-        '<table class="catalogue-group-grid" aria-label="Available groups or degrees">\\n'
-        '    <tbody>\\n'
-        + "\\n".join(body_rows)
-        + '\\n    </tbody>\\n'
+        '<table class="catalogue-group-grid" aria-label="Available groups or degrees">\n'
+        '    <tbody>\n'
+        + "\n".join(body_rows)
+        + '\n    </tbody>\n'
         '</table>'
     )
 
@@ -156,26 +161,26 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
     grid = build_group_grid(rows)
 
     return (
-        f'<section class="catalogue-family">\\n'
-        f'  <div class="catalogue-family-header">\\n'
-        f'    <h2><a href="{table_href}">{title}</a></h2>\\n'
-        f'    <div class="catalogue-family-actions">\\n'
+        f'<section class="catalogue-family">\n'
+        f'  <div class="catalogue-family-header">\n'
+        f'    <h2><a href="{table_href}">{title}</a></h2>\n'
+        f'    <div class="catalogue-family-actions">\n'
         f'      <a href="{table_href}">Click for information '
-        f'(number of designs with certain symmetries)</a>\\n'
-        f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\\n'
-        f'    </div>\\n'
-        f'  </div>\\n'
-        f'  {grid}\\n'
+        f'(number of designs with certain symmetries)</a>\n'
+        f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\n'
+        f'    </div>\n'
+        f'  </div>\n'
+        f'  {grid}\n'
         f'</section>'
     )
 
 
 def landing_notice() -> str:
     return (
-        '<p class="notice catalogue-notice">\\n'
-        '  The groups or degrees listed below are those for which data files are currently available in this part of the database. '
-        'Click a group or degree name to open the corresponding raw GAP file.<br>\\n'
-        '  The link <strong>Click for information (number of designs with certain symmetries)</strong> opens the detailed table for the corresponding group class, where the number of designs with each recorded symmetry property is displayed.\\n'
+        '<p class="notice catalogue-notice">\n'
+        '  Click a group or degree name to open the corresponding raw GAP data file.<br>\n'
+        '  Click a class heading to open the detailed table for that class.<br>\n'
+        '  Click <strong>Click for information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.\n'
         '</p>'
     )
 
@@ -183,7 +188,7 @@ def landing_notice() -> str:
 def replace_catalogue(page_text: str, catalogue_html: str) -> str:
     start = "<!-- CATALOGUE_GROUPS_START -->"
     end = "<!-- CATALOGUE_GROUPS_END -->"
-    replacement = f"{start}\\n{landing_notice()}\\n{catalogue_html}\\n{end}"
+    replacement = f"{start}\n{landing_notice()}\n{catalogue_html}\n{end}"
 
     if start in page_text and end in page_text:
         pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), flags=re.S)
@@ -232,7 +237,7 @@ def main() -> int:
             sections.append(build_family_section(index_page, folder, page_rel, rows))
 
         text = index_page.read_text(encoding="utf-8")
-        updated = replace_catalogue(text, "\\n".join(sections))
+        updated = replace_catalogue(text, "\n".join(sections))
         if updated != text:
             index_page.write_text(updated, encoding="utf-8")
             updated_pages += 1

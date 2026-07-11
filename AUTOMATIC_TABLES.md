@@ -272,3 +272,14 @@ symmetries)" open the detailed table for that class.
 Group-name rendering handles common exceptional notation, including `G2(3)` as
 `G_2(3)` and twisted notation such as `^2B2(8)` or `^2B_2(8)` as
 `{}^2B_2(8)`.
+
+
+
+## Group sorting and 14-column catalogue grids
+
+Group sorting is automatic and uses a top-level extension parser. Base groups
+are ordered before their extensions, for example `G2(3)` before `G2(3):3`.
+The previous `L3(4)` extension ordering is preserved.
+
+The catalogue landing pages use full-width, borderless, 14-column group grids.
+The catalogue notice is formatted as three lines.
