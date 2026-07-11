@@ -217,7 +217,7 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
         f'  <div class="catalogue-family-header">\n'
         f'    <h2><a href="{table_href}">{title}</a></h2>\n'
         f'    <div class="catalogue-family-actions">\n'
-        f'      <a href="{table_href}">Click for information '
+        f'      <a href="{table_href}">Enumeration information '
         f'(number of designs with certain symmetries)</a>\n'
         f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\n'
         f'    </div>\n'
@@ -232,7 +232,7 @@ def landing_notice() -> str:
         '<p class="notice catalogue-notice">\n'
         '  Click a group or degree name to open the corresponding raw GAP data file.<br>\n'
         '  Click a class heading to open the detailed table for that class.<br>\n'
-        '  Click <strong>Click for information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.\n'
+        '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.\n'
         '</p>'
     )
 

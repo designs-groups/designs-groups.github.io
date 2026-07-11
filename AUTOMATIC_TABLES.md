@@ -251,7 +251,7 @@ The catalogue is rebuilt automatically after the database tables are rebuilt.
 The Flag-transitive and Block-transitive landing pages use an Atlas-style
 inline list under each group class rather than a table. A remark box explains
 that group or degree names open raw `.g` data files, while the class heading
-and "Click for information" open the detailed table.
+and "Enumeration information" open the detailed table.
 
 The table builder adds `Flag-regular` to Flag-transitive database tables and
 `Flag-semiregular` to Block-transitive database tables. Missing counts are
@@ -266,7 +266,7 @@ box style as the detailed table pages, followed by an Atlas-style borderless
 12-column grid of available groups or degrees under each group class.
 
 Group and degree names in the grid open the corresponding raw `.g` file.
-The class heading and "Click for information (number of designs with certain
+The class heading and "Enumeration information (number of designs with certain
 symmetries)" open the detailed table for that class.
 
 Group-name rendering handles common exceptional notation, including `G2(3)` as
@@ -349,7 +349,7 @@ as `G2(3)`, `2B2(8)` as `{}^2B_2(8)`, and `3D4(2)` as `{}^3D_4(2)`.
 ## Aligned catalogue action columns
 
 On the Flag-transitive and Block-transitive main catalogue pages, the class
-title, `Click for information (number of designs with certain symmetries)`, and
+title, `Enumeration information (number of designs with certain symmetries)`, and
 `Number of designs` text are aligned in fixed columns. On narrower screens the
 layout falls back to a single left-aligned column.
 
@@ -375,7 +375,7 @@ these G-based columns.
 On the Flag-transitive and Block-transitive main catalogue pages, the line above
 each group-class section is removed. A single full-width line is placed below
 the class/action row instead. Underlines are removed from the class-title and
-`Click for information` links in that row.
+`Enumeration information` links in that row.
 
 
 
@@ -384,3 +384,12 @@ the class/action row instead. Underlines are removed from the class-title and
 On the Flag-transitive and Block-transitive main catalogue pages, conflicting
 separator rules are overridden so that each group-class header has exactly one
 full-width line below the class/action row and no extra line above it.
+
+
+
+## Enumeration-information wording everywhere
+
+The catalogue action-link wording has been updated throughout the package to
+`Enumeration information (number of designs with certain symmetries)`. This
+change applies to static pages, automatic catalogue-generation scripts, and
+documentation.
