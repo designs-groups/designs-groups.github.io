@@ -1341,58 +1341,58 @@ h2 {
 }
 
 
-
 /* Conditional-data marker. */
 .conditional-star {
-  color: #c00000;
-  font-weight: 700;
-  margin-left: 2px;
+  color: #c00000 !important;
+  font-weight: 800 !important;
+  font-size: 130% !important;
+  line-height: 1;
+  margin-left: 3px;
+  vertical-align: baseline;
 }
 
 /* Author portraits. */
-.author-card-simple {
-  display: flex;
+.author-card-with-portrait {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  column-gap: 22px;
   align-items: stretch;
-  gap: 16px;
+  background: var(--blue-pale);
+  overflow: hidden;
 }
 
-.author-details {
-  flex: 1 1 auto;
+.author-info {
   min-width: 0;
 }
 
-.author-portrait-wrap {
-  flex: 0 0 132px;
-  align-self: stretch;
-  border-radius: 8px;
-  overflow: hidden;
+.author-portrait-box {
+  width: 230px;
+  min-height: 290px;
   background: var(--blue-pale);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .author-portrait {
-  width: 132px;
-  height: 176px;
-  object-fit: cover;
+  width: 230px;
+  height: 290px;
+  object-fit: contain;
+  object-position: center bottom;
   display: block;
+  background: var(--blue-pale);
 }
 
-.author-portrait-alavi {
-  object-position: 50% 28%;
-}
-
-.author-portrait-daneshkhah {
-  object-position: 50% 18%;
-}
-
-@media (max-width: 760px) {
-  .author-card-simple {
-    flex-direction: column;
+@media (max-width: 1100px) {
+  .author-card-with-portrait {
+    grid-template-columns: 1fr;
   }
 
-  .author-portrait-wrap {
-    align-self: flex-start;
+  .author-portrait-box {
+    justify-self: center;
+    margin-top: 12px;
   }
 }
+

@@ -415,3 +415,12 @@ under some conditions.
 On the Flag-transitive and Block-transitive main catalogue pages, the notice box
 uses bold wording for `group or degree` in the first line. The old wording
 `class heading` is changed to the bold phrase `group type heading`.
+
+
+
+## Author portraits and red conditional marker
+
+The conditional-data marker is a red `*`, displayed slightly larger than the
+surrounding text. The author portraits are placed to the right of each author
+information block. Portrait canvases are matched in size and use the same
+background colour as the author boxes; faces are not altered.
