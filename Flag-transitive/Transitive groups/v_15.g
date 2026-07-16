@@ -3903,3 +3903,238 @@ for D in lD_3p5d2x2p4dS5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock 
 #I  
 #I  [ 95, 104, "(A5xA5xA5):6" ]
 #I  rank : 4
+
+#I  95 : 104 done .. 
+
+#I  
+#I  [ 96, 104, "(A5xA5xA5):S3" ]
+#I  rank : 3
+
+#I  96 : 104 done .. 
+
+#I  
+#I  [ 97, 104, "(A5xA5xA5):D12" ]
+#I  rank : 3
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+
+#I  97 : 104 done .. 
+
+#I  
+#I  [ 98, 104, "(A5xA5xA5):A4" ]
+#I  rank : 4
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+
+#I  98 : 104 done .. 
+
+#I  
+#I  [ 99, 104, "(A5xA5xA5):S4" ]
+#I  rank : 3
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+
+#I  99 : 104 done .. 
+
+#I  
+#I  [ 100, 104, "(A5xA5xA5):S4" ]
+#I  rank : 3
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+
+#I  100 : 104 done .. 
+
+#I  
+#I  [ 101, 104, "(A5xA5xA5):(2xA4)" ]
+#I  rank : 4
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
