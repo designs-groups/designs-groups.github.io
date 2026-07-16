@@ -427,9 +427,9 @@ background colour as the author boxes; faces are not altered.
 
 
 
-## Oval author portraits
+## Clean author portrait placement
 
-On the authors page, the portraits are centred in the blank space on the right
-side of each author box. The portraits use an oval crop and matched size.
-Seyed Hassan Alavi's portrait is mirrored across the vertical axis. Background
-changes, resizing, and cropping are allowed; faces are not altered.
+The author portraits use the original images again, with no face processing or
+background replacement. Seyed Hassan Alavi's portrait is mirrored across the
+vertical axis. Both portraits are positioned in the blank right-side area of
+their author boxes and vertically centred, rather than below the address.

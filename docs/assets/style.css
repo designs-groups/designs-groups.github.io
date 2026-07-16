@@ -1351,28 +1351,24 @@ h2 {
   vertical-align: baseline;
 }
 
-/* Author portraits. */
 
 
-
-
-@media (max-width: 1100px) {
-  
-
-/* Author portraits: text on the left, portrait centred in the blank area on the right. */
-.author-grid.author-grid-portraits {
+/* Author portraits: clean original images, portrait on the right side of each box. */
+.author-grid.author-grid-clean {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin: 15px 0 20px;
 }
 
-.author-card-portrait-layout {
+.author-card-photo-right {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 240px;
-  column-gap: 16px;
+  grid-template-columns: minmax(0, 1fr) 245px;
+  column-gap: 18px;
   align-items: stretch;
   min-height: 380px;
+  background: var(--blue-pale);
+  overflow: hidden;
 }
 
 .author-text-block {
@@ -1385,31 +1381,42 @@ h2 {
 }
 
 .author-photo-space {
-  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--blue-pale);
+  min-height: 100%;
+  padding: 0 4px;
 }
 
-.author-portrait-oval {
-  width: 220px;
-  height: 270px;
+.author-portrait-clean {
   display: block;
+  max-width: 235px;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+.author-portrait-alavi-clean {
+  max-width: 225px;
+  max-height: 310px;
+}
+
+.author-portrait-daneshkhah-clean {
+  max-width: 235px;
+  max-height: 315px;
 }
 
 @media (max-width: 1100px) {
-  .author-grid.author-grid-portraits {
+  .author-grid.author-grid-clean {
     grid-template-columns: 1fr;
-  }
-
-  .author-card-portrait-layout {
-    grid-template-columns: minmax(0, 1fr) 220px;
   }
 }
 
 @media (max-width: 800px) {
-  .author-card-portrait-layout {
+  .author-card-photo-right {
     grid-template-columns: 1fr;
     min-height: auto;
   }
