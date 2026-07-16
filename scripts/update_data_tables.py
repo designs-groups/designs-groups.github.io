@@ -32,6 +32,7 @@ class RowData:
     anti_flag_transitive: str
     comment: str
     refkeys: str
+    conditional: bool
 
 
 def clean_comment_line(line: str) -> str:
@@ -49,15 +50,18 @@ def parse_three_count(lines: list[str], label_pattern: str):
             return m.group(1), m.group(2), m.group(3)
     return None
 
+def missing_count_cell() -> str:
+    return "—"
+
+
 def property_value_to_count(value: str) -> str | None:
-    """Convert a .g metadata value to a count."""
+    """Convert explicit G-property metadata to a count."""
     value = value.strip().rstrip(";").strip()
     if not value:
         return None
 
     lower = value.casefold()
 
-    # Lists of booleans or design indices, e.g. [ true, false ] or [1, 3].
     list_match = re.search(r"\[(.*?)\]", value, re.S)
     if list_match:
         body = list_match.group(1).strip()
@@ -74,11 +78,9 @@ def property_value_to_count(value: str) -> str | None:
 
         return None
 
-    # A pure integer is already the required count.
     if re.fullmatch(r"\d+", value):
         return str(int(value))
 
-    # For per-design property lines, each true contributes 1 and false 0.
     if re.search(r"\btrue\b", lower):
         return "1"
 
@@ -97,17 +99,9 @@ def property_value_to_count(value: str) -> str | None:
 def parse_g_property_count(lines: list[str], patterns: list[str]) -> str:
     """Read a property count for the constructing group G.
 
-    This is used for columns such as Flag-regular, Flag-semiregular, and
-    Anti-flag-transitive.  The value is interpreted for G=BDautSubgroup(D),
-    not for Aut(D).
-
-    Accepted line styles include, for example:
-        Flag-regular: true
-        Flag-regular true
-        flagRegular := false;
-        Flag-semiregular: [ true, false, true ]
-        Anti-flag-transitive: [ 1, 4, 7 ]
-        antiFlagTransitive := 2;
+    Used for Flag-regular, Flag-semiregular, and Anti-flag-transitive.  The
+    value is interpreted for G=BDautSubgroup(D), not for Aut(D).  If no explicit
+    true/false/count/list data is present, return "—".
     """
     count = 0
     seen = False
@@ -122,19 +116,15 @@ def parse_g_property_count(lines: list[str], patterns: list[str]) -> str:
             if not m:
                 continue
 
-            # Ignore three-number summary rows such as
-            # "Anti-flag-transitive 0 0 7"; those may refer to Aut(D)
-            # and are not the requested G-property source.
             after = stripped[m.end():].strip()
+
+            # Ignore three-number summary rows for these G-based properties.
             if re.fullmatch(r"\d+\s+\d+\s+\d+", after):
                 continue
 
-            value = after
-            value = re.sub(r"^\s*(?::=|=|:)\s*", "", value).strip()
+            value = re.sub(r"^\s*(?::=|=|:)\s*", "", after).strip()
             if not value:
-                # Try assignment/value before the property name.
-                before = stripped[:m.start()].strip()
-                value = before
+                value = stripped[:m.start()].strip()
 
             parsed = property_value_to_count(value)
             if parsed is not None:
@@ -142,9 +132,43 @@ def parse_g_property_count(lines: list[str], patterns: list[str]) -> str:
                 seen = True
                 break
 
-    return str(count) if seen else "0"
+    return str(count) if seen else missing_count_cell()
 
 
+def first_remark_line(lines: list[str]) -> str:
+    for i, line in enumerate(lines):
+        if re.match(r"^Remarks?\s*:?\s*$", line, re.I):
+            for nxt in lines[i+1:]:
+                if nxt.strip():
+                    return nxt.strip()
+        m = re.match(r"^Remarks?\s*:\s*(.+)$", line, re.I)
+        if m:
+            return m.group(1).strip()
+    return "—"
+
+
+def is_conditional_remark(comment: str) -> bool:
+    if comment == "—":
+        return False
+
+    value = comment.casefold()
+    all_design_patterns = [
+        r"\ball\s+designs\b",
+        r"\bcomplete\s+list\b",
+        r"\bcomplete\s+enumeration\b",
+    ]
+    no_design_patterns = [
+        r"\bthere\s+(?:exists|exist|are|is)\s+no\b",
+        r"\bno\s+designs\b",
+        r"\bnone\b",
+    ]
+
+    if any(re.search(pattern, value) for pattern in all_design_patterns):
+        return False
+    if any(re.search(pattern, value) for pattern in no_design_patterns):
+        return False
+
+    return True
 
 def parse_group_label(lines: list[str], filename_stem: str) -> str:
     for line in lines:
@@ -390,8 +414,6 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
 
     symmetric, nonsymmetric, total = total_row
 
-    # These three columns are read from explicit G-property lines in the .g
-    # file. They are not taken from the three-number Aut(D)-style summary rows.
     flag_regular = parse_g_property_count(
         lines,
         [
@@ -420,7 +442,9 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
         ],
     )
 
-    comment = parse_comment(lines)
+    comment = first_remark_line(lines)
+    if comment == "—":
+        comment = parse_comment(lines)
     if comment != "—":
         comment = comment[:1].upper() + comment[1:]
 
@@ -432,28 +456,29 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
         total=total,
         symmetric=symmetric,
         nonsymmetric=nonsymmetric,
-        point_primitive=point_prim[2] if point_prim else "0",
-        point_imprimitive=point_imprim[2] if point_imprim else "0",
-        block_primitive=block_prim[2] if block_prim else "0",
-        block_imprimitive=block_imprim[2] if block_imprim else "0",
+        point_primitive=point_prim[2] if point_prim else missing_count_cell(),
+        point_imprimitive=point_imprim[2] if point_imprim else missing_count_cell(),
+        block_primitive=block_prim[2] if block_prim else missing_count_cell(),
+        block_imprimitive=block_imprim[2] if block_imprim else missing_count_cell(),
         flag_transitive=(
             total
             if source_path.startswith("Flag-transitive/")
-            else (flag_trans[2] if flag_trans else "0")
+            else (flag_trans[2] if flag_trans else missing_count_cell())
         ),
         flag_regular=(
             flag_regular
             if source_path.startswith("Flag-transitive/")
-            else "0"
+            else missing_count_cell()
         ),
         flag_semiregular=(
             flag_semiregular
             if source_path.startswith("Block-transitive/")
-            else "0"
+            else missing_count_cell()
         ),
         anti_flag_transitive=anti_flag,
         comment=comment,
         refkeys=parse_reference_keys(lines),
+        conditional=is_conditional_remark(comment),
     )
 
 def raw_url(repository: str, branch: str, source_path: str) -> str:

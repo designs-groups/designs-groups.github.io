@@ -84,13 +84,18 @@ def table_link(index_page: Path, target_page_rel: str) -> str:
     return html.escape(target.relative_to(index_page.parent).as_posix(), quote=True)
 
 
-def data_link(url: str, label: str, degree: bool) -> str:
+def conditional_star(conditional: bool) -> str:
+    return '<span class="conditional-star" title="The designs for this group are obtained under some conditions.">*</span>' if conditional else ""
+
+
+def data_link(url: str, label: str, degree: bool, conditional: bool = False) -> str:
     url_attr = html.escape(url, quote=True)
     cls = "catalogue-degree-link" if degree else "catalogue-group-link"
     return (
         f'<a class="{cls}" href="{url_attr}" '
         f'target="_blank" rel="noopener noreferrer" '
         f'onclick="recordDataAccess();">{label}</a>'
+        + conditional_star(conditional)
     )
 
 
@@ -146,6 +151,7 @@ def fallback_rows_from_table(page_rel: str, branch: str, tools):
             "total": total,
             "url": url,
             "sort_key": tools.group_sort_key(Path(source_path).stem),
+            "conditional": False,
         })
 
     return sorted(rows, key=lambda item: item["sort_key"])
@@ -170,6 +176,7 @@ def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: s
             "total": row.total,
             "url": tools.raw_url(repository, branch, source_path),
             "sort_key": tools.row_sort_key(row),
+            "conditional": row.conditional,
         })
 
     return sorted(rows, key=lambda item: item["sort_key"])
@@ -189,7 +196,7 @@ def build_group_grid(folder: str, rows: list[dict]) -> str:
         for start in range(0, len(rows), columns):
             chunk = rows[start:start + columns]
             cells = [
-                '<td>' + data_link(item["url"], item["label"], item["degree"]) + '</td>'
+                '<td>' + data_link(item["url"], item["label"], item["degree"], item.get("conditional", False)) + '</td>'
                 for item in chunk
             ]
             while len(cells) < columns:
@@ -230,9 +237,9 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
 def landing_notice() -> str:
     return (
         '<p class="notice catalogue-notice">\n'
-        '  Click a group or degree name to open the corresponding raw GAP data file.<br>\n'
-        '  Click a class heading to open the detailed table for that class.<br>\n'
-        '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.\n'
+        '  Click a <strong>group or degree</strong> name to open the corresponding raw GAP data file.<br>\n'
+        '  Click a <strong>group type heading</strong> to open the detailed table for that group type.<br>\n'
+        '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.<br>\n  A red <span class=\"conditional-star\">*</span> means that the designs for this group are obtained under some conditions.\n'
         '</p>'
     )
 

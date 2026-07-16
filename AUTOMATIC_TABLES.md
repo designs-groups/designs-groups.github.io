@@ -393,3 +393,25 @@ The catalogue action-link wording has been updated throughout the package to
 `Enumeration information (number of designs with certain symmetries)`. This
 change applies to static pages, automatic catalogue-generation scripts, and
 documentation.
+
+
+## Missing property counts and conditional data
+
+When a `.g` file contains no explicit count, true/false value, or list for an
+enumeration-property column, the associated table cell displays `—`. This means
+that the number of designs with that property has not been computed or is not
+available from the data file.
+
+The first line of the `Remark:` or `Remarks:` section is written in the Comments
+column. If that line does not state that all designs are included, or that no
+designs exist, the row is treated as conditional. The main catalogue pages mark
+such groups by a red `*`, meaning that the designs for the group are obtained
+under some conditions.
+
+
+
+## Catalogue notice bold wording
+
+On the Flag-transitive and Block-transitive main catalogue pages, the notice box
+uses bold wording for `group or degree` in the first line. The old wording
+`class heading` is changed to the bold phrase `group type heading`.

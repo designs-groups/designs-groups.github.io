@@ -1340,3 +1340,59 @@ h2 {
   text-decoration: none !important;
 }
 
+
+
+/* Conditional-data marker. */
+.conditional-star {
+  color: #c00000;
+  font-weight: 700;
+  margin-left: 2px;
+}
+
+/* Author portraits. */
+.author-card-simple {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.author-details {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.author-portrait-wrap {
+  flex: 0 0 132px;
+  align-self: stretch;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--blue-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-portrait {
+  width: 132px;
+  height: 176px;
+  object-fit: cover;
+  display: block;
+}
+
+.author-portrait-alavi {
+  object-position: 50% 28%;
+}
+
+.author-portrait-daneshkhah {
+  object-position: 50% 18%;
+}
+
+@media (max-width: 760px) {
+  .author-card-simple {
+    flex-direction: column;
+  }
+
+  .author-portrait-wrap {
+    align-self: flex-start;
+  }
+}
