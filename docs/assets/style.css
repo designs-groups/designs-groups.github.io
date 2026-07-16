@@ -1352,47 +1352,70 @@ h2 {
 }
 
 /* Author portraits. */
-.author-card-with-portrait {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 230px;
-  column-gap: 22px;
-  align-items: stretch;
-  background: var(--blue-pale);
-  overflow: hidden;
+
+
+
+
+@media (max-width: 1100px) {
+  
+
+/* Author portraits: text on the left, portrait centred in the blank area on the right. */
+.author-grid.author-grid-portraits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 15px 0 20px;
 }
 
-.author-info {
+.author-card-portrait-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  column-gap: 16px;
+  align-items: stretch;
+  min-height: 380px;
+}
+
+.author-text-block {
   min-width: 0;
 }
 
-.author-portrait-box {
-  width: 230px;
-  min-height: 290px;
-  background: var(--blue-pale);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-  border-radius: 6px;
+.author-text-block p,
+.author-text-block a {
+  overflow-wrap: anywhere;
 }
 
-.author-portrait {
-  width: 230px;
-  height: 290px;
-  object-fit: contain;
-  object-position: center bottom;
-  display: block;
+.author-photo-space {
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--blue-pale);
+}
+
+.author-portrait-oval {
+  width: 220px;
+  height: 270px;
+  display: block;
 }
 
 @media (max-width: 1100px) {
-  .author-card-with-portrait {
+  .author-grid.author-grid-portraits {
     grid-template-columns: 1fr;
   }
 
-  .author-portrait-box {
-    justify-self: center;
-    margin-top: 12px;
+  .author-card-portrait-layout {
+    grid-template-columns: minmax(0, 1fr) 220px;
   }
 }
 
+@media (max-width: 800px) {
+  .author-card-portrait-layout {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .author-photo-space {
+    min-height: 280px;
+    padding-top: 10px;
+  }
+}

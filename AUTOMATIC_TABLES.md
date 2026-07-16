@@ -424,3 +424,12 @@ The conditional-data marker is a red `*`, displayed slightly larger than the
 surrounding text. The author portraits are placed to the right of each author
 information block. Portrait canvases are matched in size and use the same
 background colour as the author boxes; faces are not altered.
+
+
+
+## Oval author portraits
+
+On the authors page, the portraits are centred in the blank space on the right
+side of each author box. The portraits use an oval crop and matched size.
+Seyed Hassan Alavi's portrait is mirrored across the vertical axis. Background
+changes, resizing, and cropping are allowed; faces are not altered.
