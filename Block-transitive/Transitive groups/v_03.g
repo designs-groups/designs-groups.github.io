@@ -52,3 +52,4 @@ for D in lD_3 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) 
 lD_3_all :=  [
 ]; 
 for D in lD_3_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+

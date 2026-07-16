@@ -85,7 +85,7 @@ def table_link(index_page: Path, target_page_rel: str) -> str:
 
 
 def conditional_star(conditional: bool) -> str:
-    return '<span class="conditional-star" title="The designs for this group are obtained under some conditions.">*</span>' if conditional else ""
+    return '<span class="conditional-star" title="The designs for the groups indicated by <span class="conditional-star">*</span> are obtained under some restricted conditions.">*</span>' if conditional else ""
 
 
 def data_link(url: str, label: str, degree: bool, conditional: bool = False) -> str:
@@ -239,7 +239,7 @@ def landing_notice() -> str:
         '<p class="notice catalogue-notice">\n'
         '  Click a <strong>group or degree</strong> name to open the corresponding raw GAP data file.<br>\n'
         '  Click a <strong>group type heading</strong> to open the detailed table for that group type.<br>\n'
-        '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.<br>\n  A red <span class=\"conditional-star\">*</span> means that the designs for this group are obtained under some conditions.\n'
+        '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.<br>\n  The designs for the groups indicated by <span class=\"conditional-star\">*</span> are obtained under some restricted conditions.\n'
         '</p>'
     )
 

@@ -433,3 +433,22 @@ The author portraits use the original images again, with no face processing or
 background replacement. Seyed Hassan Alavi's portrait is mirrored across the
 vertical axis. Both portraits are positioned in the blank right-side area of
 their author boxes and vertically centred, rather than below the address.
+
+
+
+## Restricted-condition wording and right-side portraits
+
+The restricted-condition sentence is now:
+`The designs for the groups indicated by * are obtained under some restricted
+conditions.` The visible star is red and larger.
+
+The author portraits use a fixed right-side blank area beside the address text.
+Seyed Hassan Alavi's portrait is mirrored and its white background is matched to
+the author-box colour without face alteration. Ashraf Daneshkhah's original PNG
+is composited onto the same author-box background colour without face alteration.
+
+- Version 18: both author portraits are ovally cropped while preserving the current right-side layout.
+
+- Version 19: moved Seyed Hassan Alavi's portrait slightly higher, with no other changes.
+
+- Version 20: made Ashraf Daneshkhah's oval portrait crop slightly smaller, with no other changes.

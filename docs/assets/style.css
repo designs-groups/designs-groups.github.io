@@ -1345,7 +1345,7 @@ h2 {
 .conditional-star {
   color: #c00000 !important;
   font-weight: 800 !important;
-  font-size: 130% !important;
+  font-size: 135% !important;
   line-height: 1;
   margin-left: 3px;
   vertical-align: baseline;
@@ -1353,76 +1353,118 @@ h2 {
 
 
 
-/* Author portraits: clean original images, portrait on the right side of each box. */
-.author-grid.author-grid-clean {
+
+
+/* Author portraits: fixed right-side blank area beside the address text. */
+.author-grid.author-grid-right-photos {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin: 15px 0 20px;
 }
 
-.author-card-photo-right {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 245px;
-  column-gap: 18px;
-  align-items: stretch;
-  min-height: 380px;
+.author-card-right-photo {
+  position: relative;
+  min-height: 420px;
+  padding-right: 350px !important;
   background: var(--blue-pale);
   overflow: hidden;
 }
 
-.author-text-block {
+.author-card-right-photo .author-text-block {
   min-width: 0;
+  max-width: 100%;
 }
 
-.author-text-block p,
-.author-text-block a {
+.author-card-right-photo .author-text-block p,
+.author-card-right-photo .author-text-block a {
   overflow-wrap: anywhere;
 }
 
-.author-photo-space {
+.author-photo-right {
+  position: absolute;
+  top: 19px;
+  right: 21px;
+  bottom: 19px;
+  width: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--blue-pale);
-  min-height: 100%;
-  padding: 0 4px;
 }
 
-.author-portrait-clean {
+.author-photo-img {
   display: block;
-  max-width: 235px;
-  max-height: 320px;
-  width: auto;
-  height: auto;
+  width: 320px;
+  height: 370px;
   object-fit: contain;
-  background: transparent;
+  background: var(--blue-pale);
+  border-radius: 50% / 44%;
+  overflow: hidden;
+  clip-path: ellipse(46% 48% at 50% 50%);
 }
 
-.author-portrait-alavi-clean {
-  max-width: 225px;
-  max-height: 310px;
+@media (max-width: 1280px) {
+  .author-card-right-photo {
+    padding-right: 300px !important;
+  }
+
+  .author-photo-right {
+    width: 270px;
+  }
+
+  .author-photo-img {
+    width: 270px;
+    height: 315px;
+  }
 }
 
-.author-portrait-daneshkhah-clean {
-  max-width: 235px;
-  max-height: 315px;
-}
-
-@media (max-width: 1100px) {
-  .author-grid.author-grid-clean {
+@media (max-width: 980px) {
+  .author-grid.author-grid-right-photos {
     grid-template-columns: 1fr;
   }
+
+  .author-card-right-photo {
+    padding-right: 350px !important;
+  }
+
+  .author-photo-right {
+    width: 320px;
+  }
+
+  .author-photo-img {
+    width: 320px;
+    height: 370px;
+  }
 }
 
-@media (max-width: 800px) {
-  .author-card-photo-right {
-    grid-template-columns: 1fr;
-    min-height: auto;
+@media (max-width: 760px) {
+  .author-card-right-photo {
+    padding-right: 21px !important;
+    padding-bottom: 330px !important;
   }
 
-  .author-photo-space {
-    min-height: 280px;
-    padding-top: 10px;
+  .author-photo-right {
+    top: auto;
+    left: 21px;
+    right: 21px;
+    bottom: 19px;
+    width: auto;
+    height: 300px;
   }
+
+  .author-photo-img {
+    width: 260px;
+    height: 300px;
+  }
+}
+
+
+.author-photo-alavi {
+  transform: translateY(-14px);
+}
+
+
+.author-photo-daneshkhah {
+  clip-path: ellipse(43% 45% at 50% 50%);
 }

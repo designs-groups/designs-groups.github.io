@@ -108,3 +108,9 @@ The deployment workflow automatically adds missing `References:` headers to GAP
 files, normalizes BibTeX keys using `alpha.bst` labels, migrates GAP reference
 keys, rebuilds the tables, renders the Bibliography with `abbrv.bst`, updates
 the footer date, and deploys the site.
+
+- Version 18: both author portraits are ovally cropped while preserving the current right-side layout.
+
+- Version 19: moved Seyed Hassan Alavi's portrait slightly higher, with no other changes.
+
+- Version 20: made Ashraf Daneshkhah's oval portrait crop slightly smaller, with no other changes.
