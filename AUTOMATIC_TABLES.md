@@ -454,3 +454,5 @@ is composited onto the same author-box background colour without face alteration
 - Version 20: made Ashraf Daneshkhah's oval portrait crop slightly smaller, with no other changes.
 
 - Version 21: fixed the page header so the title is only `Designs and Groups`; the dash and restricted-condition explanations stay in the notice boxes.
+
+- Version 22: optimized image weight by using WebP for the displayed author portraits and removing unused image source files, with no visual/content changes to the site.
