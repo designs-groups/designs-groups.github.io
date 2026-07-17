@@ -85,7 +85,7 @@ def table_link(index_page: Path, target_page_rel: str) -> str:
 
 
 def conditional_star(conditional: bool) -> str:
-    return '<span class="conditional-star" title="The designs for the groups indicated by <span class="conditional-star">*</span> are obtained under some restricted conditions.">*</span>' if conditional else ""
+    return '<span class="conditional-star" title="The designs for the groups indicated by * are obtained under some restricted conditions.">*</span>' if conditional else ""
 
 
 def data_link(url: str, label: str, degree: bool, conditional: bool = False) -> str:
