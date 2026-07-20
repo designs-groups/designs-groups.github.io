@@ -118,3 +118,5 @@ the footer date, and deploys the site.
 - Version 21: fixed the page header so the title is only `Designs and Groups`; the dash and restricted-condition explanations stay in the notice boxes.
 
 - Version 22: optimized image weight by using WebP for the displayed author portraits and removing unused image source files, with no visual/content changes to the site.
+
+- Version 23: changed only the footer subtitle to `Constructions and classifications of combinatorial block designs.`
