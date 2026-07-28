@@ -243,7 +243,7 @@ def build_fragment(keys: list[str]) -> tuple[str, list[str], str]:
             lambda m: (
                 m.group(1)
                 + 'Seyed Hassan Alavi and Ashraf Daneshkhah, '
-                + '<em>Designs and Groups: constructions and classifications</em> '
+                + '<em>Designs by Groups: constructions and classifications</em> '
                 + '(database), In preparation. '
                 + '<a href="https://designs-groups.github.io/">'
                 + 'https://designs-groups.github.io/</a>'

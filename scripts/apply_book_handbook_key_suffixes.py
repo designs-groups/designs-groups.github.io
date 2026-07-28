@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Apply the Designs and Groups suffix convention to BibTeX book keys:
+Apply the Designs by Groups suffix convention to BibTeX book keys:
 
 - @book entries end in -BOOK
 - @book entries whose title contains "handbook" end in -HANDBOOK

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate proposed Designs and Groups BibTeX keys from standard alpha.bst labels.
+Generate proposed Designs by Groups BibTeX keys from standard alpha.bst labels.
 
 The published Bibliography page continues to use abbrv.bst. This helper uses
 alpha.bst only to derive the base BibTeX entry key and then applies:
