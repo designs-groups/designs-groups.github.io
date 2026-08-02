@@ -395,3 +395,7 @@
 #I  autGroupInfo is obtained .. 
 #I  finding block design info .. 
 #I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
