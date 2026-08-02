@@ -6,6 +6,7 @@ import html
 import importlib.util
 import json
 import re
+import subprocess
 import sys
 import urllib.parse
 from pathlib import Path
@@ -305,10 +306,30 @@ def replace_catalogue(page_text: str, catalogue_html: str) -> str:
     return updated
 
 
+def run_parameter_set_update(data_root: Path) -> None:
+    script = ROOT / "scripts" / "update_parameter_sets.py"
+    if not script.exists():
+        return
+    result = subprocess.run(
+        [sys.executable, str(script), "--data-root", str(data_root)],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        message = result.stdout + result.stderr
+        raise RuntimeError("Parameter-set update failed before catalogue rebuild.\n" + message)
+    output = result.stdout.strip()
+    if output:
+        print(output)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, required=True)
     args = parser.parse_args()
+
+    run_parameter_set_update(args.data_root)
 
     tools = load_table_tools()
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))

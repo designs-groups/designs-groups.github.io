@@ -496,3 +496,5 @@ is composited onto the same author-box background colour without face alteration
 - Version 43: restored Useful links as a separate box with a full-width dark heading matching Licence, and made the parameter-set generator explicitly exclude both Transitive groups and Primitive groups folders.
 
 - Version 44: rewrote parameter-set generation to collect data directly and only from `.g` files in the four group-type folders: Alternating groups, Classical groups, Exceptional groups, and Sporadic groups.
+
+- Version 45: made `update_catalogue_indexes.py` run `update_parameter_sets.py` before rebuilding catalogue landing pages, so Parameter sets are generated even if the older workflow omits the separate parameter-set step. Parameter data are collected only from `.g` files in Alternating, Classical, Exceptional, and Sporadic group folders.

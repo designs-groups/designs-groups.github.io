@@ -32,6 +32,7 @@ GROUP_TYPE_FOLDERS = (
 
 PARAM_RE = re.compile(r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]")
 
+
 @dataclass
 class ParameterRecord:
     param: tuple[int, int, int, int, int]
@@ -63,20 +64,40 @@ def is_valid_parameter_set(param: tuple[int, int, int, int, int]) -> bool:
     return True
 
 
-def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
+def scan_lines(lines: list[str], predicate) -> list[tuple[int, int, int, int, int]]:
     candidates: list[tuple[int, int, int, int, int]] = []
-    for line in text.splitlines():
+    for line in lines:
         low = line.casefold()
-        if "parametersc" in low:
+        if "parametersc" in low or "complement" in low:
             continue
-        if "parameter" not in low:
+        if not predicate(low):
             continue
         for match in PARAM_RE.finditer(line):
             param = tuple(int(x) for x in match.groups())
             if is_valid_parameter_set(param):
                 candidates.append(param)
+    return candidates
+
+
+def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
+    lines = text.splitlines()
+
+    # First choice: the documented information lines, e.g.
+    #   # Parameter set: [ 5, 10, 6, 3, 3 ]
+    # This avoids double-counting the later GAP record line
+    #   parameters := [ 5, 10, 6, 3, 3 ].
+    candidates = scan_lines(lines, lambda low: "parameter set" in low)
     if candidates:
         return candidates
+
+    # Second choice: GAP record assignments.
+    candidates = scan_lines(lines, lambda low: re.search(r"\bparameters\s*:=", low) is not None)
+    if candidates:
+        return candidates
+
+    # Last fallback: scan the whole file, still keeping only true 2-design
+    # parameter sets. This is intentionally a fallback only.
+    candidates = []
     for match in PARAM_RE.finditer(text):
         param = tuple(int(x) for x in match.groups())
         if is_valid_parameter_set(param):
