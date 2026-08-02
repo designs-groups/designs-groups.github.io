@@ -392,6 +392,71 @@ def run_parameter_set_update(data_root: Path) -> None:
         print(output)
 
 
+
+def force_affine_degree_style(page: Path) -> None:
+    text = page.read_text(encoding="utf-8")
+
+    sections = re.findall(r'<section class="catalogue-family">.*?</section>', text, flags=re.S)
+    for section in sections:
+        if 'href="affine.html">Affine groups' not in section:
+            continue
+
+        new_section = section
+
+        new_section = new_section.replace(
+            '<h2><a href="affine.html">Affine groups</a></h2>',
+            '<h2><a href="affine.html">Affine groups (of degree)</a></h2>',
+        )
+
+        new_section = re.sub(
+            r'class="catalogue-group-grid(?: [^"]*)?"',
+            'class="catalogue-group-grid catalogue-degree-grid"',
+            new_section,
+            count=1,
+        )
+
+        new_section = re.sub(
+            r'data-columns="\d+"',
+            'data-columns="20"',
+            new_section,
+            count=1,
+        )
+
+        def link_repl(match):
+            open_tag, label, close_tag = match.group(1), match.group(2), match.group(3)
+            degree = degree_from_affine_label(label) or degree_from_affine_label(open_tag)
+            if degree is None:
+                return match.group(0)
+
+            open_tag = re.sub(r'class="[^"]*"', 'class="catalogue-degree-link"', open_tag)
+            if 'class=' not in open_tag:
+                open_tag = open_tag.replace('<a ', '<a class="catalogue-degree-link" ', 1)
+
+            return open_tag + degree + close_tag
+
+        new_section = re.sub(
+            r'(<a\b[^>]*href="[^"]*Affine%20groups/[^"]*\.g"[^>]*>)(.*?)(</a>)',
+            link_repl,
+            new_section,
+            flags=re.S,
+        )
+
+        # Pad incomplete degree-grid rows to 20 cells, like Transitive/Primitive sections.
+        def pad_row(row_match):
+            row = row_match.group(0)
+            count = len(re.findall(r'<td\b', row))
+            if count >= 20:
+                return row
+            return row.replace('</tr>', '<td></td>' * (20 - count) + '</tr>')
+
+        new_section = re.sub(r'<tr>.*?</tr>', pad_row, new_section, flags=re.S)
+
+        text = text.replace(section, new_section)
+
+    page.write_text(text, encoding="utf-8")
+
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, required=True)
@@ -431,6 +496,9 @@ def main() -> int:
 
     for rel_page in ("docs/flag-transitive/index.html", "docs/block-transitive/index.html"):
         fix_affine_catalogue_degree_labels(Path(args.data_root) / rel_page)
+
+    for rel_page in ("docs/flag-transitive/index.html", "docs/block-transitive/index.html"):
+        force_affine_degree_style(Path(args.data_root) / rel_page)
 
     run_navigation_update(args.data_root)
 

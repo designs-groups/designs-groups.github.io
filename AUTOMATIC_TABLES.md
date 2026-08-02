@@ -508,3 +508,5 @@ is composited onto the same author-box background colour without face alteration
 - Version 49: added automatic sidebar navigation rebuilding from `data/table_sources.json`; verified that Primitive groups and Affine groups pages are populated from their `.g` folders, with Affine groups ordered after Primitive groups.
 
 - Version 50: on main catalogue pages, Affine groups are displayed by degree, while Affine detailed tables and Parameter sets Group entries use the actual group label from the `.g` file.
+
+- Version 51: made Affine groups use the same degree-grid style as Transitive groups and Primitive groups on the main catalogue pages, while keeping the detailed Affine tables indexed by group G.
