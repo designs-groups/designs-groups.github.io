@@ -19,17 +19,13 @@ PARAM_RE = re.compile(
     r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]"
 )
 
-EXCLUDED_PARAMETER_SET_FOLDERS = (
-    "Flag-transitive/Transitive groups/",
-    "Flag-transitive/Primitive groups/",
-    "Block-transitive/Transitive groups/",
-    "Block-transitive/Primitive groups/",
+GROUP_TYPE_FOLDERS = (
+    "Alternating groups",
+    "Classical groups",
+    "Exceptional groups",
+    "Sporadic groups",
 )
 
-INCLUDED_PARAMETER_SET_PREFIXES = (
-    "Flag-transitive/",
-    "Block-transitive/",
-)
 
 
 @dataclass
@@ -104,26 +100,43 @@ def parameter_counts(text: str, row_total: str) -> Counter[tuple[int, int, int, 
     return fallback
 
 
+def fallback_group_label(source_path: str) -> str:
+    return Path(source_path).stem
+
+
+def safe_row_info(tools, path: Path, source_path: str):
+    try:
+        row = tools.parse_gap_file(path, source_path)
+        group_label = getattr(row, "group_label", None) or fallback_group_label(source_path)
+        total = getattr(row, "total", "")
+        return group_label, total
+    except Exception:
+        return fallback_group_label(source_path), ""
+
+
 def raw_url(repository: str, branch: str, source_path: str) -> str:
     encoded = urllib.parse.quote(source_path, safe="/")
     return f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded}"
 
 
 def source_kind(source_path: str) -> str | None:
-    if not source_path.startswith(INCLUDED_PARAMETER_SET_PREFIXES):
+    parts = source_path.split("/")
+
+    if len(parts) < 3:
         return None
 
-    if source_path.startswith(EXCLUDED_PARAMETER_SET_FOLDERS):
+    category, group_type = parts[0], parts[1]
+
+    if group_type not in GROUP_TYPE_FOLDERS:
         return None
 
-    if source_path.startswith("Flag-transitive/"):
+    if category == "Flag-transitive":
         return "flag-transitive"
 
-    if source_path.startswith("Block-transitive/"):
+    if category == "Block-transitive":
         return "block-transitive"
 
     return None
-
 
 def collect_records(data_root: Path, repository: str, branch: str, tools):
     records: dict[str, dict[tuple[int, int, int, int, int], ParameterRecord]] = {
@@ -137,16 +150,16 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
         if kind is None:
             continue
 
-        row = tools.parse_gap_file(path, source_path)
+        group_label, row_total = safe_row_info(tools, path, source_path)
         text = path.read_text(encoding="utf-8", errors="replace")
-        counts = parameter_counts(text, row.total)
+        counts = parameter_counts(text, row_total)
 
         if not counts:
             continue
 
         url = raw_url(repository, branch, source_path)
-        label = tools.math_label(row.group_label)
-        sort_label = tools.normalize_group_sort_text(row.group_label).casefold()
+        label = tools.math_label(group_label)
+        sort_label = tools.normalize_group_sort_text(group_label).casefold()
 
         for param, count in counts.items():
             record = records[kind].setdefault(param, ParameterRecord(param))

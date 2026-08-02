@@ -486,3 +486,5 @@ is composited onto the same author-box background colour without face alteration
 - Version 38: adjusted the separate Useful links sidebar box so GAP and ATLAS rows use the same full-width dimensions as the main sidebar list rows such as Licence.
 
 - Version 39: reordered Useful links so ATLAS appears before GAP.
+
+- Version 40: fixed the GitHub Actions workflow to run `scripts/update_parameter_sets.py`; parameter-set generation now explicitly scans only Alternating, Classical, Exceptional, and Sporadic group folders and excludes Transitive and Primitive folders.
