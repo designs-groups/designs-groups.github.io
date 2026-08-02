@@ -460,3 +460,9 @@ is composited onto the same author-box background colour without face alteration
 - Version 23: changed only the footer subtitle to `Constructions and classifications of combinatorial block designs.`
 
 - Version 26: replaced visible `Imprimitive groups` catalogue links/pages with `Parameter sets`; parameter-set pages are rebuilt automatically from GAP data files using `scripts/update_parameter_sets.py`.
+
+- Version 27: reordered the final symmetry columns in associated database tables to Flag-transitive, Anti-flag-transitive, then Flag-regular or Flag-semiregular.
+
+- Version 28: refined Parameter sets pages/landing sections: narrowed the Number of designs column, deduplicated repeated group labels, changed the landing-section link text, and kept automatic data generation from repository GAP files.
+
+- Version 29: removed `ft` and `bt` from the public Parameter sets enumeration-information wording.

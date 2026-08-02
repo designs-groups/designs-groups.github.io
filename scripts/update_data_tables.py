@@ -696,14 +696,13 @@ def build_row(row, repository, branch):
         row.block_primitive,
         row.block_imprimitive,
         row.flag_transitive,
+        row.anti_flag_transitive,
     ]
 
     if row.source_path.startswith("Flag-transitive/"):
         cells.append(row.flag_regular)
     elif row.source_path.startswith("Block-transitive/"):
         cells.append(row.flag_semiregular)
-
-    cells.append(row.anti_flag_transitive)
 
     url_attr = html.escape(url, quote=True)
     numeric_cells = "".join(

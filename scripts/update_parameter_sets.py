@@ -24,7 +24,7 @@ PARAM_RE = re.compile(
 class ParameterRecord:
     parameter: tuple[int, int, int, int, int]
     number: int = 0
-    groups: dict[tuple[str, str], str] = field(default_factory=dict)
+    groups: dict[str, tuple[str, str]] = field(default_factory=dict)
 
 
 def load_table_tools():
@@ -131,14 +131,14 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
         for param, count in counts.items():
             record = records[kind].setdefault(param, ParameterRecord(param))
             record.number += int(count)
-            record.groups.setdefault((sort_label, url), label)
+            record.groups.setdefault(sort_label, (label, url))
 
     return records
 
 
 def group_links(record: ParameterRecord) -> str:
     pieces = []
-    for (_sort_label, url), label in sorted(record.groups.items(), key=lambda item: item[0][0]):
+    for sort_label, (label, url) in sorted(record.groups.items(), key=lambda item: item[0]):
         url_attr = html.escape(url, quote=True)
         pieces.append(
             f'<a href="{url_attr}" target="_blank" rel="noopener noreferrer" '

@@ -1502,3 +1502,27 @@ h2 {
   margin-right: 0.25em;
 }
 
+
+/* Narrow Number of designs column in parameter-set tables. */
+.parameter-set-table th:nth-child(6),
+.parameter-set-table td:nth-child(6) {
+  width: 82px;
+  max-width: 82px;
+  white-space: normal;
+  text-align: center;
+}
+
+.parameter-set-table th:nth-child(6) .parameter-sort {
+  max-width: 78px;
+  line-height: 1.08;
+}
+
+
+.catalogue-parameter-access-grid {
+  max-width: 360px;
+}
+
+.catalogue-parameter-access-grid td {
+  text-align: left;
+}
+

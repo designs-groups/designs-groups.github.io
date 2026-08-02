@@ -233,15 +233,25 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
 
     if is_parameter_sets_family(folder):
         total_parameters = parameter_count_from_page(page_rel)
+        access_grid = (
+            f'<table class="catalogue-group-grid catalogue-parameter-access-grid" '
+            f'data-columns="1" aria-label="Parameter-set data">\n'
+            f'    <tbody>\n'
+            f'      <tr><td><a class="catalogue-group-link" href="{table_href}">Click to access the data</a></td></tr>\n'
+            f'    </tbody>\n'
+            f'</table>'
+        )
         return (
             f'<section class="catalogue-family">\n'
             f'  <div class="catalogue-family-header">\n'
             f'    <h2><a href="{table_href}">{title}</a></h2>\n'
             f'    <div class="catalogue-family-actions">\n'
-            f'      <a href="{table_href}">View parameter sets</a>\n'
+            f'      <a href="{table_href}">Enumeration information '
+            f'(number of parameter sets of designs)</a>\n'
             f'      <span class="catalogue-design-total">Number of parameter sets: {total_parameters}</span>\n'
             f'    </div>\n'
             f'  </div>\n'
+            f'  {access_grid}\n'
             f'</section>'
         )
 
