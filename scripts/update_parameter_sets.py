@@ -52,6 +52,10 @@ def load_data_tools():
     return module
 
 
+def clean_comment_line(raw: str) -> str:
+    return re.sub(r"^\s*#\s?", "", raw).strip()
+
+
 def is_valid_parameter_set(param: tuple[int, int, int, int, int]) -> bool:
     v, b, r, k, lam = param
     if min(param) <= 0:
@@ -63,6 +67,16 @@ def is_valid_parameter_set(param: tuple[int, int, int, int, int]) -> bool:
     if r * (k - 1) != lam * (v - 1):
         return False
     return True
+
+
+def first_parameter_in_line(line: str) -> tuple[int, int, int, int, int] | None:
+    match = PARAM_RE.search(line)
+    if match is None:
+        return None
+    param = tuple(int(x) for x in match.groups())
+    if is_valid_parameter_set(param):
+        return param
+    return None
 
 
 def scan_lines(lines: list[str], predicate) -> list[tuple[int, int, int, int, int]]:
@@ -82,22 +96,12 @@ def scan_lines(lines: list[str], predicate) -> list[tuple[int, int, int, int, in
 
 def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
     lines = text.splitlines()
-
-    # First choice: the documented information lines, e.g.
-    #   # Parameter set: [ 5, 10, 6, 3, 3 ]
-    # This avoids double-counting the later GAP record line
-    #   parameters := [ 5, 10, 6, 3, 3 ].
     candidates = scan_lines(lines, lambda low: "parameter set" in low)
     if candidates:
         return candidates
-
-    # Second choice: GAP record assignments.
     candidates = scan_lines(lines, lambda low: re.search(r"\bparameters\s*:=", low) is not None)
     if candidates:
         return candidates
-
-    # Last fallback: scan the whole file, still keeping only true 2-design
-    # parameter sets. This is intentionally a fallback only.
     candidates = []
     for match in PARAM_RE.finditer(text):
         param = tuple(int(x) for x in match.groups())
@@ -106,24 +110,37 @@ def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
     return candidates
 
 
+def is_affine_source(source_path: str) -> bool:
+    return "/Affine groups/" in ("/" + source_path)
+
+
+def looks_like_degree_filename(label: str) -> bool:
+    return re.fullmatch(r"v[_-]?\d+", label.strip(), flags=re.I) is not None
+
+
+def group_label_from_text(text: str, fallback: str) -> str:
+    match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M)
+    if match:
+        label = match.group(1).strip()
+        if "=" in label:
+            label = label.split("=", 1)[0].strip()
+        if label:
+            return label
+    return fallback
 
 
 def nonisomorphic_design_table_entries(text: str) -> list[tuple[tuple[int, int, int, int, int], str]]:
-    """Return parameter sets and actual G labels from the summary table.
+    """Extract (parameter set, G) from the Non-isomorphic designs table.
 
-    The table has rows of the form
-
-      # Nr v b r k λ G Gα GB Aut(D) ...
-
-    For parameter-set pages we want the group in the G column, not the
-    degree-file label such as v_05.
+    For Affine degree files such as v_09.g, the filename is only the degree.
+    The actual group names must come from the G column of this table.
     """
     entries: list[tuple[tuple[int, int, int, int, int], str]] = []
     in_table = False
     seen_header = False
 
     for raw in text.splitlines():
-        line = re.sub(r"^\s*#\s?", "", raw).strip()
+        line = clean_comment_line(raw)
 
         if re.match(r"^Non-isomorphic designs\s*:\s*$", line, re.I):
             in_table = True
@@ -149,32 +166,57 @@ def nonisomorphic_design_table_entries(text: str) -> list[tuple[tuple[int, int, 
         parts = line.split()
         if len(parts) < 7:
             continue
-
         if not re.fullmatch(r"\d+", parts[0]):
             continue
-
         if not all(re.fullmatch(r"\d+", item) for item in parts[1:6]):
             continue
 
         param = tuple(int(item) for item in parts[1:6])
         group_label = parts[6].strip()
 
-        if is_valid_parameter_set(param) and group_label:
+        if is_valid_parameter_set(param) and group_label and not looks_like_degree_filename(group_label):
             entries.append((param, group_label))
 
     return entries
 
 
+def further_information_entries(text: str) -> list[tuple[tuple[int, int, int, int, int], str]]:
+    """Fallback: extract (parameter set, G) from detailed Design blocks."""
+    entries: list[tuple[tuple[int, int, int, int, int], str]] = []
+    current_param: tuple[int, int, int, int, int] | None = None
 
-def group_label_from_text(text: str, fallback: str) -> str:
-    match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M)
-    if match:
-        label = match.group(1).strip()
-        if "=" in label:
-            label = label.split("=", 1)[0].strip()
-        if label:
-            return label
-    return fallback
+    for raw in text.splitlines():
+        line = clean_comment_line(raw)
+
+        if re.match(r"^Design:\s*\d+\b", line, re.I):
+            current_param = None
+            continue
+
+        if "Parameter set" in line:
+            current_param = first_parameter_in_line(line)
+            continue
+
+        if current_param is not None and re.match(r"^Structure\b", line):
+            parts = line.split()
+            if len(parts) >= 2:
+                group_label = parts[1].strip()
+                if group_label and not looks_like_degree_filename(group_label):
+                    entries.append((current_param, group_label))
+            current_param = None
+
+    return entries
+
+
+def parameter_group_entries(text: str, source_path: str) -> list[tuple[tuple[int, int, int, int, int], str]]:
+    entries = nonisomorphic_design_table_entries(text)
+    if entries:
+        return entries
+
+    entries = further_information_entries(text)
+    if entries:
+        return entries
+
+    return []
 
 
 def file_total_from_row(tools, path: Path, source_path: str) -> tuple[str, int | None]:
@@ -212,6 +254,20 @@ def iter_gap_files(data_root: Path, category_folder: str):
             yield from sorted(folder.rglob("*.g"))
 
 
+def add_record(records, kind: str, param: tuple[int, int, int, int, int], group_label: str, url: str, tools, count: int = 1) -> None:
+    if not group_label or looks_like_degree_filename(group_label):
+        return
+
+    recs = records[kind]
+    if param not in recs:
+        recs[param] = ParameterRecord(param=param)
+
+    recs[param].count += int(count)
+    label = tools.math_label(group_label)
+    sort_label = tools.normalize_group_sort_text(group_label).casefold()
+    recs[param].groups.setdefault(sort_label, (label, url))
+
+
 def collect_records(data_root: Path, repository: str, branch: str, tools):
     records: dict[str, dict[tuple[int, int, int, int, int], ParameterRecord]] = {
         "flag-transitive": {},
@@ -224,37 +280,26 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
             text = path.read_text(encoding="utf-8", errors="replace")
             url = raw_url(repository, branch, source_path)
 
-            # Preferred source: the "Non-isomorphic designs" summary table.
-            # This gives the actual group G for each parameter set.  This is
-            # essential for degree files such as Affine groups/v_05.g, where
-            # the filename is only the degree and not the group.
-            table_entries = nonisomorphic_design_table_entries(text)
+            # Preferred for all files, and required for Affine degree files:
+            # read the actual G from the Non-isomorphic designs table or from
+            # the detailed Design block.
+            entries = parameter_group_entries(text, source_path)
+            if entries:
+                for param, group_label in entries:
+                    add_record(records, kind, param, group_label, url, tools, 1)
+                continue
 
-            if table_entries:
-                for param, group_label in table_entries:
-                    recs = records[kind]
-                    if param not in recs:
-                        recs[param] = ParameterRecord(param=param)
-                    recs[param].count += 1
-                    label = tools.math_label(group_label)
-                    sort_label = tools.normalize_group_sort_text(group_label).casefold()
-                    recs[param].groups.setdefault(sort_label, (label, url))
+            # For Affine degree files, never fall back to v_05, v_09, etc.
+            if is_affine_source(source_path):
                 continue
 
             group_label, total = file_total_from_row(tools, path, source_path)
-            counts = counts_for_file(parameter_candidates(text), total)
-            if not counts:
+            if looks_like_degree_filename(group_label):
                 continue
 
-            label = tools.math_label(group_label)
-            sort_label = tools.normalize_group_sort_text(group_label).casefold()
-
+            counts = counts_for_file(parameter_candidates(text), total)
             for param, count in counts.items():
-                recs = records[kind]
-                if param not in recs:
-                    recs[param] = ParameterRecord(param=param)
-                recs[param].count += int(count)
-                recs[param].groups.setdefault(sort_label, (label, url))
+                add_record(records, kind, param, group_label, url, tools, count)
 
     return records
 
@@ -272,6 +317,7 @@ def group_links(record: ParameterRecord) -> tuple[str, str]:
 def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) -> str:
     if not records:
         return '          <tr><td colspan="7" class="empty-row">No parameter sets are currently available.</td></tr>'
+
     lines = []
     for param in sorted(records):
         record = records[param]
@@ -305,13 +351,23 @@ def main() -> int:
     parser.add_argument("--repository", default="designs-groups/designs-groups.github.io")
     parser.add_argument("--branch", default="main")
     args = parser.parse_args()
+
     data_root = Path(args.data_root).resolve()
     tools = load_data_tools()
     records = collect_records(data_root, args.repository, args.branch, tools)
+
     for kind, rel_page in PARAMETER_SET_PAGES.items():
         replace_rows(data_root / rel_page, render_rows(records[kind]))
-    print("Updated parameter-set pages: " f"{len(records['flag-transitive'])} flag-transitive parameter sets, " f"{len(records['block-transitive'])} block-transitive parameter sets.")
-    print("Parameter sets were collected only from .g files in: Alternating groups, Affine groups, Classical groups, Exceptional groups, Sporadic groups.")
+
+    print(
+        "Updated parameter-set pages: "
+        f"{len(records['flag-transitive'])} flag-transitive parameter sets, "
+        f"{len(records['block-transitive'])} block-transitive parameter sets."
+    )
+    print(
+        "Parameter sets were collected only from .g files in: "
+        "Alternating groups, Affine groups, Classical groups, Exceptional groups, Sporadic groups."
+    )
     return 0
 
 

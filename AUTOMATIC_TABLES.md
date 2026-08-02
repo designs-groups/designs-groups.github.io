@@ -518,3 +518,5 @@ is composited onto the same author-box background colour without face alteration
 - Version 54: Parameter sets now read actual G labels from the Non-isomorphic designs summary table inside Affine `.g` files, instead of using degree filenames such as `v_05`; underline removal for block-transitive degree/table-number links was strengthened.
 
 - Version 56: based on version 54; the Parameter sets pages now use `parameters.html` URLs, and all internal website, script, sitemap, canonical, and workflow references were updated.
+
+- Version 57: Parameter sets now extract actual group names from the `G` column of the `Non-isomorphic designs` table in Affine `.g` files for both flag-transitive and block-transitive data; Affine degree filenames such as `v_09` are no longer displayed as group names.
