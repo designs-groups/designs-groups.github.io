@@ -120,3 +120,5 @@ the footer date, and deploys the site.
 - Version 22: optimized image weight by using WebP for the displayed author portraits and removing unused image source files, with no visual/content changes to the site.
 
 - Version 23: changed only the footer subtitle to `Constructions and classifications of combinatorial block designs.`
+
+- Version 26: replaced visible `Imprimitive groups` catalogue links/pages with `Parameter sets`; parameter-set pages are rebuilt automatically from GAP data files using `scripts/update_parameter_sets.py`.

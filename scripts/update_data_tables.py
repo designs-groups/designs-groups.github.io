@@ -12,6 +12,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
 
+PARAMETER_SET_PAGES = {
+    "docs/flag-transitive/imprimitive.html",
+    "docs/block-transitive/imprimitive.html",
+}
+
 
 @dataclass
 class RowData:
@@ -762,6 +767,7 @@ def main() -> int:
     page_rows = {
         page: []
         for page in set(folder_pages.values()) | set(overrides.values())
+        if page not in PARAMETER_SET_PAGES
     }
 
     unmatched = []
@@ -782,9 +788,9 @@ def main() -> int:
             unmatched.append(source_path)
             continue
 
-        page_rows.setdefault(page, []).append(
-            parse_gap_file(path, source_path)
-        )
+        row = parse_gap_file(path, source_path)
+        if page not in PARAMETER_SET_PAGES:
+            page_rows.setdefault(page, []).append(row)
         parsed_count += 1
 
     if unmatched:

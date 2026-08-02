@@ -34,11 +34,25 @@ def source_path_from_raw_url(url: str, branch: str) -> str | None:
 
 def class_title(folder: str) -> str:
     title = folder.rsplit("/", 1)[1]
+    if title == "Imprimitive groups":
+        return "Parameter sets"
     if title == "Transitive groups":
         return "Transitive groups (of degree)"
     if title == "Primitive groups":
         return "Primitive groups (of degree)"
     return title
+
+
+def is_parameter_sets_family(folder: str) -> bool:
+    return folder.endswith("/Imprimitive groups")
+
+
+def parameter_count_from_page(page_rel: str) -> int:
+    page = ROOT / page_rel
+    if not page.exists():
+        return 0
+    text = page.read_text(encoding="utf-8")
+    return len(re.findall(r'<tr[^>]*class="[^"]*\bparameter-set-row\b', text))
 
 
 def is_degree_family(folder: str) -> bool:
@@ -216,6 +230,21 @@ def build_group_grid(folder: str, rows: list[dict]) -> str:
 def build_family_section(index_page: Path, folder: str, page_rel: str, rows: list[dict]) -> str:
     title = html.escape(class_title(folder))
     table_href = table_link(index_page, page_rel)
+
+    if is_parameter_sets_family(folder):
+        total_parameters = parameter_count_from_page(page_rel)
+        return (
+            f'<section class="catalogue-family">\n'
+            f'  <div class="catalogue-family-header">\n'
+            f'    <h2><a href="{table_href}">{title}</a></h2>\n'
+            f'    <div class="catalogue-family-actions">\n'
+            f'      <a href="{table_href}">View parameter sets</a>\n'
+            f'      <span class="catalogue-design-total">Number of parameter sets: {total_parameters}</span>\n'
+            f'    </div>\n'
+            f'  </div>\n'
+            f'</section>'
+        )
+
     total_designs = sum(int(item["total"]) for item in rows if str(item["total"]).isdigit())
     grid = build_group_grid(folder, rows)
 
@@ -238,7 +267,7 @@ def landing_notice() -> str:
     return (
         '<p class="notice catalogue-notice">\n'
         '  Click a <strong>group or degree</strong> name to open the corresponding raw GAP data file.<br>\n'
-        '  Click a <strong>group type heading</strong> to open the detailed table for that group type.<br>\n'
+        '  Click a <strong>group type heading</strong> or <strong>Parameter sets</strong> to open the corresponding detailed table.<br>\n'
         '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.<br>\n  The designs for the groups indicated by <span class=\"conditional-star\">*</span> are obtained under some restricted conditions.\n'
         '</p>'
     )

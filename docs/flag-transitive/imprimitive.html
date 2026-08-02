@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Database of flag-transitive and block-transitive 2-designs and their symmetries.">
-  <title>Imprimitive groups — Flag-transitive designs | Designs by Groups</title>
+  <title>Parameter sets — Flag-transitive designs | Designs by Groups</title>
   <link rel="stylesheet" href="../assets/style.css">
   <script>
     window.MathJax = {
@@ -77,57 +77,74 @@ async function downloadRawFile(url, filename) {
     <div class="breadcrumbs">
       <a href="../index.html">Home</a> ›
       <a href="index.html">Flag-transitive designs</a> ›
-      Imprimitive groups
+      Parameter sets
     </div>
-    <h1>Imprimitive groups</h1>
+    <h1>Parameter sets</h1>
     <p>
-      The table below summarises the currently recorded flag-transitive
-      designs associated with this family of groups. Each row gives group-level
-      classification counts and, whenever a computational data file is available,
-      links directly to the raw GAP file.
+      The table below summarises the parameter sets currently obtained from the
+      recorded flag-transitive data files. The data are rebuilt automatically from
+      the corresponding GAP files whenever the website is generated.
     </p>
     <p class="notice">
-  Click anywhere on a data row to open the raw GAP file. Use <strong>Download .g</strong> to start a direct browser download.<br>
-  The entry in the <strong>Name</strong> column is the GAP list containing the designs stored in that file.<br>
-  For an explanation of the information stored in each data file, see <a href="../how-to-read.html">How to read</a>.<br>
-  The <strong>References</strong> column is currently being developed. Relevant sources will be added and updated progressively as the bibliography and database records are reviewed.<br>
-  The references provided are not intended to be exhaustive, and the inclusion of a reference does not necessarily indicate the first publication in which the corresponding design was constructed.<br>
-  In the enumeration columns, <strong>—</strong> means that the number of designs with the corresponding property has not been computed or is not available from the data file.<br>
-  The designs for the groups indicated by <span class="conditional-star">*</span> are obtained under some restricted conditions.
-</p>
+      Click a parameter-column heading to sort the table in ascending numerical order.<br>
+      The <strong>Number of designs</strong> column gives the number of recorded designs with the corresponding parameter set.<br>
+      The <strong>Group</strong> column lists the groups from which the parameter set is obtained. Group names are separated by commas, and each group name links to the corresponding raw GAP file.
+    </p>
 
-<div class="table-wrap">
-      <table class="database-table">
-        
-<thead>
-  <tr>
-    <th rowspan="2">\(G\)</th>
-    <th rowspan="2">Name</th>
-    <th colspan="10">Number of designs</th>
-    <th rowspan="2">Data file</th>
-    <th rowspan="2">Comments</th>
-    <th rowspan="2">References</th>
-  </tr>
-  <tr>
-    <th>Total</th>
-    <th>Symmetric</th>
-    <th>Non-symmetric</th>
-    <th>Point-primitive</th>
-    <th>Point-imprimitive</th>
-    <th>Block-primitive</th>
-    <th>Block-imprimitive</th>
-    <th>Flag-transitive</th>
-    <th>Flag-regular</th>
-    <th>Anti-flag-transitive</th>
-  </tr>
-</thead>
-
+    <div class="table-wrap">
+      <table class="database-table parameter-set-table" id="flag-transitive-parameter-set-table">
+        <thead>
+          <tr>
+            <th><button type="button" class="parameter-sort" data-column="0" data-type="number">\(v\)</button></th>
+            <th><button type="button" class="parameter-sort" data-column="1" data-type="number">\(b\)</button></th>
+            <th><button type="button" class="parameter-sort" data-column="2" data-type="number">\(r\)</button></th>
+            <th><button type="button" class="parameter-sort" data-column="3" data-type="number">\(k\)</button></th>
+            <th><button type="button" class="parameter-sort" data-column="4" data-type="number">\(\lambda\)</button></th>
+            <th><button type="button" class="parameter-sort" data-column="5" data-type="number">Number of designs</button></th>
+            <th><button type="button" class="parameter-sort" data-column="6" data-type="text">Group</button></th>
+          </tr>
+        </thead>
         <tbody>
-          <tr><td colspan="15" class="empty-row">No data files are currently linked on this page.</td></tr>
+<!-- PARAMETER_SETS_ROWS_START -->
+          <tr class="empty-row"><td colspan="7">No parameter sets are currently available.</td></tr>
+<!-- PARAMETER_SETS_ROWS_END -->
         </tbody>
       </table>
     </div>
-    
+
+    <script>
+(function() {
+  var table = document.getElementById("flag-transitive-parameter-set-table");
+  if (!table) return;
+
+  function cellValue(row, column, type) {
+    var cell = row.children[column];
+    if (!cell) return type === "number" ? 0 : "";
+    var raw = cell.getAttribute("data-sort") || cell.textContent || "";
+    raw = raw.trim();
+    return type === "number" ? Number(raw) : raw.toLowerCase();
+  }
+
+  table.querySelectorAll(".parameter-sort").forEach(function(button) {
+    button.addEventListener("click", function() {
+      var column = Number(button.getAttribute("data-column"));
+      var type = button.getAttribute("data-type") || "text";
+      var tbody = table.tBodies[0];
+      var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row"));
+
+      rows.sort(function(a, b) {
+        var av = cellValue(a, column, type);
+        var bv = cellValue(b, column, type);
+        if (av < bv) return -1;
+        if (av > bv) return 1;
+        return 0;
+      });
+
+      rows.forEach(function(row) { tbody.appendChild(row); });
+    });
+  });
+})();
+    </script>
   </article>
   
 
@@ -136,7 +153,7 @@ async function downloadRawFile(url, filename) {
   <section class="sidebar-box">
     <h3><a href="index.html">Flag-transitive designs</a></h3>
     <ul class="sidebar-links">
-      <li><a href="alternating.html">Alternating groups</a></li><li><a href="classical.html">Classical groups</a></li><li><a href="exceptional.html">Exceptional groups</a></li><li><a href="sporadic.html">Sporadic groups</a></li><li><a href="transitive.html">Transitive groups</a></li><li><a href="primitive.html">Primitive groups</a></li><li><a class="sidebar-current" href="imprimitive.html">Imprimitive groups</a></li>
+      <li><a href="alternating.html">Alternating groups</a></li><li><a href="classical.html">Classical groups</a></li><li><a href="exceptional.html">Exceptional groups</a></li><li><a href="sporadic.html">Sporadic groups</a></li><li><a href="transitive.html">Transitive groups</a></li><li><a href="primitive.html">Primitive groups</a></li><li><a class="sidebar-current" href="imprimitive.html">Parameter sets</a></li>
       <li class="sidebar-how"><a href="../how-to-read.html">How to read</a></li>
       <li class="sidebar-how"><a href="../how-to-cite.html">How to cite</a></li>
       <li class="sidebar-package"><a href="../software.html">Software and Packages</a></li>

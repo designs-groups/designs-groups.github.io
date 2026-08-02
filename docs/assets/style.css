@@ -1468,3 +1468,37 @@ h2 {
 .author-photo-daneshkhah {
   clip-path: ellipse(43% 45% at 50% 50%);
 }
+
+
+/* Parameter-set summary tables. */
+.parameter-set-table {
+  min-width: 940px;
+}
+
+.parameter-set-table th {
+  white-space: nowrap;
+}
+
+.parameter-set-table .parameter-sort {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+}
+
+.parameter-set-table .parameter-sort:hover,
+.parameter-set-table .parameter-sort:focus {
+  text-decoration: underline;
+}
+
+.parameter-set-table td.parameter-groups {
+  text-align: left;
+}
+
+.parameter-set-table td.parameter-groups a {
+  margin-right: 0.25em;
+}
+
