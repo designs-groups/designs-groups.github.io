@@ -1532,24 +1532,22 @@ h2 {
 }
 
 
-/* Keep the separate Useful links box the same width as the main sidebar box. */
-aside > .sidebar-box,
-aside > .report-box {
-  width: 100%;
-  box-sizing: border-box;
-}
-
+/* Useful links: keep a separate box, but make the dark heading span
+   exactly the same width as the main sidebar rows such as Licence. */
 .sidebar-useful-links {
-  width: 100%;
-  box-sizing: border-box;
+  padding: 10px 12px;
 }
 
 .sidebar-useful-links h3 {
   display: block;
-  width: 100%;
   box-sizing: border-box;
-  margin-left: 0;
-  margin-right: 0;
+  width: 100%;
+  margin: 0 0 8px 0;
+  padding: 6px 8px;
+  background: var(--navy);
+  color: white;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .sidebar-useful-links .sidebar-links {
@@ -1563,8 +1561,8 @@ aside > .report-box {
 
 .sidebar-useful-links .sidebar-links a {
   display: block;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
   padding: 6px 8px;
   font-weight: normal;
 }

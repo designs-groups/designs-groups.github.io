@@ -152,3 +152,9 @@ the footer date, and deploys the site.
 - Version 40: fixed the GitHub Actions workflow to run `scripts/update_parameter_sets.py`; parameter-set generation now explicitly scans only Alternating, Classical, Exceptional, and Sporadic group folders and excludes Transitive and Primitive folders.
 
 - Version 41: made the separate Useful links sidebar box and its dark-blue title bar exactly full-width, matching the main sidebar box containing Licence.
+
+- Version 42: made the Useful links title a standard full-width sidebar row matching Licence, and preserved the parameter-set workflow/generator fix.
+
+- Version 43: restored Useful links as a separate box with a full-width dark heading matching Licence, and made the parameter-set generator explicitly exclude both Transitive groups and Primitive groups folders.
+
+- Version 44: rewrote parameter-set generation to collect data directly and only from `.g` files in the four group-type folders: Alternating groups, Classical groups, Exceptional groups, and Sporadic groups.
