@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 13 points 
+# Affine groups on 13 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_13 is the list of the designs

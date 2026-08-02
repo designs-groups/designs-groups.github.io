@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 5 points 
+# Affine groups on 5 points 
 # ####################################################################################################
 # Remark:       there exists no 2-design admitting Flag-transitive and point-primitive automorphism group
 # References:    

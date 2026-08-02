@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 9 points 
+# Affine groups on 9 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_9 is the list of the designs

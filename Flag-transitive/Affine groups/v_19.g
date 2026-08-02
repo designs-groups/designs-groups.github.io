@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 19 points 
+# Affine groups on 19 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_19 is the list of the designs

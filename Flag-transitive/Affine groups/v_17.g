@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 17 points 
+# Affine groups on 17 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_17 is the list of the designs

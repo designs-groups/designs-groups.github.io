@@ -1,119 +1,3 @@
-#I  number of transitive groups of degree 6: 16
-
-#I  
-#I  [ 1, 16, "6" ]
-#I  rank : 6
-#I  1 : 16 done .. 
-
-#I  
-#I  [ 2, 16, "S3" ]
-#I  rank : 6
-#I  2 : 16 done .. 
-
-#I  
-#I  [ 3, 16, "D12" ]
-#I  rank : 4
-#I  3 : 16 done .. 
-
-#I  
-#I  [ 4, 16, "A4" ]
-#I  rank : 4
-#I  4 : 16 done .. 
-
-#I  
-#I  [ 5, 16, "3xS3" ]
-#I  rank : 4
-#I  5 : 16 done .. 
-
-#I  
-#I  [ 6, 16, "2xA4" ]
-#I  rank : 4
-#I  6 : 16 done .. 
-
-#I  
-#I  [ 7, 16, "S4" ]
-#I  rank : 3
-#I  7 : 16 done .. 
-
-#I  
-#I  [ 8, 16, "S4" ]
-#I  rank : 3
-#I  8 : 16 done .. 
-
-#I  
-#I  [ 9, 16, "S3xS3" ]
-#I  rank : 3
-#I  9 : 16 done .. 
-
-#I  
-#I  [ 10, 16, "(3^2):4" ]
-#I  rank : 3
-#I  10 : 16 done .. 
-
-#I  
-#I  [ 11, 16, "2xS4" ]
-#I  rank : 3
-#I  11 : 16 done .. 
-
-#I  
-#I  [ 12, 16, "A5" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  12 : 16 done .. 
-
-#I  
-#I  [ 13, 16, "(S3xS3):2" ]
-#I  rank : 3
-#I  13 : 16 done .. 
-
-#I  
-#I  [ 14, 16, "S5" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  14 : 16 done .. 
-
-#I  
-#I  [ 15, 16, "A6" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  15 : 16 done .. 
-
-#I  
-#I  [ 16, 16, "S6" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  16 : 16 done .. 
-
-#I  checking isomorphisms ..
-
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Transitive groups on 6 points 
@@ -292,8 +176,7 @@ lD_6 :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 6)
-]; 
-;
+];
 for D in lD_6 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -398,7 +281,6 @@ lD_6_all :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 6)
-]; 
-;
+];
 for D in lD_6_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

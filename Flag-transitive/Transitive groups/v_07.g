@@ -1,90 +1,3 @@
-#I  number of transitive groups of degree 7: 7
-
-#I  
-#I  [ 1, 7, "7" ]
-#I  rank : 7
-#I  1 : 7 done .. 
-
-#I  
-#I  [ 2, 7, "D14" ]
-#I  rank : 4
-#I  2 : 7 done .. 
-
-#I  
-#I  [ 3, 7, "7:3" ]
-#I  rank : 3
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  3 : 7 done .. 
-
-#I  
-#I  [ 4, 7, "7:6" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  4 : 7 done .. 
-
-#I  
-#I  [ 5, 7, "PSL(3,2)" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  5 : 7 done .. 
-
-#I  
-#I  [ 6, 7, "A7" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  6 : 7 done .. 
-
-#I  
-#I  [ 7, 7, "S7" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  7 : 7 done .. 
-
-#I  checking isomorphisms ..
-
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Transitive groups on 7 points 
@@ -431,8 +344,7 @@ lD_7 :=  [
   lambdas := [ 10 ],
   t := 2 ),
   v:= 7)
-]; 
-;
+];
 for D in lD_7 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -593,7 +505,6 @@ lD_7_all :=  [
   lambdas := [ 10 ],
   t := 2 ),
   v:= 7)
-]; 
-;
+];
 for D in lD_7_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

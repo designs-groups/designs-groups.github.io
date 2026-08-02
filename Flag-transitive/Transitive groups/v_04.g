@@ -1,31 +1,3 @@
-#I  number of transitive groups of degree 4: 5
-
-#I  
-#I  [ 1, 5, "4" ]
-#I  rank : 4
-#I  1 : 5 done .. 
-
-#I  
-#I  [ 2, 5, "2^2" ]
-#I  rank : 4
-#I  2 : 5 done .. 
-
-#I  
-#I  [ 3, 5, "D8" ]
-#I  rank : 3
-#I  3 : 5 done .. 
-
-#I  
-#I  [ 4, 5, "A4" ]
-#I  rank : 2
-#I  4 : 5 done .. 
-
-#I  
-#I  [ 5, 5, "S4" ]
-#I  rank : 2
-#I  5 : 5 done .. 
-
-
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Transitive groups on 4 points 

@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 8 points 
+# Affine groups on 8 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_8 is the list of the designs

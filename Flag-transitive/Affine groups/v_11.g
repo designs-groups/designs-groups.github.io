@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 11 points 
+# Affine groups on 11 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_11 is the list of the designs

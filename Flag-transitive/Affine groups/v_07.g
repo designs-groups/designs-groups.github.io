@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 7 points 
+# Affine groups on 7 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_7 is the list of the designs

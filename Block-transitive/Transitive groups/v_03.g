@@ -1,16 +1,3 @@
-#I  number of transitive groups of degree 3: 2
-
-#I  
-#I  [ 1, 2, "3" ]
-#I  rank : 3
-#I  1 : 2 done .. 
-
-#I  
-#I  [ 2, 2, "S3" ]
-#I  rank : 2
-#I  2 : 2 done .. 
-
-
 # ####################################################################################################
 # Block-transitive 2-designs 
 # Transitive groups on 3 points 

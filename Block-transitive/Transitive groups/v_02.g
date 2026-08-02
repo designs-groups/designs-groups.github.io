@@ -1,11 +1,3 @@
-#I  number of transitive groups of degree 2: 1
-
-#I  
-#I  [ 1, 1, "2" ]
-#I  rank : 2
-#I  1 : 1 done .. 
-
-
 # ####################################################################################################
 # Block-transitive 2-designs 
 # Transitive groups on 2 points 
