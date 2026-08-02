@@ -3,6 +3,7 @@
   "branch": "main",
   "folder_pages": {
     "Flag-transitive/Alternating groups": "docs/flag-transitive/alternating.html",
+    "Flag-transitive/Affine groups": "docs/flag-transitive/affine.html",
     "Flag-transitive/Classical groups": "docs/flag-transitive/classical.html",
     "Flag-transitive/Exceptional groups": "docs/flag-transitive/exceptional.html",
     "Flag-transitive/Sporadic groups": "docs/flag-transitive/sporadic.html",
@@ -10,6 +11,7 @@
     "Flag-transitive/Primitive groups": "docs/flag-transitive/primitive.html",
     "Flag-transitive/Imprimitive groups": "docs/flag-transitive/imprimitive.html",
     "Block-transitive/Alternating groups": "docs/block-transitive/alternating.html",
+    "Block-transitive/Affine groups": "docs/block-transitive/affine.html",
     "Block-transitive/Classical groups": "docs/block-transitive/classical.html",
     "Block-transitive/Exceptional groups": "docs/block-transitive/exceptional.html",
     "Block-transitive/Sporadic groups": "docs/block-transitive/sporadic.html",

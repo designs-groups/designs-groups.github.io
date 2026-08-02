@@ -160,3 +160,7 @@ the footer date, and deploys the site.
 - Version 44: rewrote parameter-set generation to collect data directly and only from `.g` files in the four group-type folders: Alternating groups, Classical groups, Exceptional groups, and Sporadic groups.
 
 - Version 45: made `update_catalogue_indexes.py` run `update_parameter_sets.py` before rebuilding catalogue landing pages, so Parameter sets are generated even if the older workflow omits the separate parameter-set step. Parameter data are collected only from `.g` files in Alternating, Classical, Exceptional, and Sporadic group folders.
+
+- Version 46: narrowed the parameter columns in Parameter sets tables and clarified that Number of designs counts designs obtained from the groups in the Group column, not all designs with that parameter set.
+
+- Version 47: added Affine groups pages for flag-transitive and block-transitive designs, configured automatic table generation from `.g` files in Affine groups folders, and included Affine groups in Parameter sets generation.

@@ -1567,3 +1567,29 @@ h2 {
   font-weight: normal;
 }
 
+
+/* Narrow the parameter columns in Parameter sets tables. */
+.parameter-set-table th:nth-child(1),
+.parameter-set-table th:nth-child(2),
+.parameter-set-table th:nth-child(3),
+.parameter-set-table th:nth-child(4),
+.parameter-set-table th:nth-child(5),
+.parameter-set-table td:nth-child(1),
+.parameter-set-table td:nth-child(2),
+.parameter-set-table td:nth-child(3),
+.parameter-set-table td:nth-child(4),
+.parameter-set-table td:nth-child(5) {
+  width: 58px;
+  max-width: 58px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.parameter-set-table th:nth-child(1) .parameter-sort,
+.parameter-set-table th:nth-child(2) .parameter-sort,
+.parameter-set-table th:nth-child(3) .parameter-sort,
+.parameter-set-table th:nth-child(4) .parameter-sort,
+.parameter-set-table th:nth-child(5) .parameter-sort {
+  max-width: 54px;
+}
+

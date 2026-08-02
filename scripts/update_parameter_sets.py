@@ -25,6 +25,7 @@ DATA_CATEGORIES = {
 
 GROUP_TYPE_FOLDERS = (
     "Alternating groups",
+    "Affine groups",
     "Classical groups",
     "Exceptional groups",
     "Sporadic groups",
@@ -216,7 +217,7 @@ def main() -> int:
     for kind, rel_page in PARAMETER_SET_PAGES.items():
         replace_rows(data_root / rel_page, render_rows(records[kind]))
     print("Updated parameter-set pages: " f"{len(records['flag-transitive'])} flag-transitive parameter sets, " f"{len(records['block-transitive'])} block-transitive parameter sets.")
-    print("Parameter sets were collected only from .g files in: Alternating groups, Classical groups, Exceptional groups, Sporadic groups.")
+    print("Parameter sets were collected only from .g files in: Alternating groups, Affine groups, Classical groups, Exceptional groups, Sporadic groups.")
     return 0
 
 

@@ -83,12 +83,13 @@ async function downloadRawFile(url, filename) {
     <h1>Parameter sets</h1>
     <p>
       The table below summarises the parameter sets currently obtained from
-      the recorded flag-transitive <code>.g</code> files in the Alternating groups, Classical groups,
-      Exceptional groups, and Sporadic groups folders only.
+      the recorded flag-transitive <code>.g</code> files in the Alternating groups, Affine groups,
+      Classical groups, Exceptional groups, and Sporadic groups folders only.
     </p>
     <p class="notice">
       Click a parameter-column heading to sort the table in ascending numerical order.<br>
-      The <strong>Number of designs</strong> column gives the number of recorded designs with the corresponding parameter set.<br>
+      The <strong>Number of designs</strong> column gives the number of recorded designs obtained from the groups in the <strong>Group</strong> column; it is not the total number of all designs with that parameter set.
+<br>
       The <strong>Group</strong> column lists the groups from which the parameter set is obtained. Group names are separated by commas, and each group name links to the corresponding raw GAP file.
     </p>
 
@@ -107,7 +108,7 @@ async function downloadRawFile(url, filename) {
         </thead>
         <tbody>
 <!-- PARAMETER_SETS_ROWS_START -->
-          <tr class="empty-row"><td colspan="7">No parameter sets are currently available.</td></tr>
+          <tr><td colspan="7" class="empty-row">No parameter sets are currently available.</td></tr>
 <!-- PARAMETER_SETS_ROWS_END -->
         </tbody>
       </table>
@@ -154,7 +155,7 @@ async function downloadRawFile(url, filename) {
   <section class="sidebar-box">
     <h3><a href="index.html">Flag-transitive designs</a></h3>
     <ul class="sidebar-links">
-      <li><a href="alternating.html">Alternating groups</a></li><li><a href="classical.html">Classical groups</a></li><li><a href="exceptional.html">Exceptional groups</a></li><li><a href="sporadic.html">Sporadic groups</a></li><li><a href="transitive.html">Transitive groups</a></li><li><a href="primitive.html">Primitive groups</a></li><li><a class="sidebar-current" href="imprimitive.html">Parameter sets</a></li>
+      <li><a href="alternating.html">Alternating groups</a></li><li><a href="affine.html">Affine groups</a></li><li><a href="classical.html">Classical groups</a></li><li><a href="exceptional.html">Exceptional groups</a></li><li><a href="sporadic.html">Sporadic groups</a></li><li><a href="transitive.html">Transitive groups</a></li><li><a href="primitive.html">Primitive groups</a></li><li><a class="sidebar-current" href="imprimitive.html">Parameter sets</a></li>
       <li class="sidebar-how"><a href="../how-to-read.html">How to read</a></li>
       <li class="sidebar-how"><a href="../how-to-cite.html">How to cite</a></li>
       <li class="sidebar-package"><a href="../software.html">Software and Packages</a></li>
