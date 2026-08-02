@@ -400,3 +400,7 @@
 #I  Warning: R-base point is already fixed
 #I  Warning: R-base point is already fixed
 #I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
