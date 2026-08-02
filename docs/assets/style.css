@@ -1531,3 +1531,26 @@ h2 {
   font-weight: normal !important;
 }
 
+
+.sidebar-useful-links {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar-useful-links .sidebar-links {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-useful-links .sidebar-links li {
+  margin: 0;
+}
+
+.sidebar-useful-links .sidebar-links a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  font-weight: normal;
+}
+

@@ -472,3 +472,17 @@ is composited onto the same author-box background colour without face alteration
 - Version 31: added a notice to Transitive and Primitive group pages that the listed `.g` files are separate data files and that designs within each file are sorted first by group and then by parameters.
 
 - Version 32: changed Parameter sets generation to collect only from group-type folders, excluding Transitive groups and Primitive groups folders.
+
+- Version 33: added search-engine support with `docs/robots.txt`, `docs/sitemap.xml`, canonical links, meta descriptions, and an automatic `scripts/update_seo.py` workflow step.
+
+- Version 34: added a separate sidebar `Useful links` box below `Report an error`, with local lightweight GAP and ATLAS logo badges and links.
+
+- Version 35: moved GAP and ATLAS useful links into the sidebar list below Licence and removed the separate Useful links box.
+
+- Version 36: replaced logo/card useful links with simple GAP and ATLAS text links below Licence in the sidebar.
+
+- Version 37: arranged the sidebar into three boxes: main navigation through Licence, Useful links with simple GAP/ATLAS text links, and Report an error.
+
+- Version 38: adjusted the separate Useful links sidebar box so GAP and ATLAS rows use the same full-width dimensions as the main sidebar list rows such as Licence.
+
+- Version 39: reordered Useful links so ATLAS appears before GAP.
