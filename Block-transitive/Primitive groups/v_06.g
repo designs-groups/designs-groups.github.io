@@ -1,63 +1,3 @@
-#I  number of primitive groups of degree 6: 4
-
-#I  
-#I  [ 1, 4, "A5" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  1 : 4 done .. 
-
-#I  
-#I  [ 2, 4, "S5" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  2 : 4 done .. 
-
-#I  
-#I  [ 3, 4, "A6" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  3 : 4 done .. 
-
-#I  
-#I  [ 4, 4, "S6" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  4 : 4 done .. 
-
-#I  checking isomorphisms ..
-
 # ####################################################################################################
 # Block-transitive 2-designs 
 # Primitive groups on 6 points 
@@ -237,8 +177,7 @@ lD_6 :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 6)
-]; 
-;
+];
 for D in lD_6 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -357,7 +296,6 @@ lD_6_all :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 6)
-]; 
-;
+];
 for D in lD_6_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

@@ -1,44 +1,3 @@
-#I  number of primitive groups of degree 5: 5
-
-#I  
-#I  [ 1, 5, "5" ]
-#I  rank : 5
-#I  1 : 5 done .. 
-
-#I  
-#I  [ 2, 5, "D10" ]
-#I  rank : 3
-#I  2 : 5 done .. 
-
-#I  
-#I  [ 3, 5, "5:4" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  3 : 5 done .. 
-
-#I  
-#I  [ 4, 5, "A5" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  4 : 5 done .. 
-
-#I  
-#I  [ 5, 5, "S5" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  5 : 5 done .. 
-
-#I  checking isomorphisms ..
-
 # ####################################################################################################
 # Block-transitive 2-designs 
 # Primitive groups on 5 points 
@@ -131,8 +90,7 @@ lD_5 :=  [
   lambdas := [ 3 ],
   t := 2 ),
   v:= 5)
-]; 
-;
+];
 for D in lD_5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -181,7 +139,6 @@ lD_5_all :=  [
   lambdas := [ 3 ],
   t := 2 ),
   v:= 5)
-]; 
-;
+];
 for D in lD_5_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

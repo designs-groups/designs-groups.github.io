@@ -1,144 +1,3 @@
-#I  number of primitive groups of degree 8: 7
-
-#I  
-#I  [ 1, 7, "(2^3):7" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  1 : 7 done .. 
-
-#I  
-#I  [ 2, 7, "2^3:(7:3)" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  2 : 7 done .. 
-
-#I  
-#I  [ 3, 7, "2^3:PSL(3,2)" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  3 : 7 done .. 
-
-#I  
-#I  [ 4, 7, "PSL(3,2)" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  4 : 7 done .. 
-
-#I  
-#I  [ 5, 7, "PSL(3,2):2" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  5 : 7 done .. 
-
-#I  
-#I  [ 6, 7, "A8" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I  Warning: R-base point is already fixed
-#I  Warning: R-base point is already fixed
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  6 : 7 done .. 
-
-#I  
-#I  [ 7, 7, "S8" ]
-#I  rank : 2
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  finding block design info .. 
-#I   block set is obtained .. 
-#I   autSubgroupInfo is obtained .. 
-#I  autGroupInfo is obtained .. 
-#I  7 : 7 done .. 
-
-#I  checking isomorphisms ..
-
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Primitive groups on 8 points 
@@ -539,8 +398,7 @@ lD_8 :=  [
   lambdas := [ 15 ],
   t := 2 ),
   v:= 8)
-]; 
-;
+];
 for D in lD_8 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -883,7 +741,6 @@ lD_8_all :=  [
   lambdas := [ 15 ],
   t := 2 ),
   v:= 8)
-]; 
-;
+];
 for D in lD_8_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

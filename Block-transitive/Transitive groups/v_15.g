@@ -1452,7 +1452,7 @@
 #I  75 : 104 done .. 
 
 #I  
-#I  [ 76, 104, "3^4:(A5xS3)" ]
+#I  [ 76, 104, "3:(3^4:(2xA5))" ]
 #I  rank : 3
 #I  finding block design info .. 
 #I   block set is obtained .. 
@@ -1465,7 +1465,7 @@
 #I  76 : 104 done .. 
 
 #I  
-#I  [ 77, 104, "3^4:(A5:S3)" ]
+#I  [ 77, 104, "3:(3^4:S5)" ]
 #I  rank : 3
 #I  finding block design info .. 
 #I   block set is obtained .. 
@@ -1763,6 +1763,14 @@
 #I  finding block design info .. 
 #I   block set is obtained .. 
 #I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
 #I   autSubgroupInfo is obtained .. 
 #I  autGroupInfo is obtained .. 
 #I  finding block design info .. 

@@ -1,16 +1,3 @@
-#I  number of primitive groups of degree 4: 2
-
-#I  
-#I  [ 1, 2, "A4" ]
-#I  rank : 2
-#I  1 : 2 done .. 
-
-#I  
-#I  [ 2, 2, "S4" ]
-#I  rank : 2
-#I  2 : 2 done .. 
-
-
 # ####################################################################################################
 # Block-transitive 2-designs 
 # Primitive groups on 4 points 
