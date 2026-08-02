@@ -13,8 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
 
 PARAMETER_SET_PAGES = {
-    "docs/flag-transitive/imprimitive.html",
-    "docs/block-transitive/imprimitive.html",
+    "docs/flag-transitive/parameters.html",
+    "docs/block-transitive/parameters.html",
 }
 
 

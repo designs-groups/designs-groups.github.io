@@ -14,8 +14,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 PARAMETER_SET_PAGES = {
-    "flag-transitive": Path("docs/flag-transitive/imprimitive.html"),
-    "block-transitive": Path("docs/block-transitive/imprimitive.html"),
+    "flag-transitive": Path("docs/flag-transitive/parameters.html"),
+    "block-transitive": Path("docs/block-transitive/parameters.html"),
 }
 
 DATA_CATEGORIES = {
@@ -107,6 +107,65 @@ def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
 
 
 
+
+def nonisomorphic_design_table_entries(text: str) -> list[tuple[tuple[int, int, int, int, int], str]]:
+    """Return parameter sets and actual G labels from the summary table.
+
+    The table has rows of the form
+
+      # Nr v b r k λ G Gα GB Aut(D) ...
+
+    For parameter-set pages we want the group in the G column, not the
+    degree-file label such as v_05.
+    """
+    entries: list[tuple[tuple[int, int, int, int, int], str]] = []
+    in_table = False
+    seen_header = False
+
+    for raw in text.splitlines():
+        line = re.sub(r"^\s*#\s?", "", raw).strip()
+
+        if re.match(r"^Non-isomorphic designs\s*:\s*$", line, re.I):
+            in_table = True
+            seen_header = False
+            continue
+
+        if not in_table:
+            continue
+
+        if re.match(r"^(All designs|Further information|Designs \(up to isomorphism\)|\d+\.\s+Further information)\b", line, re.I):
+            break
+
+        if not line or set(line) <= {"-"}:
+            continue
+
+        if re.search(r"\bNr\s+v\s+b\s+r\s+k\b", line) and re.search(r"\bG\b", line):
+            seen_header = True
+            continue
+
+        if not seen_header:
+            continue
+
+        parts = line.split()
+        if len(parts) < 7:
+            continue
+
+        if not re.fullmatch(r"\d+", parts[0]):
+            continue
+
+        if not all(re.fullmatch(r"\d+", item) for item in parts[1:6]):
+            continue
+
+        param = tuple(int(item) for item in parts[1:6])
+        group_label = parts[6].strip()
+
+        if is_valid_parameter_set(param) and group_label:
+            entries.append((param, group_label))
+
+    return entries
+
+
+
 def group_label_from_text(text: str, fallback: str) -> str:
     match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M)
     if match:
@@ -158,23 +217,45 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
         "flag-transitive": {},
         "block-transitive": {},
     }
+
     for kind, category_folder in DATA_CATEGORIES.items():
         for path in iter_gap_files(data_root, category_folder):
             source_path = path.relative_to(data_root).as_posix()
-            group_label, total = file_total_from_row(tools, path, source_path)
             text = path.read_text(encoding="utf-8", errors="replace")
+            url = raw_url(repository, branch, source_path)
+
+            # Preferred source: the "Non-isomorphic designs" summary table.
+            # This gives the actual group G for each parameter set.  This is
+            # essential for degree files such as Affine groups/v_05.g, where
+            # the filename is only the degree and not the group.
+            table_entries = nonisomorphic_design_table_entries(text)
+
+            if table_entries:
+                for param, group_label in table_entries:
+                    recs = records[kind]
+                    if param not in recs:
+                        recs[param] = ParameterRecord(param=param)
+                    recs[param].count += 1
+                    label = tools.math_label(group_label)
+                    sort_label = tools.normalize_group_sort_text(group_label).casefold()
+                    recs[param].groups.setdefault(sort_label, (label, url))
+                continue
+
+            group_label, total = file_total_from_row(tools, path, source_path)
             counts = counts_for_file(parameter_candidates(text), total)
             if not counts:
                 continue
+
             label = tools.math_label(group_label)
             sort_label = tools.normalize_group_sort_text(group_label).casefold()
-            url = raw_url(repository, branch, source_path)
+
             for param, count in counts.items():
                 recs = records[kind]
                 if param not in recs:
                     recs[param] = ParameterRecord(param=param)
                 recs[param].count += int(count)
                 recs[param].groups.setdefault(sort_label, (label, url))
+
     return records
 
 

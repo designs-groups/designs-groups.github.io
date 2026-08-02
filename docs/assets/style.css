@@ -1617,3 +1617,31 @@ h2 {
   text-decoration: none !important;
 }
 
+
+/* Strong underline removal for degree links and table-number links, including block-transitive pages. */
+.catalogue-degree-grid a,
+.catalogue-degree-grid a:visited,
+.catalogue-degree-grid a:hover,
+.catalogue-degree-grid a:focus,
+.catalogue-degree-grid a *,
+.catalogue-degree-link,
+.catalogue-degree-link:visited,
+.catalogue-degree-link:hover,
+.catalogue-degree-link:focus,
+.catalogue-degree-link *,
+.database-table tbody th.degree-cell a,
+.database-table tbody th.degree-cell a:visited,
+.database-table tbody th.degree-cell a:hover,
+.database-table tbody th.degree-cell a:focus,
+.database-table tbody th.degree-cell a *,
+.database-table tbody td a.row-cell-link,
+.database-table tbody td a.row-cell-link:visited,
+.database-table tbody td a.row-cell-link:hover,
+.database-table tbody td a.row-cell-link:focus,
+.database-table tbody td a.row-cell-link * {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+

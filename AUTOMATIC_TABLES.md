@@ -514,3 +514,7 @@ is composited onto the same author-box background colour without face alteration
 - Version 52: made the detailed Affine groups pages match the Transitive/Primitive degree-page style: title with `(of degree)`, first column Degree, and degree row labels; Parameter sets still use actual group labels.
 
 - Version 53: removed underlines from degree-number links on catalogue degree grids and detailed degree pages.
+
+- Version 54: Parameter sets now read actual G labels from the Non-isomorphic designs summary table inside Affine `.g` files, instead of using degree filenames such as `v_05`; underline removal for block-transitive degree/table-number links was strengthened.
+
+- Version 56: based on version 54; the Parameter sets pages now use `parameters.html` URLs, and all internal website, script, sitemap, canonical, and workflow references were updated.
