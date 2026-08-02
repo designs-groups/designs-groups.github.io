@@ -1,21 +1,3 @@
-#I  number of primitive groups of degree 5 and O'Nan-Scott type 1: 3
-
-#I  
-#I  [ 1, 3, "5" ]
-#I  rank : 5
-#I  1 : 3 done .. 
-
-#I  
-#I  [ 2, 3, "D10" ]
-#I  rank : 3
-#I  2 : 3 done .. 
-
-#I  
-#I  [ 3, 3, "5:4" ]
-#I  rank : 2
-#I  3 : 3 done .. 
-
-
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Primitive groups on 5 points 

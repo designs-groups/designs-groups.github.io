@@ -1,11 +1,3 @@
-#I  number of primitive groups of degree 2 and O'Nan-Scott type 1: 1
-
-#I  
-#I  [ 1, 1, "2" ]
-#I  rank : 2
-#I  1 : 1 done .. 
-
-
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Primitive groups on 2 points 

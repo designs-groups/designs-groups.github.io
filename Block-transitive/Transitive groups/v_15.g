@@ -1,14881 +1,1769 @@
-# ####################################################################################################
-# Block-transitive 2-designs 
-# Tranitive groups on 15 points 
-# ####################################################################################################
-# Remarks:      all designs 
-#               lD_15 is the list of the designs
-# References:    
-
-# 1. number of non-isomorphic designs: 
-# ------------------------------------
-
-# ----------------------------------------------------
-#                    Symmetric  Non-symmetric  Total  
-# ----------------------------------------------------
-# Point-primitive    1          87             88     
-# Point-imprimitive  1          98             99     
-#                                                     
-# Block-primitive    1          12             13     
-# Block-imprimitive  1          173            174    
-# Flag-trasnitive    1          30             31     
-# ----------------------------------------------------
-# Total              2          185            187    
-# ----------------------------------------------------
-
-# 2. Summary: 
-# -----------
-
-#    Non-isomorphic designs:
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr   v   b     r     k   λ    G                  Gα                  GB                   Aut(D)             rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  complement  symmetric  comments                                      
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1    15  15    7     7   3     15                 1                    1                    A8                 15     2                  1        1       false            false            false                        true       PG(3,2) or Hadamard parameters                
-# 2    15  15    8     8   4     S6                 2xS4                 2xS4                 A8                 3      2                  1        2       true             true             true                         true       complement of PG(3,2) or Hadamard parameters  
-# 3    15  30    14    7   6     (5:4)xS3           4x2                  4                    (5:4)xS3           4      4                  1        1       false            false            false                                                                                 
-# 4    15  30    16    8   8     D30                2                    1                    (5:4)xS3           8      4                  1        2       false            false            false                                                                                 
-# 5    15  35    7     3   1     A7                 PSL(3,2)             (3xA4):2             A8                 2      2                  1        3       true             true             true             6                                                                    
-# 6    15  35    28    12  22    A7                 PSL(3,2)             (3xA4):2             A8                 2      2                  1        4       true             true             true             5                                                                    
-# 7    15  42    14    5   4     A7                 PSL(3,2)             A5                   A7                 2      2                  1        5       true             false            true             8                                                                    
-# 8    15  42    28    10  18    A7                 PSL(3,2)             A5                   A7                 2      2                  1        6       true             false            true             7                                                                    
-# 9    15  60    28    7   12    15:4               4                    1                    15:4               5      5                  1        3       false            false            false                                                                                 
-# 10   15  60    28    7   12    (5:4)xS3           4x2                  2                    S5xS3              4      4                  1        3       false            false            false                                                                                 
-# 11   15  60    28    7   12    A5                 2^2                  1                    GL(2,4)            6      4                  1        3       false            false            false                                                                                 
-# 12   15  60    28    7   12    3x(5:4)            4                    1                    3x(5:4)            6      6                  1        3       false            false            false                                                                                 
-# 13   15  60    28    7   12    A5                 2^2                  1                    GL(2,4)            6      4                  1        3       false            false            false                                                                                 
-# 14   15  60    28    7   12    3x(5:4)            4                    1                    3x(5:4)            6      6                  1        3       false            false            false                                                                                 
-# 15   15  60    28    7   12    3x(5:4)            4                    1                    3x(5:4)            6      6                  1        3       false            false            false                                                                                 
-# 16   15  60    28    7   12    3x(5:4)            4                    1                    (5:4)xS3           6      4                  1        3       false            false            false                                                                                 
-# 17   15  60    28    7   12    A5                 2^2                  1                    A5:S3              6      3                  1        3       false            false            false                                                                                 
-# 18   15  60    28    7   12    15:4               4                    1                    15:4               5      5                  1        3       false            false            false                                                                                 
-# 19   15  60    32    8   16    S5                 D8                   2                    A5:S3              4      3                  1        4       false            false            false                                                                                 
-# 20   15  60    32    8   16    3x(5:4)            4                    1                    3x(5:4)            6      6                  1        4       false            false            false                                                                                 
-# 21   15  60    32    8   16    GL(2,4)            A4                   3                    GL(2,4)            4      4                  1        4       false            false            false                                                                                 
-# 22   15  60    32    8   16    15:4               4                    1                    (5:4)xS3           5      4                  1        4       false            false            false                                                                                 
-# 23   15  60    32    8   16    15:4               4                    1                    15:4               5      5                  1        4       false            false            false                                                                                 
-# 24   15  60    32    8   16    3x(5:4)            4                    1                    3x(5:4)            6      6                  1        4       false            false            false                                                                                 
-# 25   15  60    32    8   16    A5                 2^2                  1                    GL(2,4)            6      4                  1        4       false            false            false                                                                                 
-# 26   15  60    32    8   16    3x(5:4)            4                    1                    S5xS3              6      4                  1        4       false            false            false                                                                                 
-# 27   15  60    32    8   16    3x(5:4)            4                    1                    3x(5:4)            6      6                  1        4       false            false            false                                                                                 
-# 28   15  60    32    8   16    15:4               4                    1                    15:4               5      5                  1        4       false            false            false                                                                                 
-# 29   15  70    28    6   10    A7                 PSL(3,2)             (3^2):4              A7                 2      2                  1        7       true             false            true             30                                                                   
-# 30   15  70    42    9   24    A7                 PSL(3,2)             (3^2):4              A7                 2      2                  1        8       true             false            true             29                                                                   
-# 31   15  75    35    7   15    (5^2):3            5                    1                    5^2:(3:4)          7      3                  1        1       false            false            false                                                                                 
-# 32   15  75    40    8   20    5^2:6              D10                  2                    5^2:(3:4)          5      3                  1        2       false            false            false                                                                                 
-# 33   15  90    42    7   18    A5:S3              S4                   4                    A5:S3              3      3                  1        5       false            false            false            36                                                                   
-# 34   15  90    42    7   18    3:S5               S4                   4                    S5xS3              4      4                  1        3       false            false            false            35                                                                   
-# 35   15  90    48    8   24    3:S5               S4                   4                    S5xS3              4      4                  1        4       false            false            false            34                                                                   
-# 36   15  90    48    8   24    A5:S3              S4                   4                    A5:S3              3      3                  1        6       false            false            false            33                                                                   
-# 37   15  105   28    4   6     A7                 PSL(3,2)             S4                   A8                 2      2                  1        9       true             false            true             40                                                                   
-# 38   15  105   42    6   15    A7                 PSL(3,2)             S4                   A8                 2      2                  1        10      true             false            true                                                                                  
-# 39   15  105   63    9   36    A8                 2^3:PSL(3,2)         (((2^3):(2^2)):3):2  A8                 2      2                  1        7       true             false            false                                                                                 
-# 40   15  105   77    11  55    A7                 PSL(3,2)             S4                   A8                 2      2                  1        12      true             false            false            37                                                                   
-# 41   15  105   91    13  78    A7                 PSL(3,2)             S4                   S15                2      2                  1        13      true             false            false                                   complete                                      
-# 42   15  120   56    7   24    (5:4)xS3           4x2                  1                    (5:4)xS3           4      4                  1        5       false            false            false            55                                                                   
-# 43   15  120   56    7   24    A5:S3              S4                   3                    A5:S3              3      3                  1        7       false            false            false                                                                                 
-# 44   15  120   56    7   24    (5:4)xS3           4x2                  1                    (5:4)xS3           4      4                  1        5       false            false            false            56                                                                   
-# 45   15  120   56    7   24    S5                 D8                   1                    S5                 4      4                  1        5       false            false            false            52                                                                   
-# 46   15  120   56    7   24    S5                 D8                   1                    A8                 4      2                  1        5       false            false            false                                                                                 
-# 47   15  120   56    7   24    S5                 D8                   1                    S5                 4      4                  1        5       false            false            false            50                                                                   
-# 48   15  120   56    7   24    (5:4)xS3           4x2                  1                    (5:4)xS3           4      4                  1        5       false            false            false            51                                                                   
-# 49   15  120   56    7   24    S5                 D8                   1                    S5                 4      4                  1        5       false            false            false            54                                                                   
-# 50   15  120   64    8   32    S5                 D8                   1                    S5                 4      4                  1        6       false            false            false            47                                                                   
-# 51   15  120   64    8   32    (5:4)xS3           4x2                  1                    (5:4)xS3           4      4                  1        6       false            false            false            48                                                                   
-# 52   15  120   64    8   32    S5                 D8                   1                    S5                 4      4                  1        6       false            false            false            45                                                                   
-# 53   15  120   64    8   32    A5:S3              S4                   3                    A8                 3      2                  1        8       false            false            false                                                                                 
-# 54   15  120   64    8   32    S5                 D8                   1                    S5                 4      4                  1        6       false            false            false            49                                                                   
-# 55   15  120   64    8   32    (5:4)xS3           4x2                  1                    (5:4)xS3           4      4                  1        6       false            false            false            42                                                                   
-# 56   15  120   64    8   32    (5:4)xS3           4x2                  1                    (5:4)xS3           4      4                  1        6       false            false            false            44                                                                   
-# 57   15  120   64    8   32    S5                 D8                   1                    A5:S3              4      3                  1        6       false            false            false                                                                                 
-# 58   15  126   42    5   12    A7                 PSL(3,2)             5:4                  A7                 2      2                  1        16      true             false            true             59                                                                   
-# 59   15  126   84    10  54    A7                 PSL(3,2)             5:4                  A7                 2      2                  1        17      true             false            true             58                                                                   
-# 60   15  150   70    7   30    5^2:6              D10                  1                    5^2:6              5      5                  1        3       false            false            false                                                                                 
-# 61   15  150   70    7   30    5^2:(4xS3)         2x(5:4)              4                    5^2:(4xS3)         3      3                  1        1       false            false            false            64                                                                   
-# 62   15  150   70    7   30    5^2:S3             10                   1                    5^2:S3             4      4                  1        1       false            false            false                                                                                 
-# 63   15  150   70    7   30    5^2:(3:4)          5:4                  2                    5^2:(4xS3)         3      3                  1        3       false            false            false                                                                                 
-# 64   15  150   80    8   40    5^2:(4xS3)         2x(5:4)              4                    5^2:(4xS3)         3      3                  1        2       false            false            false            61                                                                   
-# 65   15  150   80    8   40    5^2:12             5:4                  2                    5^2:(4xS3)         4      3                  1        2       false            false            false                                                                                 
-# 66   15  150   80    8   40    5^2:S3             10                   1                    5^2:S3             4      4                  1        2       false            false            false                                                                                 
-# 67   15  150   80    8   40    5^2:6              D10                  1                    5^2:6              5      5                  1        4       false            false            false                                                                                 
-# 68   15  168   56    5   16    A8                 2^3:PSL(3,2)         S5                   A8                 2      2                  1        12      true             false            true             69                                                                   
-# 69   15  168   112   10  72    A8                 2^3:PSL(3,2)         S5                   A8                 2      2                  1        13      true             false            true             68                                                                   
-# 70   15  180   84    7   36    A6                 S4                   2                    S6                 3      3                  1        5       true             false            false                                                                                 
-# 71   15  180   84    7   36    A5:S3              S4                   2                    A5:S3              3      3                  1        9       false            false            false                                                                                 
-# 72   15  180   84    7   36    GL(2,4)            A4                   1                    GL(2,4)            4      4                  1        7       false            false            false                                                                                 
-# 73   15  180   84    7   36    GL(2,4)            A4                   1                    GL(2,4)            4      4                  1        7       false            false            false                                                                                 
-# 74   15  180   84    7   36    3xS5               S4                   2                    3xS5               6      6                  1        5       false            false            false                                                                                 
-# 75   15  180   84    7   36    A5:S3              S4                   2                    A5:S3              3      3                  1        9       false            false            false                                                                                 
-# 76   15  180   84    7   36    GL(2,4)            A4                   1                    A5:S3              4      3                  1        7       false            false            false            78                                                                   
-# 77   15  180   84    7   36    GL(2,4)            A4                   1                    GL(2,4)            4      4                  1        7       false            false            false                                                                                 
-# 78   15  180   96    8   48    GL(2,4)            A4                   1                    A5:S3              4      3                  1        8       false            false            false            76                                                                   
-# 79   15  180   96    8   48    GL(2,4)            A4                   1                    GL(2,4)            4      4                  1        8       false            false            false                                                                                 
-# 80   15  180   96    8   48    GL(2,4)            A4                   1                    GL(2,4)            4      4                  1        8       false            false            false                                                                                 
-# 81   15  180   96    8   48    GL(2,4)            A4                   1                    3xS5               6      6                  1        6       false            false            false                                                                                 
-# 82   15  180   96    8   48    GL(2,4)            A4                   1                    GL(2,4)            4      4                  1        8       false            false            false                                                                                 
-# 83   15  180   96    8   48    S6                 2xS4                 2^2                  S6                 3      3                  1        6       true             false            false                                                                                 
-# 84   15  180   96    8   48    GL(2,4)            A4                   1                    A5:S3              4      3                  1        8       false            false            false                                                                                 
-# 85   15  180   96    8   48    GL(2,4)            A4                   1                    A5:S3              4      3                  1        8       false            false            false                                                                                 
-# 86   15  210   56    4   12    A7                 PSL(3,2)             A4                   A7                 2      2                  1        18      true             false            true             89                                                                   
-# 87   15  210   84    6   30    A7                 PSL(3,2)             D12                  A7                 2      2                  1        19      true             false            true             88                                                                   
-# 88   15  210   126   9   72    A7                 PSL(3,2)             D12                  A7                 2      2                  1        20      true             false            false            87                                                                   
-# 89   15  210   154   11  110   A7                 PSL(3,2)             A4                   A7                 2      2                  1        21      true             false            false            86                                                                   
-# 90   15  280   112   6   40    A8                 2^3:PSL(3,2)         (S3xS3):2            A8                 2      2                  1        14      true             false            true             91                                                                   
-# 91   15  280   168   9   96    A8                 2^3:PSL(3,2)         (S3xS3):2            A8                 2      2                  1        15      true             false            true             90                                                                   
-# 92   15  300   140   7   60    5^2:D12            D20                  1                    5^2:D12            4      4                  1        3       false            false            false                                                                                 
-# 93   15  300   140   7   60    5^2:12             5:4                  1                    5^2:12             4      4                  1        3       false            false            false                                                                                 
-# 94   15  300   140   7   60    5^2:12             5:4                  1                    5^2:(4xS3)         4      3                  1        3       false            false            false                                                                                 
-# 95   15  300   140   7   60    5^2:(3:4)          5:4                  1                    5^2:(4xS3)         3      3                  1        5       false            false            false            97                                                                   
-# 96   15  300   140   7   60    5^2:(3:4)          5:4                  1                    5^2:(3:4)          3      3                  1        5       false            false            false                                                                                 
-# 97   15  300   160   8   80    5^2:(3:4)          5:4                  1                    5^2:(4xS3)         3      3                  1        6       false            false            false            95                                                                   
-# 98   15  300   160   8   80    5^2:D12            D20                  1                    5^2:D12            4      4                  1        4       false            false            false                                                                                 
-# 99   15  300   160   8   80    5^2:(3:4)          5:4                  1                    5^2:(3:4)          3      3                  1        6       false            false            false                                                                                 
-# 100  15  300   160   8   80    5^2:(3:4)          5:4                  1                    5^2:(4xS3)         3      3                  1        6       false            false            false                                                                                 
-# 101  15  300   160   8   80    5^2:12             5:4                  1                    5^2:12             4      4                  1        4       false            false            false                                                                                 
-# 102  15  315   105   5   30    A8                 2^3:PSL(3,2)         ((2^3):4):2          A8                 2      2                  1        16      true             false            false            103                                                                  
-# 103  15  315   210   10  135   A8                 2^3:PSL(3,2)         ((2^3):4):2          A8                 2      2                  1        17      true             false            false            102                                                                  
-# 104  15  360   168   7   72    A6                 S4                   1                    A6                 3      3                  1        7       true             false            false                                                                                 
-# 105  15  360   168   7   72    A5:S3              S4                   1                    A5:S3              3      3                  1        11      false            false            false            111                                                                  
-# 106  15  360   168   7   72    A5xS3              2xA4                 1                    S5xS3              4      4                  1        5       false            false            false                                                                                 
-# 107  15  360   168   7   72    A5:S3              S4                   1                    A5:S3              3      3                  1        11      false            false            false            117                                                                  
-# 108  15  360   168   7   72    S6                 2xS4                 2                    S6                 3      3                  1        7       true             false            false            115                                                                  
-# 109  15  360   168   7   72    A6                 S4                   1                    S6                 3      3                  1        7       true             false            false            114                                                                  
-# 110  15  360   168   7   72    A5:S3              S4                   1                    A5:S3              3      3                  1        11      false            false            false            113                                                                  
-# 111  15  360   192   8   96    A5:S3              S4                   1                    A5:S3              3      3                  1        12      false            false            false            105                                                                  
-# 112  15  360   192   8   96    A6                 S4                   1                    A6                 3      3                  1        8       true             false            false                                                                                 
-# 113  15  360   192   8   96    A5:S3              S4                   1                    A5:S3              3      3                  1        12      false            false            false            110                                                                  
-# 114  15  360   192   8   96    A6                 S4                   1                    S6                 3      3                  1        8       true             false            false            109                                                                  
-# 115  15  360   192   8   96    S6                 2xS4                 2                    S6                 3      3                  1        8       true             false            false            108                                                                  
-# 116  15  360   192   8   96    S5xS3              2xS4                 2                    S5xS3              4      4                  1        6       false            false            false                                                                                 
-# 117  15  360   192   8   96    A5:S3              S4                   1                    A5:S3              3      3                  1        12      false            false            false            107                                                                  
-# 118  15  375   175   7   75    5^3:(2xA4)         2xD10xD10            2^3                  5^3:(A4:4)         5      3                  1        1       false            false            false                                                                                 
-# 119  15  375   200   8   100   5x((5^2):3)        5^2                  1                    5^3:(A4:4)         7      3                  1        2       false            false            false                                                                                 
-# 120  15  405   189   7   81    3^5:(((2^4):5):2)  3^4:((2^4):2)        3:((2^4):2)          3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 121  15  405   216   8   108   3^5:(5:4)          3x(3^3:4)            3:4                  3^5:(2x(2^4:S5))   3      3                  1        2       false            false            false                                                                                 
-# 122  15  420   84    3   12    A7                 PSL(3,2)             S3                   A8                 2      2                  1        24      true             false            true                                                                                  
-# 123  15  420   112   4   24    A7                 PSL(3,2)             S3                   A8                 2      2                  1        25      true             false            false            132                                                                  
-# 124  15  420   140   5   40    A7                 PSL(3,2)             S3                   A7                 2      2                  1        26      true             false            false            131                                                                  
-# 125  15  420   168   6   60    A7                 PSL(3,2)             S3                   A7                 2      2                  1        27      true             false            false            130                                                                  
-# 126  15  420   168   6   60    A7                 PSL(3,2)             S3                   A8                 2      2                  1        27      true             false            true             129                                                                  
-# 127  15  420   196   7   84    A8                 2^3:PSL(3,2)         2xS4                 A8                 2      2                  1        21      true             false            false            128                                                                  
-# 128  15  420   224   8   112   A8                 2^3:PSL(3,2)         2xS4                 A8                 2      2                  1        22      true             false            false            127                                                                  
-# 129  15  420   252   9   144   A7                 PSL(3,2)             S3                   A8                 2      2                  1        30      true             false            false            126                                                                  
-# 130  15  420   252   9   144   A7                 PSL(3,2)             S3                   A7                 2      2                  1        30      true             false            false            125                                                                  
-# 131  15  420   280   10  180   A7                 PSL(3,2)             S3                   A7                 2      2                  1        31      true             false            false            124                                                                  
-# 132  15  420   308   11  220   A7                 PSL(3,2)             S3                   A8                 2      2                  1        32      true             false            false            123                                                                  
-# 133  15  420   336   12  264   A8                 2^3:PSL(3,2)         2xS4                 A8                 2      2                  1        25      true             false            false                                                                                 
-# 134  15  455   91    3   13    A15                A14                  A12:S3               S15                2      2                  1        2       true             true             true             135                    complete                                      
-# 135  15  455   364   12  286   A15                A14                  A12:S3               S15                2      2                  1        3       true             true             true             134                    complete                                      
-# 136  15  600   280   7   120   5^2:(4xS3)         2x(5:4)              1                    5^2:(4xS3)         3      3                  1        5       false            false            false            137                                                                  
-# 137  15  600   320   8   160   5^2:(4xS3)         2x(5:4)              1                    5^2:(4xS3)         3      3                  1        6       false            false            false            136                                                                  
-# 138  15  630   168   4   36    A7                 PSL(3,2)             4                    A7                 2      2                  1        34      true             false            true             143                                                                  
-# 139  15  630   294   7   126   A7                 PSL(3,2)             4                    A7                 2      2                  1        35      true             false            false            142                                                                  
-# 140  15  630   294   7   126   A7                 PSL(3,2)             2^2                  A7                 2      2                  1        35      true             false            false            141                                                                  
-# 141  15  630   336   8   168   A7                 PSL(3,2)             2^2                  A7                 2      2                  1        36      true             false            false            140                                                                  
-# 142  15  630   336   8   168   A7                 PSL(3,2)             4                    A7                 2      2                  1        36      true             false            false            139                                                                  
-# 143  15  630   462   11  330   A7                 PSL(3,2)             4                    A7                 2      2                  1        37      true             false            false            138                                                                  
-# 144  15  720   336   7   144   S6                 2xS4                 1                    S6                 3      3                  1        9       true             false            false            145                                                                  
-# 145  15  720   384   8   192   S6                 2xS4                 1                    S6                 3      3                  1        10      true             false            false            144                                                                  
-# 146  15  750   350   7   150   5^3:(2xS4)         2x(5^2:D8)           2^3                  5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 147  15  750   350   7   150   5^3:12             (5^2):4              2                    5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 148  15  750   400   8   200   5^3:S4             5^2:D8               2^2                  5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 149  15  750   400   8   200   5^3:(4xS3)         5^2:(4x2)            2^2                  5^3:(4xS4)         3      3                  1        2       false            false            false                                                                                 
-# 150  15  840   224   4   48    A8                 2^3:PSL(3,2)         S4                   A8                 2      2                  1        26      true             false            true             155                                                                  
-# 151  15  840   280   5   80    A7                 PSL(3,2)             3                    A8                 2      2                  1        38      true             false            false            154                                                                  
-# 152  15  840   392   7   168   A8                 2^3:PSL(3,2)         S4                   A8                 2      2                  1        28      true             false            false            153                                                                  
-# 153  15  840   448   8   224   A8                 2^3:PSL(3,2)         S4                   A8                 2      2                  1        29      true             false            false            152                                                                  
-# 154  15  840   560   10  360   A7                 PSL(3,2)             3                    A8                 2      2                  1        41      true             false            false            151                                                                  
-# 155  15  840   616   11  440   A8                 2^3:PSL(3,2)         S4                   A8                 2      2                  1        31      true             false            false            150                                                                  
-# 156  15  1260  420   5   120   A7                 PSL(3,2)             2                    A7                 2      2                  1        42      true             false            false            165                                                                  
-# 157  15  1260  504   6   180   A7                 PSL(3,2)             2                    A7                 2      2                  1        43      true             false            false            164                                                                  
-# 158  15  1260  588   7   252   A7                 PSL(3,2)             2                    A7                 2      2                  1        44      true             false            false            161                                                                  
-# 159  15  1260  588   7   252   A7                 PSL(3,2)             2                    A7                 2      2                  1        44      true             false            false            162                                                                  
-# 160  15  1260  588   7   252   A7                 PSL(3,2)             2                    A7                 2      2                  1        44      true             false            false            163                                                                  
-# 161  15  1260  672   8   336   A7                 PSL(3,2)             2                    A7                 2      2                  1        45      true             false            false            158                                                                  
-# 162  15  1260  672   8   336   A7                 PSL(3,2)             2                    A7                 2      2                  1        45      true             false            false            159                                                                  
-# 163  15  1260  672   8   336   A7                 PSL(3,2)             2                    A7                 2      2                  1        45      true             false            false            160                                                                  
-# 164  15  1260  756   9   432   A7                 PSL(3,2)             2                    A7                 2      2                  1        46      true             false            false            157                                                                  
-# 165  15  1260  840   10  540   A7                 PSL(3,2)             2                    A7                 2      2                  1        47      true             false            false            156                                                                  
-# 166  15  1365  364   4   78    A15                A14                  A11:S4               S15                2      2                  1        4       true             true             true                                    complete                                      
-# 167  15  1365  1001  11  715   S15                S14                  S11xS4               S15                2      2                  1        5       true             true             true                                    complete                                      
-# 168  15  1500  700   7   300   (A5xA5xA5):(2xA4)  S5xS5xS4             2^2xS4xS3xS3         (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false                                                                                 
-# 169  15  1500  800   8   400   5^3:(2x((4^2):3))  2x((5:4)x(5:4))      2^3                  (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false                                                                                 
-# 170  15  1620  756   7   324   3^5:(5:4)          3x(3^3:4)            3                    3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 171  15  1620  864   8   432   3^4:(3:S5)         (3x((3^3:2^2):3)):2  (3^2):2              3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 172  15  1680  560   5   160   A8                 2^3:PSL(3,2)         D12                  A8                 2      2                  1        32      true             false            false            175                                                                  
-# 173  15  1680  672   6   240   A8                 2^3:PSL(3,2)         D12                  A8                 2      2                  1        33      true             false            false            174                                                                  
-# 174  15  1680  1008  9   576   A8                 2^3:PSL(3,2)         D12                  A8                 2      2                  1        34      true             false            false            173                                                                  
-# 175  15  1680  1120  10  720   A8                 2^3:PSL(3,2)         D12                  A8                 2      2                  1        35      true             false            false            172                                                                  
-# 176  15  2520  1008  6   360   A7                 PSL(3,2)             1                    A8                 2      2                  1        48      true             false            false            181                                                                  
-# 177  15  2520  1176  7   504   A8                 2^3:PSL(3,2)         D8                   A8                 2      2                  1        37      true             false            false            179                                                                  
-# 178  15  2520  1176  7   504   A8                 2^3:PSL(3,2)         2^3                  A8                 2      2                  1        37      true             false            false            180                                                                  
-# 179  15  2520  1344  8   672   A8                 2^3:PSL(3,2)         D8                   A8                 2      2                  1        38      true             false            false            177                                                                  
-# 180  15  2520  1344  8   672   A8                 2^3:PSL(3,2)         2^3                  A8                 2      2                  1        38      true             false            false            178                                                                  
-# 181  15  2520  1512  9   864   A7                 PSL(3,2)             1                    A8                 2      2                  1        49      true             false            false            176                                                                  
-# 182  15  3003  1001  5   286   A15                A14                  A10:S5               S15                2      2                  1        6       true             true             true             183                    complete                                      
-# 183  15  3003  2002  10  1287  A15                A14                  A10:S5               S15                2      2                  1        7       true             true             true             182                    complete                                      
-# 184  15  5005  2002  6   715   A15                A14                  A9:S6                S15                2      2                  1        8       true             true             true             185                    complete                                      
-# 185  15  5005  3003  9   1716  A15                A14                  A9:S6                S15                2      2                  1        9       true             true             true             184                    complete                                      
-# 186  15  6435  3003  7   1287  A15                A14                  A8:S7                S15                2      2                  1        10      true             true             true             187                    complete                                      
-# 187  15  6435  3432  8   1716  A15                A14                  A8:S7                S15                2      2                  1        11      true             true             true             186                    complete                                      
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#    All designs:
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr   v   b     r     k   λ    G                      Gα                                GB                           Aut(D)             rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  complement  symmetric  comments                                      
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1    15  15    7     7   3     15                     1                                  1                            A8                 15     2                  1        1       false            false            false                        true       PG(3,2) or Hadamard parameters                
-# 2    15  15    8     8   4     15                     1                                  1                            A8                 15     2                  1        2       false            false            false                        true       complement of PG(3,2) or  Hadamard parameters  
-# 3    15  30    14    7   6     D30                    2                                  1                            (5:4)xS3           8      4                  1        1       false            false            false            4                                                                    
-# 4    15  30    16    8   8     D30                    2                                  1                            (5:4)xS3           8      4                  1        2       false            false            false                                                                                 
-# 5    15  15    8     8   4     3xD10                  2                                  2                            A8                 9      2                  1        2       false            false            false                        true       complement of PG(3,2) or  Hadamard parameters  
-# 6    15  15    7     7   3     3xD10                  2                                  2                            A8                 9      2                  1        1       false            false            false                        true       PG(3,2) or Hadamard param eters                
-# 7    15  30    16    8   8     5xS3                   2                                  1                            (5:4)xS3           10     4                  1        2       false            false            false                                                                                 
-# 8    15  30    14    7   6     5xS3                   2                                  1                            (5:4)xS3           10     4                  1        1       false            false            false                                                                                 
-# 9    15  60    32    8   16    A5                     2^2                                1                            GL(2,4)            6      4                  1        4       false            false            false                                                                                 
-# 10   15  60    28    7   12    A5                     2^2                                1                            A5:S3              6      3                  1        3       false            false            false                                                                                 
-# 11   15  60    28    7   12    A5                     2^2                                1                            GL(2,4)            6      4                  1        3       false            false            false                                                                                 
-# 12   15  60    28    7   12    A5                     2^2                                1                            GL(2,4)            6      4                  1        3       false            false            false                                                                                 
-# 13   15  60    32    8   16    A5                     2^2                                1                            GL(2,4)            6      4                  1        4       false            false            false                                                                                 
-# 14   15  15    7     7   3     A5                     2^2                                2^2                          A8                 6      2                  1        1       false            false            false                        true       PG(3,2) or Hadamard param eters                
-# 15   15  15    8     8   4     A5                     2^2                                2^2                          A8                 6      2                  1        2       false            false            false                        true       complement of PG(3,2) or  Hadamard parameters  
-# 16   15  60    32    8   16    A5                     2^2                                1                            A5:S3              6      3                  1        4       false            false            false            10                                                                   
-# 17   15  60    28    7   12    15:4                   4                                  1                            15:4               5      5                  1        3       false            false            false                                                                                 
-# 18   15  60    32    8   16    15:4                   4                                  1                            15:4               5      5                  1        4       false            false            false                                                                                 
-# 19   15  60    28    7   12    15:4                   4                                  1                            15:4               5      5                  1        3       false            false            false                                                                                 
-# 20   15  15    7     7   3     15:4                   4                                  4                            A8                 5      2                  1        1       false            false            false                        true       PG(3,2) or Hadamard param eters                
-# 21   15  60    28    7   12    15:4                   4                                  1                            (5:4)xS3           5      4                  1        3       false            false            false            23                                                                   
-# 22   15  60    32    8   16    15:4                   4                                  1                            A5:S3              5      3                  1        4       false            false            false                                                                                 
-# 23   15  60    32    8   16    15:4                   4                                  1                            (5:4)xS3           5      4                  1        4       false            false            false                                                                                 
-# 24   15  15    8     8   4     15:4                   4                                  4                            A8                 5      2                  1        2       false            false            false                        true       complement of PG(3,2) or  Hadamard parameters  
-# 25   15  60    32    8   16    15:4                   4                                  1                            S5xS3              5      4                  1        4       false            false            false                                                                                 
-# 26   15  60    28    7   12    15:4                   4                                  1                            A5:S3              5      3                  1        3       false            false            false                                                                                 
-# 27   15  60    32    8   16    15:4                   4                                  1                            15:4               5      5                  1        4       false            false            false                                                                                 
-# 28   15  60    28    7   12    15:4                   4                                  1                            S5xS3              5      4                  1        3       false            false            false                                                                                 
-# 29   15  30    14    7   6     S3xD10                 2^2                                2                            (5:4)xS3           6      4                  1        1       false            false            false                                                                                 
-# 30   15  30    16    8   8     S3xD10                 2^2                                2                            (5:4)xS3           6      4                  1        2       false            false            false                                                                                 
-# 31   15  30    14    7   6     3x(5:4)                4                                  2                            (5:4)xS3           6      4                  1        1       false            false            false                                                                                 
-# 32   15  30    16    8   8     3x(5:4)                4                                  2                            (5:4)xS3           6      4                  1        2       false            false            false                                                                                 
-# 33   15  60    28    7   12    3x(5:4)                4                                  1                            3x(5:4)            6      6                  1        3       false            false            false                                                                                 
-# 34   15  60    32    8   16    3x(5:4)                4                                  1                            S5xS3              6      4                  1        4       false            false            false                                                                                 
-# 35   15  60    32    8   16    3x(5:4)                4                                  1                            3x(5:4)            6      6                  1        4       false            false            false                                                                                 
-# 36   15  60    32    8   16    3x(5:4)                4                                  1                            3x(5:4)            6      6                  1        4       false            false            false                                                                                 
-# 37   15  60    28    7   12    3x(5:4)                4                                  1                            3x(5:4)            6      6                  1        3       false            false            false                                                                                 
-# 38   15  60    28    7   12    3x(5:4)                4                                  1                            3x(5:4)            6      6                  1        3       false            false            false                                                                                 
-# 39   15  60    28    7   12    3x(5:4)                4                                  1                            S5xS3              6      4                  1        3       false            false            false            34                                                                   
-# 40   15  60    32    8   16    3x(5:4)                4                                  1                            3x(5:4)            6      6                  1        4       false            false            false                                                                                 
-# 41   15  60    32    8   16    3x(5:4)                4                                  1                            (5:4)xS3           6      4                  1        4       false            false            false            42                                                                   
-# 42   15  60    28    7   12    3x(5:4)                4                                  1                            (5:4)xS3           6      4                  1        3       false            false            false                                                                                 
-# 43   15  75    35    7   15    (5^2):3                5                                  1                            5^2:(3:4)          7      3                  1        1       false            false            false                                                                                 
-# 44   15  75    40    8   20    (5^2):3                5                                  1                            5^2:(3:4)          7      3                  1        2       false            false            false                                                                                 
-# 45   15  120   56    7   24    S5                     D8                                 1                            S5                 4      4                  1        5       false            false            false            47                                                                   
-# 46   15  15    8     8   4     S5                     D8                                 D8                           A8                 4      2                  1        2       false            false            true                         true       complement of PG(3,2) or  Hadamard parameters  
-# 47   15  120   64    8   32    S5                     D8                                 1                            S5                 4      4                  1        6       false            false            false            45                                                                   
-# 48   15  60    32    8   16    S5                     D8                                 2                            A5:S3              4      3                  1        4       false            false            false                                                                                 
-# 49   15  15    7     7   3     S5                     D8                                 D8                           A8                 4      2                  1        1       false            false            false                        true       PG(3,2) or Hadamard param eters                
-# 50   15  120   64    8   32    S5                     D8                                 1                            S5                 4      4                  1        6       false            false            false            54                                                                   
-# 51   15  120   64    8   32    S5                     D8                                 1                            A5:S3              4      3                  1        6       false            false            false                                                                                 
-# 52   15  120   56    7   24    S5                     D8                                 1                            S5                 4      4                  1        5       false            false            false            57                                                                   
-# 53   15  120   56    7   24    S5                     D8                                 1                            A5:S3              4      3                  1        5       false            false            false            51                                                                   
-# 54   15  120   56    7   24    S5                     D8                                 1                            S5                 4      4                  1        5       false            false            false            50                                                                   
-# 55   15  120   64    8   32    S5                     D8                                 1                            A8                 4      2                  1        6       false            false            false            56                                                                   
-# 56   15  120   56    7   24    S5                     D8                                 1                            A8                 4      2                  1        5       false            false            false                                                                                 
-# 57   15  120   64    8   32    S5                     D8                                 1                            S5                 4      4                  1        6       false            false            false            52                                                                   
-# 58   15  60    28    7   12    S5                     D8                                 2                            A5:S3              4      3                  1        3       false            false            false            48                                                                   
-# 59   15  120   64    8   32    (5:4)xS3               4x2                                1                            (5:4)xS3           4      4                  1        6       false            false            false            69                                                                   
-# 60   15  120   64    8   32    (5:4)xS3               4x2                                1                            (5:4)xS3           4      4                  1        6       false            false            false            68                                                                   
-# 61   15  60    28    7   12    (5:4)xS3               4x2                                2                            (5:4)xS3           4      4                  1        3       false            false            false                                                                                 
-# 62   15  120   64    8   32    (5:4)xS3               4x2                                1                            (5:4)xS3           4      4                  1        6       false            false            false            67                                                                   
-# 63   15  60    32    8   16    (5:4)xS3               4x2                                2                            (5:4)xS3           4      4                  1        4       false            false            false                                                                                 
-# 64   15  60    32    8   16    (5:4)xS3               4x2                                2                            S5xS3              4      4                  1        4       false            false            false            70                                                                   
-# 65   15  30    16    8   8     (5:4)xS3               4x2                                4                            (5:4)xS3           4      4                  1        2       false            false            false            66                                                                   
-# 66   15  30    14    7   6     (5:4)xS3               4x2                                4                            (5:4)xS3           4      4                  1        1       false            false            false                                                                                 
-# 67   15  120   56    7   24    (5:4)xS3               4x2                                1                            (5:4)xS3           4      4                  1        5       false            false            false            62                                                                   
-# 68   15  120   56    7   24    (5:4)xS3               4x2                                1                            (5:4)xS3           4      4                  1        5       false            false            false            60                                                                   
-# 69   15  120   56    7   24    (5:4)xS3               4x2                                1                            (5:4)xS3           4      4                  1        5       false            false            false            59                                                                   
-# 70   15  60    28    7   12    (5:4)xS3               4x2                                2                            S5xS3              4      4                  1        3       false            false            false                                                                                 
-# 71   15  150   70    7   30    5^2:6                  D10                                1                            5^2:6              5      5                  1        3       false            false            false                                                                                 
-# 72   15  150   80    8   40    5^2:6                  D10                                1                            5^2:6              5      5                  1        4       false            false            false                                                                                 
-# 73   15  75    35    7   15    5^2:6                  D10                                2                            5^2:(3:4)          5      3                  1        1       false            false            false                                                                                 
-# 74   15  75    40    8   20    5^2:6                  D10                                2                            5^2:(3:4)          5      3                  1        2       false            false            false                                                                                 
-# 75   15  150   70    7   30    5^2:S3                 D10                                1                            5^2:(4xS3)         6      3                  1        1       false            false            false                                                                                 
-# 76   15  150   80    8   40    5^2:S3                 D10                                1                            5^2:(4xS3)         6      3                  1        2       false            false            false                                                                                 
-# 77   15  150   70    7   30    5^2:S3                 10                                 1                            5^2:S3             4      4                  1        1       false            false            false                                                                                 
-# 78   15  150   70    7   30    5^2:S3                 10                                 1                            5^2:(4xS3)         4      3                  1        1       false            false            false                                                                                 
-# 79   15  150   80    8   40    5^2:S3                 10                                 1                            5^2:(4xS3)         4      3                  1        2       false            false            false                                                                                 
-# 80   15  150   80    8   40    5^2:S3                 10                                 1                            5^2:S3             4      4                  1        2       false            false            false                                                                                 
-# 81   15  60    32    8   16    GL(2,4)                A4                                 3                            GL(2,4)            4      4                  1        4       false            false            false                                                                                 
-# 82   15  60    28    7   12    GL(2,4)                A4                                 3                            A5:S3              4      3                  1        3       false            false            false                                                                                 
-# 83   15  60    28    7   12    GL(2,4)                A4                                 3                            GL(2,4)            4      4                  1        3       false            false            false                                                                                 
-# 84   15  60    28    7   12    GL(2,4)                A4                                 3                            GL(2,4)            4      4                  1        3       false            false            false                                                                                 
-# 85   15  180   84    7   36    GL(2,4)                A4                                 1                            GL(2,4)            4      4                  1        7       false            false            false                                                                                 
-# 86   15  60    32    8   16    GL(2,4)                A4                                 3                            A5:S3              4      3                  1        4       false            false            false                                                                                 
-# 87   15  180   84    7   36    GL(2,4)                A4                                 1                            A5:S3              4      3                  1        7       false            false            false            95                                                                   
-# 88   15  60    32    8   16    GL(2,4)                A4                                 3                            GL(2,4)            4      4                  1        4       false            false            false                                                                                 
-# 89   15  180   84    7   36    GL(2,4)                A4                                 1                            GL(2,4)            4      4                  1        7       false            false            false                                                                                 
-# 90   15  180   84    7   36    GL(2,4)                A4                                 1                            GL(2,4)            4      4                  1        7       false            false            false                                                                                 
-# 91   15  180   84    7   36    GL(2,4)                A4                                 1                            A5:S3              4      3                  1        7       false            false            false            97                                                                   
-# 92   15  180   84    7   36    GL(2,4)                A4                                 1                            A5:S3              4      3                  1        7       false            false            false            99                                                                   
-# 93   15  15    8     8   4     GL(2,4)                A4                                 A4                           A8                 4      2                  1        2       false            false            false                        true       complement of PG(3,2) or  Hadamard parameters  
-# 94   15  180   96    8   48    GL(2,4)                A4                                 1                            GL(2,4)            4      4                  1        8       false            false            false                                                                                 
-# 95   15  180   96    8   48    GL(2,4)                A4                                 1                            A5:S3              4      3                  1        8       false            false            false            87                                                                   
-# 96   15  15    7     7   3     GL(2,4)                A4                                 A4                           A8                 4      2                  1        1       false            false            false                        true       PG(3,2) or Hadamard param eters                
-# 97   15  180   96    8   48    GL(2,4)                A4                                 1                            A5:S3              4      3                  1        8       false            false            false                                                                                 
-# 98   15  180   96    8   48    GL(2,4)                A4                                 1                            GL(2,4)            4      4                  1        8       false            false            false                                                                                 
-# 99   15  180   96    8   48    GL(2,4)                A4                                 1                            A5:S3              4      3                  1        8       false            false            false                                                                                 
-# 100  15  180   96    8   48    GL(2,4)                A4                                 1                            GL(2,4)            4      4                  1        8       false            false            false                                                                                 
-# 101  15  90    48    8   24    GL(2,4)                A4                                 2                            A5:S3              4      3                  1        6       false            false            false                                                                                 
-# 102  15  90    42    7   18    GL(2,4)                A4                                 2                            A5:S3              4      3                  1        5       false            false            false                                                                                 
-# 103  15  90    42    7   18    GL(2,4)                A4                                 2                            S5xS3              6      4                  1        3       false            false            false                                                                                 
-# 104  15  90    48    8   24    GL(2,4)                A4                                 2                            S5xS3              6      4                  1        4       false            false            false                                                                                 
-# 105  15  60    28    7   12    GL(2,4)                A4                                 3                            S5xS3              6      4                  1        1       false            false            false                                                                                 
-# 106  15  60    32    8   16    GL(2,4)                A4                                 3                            S5xS3              6      4                  1        2       false            false            false                                                                                 
-# 107  15  180   84    7   36    GL(2,4)                A4                                 1                            3xS5               6      6                  1        5       false            false            false                                                                                 
-# 108  15  180   96    8   48    GL(2,4)                A4                                 1                            3xS5               6      6                  1        6       false            false            false                                                                                 
-# 109  15  75    35    7   15    5^2:(3:4)              5:4                                4                            5^2:(3:4)          3      3                  1        1       false            false            false                                                                                 
-# 110  15  150   70    7   30    5^2:(3:4)              5:4                                2                            5^2:(4xS3)         3      3                  1        3       false            false            false                                                                                 
-# 111  15  150   80    8   40    5^2:(3:4)              5:4                                2                            5^2:(4xS3)         3      3                  1        4       false            false            false            110                                                                  
-# 112  15  300   140   7   60    5^2:(3:4)              5:4                                1                            5^2:(4xS3)         3      3                  1        5       false            false            false            116                                                                  
-# 113  15  300   140   7   60    5^2:(3:4)              5:4                                1                            5^2:(3:4)          3      3                  1        5       false            false            false                                                                                 
-# 114  15  300   140   7   60    5^2:(3:4)              5:4                                1                            5^2:(4xS3)         3      3                  1        5       false            false            false            118                                                                  
-# 115  15  300   160   8   80    5^2:(3:4)              5:4                                1                            5^2:(3:4)          3      3                  1        6       false            false            false                                                                                 
-# 116  15  300   160   8   80    5^2:(3:4)              5:4                                1                            5^2:(4xS3)         3      3                  1        6       false            false            false            112                                                                  
-# 117  15  75    40    8   20    5^2:(3:4)              5:4                                4                            5^2:(3:4)          3      3                  1        2       false            false            false                                                                                 
-# 118  15  300   160   8   80    5^2:(3:4)              5:4                                1                            5^2:(4xS3)         3      3                  1        6       false            false            false                                                                                 
-# 119  15  300   140   7   60    5^2:D12                D20                                1                            5^2:D12            4      4                  1        3       false            false            false                                                                                 
-# 120  15  150   70    7   30    5^2:D12                D20                                2                            5^2:(4xS3)         4      3                  1        1       false            false            false                                                                                 
-# 121  15  300   160   8   80    5^2:D12                D20                                1                            5^2:D12            4      4                  1        4       false            false            false                                                                                 
-# 122  15  150   80    8   40    5^2:D12                D20                                2                            5^2:(4xS3)         4      3                  1        2       false            false            false                                                                                 
-# 123  15  300   140   7   60    5^2:12                 5:4                                1                            5^2:(4xS3)         4      3                  1        3       false            false            false                                                                                 
-# 124  15  150   80    8   40    5^2:12                 5:4                                2                            5^2:(4xS3)         4      3                  1        2       false            false            false                                                                                 
-# 125  15  150   80    8   40    5^2:12                 5:4                                2                            5^2:(4xS3)         4      3                  1        2       false            false            false                                                                                 
-# 126  15  300   140   7   60    5^2:12                 5:4                                1                            5^2:(4xS3)         4      3                  1        3       false            false            false                                                                                 
-# 127  15  300   140   7   60    5^2:12                 5:4                                1                            5^2:12             4      4                  1        3       false            false            false                                                                                 
-# 128  15  300   160   8   80    5^2:12                 5:4                                1                            5^2:(4xS3)         4      3                  1        4       false            false            false            123                                                                  
-# 129  15  150   70    7   30    5^2:12                 5:4                                2                            5^2:(4xS3)         4      3                  1        1       false            false            false            125                                                                  
-# 130  15  150   70    7   30    5^2:12                 5:4                                2                            5^2:(4xS3)         4      3                  1        1       false            false            false                                                                                 
-# 131  15  300   160   8   80    5^2:12                 5:4                                1                            5^2:12             4      4                  1        4       false            false            false                                                                                 
-# 132  15  300   160   8   80    5^2:12                 5:4                                1                            5^2:(4xS3)         4      3                  1        4       false            false            false                                                                                 
-# 133  15  180   96    8   48    A6                     S4                                 2                            S6                 3      3                  1        6       true             false            false            142                                                                  
-# 134  15  360   168   7   72    A6                     S4                                 1                            S6                 3      3                  1        7       true             false            false                                                                                 
-# 135  15  360   168   7   72    A6                     S4                                 1                            A6                 3      3                  1        7       true             false            false                                                                                 
-# 136  15  15    7     7   3     A6                     S4                                 S4                           A8                 3      2                  1        1       true             true             false                        true       PG(3,2) or Hadamard param eters                
-# 137  15  360   192   8   96    A6                     S4                                 1                            A6                 3      3                  1        8       true             false            false                                                                                 
-# 138  15  360   192   8   96    A6                     S4                                 1                            S6                 3      3                  1        8       true             false            false            139                                                                  
-# 139  15  360   168   7   72    A6                     S4                                 1                            S6                 3      3                  1        7       true             false            false            138                                                                  
-# 140  15  360   192   8   96    A6                     S4                                 1                            S6                 3      3                  1        8       true             false            false                                                                                 
-# 141  15  120   64    8   32    A6                     S4                                 3                            A8                 3      2                  1        4       true             false            false                                                                                 
-# 142  15  180   84    7   36    A6                     S4                                 2                            S6                 3      3                  1        5       true             false            false                                                                                 
-# 143  15  120   56    7   24    A6                     S4                                 3                            A8                 3      2                  1        3       true             false            false                                                                                 
-# 144  15  15    8     8   4     A6                     S4                                 S4                           A8                 3      2                  1        2       true             true             true                         true       complement of PG(3,2) or  Hadamard parameters  
-# 145  15  360   192   8   96    A5:S3                  S4                                 1                            A5:S3              3      3                  1        12      false            false            false            160                                                                  
-# 146  15  15    7     7   3     A5:S3                  S4                                 S4                           A8                 3      2                  1        1       false            false            false                        true       PG(3,2) or Hadamard param eters                
-# 147  15  180   84    7   36    A5:S3                  S4                                 2                            A5:S3              3      3                  1        9       false            false            false                                                                                 
-# 148  15  180   84    7   36    A5:S3                  S4                                 2                            A5:S3              3      3                  1        9       false            false            false                                                                                 
-# 149  15  60    28    7   12    A5:S3                  S4                                 S3                           A5:S3              3      3                  1        3       false            false            false                                                                                 
-# 150  15  180   84    7   36    A5:S3                  S4                                 2                            A5:S3              3      3                  1        9       false            false            false                                                                                 
-# 151  15  120   64    8   32    A5:S3                  S4                                 3                            A8                 3      2                  1        8       false            false            false                                                                                 
-# 152  15  120   64    8   32    A5:S3                  S4                                 3                            A5:S3              3      3                  1        8       false            false            false            153                                                                  
-# 153  15  120   56    7   24    A5:S3                  S4                                 3                            A5:S3              3      3                  1        7       false            false            false                                                                                 
-# 154  15  180   96    8   48    A5:S3                  S4                                 2                            A5:S3              3      3                  1        10      false            false            false            150                                                                  
-# 155  15  360   192   8   96    A5:S3                  S4                                 1                            A5:S3              3      3                  1        12      false            false            false            159                                                                  
-# 156  15  180   96    8   48    A5:S3                  S4                                 2                            A5:S3              3      3                  1        10      false            false            false            148                                                                  
-# 157  15  90    48    8   24    A5:S3                  S4                                 4                            A5:S3              3      3                  1        6       false            false            false            162                                                                  
-# 158  15  360   168   7   72    A5:S3                  S4                                 1                            A5:S3              3      3                  1        11      false            false            false            163                                                                  
-# 159  15  360   168   7   72    A5:S3                  S4                                 1                            A5:S3              3      3                  1        11      false            false            false            155                                                                  
-# 160  15  360   168   7   72    A5:S3                  S4                                 1                            A5:S3              3      3                  1        11      false            false            false            145                                                                  
-# 161  15  180   96    8   48    A5:S3                  S4                                 2                            A5:S3              3      3                  1        10      false            false            false                                                                                 
-# 162  15  90    42    7   18    A5:S3                  S4                                 4                            A5:S3              3      3                  1        5       false            false            false            157                                                                  
-# 163  15  360   192   8   96    A5:S3                  S4                                 1                            A5:S3              3      3                  1        12      false            false            false            158                                                                  
-# 164  15  120   56    7   24    A5:S3                  S4                                 3                            A8                 3      2                  1        7       false            false            false            151                                                                  
-# 165  15  60    32    8   16    A5:S3                  S4                                 S3                           A5:S3              3      3                  1        4       false            false            false                                                                                 
-# 166  15  15    8     8   4     A5:S3                  S4                                 S4                           A8                 3      2                  1        2       false            false            true                         true       complement of PG(3,2) or  Hadamard parameters  
-# 167  15  60    28    7   12    3:S5                   S4                                 S3                           S5xS3              4      4                  1        1       false            false            false                                                                                 
-# 168  15  90    42    7   18    3:S5                   S4                                 4                            S5xS3              4      4                  1        3       false            false            false            171                                                                  
-# 169  15  60    32    8   16    3:S5                   S4                                 S3                           S5xS3              4      4                  1        2       false            false            false                                                                                 
-# 170  15  360   192   8   96    3:S5                   S4                                 1                            S5xS3              4      4                  1        6       false            false            false                                                                                 
-# 171  15  90    48    8   24    3:S5                   S4                                 4                            S5xS3              4      4                  1        4       false            false            false            168                                                                  
-# 172  15  360   168   7   72    3:S5                   S4                                 1                            S5xS3              4      4                  1        5       false            false            false                                                                                 
-# 173  15  60    32    8   16    A5xS3                  2xA4                               6                            S5xS3              4      4                  1        2       false            false            false                                                                                 
-# 174  15  90    42    7   18    A5xS3                  2xA4                               2^2                          S5xS3              4      4                  1        3       false            false            false                                                                                 
-# 175  15  90    48    8   24    A5xS3                  2xA4                               2^2                          S5xS3              4      4                  1        4       false            false            false                                                                                 
-# 176  15  360   168   7   72    A5xS3                  2xA4                               1                            S5xS3              4      4                  1        5       false            false            false                                                                                 
-# 177  15  360   192   8   96    A5xS3                  2xA4                               1                            S5xS3              4      4                  1        6       false            false            false            176                                                                  
-# 178  15  60    28    7   12    A5xS3                  2xA4                               6                            S5xS3              4      4                  1        1       false            false            false                                                                                 
-# 179  15  90    42    7   18    3xS5                   S4                                 2^2                          S5xS3              6      4                  1        3       false            false            false                                                                                 
-# 180  15  180   96    8   48    3xS5                   S4                                 2                            3xS5               6      6                  1        6       false            false            false                                                                                 
-# 181  15  180   84    7   36    3xS5                   S4                                 2                            3xS5               6      6                  1        5       false            false            false                                                                                 
-# 182  15  90    48    8   24    3xS5                   S4                                 2^2                          S5xS3              6      4                  1        4       false            false            false                                                                                 
-# 183  15  60    28    7   12    3xS5                   S4                                 S3                           S5xS3              6      4                  1        1       false            false            false                                                                                 
-# 184  15  60    32    8   16    3xS5                   S4                                 S3                           S5xS3              6      4                  1        2       false            false            false                                                                                 
-# 185  15  375   200   8   100   5x((5^2):3)            5^2                                1                            5^3:(A4:4)         7      3                  1        2       false            false            false                                                                                 
-# 186  15  375   175   7   75    5x((5^2):3)            5^2                                1                            5^3:(A4:4)         7      3                  1        1       false            false            false                                                                                 
-# 187  15  405   216   8   108   3^4:5                  3^3                                1                            3^5:(2x(2^4:S5))   7      3                  1        2       false            false            false                                                                                 
-# 188  15  405   189   7   81    3^4:5                  3^3                                1                            3^5:(2x(2^4:S5))   7      3                  1        1       false            false            false                                                                                 
-# 189  15  600   320   8   160   5^2:(4xS3)             2x(5:4)                            1                            5^2:(4xS3)         3      3                  1        6       false            false            false            198                                                                  
-# 190  15  300   140   7   60    5^2:(4xS3)             2x(5:4)                            2                            5^2:(4xS3)         3      3                  1        3       false            false            false                                                                                 
-# 191  15  300   160   8   80    5^2:(4xS3)             2x(5:4)                            2                            5^2:(4xS3)         3      3                  1        4       false            false            false                                                                                 
-# 192  15  300   160   8   80    5^2:(4xS3)             2x(5:4)                            2                            5^2:(4xS3)         3      3                  1        4       false            false            false                                                                                 
-# 193  15  150   70    7   30    5^2:(4xS3)             2x(5:4)                            4                            5^2:(4xS3)         3      3                  1        1       false            false            false            195                                                                  
-# 194  15  300   140   7   60    5^2:(4xS3)             2x(5:4)                            2                            5^2:(4xS3)         3      3                  1        3       false            false            false                                                                                 
-# 195  15  150   80    8   40    5^2:(4xS3)             2x(5:4)                            4                            5^2:(4xS3)         3      3                  1        2       false            false            false            193                                                                  
-# 196  15  150   70    7   30    5^2:(4xS3)             2x(5:4)                            2^2                          5^2:(4xS3)         3      3                  1        1       false            false            false                                                                                 
-# 197  15  150   80    8   40    5^2:(4xS3)             2x(5:4)                            2^2                          5^2:(4xS3)         3      3                  1        2       false            false            false                                                                                 
-# 198  15  600   280   7   120   5^2:(4xS3)             2x(5:4)                            1                            5^2:(4xS3)         3      3                  1        5       false            false            false            189                                                                  
-# 199  15  360   192   8   96    S6                     2xS4                               2                            S6                 3      3                  1        8       true             false            false                                                                                 
-# 200  15  120   56    7   24    S6                     2xS4                               S3                           A8                 3      2                  1        3       true             false            false                                                                                 
-# 201  15  180   96    8   48    S6                     2xS4                               2^2                          S6                 3      3                  1        6       true             false            false                                                                                 
-# 202  15  15    7     7   3     S6                     2xS4                               2xS4                         A8                 3      2                  1        1       true             true             false            203         true       PG(3,2) or Hadamard param eters                
-# 203  15  15    8     8   4     S6                     2xS4                               2xS4                         A8                 3      2                  1        2       true             true             true                         true       complement of PG(3,2) or  Hadamard parameters  
-# 204  15  180   84    7   36    S6                     2xS4                               2^2                          S6                 3      3                  1        5       true             false            false            201                                                                  
-# 205  15  720   384   8   192   S6                     2xS4                               1                            S6                 3      3                  1        10      true             false            false            206                                                                  
-# 206  15  720   336   7   144   S6                     2xS4                               1                            S6                 3      3                  1        9       true             false            false            205                                                                  
-# 207  15  360   168   7   72    S6                     2xS4                               2                            S6                 3      3                  1        7       true             false            false            210                                                                  
-# 208  15  360   168   7   72    S6                     2xS4                               2                            S6                 3      3                  1        7       true             false            false                                                                                 
-# 209  15  120   64    8   32    S6                     2xS4                               S3                           A8                 3      2                  1        4       true             false            false                                                                                 
-# 210  15  360   192   8   96    S6                     2xS4                               2                            S6                 3      3                  1        8       true             false            false            207                                                                  
-# 211  15  360   192   8   96    S5xS3                  2xS4                               2                            S5xS3              4      4                  1        6       false            false            false                                                                                 
-# 212  15  360   168   7   72    S5xS3                  2xS4                               2                            S5xS3              4      4                  1        5       false            false            false            211                                                                  
-# 213  15  60    32    8   16    S5xS3                  2xS4                               D12                          S5xS3              4      4                  1        2       false            false            false                                                                                 
-# 214  15  60    28    7   12    S5xS3                  2xS4                               D12                          S5xS3              4      4                  1        1       false            false            false                                                                                 
-# 215  15  90    42    7   18    S5xS3                  2xS4                               D8                           S5xS3              4      4                  1        3       false            false            false                                                                                 
-# 216  15  90    48    8   24    S5xS3                  2xS4                               D8                           S5xS3              4      4                  1        4       false            false            false                                                                                 
-# 217  15  375   200   8   100   5^3:6                  (5^2):2                            2                            5^3:(A4:4)         5      3                  1        2       false            false            false                                                                                 
-# 218  15  375   175   7   75    5^3:6                  (5^2):2                            2                            5^3:(A4:4)         5      3                  1        1       false            false            false                                                                                 
-# 219  15  750   400   8   200   5^3:S3                 5xD10                              1                            5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 220  15  750   350   7   150   5^3:S3                 5xD10                              1                            5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 221  15  750   400   8   200   5x(5^2:S3)             5xD10                              1                            5^3:(4xS4)         6      3                  1        2       false            false            false                                                                                 
-# 222  15  750   350   7   150   5x(5^2:S3)             5xD10                              1                            5^3:(4xS4)         6      3                  1        1       false            false            false                                                                                 
-# 223  15  405   216   8   108   3^4:10                 (3^3):2                            2                            3^5:(2x(2^4:S5))   6      3                  1        2       false            false            false                                                                                 
-# 224  15  405   189   7   81    3^4:10                 (3^3):2                            2                            3^5:(2x(2^4:S5))   6      3                  1        1       false            false            false                                                                                 
-# 225  15  405   216   8   108   3^4:D10                3x((3^2):2)                        2                            3^5:(2x(2^4:S5))   5      3                  1        2       false            false            false                                                                                 
-# 226  15  405   189   7   81    3^4:D10                3x((3^2):2)                        2                            3^5:(2x(2^4:S5))   5      3                  1        1       false            false            false                                                                                 
-# 227  15  405   216   8   108   3^4:D10                3^2xS3                             2                            3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 228  15  405   189   7   81    3^4:D10                3^2xS3                             2                            3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 229  15  405   216   8   108   3x(3^4:5)              3^4                                3                            3^5:(2x(2^4:S5))   7      3                  1        2       false            false            false                                                                                 
-# 230  15  405   189   7   81    3x(3^4:5)              3^4                                3                            3^5:(2x(2^4:S5))   7      3                  1        1       false            false            false                                                                                 
-# 231  15  750   400   8   200   5^3:(3:4)              (5^2):4                            2                            5^3:(4xS4)         3      3                  1        4       false            false            false                                                                                 
-# 232  15  750   350   7   150   5^3:(3:4)              (5^2):4                            2                            5^3:(4xS4)         3      3                  1        3       false            false            false                                                                                 
-# 233  15  375   200   8   100   5^3:(3:4)              (5^2):4                            4                            5^3:(A4:4)         3      3                  1        2       false            false            false                                                                                 
-# 234  15  375   175   7   75    5^3:(3:4)              (5^2):4                            4                            5^3:(A4:4)         3      3                  1        1       false            false            false                                                                                 
-# 235  15  750   400   8   200   5^3:12                 (5^2):4                            2                            5^3:(4xS4)         4      3                  1        2       false            false            false            238                                                                  
-# 236  15  750   350   7   150   5^3:12                 (5^2):4                            2                            5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 237  15  750   400   8   200   5^3:12                 (5^2):4                            2                            5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 238  15  750   350   7   150   5^3:12                 (5^2):4                            2                            5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 239  15  375   200   8   100   5^3:A4                 D10xD10                            2^2                          5^3:(A4:4)         5      3                  1        2       false            false            false                                                                                 
-# 240  15  375   175   7   75    5^3:A4                 D10xD10                            2^2                          5^3:(A4:4)         5      3                  1        1       false            false            false                                                                                 
-# 241  15  750   350   7   150   5^3:D12                D10xD10                            2                            5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 242  15  750   400   8   200   5^3:D12                D10xD10                            2                            5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 243  15  1620  756   7   324   3^4:(5:4)              3^3:4                              1                            3^5:(2x(2^4:S5))   4      3                  1        3       false            false            false                                                                                 
-# 244  15  405   216   8   108   3^4:(5:4)              3^3:4                              4                            3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 245  15  1620  864   8   432   3^4:(5:4)              3^3:4                              1                            3^5:(2x(2^4:S5))   4      3                  1        4       false            false            false                                                                                 
-# 246  15  405   189   7   81    3^4:(5:4)              3^3:4                              4                            3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 247  15  1620  864   8   432   3^4:(5:4)              3x((3^2):4)                        1                            3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 248  15  405   189   7   81    3^4:(5:4)              3x((3^2):4)                        4                            3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 249  15  1620  756   7   324   3^4:(5:4)              3x((3^2):4)                        1                            3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 250  15  405   216   8   108   3^4:(5:4)              3x((3^2):4)                        4                            3^5:(2x(2^4:S5))   3      3                  1        2       false            false            false                                                                                 
-# 251  15  405   189   7   81    3^4:D20                ((3^2):2)xS3                       2^2                          3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 252  15  405   216   8   108   3^4:D20                ((3^2):2)xS3                       2^2                          3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 253  15  405   216   8   108   3^5:10                 3^4:2                              S3                           3^5:(2x(2^4:S5))   6      3                  1        2       false            false            false                                                                                 
-# 254  15  405   189   7   81    3^5:10                 3^4:2                              S3                           3^5:(2x(2^4:S5))   6      3                  1        1       false            false            false                                                                                 
-# 255  15  405   216   8   108   3^5:D10                3^2x((3^2):2)                      S3                           3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 256  15  405   189   7   81    3^5:D10                3^2x((3^2):2)                      S3                           3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 257  15  405   216   8   108   3x(3^4:D10)            3^2x((3^2):2)                      6                            3^5:(2x(2^4:S5))   5      3                  1        2       false            false            false                                                                                 
-# 258  15  405   189   7   81    3x(3^4:D10)            3^2x((3^2):2)                      6                            3^5:(2x(2^4:S5))   5      3                  1        1       false            false            false                                                                                 
-# 259  15  420   140   5   40    A7                     PSL(3,2)                           S3                           A7                 2      2                  1        26      true             false            false            306                                                                  
-# 260  15  420   252   9   144   A7                     PSL(3,2)                           S3                           A7                 2      2                  1        30      true             false            false            269                                                                  
-# 261  15  70    42    9   24    A7                     PSL(3,2)                           (3^2):4                      A7                 2      2                  1        8       true             false            true             274                                                                  
-# 262  15  35    7     3   1     A7                     PSL(3,2)                           (3xA4):2                     A8                 2      2                  1        3       true             true             true             309                                                                  
-# 263  15  630   294   7   126   A7                     PSL(3,2)                           2^2                          A7                 2      2                  1        35      true             false            false            276                                                                  
-# 264  15  420   196   7   84    A7                     PSL(3,2)                           S3                           A8                 2      2                  1        28      true             false            false                                                                                 
-# 265  15  105   63    9   36    A7                     PSL(3,2)                           S4                           A8                 2      2                  1        11      true             false            false            292                                                                  
-# 266  15  2520  1008  6   360   A7                     PSL(3,2)                           1                            A8                 2      2                  1        48      true             false            false            300                                                                  
-# 267  15  15    8     8   4     A7                     PSL(3,2)                           PSL(3,2)                     A8                 2      2                  1        2       true             true             true                         true       complement of PG(3,2) or  Hadamard parameters  
-# 268  15  315   210   10  135   A7                     PSL(3,2)                           D8                           A8                 2      2                  1        23      true             false            false                                                                                 
-# 269  15  420   168   6   60    A7                     PSL(3,2)                           S3                           A7                 2      2                  1        27      true             false            false            260                                                                  
-# 270  15  420   168   6   60    A7                     PSL(3,2)                           S3                           A8                 2      2                  1        27      true             false            true             271                                                                  
-# 271  15  420   252   9   144   A7                     PSL(3,2)                           S3                           A8                 2      2                  1        30      true             false            false            270                                                                  
-# 272  15  630   294   7   126   A7                     PSL(3,2)                           4                            A7                 2      2                  1        35      true             false            false            288                                                                  
-# 273  15  420   112   4   24    A7                     PSL(3,2)                           S3                           A8                 2      2                  1        25      true             false            false            295                                                                  
-# 274  15  70    28    6   10    A7                     PSL(3,2)                           (3^2):4                      A7                 2      2                  1        7       true             false            true             261                                                                  
-# 275  15  1260  756   9   432   A7                     PSL(3,2)                           2                            A7                 2      2                  1        46      true             false            false            282                                                                  
-# 276  15  630   336   8   168   A7                     PSL(3,2)                           2^2                          A7                 2      2                  1        36      true             false            false            263                                                                  
-# 277  15  1260  672   8   336   A7                     PSL(3,2)                           2                            A7                 2      2                  1        45      true             false            false            280                                                                  
-# 278  15  1260  672   8   336   A7                     PSL(3,2)                           2                            A7                 2      2                  1        45      true             false            false            279                                                                  
-# 279  15  1260  588   7   252   A7                     PSL(3,2)                           2                            A7                 2      2                  1        44      true             false            false            278                                                                  
-# 280  15  1260  588   7   252   A7                     PSL(3,2)                           2                            A7                 2      2                  1        44      true             false            false            277                                                                  
-# 281  15  1260  588   7   252   A7                     PSL(3,2)                           2                            A7                 2      2                  1        44      true             false            false            307                                                                  
-# 282  15  1260  504   6   180   A7                     PSL(3,2)                           2                            A7                 2      2                  1        43      true             false            false            275                                                                  
-# 283  15  1260  420   5   120   A7                     PSL(3,2)                           2                            A7                 2      2                  1        42      true             false            false            314                                                                  
-# 284  15  105   77    11  55    A7                     PSL(3,2)                           S4                           A8                 2      2                  1        12      true             false            false            299                                                                  
-# 285  15  840   560   10  360   A7                     PSL(3,2)                           3                            A8                 2      2                  1        41      true             false            false            311                                                                  
-# 286  15  420   84    3   12    A7                     PSL(3,2)                           S3                           A8                 2      2                  1        24      true             false            true                                                                                  
-# 287  15  420   336   12  264   A7                     PSL(3,2)                           S3                           A8                 2      2                  1        33      true             false            false            286                                                                  
-# 288  15  630   336   8   168   A7                     PSL(3,2)                           4                            A7                 2      2                  1        36      true             false            false            272                                                                  
-# 289  15  120   64    8   32    A7                     PSL(3,2)                           7:3                          A8                 2      2                  1        15      true             false            false                                                                                 
-# 290  15  315   105   5   30    A7                     PSL(3,2)                           D8                           A8                 2      2                  1        22      true             false            false                                                                                 
-# 291  15  630   168   4   36    A7                     PSL(3,2)                           4                            A7                 2      2                  1        34      true             false            true             310                                                                  
-# 292  15  105   42    6   15    A7                     PSL(3,2)                           S4                           A8                 2      2                  1        10      true             false            true                                                                                  
-# 293  15  105   91    13  78    A7                     PSL(3,2)                           S4                           S15                2      2                  1        13      true             false            false                                   complete                                      
-# 294  15  210   126   9   72    A7                     PSL(3,2)                           D12                          A7                 2      2                  1        20      true             false            false            305                                                                  
-# 295  15  420   308   11  220   A7                     PSL(3,2)                           S3                           A8                 2      2                  1        32      true             false            false            273                                                                  
-# 296  15  210   154   11  110   A7                     PSL(3,2)                           A4                           A7                 2      2                  1        21      true             false            false            304                                                                  
-# 297  15  120   56    7   24    A7                     PSL(3,2)                           7:3                          A8                 2      2                  1        14      true             false            true                                                                                  
-# 298  15  42    28    10  18    A7                     PSL(3,2)                           A5                           A7                 2      2                  1        6       true             false            true             302                                                                  
-# 299  15  105   28    4   6     A7                     PSL(3,2)                           S4                           A8                 2      2                  1        9       true             false            true             284                                                                  
-# 300  15  2520  1512  9   864   A7                     PSL(3,2)                           1                            A8                 2      2                  1        49      true             false            false            266                                                                  
-# 301  15  420   224   8   112   A7                     PSL(3,2)                           S3                           A8                 2      2                  1        29      true             false            false                                                                                 
-# 302  15  42    14    5   4     A7                     PSL(3,2)                           A5                           A7                 2      2                  1        5       true             false            true             298                                                                  
-# 303  15  15    7     7   3     A7                     PSL(3,2)                           PSL(3,2)                     A8                 2      2                  1        1       true             true             true                         true       PG(3,2) or Hadamard param eters                
-# 304  15  210   56    4   12    A7                     PSL(3,2)                           A4                           A7                 2      2                  1        18      true             false            true             296                                                                  
-# 305  15  210   84    6   30    A7                     PSL(3,2)                           D12                          A7                 2      2                  1        19      true             false            true             294                                                                  
-# 306  15  420   280   10  180   A7                     PSL(3,2)                           S3                           A7                 2      2                  1        31      true             false            false            259                                                                  
-# 307  15  1260  672   8   336   A7                     PSL(3,2)                           2                            A7                 2      2                  1        45      true             false            false            281                                                                  
-# 308  15  840   392   7   168   A7                     PSL(3,2)                           3                            A8                 2      2                  1        39      true             false            false                                                                                 
-# 309  15  35    28    12  22    A7                     PSL(3,2)                           (3xA4):2                     A8                 2      2                  1        4       true             true             true             262                                                                  
-# 310  15  630   462   11  330   A7                     PSL(3,2)                           4                            A7                 2      2                  1        37      true             false            false            291                                                                  
-# 311  15  840   280   5   80    A7                     PSL(3,2)                           3                            A8                 2      2                  1        38      true             false            false            285                                                                  
-# 312  15  126   42    5   12    A7                     PSL(3,2)                           5:4                          A7                 2      2                  1        16      true             false            true             313                                                                  
-# 313  15  126   84    10  54    A7                     PSL(3,2)                           5:4                          A7                 2      2                  1        17      true             false            true             312                                                                  
-# 314  15  1260  840   10  540   A7                     PSL(3,2)                           2                            A7                 2      2                  1        47      true             false            false            283                                                                  
-# 315  15  840   448   8   224   A7                     PSL(3,2)                           3                            A8                 2      2                  1        40      true             false            false                                                                                 
-# 316  15  750   400   8   200   5^3:S4                 5^2:D8                             2^2                          5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 317  15  750   350   7   150   5^3:S4                 5^2:D8                             2^2                          5^3:(4xS4)         4      3                  1        1       false            false            false            316                                                                  
-# 318  15  750   350   7   150   5^3:(4xS3)             5^2:(4x2)                          2^2                          5^3:(4xS4)         3      3                  1        1       false            false            false            319                                                                  
-# 319  15  750   400   8   200   5^3:(4xS3)             5^2:(4x2)                          2^2                          5^3:(4xS4)         3      3                  1        2       false            false            false                                                                                 
-# 320  15  750   350   7   150   5^3:(4xS3)             5^2:(4x2)                          4                            5^3:(4xS4)         3      3                  1        1       false            false            false                                                                                 
-# 321  15  750   400   8   200   5^3:(4xS3)             5^2:(4x2)                          4                            5^3:(4xS4)         3      3                  1        2       false            false            false                                                                                 
-# 322  15  375   175   7   75    5^3:(2xA4)             2xD10xD10                          2^3                          5^3:(A4:4)         5      3                  1        1       false            false            false                                                                                 
-# 323  15  375   200   8   100   5^3:(2xA4)             2xD10xD10                          2^3                          5^3:(A4:4)         5      3                  1        2       false            false            false                                                                                 
-# 324  15  750   400   8   200   5^3:S4                 5^2:D8                             2^2                          5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 325  15  750   350   7   150   5^3:S4                 5^2:D8                             2^2                          5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 326  15  405   216   8   108   3^4:(2x(5:4))          ((3^2):4)xS3                       4x2                          3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 327  15  1620  756   7   324   3^4:(2x(5:4))          ((3^2):4)xS3                       2                            3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 328  15  1620  864   8   432   3^4:(2x(5:4))          ((3^2):4)xS3                       2                            3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 329  15  405   189   7   81    3^4:(2x(5:4))          ((3^2):4)xS3                       4x2                          3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 330  15  405   189   7   81    3^4:A5                 (3^3:2^2):3                        A4                           3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 331  15  1620  864   8   432   3^4:A5                 (3^3:2^2):3                        3                            3^5:(2x(2^4:S5))   4      3                  1        4       false            false            false                                                                                 
-# 332  15  405   216   8   108   3^4:A5                 (3^3:2^2):3                        A4                           3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 333  15  1620  756   7   324   3^4:A5                 (3^3:2^2):3                        3                            3^5:(2x(2^4:S5))   4      3                  1        3       false            false            false                                                                                 
-# 334  15  1620  756   7   324   3^5:(5:4)              3x(3^3:4)                          3                            3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 335  15  1620  864   8   432   3^5:(5:4)              3x(3^3:4)                          3                            3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false            334                                                                  
-# 336  15  405   216   8   108   3^5:(5:4)              3x(3^3:4)                          3:4                          3^5:(2x(2^4:S5))   3      3                  1        2       false            false            false                                                                                 
-# 337  15  405   189   7   81    3^5:(5:4)              3x(3^3:4)                          3:4                          3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false            336                                                                  
-# 338  15  405   189   7   81    3^5:D20                ((3^2):2)x((3^2):2)                D12                          3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 339  15  405   216   8   108   3^5:D20                ((3^2):2)x((3^2):2)                D12                          3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 340  15  405   216   8   108   3x(3^4:(5:4))          3x(3^3:4)                          12                           3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 341  15  1620  756   7   324   3x(3^4:(5:4))          3x(3^3:4)                          3                            3^5:(2x(2^4:S5))   4      3                  1        3       false            false            false                                                                                 
-# 342  15  1620  864   8   432   3x(3^4:(5:4))          3x(3^3:4)                          3                            3^5:(2x(2^4:S5))   4      3                  1        4       false            false            false                                                                                 
-# 343  15  405   189   7   81    3x(3^4:(5:4))          3x(3^3:4)                          12                           3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 344  15  1500  700   7   300   5^3:((4^2):3)          (5:4)x(5:4)                        2^2                          (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false                                                                                 
-# 345  15  1500  800   8   400   5^3:((4^2):3)          (5:4)x(5:4)                        2^2                          (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false                                                                                 
-# 346  15  750   400   8   200   5^3:(A4:4)             5^2:((4x2):2)                      2^3                          5^3:(4xS4)         3      3                  1        4       false            false            false                                                                                 
-# 347  15  750   350   7   150   5^3:(A4:4)             5^2:((4x2):2)                      2^3                          5^3:(4xS4)         3      3                  1        3       false            false            false                                                                                 
-# 348  15  375   200   8   100   5^3:(A4:4)             5^2:((4x2):2)                      (4x2):2                      5^3:(A4:4)         3      3                  1        2       false            false            false                                                                                 
-# 349  15  375   175   7   75    5^3:(A4:4)             5^2:((4x2):2)                      (4x2):2                      5^3:(A4:4)         3      3                  1        1       false            false            false                                                                                 
-# 350  15  750   400   8   200   5^3:(4xA4)             2x(5^2:(4x2))                      2^3                          5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 351  15  750   350   7   150   5^3:(4xA4)             2x(5^2:(4x2))                      2^3                          5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 352  15  750   350   7   150   5^3:(4xA4)             2x(5^2:(4x2))                      2^3                          5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 353  15  750   400   8   200   5^3:(4xA4)             2x(5^2:(4x2))                      2^3                          5^3:(4xS4)         4      3                  1        2       false            false            false                                                                                 
-# 354  15  750   350   7   150   5^3:(2xS4)             2x(5^2:D8)                         2^3                          5^3:(4xS4)         4      3                  1        1       false            false            false                                                                                 
-# 355  15  750   400   8   200   5^3:(2xS4)             2x(5^2:D8)                         2^3                          5^3:(4xS4)         4      3                  1        2       false            false            false            354                                                                  
-# 356  15  1620  864   8   432   3^4:(2xA5)             ((3^3:2^2):3):2                    6                            3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 357  15  405   189   7   81    3^4:(2xA5)             ((3^3:2^2):3):2                    2xA4                         3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 358  15  405   216   8   108   3^4:(2xA5)             ((3^3:2^2):3):2                    2xA4                         3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 359  15  1620  756   7   324   3^4:(2xA5)             ((3^3:2^2):3):2                    6                            3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 360  15  405   216   8   108   3^4:S5                 ((3^3:2^2):3):2                    S4                           3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 361  15  405   189   7   81    3^4:S5                 ((3^3:2^2):3):2                    S4                           3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 362  15  1620  864   8   432   3^4:S5                 ((3^3:2^2):3):2                    S3                           3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 363  15  1620  756   7   324   3^4:S5                 ((3^3:2^2):3):2                    S3                           3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 364  15  1620  864   8   432   3^4:S5                 ((3^3:2^2):3):2                    S3                           3^5:(2x(2^4:S5))   4      3                  1        4       false            false            false                                                                                 
-# 365  15  1620  756   7   324   3^4:S5                 ((3^3:2^2):3):2                    S3                           3^5:(2x(2^4:S5))   4      3                  1        3       false            false            false                                                                                 
-# 366  15  405   189   7   81    3^4:S5                 ((3^3:2^2):3):2                    S4                           3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 367  15  405   216   8   108   3^4:S5                 ((3^3:2^2):3):2                    S4                           3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 368  15  1620  756   7   324   3^5:(2x(5:4))          3^4:(4x2)                          S3                           3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 369  15  405   189   7   81    3^5:(2x(5:4))          3^4:(4x2)                          4xS3                         3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 370  15  405   216   8   108   3^5:(2x(5:4))          3^4:(4x2)                          4xS3                         3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 371  15  1620  864   8   432   3^5:(2x(5:4))          3^4:(4x2)                          S3                           3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 372  15  1500  700   7   300   5^3:(((4^2):3):2)      5^2:((4^2):2)                      D8                           (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 373  15  1500  800   8   400   5^3:(((4^2):3):2)      5^2:((4^2):2)                      D8                           (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 374  15  1500  700   7   300   5^3:(((4^2):3):2)      5^2:((4^2):2)                      D8                           (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 375  15  1500  800   8   400   5^3:(((4^2):3):2)      5^2:((4^2):2)                      D8                           (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 376  15  1500  700   7   300   5^3:(2x((4^2):3))      2x((5:4)x(5:4))                    2^3                          (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false            377                                                                  
-# 377  15  1500  800   8   400   5^3:(2x((4^2):3))      2x((5:4)x(5:4))                    2^3                          (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false                                                                                 
-# 378  15  750   400   8   200   5^3:(4xS4)             5^2:(4xD8)                         (4x2):2                      5^3:(4xS4)         3      3                  1        2       false            false            false                                                                                 
-# 379  15  750   400   8   200   5^3:(4xS4)             5^2:(4xD8)                         2xD8                         5^3:(4xS4)         3      3                  1        2       false            false            false                                                                                 
-# 380  15  750   350   7   150   5^3:(4xS4)             5^2:(4xD8)                         2xD8                         5^3:(4xS4)         3      3                  1        1       false            false            false                                                                                 
-# 381  15  750   350   7   150   5^3:(4xS4)             5^2:(4xD8)                         (4x2):2                      5^3:(4xS4)         3      3                  1        1       false            false            false                                                                                 
-# 382  15  1620  756   7   324   3x(3^4:A5)             3x((3^3:2^2):3)                    3^2                          3^5:(2x(2^4:S5))   4      3                  1        3       false            false            false                                                                                 
-# 383  15  405   189   7   81    3x(3^4:A5)             3x((3^3:2^2):3)                    3xA4                         3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 384  15  405   216   8   108   3x(3^4:A5)             3x((3^3:2^2):3)                    3xA4                         3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 385  15  1620  864   8   432   3x(3^4:A5)             3x((3^3:2^2):3)                    3^2                          3^5:(2x(2^4:S5))   4      3                  1        4       false            false            false                                                                                 
-# 386  15  405   216   8   108   3^4:(2xS5)             (((3^3:2^2):3):2):2                2xS4                         3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 387  15  405   189   7   81    3^4:(2xS5)             (((3^3:2^2):3):2):2                2xS4                         3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 388  15  1620  864   8   432   3^4:(2xS5)             (((3^3:2^2):3):2):2                D12                          3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 389  15  1620  756   7   324   3^4:(2xS5)             (((3^3:2^2):3):2):2                D12                          3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 390  15  405   189   7   81    3^5:((2^4):5)          S3xS3xS3xS3                        2^3xS3                       3^5:(2x(2^4:S5))   6      3                  1        1       false            false            false                                                                                 
-# 391  15  405   216   8   108   3^5:((2^4):5)          S3xS3xS3xS3                        2^3xS3                       3^5:(2x(2^4:S5))   6      3                  1        2       false            false            false                                                                                 
-# 392  15  2520  1344  8   672   A8                     2^3:PSL(3,2)                       2^3                          A8                 2      2                  1        38      true             false            false            399                                                                  
-# 393  15  1680  1120  10  720   A8                     2^3:PSL(3,2)                       D12                          A8                 2      2                  1        35      true             false            false            396                                                                  
-# 394  15  1680  1008  9   576   A8                     2^3:PSL(3,2)                       D12                          A8                 2      2                  1        34      true             false            false            395                                                                  
-# 395  15  1680  672   6   240   A8                     2^3:PSL(3,2)                       D12                          A8                 2      2                  1        33      true             false            false            394                                                                  
-# 396  15  1680  560   5   160   A8                     2^3:PSL(3,2)                       D12                          A8                 2      2                  1        32      true             false            false            393                                                                  
-# 397  15  35    28    12  22    A8                     2^3:PSL(3,2)                       ((A4xA4):2):2                A8                 2      2                  1        4       true             true             true                                                                                  
-# 398  15  2520  1176  7   504   A8                     2^3:PSL(3,2)                       D8                           A8                 2      2                  1        37      true             false            false            426                                                                  
-# 399  15  2520  1176  7   504   A8                     2^3:PSL(3,2)                       2^3                          A8                 2      2                  1        37      true             false            false            392                                                                  
-# 400  15  105   63    9   36    A8                     2^3:PSL(3,2)                       (((2^3):(2^2)):3):2          A8                 2      2                  1        7       true             false            false                                                                                 
-# 401  15  15    8     8   4     A8                     2^3:PSL(3,2)                       2^3:PSL(3,2)                 A8                 2      2                  1        2       true             true             true                         true       complement of PG(3,2) or  Hadamard parameters  
-# 402  15  420   84    3   12    A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        18      true             false            true             420                                                                  
-# 403  15  420   112   4   24    A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        19      true             false            false                                                                                 
-# 404  15  420   168   6   60    A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        20      true             false            true                                                                                  
-# 405  15  105   77    11  55    A8                     2^3:PSL(3,2)                       (((2^4):2):3):2              A8                 2      2                  1        8       true             false            false                                                                                 
-# 406  15  35    7     3   1     A8                     2^3:PSL(3,2)                       ((A4xA4):2):2                A8                 2      2                  1        3       true             true             true                                                                                  
-# 407  15  105   28    4   6     A8                     2^3:PSL(3,2)                       (((2^4):2):3):2              A8                 2      2                  1        5       true             false            true                                                                                  
-# 408  15  840   280   5   80    A8                     2^3:PSL(3,2)                       S4                           A8                 2      2                  1        27      true             false            false                                                                                 
-# 409  15  2520  1008  6   360   A8                     2^3:PSL(3,2)                       D8                           A8                 2      2                  1        36      true             false            false                                                                                 
-# 410  15  120   56    7   24    A8                     2^3:PSL(3,2)                       PSL(3,2)                     A8                 2      2                  1        10      true             false            true                                                                                  
-# 411  15  120   64    8   32    A8                     2^3:PSL(3,2)                       PSL(3,2)                     A8                 2      2                  1        11      true             false            false                                                                                 
-# 412  15  168   56    5   16    A8                     2^3:PSL(3,2)                       S5                           A8                 2      2                  1        12      true             false            true             429                                                                  
-# 413  15  840   448   8   224   A8                     2^3:PSL(3,2)                       S4                           A8                 2      2                  1        29      true             false            false            432                                                                  
-# 414  15  420   196   7   84    A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        21      true             false            false            422                                                                  
-# 415  15  840   560   10  360   A8                     2^3:PSL(3,2)                       S4                           A8                 2      2                  1        30      true             false            false                                                                                 
-# 416  15  840   616   11  440   A8                     2^3:PSL(3,2)                       S4                           A8                 2      2                  1        31      true             false            false            425                                                                  
-# 417  15  315   210   10  135   A8                     2^3:PSL(3,2)                       ((2^3):4):2                  A8                 2      2                  1        17      true             false            false            421                                                                  
-# 418  15  105   91    13  78    A8                     2^3:PSL(3,2)                       (((2^4):3):2):2              S15                2      2                  1        9       true             false            false                                   complete                                      
-# 419  15  420   308   11  220   A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        24      true             false            false                                                                                 
-# 420  15  420   336   12  264   A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        25      true             false            false                                                                                 
-# 421  15  315   105   5   30    A8                     2^3:PSL(3,2)                       ((2^3):4):2                  A8                 2      2                  1        16      true             false            false            417                                                                  
-# 422  15  420   224   8   112   A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        22      true             false            false            414                                                                  
-# 423  15  420   252   9   144   A8                     2^3:PSL(3,2)                       2xS4                         A8                 2      2                  1        23      true             false            false                                                                                 
-# 424  15  105   42    6   15    A8                     2^3:PSL(3,2)                       (((2^3):(2^2)):3):2          A8                 2      2                  1        6       true             false            true             400                                                                  
-# 425  15  840   224   4   48    A8                     2^3:PSL(3,2)                       S4                           A8                 2      2                  1        26      true             false            true             416                                                                  
-# 426  15  2520  1344  8   672   A8                     2^3:PSL(3,2)                       D8                           A8                 2      2                  1        38      true             false            false            398                                                                  
-# 427  15  15    7     7   3     A8                     2^3:PSL(3,2)                       2^3:PSL(3,2)                 A8                 2      2                  1        1       true             true             true                         true       PG(3,2) or Hadamard param eters                
-# 428  15  2520  1512  9   864   A8                     2^3:PSL(3,2)                       D8                           A8                 2      2                  1        39      true             false            false                                                                                 
-# 429  15  168   112   10  72    A8                     2^3:PSL(3,2)                       S5                           A8                 2      2                  1        13      true             false            true             412                                                                  
-# 430  15  280   112   6   40    A8                     2^3:PSL(3,2)                       (S3xS3):2                    A8                 2      2                  1        14      true             false            true             431                                                                  
-# 431  15  280   168   9   96    A8                     2^3:PSL(3,2)                       (S3xS3):2                    A8                 2      2                  1        15      true             false            true             430                                                                  
-# 432  15  840   392   7   168   A8                     2^3:PSL(3,2)                       S4                           A8                 2      2                  1        28      true             false            false            413                                                                  
-# 433  15  1500  700   7   300   5^3:(((4^2):3):4)      5^2:((4:4):4)                      (4x2):2                      (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 434  15  1500  800   8   400   5^3:(((4^2):3):4)      5^2:((4:4):4)                      (4x2):2                      (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 435  15  1500  700   7   300   5^3:(2x(((4^2):3):2))  2x(5^2:((4^2):2))                  2xD8                         (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 436  15  1500  800   8   400   5^3:(2x(((4^2):3):2))  2x(5^2:((4^2):2))                  2xD8                         (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 437  15  1500  700   7   300   5^3:(4x((4^2):3))      4x((5:4)x(5:4))                    4x2^2                        (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false                                                                                 
-# 438  15  1500  800   8   400   5^3:(4x((4^2):3))      4x((5:4)x(5:4))                    4x2^2                        (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false                                                                                 
-# 439  15  405   216   8   108   3:(3^4:(2xA5))         (3x((3^3:2^2):3)):2                A4xS3                        3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 440  15  1620  864   8   432   3:(3^4:(2xA5))         (3x((3^3:2^2):3)):2                3xS3                         3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 441  15  1620  756   7   324   3:(3^4:(2xA5))         (3x((3^3:2^2):3)):2                3xS3                         3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 442  15  405   189   7   81    3:(3^4:(2xA5))         (3x((3^3:2^2):3)):2                A4xS3                        3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 443  15  1620  756   7   324   3^4:(3:S5)             (3x((3^3:2^2):3)):2                (3^2):2                      3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false            446                                                                  
-# 444  15  405   216   8   108   3^4:(3:S5)             (3x((3^3:2^2):3)):2                (3xA4):2                     3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 445  15  405   189   7   81    3^4:(3:S5)             (3x((3^3:2^2):3)):2                (3xA4):2                     3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 446  15  1620  864   8   432   3^4:(3:S5)             (3x((3^3:2^2):3)):2                (3^2):2                      3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 447  15  405   216   8   108   3x(3^4:S5)             3x(((3^3:2^2):3):2)                3xS4                         3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 448  15  1620  864   8   432   3x(3^4:S5)             3x(((3^3:2^2):3):2)                3xS3                         3^5:(2x(2^4:S5))   4      3                  1        4       false            false            false                                                                                 
-# 449  15  405   189   7   81    3x(3^4:S5)             3x(((3^3:2^2):3):2)                3xS4                         3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 450  15  1620  756   7   324   3x(3^4:S5)             3x(((3^3:2^2):3):2)                3xS3                         3^5:(2x(2^4:S5))   4      3                  1        3       false            false            false                                                                                 
-# 451  15  405   216   8   108   3^5:(((2^4):5):2)      3^4:((2^4):2)                      3:((2^4):2)                  3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false            452                                                                  
-# 452  15  405   189   7   81    3^5:(((2^4):5):2)      3^4:((2^4):2)                      3:((2^4):2)                  3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 453  15  405   216   8   108   3^5:(((2^4):5):2)      3^4:((2^4):2)                      3:((2^4):2)                  3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 454  15  405   189   7   81    3^5:(((2^4):5):2)      3^4:((2^4):2)                      3:((2^4):2)                  3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 455  15  405   216   8   108   3^5:(2x((2^4):5))      2xS3xS3xS3xS3                      2^4xS3                       3^5:(2x(2^4:S5))   6      3                  1        2       false            false            false                                                                                 
-# 456  15  405   189   7   81    3^5:(2x((2^4):5))      2xS3xS3xS3xS3                      2^4xS3                       3^5:(2x(2^4:S5))   6      3                  1        1       false            false            false                                                                                 
-# 457  15  1500  800   8   400   5^3:(4x(((4^2):3):2))  4x(5^2:((4^2):2))                  4xD8                         (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 458  15  1500  700   7   300   5^3:(4x(((4^2):3):2))  4x(5^2:((4^2):2))                  4xD8                         (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 459  15  1620  864   8   432   3:(3^4:(2xS5))         ((3x((3^3:2^2):3)):2):2            S3xS3                        3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 460  15  405   189   7   81    3:(3^4:(2xS5))         ((3x((3^3:2^2):3)):2):2            S3xS4                        3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 461  15  405   216   8   108   3:(3^4:(2xS5))         ((3x((3^3:2^2):3)):2):2            S3xS4                        3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 462  15  1620  756   7   324   3:(3^4:(2xS5))         ((3x((3^3:2^2):3)):2):2            S3xS3                        3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 463  15  405   189   7   81    3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  3:(((8:2):2):2)              3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 464  15  405   216   8   108   3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  3:(((8:2):2):2)              3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 465  15  1620  864   8   432   3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  2^3xS3                       3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 466  15  1620  756   7   324   3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  2^3xS3                       3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 467  15  405   216   8   108   3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  3:(((2^3):4):2)              3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 468  15  405   189   7   81    3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  3:(((2^3):4):2)              3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 469  15  1620  864   8   432   3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  2^3xS3                       3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 470  15  1620  756   7   324   3^5:(((2^4):5):4)      3^4:(((2^3):4):2)                  2^3xS3                       3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 471  15  405   216   8   108   3^5:(2x(((2^4):5):2))  2x(3^4:((2^4):2))                  ((2^4):2)xS3                 3^5:(2x(2^4:S5))   4      3                  1        2       false            false            false                                                                                 
-# 472  15  405   189   7   81    3^5:(2x(((2^4):5):2))  2x(3^4:((2^4):2))                  ((2^4):2)xS3                 3^5:(2x(2^4:S5))   4      3                  1        1       false            false            false                                                                                 
-# 473  15  405   216   8   108   3^5:(2x(((2^4):5):4))  2x(3^4:(((8:2):2):2))              (((2^3):4):2)xS3             3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 474  15  1620  864   8   432   3^5:(2x(((2^4):5):4))  2x(3^4:(((8:2):2):2))              2^4xS3                       3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 475  15  405   189   7   81    3^5:(2x(((2^4):5):4))  2x(3^4:(((8:2):2):2))              (((2^3):4):2)xS3             3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 476  15  1620  756   7   324   3^5:(2x(((2^4):5):4))  2x(3^4:(((8:2):2):2))              2^4xS3                       3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 477  15  1620  756   7   324   3^5:(2^4:A5)           (3^4:(((2^4):2):2)):3              2xS3xA4                      3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 478  15  1620  864   8   432   3^5:(2^4:A5)           (3^4:(((2^4):2):2)):3              2xS3xA4                      3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 479  15  405   189   7   81    3^5:(2^4:A5)           (3^4:(((2^4):2):2)):3              (3x(((2^3):(2^2)):3)):2      3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 480  15  405   216   8   108   3^5:(2^4:A5)           (3^4:(((2^4):2):2)):3              (3x(((2^3):(2^2)):3)):2      3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 481  15  1620  756   7   324   3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      2xS3xS4                      3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 482  15  405   189   7   81    3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      ((3x(((2^3):(2^2)):3)):2):2  3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 483  15  1620  864   8   432   3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      2xS3xS4                      3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 484  15  405   216   8   108   3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      ((3x(((2^3):(2^2)):3)):2):2  3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 485  15  1620  756   7   324   3^5:(2x(2^4:A5))       2x(((3^4:((2^3):(2^2))):3):2)      2^2xS3xA4                    3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 486  15  405   189   7   81    3^5:(2x(2^4:A5))       2x(((3^4:((2^3):(2^2))):3):2)      ((((2^4):2):2):3)xS3         3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 487  15  1620  864   8   432   3^5:(2x(2^4:A5))       2x(((3^4:((2^3):(2^2))):3):2)      2^2xS3xA4                    3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 488  15  405   216   8   108   3^5:(2x(2^4:A5))       2x(((3^4:((2^3):(2^2))):3):2)      ((((2^4):2):2):3)xS3         3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 489  15  1620  756   7   324   3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      2xS3xS4                      3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 490  15  1620  864   8   432   3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      2xS3xS4                      3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 491  15  405   189   7   81    3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      ((3x(((2^3):(2^2)):3)):2):2  3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 492  15  405   216   8   108   3^5:(2^4:S5)           (((3^4:((2^3):(2^2))):3):2):2      ((3x(((2^3):(2^2)):3)):2):2  3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 493  15  1500  800   8   400   (A5xA5xA5):3           A5xA5xA4                           A4xS3xS3                     (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false                                                                                 
-# 494  15  1500  700   7   300   (A5xA5xA5):3           A5xA5xA4                           A4xS3xS3                     (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false                                                                                 
-# 495  15  405   216   8   108   3^5:(2x(2^4:S5))       2x((((3^4:((2^3):(2^2))):3):2):2)  (((((2^4):2):2):3):2)xS3     3^5:(2x(2^4:S5))   3      3                  1        2       false            false            true                                                                                  
-# 496  15  405   189   7   81    3^5:(2x(2^4:S5))       2x((((3^4:((2^3):(2^2))):3):2):2)  (((((2^4):2):2):3):2)xS3     3^5:(2x(2^4:S5))   3      3                  1        1       false            false            false                                                                                 
-# 497  15  1620  756   7   324   3^5:(2x(2^4:S5))       2x((((3^4:((2^3):(2^2))):3):2):2)  2^2xS3xS4                    3^5:(2x(2^4:S5))   3      3                  1        3       false            false            false                                                                                 
-# 498  15  1620  864   8   432   3^5:(2x(2^4:S5))       2x((((3^4:((2^3):(2^2))):3):2):2)  2^2xS3xS4                    3^5:(2x(2^4:S5))   3      3                  1        4       false            false            false                                                                                 
-# 499  15  1500  800   8   400   (A5xA5xA5):S3          (A5xA5):S4                         (A4xS3xS3):2                 (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 500  15  1500  700   7   300   (A5xA5xA5):S3          (A5xA5):S4                         (A4xS3xS3):2                 (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 501  15  1500  700   7   300   (A5xA5xA5):6           A5:(A5:S4)                         S4xS3xS3                     (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false                                                                                 
-# 502  15  1500  800   8   400   (A5xA5xA5):6           A5:(A5:S4)                         S4xS3xS3                     (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false                                                                                 
-# 503  15  1500  800   8   400   (A5xA5xA5):S3          ((A5xA5):2)xA4                     A4x((S3xS3):2)               (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 504  15  1500  700   7   300   (A5xA5xA5):S3          ((A5xA5):2)xA4                     A4x((S3xS3):2)               (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 505  15  1500  700   7   300   (A5xA5xA5):D12         (A5xA5):(2xS4)                     S4x((S3xS3):2)               (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 506  15  1500  800   8   400   (A5xA5xA5):D12         (A5xA5):(2xS4)                     S4x((S3xS3):2)               (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 507  15  1500  700   7   300   (A5xA5xA5):A4          A5:(S5xS4)                         2xS4xS3xS3                   (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false                                                                                 
-# 508  15  1500  800   8   400   (A5xA5xA5):A4          A5:(S5xS4)                         2xS4xS3xS3                   (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false                                                                                 
-# 509  15  1500  800   8   400   (A5xA5xA5):S4          (A5xA5):((4xA4):2)                 ((2x(A4x((3^2):4))):2):2     (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 510  15  1500  700   7   300   (A5xA5xA5):S4          (A5xA5):((4xA4):2)                 ((2x(A4x((3^2):4))):2):2     (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 511  15  1500  800   8   400   (A5xA5xA5):S4          (A5xA5):((2^2xA4):2)               ((3x((6xS4):2)):2):2         (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 512  15  1500  700   7   300   (A5xA5xA5):S4          (A5xA5):((2^2xA4):2)               ((3x((6xS4):2)):2):2         (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 513  15  1500  700   7   300   (A5xA5xA5):(2xA4)      S5xS5xS4                           2^2xS4xS3xS3                 (A5xA5xA5):(2xS4)  4      3                  1        1       false            false            false                                                                                 
-# 514  15  1500  800   8   400   (A5xA5xA5):(2xA4)      S5xS5xS4                           2^2xS4xS3xS3                 (A5xA5xA5):(2xS4)  4      3                  1        2       false            false            false            513                                                                  
-# 515  15  1500  800   8   400   (A5xA5xA5):(2xS4)      ((A5xA5):D8)xS4                    (3^2:((2^4):2))xS4           (A5xA5xA5):(2xS4)  3      3                  1        2       false            false            false                                                                                 
-# 516  15  1500  700   7   300   (A5xA5xA5):(2xS4)      ((A5xA5):D8)xS4                    (3^2:((2^4):2))xS4           (A5xA5xA5):(2xS4)  3      3                  1        1       false            false            false                                                                                 
-# 517  15  6435  3432  8   1716  A15                    A14                                A8:S7                        S15                2      2                  1        11      true             true             true             521                    complete                                      
-# 518  15  1365  364   4   78    A15                    A14                                A11:S4                       S15                2      2                  1        4       true             true             true                                    complete                                      
-# 519  15  5005  2002  6   715   A15                    A14                                A9:S6                        S15                2      2                  1        8       true             true             true             520                    complete                                      
-# 520  15  5005  3003  9   1716  A15                    A14                                A9:S6                        S15                2      2                  1        9       true             true             true             519                    complete                                      
-# 521  15  6435  3003  7   1287  A15                    A14                                A8:S7                        S15                2      2                  1        10      true             true             true             517                    complete                                      
-# 522  15  1365  1001  11  715   A15                    A14                                A11:S4                       S15                2      2                  1        5       true             true             true             518                    complete                                      
-# 523  15  105   91    13  78    A15                    A14                                S13                          S15                2      2                  1        1       true             true             true                                    complete                                      
-# 524  15  3003  2002  10  1287  A15                    A14                                A10:S5                       S15                2      2                  1        7       true             true             true             527                    complete                                      
-# 525  15  455   91    3   13    A15                    A14                                A12:S3                       S15                2      2                  1        2       true             true             true             526                    complete                                      
-# 526  15  455   364   12  286   A15                    A14                                A12:S3                       S15                2      2                  1        3       true             true             true             525                    complete                                      
-# 527  15  3003  1001  5   286   A15                    A14                                A10:S5                       S15                2      2                  1        6       true             true             true             524                    complete                                      
-# 528  15  3003  1001  5   286   S15                    S14                                S10xS5                       S15                2      2                  1        6       true             true             true                                    complete                                      
-# 529  15  455   91    3   13    S15                    S14                                S12xS3                       S15                2      2                  1        2       true             true             true                                    complete                                      
-# 530  15  3003  2002  10  1287  S15                    S14                                S10xS5                       S15                2      2                  1        7       true             true             true                                    complete                                      
-# 531  15  455   364   12  286   S15                    S14                                S12xS3                       S15                2      2                  1        3       true             true             true                                    complete                                      
-# 532  15  5005  2002  6   715   S15                    S14                                S9xS6                        S15                2      2                  1        8       true             true             true                                    complete                                      
-# 533  15  1365  364   4   78    S15                    S14                                S11xS4                       S15                2      2                  1        4       true             true             true             535                    complete                                      
-# 534  15  5005  3003  9   1716  S15                    S14                                S9xS6                        S15                2      2                  1        9       true             true             true                                    complete                                      
-# 535  15  1365  1001  11  715   S15                    S14                                S11xS4                       S15                2      2                  1        5       true             true             true                                    complete                                      
-# 536  15  6435  3003  7   1287  S15                    S14                                S8xS7                        S15                2      2                  1        10      true             true             true                                    complete                                      
-# 537  15  105   91    13  78    S15                    S14                                2xS13                        S15                2      2                  1        1       true             true             true                                    complete                                      
-# 538  15  6435  3432  8   1716  S15                    S14                                S8xS7                        S15                2      2                  1        11      true             true             true                                    complete                                      
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# 3. Further information (up to isomorphism): 
-# -------------------------------------------
-
-# Design: 1
-# -----------------------------------------------------------
-# Parameter set: [ 15, 15, 7, 7, 3 ]
-# Complement:    [ 15, 15, 8, 8, 4 ]
-# -----------------------------------------------------------
-#                                      G       Aut(D)        
-# -----------------------------------------------------------
-# Structure                            15      A8            
-# Rank                                 15      2             
-# 2-Homogeneous                        false   true          
-# Point-stabiliser                     1       2^3:PSL(3,2)  
-# Block-stabiliser                     1       2^3:PSL(3,2)  
-# Orbit structure of point-stabiliser  1^{15}  1^{15}        
-# Orbit structure of block-stabiliser  1^{15}  1^{15}        
-# Point-transitive                     true    true          
-# Block-transitive                     true    true          
-# Flag-transitive                      false   true          
-# Anti-flag-transitive                 false   true          
-# Flag-(semi)ragular                   false   false         
-# Point-primitive                      false   true          
-# Point-primitive type                 0       2             
-# Block-primitive                      false   true          
-# Block-primitive type                 0       2             
-# -----------------------------------------------------------
-
-# Design: 2
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 15, 8, 8, 4 ]
-# Complement:    [ 15, 15, 7, 7, 3 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            S6               A8               
-# Rank                                 3                2                
-# 2-Homogeneous                        false            true             
-# Point-stabiliser                     2xS4             2^3:PSL(3,2)     
-# Block-stabiliser                     2xS4             2^3:PSL(3,2)     
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      true             true             
-# Anti-flag-transitive                 false            true             
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      true             true             
-# Block-primitive type                 2                2                
-# -----------------------------------------------------------------------
-
-# Design: 3
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 30, 14, 7, 6 ]
-# Complement:    [ 15, 30, 16, 8, 8 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              (5:4)xS3              
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   4x2                   
-# Block-stabiliser                     4                     4                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}       1^{1}2^{1}4^{3}       
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 4
-# -------------------------------------------------------------
-# Parameter set: [ 15, 30, 16, 8, 8 ]
-# Complement:    [ 15, 30, 14, 7, 6 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            D30         (5:4)xS3    
-# Rank                                 8           4           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     2           4x2         
-# Block-stabiliser                     1           4           
-# Orbit structure of point-stabiliser  1^{1}2^{7}  1^{1}2^{7}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 5
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 35, 7, 3, 1 ]
-# Complement:    [ 15, 35, 28, 12, 22 ]
-# -----------------------------------------------------------------
-#                                      G            Aut(D)         
-# -----------------------------------------------------------------
-# Structure                            A7           A8             
-# Rank                                 2            2              
-# 2-Homogeneous                        true         true           
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)   
-# Block-stabiliser                     (3xA4):2     ((A4xA4):2):2  
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}    
-# Orbit structure of block-stabiliser  3^{1}12^{1}  3^{1}12^{1}    
-# Point-transitive                     true         true           
-# Block-transitive                     true         true           
-# Flag-transitive                      true         true           
-# Anti-flag-transitive                 true         true           
-# Flag-(semi)ragular                   false        false          
-# Point-primitive                      true         true           
-# Point-primitive type                 2            2              
-# Block-primitive                      true         true           
-# Block-primitive type                 2            2              
-# -----------------------------------------------------------------
-
-# Design: 6
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 35, 28, 12, 22 ]
-# Complement:    [ 15, 35, 7, 3, 1 ]
-# -----------------------------------------------------------------
-#                                      G            Aut(D)         
-# -----------------------------------------------------------------
-# Structure                            A7           A8             
-# Rank                                 2            2              
-# 2-Homogeneous                        true         true           
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)   
-# Block-stabiliser                     (3xA4):2     ((A4xA4):2):2  
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}    
-# Orbit structure of block-stabiliser  3^{1}12^{1}  3^{1}12^{1}    
-# Point-transitive                     true         true           
-# Block-transitive                     true         true           
-# Flag-transitive                      true         true           
-# Anti-flag-transitive                 true         true           
-# Flag-(semi)ragular                   false        false          
-# Point-primitive                      true         true           
-# Point-primitive type                 2            2              
-# Block-primitive                      true         true           
-# Block-primitive type                 2            2              
-# -----------------------------------------------------------------
-
-# Design: 7
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 42, 14, 5, 4 ]
-# Complement:    [ 15, 42, 28, 10, 18 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     A5           A5           
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 8
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 42, 28, 10, 18 ]
-# Complement:    [ 15, 42, 14, 5, 4 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     A5           A5           
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 9
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            15:4             15:4             
-# Rank                                 5                5                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     4                4                
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 10
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              S5xS3                 
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   2xS4                  
-# Block-stabiliser                     2                     D12                   
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{5}2^{5}            1^{5}2^{5}            
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 11
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            A5          GL(2,4)     
-# Rank                                 6           4           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     2^2         A4          
-# Block-stabiliser                     1           3           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 12
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     3x(5:4)     
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           4           
-# Block-stabiliser                     1           1           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 13
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            A5          GL(2,4)     
-# Rank                                 6           4           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     2^2         A4          
-# Block-stabiliser                     1           3           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 14
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     3x(5:4)     
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           4           
-# Block-stabiliser                     1           1           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 15
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     3x(5:4)     
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           4           
-# Block-stabiliser                     1           1           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 16
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     (5:4)xS3    
-# Rank                                 6           4           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           4x2         
-# Block-stabiliser                     1           2           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 17
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            A5          A5:S3       
-# Rank                                 6           3           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     2^2         S4          
-# Block-stabiliser                     1           S3          
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 18
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 60, 28, 7, 12 ]
-# Complement:    [ 15, 60, 32, 8, 16 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            15:4             15:4             
-# Rank                                 5                5                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     4                4                
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 19
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    A5:S3                 
-# Rank                                 4                     3                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    S4                    
-# Block-stabiliser                     2                     S3                    
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}            1^{3}2^{6}            
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 20
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     3x(5:4)     
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           4           
-# Block-stabiliser                     1           1           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 21
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      GL(2,4)      
-# Rank                                 4            4            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           A4           
-# Block-stabiliser                     3            3            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{3}3^{4}   1^{3}3^{4}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 22
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            15:4             (5:4)xS3         
-# Rank                                 5                4                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     4                4x2              
-# Block-stabiliser                     1                2                
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 23
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            15:4             15:4             
-# Rank                                 5                5                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     4                4                
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 24
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     3x(5:4)     
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           4           
-# Block-stabiliser                     1           1           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 25
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            A5          GL(2,4)     
-# Rank                                 6           4           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     2^2         A4          
-# Block-stabiliser                     1           3           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 26
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     S5xS3       
-# Rank                                 6           4           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           2xS4        
-# Block-stabiliser                     1           D12         
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 27
-# -------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3x(5:4)     3x(5:4)     
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     4           4           
-# Block-stabiliser                     1           1           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 28
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 60, 32, 8, 16 ]
-# Complement:    [ 15, 60, 28, 7, 12 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            15:4             15:4             
-# Rank                                 5                5                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     4                4                
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 29
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 70, 28, 6, 10 ]
-# Complement:    [ 15, 70, 42, 9, 24 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     (3^2):4      (3^2):4      
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  6^{1}9^{1}   6^{1}9^{1}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 30
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 70, 42, 9, 24 ]
-# Complement:    [ 15, 70, 28, 6, 10 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     (3^2):4      (3^2):4      
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  6^{1}9^{1}   6^{1}9^{1}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 31
-# -------------------------------------------------------------
-# Parameter set: [ 15, 75, 35, 7, 15 ]
-# Complement:    [ 15, 75, 40, 8, 20 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            (5^2):3     5^2:(3:4)   
-# Rank                                 7           3           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     5           5:4         
-# Block-stabiliser                     1           4           
-# Orbit structure of point-stabiliser  1^{5}5^{2}  1^{5}5^{2}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 32
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 75, 40, 8, 20 ]
-# Complement:    [ 15, 75, 35, 7, 15 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^2:6            5^2:(3:4)        
-# Rank                                 5                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     D10              5:4              
-# Block-stabiliser                     2                4                
-# Orbit structure of point-stabiliser  1^{1}2^{2}5^{2}  1^{1}2^{2}5^{2}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}       1^{3}2^{6}       
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 33
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 90, 42, 7, 18 ]
-# Complement:    [ 15, 90, 48, 8, 24 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     4                 4                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}   1^{1}2^{1}4^{3}   
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 34
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 90, 42, 7, 18 ]
-# Complement:    [ 15, 90, 48, 8, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            3:S5                  S5xS3                 
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     S4                    2xS4                  
-# Block-stabiliser                     4                     D8                    
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}       1^{1}2^{1}4^{3}       
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 35
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 90, 48, 8, 24 ]
-# Complement:    [ 15, 90, 42, 7, 18 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            3:S5                  S5xS3                 
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     S4                    2xS4                  
-# Block-stabiliser                     4                     D8                    
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}       1^{1}2^{1}4^{3}       
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 36
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 90, 48, 8, 24 ]
-# Complement:    [ 15, 90, 42, 7, 18 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     4                 4                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}   1^{1}2^{1}4^{3}   
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 37
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 105, 28, 4, 6 ]
-# Complement:    [ 15, 105, 77, 11, 55 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         2^3:PSL(3,2)     
-# Block-stabiliser                     S4               (((2^4):2):3):2  
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  3^{1}4^{1}8^{1}  3^{1}4^{1}8^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      true             true             
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 38
-# ---------------------------------------------------------------------------
-# Parameter set: [ 15, 105, 42, 6, 15 ]
-# Complement:    [ 15, 105, 63, 9, 36 ]
-# ---------------------------------------------------------------------------
-#                                      G                Aut(D)               
-# ---------------------------------------------------------------------------
-# Structure                            A7               A8                   
-# Rank                                 2                2                    
-# 2-Homogeneous                        true             true                 
-# Point-stabiliser                     PSL(3,2)         2^3:PSL(3,2)         
-# Block-stabiliser                     S4               (((2^3):(2^2)):3):2  
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}          
-# Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}      
-# Point-transitive                     true             true                 
-# Block-transitive                     true             true                 
-# Flag-transitive                      true             true                 
-# Anti-flag-transitive                 false            false                
-# Flag-(semi)ragular                   false            false                
-# Point-primitive                      true             true                 
-# Point-primitive type                 2                2                    
-# Block-primitive                      false            false                
-# Block-primitive type                 0                0                    
-# ---------------------------------------------------------------------------
-
-# Design: 39
-# -------------------------------------------------------------------------------
-# Parameter set: [ 15, 105, 63, 9, 36 ]
-# Complement:    [ 15, 105, 42, 6, 15 ]
-# -------------------------------------------------------------------------------
-#                                      G                    Aut(D)               
-# -------------------------------------------------------------------------------
-# Structure                            A8                   A8                   
-# Rank                                 2                    2                    
-# 2-Homogeneous                        true                 true                 
-# Point-stabiliser                     2^3:PSL(3,2)         2^3:PSL(3,2)         
-# Block-stabiliser                     (((2^3):(2^2)):3):2  (((2^3):(2^2)):3):2  
-# Orbit structure of point-stabiliser  1^{1}14^{1}          1^{1}14^{1}          
-# Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}      1^{1}6^{1}8^{1}      
-# Point-transitive                     true                 true                 
-# Block-transitive                     true                 true                 
-# Flag-transitive                      false                false                
-# Anti-flag-transitive                 true                 true                 
-# Flag-(semi)ragular                   false                false                
-# Point-primitive                      true                 true                 
-# Point-primitive type                 2                    2                    
-# Block-primitive                      false                false                
-# Block-primitive type                 0                    0                    
-# -------------------------------------------------------------------------------
-
-# Design: 40
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 105, 77, 11, 55 ]
-# Complement:    [ 15, 105, 28, 4, 6 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         2^3:PSL(3,2)     
-# Block-stabiliser                     S4               (((2^4):2):3):2  
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  3^{1}4^{1}8^{1}  3^{1}4^{1}8^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 true             true             
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 41
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 105, 91, 13, 78 ]
-# Complement:    [ 15, 105, 14, 2, 1 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A7                S15               
-# Rank                                 2                 2                 
-# 2-Homogeneous                        true              true              
-# Point-stabiliser                     PSL(3,2)          S14               
-# Block-stabiliser                     S4                2xS13             
-# Orbit structure of point-stabiliser  1^{1}14^{1}       1^{1}14^{1}       
-# Orbit structure of block-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             true              
-# Anti-flag-transitive                 true              true              
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      true              true              
-# Point-primitive type                 2                 2                 
-# Block-primitive                      false             true              
-# Block-primitive type                 0                 2                 
-# -------------------------------------------------------------------------
-
-# Design: 42
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              (5:4)xS3              
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   4x2                   
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 43
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     3                 3                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{3}3^{4}        1^{3}3^{4}        
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 44
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              (5:4)xS3              
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   4x2                   
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 45
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    S5                    
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    D8                    
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 46
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    A8                    
-# Rank                                 4                     2                     
-# 2-Homogeneous                        false                 true                  
-# Point-stabiliser                     D8                    2^3:PSL(3,2)          
-# Block-stabiliser                     1                     PSL(3,2)              
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 true                  
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 true                  
-# Point-primitive type                 0                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 47
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    S5                    
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    D8                    
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 48
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              (5:4)xS3              
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   4x2                   
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 49
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 56, 7, 24 ]
-# Complement:    [ 15, 120, 64, 8, 32 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    S5                    
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    D8                    
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 50
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    S5                    
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    D8                    
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 51
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              (5:4)xS3              
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   4x2                   
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 52
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    S5                    
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    D8                    
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 53
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A8                
-# Rank                                 3                 2                 
-# 2-Homogeneous                        false             true              
-# Point-stabiliser                     S4                2^3:PSL(3,2)      
-# Block-stabiliser                     3                 PSL(3,2)          
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{3}3^{4}        1^{3}3^{4}        
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             true              
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             true              
-# Point-primitive type                 0                 2                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 54
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    S5                    
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    D8                    
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 55
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              (5:4)xS3              
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   4x2                   
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 56
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (5:4)xS3              (5:4)xS3              
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     4x2                   4x2                   
-# Block-stabiliser                     1                     1                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 57
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 120, 64, 8, 32 ]
-# Complement:    [ 15, 120, 56, 7, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5                    A5:S3                 
-# Rank                                 4                     3                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     D8                    S4                    
-# Block-stabiliser                     1                     3                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 58
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 126, 42, 5, 12 ]
-# Complement:    [ 15, 126, 84, 10, 54 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     5:4          5:4          
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 59
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 126, 84, 10, 54 ]
-# Complement:    [ 15, 126, 42, 5, 12 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     5:4          5:4          
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 60
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 150, 70, 7, 30 ]
-# Complement:    [ 15, 150, 80, 8, 40 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^2:6            5^2:6            
-# Rank                                 5                5                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     D10              D10              
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}2^{2}5^{2}  1^{1}2^{2}5^{2}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 61
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 150, 70, 7, 30 ]
-# Complement:    [ 15, 150, 80, 8, 40 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(4xS3)        5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     2x(5:4)           2x(5:4)           
-# Block-stabiliser                     4                 4                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}   1^{1}2^{1}4^{3}   
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 62
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 150, 70, 7, 30 ]
-# Complement:    [ 15, 150, 80, 8, 40 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:S3            5^2:S3            
-# Rank                                 4                 4                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     10                10                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{2}10^{1}  1^{1}2^{2}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 63
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 150, 70, 7, 30 ]
-# Complement:    [ 15, 150, 80, 8, 40 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(3:4)         5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5:4               2x(5:4)           
-# Block-stabiliser                     2                 2^2               
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}        1^{3}2^{6}        
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 64
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 150, 80, 8, 40 ]
-# Complement:    [ 15, 150, 70, 7, 30 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(4xS3)        5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     2x(5:4)           2x(5:4)           
-# Block-stabiliser                     4                 4                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}   1^{1}2^{1}4^{3}   
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 65
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 150, 80, 8, 40 ]
-# Complement:    [ 15, 150, 70, 7, 30 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^2:12           5^2:(4xS3)       
-# Rank                                 4                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     5:4              2x(5:4)          
-# Block-stabiliser                     2                2^2              
-# Orbit structure of point-stabiliser  1^{1}4^{1}5^{2}  1^{1}4^{1}5^{2}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}       1^{3}2^{6}       
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 66
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 150, 80, 8, 40 ]
-# Complement:    [ 15, 150, 70, 7, 30 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:S3            5^2:S3            
-# Rank                                 4                 4                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     10                10                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{2}10^{1}  1^{1}2^{2}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 67
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 150, 80, 8, 40 ]
-# Complement:    [ 15, 150, 70, 7, 30 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^2:6            5^2:6            
-# Rank                                 5                5                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     D10              D10              
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}2^{2}5^{2}  1^{1}2^{2}5^{2}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 68
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 168, 56, 5, 16 ]
-# Complement:    [ 15, 168, 112, 10, 72 ]
-# -----------------------------------------------------------------
-#                                      G             Aut(D)        
-# -----------------------------------------------------------------
-# Structure                            A8            A8            
-# Rank                                 2             2             
-# 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     S5            S5            
-# Orbit structure of point-stabiliser  1^{1}14^{1}   1^{1}14^{1}   
-# Orbit structure of block-stabiliser  5^{1}10^{1}   5^{1}10^{1}   
-# Point-transitive                     true          true          
-# Block-transitive                     true          true          
-# Flag-transitive                      true          true          
-# Anti-flag-transitive                 true          true          
-# Flag-(semi)ragular                   false         false         
-# Point-primitive                      true          true          
-# Point-primitive type                 2             2             
-# Block-primitive                      false         false         
-# Block-primitive type                 0             0             
-# -----------------------------------------------------------------
-
-# Design: 69
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 168, 112, 10, 72 ]
-# Complement:    [ 15, 168, 56, 5, 16 ]
-# -----------------------------------------------------------------
-#                                      G             Aut(D)        
-# -----------------------------------------------------------------
-# Structure                            A8            A8            
-# Rank                                 2             2             
-# 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     S5            S5            
-# Orbit structure of point-stabiliser  1^{1}14^{1}   1^{1}14^{1}   
-# Orbit structure of block-stabiliser  5^{1}10^{1}   5^{1}10^{1}   
-# Point-transitive                     true          true          
-# Block-transitive                     true          true          
-# Flag-transitive                      true          true          
-# Anti-flag-transitive                 true          true          
-# Flag-(semi)ragular                   false         false         
-# Point-primitive                      true          true          
-# Point-primitive type                 2             2             
-# Block-primitive                      false         false         
-# Block-primitive type                 0             0             
-# -----------------------------------------------------------------
-
-# Design: 70
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     S4               2xS4             
-# Block-stabiliser                     2                2^2              
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}       1^{3}2^{6}       
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 71
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     2                 2                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}        1^{3}2^{6}        
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 72
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      GL(2,4)      
-# Rank                                 4            4            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           A4           
-# Block-stabiliser                     1            1            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 73
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      GL(2,4)      
-# Rank                                 4            4            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           A4           
-# Block-stabiliser                     1            1            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 74
-# -------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            3xS5        3xS5        
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     S4          S4          
-# Block-stabiliser                     2           2           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{9}2^{3}  1^{9}2^{3}  
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 75
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     2                 2                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}        1^{3}2^{6}        
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 76
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      A5:S3        
-# Rank                                 4            3            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           S4           
-# Block-stabiliser                     1            2            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 77
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 84, 7, 36 ]
-# Complement:    [ 15, 180, 96, 8, 48 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      GL(2,4)      
-# Rank                                 4            4            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           A4           
-# Block-stabiliser                     1            1            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 78
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      A5:S3        
-# Rank                                 4            3            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           S4           
-# Block-stabiliser                     1            2            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 79
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      GL(2,4)      
-# Rank                                 4            4            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           A4           
-# Block-stabiliser                     1            1            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 80
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      GL(2,4)      
-# Rank                                 4            4            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           A4           
-# Block-stabiliser                     1            1            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 81
-# -------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# -------------------------------------------------------------
-#                                      G           Aut(D)      
-# -------------------------------------------------------------
-# Structure                            GL(2,4)     3xS5        
-# Rank                                 6           6           
-# 2-Homogeneous                        false       false       
-# Point-stabiliser                     A4          S4          
-# Block-stabiliser                     1           2           
-# Orbit structure of point-stabiliser  1^{3}4^{3}  1^{3}4^{3}  
-# Orbit structure of block-stabiliser  1^{15}      1^{15}      
-# Point-transitive                     true        true        
-# Block-transitive                     true        true        
-# Flag-transitive                      false       false       
-# Anti-flag-transitive                 false       false       
-# Flag-(semi)ragular                   false       false       
-# Point-primitive                      false       false       
-# Point-primitive type                 0           0           
-# Block-primitive                      false       false       
-# Block-primitive type                 0           0           
-# -------------------------------------------------------------
-
-# Design: 82
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      GL(2,4)      
-# Rank                                 4            4            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           A4           
-# Block-stabiliser                     1            1            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 83
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            S6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     2xS4             2xS4             
-# Block-stabiliser                     2^2              2^2              
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{2}4^{2}  1^{3}2^{2}4^{2}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 84
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      A5:S3        
-# Rank                                 4            3            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           S4           
-# Block-stabiliser                     1            2            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 85
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 180, 96, 8, 48 ]
-# Complement:    [ 15, 180, 84, 7, 36 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            GL(2,4)      A5:S3        
-# Rank                                 4            3            
-# 2-Homogeneous                        false        false        
-# Point-stabiliser                     A4           S4           
-# Block-stabiliser                     1            2            
-# Orbit structure of point-stabiliser  1^{3}12^{1}  1^{3}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}       1^{15}       
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      false        false        
-# Point-primitive type                 0            0            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 86
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 210, 56, 4, 12 ]
-# Complement:    [ 15, 210, 154, 11, 110 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     A4               A4               
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}4^{2}6^{1}  1^{1}4^{2}6^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      true             true             
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 87
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 210, 84, 6, 30 ]
-# Complement:    [ 15, 210, 126, 9, 72 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     D12          D12          
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  3^{1}6^{2}   3^{1}6^{2}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 88
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 210, 126, 9, 72 ]
-# Complement:    [ 15, 210, 84, 6, 30 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     D12          D12          
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  3^{1}6^{2}   3^{1}6^{2}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 89
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 210, 154, 11, 110 ]
-# Complement:    [ 15, 210, 56, 4, 12 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     A4               A4               
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}4^{2}6^{1}  1^{1}4^{2}6^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 true             true             
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 90
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 280, 112, 6, 40 ]
-# Complement:    [ 15, 280, 168, 9, 96 ]
-# -----------------------------------------------------------------
-#                                      G             Aut(D)        
-# -----------------------------------------------------------------
-# Structure                            A8            A8            
-# Rank                                 2             2             
-# 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     (S3xS3):2     (S3xS3):2     
-# Orbit structure of point-stabiliser  1^{1}14^{1}   1^{1}14^{1}   
-# Orbit structure of block-stabiliser  6^{1}9^{1}    6^{1}9^{1}    
-# Point-transitive                     true          true          
-# Block-transitive                     true          true          
-# Flag-transitive                      true          true          
-# Anti-flag-transitive                 true          true          
-# Flag-(semi)ragular                   false         false         
-# Point-primitive                      true          true          
-# Point-primitive type                 2             2             
-# Block-primitive                      false         false         
-# Block-primitive type                 0             0             
-# -----------------------------------------------------------------
-
-# Design: 91
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 280, 168, 9, 96 ]
-# Complement:    [ 15, 280, 112, 6, 40 ]
-# -----------------------------------------------------------------
-#                                      G             Aut(D)        
-# -----------------------------------------------------------------
-# Structure                            A8            A8            
-# Rank                                 2             2             
-# 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     (S3xS3):2     (S3xS3):2     
-# Orbit structure of point-stabiliser  1^{1}14^{1}   1^{1}14^{1}   
-# Orbit structure of block-stabiliser  6^{1}9^{1}    6^{1}9^{1}    
-# Point-transitive                     true          true          
-# Block-transitive                     true          true          
-# Flag-transitive                      true          true          
-# Anti-flag-transitive                 true          true          
-# Flag-(semi)ragular                   false         false         
-# Point-primitive                      true          true          
-# Point-primitive type                 2             2             
-# Block-primitive                      false         false         
-# Block-primitive type                 0             0             
-# -----------------------------------------------------------------
-
-# Design: 92
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 300, 140, 7, 60 ]
-# Complement:    [ 15, 300, 160, 8, 80 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:D12           5^2:D12           
-# Rank                                 4                 4                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     D20               D20               
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{2}10^{1}  1^{1}2^{2}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 93
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 300, 140, 7, 60 ]
-# Complement:    [ 15, 300, 160, 8, 80 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^2:12           5^2:12           
-# Rank                                 4                4                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     5:4              5:4              
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}4^{1}5^{2}  1^{1}4^{1}5^{2}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 94
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 300, 140, 7, 60 ]
-# Complement:    [ 15, 300, 160, 8, 80 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^2:12           5^2:(4xS3)       
-# Rank                                 4                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     5:4              2x(5:4)          
-# Block-stabiliser                     1                2                
-# Orbit structure of point-stabiliser  1^{1}4^{1}5^{2}  1^{1}4^{1}5^{2}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 95
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 300, 140, 7, 60 ]
-# Complement:    [ 15, 300, 160, 8, 80 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(3:4)         5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5:4               2x(5:4)           
-# Block-stabiliser                     1                 2                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 96
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 300, 140, 7, 60 ]
-# Complement:    [ 15, 300, 160, 8, 80 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(3:4)         5^2:(3:4)         
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5:4               5:4               
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 97
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 300, 160, 8, 80 ]
-# Complement:    [ 15, 300, 140, 7, 60 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(3:4)         5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5:4               2x(5:4)           
-# Block-stabiliser                     1                 2                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 98
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 300, 160, 8, 80 ]
-# Complement:    [ 15, 300, 140, 7, 60 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:D12           5^2:D12           
-# Rank                                 4                 4                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     D20               D20               
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{2}10^{1}  1^{1}2^{2}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 99
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 300, 160, 8, 80 ]
-# Complement:    [ 15, 300, 140, 7, 60 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(3:4)         5^2:(3:4)         
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5:4               5:4               
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 100
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 300, 160, 8, 80 ]
-# Complement:    [ 15, 300, 140, 7, 60 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(3:4)         5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5:4               2x(5:4)           
-# Block-stabiliser                     1                 2                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 101
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 300, 160, 8, 80 ]
-# Complement:    [ 15, 300, 140, 7, 60 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^2:12           5^2:12           
-# Rank                                 4                4                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     5:4              5:4              
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}4^{1}5^{2}  1^{1}4^{1}5^{2}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 102
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 315, 105, 5, 30 ]
-# Complement:    [ 15, 315, 210, 10, 135 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A8                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     2^3:PSL(3,2)          2^3:PSL(3,2)          
-# Block-stabiliser                     ((2^3):4):2           ((2^3):4):2           
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 103
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 315, 210, 10, 135 ]
-# Complement:    [ 15, 315, 105, 5, 30 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A8                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     2^3:PSL(3,2)          2^3:PSL(3,2)          
-# Block-stabiliser                     ((2^3):4):2           ((2^3):4):2           
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 104
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 360, 168, 7, 72 ]
-# Complement:    [ 15, 360, 192, 8, 96 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A6               A6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     S4               S4               
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 105
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 168, 7, 72 ]
-# Complement:    [ 15, 360, 192, 8, 96 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 106
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 168, 7, 72 ]
-# Complement:    [ 15, 360, 192, 8, 96 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A5xS3                 S5xS3                 
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     2xA4                  2xS4                  
-# Block-stabiliser                     1                     2                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}                1^{15}                
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 107
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 168, 7, 72 ]
-# Complement:    [ 15, 360, 192, 8, 96 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 108
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 360, 168, 7, 72 ]
-# Complement:    [ 15, 360, 192, 8, 96 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            S6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     2xS4             2xS4             
-# Block-stabiliser                     2                2                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{7}2^{4}       1^{7}2^{4}       
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 109
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 360, 168, 7, 72 ]
-# Complement:    [ 15, 360, 192, 8, 96 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     S4               2xS4             
-# Block-stabiliser                     1                2                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 110
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 168, 7, 72 ]
-# Complement:    [ 15, 360, 192, 8, 96 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 111
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 192, 8, 96 ]
-# Complement:    [ 15, 360, 168, 7, 72 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 112
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 360, 192, 8, 96 ]
-# Complement:    [ 15, 360, 168, 7, 72 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A6               A6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     S4               S4               
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 113
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 192, 8, 96 ]
-# Complement:    [ 15, 360, 168, 7, 72 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 114
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 360, 192, 8, 96 ]
-# Complement:    [ 15, 360, 168, 7, 72 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     S4               2xS4             
-# Block-stabiliser                     1                2                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 115
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 360, 192, 8, 96 ]
-# Complement:    [ 15, 360, 168, 7, 72 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            S6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     2xS4             2xS4             
-# Block-stabiliser                     2                2                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{7}2^{4}       1^{7}2^{4}       
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 116
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 192, 8, 96 ]
-# Complement:    [ 15, 360, 168, 7, 72 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            S5xS3                 S5xS3                 
-# Rank                                 4                     4                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     2xS4                  2xS4                  
-# Block-stabiliser                     2                     2                     
-# Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}2^{1}4^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{9}2^{3}            1^{9}2^{3}            
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 117
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 360, 192, 8, 96 ]
-# Complement:    [ 15, 360, 168, 7, 72 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            A5:S3             A5:S3             
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     S4                S4                
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 118
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 375, 175, 7, 75 ]
-# Complement:    [ 15, 375, 200, 8, 100 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^3:(2xA4)       5^3:(A4:4)       
-# Rank                                 5                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     2xD10xD10        5^2:((4x2):2)    
-# Block-stabiliser                     2^3              (4x2):2          
-# Orbit structure of point-stabiliser  1^{1}2^{2}5^{2}  1^{1}2^{2}5^{2}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}       1^{3}2^{6}       
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 119
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 375, 200, 8, 100 ]
-# Complement:    [ 15, 375, 175, 7, 75 ]
-# -----------------------------------------------------------------
-#                                      G            Aut(D)         
-# -----------------------------------------------------------------
-# Structure                            5x((5^2):3)  5^3:(A4:4)     
-# Rank                                 7            3              
-# 2-Homogeneous                        false        false          
-# Point-stabiliser                     5^2          5^2:((4x2):2)  
-# Block-stabiliser                     1            (4x2):2        
-# Orbit structure of point-stabiliser  1^{5}5^{2}   1^{5}5^{2}     
-# Orbit structure of block-stabiliser  1^{15}       1^{15}         
-# Point-transitive                     true         true           
-# Block-transitive                     true         true           
-# Flag-transitive                      false        false          
-# Anti-flag-transitive                 false        false          
-# Flag-(semi)ragular                   false        false          
-# Point-primitive                      false        false          
-# Point-primitive type                 0            0              
-# Block-primitive                      false        false          
-# Block-primitive type                 0            0              
-# -----------------------------------------------------------------
-
-# Design: 120
-# -------------------------------------------------------------------------------------------
-# Parameter set: [ 15, 405, 189, 7, 81 ]
-# Complement:    [ 15, 405, 216, 8, 108 ]
-# -------------------------------------------------------------------------------------------
-#                                      G                  Aut(D)                             
-# -------------------------------------------------------------------------------------------
-# Structure                            3^5:(((2^4):5):2)  3^5:(2x(2^4:S5))                   
-# Rank                                 4                  3                                  
-# 2-Homogeneous                        false              false                              
-# Point-stabiliser                     3^4:((2^4):2)      2x((((3^4:((2^3):(2^2))):3):2):2)  
-# Block-stabiliser                     3:((2^4):2)        (((((2^4):2):2):3):2)xS3           
-# Orbit structure of point-stabiliser  1^{1}2^{1}6^{2}    1^{1}2^{1}6^{2}                    
-# Orbit structure of block-stabiliser  2^{2}3^{1}4^{2}    2^{2}3^{1}4^{2}                    
-# Point-transitive                     true               true                               
-# Block-transitive                     true               true                               
-# Flag-transitive                      false              false                              
-# Anti-flag-transitive                 false              true                               
-# Flag-(semi)ragular                   false              false                              
-# Point-primitive                      false              false                              
-# Point-primitive type                 0                  0                                  
-# Block-primitive                      false              false                              
-# Block-primitive type                 0                  0                                  
-# -------------------------------------------------------------------------------------------
-
-# Design: 121
-# --------------------------------------------------------------------------------------
-# Parameter set: [ 15, 405, 216, 8, 108 ]
-# Complement:    [ 15, 405, 189, 7, 81 ]
-# --------------------------------------------------------------------------------------
-#                                      G                 Aut(D)                         
-# --------------------------------------------------------------------------------------
-# Structure                            3^5:(5:4)         3^5:(2x(2^4:S5))               
-# Rank                                 3                 3                              
-# 2-Homogeneous                        false             false                          
-# Point-stabiliser                     3x(3^3:4)         2x(((3^4:(((2^4):2):2)):3):2)  
-# Block-stabiliser                     3:4               (((((2^4):2):2):3):2)xS3       
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}               
-# Orbit structure of block-stabiliser  3^{1}4^{3}        3^{1}4^{3}                     
-# Point-transitive                     true              true                           
-# Block-transitive                     true              true                           
-# Flag-transitive                      false             true                           
-# Anti-flag-transitive                 false             false                          
-# Flag-(semi)ragular                   false             false                          
-# Point-primitive                      false             false                          
-# Point-primitive type                 0                 0                              
-# Block-primitive                      false             false                          
-# Block-primitive type                 0                 0                              
-# --------------------------------------------------------------------------------------
-
-# Design: 122
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 84, 3, 12 ]
-# Complement:    [ 15, 420, 336, 12, 264 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              2^3:PSL(3,2)          
-# Block-stabiliser                     S3                    2xS4                  
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      true                  true                  
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 123
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 112, 4, 24 ]
-# Complement:    [ 15, 420, 308, 11, 220 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              2^3:PSL(3,2)          
-# Block-stabiliser                     S3                    2xS4                  
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 124
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 140, 5, 40 ]
-# Complement:    [ 15, 420, 280, 10, 180 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A7                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              PSL(3,2)              
-# Block-stabiliser                     S3                    S3                    
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 125
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 168, 6, 60 ]
-# Complement:    [ 15, 420, 252, 9, 144 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A7                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              PSL(3,2)              
-# Block-stabiliser                     S3                    S3                    
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 126
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 168, 6, 60 ]
-# Complement:    [ 15, 420, 252, 9, 144 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              2^3:PSL(3,2)          
-# Block-stabiliser                     S3                    2xS4                  
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      true                  true                  
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   true                  false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 127
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 420, 196, 7, 84 ]
-# Complement:    [ 15, 420, 224, 8, 112 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     2xS4             2xS4             
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}6^{2}  1^{1}2^{1}6^{2}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 128
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 420, 224, 8, 112 ]
-# Complement:    [ 15, 420, 196, 7, 84 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     2xS4             2xS4             
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}6^{2}  1^{1}2^{1}6^{2}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 129
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 252, 9, 144 ]
-# Complement:    [ 15, 420, 168, 6, 60 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              2^3:PSL(3,2)          
-# Block-stabiliser                     S3                    2xS4                  
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 true                  true                  
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 130
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 252, 9, 144 ]
-# Complement:    [ 15, 420, 168, 6, 60 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A7                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              PSL(3,2)              
-# Block-stabiliser                     S3                    S3                    
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 131
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 280, 10, 180 ]
-# Complement:    [ 15, 420, 140, 5, 40 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A7                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              PSL(3,2)              
-# Block-stabiliser                     S3                    S3                    
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 132
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 420, 308, 11, 220 ]
-# Complement:    [ 15, 420, 112, 4, 24 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A7                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     PSL(3,2)              2^3:PSL(3,2)          
-# Block-stabiliser                     S3                    2xS4                  
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 133
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 420, 336, 12, 264 ]
-# Complement:    [ 15, 420, 84, 3, 12 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     2xS4             2xS4             
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}3^{2}8^{1}  1^{1}3^{2}8^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 true             true             
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 134
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 455, 91, 3, 13 ]
-# Complement:    [ 15, 455, 364, 12, 286 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A12:S3       S12xS3       
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  3^{1}12^{1}  3^{1}12^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 135
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 455, 364, 12, 286 ]
-# Complement:    [ 15, 455, 91, 3, 13 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A12:S3       S12xS3       
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  3^{1}12^{1}  3^{1}12^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 136
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 600, 280, 7, 120 ]
-# Complement:    [ 15, 600, 320, 8, 160 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(4xS3)        5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     2x(5:4)           2x(5:4)           
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 137
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 600, 320, 8, 160 ]
-# Complement:    [ 15, 600, 280, 7, 120 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^2:(4xS3)        5^2:(4xS3)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     2x(5:4)           2x(5:4)           
-# Block-stabiliser                     1                 1                 
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{15}            1^{15}            
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 138
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 630, 168, 4, 36 ]
-# Complement:    [ 15, 630, 462, 11, 330 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     4                4                
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      true             true             
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   true             true             
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 139
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 630, 294, 7, 126 ]
-# Complement:    [ 15, 630, 336, 8, 168 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     4                4                
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 140
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 630, 294, 7, 126 ]
-# Complement:    [ 15, 630, 336, 8, 168 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     2^2              2^2              
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{3}4^{2}  1^{1}2^{3}4^{2}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 141
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 630, 336, 8, 168 ]
-# Complement:    [ 15, 630, 294, 7, 126 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     2^2              2^2              
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{3}4^{2}  1^{1}2^{3}4^{2}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 142
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 630, 336, 8, 168 ]
-# Complement:    [ 15, 630, 294, 7, 126 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     4                4                
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 143
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 630, 462, 11, 330 ]
-# Complement:    [ 15, 630, 168, 4, 36 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A7               A7               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
-# Block-stabiliser                     4                4                
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 true             true             
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 144
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 720, 336, 7, 144 ]
-# Complement:    [ 15, 720, 384, 8, 192 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            S6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     2xS4             2xS4             
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 145
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 720, 384, 8, 192 ]
-# Complement:    [ 15, 720, 336, 7, 144 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            S6               S6               
-# Rank                                 3                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     2xS4             2xS4             
-# Block-stabiliser                     1                1                
-# Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
-# Orbit structure of block-stabiliser  1^{15}           1^{15}           
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 146
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 750, 350, 7, 150 ]
-# Complement:    [ 15, 750, 400, 8, 200 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^3:(2xS4)        5^3:(4xS4)        
-# Rank                                 4                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     2x(5^2:D8)        5^2:(4xD8)        
-# Block-stabiliser                     2^3               (4x2):2           
-# Orbit structure of point-stabiliser  1^{1}2^{2}10^{1}  1^{1}2^{2}10^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}        1^{3}2^{6}        
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 147
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 750, 350, 7, 150 ]
-# Complement:    [ 15, 750, 400, 8, 200 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            5^3:12           5^3:(4xS4)       
-# Rank                                 4                3                
-# 2-Homogeneous                        false            false            
-# Point-stabiliser                     (5^2):4          5^2:(4xD8)       
-# Block-stabiliser                     2                2xD8             
-# Orbit structure of point-stabiliser  1^{1}4^{1}5^{2}  1^{1}4^{1}5^{2}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}       1^{3}2^{6}       
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      false            false            
-# Point-primitive type                 0                0                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 148
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 750, 400, 8, 200 ]
-# Complement:    [ 15, 750, 350, 7, 150 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^3:S4            5^3:(4xS4)        
-# Rank                                 4                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5^2:D8            5^2:(4xD8)        
-# Block-stabiliser                     2^2               (4x2):2           
-# Orbit structure of point-stabiliser  1^{1}2^{2}10^{1}  1^{1}2^{2}10^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}        1^{3}2^{6}        
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 149
-# -------------------------------------------------------------------------
-# Parameter set: [ 15, 750, 400, 8, 200 ]
-# Complement:    [ 15, 750, 350, 7, 150 ]
-# -------------------------------------------------------------------------
-#                                      G                 Aut(D)            
-# -------------------------------------------------------------------------
-# Structure                            5^3:(4xS3)        5^3:(4xS4)        
-# Rank                                 3                 3                 
-# 2-Homogeneous                        false             false             
-# Point-stabiliser                     5^2:(4x2)         5^2:(4xD8)        
-# Block-stabiliser                     2^2               2xD8              
-# Orbit structure of point-stabiliser  1^{1}4^{1}10^{1}  1^{1}4^{1}10^{1}  
-# Orbit structure of block-stabiliser  1^{1}2^{3}4^{2}   1^{1}2^{3}4^{2}   
-# Point-transitive                     true              true              
-# Block-transitive                     true              true              
-# Flag-transitive                      false             false             
-# Anti-flag-transitive                 false             false             
-# Flag-(semi)ragular                   false             false             
-# Point-primitive                      false             false             
-# Point-primitive type                 0                 0                 
-# Block-primitive                      false             false             
-# Block-primitive type                 0                 0                 
-# -------------------------------------------------------------------------
-
-# Design: 150
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 840, 224, 4, 48 ]
-# Complement:    [ 15, 840, 616, 11, 440 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     S4               S4               
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}4^{2}6^{1}  1^{1}4^{2}6^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      true             true             
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 151
-# ----------------------------------------------------------------
-# Parameter set: [ 15, 840, 280, 5, 80 ]
-# Complement:    [ 15, 840, 560, 10, 360 ]
-# ----------------------------------------------------------------
-#                                      G            Aut(D)        
-# ----------------------------------------------------------------
-# Structure                            A7           A8            
-# Rank                                 2            2             
-# 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
-# Block-stabiliser                     3            S4            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
-# Orbit structure of block-stabiliser  1^{3}3^{4}   1^{3}3^{4}    
-# Point-transitive                     true         true          
-# Block-transitive                     true         true          
-# Flag-transitive                      false        false         
-# Anti-flag-transitive                 false        false         
-# Flag-(semi)ragular                   false        false         
-# Point-primitive                      true         true          
-# Point-primitive type                 2            2             
-# Block-primitive                      false        false         
-# Block-primitive type                 0            0             
-# ----------------------------------------------------------------
-
-# Design: 152
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 840, 392, 7, 168 ]
-# Complement:    [ 15, 840, 448, 8, 224 ]
-# -----------------------------------------------------------------
-#                                      G             Aut(D)        
-# -----------------------------------------------------------------
-# Structure                            A8            A8            
-# Rank                                 2             2             
-# 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     S4            S4            
-# Orbit structure of point-stabiliser  1^{1}14^{1}   1^{1}14^{1}   
-# Orbit structure of block-stabiliser  1^{3}6^{2}    1^{3}6^{2}    
-# Point-transitive                     true          true          
-# Block-transitive                     true          true          
-# Flag-transitive                      false         false         
-# Anti-flag-transitive                 false         false         
-# Flag-(semi)ragular                   false         false         
-# Point-primitive                      true          true          
-# Point-primitive type                 2             2             
-# Block-primitive                      false         false         
-# Block-primitive type                 0             0             
-# -----------------------------------------------------------------
-
-# Design: 153
-# -----------------------------------------------------------------
-# Parameter set: [ 15, 840, 448, 8, 224 ]
-# Complement:    [ 15, 840, 392, 7, 168 ]
-# -----------------------------------------------------------------
-#                                      G             Aut(D)        
-# -----------------------------------------------------------------
-# Structure                            A8            A8            
-# Rank                                 2             2             
-# 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     S4            S4            
-# Orbit structure of point-stabiliser  1^{1}14^{1}   1^{1}14^{1}   
-# Orbit structure of block-stabiliser  1^{3}6^{2}    1^{3}6^{2}    
-# Point-transitive                     true          true          
-# Block-transitive                     true          true          
-# Flag-transitive                      false         false         
-# Anti-flag-transitive                 false         false         
-# Flag-(semi)ragular                   false         false         
-# Point-primitive                      true          true          
-# Point-primitive type                 2             2             
-# Block-primitive                      false         false         
-# Block-primitive type                 0             0             
-# -----------------------------------------------------------------
-
-# Design: 154
-# ----------------------------------------------------------------
-# Parameter set: [ 15, 840, 560, 10, 360 ]
-# Complement:    [ 15, 840, 280, 5, 80 ]
-# ----------------------------------------------------------------
-#                                      G            Aut(D)        
-# ----------------------------------------------------------------
-# Structure                            A7           A8            
-# Rank                                 2            2             
-# 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
-# Block-stabiliser                     3            S4            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
-# Orbit structure of block-stabiliser  1^{3}3^{4}   1^{3}3^{4}    
-# Point-transitive                     true         true          
-# Block-transitive                     true         true          
-# Flag-transitive                      false        false         
-# Anti-flag-transitive                 false        false         
-# Flag-(semi)ragular                   false        false         
-# Point-primitive                      true         true          
-# Point-primitive type                 2            2             
-# Block-primitive                      false        false         
-# Block-primitive type                 0            0             
-# ----------------------------------------------------------------
-
-# Design: 155
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 840, 616, 11, 440 ]
-# Complement:    [ 15, 840, 224, 4, 48 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     S4               S4               
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}4^{2}6^{1}  1^{1}4^{2}6^{1}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 true             true             
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 156
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 420, 5, 120 ]
-# Complement:    [ 15, 1260, 840, 10, 540 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 157
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 504, 6, 180 ]
-# Complement:    [ 15, 1260, 756, 9, 432 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 158
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 588, 7, 252 ]
-# Complement:    [ 15, 1260, 672, 8, 336 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 159
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 588, 7, 252 ]
-# Complement:    [ 15, 1260, 672, 8, 336 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 160
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 588, 7, 252 ]
-# Complement:    [ 15, 1260, 672, 8, 336 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 161
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 672, 8, 336 ]
-# Complement:    [ 15, 1260, 588, 7, 252 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 162
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 672, 8, 336 ]
-# Complement:    [ 15, 1260, 588, 7, 252 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 163
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 672, 8, 336 ]
-# Complement:    [ 15, 1260, 588, 7, 252 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 164
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 756, 9, 432 ]
-# Complement:    [ 15, 1260, 504, 6, 180 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 165
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1260, 840, 10, 540 ]
-# Complement:    [ 15, 1260, 420, 5, 120 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A7           A7           
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
-# Block-stabiliser                     2            2            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  1^{3}2^{6}   1^{3}2^{6}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      false        false        
-# Anti-flag-transitive                 false        false        
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 166
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1365, 364, 4, 78 ]
-# Complement:    [ 15, 1365, 1001, 11, 715 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A11:S4       S11xS4       
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  4^{1}11^{1}  4^{1}11^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 167
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 1365, 1001, 11, 715 ]
-# Complement:    [ 15, 1365, 364, 4, 78 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            S15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     S14          S14          
-# Block-stabiliser                     S11xS4       S11xS4       
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  4^{1}11^{1}  4^{1}11^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 168
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 1500, 700, 7, 300 ]
-# Complement:    [ 15, 1500, 800, 8, 400 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            (A5xA5xA5):(2xA4)     (A5xA5xA5):(2xS4)     
-# Rank                                 4                     3                     
-# 2-Homogeneous                        false                 false                 
-# Point-stabiliser                     S5xS5xS4              ((A5xA5):D8)xS4       
-# Block-stabiliser                     2^2xS4xS3xS3          (3^2:((2^4):2))xS4    
-# Orbit structure of point-stabiliser  1^{1}4^{1}5^{2}       1^{1}4^{1}5^{2}       
-# Orbit structure of block-stabiliser  1^{1}2^{2}3^{2}4^{1}  1^{1}2^{2}3^{2}4^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      false                 false                 
-# Point-primitive type                 0                     0                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 169
-# ----------------------------------------------------------------------------
-# Parameter set: [ 15, 1500, 800, 8, 400 ]
-# Complement:    [ 15, 1500, 700, 7, 300 ]
-# ----------------------------------------------------------------------------
-#                                      G                  Aut(D)              
-# ----------------------------------------------------------------------------
-# Structure                            5^3:(2x((4^2):3))  (A5xA5xA5):(2xS4)   
-# Rank                                 4                  3                   
-# 2-Homogeneous                        false              false               
-# Point-stabiliser                     2x((5:4)x(5:4))    ((A5xA5):D8)xS4     
-# Block-stabiliser                     2^3                (3^2:((2^4):2))xS4  
-# Orbit structure of point-stabiliser  1^{1}4^{1}5^{2}    1^{1}4^{1}5^{2}     
-# Orbit structure of block-stabiliser  1^{3}2^{6}         1^{3}2^{6}          
-# Point-transitive                     true               true                
-# Block-transitive                     true               true                
-# Flag-transitive                      false              false               
-# Anti-flag-transitive                 false              false               
-# Flag-(semi)ragular                   false              false               
-# Point-primitive                      false              false               
-# Point-primitive type                 0                  0                   
-# Block-primitive                      false              false               
-# Block-primitive type                 0                  0                   
-# ----------------------------------------------------------------------------
-
-# Design: 170
-# ------------------------------------------------------------------------------------------
-# Parameter set: [ 15, 1620, 756, 7, 324 ]
-# Complement:    [ 15, 1620, 864, 8, 432 ]
-# ------------------------------------------------------------------------------------------
-#                                      G                 Aut(D)                             
-# ------------------------------------------------------------------------------------------
-# Structure                            3^5:(5:4)         3^5:(2x(2^4:S5))                   
-# Rank                                 3                 3                                  
-# 2-Homogeneous                        false             false                              
-# Point-stabiliser                     3x(3^3:4)         2x((((3^4:((2^3):(2^2))):3):2):2)  
-# Block-stabiliser                     3                 2^2xS3xS4                          
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}  1^{1}2^{1}12^{1}                   
-# Orbit structure of block-stabiliser  1^{12}3^{1}       1^{12}3^{1}                        
-# Point-transitive                     true              true                               
-# Block-transitive                     true              true                               
-# Flag-transitive                      false             false                              
-# Anti-flag-transitive                 false             false                              
-# Flag-(semi)ragular                   false             false                              
-# Point-primitive                      false             false                              
-# Point-primitive type                 0                 0                                  
-# Block-primitive                      false             false                              
-# Block-primitive type                 0                 0                                  
-# ------------------------------------------------------------------------------------------
-
-# Design: 171
-# ------------------------------------------------------------------------------------------
-# Parameter set: [ 15, 1620, 864, 8, 432 ]
-# Complement:    [ 15, 1620, 756, 7, 324 ]
-# ------------------------------------------------------------------------------------------
-#                                      G                     Aut(D)                         
-# ------------------------------------------------------------------------------------------
-# Structure                            3^4:(3:S5)            3^5:(2x(2^4:S5))               
-# Rank                                 3                     3                              
-# 2-Homogeneous                        false                 false                          
-# Point-stabiliser                     (3x((3^3:2^2):3)):2   2x(((3^4:(((2^4):2):2)):3):2)  
-# Block-stabiliser                     (3^2):2               2^2xS3xS4                      
-# Orbit structure of point-stabiliser  1^{1}2^{1}12^{1}      1^{1}2^{1}12^{1}               
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}           
-# Point-transitive                     true                  true                           
-# Block-transitive                     true                  true                           
-# Flag-transitive                      false                 false                          
-# Anti-flag-transitive                 false                 false                          
-# Flag-(semi)ragular                   false                 false                          
-# Point-primitive                      false                 false                          
-# Point-primitive type                 0                     0                              
-# Block-primitive                      false                 false                          
-# Block-primitive type                 0                     0                              
-# ------------------------------------------------------------------------------------------
-
-# Design: 172
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 1680, 560, 5, 160 ]
-# Complement:    [ 15, 1680, 1120, 10, 720 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A8                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     2^3:PSL(3,2)          2^3:PSL(3,2)          
-# Block-stabiliser                     D12                   D12                   
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 173
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 1680, 672, 6, 240 ]
-# Complement:    [ 15, 1680, 1008, 9, 576 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A8                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     2^3:PSL(3,2)          2^3:PSL(3,2)          
-# Block-stabiliser                     D12                   D12                   
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 174
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 1680, 1008, 9, 576 ]
-# Complement:    [ 15, 1680, 672, 6, 240 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A8                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     2^3:PSL(3,2)          2^3:PSL(3,2)          
-# Block-stabiliser                     D12                   D12                   
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 175
-# ---------------------------------------------------------------------------------
-# Parameter set: [ 15, 1680, 1120, 10, 720 ]
-# Complement:    [ 15, 1680, 560, 5, 160 ]
-# ---------------------------------------------------------------------------------
-#                                      G                     Aut(D)                
-# ---------------------------------------------------------------------------------
-# Structure                            A8                    A8                    
-# Rank                                 2                     2                     
-# 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     2^3:PSL(3,2)          2^3:PSL(3,2)          
-# Block-stabiliser                     D12                   D12                   
-# Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}           
-# Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}3^{2}6^{1}  
-# Point-transitive                     true                  true                  
-# Block-transitive                     true                  true                  
-# Flag-transitive                      false                 false                 
-# Anti-flag-transitive                 false                 false                 
-# Flag-(semi)ragular                   false                 false                 
-# Point-primitive                      true                  true                  
-# Point-primitive type                 2                     2                     
-# Block-primitive                      false                 false                 
-# Block-primitive type                 0                     0                     
-# ---------------------------------------------------------------------------------
-
-# Design: 176
-# ----------------------------------------------------------------
-# Parameter set: [ 15, 2520, 1008, 6, 360 ]
-# Complement:    [ 15, 2520, 1512, 9, 864 ]
-# ----------------------------------------------------------------
-#                                      G            Aut(D)        
-# ----------------------------------------------------------------
-# Structure                            A7           A8            
-# Rank                                 2            2             
-# 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
-# Block-stabiliser                     1            D8            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
-# Orbit structure of block-stabiliser  1^{15}       1^{15}        
-# Point-transitive                     true         true          
-# Block-transitive                     true         true          
-# Flag-transitive                      false        false         
-# Anti-flag-transitive                 false        false         
-# Flag-(semi)ragular                   false        false         
-# Point-primitive                      true         true          
-# Point-primitive type                 2            2             
-# Block-primitive                      false        false         
-# Block-primitive type                 0            0             
-# ----------------------------------------------------------------
-
-# Design: 177
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 2520, 1176, 7, 504 ]
-# Complement:    [ 15, 2520, 1344, 8, 672 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     D8               D8               
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 178
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 2520, 1176, 7, 504 ]
-# Complement:    [ 15, 2520, 1344, 8, 672 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     2^3              2^3              
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{3}2^{2}4^{2}  1^{3}2^{2}4^{2}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 179
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 2520, 1344, 8, 672 ]
-# Complement:    [ 15, 2520, 1176, 7, 504 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     D8               D8               
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 180
-# -----------------------------------------------------------------------
-# Parameter set: [ 15, 2520, 1344, 8, 672 ]
-# Complement:    [ 15, 2520, 1176, 7, 504 ]
-# -----------------------------------------------------------------------
-#                                      G                Aut(D)           
-# -----------------------------------------------------------------------
-# Structure                            A8               A8               
-# Rank                                 2                2                
-# 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^3:PSL(3,2)     2^3:PSL(3,2)     
-# Block-stabiliser                     2^3              2^3              
-# Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
-# Orbit structure of block-stabiliser  1^{3}2^{2}4^{2}  1^{3}2^{2}4^{2}  
-# Point-transitive                     true             true             
-# Block-transitive                     true             true             
-# Flag-transitive                      false            false            
-# Anti-flag-transitive                 false            false            
-# Flag-(semi)ragular                   false            false            
-# Point-primitive                      true             true             
-# Point-primitive type                 2                2                
-# Block-primitive                      false            false            
-# Block-primitive type                 0                0                
-# -----------------------------------------------------------------------
-
-# Design: 181
-# ----------------------------------------------------------------
-# Parameter set: [ 15, 2520, 1512, 9, 864 ]
-# Complement:    [ 15, 2520, 1008, 6, 360 ]
-# ----------------------------------------------------------------
-#                                      G            Aut(D)        
-# ----------------------------------------------------------------
-# Structure                            A7           A8            
-# Rank                                 2            2             
-# 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
-# Block-stabiliser                     1            D8            
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
-# Orbit structure of block-stabiliser  1^{15}       1^{15}        
-# Point-transitive                     true         true          
-# Block-transitive                     true         true          
-# Flag-transitive                      false        false         
-# Anti-flag-transitive                 false        false         
-# Flag-(semi)ragular                   false        false         
-# Point-primitive                      true         true          
-# Point-primitive type                 2            2             
-# Block-primitive                      false        false         
-# Block-primitive type                 0            0             
-# ----------------------------------------------------------------
-
-# Design: 182
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 3003, 1001, 5, 286 ]
-# Complement:    [ 15, 3003, 2002, 10, 1287 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A10:S5       S10xS5       
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 183
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 3003, 2002, 10, 1287 ]
-# Complement:    [ 15, 3003, 1001, 5, 286 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A10:S5       S10xS5       
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 184
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 5005, 2002, 6, 715 ]
-# Complement:    [ 15, 5005, 3003, 9, 1716 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A9:S6        S9xS6        
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  6^{1}9^{1}   6^{1}9^{1}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 185
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 5005, 3003, 9, 1716 ]
-# Complement:    [ 15, 5005, 2002, 6, 715 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A9:S6        S9xS6        
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  6^{1}9^{1}   6^{1}9^{1}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 186
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 6435, 3003, 7, 1287 ]
-# Complement:    [ 15, 6435, 3432, 8, 1716 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A8:S7        S8xS7        
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  7^{1}8^{1}   7^{1}8^{1}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# Design: 187
-# ---------------------------------------------------------------
-# Parameter set: [ 15, 6435, 3432, 8, 1716 ]
-# Complement:    [ 15, 6435, 3003, 7, 1287 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            A15          S15          
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     A14          S14          
-# Block-stabiliser                     A8:S7        S8xS7        
-# Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
-# Orbit structure of block-stabiliser  7^{1}8^{1}   7^{1}8^{1}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 true         true         
-# Flag-(semi)ragular                   false        false        
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      true         true         
-# Block-primitive type                 2            2            
-# ---------------------------------------------------------------
-
-# 4. Designs (up to isomorphism): 
-# -------------------------------
-
-lD_15 :=  [
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 6, 4,12, 8, 3)( 2, 9)( 5,14, 7)(10,11,13), ( 1, 2)( 3,10, 8,14)( 4,12,11,15)( 5, 7, 6, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15) ] ),
-  baseBlock := [ 1, 4, 5, 7, 8, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1,13,15,14,12, 3, 2)( 5, 7, 8, 9,10, 6,11), ( 1, 6, 3, 4)( 2, 9, 7,14)( 5,12,15,11)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 14, 7, 6 ],
-  autGroup := Group( [ ( 1, 9, 7,15,13, 6, 4,12,10, 3)( 2, 5, 8,11,14), ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 3, 4, 7, 9, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 16, 8, 8 ],
-  autGroup := Group( [ ( 1, 8, 9, 7,11, 3, 4, 2, 6,13,14,12)( 5,15,10), ( 1, 8, 6,13,11, 3)( 2,12, 7)( 4, 5, 9,10,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 2, 4, 5, 8, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 35, 7, 3, 1 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4,10, 7,11, 5, 8)( 6, 9)(12,14,13), ( 2, 5, 3,10)( 4,12,11,13)( 6, 7, 8, 9)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 12 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 1 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 35, 28, 12, 22 ],
-  autGroup := Group( [ ( 1, 4, 6,11,12, 3, 9)( 2, 8,15, 5, 7,10,13), ( 1,15, 8, 6, 9,14, 7)( 2,11,13,12, 4,10, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 22 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 42, 14, 5, 4 ],
-  autGroup := Group( [ ( 1, 4, 8,10, 3,13, 6)( 2,11, 5,14, 9,12,15), ( 1,11, 6,13,14)( 2, 4,12,15, 5)( 3,10, 8, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 11 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 42, 28, 10, 18 ],
-  autGroup := Group( [ ( 1, 2, 3,13,15,12,14)( 4, 5,11, 6,10, 8, 7), ( 1, 2, 5,11, 6,12, 8)( 4,13,14, 9, 7,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1,14, 6, 4,11, 9)( 2, 3, 7, 8,12,13)( 5,15,10), ( 1,14,10, 2)( 4, 5, 7,11)( 6, 9,15,12)( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 3, 2, 4,15,11,13,12,14,10, 6, 8, 7, 9, 5), ( 1, 9,11, 4, 6,14)( 2,13,12, 8, 7, 3)( 5,10,15), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 4,12, 5, 3)( 2,14,15,11, 8)( 6, 9,13,10, 7), ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 4, 7, 9, 10, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 6,11)( 2, 4,15, 8, 7, 9, 5,13,12,14,10, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 4, 9, 10, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2,10,13,11)( 3, 6, 4,15,14)( 5,12, 7, 8, 9), ( 1, 7, 8, 3, 6,11)( 2, 5, 9,15, 4,10)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 9,13,11,12, 4, 8, 6, 7,14, 3)( 5,15,10) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 3,14, 7, 6, 8, 4,12,11,13, 9, 2)( 5,10,15), ( 1, 4,10, 7)( 2,11,14, 5)( 6, 9,15,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 3, 10, 12, 13, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 5,12,13,11,15, 7, 8, 6,10, 2, 3)( 4,14, 9), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 10, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4, 7, 6)( 8, 9,11)(12,14,13), ( 1, 6, 8)( 3,10,13)( 5,12,11)( 7,15,14), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 9,11, 4, 6,14)( 2,13,12, 8, 7, 3)( 5,10,15), ( 2, 9, 5, 3)( 4,10,13, 7)( 6,11)( 8,12,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 8, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 5,14, 7, 2)( 3, 9, 8,15,13)( 4, 6,10,12,11), ( 2, 9, 4)( 3, 5,14)( 7,10,12)(11,15,13), ( 1, 6)( 3,14)( 4, 9)( 7,13)(10,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 5,12,13,11,15, 7, 8, 6,10, 2, 3)( 4,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 4, 6, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2,11,15,12, 6, 4, 3, 5,13, 8, 9, 7,10,14), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1,15, 2)( 4, 6, 5)( 8,10, 9)(12,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 7,13, 4,10)( 2, 3,14,15,11,12, 8, 9, 5, 6), ( 1,13, 4, 7)( 2, 6, 8, 9)( 3,14,12,11)( 5,15), ( 1, 3)( 4,15)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 4, 5, 6, 9, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 5, 6, 7, 9, 10, 11, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 5,12,13,11,15, 7, 8, 6,10, 2, 3)( 4,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 3, 4, 6, 7, 9, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 5, 7,12, 2, 8,15, 3,14, 9, 6,10,11,13, 4), ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 9,13,11,12, 4, 8, 6, 7,14, 3)( 5,15,10), ( 1, 4,13, 7,10)( 2,15,11, 9, 8,12, 5, 6,14, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7,10, 4)( 2, 5,14,11)( 6,12,15, 9), ( 1,13, 7,10)( 2, 5,11, 8)( 3,12,15, 6) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 3, 4, 6, 9, 10, 11, 12, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 8, 4, 2)( 3, 9,12, 6)( 5,10)( 7,11,13,14), ( 1,14,10, 2)( 4, 5, 7,11)( 6, 9,15,12)( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 6, 7, 8, 9, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 70, 28, 6, 10 ],
-  autGroup := Group( [ ( 1, 6, 4)( 2, 7,15)( 8,13,10)(11,12,14), ( 1,13, 5, 9)( 2,12,14, 4)( 3, 7)( 6, 8,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 12 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 10 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 70, 42, 9, 24 ],
-  autGroup := Group( [ ( 1, 2,14, 4)( 3, 5,10,12)( 7,13, 8,11)( 9,15), ( 1,10,11)( 2, 3, 9)( 4,14, 5)( 6,13,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 35, 7, 15 ],
-  autGroup := Group( [ ( 1, 2, 7, 5)( 4,11)( 6,12,15, 9)( 8,10,14,13), ( 1, 7,10, 4)( 2, 3)( 5,12,14, 9)( 6,11,15, 8) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 35,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 40, 8, 20 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 4, 6, 7, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 40,
-  tSubsetStructure := rec(
-  lambdas := [ 20 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 1, 2, 5, 3,12, 8, 9,15,11,14, 6, 4,10, 7,13), ( 1, 5, 7,14)( 3,12, 8,10)( 4, 9)( 6,15,11,13), ( 1, 5,12, 3)( 2, 9)( 6,15,13,11)( 7, 8,10,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 1, 4)( 2, 3, 5,12, 8,15)( 6,14)( 7,13,10)( 9,11), ( 2, 5)( 7,10)(12,15), ( 1, 2)( 4, 5)( 6,12)( 7,11)( 8,13)( 9,15)(10,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1,14,12,13,11, 9, 7, 8, 6, 4, 2, 3)( 5,15,10), ( 1, 7,13, 4)( 2, 3,14, 6)( 5,15)( 8, 9,11,12), ( 4,10)( 5,14)( 9,15), ( 2,14)( 4, 7)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1, 2, 3,15)( 4,11, 5, 8)( 6, 9, 7,10)(12,14), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 2, 4)( 3,11)( 5,13)( 6, 8)(10,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 28, 4, 6 ],
-  autGroup := Group( [ ( 2, 4, 9)( 5,14, 8)( 6,11,15)( 7,12,10), ( 1,13,15, 9, 7, 5,10,12, 4,14,11, 8, 3, 2, 6) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 15 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 42, 6, 15 ],
-  autGroup := Group( [ ( 2,14, 5, 6, 9,13,10)( 3, 4,12,15,11, 8, 7), ( 1,12,13, 2,14,15, 3)( 4,11, 7, 9,10, 8, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 63, 9, 36 ],
-  autGroup := Group( [ ( 1, 6, 9, 4,14,11, 3)( 2, 5,10, 7,13, 8,15), ( 1,15,13, 7)( 2, 5, 9,14)( 3, 8)( 6,12,10,11) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 63,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 77, 11, 55 ],
-  autGroup := Group( [ ( 1, 9, 5,11,13, 7, 3)( 2,12,10,15, 4, 6,14), ( 1,13, 4, 9, 3, 6, 2, 5,10,11, 8,15,14,12, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 77,
-  tSubsetStructure := rec(
-  lambdas := [ 55 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 91, 13, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 2, 9, 5, 3)( 4,10,13, 7)( 6,11)( 8,12,14,15), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 4, 5, 7, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1, 2, 3)( 4, 7, 6)( 8, 9,11)(12,14,13), ( 1, 3)( 4, 9)( 5,10)( 6,11)( 7, 8)(12,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 6,11)( 2, 4,15, 8, 7, 9, 5,13,12,14,10, 3), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 2,14, 5, 7)( 3, 4,13,10)( 6, 8)( 9,12,15,11), ( 1, 2,14, 7)( 3, 6, 9,12)( 4,13,11, 8)(10,15), ( 1,13)( 2, 4)( 6,12)( 7,11)( 8,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 13, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1,15, 7,12,10, 6,11)( 2, 5,14, 8, 4, 9, 3), ( 1, 3, 4,15)( 2, 6, 7, 5)( 8,11,14,13)(10,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 2,10,13,11)( 3, 6, 4,15,14)( 5,12, 7, 8, 9), ( 2,15)( 4,10)( 5, 9)( 6, 8)( 7,11)(12,14), ( 1, 2)( 3,15)( 4, 6)( 5, 7)( 8, 9)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 3,11,13, 6, 8)( 2, 7,12)( 4,15,14,10, 9, 5), ( 1, 4,10, 7)( 2,11,14, 5)( 6, 9,15,12), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 2, 7, 5,14)( 3,10,13, 4)( 6, 8)( 9,11,15,12), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 3, 5,12, 4)( 2, 8,11,15,14)( 6, 7,10,13, 9), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7,10, 4)( 2, 5,14,11)( 6,12,15, 9), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 4, 7, 8, 9, 3)( 2,11, 6)( 5,13,10,12,15,14), ( 1, 5, 4, 3,12)( 2,11,14, 8,15)( 6,10, 9, 7,13), ( 2,11)( 3, 4)( 5,12)( 7, 9)(10,13)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 12, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1,11,10, 7,15, 6,13)( 2, 8, 9, 4, 3, 5,14), ( 1,14, 6, 2, 8, 3)( 4,13,15, 7,11, 5)( 9,10,12) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1,14,15)( 2, 4, 9)( 3,11, 7)( 5, 6,12)( 8,13,10), ( 2,11)( 3, 4)( 5,12)( 7, 9)(10,13)(14,15), ( 1, 3)( 4, 9)( 5,10)( 6,11)( 7, 8)(12,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 6, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 8, 9, 7,11, 3, 4, 2, 6,13,14,12)( 5,15,10), ( 1, 6)( 2, 5)( 3, 4)( 7,15)( 8,14)( 9,13)(10,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 3, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13, 7,10)( 2, 5,11, 8)( 3,12,15, 6), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 9, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 7, 8,11, 6, 3)( 2,10,13, 9,15,12)( 4, 5,14), ( 1, 4, 3, 5)( 2, 7,15, 6)( 8, 9,11,10)(13,14), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 2, 4, 6, 8, 10, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 126, 42, 5, 12 ],
-  autGroup := Group( [ ( 1, 2, 6, 9, 8, 4)( 3,10,12,11,15,14)( 5,13, 7), ( 1, 3,11,15, 5,12)( 2,13, 7, 4,10, 6)( 8,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 10 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 126, 84, 10, 54 ],
-  autGroup := Group( [ ( 1, 6,12,14,10)( 2, 7, 9,15, 3)( 4, 8, 5,13,11), ( 1,10, 2,13,12, 8)( 3, 9, 5)( 4, 7,15,14,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 54 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15), ( 1, 4)( 5,14)( 6,15)( 7,13)( 8,11)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1,14, 4, 5)( 2,10)( 6, 9,15,12)( 7,11,13, 8), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 8, 6)( 2, 9, 7, 5,15, 4,14, 3,10,11,12,13), ( 1,13)( 2, 9,11,15, 5, 6,14,12, 8, 3)( 4,10) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 11, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 5,10,11, 4, 2,13, 8, 7,14)( 3, 6)( 9,15), ( 1,10, 7,13)( 2, 3, 5,12)( 6,14, 9, 8)(11,15), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1,13)( 2, 5)( 3, 6)( 4,10)( 8,14)( 9,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 3, 4, 7, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 5,13, 8,10,11, 7,14, 4, 2)( 6,15)( 9,12), ( 1, 5, 4, 2, 7,14,10,11,13, 8)( 3,12)( 6, 9), ( 1, 7)( 2,12,11, 3, 5, 9,14,15, 8, 6)(10,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 2, 8,14, 5,11)( 3,12, 6,15, 9), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 3, 4, 7, 8, 10, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 168, 56, 5, 16 ],
-  autGroup := Group( [ ( 1, 3,11,15, 9, 8, 2)( 4, 6,14, 5,12,13, 7), ( 1, 3, 7, 4, 5,15, 6)( 8,13,11,12,14,10, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 11 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 168, 112, 10, 72 ],
-  autGroup := Group( [ ( 1, 2, 3,12,14,15,13)( 4, 6, 8, 5, 9,10,11), ( 1, 5, 9, 7,13,11, 3)( 2, 4,12,14,10, 6, 8) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 112,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 5,11)( 2, 8,12)( 4,15,14)( 7,13, 9), ( 1,15, 4,13,10, 2)( 3, 5, 9)( 6, 8, 7,12,14,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1,10,14, 8,15,13)( 2, 3, 4,11, 9, 7)( 5,12, 6), ( 1,11, 9,15,12)( 2, 5,13, 6, 3)( 4,10,14, 8, 7), ( 2, 3)( 4,11)( 5,10)( 6, 8)( 7, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 10, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1, 6, 8)( 3,10,13)( 5,12,11)( 7,15,14), ( 1, 6, 8)( 2, 5,11)( 3, 4,10)( 7, 9,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 2,11,15,12, 6, 4, 3, 5,13, 8, 9, 7,10,14), ( 1, 5,13)( 3,11, 7)( 6,10,14)( 8,15,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,15,14,10, 9, 5)( 6, 8, 7)(11,13,12), ( 1, 6,11)( 2, 4, 3)( 5,10,15)( 7, 9, 8)(12,14,13), ( 1, 4)( 6, 9)(11,14), ( 1,13)( 3, 6)( 8,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 5, 7,12, 2, 8,15, 3,14, 9, 6,10,11,13, 4), ( 1,11,13, 8, 3,12)( 2, 5, 9,10, 4,15)( 6, 7,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3, 5,12, 4)( 2, 8,11,15,14)( 6, 7,10,13, 9), ( 1, 8, 6)( 2, 5,12)( 4,10,13)( 9,15,14), ( 1, 2)( 4, 8)( 5,10)( 6, 9)( 7,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1,15,12, 7, 9, 6, 5,13,11, 2, 8,10,14, 3, 4), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 3)( 2,15)( 4, 5)( 6, 7)( 8,11)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 9,15,13, 7, 6, 2, 5,14,11, 8, 4,10,12, 3), ( 1, 3,13)( 2,10, 9,15, 4, 5)( 6,11,14, 8, 7,12), ( 1, 3)( 4, 9)( 5,10)( 6,11)( 7, 8)(12,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 3,12,10, 4, 8,11,14, 5, 2, 6, 7,13,15, 9), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 3, 6, 7, 8,11)( 2, 9, 4)( 5,13,10,14,15,12), ( 1, 5, 6,10, 8,15)( 2, 9, 4)( 3,13, 7,14,11,12), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15), ( 2, 5)( 7,10)(12,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 4, 6, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1,13,15, 7, 4)( 2, 8,12,10, 3)( 5,11, 9, 6,14), ( 1, 8, 6)( 3,13,10)( 5,11,12)( 7,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 12, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 4, 9, 8, 7, 3)( 2,14,15,11,13,10)( 5, 6,12), ( 2, 5)( 3, 4)(10,13)(11,12), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 4,12, 6, 2,13)( 3,10, 7, 5,11,15)( 8, 9,14), ( 1,12, 6,13, 8,14)( 2, 5, 4,10, 9,15)( 3,11, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1,14,11, 4)( 2, 6,13, 3)( 7, 9, 8,12)(10,15), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 56, 4, 12 ],
-  autGroup := Group( [ ( 1, 4, 7, 3)( 2,15, 5, 6)( 8, 9)(10,12,11,13), ( 1, 6,14,10,15, 3)( 2, 4, 9)( 5,12,13, 8, 7,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 84, 6, 30 ],
-  autGroup := Group( [ ( 1, 4)( 2,12, 7, 9)( 3,14,13, 5)( 6,11, 8,15), ( 1,11,10, 4,15, 5,14)( 2,13, 7, 6, 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8, 12 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 126, 9, 72 ],
-  autGroup := Group( [ ( 1, 4,12, 3,14, 9,11)( 2, 8,13, 5,10, 7,15), ( 1,15)( 2, 6)( 3, 7)( 4, 5)( 8,13)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 126,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 154, 11, 110 ],
-  autGroup := Group( [ ( 1,10, 8,12)( 2, 4,13,11)( 3,14, 5, 7)( 6, 9), ( 1,14,13,15,12, 2, 3)( 4,10,11, 9, 6, 5, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 154,
-  tSubsetStructure := rec(
-  lambdas := [ 110 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 280, 112, 6, 40 ],
-  autGroup := Group( [ ( 1, 5, 3,11, 9, 7,13)( 2, 8, 4,15, 6,14,12), ( 1,10, 2,14, 9, 6, 5)( 3, 8,15,12,11, 4, 7) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8, 12 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 112,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 280, 168, 9, 96 ],
-  autGroup := Group( [ ( 1, 2,12)( 3, 9,15, 7,13, 4)( 5, 6, 8)(10,14), ( 1, 4, 6, 3)( 7,15)( 9,11,14,12)(10,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 4)( 5,14)( 6,15)( 7,13)( 8,11)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 5, 9)( 2, 3, 4,11, 6,10, 8,15,13,14,12, 7), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 7,10, 4)( 2, 8,11, 5)( 6,12,15, 9), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1,15)( 3, 4)( 6, 7)( 9,10)(12,13), ( 1,15, 8,10, 3,14, 7,12, 2,13, 9,11)( 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 5,10, 8)( 2, 4,11, 7)( 6, 9,15,12)(13,14), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 6, 8, 3)( 5,12)( 9,14,15,11), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 7,13, 4,10)( 3,12, 6,15, 9), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 7)( 2, 5)( 3,12)( 6, 9)( 8,14)(10,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 6, 7, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 3)( 2, 8, 5,14)( 4, 9,13,12)( 6, 7,15,10), ( 1, 9, 7,12)( 2, 5,14,11)( 3, 4)( 6,13,15,10), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 3)( 4, 6)( 7, 9)(10,12)(13,15), ( 1, 8, 6)( 2, 9, 7, 5,15, 4,14, 3,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1,12, 8, 7, 9, 2,10,15,14, 4, 3, 5)( 6,11,13), ( 1, 7)( 2, 5)( 3,12)( 6, 9)( 8,14)(10,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 6, 7, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 315, 105, 5, 30 ],
-  autGroup := Group( [ ( 1, 4,14, 7, 8,11,13)( 3,10, 5, 6,15,12, 9), ( 1,11,15,13)( 2, 3, 5, 4)( 6,12, 7,10)( 9,14) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 105,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 315, 210, 10, 135 ],
-  autGroup := Group( [ ( 1, 4, 2, 3, 6,15)( 5, 7)( 8,11,12)( 9,14,10), ( 1,14, 6,13,15, 7, 4, 2, 8,12, 9, 5,11,10, 3) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 210,
-  tSubsetStructure := rec(
-  lambdas := [ 135 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 2,14, 5, 7)( 3, 4,13, 9,12)( 6,11,10,15, 8), ( 1,10,14,12, 6)( 2, 3,15, 9, 7)( 4,11,13, 5, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 2,11,15,12, 6, 4, 3, 5,13, 8, 9, 7,10,14), ( 2, 3)( 4,11)( 5,10)( 6, 8)( 7, 9)(12,13), ( 2, 4)( 3,11)( 5,13)( 6, 8)(10,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15), ( 1, 9,13, 6, 4, 3)( 7,12)( 8,11,14)(10,15), ( 1, 6,11)( 2, 4, 3)( 5,10,15)( 7, 9, 8)(12,14,13), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1, 6)( 2,10,12, 3)( 4, 5,13,11)( 7, 9,15,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 2,15, 7,11)( 3, 6,13, 8)( 4,10)( 5,12,14, 9), ( 1,13,14, 8,15,10)( 2,11, 6)( 3,12, 9, 7, 5, 4) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 11, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 9,13, 8, 2)( 3,14,15, 6, 4)( 5,12, 7,11,10), ( 1, 3)( 2,14,15,12)( 4, 9, 8, 7)( 5, 6,11,10), ( 2, 5)( 3, 4)(10,13)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 5,12, 9,11, 6,10,13, 2, 3, 8,15,14, 4, 7), ( 1,11, 9, 6, 7, 2)( 3, 4, 8)( 5,13,15,14,10,12) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1, 5,12, 3)( 2, 9)( 6,15,13,11)( 7, 8,10,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 3, 5,10)( 4,13, 9,15)( 6,11)( 7,12,14, 8), ( 1,10,14, 9, 3)( 2, 7, 6,15,12)( 4,11, 8, 5,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 6, 2, 4)( 3, 5,15, 7)( 8,11, 9,10)(12,13), ( 1,10, 5,12, 7, 8)( 3,14)( 4,15, 6)( 9,13,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 4,10)( 2, 5,13, 9,15, 3)( 6,12,14, 8, 7,11), ( 2, 5)( 3, 4)(10,13)(11,12), ( 1, 7)( 2, 5)( 3, 4)( 6,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 3, 4, 2, 6,10, 8, 9, 7,11,15,13,14,12), ( 2, 5)( 7,10)(12,15), ( 1, 6)( 3, 4)( 7,12)( 8,14)( 9,13)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 9, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 4, 8,10, 2)( 3,13, 7,12,11,14)( 6,15, 9), ( 1,13,10,11)( 3, 8,14, 5)( 4, 9)( 6,12,15, 7), ( 1,13)( 2, 4)( 6,12)( 7,11)( 8,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 175, 7, 75 ],
-  autGroup := Group( [ ( 1, 8, 4,14, 7, 5,10,11,13, 2)( 3,15, 6, 9), ( 1, 8, 3)( 2,12,10)( 4,11, 6)( 5,15,13)( 7,14, 9) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 175,
-  tSubsetStructure := rec(
-  lambdas := [ 75 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 200, 8, 100 ],
-  autGroup := Group( [ ( 1,11,10,14)( 2, 7, 8, 4)( 3, 6,12, 9)( 5,13), ( 1,14, 3)( 2,15,13)( 4,11, 6)( 5,12,10)( 7, 8, 9) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 200,
-  tSubsetStructure := rec(
-  lambdas := [ 100 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 3,11, 9,13, 6,14, 8)( 2, 5)( 7,15)(10,12), ( 1, 3, 5, 4, 2, 6, 8,15,14,12,11,13,10, 9, 7), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 9,11,14, 6, 4)( 2, 3)( 7, 8,12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 8)( 2, 4,10, 7, 9,15,12,14, 5)( 3, 6)(11,13), ( 1, 7, 3, 4)( 2, 8,14,11,12,13, 9, 6), ( 4, 9,14)( 5,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 5,10,15) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 84, 3, 12 ],
-  autGroup := Group( [ ( 1,13, 3)( 2,11, 8,14, 5,10)( 4,15, 7, 6,12, 9), ( 1,15, 6, 4,10, 5,12, 7, 2, 8,11, 3,14, 9,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 112, 4, 24 ],
-  autGroup := Group( [ ( 1, 3, 2,11, 5, 9, 4,15,10,12, 7, 8,13,14, 6), ( 1, 5,14, 6, 9,10,13)( 3,11, 4, 7,15,12, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 112,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 140, 5, 40 ],
-  autGroup := Group( [ ( 1, 2, 3, 5,15, 4, 6)( 8,12,14, 9,10,11,13), ( 1,12,13, 7, 3, 4)( 2,14, 5,11, 8,10)( 6, 9,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 168, 6, 60 ],
-  autGroup := Group( [ ( 1, 3, 6, 8, 4,13,10)( 2, 5,14,12, 9, 7,11), ( 1,13, 2,10, 9,14, 5)( 3,15, 7,12, 8, 4,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 168, 6, 60 ],
-  autGroup := Group( [ ( 1, 5,11)( 3,14)( 4, 7,15, 9,10,13)( 6,12, 8), ( 1, 9,14,13,15,11)( 2, 4, 5, 7, 8,12)( 3, 6,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 196, 7, 84 ],
-  autGroup := Group( [ ( 1, 2, 7,12,10, 4, 9)( 3, 5,11, 6,14,13, 8), ( 2, 3,15)( 5, 7, 6)( 8,11, 9)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 8 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 196,
-  tSubsetStructure := rec(
-  lambdas := [ 84 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 224, 8, 112 ],
-  autGroup := Group( [ ( 1,13, 7,10, 3, 5, 2, 6, 9, 8,11,15,14,12, 4), ( 1,14,11, 4)( 2, 7, 8,13)( 6,12)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 224,
-  tSubsetStructure := rec(
-  lambdas := [ 112 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 252, 9, 144 ],
-  autGroup := Group( [ ( 1, 7, 5, 6, 2, 3, 4)( 8,10, 9,13,12,11,14), ( 1, 9, 7)( 2, 6, 3, 4,14,13)( 5,12,15,11,10, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 252,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 252, 9, 144 ],
-  autGroup := Group( [ ( 1, 2,13, 4, 8,14,11)( 3, 9,10, 5,12,15, 6), ( 1, 4,11, 2, 3)( 5, 9, 7,12, 8)( 6,14,13,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 252,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 280, 10, 180 ],
-  autGroup := Group( [ ( 1,11,15,13,12,10, 6)( 2,14, 9, 3, 8, 5, 4), ( 1,13, 9, 7, 5, 3,11)( 2, 6, 8,10,12, 4,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 280,
-  tSubsetStructure := rec(
-  lambdas := [ 180 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 308, 11, 220 ],
-  autGroup := Group( [ ( 1, 4)( 3,13, 6, 8)( 5,14,15,11)( 9,12), ( 1,14, 9,11,15, 8,13, 4, 7,10, 6,12, 2, 3, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 308,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 336, 12, 264 ],
-  autGroup := Group( [ ( 2, 4, 9)( 3,15, 5,13,14,11)( 6, 8)( 7,12,10), ( 1, 9,11,12, 5,10)( 2, 3,14)( 4, 7,13, 8, 6,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 264 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 455, 91, 3, 13 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 13 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 455, 364, 12, 286 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 364,
-  tSubsetStructure := rec(
-  lambdas := [ 286 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 600, 280, 7, 120 ],
-  autGroup := Group( [ ( 1, 5,10, 8)( 2, 4,11, 7)( 6, 9,15,12)(13,14), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 280,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 600, 320, 8, 160 ],
-  autGroup := Group( [ ( 1, 4,13,10)( 2, 9, 8,12)( 3, 5)( 6,14,15,11), ( 1, 7, 4,13)( 2, 3)( 5, 9,14,12)( 6, 8,15,11), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 320,
-  tSubsetStructure := rec(
-  lambdas := [ 160 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 168, 4, 36 ],
-  autGroup := Group( [ ( 1, 8, 3, 7, 2)( 4,11,10,12, 6)( 5,13,15,14, 9), ( 1,14, 3,11, 9,12, 6)( 2, 7,13,10, 5, 8,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 294, 7, 126 ],
-  autGroup := Group( [ ( 1, 2,10, 5)( 4, 8)( 6, 9,13,14)( 7,15,11,12), ( 1,10, 6,12)( 2, 4, 3, 5)( 7,13,15,11)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 294,
-  tSubsetStructure := rec(
-  lambdas := [ 126 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 294, 7, 126 ],
-  autGroup := Group( [ ( 1, 5, 3, 2,10)( 4,11, 9,14, 7)( 6,12,15,13, 8), ( 1, 6,15,11,10, 7,13)( 2, 5, 3, 8, 9, 4,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 294,
-  tSubsetStructure := rec(
-  lambdas := [ 126 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 336, 8, 168 ],
-  autGroup := Group( [ ( 1, 8, 9, 2,13)( 3, 6,14, 4,15)( 5,11,12,10, 7), ( 1,11,15,14,10, 5, 4)( 2,12, 8, 7, 6, 3, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 336, 8, 168 ],
-  autGroup := Group( [ ( 1, 3, 7, 5)( 2, 8, 6,10)( 4,14,15,12)(11,13), ( 1, 5,10, 6,13,14, 9)( 3, 4,12, 8, 7,11,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 462, 11, 330 ],
-  autGroup := Group( [ ( 1, 2, 8,11)( 3,13,15, 7)( 4, 9,14,10)( 5,12), ( 1,12)( 3,15,14,13)( 4, 5, 7,11)( 6, 9, 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 462,
-  tSubsetStructure := rec(
-  lambdas := [ 330 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 720, 336, 7, 144 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 9)( 4,13,11, 5, 8)( 7,12,14,10,15), ( 1,10, 5, 3,11, 6)( 2, 8, 4,15, 9, 7)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 720, 384, 8, 192 ],
-  autGroup := Group( [ ( 1, 5, 8, 3, 6, 9)( 2, 4,10,15, 7,11)(12,14,13), ( 1, 6)( 2, 3)( 4, 5)( 7,15)(10,12)(11,13), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 384,
-  tSubsetStructure := rec(
-  lambdas := [ 192 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 2,13,11)( 3, 9,12, 6)( 4, 8,10, 5)( 7,14), ( 1, 3,11)( 2,13,12,14, 7,15, 5, 4, 9, 8,10, 6) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1,12, 2, 7,15, 8, 4, 6, 5,13, 3,14)( 9,11,10), ( 1,14)( 2, 4)( 5, 7)( 8,10)(11,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 3, 2, 4, 9, 5,13,12,14,10, 6,11)( 7,15, 8), ( 1, 5,10, 8)( 2, 4,11, 7)( 3, 9, 6,15)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 4, 5,13,14)( 7, 8,10,11), ( 1, 3, 2, 4, 6, 5, 7, 9, 8,10,12,11,13,15,14) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1,11)( 2,10)( 4, 8)( 5, 7)(13,14), ( 1,14, 6, 4, 8, 3,10,11,12, 7, 2,15)( 5, 9,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 224, 4, 48 ],
-  autGroup := Group( [ ( 1,11,14, 8, 7, 4,13)( 3, 5,10, 9,15,12, 6), ( 1,12, 2)( 3,15,13)( 4, 6,10, 5, 7,11)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 224,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 280, 5, 80 ],
-  autGroup := Group( [ ( 1,10, 5)( 2, 6,13)( 3, 7,12)( 4,15,11), ( 1,10,15, 7)( 2,14)( 4, 5, 8, 9)( 6,12,11,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 280,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 392, 7, 168 ],
-  autGroup := Group( [ ( 2,15,11, 3,10, 9, 8)( 4, 7, 6,12,14, 5,13), ( 1,12, 8, 3,14,10)( 2,11, 4)( 5, 7)( 6,15, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 392,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 448, 8, 224 ],
-  autGroup := Group( [ ( 1, 4, 6,11, 8,15)( 2,12, 7,14,10,13)( 3, 9, 5), ( 1,11, 7, 5, 3,13, 9)( 2, 8, 4, 6,15,14,10) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 448,
-  tSubsetStructure := rec(
-  lambdas := [ 224 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 560, 10, 360 ],
-  autGroup := Group( [ ( 1,12,11, 4,10, 9,13, 6, 3, 5, 7,14, 2, 8,15), ( 1,15, 6,13, 8, 2)( 3, 7,11)( 4,10, 5,12,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 560,
-  tSubsetStructure := rec(
-  lambdas := [ 360 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 616, 11, 440 ],
-  autGroup := Group( [ ( 1,11,13, 4,14, 8)( 2, 7)( 3,15,12)( 5, 9, 6), ( 1,14, 9,11, 6,12, 4)( 2, 5, 7,10,15, 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 616,
-  tSubsetStructure := rec(
-  lambdas := [ 440 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 420, 5, 120 ],
-  autGroup := Group( [ ( 1, 9, 4)( 2,10, 7)( 3,14,11)( 8,15,13), ( 1,13,14, 5, 2, 6, 9)( 3,12, 4, 8,11,15, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 420,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 504, 6, 180 ],
-  autGroup := Group( [ ( 1, 6,11,14,13)( 2,10,12, 3, 8)( 4, 5, 7, 9,15), ( 1,10, 6,11, 8,14)( 2,12, 9,15, 4, 3)( 5,13, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 504,
-  tSubsetStructure := rec(
-  lambdas := [ 180 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 588, 7, 252 ],
-  autGroup := Group( [ ( 1, 8, 7, 6,15,14, 9)( 2,11, 4, 5, 3,13,10), ( 1,14, 9, 5, 7, 4)( 2,11, 6)( 3,13,12,10,15, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 588,
-  tSubsetStructure := rec(
-  lambdas := [ 252 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 588, 7, 252 ],
-  autGroup := Group( [ ( 1,13,15)( 2,14, 3)( 5, 8, 9)( 6,11,10), ( 1,14,11, 3, 4, 6,12)( 2,15,10, 7, 8,13, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 588,
-  tSubsetStructure := rec(
-  lambdas := [ 252 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 588, 7, 252 ],
-  autGroup := Group( [ ( 1, 5, 3,12,13, 6)( 2, 7,10)( 4, 8,11, 9,15,14), ( 1,13, 9, 2, 8)( 3,11, 4, 5, 6)( 7,15,14,12,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 588,
-  tSubsetStructure := rec(
-  lambdas := [ 252 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 672, 8, 336 ],
-  autGroup := Group( [ ( 2,15)( 4, 8)( 5,11)( 6,10)( 7, 9)(12,14), ( 1,15, 7,11,13, 6,12)( 2,14, 8, 3, 9, 4, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 7, 8, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 672, 8, 336 ],
-  autGroup := Group( [ ( 1, 2,13, 3,14,12,15)( 5, 7,11,10, 9, 6, 8), ( 1,15, 8,14, 7, 9, 6)( 2, 3,11,13, 4,10, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 672, 8, 336 ],
-  autGroup := Group( [ ( 1, 7,10, 4,12, 9, 2)( 3, 6,13,14, 8, 5,11), ( 1,13, 6,15,10,11,12)( 2, 3, 4, 9, 5,14, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 756, 9, 432 ],
-  autGroup := Group( [ ( 2,14, 9,13, 6, 5,10)( 3, 8,11, 4,12,15, 7), ( 1, 9, 3)( 2,15, 8)( 4,12, 6)( 5,13, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 840, 10, 540 ],
-  autGroup := Group( [ ( 1, 2, 5, 3, 7, 6, 4)( 8, 9,11,14,13,10,12), ( 1, 9)( 2, 8)( 3,11)( 4, 6)(10,15)(12,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 840,
-  tSubsetStructure := rec(
-  lambdas := [ 540 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1365, 364, 4, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 364,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1365, 1001, 11, 715 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1001,
-  tSubsetStructure := rec(
-  lambdas := [ 715 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 5, 7, 8, 4,11,13,14,10, 2)( 9,15), ( 2, 3)( 5,12,14, 9,11, 6)( 8,15), ( 2, 8,14)( 4, 7)( 6,12) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), (6,9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 8,15, 7,14,12,10, 5, 3, 4,11, 9,13, 2, 6), ( 2, 6, 5, 3, 8, 9)(11,15,14,12), ( 3, 6)(10,13)(11,14), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1,13, 4, 7)( 2,14, 8,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 7, 9, 8, 6, 2, 4, 3)( 5,15,10)(11,12,14,13), ( 3, 8,13)( 5,15), ( 1, 2, 3)( 4,10, 9,15,14, 5)( 6, 7, 8)(11,12,13), ( 1, 2, 6, 7)( 3, 4)( 5,15)( 8, 9)(11,12)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2,11,12, 6, 7)( 3, 4, 5)( 8,14,10,13, 9,15), ( 1,11)( 2, 3, 7, 8)( 4, 5)( 9,15,14,10)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 560, 5, 160 ],
-  autGroup := Group( [ ( 1,12, 6, 3, 2, 5,10,14, 8,15,11, 9, 7, 4,13), ( 1,15, 2, 8,14,13, 5, 9,12, 7, 3,10, 4,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 560,
-  tSubsetStructure := rec(
-  lambdas := [ 160 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 672, 6, 240 ],
-  autGroup := Group( [ ( 1, 5, 4, 6, 9)( 2, 8, 3,10,12)( 7,11,14,13,15), ( 1,13, 5,14,11,12)( 2, 3, 7, 4,10, 8)( 6,15, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 240 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 1008, 9, 576 ],
-  autGroup := Group( [ ( 1, 5,15, 2,12, 6, 9, 4, 7,14, 8, 3,11,10,13), ( 1,14, 7, 4,10,11, 3, 8,13, 9, 5, 2,15, 6,12) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1008,
-  tSubsetStructure := rec(
-  lambdas := [ 576 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 1120, 10, 720 ],
-  autGroup := Group( [ ( 1, 2, 5, 4,15, 6, 3)( 8,14,11, 9,10,13,12), ( 1, 6, 5,10, 7)( 2, 9, 8,12,15)( 3,13, 4,14,11) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1120,
-  tSubsetStructure := rec(
-  lambdas := [ 720 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1008, 6, 360 ],
-  autGroup := Group( [ ( 2,12)( 3, 5,10,13,11, 4)( 6, 7,14)( 8, 9,15), ( 1, 5,15,13, 3, 9, 6, 4, 8,14, 7,12,11,10, 2) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1008,
-  tSubsetStructure := rec(
-  lambdas := [ 360 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1176, 7, 504 ],
-  autGroup := Group( [ ( 1, 2, 8,15,12, 5, 7, 3, 6,13,11,10, 4, 9,14), ( 1, 4,11,12, 6,14, 3)( 2,13,10,15, 8, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1176,
-  tSubsetStructure := rec(
-  lambdas := [ 504 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1176, 7, 504 ],
-  autGroup := Group( [ ( 1, 9,11, 2, 3,15,10)( 4, 7,13, 6,14,12, 5), ( 1,10, 9, 4,12, 2, 7)( 3,13, 8,14, 5, 6,11) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1176,
-  tSubsetStructure := rec(
-  lambdas := [ 504 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1344, 8, 672 ],
-  autGroup := Group( [ ( 1, 7, 8, 3, 9,15, 4, 5, 6,11,14,12, 2,10,13), ( 1,13)( 4,10, 8, 6)( 5,11, 9, 7)(12,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1344,
-  tSubsetStructure := rec(
-  lambdas := [ 672 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1344, 8, 672 ],
-  autGroup := Group( [ ( 1, 8, 3)( 2,11,15)( 4,13, 6)( 5, 7,14), ( 1, 9,15,11,12)( 2, 7, 6, 4, 8)( 3, 5,10,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 7, 8, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1344,
-  tSubsetStructure := rec(
-  lambdas := [ 672 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1512, 9, 864 ],
-  autGroup := Group( [ ( 1,13, 8, 4)( 2, 9, 7, 5)( 3,10)(11,15,14,12), ( 1,14,13, 7,11, 2, 4)( 3, 6, 9,10,15,12, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1512,
-  tSubsetStructure := rec(
-  lambdas := [ 864 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 3003, 1001, 5, 286 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1001,
-  tSubsetStructure := rec(
-  lambdas := [ 286 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 3003, 2002, 10, 1287 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2002,
-  tSubsetStructure := rec(
-  lambdas := [ 1287 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 5005, 2002, 6, 715 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2002,
-  tSubsetStructure := rec(
-  lambdas := [ 715 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 5005, 3003, 9, 1716 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3003,
-  tSubsetStructure := rec(
-  lambdas := [ 1716 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 6435, 3003, 7, 1287 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3003,
-  tSubsetStructure := rec(
-  lambdas := [ 1287 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 6435, 3432, 8, 1716 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3432,
-  tSubsetStructure := rec(
-  lambdas := [ 1716 ],
-  t := 2 ),
-  v:= 15)
-]; 
-for D in lD_15 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
-
-# 5. Designs (all): 
-# -----------------
-
-lD_15_all :=  [
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 6, 4,12, 8, 3)( 2, 9)( 5,14, 7)(10,11,13), ( 1, 2)( 3,10, 8,14)( 4,12,11,15)( 5, 7, 6, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15) ] ),
-  baseBlock := [ 1, 4, 5, 7, 8, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1, 7, 2, 8, 3)( 4, 5,11, 6,10)( 9,14,12,15,13), ( 1, 8,12, 6, 2)( 3, 5,10, 9, 4)( 7,11,15,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15) ] ),
-  baseBlock := [ 2, 3, 4, 5, 9, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 14, 7, 6 ],
-  autGroup := Group( [ ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12), ( 1, 3)( 4,15)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 1, 3, 6, 7, 9, 10, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 16, 8, 8 ],
-  autGroup := Group( [ ( 1, 8, 9, 7,11, 3, 4, 2, 6,13,14,12)( 5,15,10), ( 1, 8, 6,13,11, 3)( 2,12, 7)( 4, 5, 9,10,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 2, 4, 5, 8, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1, 6, 7, 8, 2)( 3, 4,10,13,11)( 5, 9,15,12,14), ( 1, 3)( 2, 7, 8,11)( 4,12)( 6,14, 9,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 2, 3, 4, 5, 7, 9, 10, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 7,10,12, 9,11, 4)( 2,13,15,14, 6, 3, 8), ( 1, 3, 7, 6,14, 2)( 4,10, 8,13, 5, 9)(11,15,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 9, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 16, 8, 8 ],
-  autGroup := Group( [ ( 2, 9, 5, 3)( 4,10,13, 7)( 6,11)( 8,12,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 9, 11, 12, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 14, 7, 6 ],
-  autGroup := Group( [ ( 1, 5,12,13,11,15, 7, 8, 6,10, 2, 3)( 4,14, 9), ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 8, 10, 13, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 5, 7,12, 2, 8,15, 3,14, 9, 6,10,11,13, 4), ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4, 7, 6)( 8, 9,11)(12,14,13), ( 1, 6, 8)( 3,10,13)( 5,12,11)( 7,15,14), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 4,12, 5, 3)( 2,14,15,11, 8)( 6, 9,13,10, 7), ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 4, 7, 9, 10, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2,10,13,11)( 3, 6, 4,15,14)( 5,12, 7, 8, 9), ( 1, 7, 8, 3, 6,11)( 2, 5, 9,15, 4,10)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1,15, 2)( 4, 6, 5)( 8,10, 9)(12,14,13), ( 2,11)( 3, 4)( 5,12)( 7, 9)(10,13)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 3, 5, 6, 8, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 9,11)( 2,14)( 4,10,12, 8, 6,15)( 5, 7,13), ( 1,14)( 2, 4, 8,13,11, 7)( 3,10, 9)( 5, 6,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1, 5,13, 6, 9,14, 2)( 3,12,11, 7, 4,15, 8), ( 1,14,13,11, 5, 4, 6, 2, 8, 3,10, 7,15,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 3, 9, 8, 7, 4)( 2, 6,11)( 5,14,15,12,10,13), ( 2, 9, 4)( 3, 5,14)( 7,10,12)(11,15,13), ( 1, 6)( 3,14)( 4, 9)( 7,13)(10,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1,14, 6, 4,11, 9)( 2, 3, 7, 8,12,13)( 5,15,10), ( 1,14,10, 2)( 4, 5, 7,11)( 6, 9,15,12)( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 5, 6, 7, 9, 10, 11, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 9,11, 4, 6,14)( 2,13,12, 8, 7, 3)( 5,10,15), ( 2, 9, 5, 3)( 4,10,13, 7)( 6,11)( 8,12,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 8, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 6,10,11, 9, 7, 3)( 2,13, 4,12, 8, 5,14), ( 1,10, 7, 8, 9, 2)( 3,11, 4, 5,15,13)( 6,12,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 8, 10, 13, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 7, 8, 10, 12, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11, 6)( 2, 5, 3)( 7,10, 8)(12,15,13), ( 2, 5)( 4,14)( 6,11)( 7,15)( 8,13)(10,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 7,13, 4,10)( 2, 3,14,15,11,12, 8, 9, 5, 6), ( 1,13, 4, 7)( 2, 6, 8, 9)( 3,14,12,11)( 5,15), ( 1, 3)( 4,15)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 4, 5, 6, 9, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1,12, 7, 6, 8, 5, 3)( 2,10,14, 4,11, 9,13), ( 1,14, 4, 6, 2)( 3, 5, 7, 9,12)( 8,10,11,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 6, 7, 9, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2)( 3,15, 9)( 4, 8,10,14,13, 5)( 6,12)( 7,11), ( 1,14,15,13,11, 9,10, 8, 6, 4, 5, 3)( 2,12, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 4, 3,12)( 2,11, 9,13)( 5,15)( 6,14, 8, 7), ( 1, 9, 6,14,11, 4)( 2, 5, 7,10,12,15)( 3,13, 8), ( 1, 9)( 2,12)( 3, 8)( 4, 6)( 5,10)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 10, 12, 13, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 8, 4, 2)( 3, 9,12, 6)( 5,10)( 7,11,13,14), ( 1,14,10, 2)( 4, 5, 7,11)( 6, 9,15,12)( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 3, 6, 7, 8, 9, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 9, 5,13,12,11, 4,15, 8, 7, 6,14,10, 3, 2), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 14, 7, 6 ],
-  autGroup := Group( [ ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12), ( 1, 3)( 4,15)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 9, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 16, 8, 8 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 2,12)( 3, 8)( 5,15)( 6,11)( 9,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 14, 7, 6 ],
-  autGroup := Group( [ ( 1, 9, 7,15,13, 6, 4,12,10, 3)( 2, 5, 8,11,14), ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 7, 9, 12, 13, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 16, 8, 8 ],
-  autGroup := Group( [ ( 1, 2, 9,13,11,12, 4, 8, 6, 7,14, 3)( 5,15,10), ( 1, 8, 6,13,11, 3)( 2,12, 7)( 4, 5, 9,10,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 3, 4, 5, 6, 8, 10, 11, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 2, 9,13,11,12, 4, 8, 6, 7,14, 3)( 5,15,10) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 9,13,11,12, 4, 8, 6, 7,14, 3)( 5,15,10), ( 1, 4,13, 7,10)( 2,15,11, 9, 8,12, 5, 6,14, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 5,12,13,11,15, 7, 8, 6,10, 2, 3)( 4,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 3, 4, 6, 7, 9, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7,10, 4)( 2, 5,14,11)( 6,12,15, 9), ( 1,13, 7,10)( 2, 5,11, 8)( 3,12,15, 6) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 3, 4, 6, 9, 10, 11, 12, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 3,14, 7, 6, 8, 4,12,11,13, 9, 2)( 5,10,15), ( 1, 4,10, 7)( 2,11,14, 5)( 6, 9,15,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 3, 10, 12, 13, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 6,11)( 2, 4,15, 8, 7, 9, 5,13,12,14,10, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 4, 9, 10, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 3, 2, 4, 6, 8, 7, 9,11,13,12,14)( 5,10,15), ( 1,13, 7)( 2, 6, 8,12,11, 3)( 4,10)( 5, 9)(14,15), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 5,12,13,11,15, 7, 8, 6,10, 2, 3)( 4,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 4, 6, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 3)( 4,15)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11), ( 1,13)( 3, 6)( 4,10)( 5,14)( 8,11)( 9,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 4, 5, 6, 8, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 5,12,13,11,15, 7, 8, 6,10, 2, 3)( 4,14, 9), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 10, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 35, 7, 15 ],
-  autGroup := Group( [ ( 1, 2, 7, 5)( 4,11)( 6,12,15, 9)( 8,10,14,13), ( 1, 7,10, 4)( 2, 3)( 5,12,14, 9)( 6,11,15, 8) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 35,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 40, 8, 20 ],
-  autGroup := Group( [ ( 1,11, 3, 4, 8, 6)( 2,12,10)( 5, 9,13,14,15, 7), ( 1, 3, 4,12)( 2, 8,11, 5)( 6,13, 9, 7)(10,15), ( 1,12, 7, 9)( 3, 4)( 5, 8,14,11)( 6,10,15,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 3, 4, 6, 7, 8, 10, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 40,
-  tSubsetStructure := rec(
-  lambdas := [ 20 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 2,14, 5, 7)( 3, 4,13,10)( 6, 8)( 9,12,15,11), ( 1, 2,14, 7)( 3, 6, 9,12)( 4,13,11, 8)(10,15), ( 1,13)( 2, 4)( 6,12)( 7,11)( 8,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 13, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1,13, 3)( 2, 8,15, 4,14, 6)( 5, 7,11)(10,12), ( 1, 8,15, 2)( 3,11, 9,10)( 5,14)( 6, 7,13,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 4, 7, 8, 9, 3)( 2,11, 6)( 5,13,10,12,15,14), ( 1, 5, 4, 3,12)( 2,11,14, 8,15)( 6,10, 9, 7,13), ( 2,11)( 3, 4)( 5,12)( 7, 9)(10,13)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 12, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 5,14, 7, 2)( 3, 9, 8,15,13)( 4, 6,10,12,11), ( 2, 9, 4)( 3, 5,14)( 7,10,12)(11,15,13), ( 1, 6)( 3,14)( 4, 9)( 7,13)(10,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 8,13,11, 4,14, 2)( 3,12, 6,10, 9,15, 5), ( 1, 7, 4, 6,15, 3)( 2, 5)( 9,12,13)(10,14,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1,14,15)( 2, 4, 9)( 3,11, 7)( 5, 6,12)( 8,13,10), ( 2,11)( 3, 4)( 5,12)( 7, 9)(10,13)(14,15), ( 1, 3)( 4, 9)( 5,10)( 6,11)( 7, 8)(12,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 6, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 7, 8,11, 6, 3)( 2,10,13, 9,15,12)( 4, 5,14), ( 1, 4, 3, 5)( 2, 7,15, 6)( 8, 9,11,10)(13,14), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 2, 4, 6, 8, 10, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 2,10,13,11)( 3, 6, 4,15,14)( 5,12, 7, 8, 9), ( 2,15)( 4,10)( 5, 9)( 6, 8)( 7,11)(12,14), ( 1, 2)( 3,15)( 4, 6)( 5, 7)( 8, 9)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 4,12, 5, 3)( 2,14,15,11, 8)( 6, 9,13,10, 7), ( 1,14,10, 3)( 2, 4)( 5, 7, 8,12)( 6,13,15,11), ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 3, 5, 7, 9, 11, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 2, 7, 5,14)( 3,10,13, 4)( 6, 8)( 9,11,15,12), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1,12, 2)( 3, 4)( 5, 6,11)( 7,14,10,15, 9,13), ( 1,10,15,11)( 4, 5)( 6,12, 7,13)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1,15, 7,12,10, 6,11)( 2, 5,14, 8, 4, 9, 3), ( 1, 3, 4,15)( 2, 6, 7, 5)( 8,11,14,13)(10,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 3, 5,12, 4)( 2, 8,11,15,14)( 6, 7,10,13, 9), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 6, 9, 8, 4)( 3,10,12,11,15,14)( 5,13, 7), ( 1, 2, 3)( 4, 7, 6)( 8, 9,11)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13, 7,10)( 2, 5,11, 8)( 3,12,15, 6), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 9, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 8, 9, 7,11, 3, 4, 2, 6,13,14,12)( 5,15,10), ( 1, 6)( 2, 5)( 3, 4)( 7,15)( 8,14)( 9,13)(10,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 3, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7,10, 4)( 2, 5,14,11)( 6,12,15, 9), ( 1, 5)( 2, 4)( 6,15)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 7,13, 4,10)( 2, 3,14,15,11,12, 8, 9, 5, 6), ( 1,13, 4, 7)( 2, 6, 8, 9)( 3,14,12,11)( 5,15), ( 1, 3)( 4,15)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,15,14,10, 9, 5)( 6, 8, 7)(11,13,12), ( 1, 4,10)( 2, 3)( 5, 6,14,15,11, 9)( 7,13)( 8,12), ( 2,12)( 3, 8)( 5,15)( 6,11)( 9,14), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 16, 8, 8 ],
-  autGroup := Group( [ ( 1, 2, 9,13,11,12, 4, 8, 6, 7,14, 3)( 5,15,10), ( 2, 9, 5, 3)( 4,10,13, 7)( 6,11)( 8,12,14,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 2, 5, 6, 8, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 30, 14, 7, 6 ],
-  autGroup := Group( [ ( 1, 9, 7,15,13, 6, 4,12,10, 3)( 2, 5, 8,11,14), ( 2, 3, 5, 9)( 4, 7,13,10)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 3, 4, 7, 9, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 3,11,13, 6, 8)( 2, 7,12)( 4,15,14,10, 9, 5), ( 1, 4,10, 7)( 2,11,14, 5)( 6, 9,15,12), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 2, 9, 5, 3)( 4,10,13, 7)( 6,11)( 8,12,14,15), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 4, 5, 7, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 6,11)( 2, 4,15, 8, 7, 9, 5,13,12,14,10, 3), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 3, 2, 4,15,11,13,12,14,10, 6, 8, 7, 9, 5), ( 1, 9,11, 4, 6,14)( 2,13,12, 8, 7, 3)( 5,10,15), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15), ( 1, 4)( 5,14)( 6,15)( 7,13)( 8,11)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 2, 8,14, 5,11)( 3,12, 6,15, 9), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 3, 4, 7, 8, 10, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 35, 7, 15 ],
-  autGroup := Group( [ ( 1,14, 4, 5)( 2,10)( 6, 9,15,12)( 7,11,13, 8), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 35,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 40, 8, 20 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 4, 6, 7, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 40,
-  tSubsetStructure := rec(
-  lambdas := [ 20 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 5, 9,13,14,12, 4,11, 6, 7, 2, 3)( 8,15,10), ( 1, 5, 7, 2)( 4,11)( 6, 9,15,12)( 8,13,14,10), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 7, 4,13)( 2, 3, 5, 9)( 6,11)( 8,15,14,12), ( 1,13, 4, 7)( 3, 9,12, 6)( 5,11,14, 8), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1,10, 7,13)( 2, 5,14,11)( 6,12,15, 9), ( 1,14, 4, 5)( 2,10)( 6, 9,15,12)( 7,11,13, 8), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 5, 7,14,13, 8, 4, 2,10,11)( 3, 9)(12,15), ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 4, 7, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 5,13, 8,10,11, 7,14, 4, 2)( 6,15)( 9,12), ( 1, 5, 4, 2, 7,14,10,11,13, 8)( 3,12)( 6, 9), ( 1, 7)( 2,12,11, 3, 5, 9,14,15, 8, 6)(10,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 2,11,15,12, 6, 4, 3, 5,13, 8, 9, 7,10,14), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1,15, 2)( 4, 6, 5)( 8,10, 9)(12,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 2, 7, 5,14)( 3,10,13, 4)( 6, 8)( 9,11,15,12), ( 1, 2, 3)( 4, 7, 6)( 8, 9,11)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 4,12, 5, 3)( 2,14,15,11, 8)( 6, 9,13,10, 7), ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1,13, 6,14, 8,12)( 2, 3, 4, 7, 9,11)( 5,15,10), ( 1,13,10, 9, 3, 8,12, 5, 4,11, 6,14,15, 2, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1, 6, 8)( 3,10,13)( 5,12,11)( 7,15,14), ( 1, 6, 8)( 2, 5,11)( 3, 4,10)( 7, 9,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1,14,11, 4)( 2, 6,13, 3)( 7, 9, 8,12)(10,15), ( 2, 9, 4)( 3, 5,14)( 7,10,12)(11,15,13), ( 1, 6)( 3,14)( 4, 9)( 7,13)(10,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3, 5,12, 4)( 2, 8,11,15,14)( 6, 7,10,13, 9), ( 1, 8, 6)( 2, 5,12)( 4,10,13)( 9,15,14), ( 1, 2)( 4, 8)( 5,10)( 6, 9)( 7,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,14, 4)( 2, 8,13)( 5,10,15)( 6,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 2,11,15,12, 6, 4, 3, 5,13, 8, 9, 7,10,14), ( 1, 5,13)( 3,11, 7)( 6,10,14)( 8,15,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1,15,12, 7, 9, 6, 5,13,11, 2, 8,10,14, 3, 4), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 3)( 2,15)( 4, 5)( 6, 7)( 8,11)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 4,11,14)( 2, 3,13, 6)( 7,12, 8, 9)(10,15), ( 1, 7, 9)( 2, 8,11, 4, 6, 3)( 5,12,15,13,10,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1,10,14, 8,15,13)( 2, 3, 4,11, 9, 7)( 5,12, 6), ( 1, 4, 5,12)( 2,10,14, 6)( 7,11)( 8, 9,15,13), ( 2, 3)( 4,11)( 5,10)( 6, 8)( 7, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 10, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1, 7,10, 4,12, 9, 2)( 3,13, 5,15,11, 8,14), ( 1,15, 8,12, 6, 3)( 2, 9, 4)( 5,10,13,14, 7,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1,13,15, 7, 4)( 2, 8,12,10, 3)( 5,11, 9, 6,14), ( 1, 8, 6)( 3,13,10)( 5,11,12)( 7,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 12, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 9,15,13, 7, 6, 2, 5,14,11, 8, 4,10,12, 3), ( 1, 3,13)( 2,10, 9,15, 4, 5)( 6,11,14, 8, 7,12), ( 1, 3)( 4, 9)( 5,10)( 6,11)( 7, 8)(12,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 7, 4,15, 5, 2, 3)( 8,14,13, 9,12,11,10), ( 1,10, 7, 9,12, 4, 2)( 5,15, 8,14,13, 6,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 4,12, 6, 2,13)( 3,10, 7, 5,11,15)( 8, 9,14), ( 1,12, 6,13, 8,14)( 2, 5, 4,10, 9,15)( 3,11, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 3,12,10, 4, 8,11,14, 5, 2, 6, 7,13,15, 9), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1,14,11, 4)( 2, 6,13, 3)( 7, 9, 8,12)(10,15), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 3, 6, 7, 8,11)( 2, 9, 4)( 5,13,10,14,15,12), ( 1, 5, 6,10, 8,15)( 2, 9, 4)( 3,13, 7,14,11,12), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1, 2,11,15,12, 6, 4, 3, 5,13, 8, 9, 7,10,14), ( 1, 2, 3,15)( 4,11, 5, 8)( 6, 9, 7,10)(12,14), ( 2, 3)( 4,11)( 5,10)( 6, 8)( 7, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 1, 5,12, 3)( 2, 9)( 6,15,13,11)( 7, 8,10,14), ( 1, 9,13, 5)( 2,12,10, 8)( 4,14,15, 6)( 7,11), ( 1,12,10)( 2, 9, 4)( 5, 8,14)( 6,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 2, 3)( 5,15)( 6,11)( 7,13)( 8,12)( 9,14), ( 2, 5)( 7,10)(12,15), ( 1, 2)( 4, 5)( 6,12)( 7,11)( 8,13)( 9,15)(10,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 10, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1, 7)( 2, 6)( 3,14,15, 8, 9, 5)( 4,10,13)(11,12), ( 1, 7,13, 4)( 2, 3,14, 6)( 5,15)( 8, 9,11,12), ( 1, 2, 3)( 4,14, 9)( 5,15,10)( 6, 7, 8)(11,12,13), ( 2,14)( 4, 7)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 4, 5, 6, 8, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 3, 2, 4, 6, 8, 7, 9,11,13,12,14)( 5,10,15), ( 3, 9)( 4,13)( 8,14), ( 2, 3)( 4,10)( 5, 9)( 6,11)( 7,13)( 8,12)(14,15), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 3, 2,10, 6, 8, 7,15,11,13,12, 5)( 4, 9,14), ( 1, 4,10)( 2, 3)( 5, 6,14,15,11, 9)( 7,13)( 8,12), ( 2,12)( 3, 8)( 5,15)( 6,11)( 9,14), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,15,14,10, 9, 5)( 6, 8, 7)(11,13,12), ( 1, 4,13)( 3, 6, 9)( 8,11,14), ( 1, 6,11)( 2, 4, 3)( 5,10,15)( 7, 9, 8)(12,14,13), ( 1,13)( 3, 6)( 8,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 4, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15), ( 2, 5)( 7,10)(12,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 4, 6, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 35, 7, 15 ],
-  autGroup := Group( [ ( 1,10, 7,13)( 2, 3, 5,12)( 6,14, 9, 8)(11,15), ( 1,14, 4, 5)( 2,10)( 6, 9,15,12)( 7,11,13, 8) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 35,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 8, 6)( 2, 9, 7, 5,15, 4,14, 3,10,11,12,13), ( 1,13)( 2, 9,11,15, 5, 6,14,12, 8, 3)( 4,10) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 11, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 5,10,11, 4, 2,13, 8, 7,14)( 3, 6)( 9,15), ( 1, 4,10, 7)( 2, 5,11, 8)( 6, 9,15,12), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1,13)( 2, 5)( 3, 6)( 4,10)( 8,14)( 9,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1,15)( 3, 4)( 6, 7)( 9,10)(12,13), ( 1,15, 8,10, 3,14, 7,12, 2,13, 9,11)( 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 5,10, 8)( 2, 4,11, 7)( 6, 9,15,12)(13,14), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 7,10, 4)( 2, 8,11, 5)( 6,12,15, 9), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 3)( 2, 8, 5,14)( 4, 9,13,12)( 6, 7,15,10), ( 1, 9, 7,12)( 2, 5,14,11)( 3, 4)( 6,13,15,10), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 6, 8, 3)( 5,12)( 9,14,15,11), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 75, 40, 8, 20 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12), ( 1, 9,10, 6)( 3, 7,12, 4)( 5,11,14, 8)(13,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 8, 9, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 40,
-  tSubsetStructure := rec(
-  lambdas := [ 20 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 3)( 4, 6)( 7, 9)(10,12)(13,15), ( 1, 8, 6)( 2, 9, 7, 5,15, 4,14, 3,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 4)( 5,14)( 6,15)( 7,13)( 8,11)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1,10,13, 4)( 2,14, 8,11)( 6, 9,15,12), ( 1,14, 4, 5)( 2,10)( 6, 9,15,12)( 7,11,13, 8), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 7,13, 4,10)( 3,12, 6,15, 9), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 7)( 2, 5)( 3,12)( 6, 9)( 8,14)(10,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 6, 7, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 7,10, 4)( 2, 8,11, 5)( 6,12,15, 9), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 9, 5)( 2, 7,12,14,13,15, 8,10, 6,11, 4, 3), ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 6, 7, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 5,10,11, 4, 2,13, 8, 7,14)( 3, 6)( 9,15), ( 1,10, 7,13)( 2, 3, 5,12)( 6,14, 9, 8)(11,15), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1,13)( 2, 5)( 3, 6)( 4,10)( 8,14)( 9,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 3, 4, 7, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 2, 6)( 3,14)( 5, 9)( 8,12)(11,15), ( 1, 2, 3, 7,14,12,10, 5, 9, 4, 8,15)( 6,13,11) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 5, 9)( 2, 3, 4,11, 6,10, 8,15,13,14,12, 7), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 3)( 4, 6)( 7, 9)(10,12)(13,15), ( 1, 3, 5,10, 6,11, 7,15,14,13,12, 8)( 2, 4, 9) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 2,12)( 3,11)( 4,13)( 5, 9)( 6, 8)( 7,10)(14,15), ( 1, 6, 2,10, 9, 8, 7, 3,11,13,15, 5)( 4,12,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 5, 6, 8, 9, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 5,12, 7, 8, 6, 4,14, 9,13,11,15)( 2, 3,10), ( 1,10,13, 4)( 2,14, 8,11)( 6, 9,15,12), ( 1,14, 4, 5)( 2,10)( 6, 9,15,12)( 7,11,13, 8) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 9, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1,12, 8, 7, 9, 2,10,15,14, 4, 3, 5)( 6,11,13), ( 1, 7)( 2, 5)( 3,12)( 6, 9)( 8,14)(10,13) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 6, 7, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 5,11, 8)( 6, 9,15,12), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 2,14, 7, 5)( 3, 6,13,11,12)( 4, 9, 8,15,10), ( 2, 5)( 3, 4)(10,13)(11,12), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 2,12)( 3, 8)( 5,15)( 6,13)( 7, 9)(11,14), ( 1,10,11, 3, 5, 6)( 2,13,15)( 4,14, 7, 9,12, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 11, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 2,14, 5, 7)( 3, 4,13, 9,12)( 6,11,10,15, 8), ( 1,10,14,12, 6)( 2, 3,15, 9, 7)( 4,11,13, 5, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 6, 9, 2,12, 5, 3,14,13, 7,11,10, 8,15, 4), ( 1,15,13, 3,12,14, 2)( 4, 7, 6,11, 5,10, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 3, 5,10)( 4,13, 9,15)( 6,11)( 7,12,14, 8), ( 1,10,14, 9, 3)( 2, 7, 6,15,12)( 4,11, 8, 5,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 6, 2, 4)( 3, 5,15, 7)( 8,11, 9,10)(12,13), ( 1,10, 5,12, 7, 8)( 3,14)( 4,15, 6)( 9,13,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 9,13, 8, 2)( 3,14,15, 6, 4)( 5,12, 7,11,10), ( 1, 3)( 2,14,15,12)( 4, 9, 8, 7)( 5, 6,11,10), ( 2, 5)( 3, 4)(10,13)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 3, 5,10)( 4,13, 9,15)( 6,11)( 7,12,14, 8), ( 2, 5)( 3, 4)(10,13)(11,12), ( 1, 7)( 6,15)(10,12)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 4,11, 8, 6,13, 9,14, 7, 5, 3, 2,10,15,12), ( 1, 4, 2,10, 9, 7,12)( 3, 8, 5,15, 6,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 5,11)( 2, 8,12)( 4,15,14)( 7,13, 9), ( 1,15, 4,13,10, 2)( 3, 5, 9)( 6, 8, 7,12,14,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 4,12, 6,15)( 2,13, 3, 8,11)( 5, 9,14,10, 7), ( 1,15,14)( 2, 7, 4, 3, 9,11)( 5,13, 6,10,12, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1, 5,14,15,10,11, 4)( 2, 8, 9, 6, 3, 7,12), ( 1,14, 8, 3, 6, 2)( 4,10,11,12,15, 9)( 5,13, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1,12, 2)( 3,11,15, 6,14, 5)( 4, 9, 7)( 8,13), ( 1, 7, 5, 3)( 4,15)( 8,14,12,10)( 9,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3,10,14)( 2, 4)( 5,12, 8, 7)( 6,11,15,13), ( 1, 4, 5,12)( 2,10,14, 6)( 7,11)( 8, 9,15,13), ( 1, 2)( 4, 8)( 5,10)( 6, 9)( 7,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 5, 7,12, 2, 8,15, 3,14, 9, 6,10,11,13, 4), ( 1,11,13, 8, 3,12)( 2, 5, 9,10, 4,15)( 6, 7,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 2, 6, 9, 8, 4)( 3,10,12,11,15,14)( 5,13, 7), ( 1, 2, 3)( 4, 7, 6)( 8, 9,11)(12,14,13), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1,10,14, 8,15,13)( 2, 3, 4,11, 9, 7)( 5,12, 6), ( 1,11, 9,15,12)( 2, 5,13, 6, 3)( 4,10,14, 8, 7), ( 2, 3)( 4,11)( 5,10)( 6, 8)( 7, 9)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 10, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1,11,10, 7,15, 6,13)( 2, 8, 9, 4, 3, 5,14), ( 1,14, 6, 2, 8, 3)( 4,13,15, 7,11, 5)( 9,10,12) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 4, 5,12)( 2,10,14, 6)( 7,11)( 8, 9,15,13), ( 1, 7,15, 4)( 2, 6, 3, 5)( 8,11,10, 9)(12,14), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1, 2, 3)( 4, 7, 6)( 8, 9,11)(12,14,13), ( 1, 3)( 4, 9)( 5,10)( 6,11)( 7, 8)(12,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1,14,11, 4)( 2, 6,13, 3)( 7, 9, 8,12)(10,15), ( 1, 3, 2)( 4, 6, 7)( 8,11, 9)(12,13,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 7, 8, 9, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 4, 8,10, 2)( 3,13, 7,12,11,14)( 6,15, 9), ( 1,13,10,11)( 3, 8,14, 5)( 4, 9)( 6,12,15, 7), ( 1,13)( 2, 4)( 6,12)( 7,11)( 8,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,14,15,11,12,10)( 5, 7,13), ( 1, 4,13,11,10, 6, 9,14, 3,15, 8, 2,12, 7, 5) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1, 2, 3,15)( 4,11, 5, 8)( 6, 9, 7,10)(12,14), ( 1, 2,15)( 4, 5, 6)( 8, 9,10)(12,13,14), ( 2, 4)( 3,11)( 5,13)( 6, 8)(10,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 2,11,15,12, 6, 4, 3, 5,13, 8, 9, 7,10,14), ( 2, 3)( 4,11)( 5,10)( 6, 8)( 7, 9)(12,13), ( 2, 4)( 3,11)( 5,13)( 6, 8)(10,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1, 6)( 2,10,12, 3)( 4, 5,13,11)( 7, 9,15,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 5,12, 9,11, 6,10,13, 2, 3, 8,15,14, 4, 7), ( 1,11, 9, 6, 7, 2)( 3, 4, 8)( 5,13,15,14,10,12) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 9, 7)( 2, 3, 6, 4,11, 8)( 5,14,10,13,15,12), ( 1,12, 8,13, 6,14)( 2,11,10, 4, 7,15)( 3, 5, 9) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 1, 2, 5, 3,12, 8, 9,15,11,14, 6, 4,10, 7,13), ( 1, 5, 7,14)( 3,12, 8,10)( 4, 9)( 6,15,11,13), ( 1, 5,12, 3)( 2, 9)( 6,15,13,11)( 7, 8,10,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 3, 4)( 2, 6,15, 7)( 8,10,11, 9)(13,14), ( 1, 5,12, 3)( 2, 9)( 6,15,13,11)( 7, 8,10,14), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1,10, 2,11,15, 8)( 3, 9)( 4, 7, 6)(12,14,13), ( 1, 4, 6)( 5, 7,15)( 8,10,13)( 9,11,12) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1,14,10, 7, 9, 8,13, 5, 3, 4, 6,12,15,11, 2), ( 2, 9, 4)( 3, 5,14)( 7,10,12)(11,15,13), ( 1, 6)( 3,14)( 4, 9)( 7,13)(10,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 4, 5, 6, 8, 10, 11, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1, 5, 8, 7)( 2,15, 9,11)( 3,12,10,14)( 6,13), ( 1, 8, 9, 4,12,15, 5)( 2, 7, 3,10,11, 6,14) ] ),
-  autSubgroup := Group( [ ( 2, 4, 9)( 3,14, 5)( 7,12,10)(11,13,15), ( 1,12, 6,14, 8,13)( 2, 5, 7, 9,10, 3)( 4,15,11) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 3, 2, 4, 6, 8, 7, 9,11,13,12,14)( 5,10,15), ( 1,13, 7)( 2, 6, 8,12,11, 3)( 4,10)( 5, 9)(14,15), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 1, 4)( 2, 3, 5,12, 8,15)( 6,14)( 7,13,10)( 9,11), ( 2, 5)( 7,10)(12,15), ( 1, 2)( 4, 5)( 6,12)( 7,11)( 8,13)( 9,15)(10,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 4,13, 7,10)( 2, 5,11,14, 8)( 3,12,15, 6, 9), ( 1, 8, 4,11,13,14)( 2, 7)( 3, 9, 6)( 5,10), ( 1,14,12,13,11, 9, 7, 8, 6, 4, 2, 3)( 5,15,10) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15), ( 2, 5)( 7,10)(12,15), ( 1, 6)( 2, 5)( 3, 4)( 7,15)( 8,14)( 9,13)(10,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 5, 6, 9, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1,14,12,13,11, 9, 7, 8, 6, 4, 2, 3)( 5,15,10), ( 1, 7,13, 4)( 2, 3,14, 6)( 5,15)( 8, 9,11,12), ( 4,10)( 5,14)( 9,15), ( 2,14)( 4, 7)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 2, 9,10, 8, 6, 7,14,15,13,11,12, 4, 5, 3), ( 1, 9, 8, 7, 6,14,13,12,11, 4, 3, 2)( 5,10,15), ( 1, 9,13, 6, 4, 3)( 7,12)( 8,11,14)(10,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 2, 3)( 5,15)( 6,11)( 7,13)( 8,12)( 9,14), ( 1,12,11, 7, 6, 2)( 3,14,10)( 4,15, 8)( 5,13, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 1, 5, 9, 7, 8, 6,10,14,12,13,11,15, 4, 2, 3), ( 2, 5)( 7,10)(12,15), ( 1, 2)( 4, 5)( 6,12)( 7,11)( 8,13)( 9,15)(10,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1, 7,13, 4,10)( 2, 3,14,15,11,12, 8, 9, 5, 6), ( 1, 2, 6, 7,11,12)( 3,13, 8)( 4,14, 9)( 5,15,10), ( 1, 7,13, 4)( 2, 3,14, 6)( 5,15)( 8, 9,11,12), ( 2,14)( 4, 7)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15), ( 1, 9,13, 6, 4, 3)( 7,12)( 8,11,14)(10,15), ( 1, 6,11)( 2, 4, 3)( 5,10,15)( 7, 9, 8)(12,14,13), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15), ( 2, 5)( 7,10)(12,15), ( 1, 6)( 2, 5)( 3, 4)( 7,15)( 8,14)( 9,13)(10,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 5, 6, 9, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 9, 5)( 2,13,12, 8, 7, 3)( 4,15,11)( 6,14,10), ( 1,13, 7, 4)( 2, 9,11, 3)( 5,15)( 6, 8,12,14), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 1, 5, 9, 7, 8, 6,10,14,12,13,11,15, 4, 2, 3), ( 2, 5)( 7,10)(12,15), ( 1, 2)( 4, 5)( 6,12)( 7,11)( 8,13)( 9,15)(10,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 7, 9, 10, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 5, 3, 4, 2, 6,10, 8, 9, 7,11,15,13,14,12), ( 2, 5)( 7,10)(12,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 4, 6, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,15,14,10, 9, 5)( 6, 8, 7)(11,13,12), ( 1, 6,11)( 2, 4, 3)( 5,10,15)( 7, 9, 8)(12,14,13), ( 1, 4)( 6, 9)(11,14), ( 1,13)( 3, 6)( 8,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 9, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3,13, 8)( 4,14, 9)( 5,15,10), ( 1, 4,10)( 2, 3)( 5, 6,14,15,11, 9)( 7,13)( 8,12), ( 1, 7,13, 4)( 2, 3,14, 6)( 5,15)( 8, 9,11,12), ( 2,14)( 4, 7)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 4, 5, 6, 8, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1,13, 7, 4,10)( 2, 9, 5, 6, 8,12,14,15,11, 3), ( 1,13, 7)( 2, 6, 8,12,11, 3)( 5,15)( 9,14), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 3, 2,10, 6, 8, 7,15,11,13,12, 5)( 4, 9,14), ( 1, 4,10)( 2, 8)( 3,12)( 5,11,14)( 6, 9,15)( 7,13), ( 2,12)( 3, 8)( 5,15)( 6,11)( 9,14), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 200, 8, 100 ],
-  autGroup := Group( [ ( 1,11,10,14)( 2, 7, 8, 4)( 3, 6,12, 9)( 5,13), ( 1,14, 3)( 2,15,13)( 4,11, 6)( 5,12,10)( 7, 8, 9) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 200,
-  tSubsetStructure := rec(
-  lambdas := [ 100 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 175, 7, 75 ],
-  autGroup := Group( [ ( 1, 8, 4,14, 7, 5,10,11,13, 2)( 6,12,15, 9), ( 1, 8, 9)( 2, 3,10)( 4,11,12)( 5, 6,13)( 7,14,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 175,
-  tSubsetStructure := rec(
-  lambdas := [ 75 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 6)( 2, 7)( 4, 9,14)( 5,15), ( 1, 7)( 2, 6)( 4,10, 9,15,14, 5)(11,12), ( 1, 9, 8)( 2, 7,12)( 3, 6, 4)(10,15)(11,14,13), ( 1, 9)( 2, 7)( 3, 8,13)( 4, 6)( 5,15,10)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3)( 2, 5, 4)( 6, 8,11,13)( 7,10, 9,12,15,14), ( 1, 4, 5, 2, 6, 9,15, 7)(10,12,11,14), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 600, 320, 8, 160 ],
-  autGroup := Group( [ ( 1, 4,13,10)( 2, 9, 8,12)( 3, 5)( 6,14,15,11), ( 1, 7, 4,13)( 2, 3)( 5, 9,14,12)( 6, 8,15,11), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 320,
-  tSubsetStructure := rec(
-  lambdas := [ 160 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1, 7,10, 4)( 2, 8,11, 5)( 6,12,15, 9), ( 1, 2, 3)( 4, 5, 6)( 7, 8, 9)(10,11,12)(13,14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 3)( 4, 6)( 7, 9)(10,12)(13,15), ( 1, 3, 5,10, 6,11, 7,15,14,13,12, 8)( 2, 4, 9) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 160, 8, 80 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 6, 8, 3)( 5,12)( 9,14,15,11), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 160,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1,14, 4, 5)( 2,10)( 6, 9,15,12)( 7,11,13, 8), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 4)( 2, 3)( 5,15)( 6,14)( 7,13)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 11, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 300, 140, 7, 60 ],
-  autGroup := Group( [ ( 1,15)( 3, 4)( 6, 7)( 9,10)(12,13), ( 1,15, 8,10, 3,14, 7,12, 2,13, 9,11)( 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1, 4,10, 7)( 2, 3, 5, 9)( 6,11)( 8,15,14,12), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 8, 9, 10, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 70, 7, 30 ],
-  autGroup := Group( [ ( 1, 8, 6)( 2, 9, 7, 5,15, 4,14, 3,10,11,12,13), ( 1,13)( 2, 9,11,15, 5, 6,14,12, 8, 3)( 4,10) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 11, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 70,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 150, 80, 8, 40 ],
-  autGroup := Group( [ ( 1,10, 7,13)( 2, 3, 5,12)( 6,14, 9, 8)(11,15), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1,13)( 2, 5)( 3, 6)( 4,10)( 8,14)( 9,15) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 80,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 600, 280, 7, 120 ],
-  autGroup := Group( [ ( 1, 5,10, 8)( 2, 4,11, 7)( 6, 9,15,12)(13,14), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15), ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14) ] ),
-  autSubgroup := Group( [ ( 1,13,10, 7, 4)( 2, 5, 8,11,14), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 280,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 4,10)( 2, 5, 8)( 3, 7,11)( 6, 9,15)(12,14,13), ( 1, 8,14,12, 5, 3)( 4,15,11)( 6, 9,13)( 7,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 6, 3,14,15, 9, 5, 4,11,13, 7,12, 8,10, 2), ( 1,10,13, 4, 8, 6, 3)( 2, 7, 5,14, 9,15,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 96, 8, 48 ],
-  autGroup := Group( [ ( 1, 4, 9, 8, 7, 3)( 2,14,15,11,13,10)( 5, 6,12), ( 2, 5)( 3, 4)(10,13)(11,12), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 96,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1, 9,11, 6,12, 3, 4)( 2, 5,15, 8,10, 7,13), ( 1,10, 8,15, 9, 3, 2)( 4,13, 7, 6, 5,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1,13,15,14,12, 3, 2)( 5, 7, 8, 9,10, 6,11), ( 1, 6, 3, 4)( 2, 9, 7,14)( 5,12,15,11)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 180, 84, 7, 36 ],
-  autGroup := Group( [ ( 1, 7,14, 2)( 3,12, 9, 6)( 4, 8,11,13)(10,15), ( 1, 7,10, 8, 4,15)( 2,13, 3,11,14, 9)( 5, 6,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 720, 384, 8, 192 ],
-  autGroup := Group( [ ( 1, 5, 8, 3, 6, 9)( 2, 4,10,15, 7,11)(12,14,13), ( 1, 6)( 2, 3)( 4, 5)( 7,15)(10,12)(11,13), ( 1, 6)( 2, 4)( 3, 5)( 7,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 8, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 384,
-  tSubsetStructure := rec(
-  lambdas := [ 192 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 720, 336, 7, 144 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 9)( 4,13,11, 5, 8)( 7,12,14,10,15), ( 1,10, 5, 3,11, 6)( 2, 8, 4,15, 9, 7)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 2,15, 7,11)( 3, 6,13, 8)( 4,10)( 5,12,14, 9), ( 1,13,14, 8,15,10)( 2,11, 6)( 3,12, 9, 7, 5, 4) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 11, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 4, 9, 8, 7, 3)( 2,14,15,11,13,10)( 5, 6,12), ( 1, 9,13, 8, 2)( 3,14,15, 6, 4)( 5,12, 7,11,10), ( 2, 5)( 3, 4)(10,13)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 7, 9, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 6,12,13,11, 7,10)( 2, 4, 8, 5,14, 9, 3), ( 1, 8,13, 5, 3, 2)( 4,15,11)( 6,10, 7, 9,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 4,10)( 2, 5,13, 9,15, 3)( 6,12,14, 8, 7,11), ( 2, 5)( 3, 4)(10,13)(11,12), ( 1, 7)( 2, 5)( 3, 4)( 6,15)(10,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 4)( 2, 6)( 3, 7)( 5,15)( 8, 9)(12,13), ( 1, 5)( 2, 7)( 3, 6)( 4,15)( 8, 9)(12,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 192, 8, 96 ],
-  autGroup := Group( [ ( 1, 5, 3, 4, 2, 6,10, 8, 9, 7,11,15,13,14,12), ( 2, 5)( 7,10)(12,15), ( 1, 6)( 3, 4)( 7,12)( 8,14)( 9,13)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 9, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 192,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 360, 168, 7, 72 ],
-  autGroup := Group( [ ( 1, 9, 8, 7, 6,14,13,12,11, 4, 3, 2)( 5,10,15), ( 1, 2, 6, 7,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15), ( 1, 9,13, 6, 4, 3)( 7,12)( 8,11,14)(10,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 32, 8, 16 ],
-  autGroup := Group( [ ( 1, 3, 2, 4, 6, 8, 7, 9,11,13,12,14)( 5,10,15), ( 1, 4,10)( 2, 8)( 3,12)( 5,11,14)( 6, 9,15)( 7,13), ( 2,12)( 3, 8)( 5,15)( 6,11)( 9,14), ( 1, 4)( 6, 9)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 32,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 60, 28, 7, 12 ],
-  autGroup := Group( [ ( 1, 4,10)( 2, 3)( 5, 6,14,15,11, 9)( 7,13)( 8,12), ( 1, 9,11, 4, 6,14)( 2,13,12, 8, 7, 3)( 5,10,15), ( 3, 9)( 4,13)( 8,14), ( 1, 3)( 4, 9)( 6,13)( 7,12)( 8,11)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 8, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 42, 7, 18 ],
-  autGroup := Group( [ ( 2, 3, 5,12, 8,15)( 6,11)( 7,13,10)( 9,14), ( 2, 5)( 7,10)(12,15), ( 1, 2)( 4, 5)( 6,12)( 7,11)( 8,13)( 9,15)(10,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 12, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 90, 48, 8, 24 ],
-  autGroup := Group( [ ( 1, 3, 4, 6,13, 9)( 7,12)( 8,14,11)(10,15), ( 1, 7,13, 4)( 2, 3,14, 6)( 5,15)( 8, 9,11,12), ( 4,10)( 5,14)( 9,15), ( 2,14)( 4, 7)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 8, 9, 10, 11, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 200, 8, 100 ],
-  autGroup := Group( [ ( 1, 5,10, 2, 4,14,13,11, 7, 8)( 3, 9,12, 6), ( 1,12, 8)( 2,10, 6)( 3,14, 7)( 4,15,11)( 5,13, 9) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 200,
-  tSubsetStructure := rec(
-  lambdas := [ 100 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 175, 7, 75 ],
-  autGroup := Group( [ ( 1, 8, 4,14, 7, 5,10,11,13, 2)( 3,15, 6, 9), ( 1, 8, 3)( 2,12,10)( 4,11, 6)( 5,15,13)( 7,14, 9) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 175,
-  tSubsetStructure := rec(
-  lambdas := [ 75 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 2, 3,11,15)( 4, 7,13,10)( 5,12, 8, 6)( 9,14), ( 1, 2, 6, 7, 5,15, 4,11, 3,13, 8, 9)(10,14,12) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 5)( 2,10, 8, 7)( 3,12, 9,15)( 4,11,13,14), ( 1, 6, 2, 7, 9,11, 4,15,14,13,12, 5)( 3, 8,10) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 2)( 3, 9, 6,15)( 4, 8,13,11)( 5, 7,14,10), ( 1,12, 8, 4, 3,11,10,15, 2, 7, 9,14)( 5,13, 6) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1,12, 5)( 2, 7,15,14,13, 3, 8,10, 9,11, 4, 6), ( 1,14)( 2, 7,11,10)( 3,15, 6, 9)( 4, 5,13, 8) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 6)( 2, 3, 7, 8)( 4, 9,14)( 5,15)(12,13), ( 1, 7, 9,10)( 2, 4,15,11,12,14, 5, 6), ( 1, 9, 2, 6, 4, 7)( 3, 8,13)( 5,10)(11,14,12), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3,11,13)( 2, 4, 5)( 6, 8)( 7,14,15,12, 9,10), ( 1, 5, 2,11,10,12, 6,15, 7), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4, 2, 3)( 5,15,10)( 6, 9, 7, 8,11,14,12,13), ( 1, 4, 6, 9,11,14)( 2, 8)( 3, 7)( 5,10)(12,13), ( 1, 3, 7, 4, 5)( 2, 9,10, 6, 8)(11,13,12,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 6, 9)( 2, 5, 3)( 7,10,13)( 8,12,15)(11,14), ( 1, 3, 2)( 6, 8, 7,11,13,12)(10,15), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 3, 4)( 6, 8, 9,11,13,14), ( 1, 4, 7,11,14,12)( 2, 6, 9)( 5,15,10), ( 1, 4, 3)( 2, 7)( 5,15)( 6, 9, 8,11,14,13), ( 2, 7)( 4,10)( 5, 9,15,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 2, 4, 3)( 5,15,10)( 7, 9, 8,12,14,13), ( 1, 4, 3)( 2, 5)( 6,14, 8)( 7,10)( 9,13,11)(12,15), ( 1, 4, 5, 2)( 6, 9,15, 7)(10,12,11,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 8)( 3, 6)( 4,15,14,10, 9, 5)(11,13), ( 1, 8,14,11,13, 4)( 3, 9, 6), ( 1, 4)( 3, 8)( 6, 9,11,14), ( 1, 4, 6, 9)( 2, 3)( 5,10)( 7,13,12, 8)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2, 4, 3, 6,15, 7,14, 8)( 9,13,11,10,12), ( 1, 2, 6, 7,11,12)( 3, 5, 4)( 8,15,14,13,10, 9) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 6, 8, 7, 9,14,10, 3, 2, 4,15,11)( 5,13,12), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 2)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 3, 8, 7,15,14, 4, 9,11,13,12, 5)( 2,10, 6) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 200, 8, 100 ],
-  autGroup := Group( [ ( 1,11,13, 5)( 2,10,14, 4)( 3, 9, 6,15)( 7, 8), ( 1,14,15)( 2,12,13)( 3, 4,11)( 5, 9,10)( 6, 7, 8) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 200,
-  tSubsetStructure := rec(
-  lambdas := [ 100 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 175, 7, 75 ],
-  autGroup := Group( [ ( 1, 8, 4,14, 7, 5,10,11,13, 2)( 3, 9,12, 6), ( 1, 8, 9)( 2,15,10)( 3, 7,14)( 4,11, 6)( 5,12,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 175,
-  tSubsetStructure := rec(
-  lambdas := [ 75 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 2,13,14)( 3,15)( 4, 5,10,11)( 6,12)( 7, 8), ( 1,11,15,10,14, 6, 7, 8, 9,13, 5, 3)( 2,12, 4) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 8)( 2, 4,14,13)( 3,15, 6, 9)( 5,10,11, 7), ( 1,12, 2)( 3, 5, 7,15,11, 4, 6,14,10, 9, 8,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 2)( 3, 9, 6,15)( 4, 8,13,11)( 5, 7,14,10), ( 1,12, 8, 4, 3,11,10,15, 2, 7, 9,14)( 5,13, 6) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1,12, 2, 7,15, 8, 4, 6, 5,13, 3,14)( 9,11,10), ( 1,14)( 2, 4)( 5, 7)( 8,10)(11,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 200, 8, 100 ],
-  autGroup := Group( [ ( 1, 8,15)( 2, 9,10)( 3, 4,11)( 5,12,13)( 6, 7,14), ( 1,13, 7,10)( 2, 9,11, 6)( 3, 8,12, 5)(14,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 7,13)(11,14) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 200,
-  tSubsetStructure := rec(
-  lambdas := [ 100 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 175, 7, 75 ],
-  autGroup := Group( [ ( 1, 9, 8)( 2,10,15)( 3,14, 7)( 4, 6,11)( 5,13,12), ( 1,11, 7,14)( 2,10, 8,13)( 3,12,15, 6)( 4, 5) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 175,
-  tSubsetStructure := rec(
-  lambdas := [ 75 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1,12, 5, 7,15,14, 4, 6, 2,13, 3, 8)( 9,11,10), ( 1,14)( 2, 7,11,10)( 3,15, 6, 9)( 4, 5,13, 8) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 2)( 3, 9,15, 6,12)( 4, 5)( 7, 8)(10,11)(13,14), ( 1, 4,10, 7)( 2, 9, 5, 3)( 6,11)( 8,12,14,15), ( 3, 9)(12,15), ( 2, 5)( 8,14) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 3,10,11,13, 5)( 2,12, 7)( 6, 8,15), ( 1, 8,11,13, 6, 3)( 2,14, 5)( 4,10,12)( 7, 9,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 6)( 2, 9,12,14)( 4, 7)( 5,15,10), ( 1, 7, 3, 4,15,11,12,13,14,10)( 2, 8, 9, 5, 6), ( 1, 7, 8,14,11,12,13, 4)( 2, 3, 9, 6) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 3, 5)( 8,10,13,15), ( 2, 4, 5, 3, 7,14,15, 8)( 6,11)( 9,10,13,12), ( 4, 5)( 9,10)(14,15), ( 3, 4)( 8, 9)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5,11,12,13, 9,10)( 6, 7, 8,14,15), ( 1, 3, 4, 2)( 6,13, 9, 7,11, 8,14,12), ( 2, 3)( 6,11)( 7, 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2,11,12, 6, 7)( 3, 5, 4)( 8,15, 9)(10,14,13), ( 1,11)( 2, 4, 3, 7, 9, 8)(10,15)(12,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 2, 5, 3, 6, 7,10, 8,11,12,15,13)( 9,14), ( 1, 4, 2)( 3, 5)( 6, 9,12,11,14, 7)( 8,10,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 6)( 2, 7)( 3, 4)( 5,15,10)( 8,14,13, 9), ( 1, 2, 4)( 3, 8)( 5,10)( 6, 7,14,11,12, 9), ( 1, 6)( 4,10, 9,15,14, 5) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 2, 8, 4)( 3, 9,11,12,13,14, 6, 7)( 5,10,15), ( 1, 6)( 2, 7)( 3, 4,10, 8, 9,15,13,14, 5), ( 2, 9, 3, 7, 4, 8,12,14,13)( 5,15,10), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 1, 6,11)( 4,14, 9) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 2, 4, 5, 3, 6,12, 9,15, 8)( 7,14,10,13,11), ( 1, 2,11, 7)( 4, 5)( 6,12)( 8,13)( 9,10,14,15), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 2, 9,12,14, 7, 4)( 3, 8)( 5,15,10), ( 1, 8, 2)( 3, 7, 6,13,12,11)( 4, 9)( 5,10), ( 1, 6)( 3, 9)( 4, 8,14,13)(10,15), ( 2, 7)( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 3, 5, 8,10,13,15)( 9,14), ( 1,12,13,11, 7, 3, 6, 2, 8)( 4, 5,14,15, 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2, 4, 3, 6,10, 7, 9, 8,11,15,12,14,13), ( 1, 2)( 3, 5, 4)( 6, 7,11,12)( 8,15,14)( 9,13,10), ( 7,12), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 2, 6, 7)( 3, 9,10)( 4, 5, 8)(11,12)(13,14,15), ( 1, 2, 8, 4)( 3, 9,11,12,13,14, 6, 7)(10,15), ( 1, 2)( 3, 4, 8,14,13, 9)( 5,15,10)( 6, 7)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3)( 2, 5, 4)( 6,13)( 7,10, 9)( 8,11)(12,15,14), ( 1, 2, 6,12)( 4, 5)( 7,11)( 8,13)( 9,10)(14,15), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,14)( 2,13)( 3,12)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 2, 7)( 3, 4, 8, 9,13,14)( 5,10), ( 2, 7)( 3, 4,10, 8, 9, 5)(13,14,15), ( 1, 6)( 2, 4, 7,14,12, 9)( 3, 8), ( 1, 2)( 4, 9)( 6, 7)( 8,13)(10,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1,11)( 3, 4, 5,13,14,15, 8, 9,10), ( 1, 3)( 4, 5)( 6,13,11, 8)( 7,12)( 9,15,14,10), ( 1, 5, 2)( 6,15, 7)(10,12,11), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 140, 5, 40 ],
-  autGroup := Group( [ ( 1, 2, 3, 5,15, 4, 6)( 8,12,14, 9,10,11,13), ( 1,12,13, 7, 3, 4)( 2,14, 5,11, 8,10)( 6, 9,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 140,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 252, 9, 144 ],
-  autGroup := Group( [ ( 1, 2,13, 4, 8,14,11)( 3, 9,10, 5,12,15, 6), ( 1, 4,11, 2, 3)( 5, 9, 7,12, 8)( 6,14,13,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 252,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 70, 42, 9, 24 ],
-  autGroup := Group( [ ( 1, 2,14, 4)( 3, 5,10,12)( 7,13, 8,11)( 9,15), ( 1,10,11)( 2, 3, 9)( 4,14, 5)( 6,13,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 35, 7, 3, 1 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4,10, 7,11, 5, 8)( 6, 9)(12,14,13), ( 2, 5, 3,10)( 4,12,11,13)( 6, 7, 8, 9)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 12 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 1 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 294, 7, 126 ],
-  autGroup := Group( [ ( 1, 5, 3, 2,10)( 4,11, 9,14, 7)( 6,12,15,13, 8), ( 1, 6,15,11,10, 7,13)( 2, 5, 3, 8, 9, 4,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 11 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 294,
-  tSubsetStructure := rec(
-  lambdas := [ 126 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 196, 7, 84 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4,10, 7,11, 5, 8)( 6, 9)(12,14,13), ( 1, 7,15, 6)( 2, 3)( 8, 9)(10,12,11,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 8 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 196,
-  tSubsetStructure := rec(
-  lambdas := [ 84 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 63, 9, 36 ],
-  autGroup := Group( [ ( 1, 2, 3,11,12,14, 7, 8,13, 6,15,10, 4, 9, 5), ( 1,12, 7, 8, 6, 5,13,10, 3, 9,11,14, 2, 4,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 63,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1008, 6, 360 ],
-  autGroup := Group( [ ( 2,12)( 3, 5,10,13,11, 4)( 6, 7,14)( 8, 9,15), ( 1, 5,15,13, 3, 9, 6, 4, 8,14, 7,12,11,10, 2) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1008,
-  tSubsetStructure := rec(
-  lambdas := [ 360 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1, 8,11, 3)( 2,15, 9,10)( 4, 5)( 6,12, 7,13), ( 1,10, 9, 2)( 3, 6,15,13)( 4,12)( 5,11,14, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 315, 210, 10, 135 ],
-  autGroup := Group( [ ( 1, 6, 8)( 2, 9, 5, 7,12,15)( 3,13, 4)(11,14), ( 1, 7, 3, 2,13,10)( 4, 9,11,14,15, 8)( 5, 6,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 210,
-  tSubsetStructure := rec(
-  lambdas := [ 135 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 168, 6, 60 ],
-  autGroup := Group( [ ( 1, 3, 6, 8, 4,13,10)( 2, 5,14,12, 9, 7,11), ( 1,13, 2,10, 9,14, 5)( 3,15, 7,12, 8, 4,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 168, 6, 60 ],
-  autGroup := Group( [ ( 1, 5,11)( 3,14)( 4, 7,15, 9,10,13)( 6,12, 8), ( 1, 9,14,13,15,11)( 2, 4, 5, 7, 8,12)( 3, 6,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 252, 9, 144 ],
-  autGroup := Group( [ ( 1, 7, 5, 6, 2, 3, 4)( 8,10, 9,13,12,11,14), ( 1, 9, 7)( 2, 6, 3, 4,14,13)( 5,12,15,11,10, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 252,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 294, 7, 126 ],
-  autGroup := Group( [ ( 1, 2,10, 5)( 4, 8)( 6, 9,13,14)( 7,15,11,12), ( 1,10, 6,12)( 2, 4, 3, 5)( 7,13,15,11)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 294,
-  tSubsetStructure := rec(
-  lambdas := [ 126 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 112, 4, 24 ],
-  autGroup := Group( [ ( 1, 3, 2,11, 5, 9, 4,15,10,12, 7, 8,13,14, 6), ( 1, 5,14, 6, 9,10,13)( 3,11, 4, 7,15,12, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 112,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 70, 28, 6, 10 ],
-  autGroup := Group( [ ( 1, 6, 4)( 2, 7,15)( 8,13,10)(11,12,14), ( 1,13, 5, 9)( 2,12,14, 4)( 3, 7)( 6, 8,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 9, 12 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 10 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 756, 9, 432 ],
-  autGroup := Group( [ ( 2,14, 9,13, 6, 5,10)( 3, 8,11, 4,12,15, 7), ( 1, 9, 3)( 2,15, 8)( 4,12, 6)( 5,13, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 336, 8, 168 ],
-  autGroup := Group( [ ( 1, 8, 9, 2,13)( 3, 6,14, 4,15)( 5,11,12,10, 7), ( 1,11,15,14,10, 5, 4)( 2,12, 8, 7, 6, 3, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 672, 8, 336 ],
-  autGroup := Group( [ ( 1, 2,13, 3,14,12,15)( 5, 7,11,10, 9, 6, 8), ( 1,15, 8,14, 7, 9, 6)( 2, 3,11,13, 4,10, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 672, 8, 336 ],
-  autGroup := Group( [ ( 1, 7,10, 4,12, 9, 2)( 3, 6,13,14, 8, 5,11), ( 1,13, 6,15,10,11,12)( 2, 3, 4, 9, 5,14, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 588, 7, 252 ],
-  autGroup := Group( [ ( 1, 5, 3,12,13, 6)( 2, 7,10)( 4, 8,11, 9,15,14), ( 1,13, 9, 2, 8)( 3,11, 4, 5, 6)( 7,15,14,12,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 588,
-  tSubsetStructure := rec(
-  lambdas := [ 252 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 588, 7, 252 ],
-  autGroup := Group( [ ( 1,13,15)( 2,14, 3)( 5, 8, 9)( 6,11,10), ( 1,14,11, 3, 4, 6,12)( 2,15,10, 7, 8,13, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 588,
-  tSubsetStructure := rec(
-  lambdas := [ 252 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 588, 7, 252 ],
-  autGroup := Group( [ ( 1, 8, 7, 6,15,14, 9)( 2,11, 4, 5, 3,13,10), ( 1,14, 9, 5, 7, 4)( 2,11, 6)( 3,13,12,10,15, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 588,
-  tSubsetStructure := rec(
-  lambdas := [ 252 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 504, 6, 180 ],
-  autGroup := Group( [ ( 1, 6,11,14,13)( 2,10,12, 3, 8)( 4, 5, 7, 9,15), ( 1,10, 6,11, 8,14)( 2,12, 9,15, 4, 3)( 5,13, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 504,
-  tSubsetStructure := rec(
-  lambdas := [ 180 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 420, 5, 120 ],
-  autGroup := Group( [ ( 1, 9, 4)( 2,10, 7)( 3,14,11)( 8,15,13), ( 1,13,14, 5, 2, 6, 9)( 3,12, 4, 8,11,15, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 420,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 77, 11, 55 ],
-  autGroup := Group( [ ( 1, 9, 5,11,13, 7, 3)( 2,12,10,15, 4, 6,14), ( 1,13, 4, 9, 3, 6, 2, 5,10,11, 8,15,14,12, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 77,
-  tSubsetStructure := rec(
-  lambdas := [ 55 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 560, 10, 360 ],
-  autGroup := Group( [ ( 1,12,11, 4,10, 9,13, 6, 3, 5, 7,14, 2, 8,15), ( 1,15, 6,13, 8, 2)( 3, 7,11)( 4,10, 5,12,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 560,
-  tSubsetStructure := rec(
-  lambdas := [ 360 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 84, 3, 12 ],
-  autGroup := Group( [ ( 1,13, 3)( 2,11, 8,14, 5,10)( 4,15, 7, 6,12, 9), ( 1,15, 6, 4,10, 5,12, 7, 2, 8,11, 3,14, 9,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 336, 12, 264 ],
-  autGroup := Group( [ ( 1, 5,10, 8, 4, 2)( 3, 9,12,11,15,13)( 6,14, 7), ( 1,13, 5,11, 9, 3, 7)( 2, 8,12,10, 6,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 264 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 336, 8, 168 ],
-  autGroup := Group( [ ( 1, 3, 7, 5)( 2, 8, 6,10)( 4,14,15,12)(11,13), ( 1, 5,10, 6,13,14, 9)( 3, 4,12, 8, 7,11,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 8,12, 3, 2, 4)( 5, 7,13)( 6,11,15,14, 9,10), ( 3, 6,15, 5)( 4, 7)( 8,14,11,13)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 315, 105, 5, 30 ],
-  autGroup := Group( [ ( 1, 3, 6,12, 8,15)( 2, 4, 9)( 5,11, 7,14,13,10), ( 1,10,12, 4, 9, 7, 2)( 3, 5,13,15,14,11, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 105,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 168, 4, 36 ],
-  autGroup := Group( [ ( 1, 8, 3, 7, 2)( 4,11,10,12, 6)( 5,13,15,14, 9), ( 1,14, 3,11, 9,12, 6)( 2, 7,13,10, 5, 8,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 42, 6, 15 ],
-  autGroup := Group( [ ( 2,14, 5, 6, 9,13,10)( 3, 4,12,15,11, 8, 7), ( 1,12,13, 2,14,15, 3)( 4,11, 7, 9,10, 8, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 91, 13, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 126, 9, 72 ],
-  autGroup := Group( [ ( 1, 4,12, 3,14, 9,11)( 2, 8,13, 5,10, 7,15), ( 1,15)( 2, 6)( 3, 7)( 4, 5)( 8,13)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 126,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 308, 11, 220 ],
-  autGroup := Group( [ ( 1, 4)( 3,13, 6, 8)( 5,14,15,11)( 9,12), ( 1,14, 9,11,15, 8,13, 4, 7,10, 6,12, 2, 3, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 308,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 154, 11, 110 ],
-  autGroup := Group( [ ( 1,10, 8,12)( 2, 4,13,11)( 3,14, 5, 7)( 6, 9), ( 1,14,13,15,12, 2, 3)( 4,10,11, 9, 6, 5, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 154,
-  tSubsetStructure := rec(
-  lambdas := [ 110 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 4, 5, 6,15, 7, 3)( 8,11,13,10,14,12, 9), ( 1, 6,10, 5,13, 9, 2)( 3,15, 7,11, 4,12, 8) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 42, 28, 10, 18 ],
-  autGroup := Group( [ ( 1, 2, 3,13,15,12,14)( 4, 5,11, 6,10, 8, 7), ( 1, 2, 5,11, 6,12, 8)( 4,13,14, 9, 7,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 28, 4, 6 ],
-  autGroup := Group( [ ( 2, 4, 9)( 5,14, 8)( 6,11,15)( 7,12,10), ( 1,13,15, 9, 7, 5,10,12, 4,14,11, 8, 3, 2, 6) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 15 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1512, 9, 864 ],
-  autGroup := Group( [ ( 1,13, 8, 4)( 2, 9, 7, 5)( 3,10)(11,15,14,12), ( 1,14,13, 7,11, 2, 4)( 3, 6, 9,10,15,12, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1512,
-  tSubsetStructure := rec(
-  lambdas := [ 864 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 224, 8, 112 ],
-  autGroup := Group( [ ( 2, 7,14,10, 6,11, 3)( 4, 8, 5,13,12, 9,15), ( 1,14, 4,11)( 2,12,13, 6)( 3, 7, 9, 8)( 5,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 224,
-  tSubsetStructure := rec(
-  lambdas := [ 112 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 42, 14, 5, 4 ],
-  autGroup := Group( [ ( 1, 4, 8,10, 3,13, 6)( 2,11, 5,14, 9,12,15), ( 1,11, 6,13,14)( 2, 4,12,15, 5)( 3,10, 8, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 11 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1,15, 4,13,10, 2)( 3, 5, 9)( 6, 8, 7,12,14,11), ( 1, 3)( 2,15)( 8,10)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 56, 4, 12 ],
-  autGroup := Group( [ ( 1, 4, 7, 3)( 2,15, 5, 6)( 8, 9)(10,12,11,13), ( 1, 6,14,10,15, 3)( 2, 4, 9)( 5,12,13, 8, 7,11) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 210, 84, 6, 30 ],
-  autGroup := Group( [ ( 1, 4)( 2,12, 7, 9)( 3,14,13, 5)( 6,11, 8,15), ( 1,11,10, 4,15, 5,14)( 2,13, 7, 6, 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8, 12 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 280, 10, 180 ],
-  autGroup := Group( [ ( 1,11,15,13,12,10, 6)( 2,14, 9, 3, 8, 5, 4), ( 1,13, 9, 7, 5, 3,11)( 2, 6, 8,10,12, 4,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 280,
-  tSubsetStructure := rec(
-  lambdas := [ 180 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 672, 8, 336 ],
-  autGroup := Group( [ ( 2,15)( 4, 8)( 5,11)( 6,10)( 7, 9)(12,14), ( 1,15, 7,11,13, 6,12)( 2,14, 8, 3, 9, 4, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 7, 8, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 392, 7, 168 ],
-  autGroup := Group( [ ( 2, 9, 3,10,11, 8,15)( 4, 5, 6,14,12, 7,13), ( 1, 2,15,14, 3,12,13)( 4, 9, 6, 7,11, 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 392,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 35, 28, 12, 22 ],
-  autGroup := Group( [ ( 1, 4, 6,11,12, 3, 9)( 2, 8,15, 5, 7,10,13), ( 1,15, 8, 6, 9,14, 7)( 2,11,13,12, 4,10, 5) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 22 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 630, 462, 11, 330 ],
-  autGroup := Group( [ ( 1, 2, 8,11)( 3,13,15, 7)( 4, 9,14,10)( 5,12), ( 1,12)( 3,15,14,13)( 4, 5, 7,11)( 6, 9, 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 462,
-  tSubsetStructure := rec(
-  lambdas := [ 330 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 280, 5, 80 ],
-  autGroup := Group( [ ( 1,10, 5)( 2, 6,13)( 3, 7,12)( 4,15,11), ( 1,10,15, 7)( 2,14)( 4, 5, 8, 9)( 6,12,11,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 280,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 126, 42, 5, 12 ],
-  autGroup := Group( [ ( 1, 2, 6, 9, 8, 4)( 3,10,12,11,15,14)( 5,13, 7), ( 1, 3,11,15, 5,12)( 2,13, 7, 4,10, 6)( 8,14, 9) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 10 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 126, 84, 10, 54 ],
-  autGroup := Group( [ ( 1, 6,12,14,10)( 2, 7, 9,15, 3)( 4, 8, 5,13,11), ( 1,10, 2,13,12, 8)( 3, 9, 5)( 4, 7,15,14,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 4, 6, 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 54 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1260, 840, 10, 540 ],
-  autGroup := Group( [ ( 1, 2, 5, 3, 7, 6, 4)( 8, 9,11,14,13,10,12), ( 1, 9)( 2, 8)( 3,11)( 4, 6)(10,15)(12,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 840,
-  tSubsetStructure := rec(
-  lambdas := [ 540 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 448, 8, 224 ],
-  autGroup := Group( [ ( 1, 4, 3,15)( 2, 5, 6, 7)( 8,12,14,10)(11,13), ( 1, 4)( 2, 6, 9, 8)( 3,12,13, 7)( 5,11,15,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,10, 3,14)( 2,15, 7,12, 6)( 4, 5,11,13, 8), ( 1, 2, 3)( 5, 6, 7)( 8,10, 9)(12,14,13) ] ),
-  baseBlock := [ 6, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 448,
-  tSubsetStructure := rec(
-  lambdas := [ 224 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 3, 2, 4, 9, 5,13,12,14,10, 6,11)( 7,15, 8), ( 1, 5,10, 8)( 2, 4,11, 7)( 3, 9, 6,15)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 4, 5,13,14)( 7, 8,10,11), ( 1, 3, 2, 4, 6, 5, 7, 9, 8,10,12,11,13,15,14) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 8, 6, 4, 2, 9,10, 5,15, 7,11,12)( 3,13,14), ( 1,11, 7, 8)( 2, 4)( 3, 6,15,12)( 5,10,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 4, 5,13,14)( 7, 8,10,11), ( 1, 3, 2, 4, 6, 5, 7, 9, 8,10,12,11,13,15,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1,12)( 3,10, 6, 7)( 4,15,13, 9)( 5,14)( 8,11), ( 1,12, 2,13, 6, 5, 4, 3,14, 7, 9,11)( 8,10,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1,11)( 2,10)( 4, 8)( 5, 7)(13,14), ( 1,14, 6, 4, 8, 3,10,11,12, 7, 2,15)( 5, 9,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1,11,10,14)( 2, 7, 8, 4)( 3,15, 6, 9)( 5,13), ( 1,14, 9)( 2, 3,13, 5,12,10,11,15, 4, 8, 6, 7) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 2)( 3, 9, 6,15)( 4, 8,13,11)( 5, 7,14,10), ( 1,12, 8,10, 9, 2, 7,15,14,13, 3, 5)( 4, 6,11) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 175, 7, 75 ],
-  autGroup := Group( [ ( 1, 8, 4,14, 7, 5,10,11,13, 2)( 3,15, 6, 9), ( 1, 8, 3)( 2,12,10)( 4,11, 6)( 5,15,13)( 7,14, 9) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 175,
-  tSubsetStructure := rec(
-  lambdas := [ 75 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 200, 8, 100 ],
-  autGroup := Group( [ ( 1, 5, 6)( 2, 3,13)( 4, 8, 9)( 7,11,12)(10,14,15), ( 1, 8, 4, 2)( 5,10)( 6, 9,15,12)( 7,11,13,14) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 200,
-  tSubsetStructure := rec(
-  lambdas := [ 100 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 8, 9,13, 2,12, 4,14, 6, 7, 5, 3)(10,11,15), ( 1,12)( 2,11,14, 5)( 3, 4, 6,13)( 7,15,10, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4,14)( 5, 7,11,13)( 6,15)( 8,10)( 9,12), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 5, 7, 2)( 4,11)( 6,12,15, 9)( 8,13,14,10), ( 6,15)( 9,12), ( 2, 5)( 8,14), ( 1, 7)( 2, 3)( 5, 6)( 8, 9)(10,13)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4,14)( 5, 7,11,13)( 6,15)( 8,10)( 9,12), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4, 5, 6, 9,15,11,14,10)( 2, 7), ( 1, 2, 4, 3)( 6, 7,14,13,11,12, 9, 8), ( 1, 3)( 2, 4, 7, 9)( 6, 8,11,13)(10,15)(12,14), ( 1, 8, 6, 3)( 2, 9,12,14)( 4, 7)(10,15)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 7, 8,11,12,13)(10,15), ( 1, 3, 7, 6, 8, 2)( 4,10,14, 5)( 9,15)(11,13,12), ( 1, 6)( 3, 4, 8,14,13, 9) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 2, 4, 3)( 7,14,13,12, 9, 8)(10,15), ( 1, 7,11,12, 6, 2)( 4, 5)( 8,13)( 9,15)(10,14), ( 3, 4)( 8, 9,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 6,14,11, 9)( 3, 5)( 7,12)( 8,10,13,15), ( 1, 3, 2,11, 8,12)( 4, 5)( 6,13, 7)( 9,15)(10,14), ( 1, 3, 6, 8)( 7,12)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 4,14, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 3, 4, 2,11,15, 8,14, 7, 6,10,13, 9,12), ( 1, 5, 2, 3, 6,10, 7,13)( 8,11,15,12), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 2,13)( 3, 6, 7)( 4, 9,14)( 5,15,10)( 8,11,12), ( 1, 3,12,10,14)( 2,15, 4, 6, 8)( 5, 9,11,13, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2, 6, 7,11,12)( 4, 5)( 8,13)( 9,10,14,15), ( 1, 6,11)( 2, 3)( 7,13,12, 8)(10,15), ( 2, 3, 5, 4, 7,13,15, 9)( 8,10,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 2,13)( 3, 6, 7)( 4, 9,14)( 5,15,10)( 8,11,12), ( 1, 3,12,10,14)( 2,15, 4, 6, 8)( 5, 9,11,13, 7) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 9, 3, 7)( 2, 6, 4, 8,12,11,14,13)( 5,10), ( 1, 9,11,14, 6, 4)( 2, 8)( 3, 7)( 5,15,10)(12,13), ( 1, 9,10, 7, 3)( 2, 8, 6, 4, 5)(11,14,15,12,13), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 2,13)( 3, 6, 7)( 4, 9,14)( 5,15,10)( 8,11,12), ( 1, 3,12,10,14)( 2,15, 4, 6, 8)( 5, 9,11,13, 7) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 4, 2, 3, 6,14,12,13,11, 9, 7, 8)( 5,15), ( 2, 3, 4, 7, 8, 9)( 5,10)(12,13,14), ( 1, 3, 7, 6, 8, 2)( 4, 5)( 9,15)(10,14)(11,13,12), ( 1, 6)( 2, 7)( 3, 4)( 5,10,15)( 8,14)( 9,13) ] ),
-  autSubgroup := Group( [ ( 1, 2,13)( 3, 6, 7)( 4, 9,14)( 5,15,10)( 8,11,12), ( 1, 3,12,10,14)( 2,15, 4, 6, 8)( 5, 9,11,13, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 7, 9, 8, 6, 2, 4, 3)( 5,15,10)(11,12,14,13), ( 3, 8,13)( 5,15), ( 1, 2, 3)( 4,10, 9,15,14, 5)( 6, 7, 8)(11,12,13), ( 1, 2, 6, 7)( 3, 4)( 5,15)( 8, 9)(11,12)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 7, 6, 2)( 3, 5, 4)( 8,10,14)( 9,13,15)(11,12), ( 1,11, 6)( 2, 4, 3)( 7,14, 8)( 9,13,12)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 5,10,15) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 8)( 2, 4,10, 7, 9,15,12,14, 5)( 3, 6)(11,13), ( 1, 7, 3, 4)( 2, 8,14,11,12,13, 9, 6), ( 4, 9,14)( 5,10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 5,10,15) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3, 6, 8)( 4, 5)( 7,12)( 9,10,14,15)(11,13), ( 1, 4, 5, 2)( 6, 9,10, 7)(11,14,15,12), ( 2, 3)( 7, 8)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 2, 4, 8)( 3, 6,12, 9)( 5,10)( 7,14,13,11), ( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 2, 3,11, 7,13, 6,12, 8)( 4, 5)( 9,15)(10,14), ( 1, 2, 6, 7)( 3, 5, 4)( 8,10,14)( 9,13,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 6)( 2, 8,14,12,13, 9, 7, 3, 4)( 5,15,10), ( 1, 2, 6, 7)( 3, 8)( 4,10, 9,15,14, 5)(11,12), ( 1, 3, 6, 8)( 2, 7)( 4, 9,14)( 5,15)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 9, 8, 7, 6,14,13,12,11, 4, 3, 2)( 5,15,10), ( 2, 3, 9, 7, 8,14,12,13, 4)( 5,10,15), ( 1, 8, 4,10)( 3, 9,15,11,13,14, 5, 6), ( 1, 6)( 2, 3, 4)( 7, 8, 9,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 6)( 2, 3, 9, 5)( 4,10,12,13,14,15, 7, 8), ( 2, 7,12)( 3, 8)( 5,10,15), ( 1, 8, 9, 6, 3, 4)( 5,15)(11,13,14), ( 1, 6)( 8,13)( 9,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 7, 8,11,12,13, 6, 2, 3)( 4, 5)( 9,10)(14,15), ( 2, 5, 4, 3)( 7,10, 9, 8)(12,15,14,13), ( 1, 7)( 2,11,12, 6)( 8,13), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2)( 3, 4)( 6,15, 7)( 8,14,13, 9)(10,12,11), ( 1, 4, 3,11,14, 8)( 6, 9,13)( 7,12)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 4)( 2, 8,14, 5)( 9,12,15)(10,13), ( 1, 5, 6, 7,11,15,13, 8, 9)( 2, 3, 4)(10,14,12), ( 1, 5)( 2, 7,14,10,11,13, 8, 4)( 6, 9)(12,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1,13, 4, 7)( 2,14, 8,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 7)( 2, 3, 5, 6)( 4,10,13)( 8,15)( 9,14)(11,12), ( 1, 2, 7,11,13,14,10, 8)( 4, 5)(12,15), ( 8,11) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1,13, 4, 7)( 2,14, 8,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 8, 7,14,13, 5, 4,11,10, 2), ( 1, 9, 8)( 2,13, 3, 5, 7, 6,14, 4,15,11,10,12) ] ),
-  autSubgroup := Group( [ ( 1, 3, 8)( 2,10,12)( 4, 6,11)( 5,13,15)( 7, 9,14), ( 1, 5, 4,14)( 2,10)( 6, 9,15,12)( 7, 8,13,11) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 9)( 3,10,15, 7)( 4, 6,13,12)( 5,14)( 8,11), ( 1, 9, 2,13, 3, 5, 7, 6,11,10,12, 8)( 4,15,14) ] ),
-  autSubgroup := Group( [ ( 1, 3, 8)( 2,10,12)( 4, 6,11)( 5,13,15)( 7, 9,14), ( 1, 5, 4,14)( 2,10)( 6, 9,15,12)( 7, 8,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 200, 8, 100 ],
-  autGroup := Group( [ ( 1, 8,12)( 2, 3,10)( 4,11, 9)( 5,15,13)( 6, 7,14), ( 1,10,13, 4)( 2, 3, 5, 9, 8,15,11, 6,14,12) ] ),
-  autSubgroup := Group( [ ( 1, 3, 8)( 2,10,12)( 4, 6,11)( 5,13,15)( 7, 9,14), ( 1, 5, 4,14)( 2,10)( 6, 9,15,12)( 7, 8,13,11) ] ),
-  baseBlock := [ 4, 7, 8, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 200,
-  tSubsetStructure := rec(
-  lambdas := [ 100 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 375, 175, 7, 75 ],
-  autGroup := Group( [ ( 1,11, 7,14)( 2,10, 8,13)( 3, 6,12, 9)( 4, 5), ( 1,15, 8)( 2,10, 6)( 3, 5,13)( 4,12,11)( 7, 9,14) ] ),
-  autSubgroup := Group( [ ( 1, 3, 8)( 2,10,12)( 4, 6,11)( 5,13,15)( 7, 9,14), ( 1, 5, 4,14)( 2,10)( 6, 9,15,12)( 7, 8,13,11) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 175,
-  tSubsetStructure := rec(
-  lambdas := [ 75 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 2)( 3, 9, 6,15)( 4, 8,13,11)( 5, 7,14,10), ( 1,12, 8,10, 9, 2, 7,15,14,13, 3, 5)( 4, 6,11) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 2, 3, 7, 5,12, 4,11,15,13, 8, 6)( 9,10,14), ( 1, 5, 7, 2)( 4,11)( 6,12,15, 9)( 8,13,14,10), ( 6,15)( 9,12), ( 2, 5)( 8,14) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1,12)( 3,10, 6, 7)( 4,15,13, 9)( 5,14)( 8,11), ( 1,12, 2,13, 3, 5, 7,15,11,10, 9, 8)( 4, 6,14) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1,14,15,13, 8, 3, 4, 5,12, 7,11, 9)( 2, 6,10), ( 1,14)( 2,13,11, 4)( 3,12)( 5,10, 8, 7)( 6, 9) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 2,13,11)( 3, 9,12, 6)( 4, 8,10, 5)( 7,14), ( 1, 3,11)( 2,13,12,14, 7,15, 5, 4, 9, 8,10, 6) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1, 5, 7, 8)( 2,13,11,10)( 3, 6,12, 9)( 4,14), ( 1, 9, 2, 7, 6,11,10,12, 8, 4,15,14)( 3, 5,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3,12)( 6, 9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 2, 4, 3, 7, 9,13,12,14, 8)(10,15), ( 2, 5, 7,10)( 6,11)( 8,13)(12,15), ( 1, 7, 6, 2)( 9,14)(10,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8,11, 2, 3, 6,12,13)( 4,14, 9)( 5,15,10), ( 1, 8,15, 4, 7, 6, 3, 5,14,12)( 2,11,13,10, 9) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 3, 6,14, 8,11, 9,13)( 7,12), ( 1, 3, 5, 6,13,10)( 2, 4)( 7,14,12, 9)( 8,15,11), ( 1, 4, 2)( 6,14, 7,11, 9,12)( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8,11, 2, 3, 6,12,13)( 4,14, 9)( 5,15,10), ( 1, 8,15, 4, 7, 6, 3, 5,14,12)( 2,11,13,10, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 2, 9, 3)( 4, 8,11,12,14,13, 6, 7)( 5,10), ( 1, 6)( 2, 3)( 4, 9,14)( 5,15,10)( 7, 8)(12,13), ( 2, 4, 5)( 7, 9,10)(12,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8,11, 2, 3, 6,12,13)( 4,14, 9)( 5,15,10), ( 1, 8,15, 4, 7, 6, 3, 5,14,12)( 2,11,13,10, 9) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 3, 7, 6, 8,12,11,13, 2)( 5,10), ( 1, 3, 4, 6, 8, 9)( 2, 7)( 5,10,15)(11,13,14), ( 1, 2)( 3, 8)( 5,10)( 6, 7)(11,12), ( 1, 7)( 2, 6)( 3, 8)( 4, 5)( 9,10)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8,11, 2, 3, 6,12,13)( 4,14, 9)( 5,15,10), ( 1, 8,15, 4, 7, 6, 3, 5,14,12)( 2,11,13,10, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 3, 9, 2, 6, 8,14,12,11,13, 4, 7)( 5,10,15), ( 1, 3, 4, 2)( 6, 8, 9,12,11,13,14, 7)(10,15), ( 1, 2, 6, 7)( 4, 9)( 5,10)(11,12), ( 1, 6)( 2, 3, 9, 5)( 4,10, 7, 8)(12,13,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2, 4, 3, 6,10,12, 9,13,11,15, 7,14, 8), ( 1, 3, 5, 2,11, 8,15,12, 6,13,10, 7), ( 3, 4)( 7,12)( 8, 9)(13,14), ( 2, 3)( 4, 5)( 6,11)( 7,13)( 8,12)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2,11,12, 6, 7)( 3, 5, 4)( 8,15,14)( 9,13,10), ( 1, 6)( 2, 3, 7, 8)( 9,14)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 9, 5, 3, 7)( 2, 6, 4,15,13,12,11,14,10, 8), ( 1, 3, 4, 2)( 6, 8, 9,12,11,13,14, 7), ( 1, 6)( 2, 8,12,13)( 3, 7)( 9,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2, 3)( 4, 5)( 6, 7,13,11,12, 8)( 9,10,14,15), ( 1, 7, 6, 2)( 3, 5, 4)( 8,10, 9)(11,12)(13,15,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 7,14,13,11,12, 9, 8)( 2, 4, 3, 6)( 5,15), ( 1, 2, 6, 7)( 3, 4)( 5,10)( 8,14,13, 9)(11,12), ( 2, 7)( 3, 8)( 4, 5)( 9,15)(10,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2, 4, 3, 6,10,12,14, 8,11,15, 7, 9,13), ( 3, 5, 4)( 7,12)( 8,10, 9)(13,15,14), ( 1, 2,11, 7, 6,12)( 3, 4)( 8,14)( 9,13)(10,15), ( 2, 3)( 6,11)( 7, 8)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4, 7, 3)( 2, 8,11,14,12,13, 6, 9)( 5,15,10), ( 1, 7, 3, 9,15,11,12,13,14,10, 6, 2, 8, 4, 5), ( 1, 8, 6, 3)( 2, 7)( 4, 9,14)( 5,10,15)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 3,14)( 2, 5)( 4, 6, 8)( 7,10,12,15)( 9,11,13), ( 1,13, 9,10)( 2, 7)( 3, 4,15, 6, 8,14, 5,11) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3, 5, 4, 2,11, 8,10, 9,12)( 6,13,15,14, 7), ( 1, 4, 5, 3, 6,14,10, 8)( 9,15,13,11) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 3, 4, 7)( 2, 6, 8,14,12,11,13, 9)(10,15), ( 1, 7, 8, 9,11,12,13,14)( 2, 3, 4, 6)(10,15), ( 1, 9,10)( 4,15,11,14, 5, 6) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 6)( 2, 5, 3, 7,10, 8)( 9,14)(12,15,13), ( 1, 7)( 2,11,12, 6)( 4, 5)( 9,15,14,10), ( 3, 4)( 6,11)( 8, 9)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 5, 6, 7, 8,15,13,14,12,10,11, 9, 4, 2, 3), ( 1, 2, 4,11,10, 8,13,14)( 5, 7)( 6,12, 9,15), ( 1, 5)( 2, 4,11,10)( 7, 8)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4,11,10,14, 7, 5)( 6, 9,15,12)( 8,13), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 2, 3, 5, 6)( 8,12,11, 9,14,15)(10,13), ( 1, 5, 6,13, 8,15, 7,14, 9, 4, 2, 3)(10,11,12), ( 1, 5)( 2, 4)( 7,14,13,11,10, 8)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4,11,10,14, 7, 5)( 6, 9,15,12)( 8,13), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 7, 4)( 2, 3, 5, 9)( 6, 8,15,14)(11,12), ( 1, 8,10,14, 4, 2)( 5, 7)( 6,12,15, 9)(11,13), ( 1, 8,13,11)( 2, 4)( 5, 7)( 9,15,12)(10,14), ( 1, 2, 7,11,10, 5)( 4, 8)( 6,15,12)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4, 8,10, 5, 7,14)( 6,12,15, 9)(11,13), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 5, 4, 2, 7,14,13, 8,10,11)( 9,15,12), ( 1,12,11, 7, 3, 5)( 2, 4, 6,14,13,15, 8,10, 9), ( 1,10,13, 4, 7)(11,14)(12,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4, 8,10, 5, 7,14)( 6,12,15, 9)(11,13), ( 1, 3, 2)( 4, 6, 5)( 7, 9, 8)(10,12,11)(13,15,14) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 4, 7,13,10)( 8,11,14)(12,15), ( 1, 5,15,13,14,12,10, 8, 6)( 2, 3, 4)( 7,11, 9), ( 1, 4)( 8,11,14)( 9,12), ( 1, 2)( 4, 5, 7, 8)(10,11,13,14)(12,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1,13, 4, 7)( 2,14, 8,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 8,15, 7,14,12,10, 5, 3, 4,11, 9,13, 2, 6), ( 2, 6, 5, 3, 8, 9)(11,15,14,12), ( 3, 6)(10,13)(11,14), ( 2, 3)( 5, 6)( 8, 9)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1,13, 4, 7)( 2,14, 8,11), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1,12,14,13, 3,11, 4, 6, 2, 7,15, 5)( 8,10, 9), ( 1,14)( 2, 7,11,10)( 3, 9, 6,15)( 4, 5,13, 8) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 4,14)( 5,13)( 7,11)( 8,10), ( 1, 6,11)( 2,13,15,14, 7, 3, 5, 4,12, 8,10, 9) ] ),
-  baseBlock := [ 4, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 400, 8, 200 ],
-  autGroup := Group( [ ( 1,14, 7, 5,13,11, 4, 2,10, 8), ( 1,15,14)( 2, 7, 3, 5,13, 6,11,10,12, 8, 4, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 4,14)( 5,13)( 7,11)( 8,10), ( 1, 6,11)( 2,13,15,14, 7, 3, 5, 4,12, 8,10, 9) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 400,
-  tSubsetStructure := rec(
-  lambdas := [ 200 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 3)( 4, 6,13,15)( 5,14)( 7, 9,10,12)( 8,11), ( 1, 8, 6, 4,14, 9,13, 2, 3,10,11,15)( 5,12, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 4,14)( 5,13)( 7,11)( 8,10), ( 1, 6,11)( 2,13,15,14, 7, 3, 5, 4,12, 8,10, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 750, 350, 7, 150 ],
-  autGroup := Group( [ ( 1, 5,12, 4,14, 9,10, 2, 3, 7, 8, 6)(11,15,13), ( 1,14, 4, 5)( 2,10)( 6,12,15, 9)( 7,11,13, 8) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 4,14)( 5,13)( 7,11)( 8,10), ( 1, 6,11)( 2,13,15,14, 7, 3, 5, 4,12, 8,10, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 350,
-  tSubsetStructure := rec(
-  lambdas := [ 150 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 2, 8, 4)( 3,14, 7)( 9,12,13)(10,15), ( 1, 7, 5,11, 2,10, 6,12,15)( 3,14)( 4,13)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9,12,15,13,11,14, 7,10, 8), ( 1, 5, 3, 4, 2,11,15, 8,14,12)( 6,10,13, 9, 7), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 3, 9,15,11,13,14, 5)( 4,10, 6, 8), ( 1, 2, 4)( 6, 7, 9,11,12,14)(10,15), ( 1, 2, 9)( 3, 8,13)( 4, 6, 7)( 5,10)(11,12,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1,11)( 2, 4, 5, 3, 7,14,15, 8)( 9,10,13,12), ( 1, 7)( 2,11,12, 6)( 3, 5)( 8,10,13,15), ( 4, 5)( 6,11)( 9,10)(14,15), ( 3, 4)( 8, 9)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,13)( 2,14)( 3, 6)( 4, 7)( 8,11)( 9,12) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 7,13,14,11,12, 3, 4)( 2, 8, 9, 6)( 5,10), ( 1, 9, 5, 3)( 4,15,13,11,14,10, 8, 6), ( 1, 6)( 2, 7)( 3, 9)( 4, 8,14,13)( 5,10), ( 1, 8, 6, 3)( 9,14)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 3, 5, 2, 6,14,13,10, 7,11, 9, 8,15,12), ( 1, 2, 3)( 6,12, 8,11, 7,13)( 9,14)(10,15), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 7,13,11,12, 8)(10,15), ( 1, 2, 5, 4, 6, 7,10,14,11,12,15, 9)( 8,13), ( 1, 7,15,13,11, 2, 5, 3, 6,12,10, 8) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 2,12, 7)( 3, 4,10)( 5,13,14,15, 8, 9), ( 1,12,10)( 2, 5,11, 7,15, 6)( 3, 9)( 4, 8,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 6,11)( 4,14, 9), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2)( 3, 4)( 6,15, 7)( 8, 9)(10,12,11)(13,14), ( 1, 3,11,13)( 2, 4)( 6, 8)( 7, 9,12,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,11)( 4,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 2, 4, 7, 9,12,14)( 5,15,10), ( 1, 7, 3, 6, 2, 8)( 4,10)( 5, 9)(11,12,13)(14,15), ( 1, 2, 9)( 3, 8,13)( 4, 6, 7)( 5,10,15)(11,12,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,11)( 4,14) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1344, 8, 672 ],
-  autGroup := Group( [ ( 1, 8, 3)( 2,11,15)( 4,13, 6)( 5, 7,14), ( 1, 9,15,11,12)( 2, 7, 6, 4, 8)( 3, 5,10,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 7, 8, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1344,
-  tSubsetStructure := rec(
-  lambdas := [ 672 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 1120, 10, 720 ],
-  autGroup := Group( [ ( 1, 2, 5, 4,15, 6, 3)( 8,14,11, 9,10,13,12), ( 1, 6, 5,10, 7)( 2, 9, 8,12,15)( 3,13, 4,14,11) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1120,
-  tSubsetStructure := rec(
-  lambdas := [ 720 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 1008, 9, 576 ],
-  autGroup := Group( [ ( 1, 5,15, 2,12, 6, 9, 4, 7,14, 8, 3,11,10,13), ( 1,14, 7, 4,10,11, 3, 8,13, 9, 5, 2,15, 6,12) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1008,
-  tSubsetStructure := rec(
-  lambdas := [ 576 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 672, 6, 240 ],
-  autGroup := Group( [ ( 1, 5, 4, 6, 9)( 2, 8, 3,10,12)( 7,11,14,13,15), ( 1,13, 5,14,11,12)( 2, 3, 7, 4,10, 8)( 6,15, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 672,
-  tSubsetStructure := rec(
-  lambdas := [ 240 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1680, 560, 5, 160 ],
-  autGroup := Group( [ ( 1,12, 6, 3, 2, 5,10,14, 8,15,11, 9, 7, 4,13), ( 1,15, 2, 8,14,13, 5, 9,12, 7, 3,10, 4,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 560,
-  tSubsetStructure := rec(
-  lambdas := [ 160 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 35, 28, 12, 22 ],
-  autGroup := Group( [ ( 1, 5, 4, 7, 8)( 2,10,13, 3, 9)( 6,11,14,12,15), ( 1, 8, 3,10)( 2, 7, 9,14)( 4, 6)( 5,11,12,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 22 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1176, 7, 504 ],
-  autGroup := Group( [ ( 1, 2, 8,15,12, 5, 7, 3, 6,13,11,10, 4, 9,14), ( 1, 4,11,12, 6,14, 3)( 2,13,10,15, 8, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1176,
-  tSubsetStructure := rec(
-  lambdas := [ 504 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1176, 7, 504 ],
-  autGroup := Group( [ ( 1, 9,11, 2, 3,15,10)( 4, 7,13, 6,14,12, 5), ( 1,10, 9, 4,12, 2, 7)( 3,13, 8,14, 5, 6,11) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1176,
-  tSubsetStructure := rec(
-  lambdas := [ 504 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 63, 9, 36 ],
-  autGroup := Group( [ ( 1, 6, 9, 4,14,11, 3)( 2, 5,10, 7,13, 8,15), ( 1,15,13, 7)( 2, 5, 9,14)( 3, 8)( 6,12,10,11) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 63,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 8, 8, 4 ],
-  autGroup := Group( [ ( 1,13, 3)( 2, 4, 7,14,10, 5)( 6,11,15, 8, 9,12), ( 1,10,15, 2)( 3, 9,11, 8)( 4, 5,13,12)( 7,14) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 84, 3, 12 ],
-  autGroup := Group( [ ( 1, 3, 2, 7, 9, 5, 8,15, 6,12,11, 4,13,14,10), ( 1,13, 9,12, 7,14)( 2, 5, 8)( 3,11,10, 4, 6,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 112, 4, 24 ],
-  autGroup := Group( [ ( 1, 6, 7,12, 2,11, 3,15,13, 9, 5,10, 8,14, 4), ( 1, 8, 5,11,12, 6, 2)( 4, 9, 7,15,10,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 12 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 112,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 168, 6, 60 ],
-  autGroup := Group( [ ( 1, 3,13)( 2,14,12)( 5, 7, 9)( 6,10, 8), ( 1, 8,13,14, 5)( 2, 3, 9, 7,15)( 4,11, 6,10,12) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 77, 11, 55 ],
-  autGroup := Group( [ ( 1, 3, 9,15,13, 5, 6, 2, 7,12,11,10, 4, 8,14), ( 1, 5,15, 3, 4, 6, 7)( 8,13,14, 9,11,10,12) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 77,
-  tSubsetStructure := rec(
-  lambdas := [ 55 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 35, 7, 3, 1 ],
-  autGroup := Group( [ ( 1,14, 4, 6,15, 5,13, 9,10, 7,11,12, 2, 3, 8), ( 1,14, 3, 8, 7,10)( 2, 4,15)( 5,12)( 9,11,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 12 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 1 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 28, 4, 6 ],
-  autGroup := Group( [ ( 1, 2, 7, 8)( 4,13,14,11)( 5, 9)( 6,12,10,15), ( 1, 7,15,14, 6, 9, 8)( 2, 5,11, 3,12,13, 4) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 15 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 280, 5, 80 ],
-  autGroup := Group( [ ( 1, 2,10,12, 7, 9, 4)( 3,14,11, 8,15, 6,13), ( 1, 5, 8, 9)( 2,14, 7,11)( 3, 6)( 4,15,13,12) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 280,
-  tSubsetStructure := rec(
-  lambdas := [ 80 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1008, 6, 360 ],
-  autGroup := Group( [ ( 1, 6,15, 2,14,11)( 3,10, 5, 8, 9,13)( 4,12, 7), ( 1,15,14)( 2, 4)( 3,10,13, 5,12,11)( 6, 8, 7) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1008,
-  tSubsetStructure := rec(
-  lambdas := [ 360 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 56, 7, 24 ],
-  autGroup := Group( [ ( 1, 2,14,12, 3,13,15)( 4, 7,11, 9, 6, 8, 5), ( 1,14,15)( 2, 7,10)( 3, 8, 4)( 5,12, 6)( 9,11,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 120, 64, 8, 32 ],
-  autGroup := Group( [ ( 1, 8, 9,15)( 2,13, 3, 4)( 5,11,12,10)( 6,14), ( 1,10)( 2, 8, 9, 3)( 5,14)( 6,12,13, 7) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 64,
-  tSubsetStructure := rec(
-  lambdas := [ 32 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 168, 56, 5, 16 ],
-  autGroup := Group( [ ( 1, 3,11,15, 9, 8, 2)( 4, 6,14, 5,12,13, 7), ( 1, 3, 7, 4, 5,15, 6)( 8,13,11,12,14,10, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 11 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 56,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 448, 8, 224 ],
-  autGroup := Group( [ ( 1, 4, 6,11, 8,15)( 2,12, 7,14,10,13)( 3, 9, 5), ( 1,11, 7, 5, 3,13, 9)( 2, 8, 4, 6,15,14,10) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 448,
-  tSubsetStructure := rec(
-  lambdas := [ 224 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 196, 7, 84 ],
-  autGroup := Group( [ ( 1, 2, 7,12,10, 4, 9)( 3, 5,11, 6,14,13, 8), ( 2, 3,15)( 5, 7, 6)( 8,11, 9)(12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 8 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 196,
-  tSubsetStructure := rec(
-  lambdas := [ 84 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 560, 10, 360 ],
-  autGroup := Group( [ ( 1, 9, 6, 4,14,11,12)( 2, 7,15,13, 5,10, 8), ( 1,15, 4,14,11, 5,10)( 2, 8,13, 3,12, 7, 6) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 560,
-  tSubsetStructure := rec(
-  lambdas := [ 360 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 616, 11, 440 ],
-  autGroup := Group( [ ( 1,11,13, 4,14, 8)( 2, 7)( 3,15,12)( 5, 9, 6), ( 1,14, 9,11, 6,12, 4)( 2, 5, 7,10,15, 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 616,
-  tSubsetStructure := rec(
-  lambdas := [ 440 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 315, 210, 10, 135 ],
-  autGroup := Group( [ ( 1, 4, 2, 3, 6,15)( 5, 7)( 8,11,12)( 9,14,10), ( 1,14, 6,13,15, 7, 4, 2, 8,12, 9, 5,11,10, 3) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 210,
-  tSubsetStructure := rec(
-  lambdas := [ 135 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 91, 13, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 308, 11, 220 ],
-  autGroup := Group( [ ( 2, 6, 5)( 3,14, 7,13,15, 9)( 4,10)( 8,11,12), ( 1,13, 6, 8,10, 3, 4)( 2,11,12, 9, 5,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 308,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 336, 12, 264 ],
-  autGroup := Group( [ ( 2, 4, 9)( 3,15, 5,13,14,11)( 6, 8)( 7,12,10), ( 1, 9,11,12, 5,10)( 2, 3,14)( 4, 7,13, 8, 6,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 336,
-  tSubsetStructure := rec(
-  lambdas := [ 264 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 315, 105, 5, 30 ],
-  autGroup := Group( [ ( 1, 4,14, 7, 8,11,13)( 3,10, 5, 6,15,12, 9), ( 1,11,15,13)( 2, 3, 5, 4)( 6,12, 7,10)( 9,14) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 105,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 224, 8, 112 ],
-  autGroup := Group( [ ( 1,13, 7,10, 3, 5, 2, 6, 9, 8,11,15,14,12, 4), ( 1,14,11, 4)( 2, 7, 8,13)( 6,12)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 224,
-  tSubsetStructure := rec(
-  lambdas := [ 112 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 420, 252, 9, 144 ],
-  autGroup := Group( [ ( 1, 7, 3, 9,11, 5,13)( 2, 8,10, 4,12,15, 6), ( 1, 8,12,15,10)( 2, 7, 9,14,13)( 3, 5, 4, 6,11) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 252,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 42, 6, 15 ],
-  autGroup := Group( [ ( 1, 8,10, 7,12, 3, 5)( 2, 4,15, 9,11, 6,13), ( 1,15, 8,11, 5,10,13, 9, 3, 6, 4, 2,14, 7,12) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 42,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 224, 4, 48 ],
-  autGroup := Group( [ ( 1,11,14, 8, 7, 4,13)( 3, 5,10, 9,15,12, 6), ( 1,12, 2)( 3,15,13)( 4, 6,10, 5, 7,11)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 224,
-  tSubsetStructure := rec(
-  lambdas := [ 48 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1344, 8, 672 ],
-  autGroup := Group( [ ( 1, 7, 8, 3, 9,15, 4, 5, 6,11,14,12, 2,10,13), ( 1,13)( 4,10, 8, 6)( 5,11, 9, 7)(12,15) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 9, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1344,
-  tSubsetStructure := rec(
-  lambdas := [ 672 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 15, 7, 7, 3 ],
-  autGroup := Group( [ ( 1,10,12, 4, 9, 7, 2)( 3,11, 6, 8,13,14, 5), ( 1, 2, 4, 6, 5, 3)( 7,15)( 9,13,12)(10,11,14) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 12, 13, 14, 15 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 7,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 2520, 1512, 9, 864 ],
-  autGroup := Group( [ ( 2, 7,12, 9)( 3,13)( 4,10)( 5,15,11,14), ( 1,14,13, 8, 2,11, 7)( 3, 9,15,12,10, 5, 6) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1512,
-  tSubsetStructure := rec(
-  lambdas := [ 864 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 168, 112, 10, 72 ],
-  autGroup := Group( [ ( 1, 2, 3,12,14,15,13)( 4, 6, 8, 5, 9,10,11), ( 1, 5, 9, 7,13,11, 3)( 2, 4,12,14,10, 6, 8) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 112,
-  tSubsetStructure := rec(
-  lambdas := [ 72 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 280, 112, 6, 40 ],
-  autGroup := Group( [ ( 1, 5, 3,11, 9, 7,13)( 2, 8, 4,15, 6,14,12), ( 1,10, 2,14, 9, 6, 5)( 3, 8,15,12,11, 4, 7) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 8, 12 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 112,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 280, 168, 9, 96 ],
-  autGroup := Group( [ ( 1, 2,12)( 3, 9,15, 7,13, 4)( 5, 6, 8)(10,14), ( 1, 4, 6, 3)( 7,15)( 9,11,14,12)(10,13) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 168,
-  tSubsetStructure := rec(
-  lambdas := [ 96 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 840, 392, 7, 168 ],
-  autGroup := Group( [ ( 2,15,11, 3,10, 9, 8)( 4, 7, 6,12,14, 5,13), ( 1,12, 8, 3,14,10)( 2,11, 4)( 5, 7)( 6,15, 9) ] ),
-  autSubgroup := Group( [ ( 1, 7,13,14, 2,11, 4)( 3, 6,15,10, 9, 5,12), ( 1, 8,15, 9)( 2,11, 3,10)( 4, 5)( 6, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 392,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5,12,13,11, 6, 7,14,15,10, 8, 9), ( 1, 2, 4, 5)( 7,11,10,14,13, 8)(12,15), ( 1, 7)( 6,12,15, 9)( 8,11)(10,13), (5,8) ] ),
-  autSubgroup := Group( [ ( 1, 2,10,14,13, 8, 4,11)( 5, 7), ( 1,15,14)( 2,10, 3)( 4, 6, 5)( 7,12,11)( 8,13, 9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 7, 4,10,13)( 8,14,11)( 9,15,12), ( 1, 5, 7,14,13,11, 4, 2)( 8,10)( 9,15), ( 1, 6, 4, 3,10, 9)( 2, 5)( 7,12)( 8,11)(13,15), ( 8,11) ] ),
-  autSubgroup := Group( [ ( 1, 2,10,14,13, 8, 4,11)( 5, 7), ( 1,15,14)( 2,10, 3)( 4, 6, 5)( 7,12,11)( 8,13, 9) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 5,15,13,14,12,10,11, 6, 4, 2, 3)( 7, 8, 9), ( 1, 7, 4)( 2, 8,14,11)( 6,15, 9)(10,13), ( 1, 5, 7, 8,10,14, 4, 2)( 6,12,15, 9)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 2,10,14,13, 8, 4,11)( 3,12, 9,15)( 5, 7), ( 1, 9, 5,10, 3,11)( 2, 7,15,14, 4,12)( 6, 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 2, 3, 7,11,12, 4, 5, 6)( 8,15,13,14, 9,10), ( 1, 2, 7,14,13, 8, 4, 5)( 3, 6)(10,11)(12,15), ( 1,10,13, 7)( 2, 5)( 3, 6)( 9,12)(11,14) ] ),
-  autSubgroup := Group( [ ( 1, 2,10,14,13, 8, 4,11)( 3,12, 9,15)( 5, 7), ( 1, 9, 5,10, 3,11)( 2, 7,15,14, 4,12)( 6, 8,13) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 2)( 4,14,13,11,10, 5, 7, 8)( 6,15,12), ( 1, 2, 3, 7,14, 9, 4, 5,12,10, 8, 6)(11,15,13), ( 1, 7)( 2, 8,11, 5)( 6, 9,12)(10,13) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 3, 2,10, 9,11, 7,15,14,13,12, 8)( 4, 6, 5), ( 1,10,13, 4)( 3, 6)( 8,11), ( 8,11)(12,15), ( 1, 4)( 2, 3)( 5, 6)( 7,10)( 8, 9)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4,10, 2, 8, 6, 9, 5, 7, 3)(11,14,15,12,13), ( 1, 6)( 2, 4, 8)( 3, 7, 9,13,12,14)( 5,10), ( 1, 7, 3)( 2, 8,11,12,13, 6)( 4, 9)(10,15), ( 2, 3)( 7, 8)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 6,11)( 2,12, 7)( 3, 4,15, 8, 9, 5,13,14,10), ( 1, 8, 9,15, 2, 6, 3,14,10, 7)( 4, 5,12,11,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 6,11)( 2, 4, 5, 3)( 7,14,10,13,12, 9,15, 8), ( 1, 7, 6, 2,11,12)( 3, 4, 5)( 8, 9,10)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 6,11)( 2,12, 7)( 3, 4,15, 8, 9, 5,13,14,10), ( 1, 8, 9,15, 2, 6, 3,14,10, 7)( 4, 5,12,11,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 4, 2, 5)( 3, 8,13)( 6, 9, 7,15)(10,11,14,12), ( 1, 4, 3, 5,11, 9,13,15)( 2,12, 7)( 6,14, 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 6,11)( 2,12, 7)( 3, 4,15, 8, 9, 5,13,14,10), ( 1, 8, 9,15, 2, 6, 3,14,10, 7)( 4, 5,12,11,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3, 2, 6,13, 7,11, 8,12)( 4, 5)( 9,15)(10,14), ( 1, 5, 4, 2, 3, 6,10, 9,12,13,11,15,14, 7, 8), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 6,11)( 2,12, 7)( 3, 4,15, 8, 9, 5,13,14,10), ( 1, 8, 9,15, 2, 6, 3,14,10, 7)( 4, 5,12,11,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 2, 8, 9,11,12,13,14, 6, 7, 3, 4)( 5,15), ( 1, 9,15, 8, 6, 4,10,13,11,14, 5, 3), ( 1, 3, 6, 8,11,13)( 9,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 7, 6, 2)( 3, 8,13)( 5,15)(11,12), ( 1, 3, 2, 9, 5, 6, 8, 7, 4,10)(11,13,12,14,15), ( 1, 2, 4, 8)( 3, 6, 7, 9,13,11,12,14)( 5,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2, 6,10,12)( 3, 4)( 7,11,15)( 8,14,13, 9), ( 1, 4, 5, 3,11, 9,15,13)( 6,14,10, 8)( 7,12), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2,11,12, 6, 7)( 3, 4, 5)( 8,14,10,13, 9,15), ( 1,11)( 2, 3, 7, 8)( 4, 5)( 9,15,14,10)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1,14)( 2, 7)( 4,11)( 5,10)( 6, 9)( 8,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4, 7,13,11,14,12, 8, 6, 9, 2, 3)( 5,15,10), ( 2, 7)( 3, 4, 8, 9,13,14)( 5,15), ( 2, 8, 7, 3)( 4, 5)( 9,10)(12,13)(14,15), ( 1, 2)( 3, 9)( 4, 8,14,13)( 5,10)( 6, 7)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 6,11)( 2, 3)( 4, 5)( 7, 8)( 9,10)(12,13)(14,15), ( 1, 7, 6, 2,11,12)( 3, 5, 4)( 8,10,14,13,15, 9), ( 8,13), ( 3, 4)( 6,11)( 8, 9)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 2, 4, 5, 3, 6,12,14,15, 8)( 7, 9,10,13,11), ( 1, 5, 3, 2, 6,10,13, 7)( 8,12,11,15), ( 3, 4)( 6,11)( 8, 9,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 3, 4, 5, 6, 8,14,10)( 2, 7)( 9,15,11,13), ( 1, 7, 8,14,11,12,13, 9)( 2, 3, 4, 6)( 5,10), ( 1, 7, 3)( 2, 8,11,12,13, 6)(10,15), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 9,10, 6, 4,15,11,14, 5)( 2, 8, 7, 3)(12,13), ( 1, 2, 8, 4, 6, 7, 3, 9,11,12,13,14)(10,15), ( 2, 4)( 5,10,15)( 7, 9)( 8,13)(12,14), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 9,11,14, 6, 4)( 2, 3)( 7, 8,12,13) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 3,11, 9,13, 6,14, 8)( 2, 5)( 7,15)(10,12), ( 1, 3, 5, 4, 2, 6, 8,15,14,12,11,13,10, 9, 7), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 9,11,14, 6, 4)( 2, 3)( 7, 8,12,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 8, 9,12,11,13,14, 2, 6, 3, 4, 7)( 5,15), ( 1, 6)( 2, 9,15,12,14, 5)( 3, 8)( 4,10, 7), ( 1, 9, 8,11,14,13)( 3, 6, 4)( 5,15,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 9, 6,14,11, 4)( 2, 3)( 7,13,12, 8)(10,15) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2, 4, 3)( 6,10,12, 9, 8,11,15, 7,14,13), ( 1, 2,11,12, 6, 7)( 3, 4, 5)( 8, 9,15,13,14,10), ( 4, 5)( 7,12)( 9,10,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 9, 6,14,11, 4)( 2, 3)( 7,13,12, 8)(10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 7, 3, 9,11,12,13,14)( 2, 8, 4, 6)( 5,15,10), ( 1, 4,15,11,14, 5)( 2, 7)( 6, 9,10), ( 1, 6)( 3, 4, 8,14,13, 9)( 5,15,10), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10) ] ),
-  baseBlock := [ 6, 7, 8, 10, 11, 12, 13, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3, 4, 2, 6,13,14,12)( 7,11, 8, 9), ( 1, 4, 5, 2, 3)( 6,14,10,12, 8)( 7,13,11, 9,15), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 9, 14 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1,10,13, 7)( 3, 6)( 8,11,14)( 9,15,12), ( 1, 3, 2)( 4, 6, 5,10,12, 8)( 7,15,11)( 9,14,13), ( 1, 4)( 2, 3)( 5, 6)( 7,10)( 8, 9)(11,12,14,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 8,15,10,11,12,13,14, 6, 4, 5, 9, 7, 2, 3), ( 1, 2, 4, 5)( 7, 8,10,11)(12,15)(13,14), ( 6,12)( 8,14)( 9,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 3, 6,12, 9), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 6,11)( 2, 5, 3, 7,10, 8)( 9,14)(12,15,13), ( 6,11)( 8,13), ( 3, 4)( 6,11)( 8, 9)(13,14), ( 1, 2)( 4, 5)( 6, 7)( 8,13)( 9,10)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 2, 4, 3,11,10,12, 9, 8, 6,15, 7,14,13), ( 1, 5, 4, 3, 2, 6,15,14,13,12)( 7,11,10, 9, 8), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 3, 6, 8)( 2, 9, 5, 7, 4,15,12,14,10)(11,13), ( 1, 8, 9,11,13,14, 6, 3, 4)( 2, 7), ( 2, 8,12,13, 7, 3)( 4, 9)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 2, 8, 6, 7, 3)( 4,15,14, 5)( 9,10)(11,12,13), ( 1, 8, 9,12,11,13,14, 2)( 3, 4, 7, 6), ( 1, 8,11,13)( 2, 7)( 3, 6)( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 1, 4)( 6, 9)(11,14), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 6,11)( 2, 3, 4)( 5,15,10)( 7, 8,14,12,13, 9), ( 1, 5, 3, 4, 2)( 6,10,13, 9,12)( 7,11,15, 8,14), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4, 3, 6,12,14, 8)( 7, 9,13,11), ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 8, 2, 4)( 3, 7, 9,11,13,12,14, 6)( 5,10), ( 1, 2)( 3, 8,13)( 4, 9)( 5,15,10)( 6, 7)(11,12), ( 1, 9,15,11,14,10)( 2, 7)( 3, 8)( 4, 5, 6) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4, 3, 6,12,14, 8)( 7, 9,13,11), ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1,11, 6)( 2, 3)( 7,13,12, 8)( 9,14)(10,15), ( 1,11, 6)( 2, 3, 5, 4, 7,13,15,14,12, 8,10, 9), ( 1, 7,11,12)( 2, 6)( 3, 4)( 8,14,13, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4, 3, 6,12,14, 8)( 7, 9,13,11), ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 2, 3, 7, 8,12,13)( 5,10), ( 1, 6)( 2, 7)( 3, 8)( 4,10,14,15, 9, 5), ( 1, 7, 8,14)( 2, 3, 4, 6)( 9,11,12,13)(10,15), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4, 3, 6,12,14, 8)( 7, 9,13,11), ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4, 7, 3)( 2, 8, 6, 9,12,13,11,14), ( 1, 8, 7)( 2, 6, 3)( 4,15,14, 5, 9,10)(11,13,12), ( 1, 2)( 4, 9)( 5,15)( 6, 7)( 8,13)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 7,14,13,11, 2, 4, 3)( 6,12, 9, 8)(10,15) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 5, 3, 4, 2, 6,15,13, 9, 7)( 8,14,12,11,10), ( 1, 2, 4, 3)( 6, 7, 9, 8)(10,15)(11,12,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 7,14,13,11, 2, 4, 3)( 6,12, 9, 8)(10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 7,10, 9,13, 6, 2, 5, 4, 3,11,12,15,14, 8), ( 2, 3, 5, 4, 7,13,15,14,12, 8,10, 9)( 6,11), ( 1, 7)( 2,11,12, 6)( 3, 5)( 8,10)(13,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 7,14,13,11, 2, 4, 3)( 6,12, 9, 8)(10,15) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 8, 9,11,13,14, 6, 3, 4)( 2, 7)( 5,10), ( 1, 7, 6, 2)( 3, 8)( 4,15,14,10, 9, 5)(11,12), ( 1, 3, 4, 7)( 2, 6, 8,14,12,11,13, 9)(10,15), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 2, 5, 3)( 6, 9, 7,10, 8)(11,14,12,15,13), ( 1, 7,14,13,11, 2, 4, 3)( 6,12, 9, 8)(10,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4, 7, 8,11,14,12,13)( 2, 3, 6, 9)( 5,15,10), ( 1, 4,15,12,13,11,14,10, 2, 3, 6, 9, 5, 7, 8), ( 1, 8, 7, 6, 3, 2)( 4, 9,14)(10,15)(11,13,12), ( 5,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 3, 6, 9,13,11,14, 8)( 2, 5)( 7,15,12,10), ( 1, 5, 3, 4, 2, 6,10,13,14, 7,11,15, 8, 9,12), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10), ( 1, 4)( 2, 8)( 3,12)( 6, 9)( 7,13)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 3, 6, 8)( 2, 4, 7,14,12, 9)(11,13), ( 2, 9,13,12,14, 8)( 3, 7, 4)( 5,15), ( 1, 9,15,11,14,10)( 3, 8)( 4, 5, 6), ( 1, 7, 3, 4)( 2, 8,14, 6)( 5,15)( 9,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 5,10) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 2, 3, 7,13,12, 8), ( 2, 4)( 3, 5)( 7,14,12, 9)( 8,10)(13,15), ( 1, 2,11,12)( 6, 7)( 9,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 5,10) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 3, 5, 4, 2, 6,13,10, 9, 7)( 8,15,14,12,11), ( 1, 3, 6,13)( 4, 5)( 8,11)( 9,10,14,15), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 5,10) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 7, 6, 2)( 3, 4, 8,14,13, 9)( 5,10)(11,12), ( 1, 6)( 4,10,14,15, 9, 5), ( 1, 6)( 2, 3)( 5,15)( 7, 8,12,13)( 9,14), ( 1, 2)( 5,10)( 6, 7)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 1, 7, 4,13)( 2,14, 8,11)( 3, 6,12, 9), ( 5,10,15), ( 5,10) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 6)( 3, 4,15,13,14,10, 8, 9, 5), ( 2, 8,14,12,13, 9, 7, 3, 4)( 5,15,10), ( 1, 7, 8,11,12,13)( 2, 3, 6)( 5,15,10), ( 1, 2)( 6, 7)(11,12) ] ),
-  autSubgroup := Group( [ ( 2, 5,13)( 3, 7,10)( 4,14)( 6,11)( 8,12,15), ( 1, 8,12, 4,10,11, 3, 7, 9, 5, 6,13, 2,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2, 5, 3,11,12,10, 8, 6, 7,15,13)( 9,14), ( 2, 5, 4)( 6,11)( 7,10,14,12,15, 9)( 8,13), ( 1, 2)( 6, 7)( 8,13)(11,12) ] ),
-  autSubgroup := Group( [ ( 2, 5,13)( 3, 7,10)( 4,14)( 6,11)( 8,12,15), ( 1, 8,12, 4,10,11, 3, 7, 9, 5, 6,13, 2,14,15) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 2, 6,14, 7,11, 9,12)(10,15), ( 1, 5, 2, 3,11,10, 7,13)( 6,15,12, 8) ] ),
-  autSubgroup := Group( [ ( 2, 5,13)( 3, 7,10)( 4,14)( 6,11)( 8,12,15), ( 1, 8,12, 4,10,11, 3, 7, 9, 5, 6,13, 2,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 4, 6, 9)( 2, 7)( 3, 8,13)( 5,15,10)(11,14), ( 1, 8, 2, 4)( 3, 7, 9,11,13,12,14, 6), ( 1, 8)( 2, 9, 5)( 3, 6)( 4,10, 7)(11,13)(12,14,15) ] ),
-  autSubgroup := Group( [ ( 2, 5,13)( 3, 7,10)( 4,14)( 6,11)( 8,12,15), ( 1, 8,12, 4,10,11, 3, 7, 9, 5, 6,13, 2,14,15) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 3, 2, 6, 8,12,11,13, 7)( 5,15), ( 1, 9,12,11,14, 2, 6, 4, 7)( 8,13)(10,15), ( 1, 8, 7, 6, 3, 2)( 4,10,14,15, 9, 5)(11,13,12) ] ),
-  autSubgroup := Group( [ ( 1, 8, 2)( 3,12, 6)( 4,10,14, 5)( 7,11,13)( 9,15), ( 1,14, 3,12,15, 6, 4,13, 2, 5,11, 9, 8, 7,10) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 5, 2, 3, 6,14,15, 7, 8,11, 9,10,12,13), ( 1, 3, 5, 2,11, 8,15, 7)( 6,13,10,12)( 9,14), ( 8,13), ( 2, 3)( 7,13)( 8,12) ] ),
-  autSubgroup := Group( [ ( 1, 8, 2)( 3,12, 6)( 4,10,14, 5)( 7,11,13)( 9,15), ( 1,14, 3,12,15, 6, 4,13, 2, 5,11, 9, 8, 7,10) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 2, 4, 5, 3)( 7,14,15,13,12, 9,10, 8), ( 1, 7, 6, 2)( 3, 4)( 8, 9)(11,12)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 8, 2)( 3,12, 6)( 4,10,14, 5)( 7,11,13)( 9,15), ( 1,14, 3,12,15, 6, 4,13, 2, 5,11, 9, 8, 7,10) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 3, 9, 2)( 4, 7, 6, 8,14,12,11,13), ( 4,10, 9,15,14, 5), ( 1, 4, 6, 9,11,14)(10,15) ] ),
-  autSubgroup := Group( [ ( 1, 8, 2)( 3,12, 6)( 4,10,14, 5)( 7,11,13)( 9,15), ( 1,14, 3,12,15, 6, 4,13, 2, 5,11, 9, 8, 7,10) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 8,14, 2, 6, 3, 4, 7)( 5,10,15)( 9,12,11,13), ( 1, 3, 4)( 6, 8, 9)(10,15)(11,13,14), ( 1, 2, 6, 7)( 3, 8)( 4, 5)( 9,10,14,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 1, 5,12, 6,15, 2)( 4, 9)( 7,11,10)( 8,13), ( 1, 8,14,12, 5,11, 3, 4, 7,10)( 2,15, 6,13, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 3, 6, 9, 8,11,14,13)( 2, 5)( 7,15)(10,12), ( 1, 5, 4, 2)( 6,15, 9,12,11,10,14, 7) ] ),
-  autSubgroup := Group( [ ( 1, 5,12, 6,15, 2)( 4, 9)( 7,11,10)( 8,13), ( 1, 8,14,12, 5,11, 3, 4, 7,10)( 2,15, 6,13, 9) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 6,11)( 2, 5, 4, 3)( 7,15, 9,13,12,10,14, 8), ( 1, 2,11,12)( 6, 7)( 8,13)(10,15), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 5,12, 6,15, 2)( 4, 9)( 7,11,10)( 8,13), ( 1, 8,14,12, 5,11, 3, 4, 7,10)( 2,15, 6,13, 9) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 1, 2, 6, 7)( 5,10,15)( 8,13)(11,12), ( 1, 3, 7)( 2, 6, 8)( 4, 5)( 9,15,14,10)(11,13,12), ( 1, 2, 3,10, 9, 6, 7, 8, 5, 4)(11,12,13,15,14), ( 1, 6)( 2, 3)( 4, 9,14)( 5,15,10)( 7, 8)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 5,12, 6,15, 2)( 4, 9)( 7,11,10)( 8,13), ( 1, 8,14,12, 5,11, 3, 4, 7,10)( 2,15, 6,13, 9) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 8,12,11,13, 7, 6, 3, 2)( 5,15), ( 3, 4, 8,14,13, 9)( 5,15,10), ( 1, 2, 3, 6, 7, 8)( 4,15, 9,10,14, 5)(11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,15,11, 4, 5)( 3,13)( 6,14,10), ( 1,12,13,14)( 2, 8, 9, 6)( 3, 4,11, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 2, 4, 3, 7, 9, 8)(12,14,13), ( 1, 7, 6, 2)( 3, 5)( 8,10)( 9,14)(11,12)(13,15), ( 3, 4)( 6,11)( 8, 9)(13,14) ] ),
-  autSubgroup := Group( [ ( 1, 9,15,11, 4, 5)( 3,13)( 6,14,10), ( 1,12,13,14)( 2, 8, 9, 6)( 3, 4,11, 7) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 3, 5, 9,13,15,14, 8,10, 4), ( 1, 5, 3, 2)( 6,15,13,12,11,10, 8, 7), ( 1, 3, 2, 5, 4)( 6, 8,12,10,14)( 7,15, 9,11,13), ( 4, 5)( 9,10)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 9,15,11, 4, 5)( 3,13)( 6,14,10), ( 1,12,13,14)( 2, 8, 9, 6)( 3, 4,11, 7) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 2, 3, 9, 7, 8,14,12,13, 4)( 5,10), ( 2, 4, 5, 7, 9,10)(12,14,15), ( 1, 2)( 3, 9,13,14)( 4, 8)( 6, 7)(11,12), ( 2, 3)( 7, 8)(12,13) ] ),
-  autSubgroup := Group( [ ( 1, 9,15,11, 4, 5)( 3,13)( 6,14,10), ( 1,12,13,14)( 2, 8, 9, 6)( 3, 4,11, 7) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 5)( 2, 4)( 3, 6)( 7, 8,10,11)( 9,15,12)(13,14), ( 1,10)( 2, 3, 5, 6,14,15,11,12, 8, 9), ( 1,10,13)( 4, 7)( 8,11)( 9,15) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3, 6)( 9,12) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1,13, 4,10, 7)( 2,15,14,12,11, 9)( 3, 8)( 5, 6), ( 1,14, 6,13,11, 3)( 2,15, 7, 5,12, 4, 8, 9,10) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3, 6)( 9,12) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 216, 8, 108 ],
-  autGroup := Group( [ ( 3, 8)( 4,10, 9,15,14, 5), ( 2, 3, 4)( 5,15,10)( 7, 8,14,12,13, 9), ( 1, 8)( 2, 9,12,14, 7, 4)( 3, 6)( 5,15)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 6, 8, 9, 10, 11, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 216,
-  tSubsetStructure := rec(
-  lambdas := [ 108 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 405, 189, 7, 81 ],
-  autGroup := Group( [ ( 1, 4, 2)( 3, 5)( 6,14, 7)( 8,10)( 9,12,11)(13,15), ( 1, 3, 6, 8)( 4, 5)( 7,12)( 9,10)(11,13)(14,15), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 7, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 189,
-  tSubsetStructure := rec(
-  lambdas := [ 81 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 756, 7, 324 ],
-  autGroup := Group( [ ( 1, 6)( 2, 4, 8, 7,14,13,12, 9, 3)( 5,15), ( 1, 3, 6, 8,11,13)( 2, 7)( 5,15,10), ( 1, 6)( 4,10,14,15, 9, 5), ( 1, 8,14)( 2, 7)( 3, 4, 6)( 5,15,10)( 9,11,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 4, 7, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 756,
-  tSubsetStructure := rec(
-  lambdas := [ 324 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1620, 864, 8, 432 ],
-  autGroup := Group( [ ( 1, 2)( 3, 5, 4)( 6, 7,11,12)( 8,15,14,13,10, 9), ( 1, 6,11)( 2, 7)( 3, 4)( 5,10)( 8,14,13, 9), ( 2, 3)( 6,11)( 7,13,12, 8), ( 8,13) ] ),
-  autSubgroup := Group( [ ( 1, 4, 7,10,13)( 2, 5, 8,11,14)( 3, 6, 9,12,15), ( 5,10,15), ( 5,10), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 5, 6, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 864,
-  tSubsetStructure := rec(
-  lambdas := [ 432 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 2, 6, 8, 3,14,12, 5,15)( 4,13)( 7,10)( 9,11), ( 1, 6,11, 7, 9, 8, 4, 3, 2)( 5,10,12,14,13,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9,10, 5,12)( 3, 4, 8)( 6,13,14,15, 7,11), ( 1,10,13, 4)( 2,15, 8, 6,11, 9,14, 3, 5,12) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 5)( 2, 4,11,13, 8, 7,14,10)( 6,15,12), ( 1, 7, 4)( 2, 5,11,14)( 9,12)(10,13), ( 1,11,12,10, 8, 6)( 2, 3, 4)( 5, 9, 7)(13,14,15) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9,10, 5,12)( 3, 4, 8)( 6,13,14,15, 7,11), ( 1,10,13, 4)( 2,15, 8, 6,11, 9,14, 3, 5,12) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 5,15)( 2, 9,13,14,12,10)( 3, 4, 8)( 6, 7,11), ( 1, 7,10, 4,13)( 2, 3,14,12,11, 9, 8,15)( 5, 6) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3, 6)( 9,12), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 5, 7,14,13,11, 4, 2)( 8,10)( 9,15,12), ( 1, 4,10,13, 7)( 2, 6)( 3, 5)( 8,12,14,15)( 9,11), ( 8,11) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), ( 3, 6)( 9,12), ( 1, 4)( 6, 9)(11,14) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 3, 5, 4, 6, 2)( 7, 9,14,10,15, 8,13,12,11), ( 1,10, 4, 7)( 2, 3, 5, 6,14,12,11, 9)( 8,15), ( 8,11) ] ),
-  autSubgroup := Group( [ ( 1, 3,11)( 2,10,15, 5,13, 6, 8, 7, 9)( 4,12,14), ( 1,15)( 2,14)( 3,13, 9, 7,12, 4)( 5, 8)( 6,10) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 4)( 5, 8,14,11)( 6, 9,15)(10,13), ( 1, 9,13,12, 4, 3)( 6, 7)( 8,14)(10,15), ( 1, 5)( 2, 4)( 7, 8,10,14)( 9,15)(11,13) ] ),
-  autSubgroup := Group( [ ( 1, 3,11)( 2,10,15, 5,13, 6, 8, 7, 9)( 4,12,14), ( 1,15)( 2,14)( 3,13, 9, 7,12, 4)( 5, 8)( 6,10) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 8, 7,11,13,14,10, 5, 4, 2)( 6,15, 9), ( 2, 5)( 8,14,11)(12,15), ( 1, 4)( 2, 6)( 3,14,12, 8)( 5, 9)(10,13)(11,15) ] ),
-  autSubgroup := Group( [ ( 1,11, 4, 8, 7, 2,13, 5,10,14)( 3, 6,12, 9,15), ( 1,12,14, 7, 6, 8,13,15, 5,10, 9,11)( 2, 4, 3) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 6, 4, 3,10,12)( 2, 5)( 7,15,13, 9)( 8,14), ( 1, 2)( 3, 6)( 4, 5)( 7, 8,10,11)(12,15)(13,14), ( 8,11) ] ),
-  autSubgroup := Group( [ ( 1,11, 4, 8, 7, 2,13, 5,10,14)( 3, 6,12, 9,15), ( 1,12,14, 7, 6, 8,13,15, 5,10, 9,11)( 2, 4, 3) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 2)( 4, 8,10,14,13,11, 7, 5)( 6,12, 9), ( 1, 7, 4)( 5, 8,14)( 6,15, 9,12), ( 1, 4, 7)( 3, 6)(10,13)(11,14)(12,15), ( 2, 3)( 5, 6, 8, 9)(11,12)(14,15) ] ),
-  autSubgroup := Group( [ ( 1, 5, 9)( 2,15,13)( 3, 7,14)( 4, 8,12)( 6,10,11), ( 1,15, 5, 4, 3, 2,13,12, 8)( 6,14, 7)( 9,11,10) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 5, 7,14, 4, 2)( 8,13,11,10)(12,15), ( 1, 6, 5, 7, 9,11, 4, 3, 2,10,15, 8)(12,14,13) ] ),
-  autSubgroup := Group( [ ( 1, 5, 9)( 2,15,13)( 3, 7,14)( 4, 8,12)( 6,10,11), ( 1,15, 5, 4, 3, 2,13,12, 8)( 6,14, 7)( 9,11,10) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 2, 6, 5, 3)( 7,10,13)( 8, 9)(11,15,14,12), ( 1, 6, 5,10, 9,14, 7,12,11)( 2, 4, 3)( 8,13,15), ( 8,11) ] ),
-  autSubgroup := Group( [ ( 1,14,15)( 2, 9, 4, 5, 3,10, 8, 6,13)( 7,11,12), ( 1,15, 7,12,13, 3, 4, 6,10, 9)( 2,14, 8)( 5,11) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 2, 4, 5, 7, 8,13,11)( 6,15, 9)(10,14), ( 2, 3,14, 6, 5,12,11,15, 8, 9)( 4, 7), ( 1, 2, 4, 5, 7, 8)( 9,12,15)(10,14)(11,13), ( 1, 4, 7,10)( 2, 5)( 8,14)( 9,12) ] ),
-  autSubgroup := Group( [ ( 1,14,15)( 2, 9, 4, 5, 3,10, 8, 6,13)( 7,11,12), ( 1,15, 7,12,13, 3, 4, 6,10, 9)( 2,14, 8)( 5,11) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 5, 4, 2, 7,14,13, 8)( 9,15,12)(10,11), ( 1, 2, 3, 4, 5, 6,13,14,15,10,11, 9)( 7, 8,12) ] ),
-  autSubgroup := Group( [ ( 1, 6,10, 9, 7, 3, 4,15)( 2,11, 8)( 5,14)(12,13), ( 1, 7,13)( 2, 3,11, 9, 8,12,14,15, 5, 6) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1,14, 3,13, 2, 6, 4,11,12)( 5,15, 7, 8, 9,10), ( 1,15,10, 6)( 3, 7)( 4, 9,13,12)( 5, 8) ] ),
-  autSubgroup := Group( [ ( 1, 6,10, 9, 7, 3, 4,15)( 2,11, 8)( 5,14)(12,13), ( 1, 7,13)( 2, 3,11, 9, 8,12,14,15, 5, 6) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1, 5, 7, 8, 4,11,13,14,10, 2)( 9,15), ( 2, 3)( 5,12,14, 9,11, 6)( 8,15), ( 2, 8,14)( 4, 7)( 6,12) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), (6,9) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 6, 2,13,12,14)( 3, 5, 7,15,11,10, 9, 8, 4), ( 1, 3, 2, 4, 6, 5,13, 9,11)( 7,15, 8)(10,12,14), ( 2, 3)( 5, 6)( 7,10)( 8, 9,14,15)(11,12) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), (6,9) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 800, 8, 400 ],
-  autGroup := Group( [ ( 1, 7, 4,10,13)( 2, 3)( 5, 6)( 8,12,14,15)( 9,11), ( 1, 6, 2, 7,12,14, 4, 3, 5)( 8,10, 9)(11,13,15), ( 8,11) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), (6,9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 4, 7, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 800,
-  tSubsetStructure := rec(
-  lambdas := [ 400 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1500, 700, 7, 300 ],
-  autGroup := Group( [ ( 1,14,13,11,10, 2, 4, 5, 7, 8)( 6,12, 9), ( 1, 7)( 2, 3, 8,15,11, 9, 5,12,14, 6), ( 8,11)( 9,12) ] ),
-  autSubgroup := Group( [ ( 3, 6, 9,12,15), ( 1, 6,11)( 2, 7,12)( 3, 8,13)( 4, 9,14)( 5,10,15), (6,9), ( 1,11)( 2, 7)( 4,14)( 5,10)( 8,13) ] ),
-  baseBlock := [ 1, 2, 3, 5, 6, 8, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 700,
-  tSubsetStructure := rec(
-  lambdas := [ 300 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 6435, 3432, 8, 1716 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3432,
-  tSubsetStructure := rec(
-  lambdas := [ 1716 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1365, 364, 4, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 364,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 5005, 2002, 6, 715 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2002,
-  tSubsetStructure := rec(
-  lambdas := [ 715 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 5005, 3003, 9, 1716 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3003,
-  tSubsetStructure := rec(
-  lambdas := [ 1716 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 6435, 3003, 7, 1287 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3003,
-  tSubsetStructure := rec(
-  lambdas := [ 1287 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1365, 1001, 11, 715 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1001,
-  tSubsetStructure := rec(
-  lambdas := [ 715 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 91, 13, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 3003, 2002, 10, 1287 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2002,
-  tSubsetStructure := rec(
-  lambdas := [ 1287 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 455, 91, 3, 13 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 13 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 455, 364, 12, 286 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 364,
-  tSubsetStructure := rec(
-  lambdas := [ 286 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 3003, 1001, 5, 286 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (13,14,15) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1001,
-  tSubsetStructure := rec(
-  lambdas := [ 286 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 3003, 1001, 5, 286 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1001,
-  tSubsetStructure := rec(
-  lambdas := [ 286 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 455, 91, 3, 13 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 13 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 3003, 2002, 10, 1287 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2002,
-  tSubsetStructure := rec(
-  lambdas := [ 1287 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 455, 364, 12, 286 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 364,
-  tSubsetStructure := rec(
-  lambdas := [ 286 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 5005, 2002, 6, 715 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2002,
-  tSubsetStructure := rec(
-  lambdas := [ 715 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1365, 364, 4, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 364,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 5005, 3003, 9, 1716 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3003,
-  tSubsetStructure := rec(
-  lambdas := [ 1716 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 1365, 1001, 11, 715 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1001,
-  tSubsetStructure := rec(
-  lambdas := [ 715 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 6435, 3003, 7, 1287 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3003,
-  tSubsetStructure := rec(
-  lambdas := [ 1287 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 105, 91, 13, 78 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 91,
-  tSubsetStructure := rec(
-  lambdas := [ 78 ],
-  t := 2 ),
-  v:= 15),
- rec( parameters:= [ 15, 6435, 3432, 8, 1716 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15), (1,2) ] ),
-  baseBlock := [ 8, 9, 10, 11, 12, 13, 14, 15 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3432,
-  tSubsetStructure := rec(
-  lambdas := [ 1716 ],
-  t := 2 ),
-  v:= 15)
-]; 
-for D in lD_15_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
-
+#I  number of transitive groups of degree 15: 104
+
+#I  
+#I  [ 1, 104, "15" ]
+#I  rank : 15
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  1 : 104 done .. 
+
+#I  
+#I  [ 2, 104, "D30" ]
+#I  rank : 8
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  2 : 104 done .. 
+
+#I  
+#I  [ 3, 104, "3xD10" ]
+#I  rank : 9
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  3 : 104 done .. 
+
+#I  
+#I  [ 4, 104, "5xS3" ]
+#I  rank : 10
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  4 : 104 done .. 
+
+#I  
+#I  [ 5, 104, "A5" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  5 : 104 done .. 
+
+#I  
+#I  [ 6, 104, "15:4" ]
+#I  rank : 5
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  6 : 104 done .. 
+
+#I  
+#I  [ 7, 104, "S3xD10" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  7 : 104 done .. 
+
+#I  
+#I  [ 8, 104, "3x(5:4)" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  8 : 104 done .. 
+
+#I  
+#I  [ 9, 104, "(5^2):3" ]
+#I  rank : 7
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  9 : 104 done .. 
+
+#I  
+#I  [ 10, 104, "S5" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  10 : 104 done .. 
+
+#I  
+#I  [ 11, 104, "(5:4)xS3" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  11 : 104 done .. 
+
+#I  
+#I  [ 12, 104, "5^2:6" ]
+#I  rank : 5
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  12 : 104 done .. 
+
+#I  
+#I  [ 13, 104, "5^2:S3" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  13 : 104 done .. 
+
+#I  
+#I  [ 14, 104, "5^2:S3" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  14 : 104 done .. 
+
+#I  
+#I  [ 15, 104, "GL(2,4)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  15 : 104 done .. 
+
+#I  
+#I  [ 16, 104, "GL(2,4)" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  16 : 104 done .. 
+
+#I  
+#I  [ 17, 104, "5^2:(3:4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  17 : 104 done .. 
+
+#I  
+#I  [ 18, 104, "5^2:D12" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  18 : 104 done .. 
+
+#I  
+#I  [ 19, 104, "5^2:12" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  19 : 104 done .. 
+
+#I  
+#I  [ 20, 104, "A6" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  20 : 104 done .. 
+
+#I  
+#I  [ 21, 104, "A5:S3" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  21 : 104 done .. 
+
+#I  
+#I  [ 22, 104, "3:S5" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  22 : 104 done .. 
+
+#I  
+#I  [ 23, 104, "A5xS3" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  23 : 104 done .. 
+
+#I  
+#I  [ 24, 104, "3xS5" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  24 : 104 done .. 
+
+#I  
+#I  [ 25, 104, "5x((5^2):3)" ]
+#I  rank : 7
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  25 : 104 done .. 
+
+#I  
+#I  [ 26, 104, "3^4:5" ]
+#I  rank : 7
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  26 : 104 done .. 
+
+#I  
+#I  [ 27, 104, "5^2:(4xS3)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  27 : 104 done .. 
+
+#I  
+#I  [ 28, 104, "S6" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  28 : 104 done .. 
+
+#I  
+#I  [ 29, 104, "S5xS3" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  29 : 104 done .. 
+
+#I  
+#I  [ 30, 104, "5^3:6" ]
+#I  rank : 5
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  30 : 104 done .. 
+
+#I  
+#I  [ 31, 104, "5^3:S3" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  31 : 104 done .. 
+
+#I  
+#I  [ 32, 104, "5x(5^2:S3)" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  32 : 104 done .. 
+
+#I  
+#I  [ 33, 104, "3^4:10" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  33 : 104 done .. 
+
+#I  
+#I  [ 34, 104, "3^4:D10" ]
+#I  rank : 5
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  34 : 104 done .. 
+
+#I  
+#I  [ 35, 104, "3^4:D10" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  35 : 104 done .. 
+
+#I  
+#I  [ 36, 104, "3x(3^4:5)" ]
+#I  rank : 7
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  36 : 104 done .. 
+
+#I  
+#I  [ 37, 104, "5^3:(3:4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  37 : 104 done .. 
+
+#I  
+#I  [ 38, 104, "5^3:12" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  38 : 104 done .. 
+
+#I  
+#I  [ 39, 104, "5^3:A4" ]
+#I  rank : 5
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  39 : 104 done .. 
+
+#I  
+#I  [ 40, 104, "5^3:D12" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  40 : 104 done .. 
+
+#I  
+#I  [ 41, 104, "3^4:(5:4)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  41 : 104 done .. 
+
+#I  
+#I  [ 42, 104, "3^4:(5:4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  42 : 104 done .. 
+
+#I  
+#I  [ 43, 104, "3^4:D20" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  43 : 104 done .. 
+
+#I  
+#I  [ 44, 104, "3^5:10" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  44 : 104 done .. 
+
+#I  
+#I  [ 45, 104, "3^5:D10" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  45 : 104 done .. 
+
+#I  
+#I  [ 46, 104, "3x(3^4:D10)" ]
+#I  rank : 5
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  46 : 104 done .. 
+
+#I  
+#I  [ 47, 104, "A7" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  47 : 104 done .. 
+
+#I  
+#I  [ 48, 104, "5^3:S4" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  48 : 104 done .. 
+
+#I  
+#I  [ 49, 104, "5^3:(4xS3)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  49 : 104 done .. 
+
+#I  
+#I  [ 50, 104, "5^3:(2xA4)" ]
+#I  rank : 5
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  50 : 104 done .. 
+
+#I  
+#I  [ 51, 104, "5^3:S4" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  51 : 104 done .. 
+
+#I  
+#I  [ 52, 104, "3^4:(2x(5:4))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  52 : 104 done .. 
+
+#I  
+#I  [ 53, 104, "3^4:A5" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  53 : 104 done .. 
+
+#I  
+#I  [ 54, 104, "3^5:(5:4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  54 : 104 done .. 
+
+#I  
+#I  [ 55, 104, "3^5:D20" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  55 : 104 done .. 
+
+#I  
+#I  [ 56, 104, "3x(3^4:(5:4))" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  56 : 104 done .. 
+
+#I  
+#I  [ 57, 104, "5^3:((4^2):3)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  57 : 104 done .. 
+
+#I  
+#I  [ 58, 104, "5^3:(A4:4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  58 : 104 done .. 
+
+#I  
+#I  [ 59, 104, "5^3:(4xA4)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  59 : 104 done .. 
+
+#I  
+#I  [ 60, 104, "5^3:(2xS4)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  60 : 104 done .. 
+
+#I  
+#I  [ 61, 104, "3^4:(2xA5)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  61 : 104 done .. 
+
+#I  
+#I  [ 62, 104, "3^4:S5" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  62 : 104 done .. 
+
+#I  
+#I  [ 63, 104, "3^4:S5" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  63 : 104 done .. 
+
+#I  
+#I  [ 64, 104, "3^5:(2x(5:4))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  64 : 104 done .. 
+
+#I  
+#I  [ 65, 104, "5^3:(((4^2):3):2)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  65 : 104 done .. 
+
+#I  
+#I  [ 66, 104, "5^3:(((4^2):3):2)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  66 : 104 done .. 
+
+#I  
+#I  [ 67, 104, "5^3:(2x((4^2):3))" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  67 : 104 done .. 
+
+#I  
+#I  [ 68, 104, "5^3:(4xS4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  68 : 104 done .. 
+
+#I  
+#I  [ 69, 104, "3x(3^4:A5)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  69 : 104 done .. 
+
+#I  
+#I  [ 70, 104, "3^4:(2xS5)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  70 : 104 done .. 
+
+#I  
+#I  [ 71, 104, "3^5:((2^4):5)" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  71 : 104 done .. 
+
+#I  
+#I  [ 72, 104, "A8" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  72 : 104 done .. 
+
+#I  
+#I  [ 73, 104, "5^3:(((4^2):3):4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  73 : 104 done .. 
+
+#I  
+#I  [ 74, 104, "5^3:(2x(((4^2):3):2))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  74 : 104 done .. 
+
+#I  
+#I  [ 75, 104, "5^3:(4x((4^2):3))" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  75 : 104 done .. 
+
+#I  
+#I  [ 76, 104, "3^4:(A5xS3)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  76 : 104 done .. 
+
+#I  
+#I  [ 77, 104, "3^4:(A5:S3)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  77 : 104 done .. 
+
+#I  
+#I  [ 78, 104, "3x(3^4:S5)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  78 : 104 done .. 
+
+#I  
+#I  [ 79, 104, "3^5:(((2^4):5):2)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  79 : 104 done .. 
+
+#I  
+#I  [ 80, 104, "3^5:(((2^4):5):2)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  80 : 104 done .. 
+
+#I  
+#I  [ 81, 104, "3^5:(2x((2^4):5))" ]
+#I  rank : 6
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  81 : 104 done .. 
+
+#I  
+#I  [ 82, 104, "5^3:(4x(((4^2):3):2))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  82 : 104 done .. 
+
+#I  
+#I  [ 83, 104, "3:(3^4:(2xS5))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  83 : 104 done .. 
+
+#I  
+#I  [ 84, 104, "3^5:(((2^4):5):4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  84 : 104 done .. 
+
+#I  
+#I  [ 85, 104, "3^5:(((2^4):5):4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  85 : 104 done .. 
+
+#I  
+#I  [ 86, 104, "3^5:(2x(((2^4):5):2))" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  86 : 104 done .. 
+
+#I  
+#I  [ 87, 104, "3^5:(2x(((2^4):5):4))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  87 : 104 done .. 
+
+#I  
+#I  [ 88, 104, "3^5:(2^4:A5)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  88 : 104 done .. 
+
+#I  
+#I  [ 89, 104, "3^5:(2^4:S5)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  89 : 104 done .. 
+
+#I  
+#I  [ 90, 104, "3^5:(2x(2^4:A5))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  90 : 104 done .. 
+
+#I  
+#I  [ 91, 104, "3^5:(2^4:S5)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  91 : 104 done .. 
+
+#I  
+#I  [ 92, 104, "(A5xA5xA5):3" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  92 : 104 done .. 
+
+#I  
+#I  [ 93, 104, "3^5:(2x(2^4:S5))" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  93 : 104 done .. 
+
+#I  
+#I  [ 94, 104, "(A5xA5xA5):S3" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  94 : 104 done .. 
+
+#I  
+#I  [ 95, 104, "(A5xA5xA5):6" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  95 : 104 done .. 
+
+#I  
+#I  [ 96, 104, "(A5xA5xA5):S3" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  96 : 104 done .. 
+
+#I  
+#I  [ 97, 104, "(A5xA5xA5):D12" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  97 : 104 done .. 
+
+#I  
+#I  [ 98, 104, "(A5xA5xA5):A4" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  98 : 104 done .. 
+
+#I  
+#I  [ 99, 104, "(A5xA5xA5):S4" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  99 : 104 done .. 
+
+#I  
+#I  [ 100, 104, "(A5xA5xA5):S4" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  100 : 104 done .. 
+
+#I  
+#I  [ 101, 104, "(A5xA5xA5):(2xA4)" ]
+#I  rank : 4
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  101 : 104 done .. 
+
+#I  
+#I  [ 102, 104, "(A5xA5xA5):(2xS4)" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  102 : 104 done .. 
+
+#I  
+#I  [ 103, 104, "A15" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 

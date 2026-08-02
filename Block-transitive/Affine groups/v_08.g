@@ -1,3 +1,54 @@
+#I  number of primitive groups of degree 8 and O'Nan-Scott type 1: 3
+
+#I  
+#I  [ 1, 3, "(2^3):7" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  1 : 3 done .. 
+
+#I  
+#I  [ 2, 3, "2^3:(7:3)" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  2 : 3 done .. 
+
+#I  
+#I  [ 3, 3, "2^3:PSL(3,2)" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  3 : 3 done .. 
+
+#I  checking isomorphisms ..
+
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Primitive groups on 8 points 
@@ -163,7 +214,7 @@
 
 lD_8 :=  [
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,4,8,7,6,2)(3,5), (2,4,8)(3,5,7) ] ),
+  autGroup := Group( [ (2,4,6,3,7,8,5), (1,6,7,8,2,4,5) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -205,8 +256,8 @@ lD_8 :=  [
   t := 2 ),
   v:= 8),
  rec( parameters:= [ 8, 56, 28, 4, 12 ],
-  autGroup := Group( [ (1,4,8,6,3,5,2), (1,8,3)(2,7,4) ] ),
-  autSubgroup := Group( [ (1,7,5,4,8,3,2), (1,7,4,3)(2,5,6,8) ] ),
+  autGroup := Group( [ (1,6,2,3,5,7,8), (1,7)(2,3,4,8,5,6) ] ),
+  autSubgroup := Group( [ (1,5,4,8)(2,3), (1,7,6,2,5,4,3) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 5 ],
   blockSizes := [ 4 ],
@@ -218,7 +269,8 @@ lD_8 :=  [
   lambdas := [ 12 ],
   t := 2 ),
   v:= 8)
-];
+]; 
+;
 for D in lD_8 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -226,7 +278,7 @@ for D in lD_8 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) 
 
 lD_8_all :=  [
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,4,8,7,6,2)(3,5), (2,4,8)(3,5,7) ] ),
+  autGroup := Group( [ (2,4,6,3,7,8,5), (1,6,7,8,2,4,5) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -240,7 +292,7 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,2)(3,8,4,7), (2,4,6)(3,7,5) ] ),
+  autGroup := Group( [ (1,4,6,5,7,3,8), (1,3,6)(2,4,5) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,4,3)(6,8,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -282,8 +334,8 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,4,8,7,6,2)(3,5), (1,2)(3,8,4,7) ] ),
-  autSubgroup := Group( [ (2,4,7,3,6,5,8), (1,2,6,5)(3,8) ] ),
+  autGroup := Group( [ (1,3,6,5,8,4,7), (2,4,8,6)(3,5) ] ),
+  autSubgroup := Group( [ (1,2)(7,8), (1,2,6,3,4,8)(5,7) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -297,7 +349,7 @@ lD_8_all :=  [
   v:= 8),
  rec( parameters := [ 8, 28, 21, 6, 15 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,3,6,4,2,7)(5,8), (1,7,5,3)(2,6) ] ),
+  autSubgroup := Group( [ (2,7,6,8,4,3,5), (1,5,7,6,4,3,8) ] ),
   groupNumbers := [ 3, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -311,7 +363,7 @@ lD_8_all :=  [
   v:= 8),
  rec( parameters := [ 8, 56, 21, 3, 6 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,3)(2,6,7,4,8,5), (1,6,5,3,7,2,4) ] ),
+  autSubgroup := Group( [ (1,5,7,2,8,3,4), (1,6,2,4,5,8,7) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -324,8 +376,8 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters:= [ 8, 56, 28, 4, 12 ],
-  autGroup := Group( [ (1,4,8,6,3,5,2), (1,8,3)(2,7,4) ] ),
-  autSubgroup := Group( [ (1,7,5,4,8,3,2), (1,7,4,3)(2,5,6,8) ] ),
+  autGroup := Group( [ (1,6,2,3,5,7,8), (1,7)(2,3,4,8,5,6) ] ),
+  autSubgroup := Group( [ (1,5,4,8)(2,3), (1,7,6,2,5,4,3) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 5 ],
   blockSizes := [ 4 ],
@@ -338,5 +390,6 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8)
 ]; 
+;
 for D in lD_8_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

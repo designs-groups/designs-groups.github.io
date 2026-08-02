@@ -1,9 +1,14 @@
-#I  number of primitive groups of degree 22 and O'Nan-Scott type 1: 0
+#I  number of primitive groups of degree 2 and O'Nan-Scott type 1: 1
+
+#I  
+#I  [ 1, 1, "2" ]
+#I  rank : 2
+#I  1 : 1 done .. 
 
 
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 22 points 
+# Primitive groups on 2 points 
 # ####################################################################################################
 # Remark:       there exists no 2-design admitting Flag-transitive and point-primitive automorphism group
 # References:    
@@ -49,12 +54,12 @@
 # 4. Designs (up to isomorphism): 
 # -------------------------------
 
-lD_22 := [  ];
-for D in lD_22 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+lD_2 := [  ];
+for D in lD_2 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
 # -----------------
 
-lD_22_all := [  ];
-for D in lD_22_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+lD_2_all := [  ];
+for D in lD_2_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

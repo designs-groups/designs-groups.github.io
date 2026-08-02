@@ -1,9 +1,19 @@
-#I  number of primitive groups of degree 20 and O'Nan-Scott type 1: 0
+#I  number of primitive groups of degree 3 and O'Nan-Scott type 1: 2
+
+#I  
+#I  [ 1, 2, "3" ]
+#I  rank : 3
+#I  1 : 2 done .. 
+
+#I  
+#I  [ 2, 2, "S3" ]
+#I  rank : 2
+#I  2 : 2 done .. 
 
 
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 20 points 
+# Primitive groups on 3 points 
 # ####################################################################################################
 # Remark:       there exists no 2-design admitting Flag-transitive and point-primitive automorphism group
 # References:    
@@ -49,12 +59,12 @@
 # 4. Designs (up to isomorphism): 
 # -------------------------------
 
-lD_20 := [  ];
-for D in lD_20 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+lD_3 := [  ];
+for D in lD_3 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
 # -----------------
 
-lD_20_all := [  ];
-for D in lD_20_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+lD_3_all := [  ];
+for D in lD_3_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

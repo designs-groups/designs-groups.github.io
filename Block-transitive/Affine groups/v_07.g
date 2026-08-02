@@ -1,3 +1,39 @@
+#I  number of primitive groups of degree 7 and O'Nan-Scott type 1: 4
+
+#I  
+#I  [ 1, 4, "7" ]
+#I  rank : 7
+#I  1 : 4 done .. 
+
+#I  
+#I  [ 2, 4, "D14" ]
+#I  rank : 4
+#I  2 : 4 done .. 
+
+#I  
+#I  [ 3, 4, "7:3" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  3 : 4 done .. 
+
+#I  
+#I  [ 4, 4, "7:6" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  4 : 4 done .. 
+
+#I  checking isomorphisms ..
+
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Primitive groups on 7 points 
@@ -103,7 +139,7 @@
 
 lD_7 :=  [
  rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,4,5)(2,6,3), (1,6,2)(3,7,4) ] ),
+  autGroup := Group( [ (1,5)(3,7), (1,7,5,4,3,6,2) ] ),
   autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,4,6)(3,5,7) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
@@ -117,42 +153,7 @@ lD_7 :=  [
   t := 2 ),
   v:= 7),
  rec( parameters:= [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,3,6,4,5,7), (1,3,2)(4,6,7) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7)
-];
-for D in lD_7 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
-
-# 5. Designs (all): 
-# -----------------
-
-lD_7_all :=  [
- rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,4,5)(2,6,3), (1,6,2)(3,7,4) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,4,6)(3,5,7) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3,
-  tSubsetStructure := rec(
-  lambdas := [ 1 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters:= [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,3,6,4,5,7), (1,3,2)(4,6,7) ] ),
+  autGroup := Group( [ (2,3,4,5,6,7), (1,3,2)(4,6,7) ] ),
   autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
   groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
@@ -166,5 +167,42 @@ lD_7_all :=  [
   t := 2 ),
   v:= 7)
 ]; 
+;
+for D in lD_7 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+
+# 5. Designs (all): 
+# -----------------
+
+lD_7_all :=  [
+ rec( parameters := [ 7, 7, 3, 3, 1 ],
+  autGroup := Group( [ (1,5)(3,7), (1,7,5,4,3,6,2) ] ),
+  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,4,6)(3,5,7) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3,
+  tSubsetStructure := rec(
+  lambdas := [ 1 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters:= [ 7, 14, 6, 3, 2 ],
+  autGroup := Group( [ (2,3,4,5,6,7), (1,3,2)(4,6,7) ] ),
+  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7)
+]; 
+;
 for D in lD_7_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

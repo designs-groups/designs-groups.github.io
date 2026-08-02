@@ -1,3 +1,40 @@
+#I  number of primitive groups of degree 17 and O'Nan-Scott type 1: 5
+
+#I  
+#I  [ 1, 5, "17" ]
+#I  rank : 17
+#I  1 : 5 done .. 
+
+#I  
+#I  [ 2, 5, "D34" ]
+#I  rank : 9
+#I  2 : 5 done .. 
+
+#I  
+#I  [ 3, 5, "17:4" ]
+#I  rank : 5
+#I  3 : 5 done .. 
+
+#I  
+#I  [ 4, 5, "17:8" ]
+#I  rank : 3
+#I  4 : 5 done .. 
+
+#I  
+#I  [ 5, 5, "17:16" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  5 : 5 done .. 
+
+#I  checking isomorphisms ..
+
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Primitive groups on 17 points 
@@ -103,7 +140,7 @@
 
 lD_17 :=  [
  rec( parameters := [ 17, 34, 16, 8, 7 ],
-  autGroup := Group( [ ( 1, 4,14, 3, 6, 8,15,12,11, 7, 5, 9, 2,10,16,17), ( 1, 3, 6, 2,15, 4,10, 9)( 5,12,13, 8,16,14, 7,11) ] ),
+  autGroup := Group( [ ( 1,10,14, 6,16,17, 3, 2, 9,15,13, 8, 4, 7,12, 5), ( 1, 3, 6, 2,15, 4,10, 9)( 5,12,13, 8,16,14, 7,11) ] ),
   autSubgroup := Group( [ ( 1, 2,16, 3,14, 7,17,13,12, 4, 5, 9,15, 6,11, 8,10), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17) ] ),
   groupNumbers := [ 5, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 6, 9, 10, 15 ],
@@ -117,7 +154,7 @@ lD_17 :=  [
   t := 2 ),
   v:= 17),
  rec( parameters:= [ 17, 68, 16, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 6,14, 8, 9,11,10,17, 7, 5,16,12,15, 4,13), ( 1, 6,11, 2)( 3,12, 9,17)( 4, 8, 7,10)( 5,16,14,15), ( 1,11,16, 7)( 3, 4,10, 5)( 6, 8,17,14)( 9,13,12,15) ] ),
+  autGroup := Group( [ ( 1, 6, 4, 7, 2,11, 5,17,16, 8, 9,13, 3,10,15,12,14), ( 2,11, 4,13, 6,15, 8,17,10, 3,12, 5,14, 7,16, 9), ( 1, 6,11, 2)( 3,12, 9,17)( 4, 8, 7,10)( 5,16,14,15) ] ),
   autSubgroup := Group( [ ( 1, 2,16, 3,14, 7,17,13,12, 4, 5, 9,15, 6,11, 8,10), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17) ] ),
   groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 6, 11 ],
@@ -130,7 +167,8 @@ lD_17 :=  [
   lambdas := [ 3 ],
   t := 2 ),
   v:= 17)
-];
+]; 
+;
 for D in lD_17 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -138,7 +176,7 @@ for D in lD_17 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_17_all :=  [
  rec( parameters := [ 17, 34, 16, 8, 7 ],
-  autGroup := Group( [ ( 1, 4,14, 3, 6, 8,15,12,11, 7, 5, 9, 2,10,16,17), ( 1, 3, 6, 2,15, 4,10, 9)( 5,12,13, 8,16,14, 7,11) ] ),
+  autGroup := Group( [ ( 1,10,14, 6,16,17, 3, 2, 9,15,13, 8, 4, 7,12, 5), ( 1, 3, 6, 2,15, 4,10, 9)( 5,12,13, 8,16,14, 7,11) ] ),
   autSubgroup := Group( [ ( 1, 2,16, 3,14, 7,17,13,12, 4, 5, 9,15, 6,11, 8,10), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17) ] ),
   groupNumbers := [ 5, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 6, 9, 10, 15 ],
@@ -152,7 +190,7 @@ lD_17_all :=  [
   t := 2 ),
   v:= 17),
  rec( parameters:= [ 17, 68, 16, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 6,14, 8, 9,11,10,17, 7, 5,16,12,15, 4,13), ( 1, 6,11, 2)( 3,12, 9,17)( 4, 8, 7,10)( 5,16,14,15), ( 1,11,16, 7)( 3, 4,10, 5)( 6, 8,17,14)( 9,13,12,15) ] ),
+  autGroup := Group( [ ( 1, 6, 4, 7, 2,11, 5,17,16, 8, 9,13, 3,10,15,12,14), ( 2,11, 4,13, 6,15, 8,17,10, 3,12, 5,14, 7,16, 9), ( 1, 6,11, 2)( 3,12, 9,17)( 4, 8, 7,10)( 5,16,14,15) ] ),
   autSubgroup := Group( [ ( 1, 2,16, 3,14, 7,17,13,12, 4, 5, 9,15, 6,11, 8,10), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17) ] ),
   groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 6, 11 ],
@@ -165,6 +203,7 @@ lD_17_all :=  [
   lambdas := [ 3 ],
   t := 2 ),
   v:= 17)
-];
+]; 
+;
 for D in lD_17_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

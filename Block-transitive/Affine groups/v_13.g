@@ -1,3 +1,49 @@
+#I  number of primitive groups of degree 13 and O'Nan-Scott type 1: 6
+
+#I  
+#I  [ 1, 6, "13" ]
+#I  rank : 13
+#I  1 : 6 done .. 
+
+#I  
+#I  [ 2, 6, "D26" ]
+#I  rank : 7
+#I  2 : 6 done .. 
+
+#I  
+#I  [ 3, 6, "13:3" ]
+#I  rank : 5
+#I  3 : 6 done .. 
+
+#I  
+#I  [ 4, 6, "13:4" ]
+#I  rank : 4
+#I  4 : 6 done .. 
+
+#I  
+#I  [ 5, 6, "13:6" ]
+#I  rank : 3
+#I  5 : 6 done .. 
+
+#I  
+#I  [ 6, 6, "13:12" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  6 : 6 done .. 
+
+#I  checking isomorphisms ..
+
 # ####################################################################################################
 # Flag-transitive 2-designs 
 # Primitive groups on 13 points 
@@ -131,7 +177,7 @@
 
 lD_13 :=  [
  rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 7, 2, 6,12, 3)( 4,13, 9, 8,10,11), ( 1, 3)( 4, 9)( 5,13)( 6, 8)( 7,10)(11,12) ] ),
+  autGroup := Group( [ ( 1, 7, 2, 6,12, 3)( 4,13, 9, 8,10,11), ( 1, 3,11, 6)( 2,12, 4, 5)( 7, 9, 8,13), ( 1,12,10)( 2, 7, 8)( 4,13, 5)( 6, 9,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
   groupNumbers := [ 6, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6, 7, 12 ],
@@ -145,7 +191,7 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 5, 4, 7,11, 8, 3,13, 9,10,12, 6), ( 1, 5,10, 2)( 3,11,13, 4)( 6,12, 7, 8) ] ),
+  autGroup := Group( [ ( 1,10, 7,13, 9, 2)( 3, 4, 8,11, 6, 5), ( 1, 5,10, 2)( 3,11,13, 4)( 6,12, 7, 8) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
   groupNumbers := [ 6, 1, 2 ],
   baseBlock := [ 1, 2, 5, 10 ],
@@ -159,7 +205,7 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters:= [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 2,13,12,11,10, 9, 8, 7, 6, 5, 4, 3), ( 1, 4,11, 3, 9,12)( 5, 7, 8,13,10, 6), ( 1, 2, 4)( 3,13,10)( 5, 8, 9)( 6,12,11) ] ),
+  autGroup := Group( [ ( 2,13,12,11,10, 9, 8, 7, 6, 5, 4, 3), ( 1, 2, 4)( 3,13,10)( 5, 8, 9)( 6,12,11), ( 1, 2)( 3, 8)( 4,12)( 5, 7)( 6, 9)(10,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
   groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
@@ -172,7 +218,8 @@ lD_13 :=  [
   lambdas := [ 2 ],
   t := 2 ),
   v:= 13)
-];
+]; 
+;
 for D in lD_13 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -180,7 +227,7 @@ for D in lD_13 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_13_all :=  [
  rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 7, 2, 6,12, 3)( 4,13, 9, 8,10,11), ( 1, 3)( 4, 9)( 5,13)( 6, 8)( 7,10)(11,12) ] ),
+  autGroup := Group( [ ( 1, 7, 2, 6,12, 3)( 4,13, 9, 8,10,11), ( 1, 3,11, 6)( 2,12, 4, 5)( 7, 9, 8,13), ( 1,12,10)( 2, 7, 8)( 4,13, 5)( 6, 9,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
   groupNumbers := [ 6, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6, 7, 12 ],
@@ -194,7 +241,7 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 5, 4, 7,11, 8, 3,13, 9,10,12, 6), ( 1, 5,10, 2)( 3,11,13, 4)( 6,12, 7, 8) ] ),
+  autGroup := Group( [ ( 1,10, 7,13, 9, 2)( 3, 4, 8,11, 6, 5), ( 1, 5,10, 2)( 3,11,13, 4)( 6,12, 7, 8) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
   groupNumbers := [ 6, 1, 2 ],
   baseBlock := [ 1, 2, 5, 10 ],
@@ -208,7 +255,7 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters:= [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 2,13,12,11,10, 9, 8, 7, 6, 5, 4, 3), ( 1, 4,11, 3, 9,12)( 5, 7, 8,13,10, 6), ( 1, 2, 4)( 3,13,10)( 5, 8, 9)( 6,12,11) ] ),
+  autGroup := Group( [ ( 2,13,12,11,10, 9, 8, 7, 6, 5, 4, 3), ( 1, 2, 4)( 3,13,10)( 5, 8, 9)( 6,12,11), ( 1, 2)( 3, 8)( 4,12)( 5, 7)( 6, 9)(10,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
   groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
@@ -221,6 +268,7 @@ lD_13_all :=  [
   lambdas := [ 2 ],
   t := 2 ),
   v:= 13)
-];
+]; 
+;
 for D in lD_13_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 

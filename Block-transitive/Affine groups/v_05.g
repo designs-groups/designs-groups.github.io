@@ -1,9 +1,24 @@
-#I  number of primitive groups of degree 21 and O'Nan-Scott type 1: 0
+#I  number of primitive groups of degree 5 and O'Nan-Scott type 1: 3
+
+#I  
+#I  [ 1, 3, "5" ]
+#I  rank : 5
+#I  1 : 3 done .. 
+
+#I  
+#I  [ 2, 3, "D10" ]
+#I  rank : 3
+#I  2 : 3 done .. 
+
+#I  
+#I  [ 3, 3, "5:4" ]
+#I  rank : 2
+#I  3 : 3 done .. 
 
 
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Primitive groups on 21 points 
+# Primitive groups on 5 points 
 # ####################################################################################################
 # Remark:       there exists no 2-design admitting Flag-transitive and point-primitive automorphism group
 # References:    
@@ -49,12 +64,12 @@
 # 4. Designs (up to isomorphism): 
 # -------------------------------
 
-lD_21 := [  ];
-for D in lD_21 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+lD_5 := [  ];
+for D in lD_5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
 # -----------------
 
-lD_21_all := [  ];
-for D in lD_21_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+lD_5_all := [  ];
+for D in lD_5_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
