@@ -510,3 +510,7 @@ is composited onto the same author-box background colour without face alteration
 - Version 50: on main catalogue pages, Affine groups are displayed by degree, while Affine detailed tables and Parameter sets Group entries use the actual group label from the `.g` file.
 
 - Version 51: made Affine groups use the same degree-grid style as Transitive groups and Primitive groups on the main catalogue pages, while keeping the detailed Affine tables indexed by group G.
+
+- Version 52: made the detailed Affine groups pages match the Transitive/Primitive degree-page style: title with `(of degree)`, first column Degree, and degree row labels; Parameter sets still use actual group labels.
+
+- Version 53: removed underlines from degree-number links on catalogue degree grids and detailed degree pages.

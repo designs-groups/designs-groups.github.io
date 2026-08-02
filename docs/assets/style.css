@@ -1593,3 +1593,27 @@ h2 {
   max-width: 54px;
 }
 
+
+/* Degree numbers are links, but should not be underlined. */
+.catalogue-degree-link,
+.catalogue-degree-link:visited,
+.catalogue-degree-grid a,
+.catalogue-degree-grid a:visited,
+.degree-cell a,
+.degree-cell a:visited,
+.degree-cell .row-cell-link,
+.degree-cell .row-cell-link:visited {
+  text-decoration: none !important;
+}
+
+.catalogue-degree-link:hover,
+.catalogue-degree-link:focus,
+.catalogue-degree-grid a:hover,
+.catalogue-degree-grid a:focus,
+.degree-cell a:hover,
+.degree-cell a:focus,
+.degree-cell .row-cell-link:hover,
+.degree-cell .row-cell-link:focus {
+  text-decoration: none !important;
+}
+

@@ -194,6 +194,8 @@ def is_degree_source(source_path: str) -> bool:
         is_transitive_source(source_path)
         or source_path.startswith("Flag-transitive/Primitive groups/")
         or source_path.startswith("Block-transitive/Primitive groups/")
+        or source_path.startswith("Flag-transitive/Affine groups/")
+        or source_path.startswith("Block-transitive/Affine groups/")
     )
 
 
