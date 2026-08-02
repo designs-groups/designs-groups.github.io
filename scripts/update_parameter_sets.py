@@ -106,6 +106,18 @@ def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
     return candidates
 
 
+
+def group_label_from_text(text: str, fallback: str) -> str:
+    match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M)
+    if match:
+        label = match.group(1).strip()
+        if "=" in label:
+            label = label.split("=", 1)[0].strip()
+        if label:
+            return label
+    return fallback
+
+
 def file_total_from_row(tools, path: Path, source_path: str) -> tuple[str, int | None]:
     try:
         row = tools.parse_gap_file(path, source_path)
@@ -117,7 +129,8 @@ def file_total_from_row(tools, path: Path, source_path: str) -> tuple[str, int |
             return group_label, int(total.strip())
         return group_label, None
     except Exception:
-        return path.stem, None
+        text = path.read_text(encoding="utf-8", errors="replace")
+        return group_label_from_text(text, path.stem), None
 
 
 def counts_for_file(params: list[tuple[int, int, int, int, int]], total: int | None) -> Counter:

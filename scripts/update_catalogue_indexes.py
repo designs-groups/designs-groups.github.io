@@ -15,6 +15,74 @@ ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
 
 
+def run_navigation_update(data_root: str) -> None:
+    script = ROOT / "scripts" / "update_navigation.py"
+
+    if not script.exists():
+        return
+
+    result = subprocess.run(
+        [sys.executable, str(script), "--data-root", data_root],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+
+    if result.returncode != 0:
+        raise RuntimeError(
+            "update_navigation.py failed\n"
+            + result.stdout
+            + result.stderr
+        )
+
+    if result.stdout.strip():
+        print(result.stdout.strip())
+
+
+
+
+def degree_from_affine_label(text: str) -> str | None:
+    cleaned = text.replace("{", "").replace("}", "").replace("\\", "")
+    match = re.search(r"v[_-]?0?\^?(\d+)", cleaned)
+    if match:
+        return str(int(match.group(1)))
+    match = re.search(r"[/_-]v[_-]?0?(\d+)\.g\b", cleaned)
+    if match:
+        return str(int(match.group(1)))
+    match = re.search(r"\bdegree\s*0?(\d+)\b", cleaned, re.I)
+    if match:
+        return str(int(match.group(1)))
+    return None
+
+
+def fix_affine_catalogue_degree_labels(page: Path) -> None:
+    text = page.read_text(encoding="utf-8")
+    sections = re.findall(r'<section class="catalogue-family">.*?</section>', text, flags=re.S)
+
+    for section in sections:
+        if 'href="affine.html">Affine groups' not in section:
+            continue
+
+        def repl(match):
+            open_tag, label, close_tag = match.group(1), match.group(2), match.group(3)
+            degree = degree_from_affine_label(label) or degree_from_affine_label(open_tag)
+            if degree is None:
+                return match.group(0)
+            return open_tag + degree + close_tag
+
+        new_section = re.sub(
+            r'(<a\b[^>]*href="[^"]*Affine%20groups/[^"]*\.g"[^>]*>)(.*?)(</a>)',
+            repl,
+            section,
+            flags=re.S,
+        )
+
+        text = text.replace(section, new_section)
+
+    page.write_text(text, encoding="utf-8")
+
+
+
 def load_table_tools():
     path = ROOT / "scripts" / "update_data_tables.py"
     spec = importlib.util.spec_from_file_location("update_data_tables_tools", path)
@@ -360,6 +428,11 @@ def main() -> int:
         if updated != text:
             index_page.write_text(updated, encoding="utf-8")
             updated_pages += 1
+
+    for rel_page in ("docs/flag-transitive/index.html", "docs/block-transitive/index.html"):
+        fix_affine_catalogue_degree_labels(Path(args.data_root) / rel_page)
+
+    run_navigation_update(args.data_root)
 
     print(f"Updated {updated_pages} catalogue landing pages.")
     return 0

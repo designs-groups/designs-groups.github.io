@@ -166,3 +166,7 @@ the footer date, and deploys the site.
 - Version 47: added Affine groups pages for flag-transitive and block-transitive designs, configured automatic table generation from `.g` files in Affine groups folders, and included Affine groups in Parameter sets generation.
 
 - Version 48: moved Affine groups after Primitive groups in sidebars and on the flag-transitive/block-transitive catalogue pages.
+
+- Version 49: added automatic sidebar navigation rebuilding from `data/table_sources.json`; verified that Primitive groups and Affine groups pages are populated from their `.g` folders, with Affine groups ordered after Primitive groups.
+
+- Version 50: on main catalogue pages, Affine groups are displayed by degree, while Affine detailed tables and Parameter sets Group entries use the actual group label from the `.g` file.
