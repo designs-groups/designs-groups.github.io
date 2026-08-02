@@ -1,3 +1,448 @@
+#I  number of transitive groups of degree 10: 45
+
+#I  
+#I  [ 1, 45, "10" ]
+#I  rank : 10
+#I  1 : 45 done .. 
+
+#I  
+#I  [ 2, 45, "D10" ]
+#I  rank : 10
+#I  2 : 45 done .. 
+
+#I  
+#I  [ 3, 45, "D20" ]
+#I  rank : 6
+#I  3 : 45 done .. 
+
+#I  
+#I  [ 4, 45, "5:4" ]
+#I  rank : 6
+#I  4 : 45 done .. 
+
+#I  
+#I  [ 5, 45, "2x(5:4)" ]
+#I  rank : 4
+#I  5 : 45 done .. 
+
+#I  
+#I  [ 6, 45, "5xD10" ]
+#I  rank : 6
+#I  6 : 45 done .. 
+
+#I  
+#I  [ 7, 45, "A5" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  7 : 45 done .. 
+
+#I  
+#I  [ 8, 45, "(2^4):5" ]
+#I  rank : 6
+#I  8 : 45 done .. 
+
+#I  
+#I  [ 9, 45, "D10xD10" ]
+#I  rank : 4
+#I  9 : 45 done .. 
+
+#I  
+#I  [ 10, 45, "(5^2):4" ]
+#I  rank : 4
+#I  10 : 45 done .. 
+
+#I  
+#I  [ 11, 45, "2xA5" ]
+#I  rank : 4
+#I  11 : 45 done .. 
+
+#I  
+#I  [ 12, 45, "S5" ]
+#I  rank : 4
+#I  12 : 45 done .. 
+
+#I  
+#I  [ 13, 45, "S5" ]
+#I  rank : 3
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  13 : 45 done .. 
+
+#I  
+#I  [ 14, 45, "2x((2^4):5)" ]
+#I  rank : 6
+#I  14 : 45 done .. 
+
+#I  
+#I  [ 15, 45, "((2^4):5):2" ]
+#I  rank : 4
+#I  15 : 45 done .. 
+
+#I  
+#I  [ 16, 45, "((2^4):5):2" ]
+#I  rank : 4
+#I  16 : 45 done .. 
+
+#I  
+#I  [ 17, 45, "5^2:(4x2)" ]
+#I  rank : 3
+#I  17 : 45 done .. 
+
+#I  
+#I  [ 18, 45, "5^2:8" ]
+#I  rank : 3
+#I  18 : 45 done .. 
+
+#I  
+#I  [ 19, 45, "5^2:D8" ]
+#I  rank : 3
+#I  19 : 45 done .. 
+
+#I  
+#I  [ 20, 45, "5^2:Q8" ]
+#I  rank : 3
+#I  20 : 45 done .. 
+
+#I  
+#I  [ 21, 45, "5^2:D8" ]
+#I  rank : 4
+#I  21 : 45 done .. 
+
+#I  
+#I  [ 22, 45, "2xS5" ]
+#I  rank : 4
+#I  22 : 45 done .. 
+
+#I  
+#I  [ 23, 45, "2x(((2^4):5):2)" ]
+#I  rank : 4
+#I  23 : 45 done .. 
+
+#I  
+#I  [ 24, 45, "((2^4):5):4" ]
+#I  rank : 3
+#I  24 : 45 done .. 
+
+#I  
+#I  [ 25, 45, "((2^4):5):4" ]
+#I  rank : 3
+#I  25 : 45 done .. 
+
+#I  
+#I  [ 26, 45, "A6" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  26 : 45 done .. 
+
+#I  
+#I  [ 27, 45, "5^2:((4x2):2)" ]
+#I  rank : 3
+#I  27 : 45 done .. 
+
+#I  
+#I  [ 28, 45, "5^2:(8:2)" ]
+#I  rank : 3
+#I  28 : 45 done .. 
+
+#I  
+#I  [ 29, 45, "2x(((2^4):5):4)" ]
+#I  rank : 3
+#I  29 : 45 done .. 
+
+#I  
+#I  [ 30, 45, "A6:2" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  30 : 45 done .. 
+
+#I  
+#I  [ 31, 45, "A6.2" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  31 : 45 done .. 
+
+#I  
+#I  [ 32, 45, "S6" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  32 : 45 done .. 
+
+#I  
+#I  [ 33, 45, "5^2:((4^2):2)" ]
+#I  rank : 3
+#I  33 : 45 done .. 
+
+#I  
+#I  [ 34, 45, "2^4:A5" ]
+#I  rank : 3
+#I  34 : 45 done .. 
+
+#I  
+#I  [ 35, 45, "(A6.2):2" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  35 : 45 done .. 
+
+#I  
+#I  [ 36, 45, "2x(2^4:A5)" ]
+#I  rank : 3
+#I  36 : 45 done .. 
+
+#I  
+#I  [ 37, 45, "2^4:S5" ]
+#I  rank : 3
+#I  37 : 45 done .. 
+
+#I  
+#I  [ 38, 45, "2^4:S5" ]
+#I  rank : 3
+#I  38 : 45 done .. 
+
+#I  
+#I  [ 39, 45, "2x(2^4:S5)" ]
+#I  rank : 3
+#I  39 : 45 done .. 
+
+#I  
+#I  [ 40, 45, "(A5xA5):2" ]
+#I  rank : 3
+#I  40 : 45 done .. 
+
+#I  
+#I  [ 41, 45, "(A5xA5):2^2" ]
+#I  rank : 3
+#I  41 : 45 done .. 
+
+#I  
+#I  [ 42, 45, "(A5xA5):4" ]
+#I  rank : 3
+#I  42 : 45 done .. 
+
+#I  
+#I  [ 43, 45, "(A5xA5):D8" ]
+#I  rank : 3
+#I  43 : 45 done .. 
+
+#I  
+#I  [ 44, 45, "A10" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I  Warning: R-base point is already fixed
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  44 : 45 done .. 
+
+#I  
+#I  [ 45, 45, "S10" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  45 : 45 done .. 
+
+#I  checking isomorphisms ..
+
 # ####################################################################################################
 # Block-transitive 2-designs 
 # Transitive groups on 10 points 
@@ -39,7 +484,7 @@
 # 6   10  60   24   4  8   S5        D12        2      S5        3      3           13     1        3       true             false            false            false                                                 
 # 7   10  36   18   5  8   A6        (3^2):4    D10    A6.2      2      2           26     1        6       true             false            true             true                                                  
 # 8   10  90   45   5  20  A6        (3^2):4    4      S6        2      2           26     1        7       true             false            false            false                                                 
-# 9   10  30   12   4  4   A6:2      (3^2):8    S4     (A6.2):2  2      2           30     1        2       true             false            true             true                                                  
+# 9   10  30   12   4  4   A6:2      (3^2):8    S4     (A6:2):2  2      2           30     1        2       true             false            true             true                                                  
 # 10  10  45   36   8  28  S6        (S3xS3):2  2xD8   S10       2      2           32     1        8       true             false            false            true                                        complete  
 # 11  10  60   18   3  4   S6        (S3xS3):2  D12    S6        2      2           32     1        1       true             false            true             false                12                               
 # 12  10  60   42   7  28  S6        (S3xS3):2  D12    S6        2      2           32     1        1       true             false            true             false                11                               
@@ -80,8 +525,8 @@
 # 19  10  90   45   5  20  A6        (3^2):4    4        S6        2      2           26     1        7       true             false            false            false                                                 
 # 20  10  180  72   4  24  A6        (3^2):4    2        (A6:2):2  2      2           26     1        5       true             false            false            false                21                               
 # 21  10  180  108  6  60  A6        (3^2):4    2        (A6:2):2  2      2           26     1        5       true             false            false            false                20                               
-# 22  10  30   12   4  4   A6:2      (3^2):8    S4       (A6.2):2  2      2           30     1        2       true             false            true             true                 23                               
-# 23  10  30   18   6  10  A6:2      (3^2):8    S4       (A6.2):2  2      2           30     1        2       true             false            true             true                 22                               
+# 22  10  30   12   4  4   A6:2      (3^2):8    S4       (A6:2):2  2      2           30     1        2       true             false            true             true                 23                               
+# 23  10  30   18   6  10  A6:2      (3^2):8    S4       (A6:2):2  2      2           30     1        2       true             false            true             true                 22                               
 # 24  10  45   36   8  28  A6:2      (3^2):8    D16      S10       2      2           30     1        6       true             true             true             true                                        complete  
 # 25  10  72   36   5  16  A6:2      (3^2):8    D10      (A6:2):2  2      2           30     1        4       true             false            true             true                 25                               
 # 26  10  120  36   3  8   A6:2      (3^2):8    S3       S10       2      2           30     1        1       true             false            true             false                27                     complete  
@@ -89,14 +534,14 @@
 # 28  10  180  72   4  24  A6:2      (3^2):8    2^2      (A6:2):2  2      2           30     1        3       true             false            true             false                30                               
 # 29  10  180  90   5  40  A6:2      (3^2):8    4        (A6:2):2  2      2           30     1        5       true             false            false            false                29                               
 # 30  10  180  108  6  60  A6:2      (3^2):8    2^2      (A6:2):2  2      2           30     1        3       true             false            true             false                28                               
-# 31  10  30   12   4  4   A6.2      (3^2):Q8   S4       (A6:2):2  2      2           31     1        2       true             false            true             true                 32                               
-# 32  10  30   18   6  10  A6.2      (3^2):Q8   S4       (A6:2):2  2      2           31     1        2       true             false            true             true                 31                               
+# 31  10  30   12   4  4   A6.2      (3^2):Q8   S4       (A6.2):2  2      2           31     1        2       true             false            true             true                 32                               
+# 32  10  30   18   6  10  A6.2      (3^2):Q8   S4       (A6.2):2  2      2           31     1        2       true             false            true             true                 31                               
 # 33  10  36   18   5  8   A6.2      (3^2):Q8   5:4      A6.2      2      2           31     1        4       true             true             true             true                                                  
 # 34  10  45   36   8  28  A6.2      (3^2):Q8   QD16     S10       2      2           31     1        6       true             true             true             true                                        complete  
 # 35  10  120  36   3  8   A6.2      (3^2):Q8   S3       S10       2      2           31     1        1       true             false            true             false                36                     complete  
 # 36  10  120  84   7  56  A6.2      (3^2):Q8   S3       S10       2      2           31     1        1       true             false            true             false                35                     complete  
 # 37  10  180  72   4  24  A6.2      (3^2):Q8   4        (A6.2):2  2      2           31     1        3       true             false            true             false                39                               
-# 38  10  180  90   5  40  A6.2      (3^2):Q8   4        (A6:2):2  2      2           31     1        5       true             false            false            false                38                               
+# 38  10  180  90   5  40  A6.2      (3^2):Q8   4        (A6.2):2  2      2           31     1        5       true             false            false            false                38                               
 # 39  10  180  108  6  60  A6.2      (3^2):Q8   4        (A6.2):2  2      2           31     1        3       true             false            true             false                37                               
 # 40  10  15   6    4  2   S6        (S3xS3):2  2xS4     S6        2      2           32     1        3       true             true             true             true                 41                               
 # 41  10  15   9    6  5   S6        (S3xS3):2  2xS4     S6        2      2           32     1        3       true             true             true             true                 40                               
@@ -348,7 +793,7 @@
 # --------------------------------------------------------
 #                                      G        Aut(D)    
 # --------------------------------------------------------
-# Structure                            A6:2     (A6.2):2  
+# Structure                            A6:2     (A6:2):2  
 # Rank                                 2        2         
 # 2-Homogeneous                        true     true      
 # Point-stabiliser                     (3^2):8  3^2:QD16  
@@ -710,7 +1155,7 @@
 
 lD_10 :=  [
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
+  autGroup := Group( [ (1,7,5,4,9,2)(3,6,8), ( 1, 7,10)( 2, 4, 3)( 5, 6, 9) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 7 ],
@@ -724,7 +1169,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
+  autGroup := Group( [ (1,7,5,4,9,2)(3,6,8), ( 1, 7,10)( 2, 4, 3)( 5, 6, 9) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 4, 5, 6, 8, 9, 10 ],
@@ -738,7 +1183,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 9, 3, 2 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
+  autGroup := Group( [ ( 1, 6,10, 5, 3)( 2, 4, 7, 8, 9), ( 1, 6,10, 4, 9)( 2, 5, 8, 7, 3) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
@@ -752,7 +1197,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 21, 7, 14 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
+  autGroup := Group( [ ( 1, 6,10, 5, 3)( 2, 4, 7, 8, 9), ( 1, 6,10, 4, 9)( 2, 5, 8, 7, 3) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
@@ -766,7 +1211,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 36, 6, 20 ],
-  autGroup := Group( [ ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
+  autGroup := Group( [ ( 1, 3, 5,10, 4, 9)( 6, 8, 7), ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 4, 6, 7, 8, 9, 10 ],
@@ -794,8 +1239,8 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 36, 18, 5, 8 ],
-  autGroup := Group( [ ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8, 5, 6)( 2, 4, 3, 9,10), ( 1, 9, 7, 8,10)( 2, 4, 6, 3, 5) ] ),
+  autGroup := Group( [ ( 1, 2, 7, 5, 4,10, 9, 3)( 6, 8), ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
+  autSubgroup := Group( [ (1,4,9,7)(3,8,5,6), ( 1, 8)( 2, 9)( 3, 7)( 5,10) ] ),
   groupNumbers := [ 26, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 7 ],
   blockSizes := [ 5 ],
@@ -808,8 +1253,8 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 90, 45, 5, 20 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), ( 1, 3, 4,10)( 6, 8, 7, 9), ( 1, 3)( 4,10)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 5, 3)( 2, 8,10, 9, 7), ( 1, 9, 6, 4, 3)( 2, 7,10, 8, 5) ] ),
+  autGroup := Group( [ (1,8,5)(2,7,4)(3,6,9), ( 1, 8)( 2, 9)( 3, 7)( 5,10), ( 1, 9, 7, 8, 3, 2)( 4, 6,10) ] ),
+  autSubgroup := Group( [ ( 1, 4, 2, 6,10)( 3, 5, 9, 8, 7), ( 1,10, 5, 8)( 2, 6, 9, 4) ] ),
   groupNumbers := [ 26, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -822,7 +1267,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 6,10, 5, 3, 7, 4, 2), ( 1, 3,10, 7)( 4, 8, 6, 5), ( 1, 2)( 3,10)( 4, 5)( 6, 9) ] ),
+  autGroup := Group( [ ( 1, 3, 8,10, 4, 2, 6, 5)( 7, 9), (1,3,2,8,9,7)(4,5,6) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 30, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
@@ -837,7 +1282,7 @@ lD_10 :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9, 8, 7, 3)( 5, 6,10), ( 1, 9)( 2, 4,10, 7)( 3, 5, 8, 6) ] ),
+  autSubgroup := Group( [ ( 1, 5, 8,10)( 2, 7, 9, 3), ( 1, 5, 7, 3)( 2,10, 6, 8)( 4, 9) ] ),
   groupNumbers := [ 32, 1, 8 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
@@ -850,8 +1295,8 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
+  autGroup := Group( [ ( 1, 5, 3, 4, 2,10)( 7, 9, 8), ( 1,10, 9)( 3, 4, 8)( 5, 6, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 6, 5, 4, 9)( 3, 7,10), (1,6,8,9,5,3)(2,4,7) ] ),
   groupNumbers := [ 32, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -864,8 +1309,8 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
+  autGroup := Group( [ ( 1, 5, 3, 4, 2,10)( 7, 9, 8), ( 1,10, 9)( 3, 4, 8)( 5, 6, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 6, 5, 4, 9)( 3, 7,10), (1,6,8,9,5,3)(2,4,7) ] ),
   groupNumbers := [ 32, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
@@ -878,7 +1323,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 5, 9, 4, 8, 6, 3,10), ( 1, 2, 5,10, 7)( 3, 9, 6, 8, 4), (1,2)(4,5)(7,8) ] ),
+  autGroup := Group( [ (1,3,7,6,9,5,4,8), ( 1, 3, 4, 2)( 5, 6,10, 8) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 2 ],
   baseBlock := [ 4, 5, 7, 8, 9, 10 ],
@@ -892,7 +1337,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 72, 36, 5, 16 ],
-  autGroup := Group( [ (1,4,7,6,5,9,3,2), ( 1, 3, 5, 8)( 6,10, 9, 7), (1,2)(4,5)(7,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
+  autGroup := Group( [ ( 1, 3, 5, 8)( 6,10, 9, 7), (1,2)(4,5)(7,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 7 ],
@@ -920,7 +1365,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -934,7 +1379,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 90, 5, 40 ],
-  autGroup := Group( [ ( 1, 5,10, 9, 6, 4, 8, 7, 3, 2), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
+  autGroup := Group( [ ( 1, 4, 3, 2, 5, 9, 7, 6)( 8,10), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
@@ -948,7 +1393,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 3 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
@@ -1018,6 +1463,7 @@ lD_10 :=  [
   t := 2 ),
   v:= 10)
 ]; 
+;
 for D in lD_10 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -1025,7 +1471,7 @@ for D in lD_10 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_10_all :=  [
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
+  autGroup := Group( [ (1,7,5,4,9,2)(3,6,8), ( 1, 7,10)( 2, 4, 3)( 5, 6, 9) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 7 ],
@@ -1039,7 +1485,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
+  autGroup := Group( [ (1,7,5,4,9,2)(3,6,8), ( 1, 7,10)( 2, 4, 3)( 5, 6, 9) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 4, 5, 6, 8, 9, 10 ],
@@ -1053,7 +1499,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 9, 3, 2 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
+  autGroup := Group( [ ( 1, 6,10, 5, 3)( 2, 4, 7, 8, 9), ( 1, 6,10, 4, 9)( 2, 5, 8, 7, 3) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
@@ -1067,7 +1513,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 21, 7, 14 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
+  autGroup := Group( [ ( 1, 6,10, 5, 3)( 2, 4, 7, 8, 9), ( 1, 6,10, 4, 9)( 2, 5, 8, 7, 3) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
@@ -1081,7 +1527,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 24, 4, 8 ],
-  autGroup := Group( [ ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
+  autGroup := Group( [ ( 1, 3, 5,10, 4, 9)( 6, 8, 7), ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 3, 5 ],
@@ -1095,7 +1541,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 36, 6, 20 ],
-  autGroup := Group( [ ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
+  autGroup := Group( [ ( 1, 3, 5,10, 4, 9)( 6, 8, 7), ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 4, 6, 7, 8, 9, 10 ],
@@ -1109,7 +1555,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 1, 7,10, 3, 2, 4)( 5, 9, 8), ( 1, 2, 4, 3, 6)( 5, 8, 7, 9,10), (3,9)(4,5)(7,8) ] ),
+  autGroup := Group( [ ( 1, 7, 6, 9, 4, 3)( 2, 5,10), ( 1, 2)( 3, 8, 7, 9)( 4,10, 5, 6), ( 1, 7,10, 8)( 2, 6)( 3, 9, 5, 4) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
   groupNumbers := [ 13, 1, 2 ],
   baseBlock := [ 1, 2, 3, 7 ],
@@ -1123,7 +1569,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 1, 7,10, 3, 2, 4)( 5, 9, 8), ( 1, 2, 4, 3, 6)( 5, 8, 7, 9,10), (3,9)(4,5)(7,8) ] ),
+  autGroup := Group( [ ( 1, 7, 6, 9, 4, 3)( 2, 5,10), ( 1, 2)( 3, 8, 7, 9)( 4,10, 5, 6), ( 1, 7,10, 8)( 2, 6)( 3, 9, 5, 4) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
   groupNumbers := [ 13, 1, 2 ],
   baseBlock := [ 4, 5, 6, 8, 9, 10 ],
@@ -1137,7 +1583,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ ( 1, 7)( 2, 5, 3, 6)( 4,10, 9, 8), ( 1, 8, 3)( 2, 6, 7, 4, 9,10) ] ),
+  autGroup := Group( [ ( 1, 3, 5,10, 6)( 2, 9, 8, 7, 4), ( 1, 4, 6)( 2, 7,10, 9, 5, 3) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
   groupNumbers := [ 13, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
@@ -1179,7 +1625,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ ( 1, 7)( 2, 5, 3, 6)( 4,10, 9, 8), ( 1, 8, 3)( 2, 6, 7, 4, 9,10) ] ),
+  autGroup := Group( [ ( 1, 3, 5,10, 6)( 2, 9, 8, 7, 4), ( 1, 4, 6)( 2, 7,10, 9, 5, 3) ] ),
   autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
   groupNumbers := [ 13, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
@@ -1193,8 +1639,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 2, 6, 4, 7, 5,10)( 3, 8, 9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ (2,8,9,5)(3,6,4,7), ( 1,10, 5, 6, 2)( 3, 9, 8, 4, 7) ] ),
+  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), ( 1, 2, 7)( 3, 6, 5)( 4, 9,10), ( 1, 6, 9)( 2, 3,10)( 4, 8, 7) ] ),
+  autSubgroup := Group( [ (1,5,4,2)(6,7,9,8), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
   groupNumbers := [ 26, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -1207,8 +1653,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 2, 6, 4, 7, 5,10)( 3, 8, 9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ (2,8,9,5)(3,6,4,7), ( 1,10, 5, 6, 2)( 3, 9, 8, 4, 7) ] ),
+  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), ( 1, 2, 7)( 3, 6, 5)( 4, 9,10), ( 1, 6, 9)( 2, 3,10)( 4, 8, 7) ] ),
+  autSubgroup := Group( [ (1,5,4,2)(6,7,9,8), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
   groupNumbers := [ 26, 1, 3 ],
   baseBlock := [ 4, 5, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
@@ -1221,8 +1667,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 36, 18, 5, 8 ],
-  autGroup := Group( [ ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8, 5, 6)( 2, 4, 3, 9,10), ( 1, 9, 7, 8,10)( 2, 4, 6, 3, 5) ] ),
+  autGroup := Group( [ ( 1, 2, 7, 5, 4,10, 9, 3)( 6, 8), ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
+  autSubgroup := Group( [ (1,4,9,7)(3,8,5,6), ( 1, 8)( 2, 9)( 3, 7)( 5,10) ] ),
   groupNumbers := [ 26, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 7 ],
   blockSizes := [ 5 ],
@@ -1236,7 +1682,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 5, 8,10)( 2, 7, 9, 3), ( 1,10, 2, 7, 5)( 3, 8, 9, 4, 6) ] ),
+  autSubgroup := Group( [ (1,7,5,3)(2,4,6,9), ( 1, 9, 4, 5,10)( 2, 7, 3, 6, 8) ] ),
   groupNumbers := [ 26, 1, 8 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
@@ -1249,8 +1695,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ ( 1, 3, 6)( 4, 5,10, 8, 7, 9), ( 1, 6,10, 8, 4, 5)( 2, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 8, 5,10)( 2, 4, 9, 6), ( 1,10, 2)( 3, 5, 4)( 6, 8, 7) ] ),
+  autGroup := Group( [ (1,4,8,6)(2,7,3,9), ( 1, 8, 5, 2, 7, 4)( 6,10, 9) ] ),
+  autSubgroup := Group( [ ( 1, 9, 6)( 2,10, 3)( 4, 7, 8), ( 1,10, 9, 2)( 3, 8, 6, 5) ] ),
   groupNumbers := [ 26, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1263,8 +1709,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ ( 1, 3, 6)( 4, 5,10, 8, 7, 9), ( 1, 6,10, 8, 4, 5)( 2, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 8, 5,10)( 2, 4, 9, 6), ( 1,10, 2)( 3, 5, 4)( 6, 8, 7) ] ),
+  autGroup := Group( [ (1,4,8,6)(2,7,3,9), ( 1, 8, 5, 2, 7, 4)( 6,10, 9) ] ),
+  autSubgroup := Group( [ ( 1, 9, 6)( 2,10, 3)( 4, 7, 8), ( 1,10, 9, 2)( 3, 8, 6, 5) ] ),
   groupNumbers := [ 26, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
@@ -1277,8 +1723,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 90, 45, 5, 20 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), ( 1, 3, 4,10)( 6, 8, 7, 9), ( 1, 3)( 4,10)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 5, 3)( 2, 8,10, 9, 7), ( 1, 9, 6, 4, 3)( 2, 7,10, 8, 5) ] ),
+  autGroup := Group( [ (1,8,5)(2,7,4)(3,6,9), ( 1, 8)( 2, 9)( 3, 7)( 5,10), ( 1, 9, 7, 8, 3, 2)( 4, 6,10) ] ),
+  autSubgroup := Group( [ ( 1, 4, 2, 6,10)( 3, 5, 9, 8, 7), ( 1,10, 5, 8)( 2, 6, 9, 4) ] ),
   groupNumbers := [ 26, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -1291,8 +1737,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4,10, 8, 2)( 3, 9, 6, 7, 5), ( 1, 6, 5)( 2, 7, 3)( 4,10, 8) ] ),
+  autGroup := Group( [ ( 1, 4, 8, 7,10, 6, 5, 3), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autSubgroup := Group( [ (1,3,2,6)(4,5,8,7), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 26, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -1305,8 +1751,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4,10, 8, 2)( 3, 9, 6, 7, 5), ( 1, 6, 5)( 2, 7, 3)( 4,10, 8) ] ),
+  autGroup := Group( [ ( 1, 4, 8, 7,10, 6, 5, 3), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autSubgroup := Group( [ (1,3,2,6)(4,5,8,7), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 26, 1, 5 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
@@ -1319,7 +1765,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 6,10, 5, 3, 7, 4, 2), ( 1, 3,10, 7)( 4, 8, 6, 5), ( 1, 2)( 3,10)( 4, 5)( 6, 9) ] ),
+  autGroup := Group( [ ( 1, 3, 8,10, 4, 2, 6, 5)( 7, 9), (1,3,2,8,9,7)(4,5,6) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 30, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
@@ -1333,7 +1779,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 6,10, 5, 3, 7, 4, 2), ( 1, 3,10, 7)( 4, 8, 6, 5), ( 1, 2)( 3,10)( 4, 5)( 6, 9) ] ),
+  autGroup := Group( [ ( 1, 3, 8,10, 4, 2, 6, 5)( 7, 9), (1,3,2,8,9,7)(4,5,6) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 30, 1, 2 ],
   baseBlock := [ 4, 5, 7, 8, 9, 10 ],
@@ -1403,7 +1849,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 2, 3, 4, 6,10, 8, 7, 5), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autGroup := Group( [ ( 1, 4, 8, 9, 7, 5, 2, 3)( 6,10), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 30, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -1431,7 +1877,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 2, 3, 4, 6,10, 8, 7, 5), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autGroup := Group( [ ( 1, 4, 8, 9, 7, 5, 2, 3)( 6,10), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 30, 1, 3 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
@@ -1445,8 +1891,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 2)( 3, 4,10, 7, 6, 5, 9, 8), ( 1, 2, 6, 9,10, 8, 7, 5)( 3, 4), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,2,3,7)(5,8,6,9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
+  autGroup := Group( [ ( 2, 3,10, 9, 8, 5, 6, 4), (1,6,9,7,3,5,8,2), (1,2)(4,5)(7,8) ] ),
+  autSubgroup := Group( [ ( 1, 7, 2,10, 6, 5, 3, 9)( 4, 8), ( 1, 8, 9, 3)( 2, 4, 7,10) ] ),
   groupNumbers := [ 31, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -1459,8 +1905,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 2)( 3, 4,10, 7, 6, 5, 9, 8), ( 1, 2, 6, 9,10, 8, 7, 5)( 3, 4), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,2,3,7)(5,8,6,9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
+  autGroup := Group( [ ( 2, 3,10, 9, 8, 5, 6, 4), (1,6,9,7,3,5,8,2), (1,2)(4,5)(7,8) ] ),
+  autSubgroup := Group( [ ( 1, 7, 2,10, 6, 5, 3, 9)( 4, 8), ( 1, 8, 9, 3)( 2, 4, 7,10) ] ),
   groupNumbers := [ 31, 1, 2 ],
   baseBlock := [ 4, 5, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
@@ -1473,8 +1919,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 36, 18, 5, 8 ],
-  autGroup := Group( [ ( 1, 2, 7, 5, 4,10, 9, 3)( 6, 8), ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 5)( 3, 7, 9)( 6,10, 8), ( 1, 8, 4,10, 5, 7, 2, 3)( 6, 9) ] ),
+  autGroup := Group( [ ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 4, 5)( 3, 7, 9)( 6,10, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
+  autSubgroup := Group( [ ( 1, 6, 7, 2)( 3,10, 5, 8), ( 1, 7, 5, 4, 9,10, 6, 2)( 3, 8) ] ),
   groupNumbers := [ 31, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 7 ],
   blockSizes := [ 5 ],
@@ -1488,7 +1934,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 7)( 2, 4,10, 3, 8, 9, 6, 5), ( 1, 9,10, 8)( 2, 4, 5, 3) ] ),
+  autSubgroup := Group( [ ( 1, 2, 5,10, 7)( 3, 9, 6, 8, 4), ( 1, 2, 5, 8, 7, 6, 3,10)( 4, 9) ] ),
   groupNumbers := [ 31, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
@@ -1502,7 +1948,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 120, 36, 3, 8 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 3, 2, 9, 5,10)( 7, 8), ( 1, 7, 9, 2)( 3,10, 8, 4) ] ),
+  autSubgroup := Group( [ ( 1, 2, 8, 5, 4, 3, 6,10)( 7, 9), ( 1, 5, 3)( 2,10, 4)( 6, 8, 9) ] ),
   groupNumbers := [ 31, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1516,7 +1962,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 120, 84, 7, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 3, 2, 9, 5,10)( 7, 8), ( 1, 7, 9, 2)( 3,10, 8, 4) ] ),
+  autSubgroup := Group( [ ( 1, 2, 8, 5, 4, 3, 6,10)( 7, 9), ( 1, 5, 3)( 2,10, 4)( 6, 8, 9) ] ),
   groupNumbers := [ 31, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
@@ -1530,7 +1976,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
   autGroup := Group( [ (1,2,4,5)(6,8,9,7), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,4,2,8)(3,7,6,5), ( 1, 8)( 2, 4, 3,10, 7, 6, 9, 5) ] ),
+  autSubgroup := Group( [ ( 2, 6)( 4,10)( 5, 7)( 8, 9), ( 1, 9, 2, 3)( 6, 8,10, 7) ] ),
   groupNumbers := [ 31, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -1543,8 +1989,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 90, 5, 40 ],
-  autGroup := Group( [ ( 1, 4, 7, 2, 5, 8)( 6, 9,10), ( 1, 5,10, 4, 2, 3)( 6, 7, 8), (2,5)(6,7)(8,9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 7, 6, 9)( 4,10, 8, 5), ( 1, 9, 8, 2)( 3, 5, 7,10) ] ),
+  autGroup := Group( [ ( 3, 4, 9, 8, 6, 5,10, 7), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
+  autSubgroup := Group( [ (1,4)(2,5)(6,9)(7,8), ( 1, 5, 2, 9, 6, 7, 3,10)( 4, 8) ] ),
   groupNumbers := [ 31, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -1558,7 +2004,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
   autGroup := Group( [ (1,2,4,5)(6,8,9,7), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,4,2,8)(3,7,6,5), ( 1, 8)( 2, 4, 3,10, 7, 6, 9, 5) ] ),
+  autSubgroup := Group( [ ( 2, 6)( 4,10)( 5, 7)( 8, 9), ( 1, 9, 2, 3)( 6, 8,10, 7) ] ),
   groupNumbers := [ 31, 1, 3 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
@@ -1571,8 +2017,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ (1,6,8,9,5,3)(2,4,7), ( 3, 9, 6,10)( 4, 8, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 7,10, 2)( 4, 9, 6, 5, 8), ( 1,10, 9, 2)( 3, 5, 6, 8)( 4, 7) ] ),
+  autGroup := Group( [ ( 1, 3, 6,10, 5)( 2, 9, 4, 8, 7), ( 1, 6, 9)( 2, 3,10)( 4, 8, 7), (3,6)(4,7)(5,8) ] ),
+  autSubgroup := Group( [ ( 1, 2, 7, 9,10, 4)( 3, 5, 8), ( 1, 6, 8)( 2, 9,10, 3, 7, 5) ] ),
   groupNumbers := [ 32, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -1585,8 +2031,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ (1,6,8,9,5,3)(2,4,7), ( 3, 9, 6,10)( 4, 8, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 7,10, 2)( 4, 9, 6, 5, 8), ( 1,10, 9, 2)( 3, 5, 6, 8)( 4, 7) ] ),
+  autGroup := Group( [ ( 1, 3, 6,10, 5)( 2, 9, 4, 8, 7), ( 1, 6, 9)( 2, 3,10)( 4, 8, 7), (3,6)(4,7)(5,8) ] ),
+  autSubgroup := Group( [ ( 1, 2, 7, 9,10, 4)( 3, 5, 8), ( 1, 6, 8)( 2, 9,10, 3, 7, 5) ] ),
   groupNumbers := [ 32, 1, 3 ],
   baseBlock := [ 4, 5, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
@@ -1600,7 +2046,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9, 8, 7, 3)( 5, 6,10), ( 1, 9)( 2, 4,10, 7)( 3, 5, 8, 6) ] ),
+  autSubgroup := Group( [ ( 1, 5, 8,10)( 2, 7, 9, 3), ( 1, 5, 7, 3)( 2,10, 6, 8)( 4, 9) ] ),
   groupNumbers := [ 32, 1, 8 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
@@ -1613,8 +2059,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
+  autGroup := Group( [ ( 1, 5, 3, 4, 2,10)( 7, 9, 8), ( 1,10, 9)( 3, 4, 8)( 5, 6, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 6, 5, 4, 9)( 3, 7,10), (1,6,8,9,5,3)(2,4,7) ] ),
   groupNumbers := [ 32, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1627,8 +2073,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
+  autGroup := Group( [ ( 1, 5, 3, 4, 2,10)( 7, 9, 8), ( 1,10, 9)( 3, 4, 8)( 5, 6, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 6, 5, 4, 9)( 3, 7,10), (1,6,8,9,5,3)(2,4,7) ] ),
   groupNumbers := [ 32, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
@@ -1642,7 +2088,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 72, 36, 5, 16 ],
   autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), (2,3,9,4)(5,6,8,7), ( 1, 3)( 4, 9)( 5, 7)( 8,10) ] ),
-  autSubgroup := Group( [ ( 2, 3, 7, 4, 8,10)( 5, 9, 6), ( 1, 6, 7,10)( 2, 8)( 3, 9, 4, 5) ] ),
+  autSubgroup := Group( [ ( 3, 9, 6,10)( 4, 8, 5, 7), ( 1, 4,10, 8, 6, 5)( 2, 3, 9) ] ),
   groupNumbers := [ 32, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 7 ],
   blockSizes := [ 5 ],
@@ -1655,8 +2101,8 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 90, 45, 5, 20 ],
-  autGroup := Group( [ ( 1, 3, 4,10)( 6, 8, 7, 9), ( 1, 5, 6, 8,10, 4)( 2, 9, 3) ] ),
-  autSubgroup := Group( [ ( 1, 3, 4,10)( 2, 5)( 6, 9, 7, 8), ( 1, 6, 4, 8)( 2, 5, 3,10)( 7, 9) ] ),
+  autGroup := Group( [ ( 1, 2, 4)( 3, 8, 6)( 7, 9,10), ( 1, 2, 8,10, 9, 5)( 4, 7, 6) ] ),
+  autSubgroup := Group( [ ( 2,10, 9)( 3, 8, 7, 6, 5, 4), ( 1, 6, 9)( 2, 3,10)( 4, 8, 7) ] ),
   groupNumbers := [ 32, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -1670,7 +2116,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
   autGroup := Group( [ ( 2, 3)( 5,10)( 7, 9), (1,2)(4,5)(7,8), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4)( 2,10)( 3, 5)( 7, 9), ( 1, 8, 2,10, 5, 9)( 3, 7, 6) ] ),
+  autSubgroup := Group( [ ( 1, 3, 8, 9)( 2, 7)( 4, 6,10, 5), ( 1, 8, 6)( 2, 5, 7, 3,10, 9) ] ),
   groupNumbers := [ 32, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -1684,7 +2130,7 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
   autGroup := Group( [ ( 2, 3)( 5,10)( 7, 9), (1,2)(4,5)(7,8), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4)( 2,10)( 3, 5)( 7, 9), ( 1, 8, 2,10, 5, 9)( 3, 7, 6) ] ),
+  autSubgroup := Group( [ ( 1, 3, 8, 9)( 2, 7)( 4, 6,10, 5), ( 1, 8, 6)( 2, 5, 7, 3,10, 9) ] ),
   groupNumbers := [ 32, 1, 5 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
@@ -1697,7 +2143,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 5, 9, 4, 8, 6, 3,10), ( 1, 2, 5,10, 7)( 3, 9, 6, 8, 4), (1,2)(4,5)(7,8) ] ),
+  autGroup := Group( [ (1,3,7,6,9,5,4,8), ( 1, 3, 4, 2)( 5, 6,10, 8) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
@@ -1711,7 +2157,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 5, 9, 4, 8, 6, 3,10), ( 1, 2, 5,10, 7)( 3, 9, 6, 8, 4), (1,2)(4,5)(7,8) ] ),
+  autGroup := Group( [ (1,3,7,6,9,5,4,8), ( 1, 3, 4, 2)( 5, 6,10, 8) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 2 ],
   baseBlock := [ 4, 5, 7, 8, 9, 10 ],
@@ -1739,7 +2185,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 72, 36, 5, 16 ],
-  autGroup := Group( [ (1,4,7,6,5,9,3,2), ( 1, 3, 5, 8)( 6,10, 9, 7), (1,2)(4,5)(7,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
+  autGroup := Group( [ ( 1, 3, 5, 8)( 6,10, 9, 7), (1,2)(4,5)(7,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 7 ],
@@ -1781,7 +2227,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -1795,7 +2241,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 90, 5, 40 ],
-  autGroup := Group( [ ( 1, 5,10, 9, 6, 4, 8, 7, 3, 2), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
+  autGroup := Group( [ ( 1, 4, 3, 2, 5, 9, 7, 6)( 8,10), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
@@ -1809,7 +2255,7 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
+  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
   autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
   groupNumbers := [ 35, 1, 3 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
@@ -1991,4 +2437,6 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10)
 ]; 
-for D in lD_10_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+;
+for D in lD_10_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+
