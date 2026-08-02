@@ -132,3 +132,5 @@ the footer date, and deploys the site.
 - Version 30: removed bold styling from the `Click to access the data` link in the Parameter sets section; automatic parameter-set updating remains unchanged.
 
 - Version 31: added a notice to Transitive and Primitive group pages that the listed `.g` files are separate data files and that designs within each file are sorted first by group and then by parameters.
+
+- Version 32: changed Parameter sets generation to collect only from group-type folders, excluding Transitive groups and Primitive groups folders.

@@ -19,6 +19,18 @@ PARAM_RE = re.compile(
     r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]"
 )
 
+EXCLUDED_PARAMETER_SET_FOLDERS = (
+    "Flag-transitive/Transitive groups/",
+    "Flag-transitive/Primitive groups/",
+    "Block-transitive/Transitive groups/",
+    "Block-transitive/Primitive groups/",
+)
+
+INCLUDED_PARAMETER_SET_PREFIXES = (
+    "Flag-transitive/",
+    "Block-transitive/",
+)
+
 
 @dataclass
 class ParameterRecord:
@@ -58,7 +70,7 @@ def valid_parameters_in_text(text: str):
 
 
 def parameter_counts(text: str, row_total: str) -> Counter[tuple[int, int, int, int, int]]:
-    """Extract parameter-set counts from a GAP data file.
+    """Extract parameter-set counts from a GAP data file in a group-type folder.
 
     The preferred source is an explicit line containing "parameter" (but not
     "parametersc"), such as:
@@ -98,10 +110,18 @@ def raw_url(repository: str, branch: str, source_path: str) -> str:
 
 
 def source_kind(source_path: str) -> str | None:
+    if not source_path.startswith(INCLUDED_PARAMETER_SET_PREFIXES):
+        return None
+
+    if source_path.startswith(EXCLUDED_PARAMETER_SET_FOLDERS):
+        return None
+
     if source_path.startswith("Flag-transitive/"):
         return "flag-transitive"
+
     if source_path.startswith("Block-transitive/"):
         return "block-transitive"
+
     return None
 
 
