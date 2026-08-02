@@ -1532,9 +1532,24 @@ h2 {
 }
 
 
+/* Keep the separate Useful links box the same width as the main sidebar box. */
+aside > .sidebar-box,
+aside > .report-box {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .sidebar-useful-links {
   width: 100%;
   box-sizing: border-box;
+}
+
+.sidebar-useful-links h3 {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .sidebar-useful-links .sidebar-links {

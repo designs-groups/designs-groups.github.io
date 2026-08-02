@@ -150,3 +150,5 @@ the footer date, and deploys the site.
 - Version 39: reordered Useful links so ATLAS appears before GAP.
 
 - Version 40: fixed the GitHub Actions workflow to run `scripts/update_parameter_sets.py`; parameter-set generation now explicitly scans only Alternating, Classical, Exceptional, and Sporadic group folders and excludes Transitive and Primitive folders.
+
+- Version 41: made the separate Useful links sidebar box and its dark-blue title bar exactly full-width, matching the main sidebar box containing Licence.
