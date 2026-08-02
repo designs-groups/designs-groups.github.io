@@ -220,3 +220,183 @@
 #I   block set is obtained .. 
 #I   autSubgroupInfo is obtained .. 
 #I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  6 : 9 done .. 
+
+#I  
+#I  [ 7, 9, "PSL(3,3)" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I   autSubgroupInfo is obtained .. 
+#I  autGroupInfo is obtained .. 
+#I  7 : 9 done .. 
+
+#I  
+#I  [ 8, 9, "A13" ]
+#I  rank : 2
+#I  finding block design info .. 
+#I   block set is obtained .. 
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
+#I  Warning: R-base point is already fixed
