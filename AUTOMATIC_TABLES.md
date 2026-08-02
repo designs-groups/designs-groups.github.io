@@ -466,3 +466,7 @@ is composited onto the same author-box background colour without face alteration
 - Version 28: refined Parameter sets pages/landing sections: narrowed the Number of designs column, deduplicated repeated group labels, changed the landing-section link text, and kept automatic data generation from repository GAP files.
 
 - Version 29: removed `ft` and `bt` from the public Parameter sets enumeration-information wording.
+
+- Version 30: removed bold styling from the `Click to access the data` link in the Parameter sets section; automatic parameter-set updating remains unchanged.
+
+- Version 31: added a notice to Transitive and Primitive group pages that the listed `.g` files are separate data files and that designs within each file are sorted first by group and then by parameters.

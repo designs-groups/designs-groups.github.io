@@ -237,7 +237,7 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
             f'<table class="catalogue-group-grid catalogue-parameter-access-grid" '
             f'data-columns="1" aria-label="Parameter-set data">\n'
             f'    <tbody>\n'
-            f'      <tr><td><a class="catalogue-group-link" href="{table_href}">Click to access the data</a></td></tr>\n'
+            f'      <tr><td><a class="catalogue-parameter-access-link" href="{table_href}">Click to access the data</a></td></tr>\n'
             f'    </tbody>\n'
             f'</table>'
         )
