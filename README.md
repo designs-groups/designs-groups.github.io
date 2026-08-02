@@ -164,3 +164,5 @@ the footer date, and deploys the site.
 - Version 46: narrowed the parameter columns in Parameter sets tables and clarified that Number of designs counts designs obtained from the groups in the Group column, not all designs with that parameter set.
 
 - Version 47: added Affine groups pages for flag-transitive and block-transitive designs, configured automatic table generation from `.g` files in Affine groups folders, and included Affine groups in Parameter sets generation.
+
+- Version 48: moved Affine groups after Primitive groups in sidebars and on the flag-transitive/block-transitive catalogue pages.
