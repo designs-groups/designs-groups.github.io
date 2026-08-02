@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Block-transitive 2-designs 
-# Transitive groups on 10 points 
+# Primitive groups on 10 points 
 # ####################################################################################################
 # Remarks:      all designs 
 #               lD_10 is the list of the designs
@@ -31,103 +31,103 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k  λ  G         Gα        GB     Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   10  15   6    4  2   A5        S3         2^2    S6        3      2           7      1        2       true             false            false            false                2                                
-# 2   10  15   9    6  5   A5        S3         2^2    S6        3      2           7      1        2       true             false            false            false                1                                
-# 3   10  30   9    3  2   A5        S3         2      A5        3      3           7      1        1       true             false            false            false                4                                
-# 4   10  30   21   7  14  A5        S3         2      A5        3      3           7      1        1       true             false            false            false                3                                
-# 5   10  60   36   6  20  A5        S3         1      S5        3      3           7      1        3       true             false            false            false                                                 
-# 6   10  60   24   4  8   S5        D12        2      S5        3      3           13     1        3       true             false            false            false                                                 
-# 7   10  36   18   5  8   A6        (3^2):4    D10    A6.2      2      2           26     1        6       true             false            true             true                                                  
-# 8   10  90   45   5  20  A6        (3^2):4    4      S6        2      2           26     1        7       true             false            false            false                                                 
-# 9   10  30   12   4  4   A6:2      (3^2):8    S4     (A6.2):2  2      2           30     1        2       true             false            true             true                                                  
-# 10  10  45   36   8  28  S6        (S3xS3):2  2xD8   S10       2      2           32     1        8       true             false            false            true                                        complete  
-# 11  10  60   18   3  4   S6        (S3xS3):2  D12    S6        2      2           32     1        1       true             false            true             false                12                               
-# 12  10  60   42   7  28  S6        (S3xS3):2  D12    S6        2      2           32     1        1       true             false            true             false                11                               
-# 13  10  30   18   6  10  (A6.2):2  3^2:QD16   2xS4   (A6.2):2  2      2           35     1        2       true             false            true             true                                                  
-# 14  10  72   36   5  16  (A6.2):2  3^2:QD16   5:4    (A6.2):2  2      2           35     1        4       true             false            true             true                 14                               
-# 15  10  120  84   7  56  (A6.2):2  3^2:QD16   D12    S10       2      2           35     1        1       true             false            true             false                                       complete  
-# 16  10  180  72   4  24  (A6.2):2  3^2:QD16   D8     (A6.2):2  2      2           35     1        3       true             false            true             false                18                               
-# 17  10  180  90   5  40  (A6.2):2  3^2:QD16   D8     (A6.2):2  2      2           35     1        5       true             false            false            false                17                               
-# 18  10  180  108  6  60  (A6.2):2  3^2:QD16   D8     (A6.2):2  2      2           35     1        3       true             false            true             false                16                               
-# 19  10  210  126  6  70  A10       A9         A6:S4  S10       2      2           44     1        2       true             true             true             true                                        complete  
-# 20  10  252  126  5  56  A10       A9         A5:S5  S10       2      2           44     1        3       true             false            true             true                 20                     complete  
-# 21  10  120  36   3  8   S10       S9         S7xS3  S10       2      2           45     1        1       true             true             true             true                                        complete  
-# 22  10  210  84   4  28  S10       S9         S6xS4  S10       2      2           45     1        2       true             true             true             true                                        complete  
+# 1   10  15   6    4  2   A5        S3         2^2    S6        3      2           1      1        2       true             false            false            false                2                                
+# 2   10  15   9    6  5   A5        S3         2^2    S6        3      2           1      1        2       true             false            false            false                1                                
+# 3   10  30   9    3  2   A5        S3         2      A5        3      3           1      1        1       true             false            false            false                4                                
+# 4   10  30   21   7  14  A5        S3         2      A5        3      3           1      1        1       true             false            false            false                3                                
+# 5   10  60   36   6  20  A5        S3         1      S5        3      3           1      1        3       true             false            false            false                                                 
+# 6   10  60   24   4  8   S5        D12        2      S5        3      3           2      1        3       true             false            false            false                                                 
+# 7   10  36   18   5  8   A6        (3^2):4    D10    A6.2      2      2           3      1        6       true             false            true             true                                                  
+# 8   10  90   45   5  20  A6        (3^2):4    4      S6        2      2           3      1        7       true             false            false            false                                                 
+# 9   10  30   12   4  4   A6:2      (3^2):8    S4     (A6:2):2  2      2           4      1        2       true             false            true             true                                                  
+# 10  10  45   36   8  28  S6        (S3xS3):2  2xD8   S10       2      2           5      1        8       true             false            false            true                                        complete  
+# 11  10  60   18   3  4   S6        (S3xS3):2  D12    S6        2      2           5      1        1       true             false            true             false                12                               
+# 12  10  60   42   7  28  S6        (S3xS3):2  D12    S6        2      2           5      1        1       true             false            true             false                11                               
+# 13  10  30   18   6  10  (A6:2):2  3^2:QD16   2xS4   (A6:2):2  2      2           7      1        2       true             false            true             true                                                  
+# 14  10  72   36   5  16  (A6:2):2  3^2:QD16   5:4    (A6:2):2  2      2           7      1        4       true             false            true             true                 14                               
+# 15  10  120  84   7  56  (A6:2):2  3^2:QD16   D12    S10       2      2           7      1        1       true             false            true             false                                       complete  
+# 16  10  180  72   4  24  (A6:2):2  3^2:QD16   D8     (A6:2):2  2      2           7      1        3       true             false            true             false                18                               
+# 17  10  180  90   5  40  (A6:2):2  3^2:QD16   D8     (A6:2):2  2      2           7      1        5       true             false            false            false                17                               
+# 18  10  180  108  6  60  (A6:2):2  3^2:QD16   D8     (A6:2):2  2      2           7      1        3       true             false            true             false                16                               
+# 19  10  210  126  6  70  A10       A9         A6:S4  S10       2      2           8      1        2       true             true             true             true                                        complete  
+# 20  10  252  126  5  56  A10       A9         A5:S5  S10       2      2           8      1        3       true             false            true             true                 20                     complete  
+# 21  10  120  36   3  8   S10       S9         S7xS3  S10       2      2           9      1        1       true             true             true             true                                        complete  
+# 22  10  210  84   4  28  S10       S9         S6xS4  S10       2      2           9      1        2       true             true             true             true                                        complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k  λ  G         Gα        GB       Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   10  15   6    4  2   A5        S3         2^2      S6        3      2           7      1        2       true             false            false            false                2                                
-# 2   10  15   9    6  5   A5        S3         2^2      S6        3      2           7      1        2       true             false            false            false                1                                
-# 3   10  30   9    3  2   A5        S3         2        A5        3      3           7      1        1       true             false            false            false                4                                
-# 4   10  30   21   7  14  A5        S3         2        A5        3      3           7      1        1       true             false            false            false                3                                
-# 5   10  60   24   4  8   A5        S3         1        S5        3      3           7      1        3       true             false            false            false                6                                
-# 6   10  60   36   6  20  A5        S3         1        S5        3      3           7      1        3       true             false            false            false                5                                
-# 7   10  15   6    4  2   S5        D12        D8       S6        3      2           13     1        2       true             false            true             false                8                                
-# 8   10  15   9    6  5   S5        D12        D8       S6        3      2           13     1        2       true             false            true             false                7                                
-# 9   10  60   18   3  4   S5        D12        2        S6        3      2           13     1        1       true             false            false            false                12                               
-# 10  10  60   24   4  8   S5        D12        2        S5        3      3           13     1        3       true             false            false            false                11                               
-# 11  10  60   36   6  20  S5        D12        2        S5        3      3           13     1        3       true             false            false            false                10                               
-# 12  10  60   42   7  28  S5        D12        2        S6        3      2           13     1        1       true             false            false            false                9                                
-# 13  10  15   6    4  2   A6        (3^2):4    S4       S6        2      2           26     1        3       true             true             true             true                 14                               
-# 14  10  15   9    6  5   A6        (3^2):4    S4       S6        2      2           26     1        3       true             true             true             true                 13                               
-# 15  10  36   18   5  8   A6        (3^2):4    D10      A6.2      2      2           26     1        6       true             false            true             true                                                  
-# 16  10  45   36   8  28  A6        (3^2):4    D8       S10       2      2           26     1        8       true             false            false            true                                        complete  
-# 17  10  60   18   3  4   A6        (3^2):4    S3       S6        2      2           26     1        1       true             false            true             false                18                               
-# 18  10  60   42   7  28  A6        (3^2):4    S3       S6        2      2           26     1        1       true             false            true             false                17                               
-# 19  10  90   45   5  20  A6        (3^2):4    4        S6        2      2           26     1        7       true             false            false            false                                                 
-# 20  10  180  72   4  24  A6        (3^2):4    2        (A6:2):2  2      2           26     1        5       true             false            false            false                21                               
-# 21  10  180  108  6  60  A6        (3^2):4    2        (A6:2):2  2      2           26     1        5       true             false            false            false                20                               
-# 22  10  30   12   4  4   A6:2      (3^2):8    S4       (A6.2):2  2      2           30     1        2       true             false            true             true                 23                               
-# 23  10  30   18   6  10  A6:2      (3^2):8    S4       (A6.2):2  2      2           30     1        2       true             false            true             true                 22                               
-# 24  10  45   36   8  28  A6:2      (3^2):8    D16      S10       2      2           30     1        6       true             true             true             true                                        complete  
-# 25  10  72   36   5  16  A6:2      (3^2):8    D10      (A6:2):2  2      2           30     1        4       true             false            true             true                 25                               
-# 26  10  120  36   3  8   A6:2      (3^2):8    S3       S10       2      2           30     1        1       true             false            true             false                27                     complete  
-# 27  10  120  84   7  56  A6:2      (3^2):8    S3       S10       2      2           30     1        1       true             false            true             false                26                     complete  
-# 28  10  180  72   4  24  A6:2      (3^2):8    2^2      (A6:2):2  2      2           30     1        3       true             false            true             false                30                               
-# 29  10  180  90   5  40  A6:2      (3^2):8    4        (A6:2):2  2      2           30     1        5       true             false            false            false                29                               
-# 30  10  180  108  6  60  A6:2      (3^2):8    2^2      (A6:2):2  2      2           30     1        3       true             false            true             false                28                               
-# 31  10  30   12   4  4   A6.2      (3^2):Q8   S4       (A6:2):2  2      2           31     1        2       true             false            true             true                 32                               
-# 32  10  30   18   6  10  A6.2      (3^2):Q8   S4       (A6:2):2  2      2           31     1        2       true             false            true             true                 31                               
-# 33  10  36   18   5  8   A6.2      (3^2):Q8   5:4      A6.2      2      2           31     1        4       true             true             true             true                                                  
-# 34  10  45   36   8  28  A6.2      (3^2):Q8   QD16     S10       2      2           31     1        6       true             true             true             true                                        complete  
-# 35  10  120  36   3  8   A6.2      (3^2):Q8   S3       S10       2      2           31     1        1       true             false            true             false                36                     complete  
-# 36  10  120  84   7  56  A6.2      (3^2):Q8   S3       S10       2      2           31     1        1       true             false            true             false                35                     complete  
-# 37  10  180  72   4  24  A6.2      (3^2):Q8   4        (A6.2):2  2      2           31     1        3       true             false            true             false                39                               
-# 38  10  180  90   5  40  A6.2      (3^2):Q8   4        (A6:2):2  2      2           31     1        5       true             false            false            false                38                               
-# 39  10  180  108  6  60  A6.2      (3^2):Q8   4        (A6.2):2  2      2           31     1        3       true             false            true             false                37                               
-# 40  10  15   6    4  2   S6        (S3xS3):2  2xS4     S6        2      2           32     1        3       true             true             true             true                 41                               
-# 41  10  15   9    6  5   S6        (S3xS3):2  2xS4     S6        2      2           32     1        3       true             true             true             true                 40                               
-# 42  10  45   36   8  28  S6        (S3xS3):2  2xD8     S10       2      2           32     1        8       true             false            false            true                                        complete  
-# 43  10  60   18   3  4   S6        (S3xS3):2  D12      S6        2      2           32     1        1       true             false            true             false                44                               
-# 44  10  60   42   7  28  S6        (S3xS3):2  D12      S6        2      2           32     1        1       true             false            true             false                43                               
-# 45  10  72   36   5  16  S6        (S3xS3):2  D10      (A6:2):2  2      2           32     1        6       true             false            true             true                 45                               
-# 46  10  90   45   5  20  S6        (S3xS3):2  D8       S6        2      2           32     1        7       true             false            false            false                                                 
-# 47  10  180  72   4  24  S6        (S3xS3):2  2^2      (A6:2):2  2      2           32     1        5       true             false            false            false                48                               
-# 48  10  180  108  6  60  S6        (S3xS3):2  2^2      (A6:2):2  2      2           32     1        5       true             false            false            false                47                               
-# 49  10  30   12   4  4   (A6.2):2  3^2:QD16   2xS4     (A6.2):2  2      2           35     1        2       true             false            true             true                 50                               
-# 50  10  30   18   6  10  (A6.2):2  3^2:QD16   2xS4     (A6.2):2  2      2           35     1        2       true             false            true             true                 49                               
-# 51  10  45   36   8  28  (A6.2):2  3^2:QD16   8:(2^2)  S10       2      2           35     1        6       true             true             true             true                                        complete  
-# 52  10  72   36   5  16  (A6.2):2  3^2:QD16   5:4      (A6.2):2  2      2           35     1        4       true             false            true             true                 52                               
-# 53  10  120  36   3  8   (A6.2):2  3^2:QD16   D12      S10       2      2           35     1        1       true             false            true             false                54                     complete  
-# 54  10  120  84   7  56  (A6.2):2  3^2:QD16   D12      S10       2      2           35     1        1       true             false            true             false                53                     complete  
-# 55  10  180  72   4  24  (A6.2):2  3^2:QD16   D8       (A6.2):2  2      2           35     1        3       true             false            true             false                57                               
-# 56  10  180  90   5  40  (A6.2):2  3^2:QD16   D8       (A6.2):2  2      2           35     1        5       true             false            false            false                56                               
-# 57  10  180  108  6  60  (A6.2):2  3^2:QD16   D8       (A6.2):2  2      2           35     1        3       true             false            true             false                55                               
-# 58  10  45   36   8  28  A10       A9         S8       S10       2      2           44     1        4       true             true             true             true                                        complete  
-# 59  10  120  36   3  8   A10       A9         A7:S3    S10       2      2           44     1        1       true             true             true             true                 60                     complete  
-# 60  10  120  84   7  56  A10       A9         A7:S3    S10       2      2           44     1        1       true             true             true             true                 59                     complete  
-# 61  10  210  84   4  28  A10       A9         A6:S4    S10       2      2           44     1        2       true             true             true             true                 62                     complete  
-# 62  10  210  126  6  70  A10       A9         A6:S4    S10       2      2           44     1        2       true             true             true             true                 61                     complete  
-# 63  10  252  126  5  56  A10       A9         A5:S5    S10       2      2           44     1        3       true             false            true             true                 63                     complete  
-# 64  10  45   36   8  28  S10       S9         2xS8     S10       2      2           45     1        4       true             true             true             true                                        complete  
-# 65  10  120  36   3  8   S10       S9         S7xS3    S10       2      2           45     1        1       true             true             true             true                 66                     complete  
-# 66  10  120  84   7  56  S10       S9         S7xS3    S10       2      2           45     1        1       true             true             true             true                 65                     complete  
-# 67  10  210  84   4  28  S10       S9         S6xS4    S10       2      2           45     1        2       true             true             true             true                 68                     complete  
-# 68  10  210  126  6  70  S10       S9         S6xS4    S10       2      2           45     1        2       true             true             true             true                 67                     complete  
-# 69  10  252  126  5  56  S10       S9         S5xS5    S10       2      2           45     1        3       true             false            true             true                 69                     complete  
+# 1   10  15   6    4  2   A5        S3         2^2      S6        3      2           1      1        2       true             false            false            false                2                                
+# 2   10  15   9    6  5   A5        S3         2^2      S6        3      2           1      1        2       true             false            false            false                1                                
+# 3   10  30   9    3  2   A5        S3         2        A5        3      3           1      1        1       true             false            false            false                4                                
+# 4   10  30   21   7  14  A5        S3         2        A5        3      3           1      1        1       true             false            false            false                3                                
+# 5   10  60   24   4  8   A5        S3         1        S5        3      3           1      1        3       true             false            false            false                6                                
+# 6   10  60   36   6  20  A5        S3         1        S5        3      3           1      1        3       true             false            false            false                5                                
+# 7   10  15   6    4  2   S5        D12        D8       S6        3      2           2      1        2       true             false            true             false                8                                
+# 8   10  15   9    6  5   S5        D12        D8       S6        3      2           2      1        2       true             false            true             false                7                                
+# 9   10  60   18   3  4   S5        D12        2        S6        3      2           2      1        1       true             false            false            false                12                               
+# 10  10  60   24   4  8   S5        D12        2        S5        3      3           2      1        3       true             false            false            false                11                               
+# 11  10  60   36   6  20  S5        D12        2        S5        3      3           2      1        3       true             false            false            false                10                               
+# 12  10  60   42   7  28  S5        D12        2        S6        3      2           2      1        1       true             false            false            false                9                                
+# 13  10  15   6    4  2   A6        (3^2):4    S4       S6        2      2           3      1        3       true             true             true             true                 14                               
+# 14  10  15   9    6  5   A6        (3^2):4    S4       S6        2      2           3      1        3       true             true             true             true                 13                               
+# 15  10  36   18   5  8   A6        (3^2):4    D10      A6.2      2      2           3      1        6       true             false            true             true                                                  
+# 16  10  45   36   8  28  A6        (3^2):4    D8       S10       2      2           3      1        8       true             false            false            true                                        complete  
+# 17  10  60   18   3  4   A6        (3^2):4    S3       S6        2      2           3      1        1       true             false            true             false                18                               
+# 18  10  60   42   7  28  A6        (3^2):4    S3       S6        2      2           3      1        1       true             false            true             false                17                               
+# 19  10  90   45   5  20  A6        (3^2):4    4        S6        2      2           3      1        7       true             false            false            false                                                 
+# 20  10  180  72   4  24  A6        (3^2):4    2        (A6:2):2  2      2           3      1        5       true             false            false            false                21                               
+# 21  10  180  108  6  60  A6        (3^2):4    2        (A6:2):2  2      2           3      1        5       true             false            false            false                20                               
+# 22  10  30   12   4  4   A6:2      (3^2):8    S4       (A6:2):2  2      2           4      1        2       true             false            true             true                 23                               
+# 23  10  30   18   6  10  A6:2      (3^2):8    S4       (A6:2):2  2      2           4      1        2       true             false            true             true                 22                               
+# 24  10  45   36   8  28  A6:2      (3^2):8    D16      S10       2      2           4      1        6       true             true             true             true                                        complete  
+# 25  10  72   36   5  16  A6:2      (3^2):8    D10      (A6:2):2  2      2           4      1        4       true             false            true             true                 25                               
+# 26  10  120  36   3  8   A6:2      (3^2):8    S3       S10       2      2           4      1        1       true             false            true             false                27                     complete  
+# 27  10  120  84   7  56  A6:2      (3^2):8    S3       S10       2      2           4      1        1       true             false            true             false                26                     complete  
+# 28  10  180  72   4  24  A6:2      (3^2):8    2^2      (A6:2):2  2      2           4      1        3       true             false            true             false                30                               
+# 29  10  180  90   5  40  A6:2      (3^2):8    4        (A6.2):2  2      2           4      1        5       true             false            false            false                29                               
+# 30  10  180  108  6  60  A6:2      (3^2):8    2^2      (A6:2):2  2      2           4      1        3       true             false            true             false                28                               
+# 31  10  15   6    4  2   S6        (S3xS3):2  2xS4     S6        2      2           5      1        3       true             true             true             true                 32                               
+# 32  10  15   9    6  5   S6        (S3xS3):2  2xS4     S6        2      2           5      1        3       true             true             true             true                 31                               
+# 33  10  45   36   8  28  S6        (S3xS3):2  2xD8     S10       2      2           5      1        8       true             false            false            true                                        complete  
+# 34  10  60   18   3  4   S6        (S3xS3):2  D12      S6        2      2           5      1        1       true             false            true             false                35                               
+# 35  10  60   42   7  28  S6        (S3xS3):2  D12      S6        2      2           5      1        1       true             false            true             false                34                               
+# 36  10  72   36   5  16  S6        (S3xS3):2  D10      (A6:2):2  2      2           5      1        6       true             false            true             true                 36                               
+# 37  10  90   45   5  20  S6        (S3xS3):2  D8       S6        2      2           5      1        7       true             false            false            false                                                 
+# 38  10  180  72   4  24  S6        (S3xS3):2  2^2      (A6:2):2  2      2           5      1        5       true             false            false            false                39                               
+# 39  10  180  108  6  60  S6        (S3xS3):2  2^2      (A6:2):2  2      2           5      1        5       true             false            false            false                38                               
+# 40  10  30   12   4  4   A6.2      (3^2):Q8   S4       (A6:2):2  2      2           6      1        2       true             false            true             true                 41                               
+# 41  10  30   18   6  10  A6.2      (3^2):Q8   S4       (A6:2):2  2      2           6      1        2       true             false            true             true                 40                               
+# 42  10  36   18   5  8   A6.2      (3^2):Q8   5:4      A6.2      2      2           6      1        4       true             true             true             true                                                  
+# 43  10  45   36   8  28  A6.2      (3^2):Q8   QD16     S10       2      2           6      1        6       true             true             true             true                                        complete  
+# 44  10  120  36   3  8   A6.2      (3^2):Q8   S3       S10       2      2           6      1        1       true             false            true             false                45                     complete  
+# 45  10  120  84   7  56  A6.2      (3^2):Q8   S3       S10       2      2           6      1        1       true             false            true             false                44                     complete  
+# 46  10  180  72   4  24  A6.2      (3^2):Q8   4        (A6.2):2  2      2           6      1        3       true             false            true             false                48                               
+# 47  10  180  90   5  40  A6.2      (3^2):Q8   4        (A6:2):2  2      2           6      1        5       true             false            false            false                47                               
+# 48  10  180  108  6  60  A6.2      (3^2):Q8   4        (A6.2):2  2      2           6      1        3       true             false            true             false                46                               
+# 49  10  30   12   4  4   (A6:2):2  3^2:QD16   2xS4     (A6:2):2  2      2           7      1        2       true             false            true             true                 50                               
+# 50  10  30   18   6  10  (A6:2):2  3^2:QD16   2xS4     (A6:2):2  2      2           7      1        2       true             false            true             true                 49                               
+# 51  10  45   36   8  28  (A6:2):2  3^2:QD16   8:(2^2)  S10       2      2           7      1        6       true             true             true             true                                        complete  
+# 52  10  72   36   5  16  (A6:2):2  3^2:QD16   5:4      (A6:2):2  2      2           7      1        4       true             false            true             true                 52                               
+# 53  10  120  36   3  8   (A6:2):2  3^2:QD16   D12      S10       2      2           7      1        1       true             false            true             false                54                     complete  
+# 54  10  120  84   7  56  (A6:2):2  3^2:QD16   D12      S10       2      2           7      1        1       true             false            true             false                53                     complete  
+# 55  10  180  72   4  24  (A6:2):2  3^2:QD16   D8       (A6:2):2  2      2           7      1        3       true             false            true             false                57                               
+# 56  10  180  90   5  40  (A6:2):2  3^2:QD16   D8       (A6:2):2  2      2           7      1        5       true             false            false            false                56                               
+# 57  10  180  108  6  60  (A6:2):2  3^2:QD16   D8       (A6:2):2  2      2           7      1        3       true             false            true             false                55                               
+# 58  10  45   36   8  28  A10       A9         S8       S10       2      2           8      1        4       true             true             true             true                                        complete  
+# 59  10  120  36   3  8   A10       A9         A7:S3    S10       2      2           8      1        1       true             true             true             true                 60                     complete  
+# 60  10  120  84   7  56  A10       A9         A7:S3    S10       2      2           8      1        1       true             true             true             true                 59                     complete  
+# 61  10  210  84   4  28  A10       A9         A6:S4    S10       2      2           8      1        2       true             true             true             true                 62                     complete  
+# 62  10  210  126  6  70  A10       A9         A6:S4    S10       2      2           8      1        2       true             true             true             true                 61                     complete  
+# 63  10  252  126  5  56  A10       A9         A5:S5    S10       2      2           8      1        3       true             false            true             true                 63                     complete  
+# 64  10  45   36   8  28  S10       S9         2xS8     S10       2      2           9      1        4       true             true             true             true                                        complete  
+# 65  10  120  36   3  8   S10       S9         S7xS3    S10       2      2           9      1        1       true             true             true             true                 66                     complete  
+# 66  10  120  84   7  56  S10       S9         S7xS3    S10       2      2           9      1        1       true             true             true             true                 65                     complete  
+# 67  10  210  84   4  28  S10       S9         S6xS4    S10       2      2           9      1        2       true             true             true             true                 68                     complete  
+# 68  10  210  126  6  70  S10       S9         S6xS4    S10       2      2           9      1        2       true             true             true             true                 67                     complete  
+# 69  10  252  126  5  56  S10       S9         S5xS5    S10       2      2           9      1        3       true             false            true             true                 69                     complete  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
@@ -203,7 +203,7 @@
 # Block-transitive                     true   true    
 # Flag-transitive                      false  false   
 # Anti-flag-transitive                 false  false   
-# Flag-semiregular                     true   true    
+# Flag-semiregular                     false  false   
 # Flag-regular                         false  false   
 # Point-primitive                      true   true    
 # Point-primitive type                 2      2       
@@ -229,7 +229,7 @@
 # Block-transitive                     true   true    
 # Flag-transitive                      false  false   
 # Anti-flag-transitive                 false  false   
-# Flag-semiregular                     true   true    
+# Flag-semiregular                     false  false   
 # Flag-regular                         false  false   
 # Point-primitive                      true   true    
 # Point-primitive type                 2      2       
@@ -255,7 +255,7 @@
 # Block-transitive                     true   true    
 # Flag-transitive                      false  false   
 # Anti-flag-transitive                 false  false   
-# Flag-semiregular                     true   true    
+# Flag-semiregular                     true   false   
 # Flag-regular                         false  false   
 # Point-primitive                      true   true    
 # Point-primitive type                 2      2       
@@ -281,7 +281,7 @@
 # Block-transitive                     true   true    
 # Flag-transitive                      false  false   
 # Anti-flag-transitive                 false  false   
-# Flag-semiregular                     true   true    
+# Flag-semiregular                     false  false   
 # Flag-regular                         false  false   
 # Point-primitive                      true   true    
 # Point-primitive type                 2      2       
@@ -348,7 +348,7 @@
 # --------------------------------------------------------
 #                                      G        Aut(D)    
 # --------------------------------------------------------
-# Structure                            A6:2     (A6.2):2  
+# Structure                            A6:2     (A6:2):2  
 # Rank                                 2        2         
 # 2-Homogeneous                        true     true      
 # Point-stabiliser                     (3^2):8  3^2:QD16  
@@ -452,7 +452,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            (A6.2):2  (A6.2):2  
+# Structure                            (A6:2):2  (A6:2):2  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     3^2:QD16  3^2:QD16  
@@ -478,7 +478,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            (A6.2):2  (A6.2):2  
+# Structure                            (A6:2):2  (A6:2):2  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     3^2:QD16  3^2:QD16  
@@ -504,7 +504,7 @@
 # -------------------------------------------------------
 #                                      G         Aut(D)  
 # -------------------------------------------------------
-# Structure                            (A6.2):2  S10     
+# Structure                            (A6:2):2  S10     
 # Rank                                 2         2       
 # 2-Homogeneous                        true      true    
 # Point-stabiliser                     3^2:QD16  S9      
@@ -530,7 +530,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            (A6.2):2  (A6.2):2  
+# Structure                            (A6:2):2  (A6:2):2  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     3^2:QD16  3^2:QD16  
@@ -556,7 +556,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            (A6.2):2  (A6.2):2  
+# Structure                            (A6:2):2  (A6:2):2  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     3^2:QD16  3^2:QD16  
@@ -582,7 +582,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            (A6.2):2  (A6.2):2  
+# Structure                            (A6:2):2  (A6:2):2  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     3^2:QD16  3^2:QD16  
@@ -710,10 +710,10 @@
 
 lD_10 :=  [
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 7 ],
+  autGroup := Group( [ ( 1, 2, 8, 4, 9)( 3, 5, 7, 6,10), ( 1, 6, 4, 3, 8)( 2,10, 7, 9, 5), ( 3,10)( 4, 5)( 6, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 2 ],
+  baseBlock := [ 1, 2, 6, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -724,10 +724,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 2 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 2, 8, 4, 9)( 3, 5, 7, 6,10), ( 1, 6, 4, 3, 8)( 2,10, 7, 9, 5), ( 3,10)( 4, 5)( 6, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 2 ],
+  baseBlock := [ 3, 4, 5, 7, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -738,10 +738,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 9, 3, 2 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
+  autGroup := Group( [ ( 1, 4, 3)( 5, 9, 8)( 6, 7,10), ( 1, 7, 5)( 2, 4, 9)( 3,10, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 1, 2, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -752,10 +752,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 21, 7, 14 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 1 ],
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 4, 3)( 5, 9, 8)( 6, 7,10), ( 1, 7, 5)( 2, 4, 9)( 3,10, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 4, 5, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
   isBlockDesign := true,
@@ -766,10 +766,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 36, 6, 20 ],
-  autGroup := Group( [ ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 3 ],
-  baseBlock := [ 4, 6, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 2, 6, 4, 5, 3, 7)( 8,10, 9), ( 1, 9, 6, 4, 8)( 2, 5, 7,10, 3) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 3 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -780,10 +780,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 24, 4, 8 ],
-  autGroup := Group( [ ( 1, 5, 4, 2)( 3,10, 8, 6)( 7, 9), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
-  groupNumbers := [ 13, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 5 ],
+  autGroup := Group( [ ( 1, 7, 6)( 2, 9, 8)( 3, 4,10), ( 1,10, 5, 4, 6, 9)( 2, 3, 8) ] ),
+  autSubgroup := Group( [ ( 1, 8)( 2, 5, 6, 3)( 4, 9, 7,10), ( 1, 5, 7)( 2, 9, 4)( 3, 8,10) ] ),
+  groupNumbers := [ 2, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -794,10 +794,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 36, 18, 5, 8 ],
-  autGroup := Group( [ ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8, 5, 6)( 2, 4, 3, 9,10), ( 1, 9, 7, 8,10)( 2, 4, 6, 3, 5) ] ),
-  groupNumbers := [ 26, 1, 6 ],
-  baseBlock := [ 1, 2, 3, 4, 7 ],
+  autGroup := Group( [ ( 1, 3, 8, 4)( 5,10, 9, 6), ( 1, 8, 5, 3)( 2, 4,10, 9), (1,2)(4,8)(5,7)(6,9) ] ),
+  autSubgroup := Group( [ ( 2, 3, 5, 6)( 7, 9,10, 8), ( 1, 6, 8, 9, 3)( 2, 7, 4,10, 5) ] ),
+  groupNumbers := [ 3, 1, 6 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -808,9 +808,9 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 90, 45, 5, 20 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), ( 1, 3, 4,10)( 6, 8, 7, 9), ( 1, 3)( 4,10)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 5, 3)( 2, 8,10, 9, 7), ( 1, 9, 6, 4, 3)( 2, 7,10, 8, 5) ] ),
-  groupNumbers := [ 26, 1, 7 ],
+  autGroup := Group( [ ( 1, 8, 5,10, 4)( 2, 6, 7, 9, 3), ( 1, 9, 7)( 2,10, 6, 8, 5, 4) ] ),
+  autSubgroup := Group( [ ( 1, 6,10, 2, 4)( 3, 8, 7, 9, 5), ( 1, 9, 7, 4, 5)( 2,10, 3, 6, 8) ] ),
+  groupNumbers := [ 3, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -822,10 +822,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 6,10, 5, 3, 7, 4, 2), ( 1, 3,10, 7)( 4, 8, 6, 5), ( 1, 2)( 3,10)( 4, 5)( 6, 9) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 6 ],
+  autGroup := Group( [ ( 1,10, 4, 2, 3, 8, 6, 5)( 7, 9), ( 3, 9)( 4, 5)( 6,10) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -837,8 +837,8 @@ lD_10 :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9, 8, 7, 3)( 5, 6,10), ( 1, 9)( 2, 4,10, 7)( 3, 5, 8, 6) ] ),
-  groupNumbers := [ 32, 1, 8 ],
+  autSubgroup := Group( [ ( 1, 6,10, 8)( 2, 4, 7, 3)( 5, 9), ( 1, 9, 7, 3)( 4,10, 6, 5) ] ),
+  groupNumbers := [ 5, 1, 8 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -850,9 +850,9 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
-  groupNumbers := [ 32, 1, 1 ],
+  autGroup := Group( [ ( 2, 4, 3, 9,10, 8)( 5, 6, 7), ( 1, 4, 8)( 2, 3, 7, 6, 5,10) ] ),
+  autSubgroup := Group( [ ( 1, 4, 2,10, 7, 3)( 5, 9, 6), ( 1, 9, 2, 6)( 3,10)( 4, 5, 8, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -864,9 +864,9 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
-  groupNumbers := [ 32, 1, 1 ],
+  autGroup := Group( [ ( 2, 4, 3, 9,10, 8)( 5, 6, 7), ( 1, 4, 8)( 2, 3, 7, 6, 5,10) ] ),
+  autSubgroup := Group( [ ( 1, 4, 2,10, 7, 3)( 5, 9, 6), ( 1, 9, 2, 6)( 3,10)( 4, 5, 8, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -878,10 +878,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 5, 9, 4, 8, 6, 3,10), ( 1, 2, 5,10, 7)( 3, 9, 6, 8, 4), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 2 ],
-  baseBlock := [ 4, 5, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1,10, 9, 8, 6, 3, 2, 4)( 5, 7), ( 3, 5,10, 4)( 6, 8, 9, 7), ( 1, 2)( 3, 9,10, 6)( 4, 8, 5, 7) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -892,10 +892,10 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 72, 36, 5, 16 ],
-  autGroup := Group( [ (1,4,7,6,5,9,3,2), ( 1, 3, 5, 8)( 6,10, 9, 7), (1,2)(4,5)(7,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 4 ],
-  baseBlock := [ 1, 2, 3, 4, 7 ],
+  autGroup := Group( [ ( 1, 2, 8, 5, 6, 7,10, 9), ( 1, 3, 5, 7)( 6, 9, 8,10), (1,2)(4,5)(7,8), (1,2)(4,8)(5,7)(6,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -907,8 +907,8 @@ lD_10 :=  [
   v:= 10),
  rec( parameters := [ 10, 120, 84, 7, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 1 ],
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -920,9 +920,9 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 3 ],
+  autGroup := Group( [ ( 2, 3, 4,10, 6, 7, 8, 5), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -934,9 +934,9 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 90, 5, 40 ],
-  autGroup := Group( [ ( 1, 5,10, 9, 6, 4, 8, 7, 3, 2), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 5 ],
+  autGroup := Group( [ (2,4,3,7)(5,6,9,8), ( 1, 2, 4, 3)( 5, 7, 6,10), (2,4)(3,7)(6,8) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -948,9 +948,9 @@ lD_10 :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 3 ],
+  autGroup := Group( [ ( 2, 3, 4,10, 6, 7, 8, 5), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -964,7 +964,7 @@ lD_10 :=  [
  rec( parameters := [ 10, 210, 126, 6, 70 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 2 ],
+  groupNumbers := [ 8, 1, 2 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -978,7 +978,7 @@ lD_10 :=  [
  rec( parameters := [ 10, 252, 126, 5, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 3 ],
+  groupNumbers := [ 8, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -992,7 +992,7 @@ lD_10 :=  [
  rec( parameters := [ 10, 120, 36, 3, 8 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 1 ],
+  groupNumbers := [ 9, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1006,7 +1006,7 @@ lD_10 :=  [
  rec( parameters:= [ 10, 210, 84, 4, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 2 ],
+  groupNumbers := [ 9, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1025,10 +1025,10 @@ for D in lD_10 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_10_all :=  [
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 7 ],
+  autGroup := Group( [ ( 1, 2, 8, 4, 9)( 3, 5, 7, 6,10), ( 1, 6, 4, 3, 8)( 2,10, 7, 9, 5), ( 3,10)( 4, 5)( 6, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 2 ],
+  baseBlock := [ 1, 2, 6, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1039,10 +1039,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 7, 4, 5, 9)( 3,10, 8), ( 1, 3)( 2, 4, 7,10)( 5, 6, 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 2 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 2, 8, 4, 9)( 3, 5, 7, 6,10), ( 1, 6, 4, 3, 8)( 2,10, 7, 9, 5), ( 3,10)( 4, 5)( 6, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 2 ],
+  baseBlock := [ 3, 4, 5, 7, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1053,10 +1053,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 9, 3, 2 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
+  autGroup := Group( [ ( 1, 4, 3)( 5, 9, 8)( 6, 7,10), ( 1, 7, 5)( 2, 4, 9)( 3,10, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 1, 2, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1067,10 +1067,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 21, 7, 14 ],
-  autGroup := Group( [ ( 1, 2,10)( 3, 7, 4)( 5, 9, 8), ( 1, 6, 2, 8, 3)( 4, 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 1 ],
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 4, 3)( 5, 9, 8)( 6, 7,10), ( 1, 7, 5)( 2, 4, 9)( 3,10, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 4, 5, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1081,10 +1081,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 24, 4, 8 ],
-  autGroup := Group( [ ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 5 ],
+  autGroup := Group( [ ( 2, 6, 4, 5, 3, 7)( 8,10, 9), ( 1, 9, 6, 4, 8)( 2, 5, 7,10, 3) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1095,10 +1095,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 36, 6, 20 ],
-  autGroup := Group( [ ( 2, 5, 4)( 3, 9, 6)( 7,10, 8), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), ( 1, 9)( 3, 4)( 5,10)( 6, 7) ] ),
-  groupNumbers := [ 7, 1, 3 ],
-  baseBlock := [ 4, 6, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 2, 6, 4, 5, 3, 7)( 8,10, 9), ( 1, 9, 6, 4, 8)( 2, 5, 7,10, 3) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10) ] ),
+  groupNumbers := [ 1, 1, 3 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1109,10 +1109,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 1, 7,10, 3, 2, 4)( 5, 9, 8), ( 1, 2, 4, 3, 6)( 5, 8, 7, 9,10), (3,9)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
-  groupNumbers := [ 13, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 7 ],
+  autGroup := Group( [ ( 1, 2,10)( 3, 6, 9, 4, 7, 8), ( 1, 6,10, 5, 8)( 2, 4, 9, 7, 3), ( 1, 2)( 5,10)( 6, 7)( 8, 9) ] ),
+  autSubgroup := Group( [ ( 1, 8)( 2, 5, 6, 3)( 4, 9, 7,10), ( 1, 5, 7)( 2, 9, 4)( 3, 8,10) ] ),
+  groupNumbers := [ 2, 1, 2 ],
+  baseBlock := [ 1, 2, 6, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1123,10 +1123,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 1, 7,10, 3, 2, 4)( 5, 9, 8), ( 1, 2, 4, 3, 6)( 5, 8, 7, 9,10), (3,9)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
-  groupNumbers := [ 13, 1, 2 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 2,10)( 3, 6, 9, 4, 7, 8), ( 1, 6,10, 5, 8)( 2, 4, 9, 7, 3), ( 1, 2)( 5,10)( 6, 7)( 8, 9) ] ),
+  autSubgroup := Group( [ ( 1, 8)( 2, 5, 6, 3)( 4, 9, 7,10), ( 1, 5, 7)( 2, 9, 4)( 3, 8,10) ] ),
+  groupNumbers := [ 2, 1, 2 ],
+  baseBlock := [ 3, 4, 5, 7, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1137,10 +1137,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ ( 1, 7)( 2, 5, 3, 6)( 4,10, 9, 8), ( 1, 8, 3)( 2, 6, 7, 4, 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
-  groupNumbers := [ 13, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
+  autGroup := Group( [ (1,2,6,8)(3,9,5,7), ( 1, 6, 7, 5)( 2, 3,10, 9)( 4, 8) ] ),
+  autSubgroup := Group( [ ( 1, 8)( 2, 5, 6, 3)( 4, 9, 7,10), ( 1, 5, 7)( 2, 9, 4)( 3, 8,10) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1151,10 +1151,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 24, 4, 8 ],
-  autGroup := Group( [ ( 1, 5, 4, 2)( 3,10, 8, 6)( 7, 9), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
-  groupNumbers := [ 13, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 5 ],
+  autGroup := Group( [ ( 1, 7, 6)( 2, 9, 8)( 3, 4,10), ( 1,10, 5, 4, 6, 9)( 2, 3, 8) ] ),
+  autSubgroup := Group( [ ( 1, 8)( 2, 5, 6, 3)( 4, 9, 7,10), ( 1, 5, 7)( 2, 9, 4)( 3, 8,10) ] ),
+  groupNumbers := [ 2, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1165,10 +1165,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 36, 6, 20 ],
-  autGroup := Group( [ ( 1, 5, 4, 2)( 3,10, 8, 6)( 7, 9), ( 1, 3)( 4,10)( 5, 9)( 6, 8), ( 1, 5)( 6, 7)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
-  groupNumbers := [ 13, 1, 3 ],
-  baseBlock := [ 4, 6, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 7, 6)( 2, 9, 8)( 3, 4,10), ( 1,10, 5, 4, 6, 9)( 2, 3, 8) ] ),
+  autSubgroup := Group( [ ( 1, 8)( 2, 5, 6, 3)( 4, 9, 7,10), ( 1, 5, 7)( 2, 9, 4)( 3, 8,10) ] ),
+  groupNumbers := [ 2, 1, 3 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1179,10 +1179,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ ( 1, 7)( 2, 5, 3, 6)( 4,10, 9, 8), ( 1, 8, 3)( 2, 6, 7, 4, 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5, 7, 9)( 2, 4, 6, 8,10), (1,2)(3,7)(8,9) ] ),
-  groupNumbers := [ 13, 1, 1 ],
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
+  autGroup := Group( [ (1,2,6,8)(3,9,5,7), ( 1, 6, 7, 5)( 2, 3,10, 9)( 4, 8) ] ),
+  autSubgroup := Group( [ ( 1, 8)( 2, 5, 6, 3)( 4, 9, 7,10), ( 1, 5, 7)( 2, 9, 4)( 3, 8,10) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 3, 4, 5, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1193,10 +1193,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ ( 2, 6, 4, 7, 5,10)( 3, 8, 9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ (2,8,9,5)(3,6,4,7), ( 1,10, 5, 6, 2)( 3, 9, 8, 4, 7) ] ),
-  groupNumbers := [ 26, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 6 ],
+  autGroup := Group( [ ( 1, 7, 2,10, 4, 3)( 6, 9, 8), ( 2, 6, 5, 3)( 7, 8,10, 9), ( 2,10, 4, 9)( 3, 7, 8, 6) ] ),
+  autSubgroup := Group( [ ( 1, 4, 5, 8, 6)( 2, 7, 9,10, 3), ( 1, 9, 5, 6, 3)( 2, 4, 7,10, 8) ] ),
+  groupNumbers := [ 3, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1207,10 +1207,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ ( 2, 6, 4, 7, 5,10)( 3, 8, 9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
-  autSubgroup := Group( [ (2,8,9,5)(3,6,4,7), ( 1,10, 5, 6, 2)( 3, 9, 8, 4, 7) ] ),
-  groupNumbers := [ 26, 1, 3 ],
-  baseBlock := [ 4, 5, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 7, 2,10, 4, 3)( 6, 9, 8), ( 2, 6, 5, 3)( 7, 8,10, 9), ( 2,10, 4, 9)( 3, 7, 8, 6) ] ),
+  autSubgroup := Group( [ ( 1, 4, 5, 8, 6)( 2, 7, 9,10, 3), ( 1, 9, 5, 6, 3)( 2, 4, 7,10, 8) ] ),
+  groupNumbers := [ 3, 1, 3 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1221,10 +1221,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 36, 18, 5, 8 ],
-  autGroup := Group( [ ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 7, 8, 5, 6)( 2, 4, 3, 9,10), ( 1, 9, 7, 8,10)( 2, 4, 6, 3, 5) ] ),
-  groupNumbers := [ 26, 1, 6 ],
-  baseBlock := [ 1, 2, 3, 4, 7 ],
+  autGroup := Group( [ ( 1, 3, 8, 4)( 5,10, 9, 6), ( 1, 8, 5, 3)( 2, 4,10, 9), (1,2)(4,8)(5,7)(6,9) ] ),
+  autSubgroup := Group( [ ( 2, 3, 5, 6)( 7, 9,10, 8), ( 1, 6, 8, 9, 3)( 2, 7, 4,10, 5) ] ),
+  groupNumbers := [ 3, 1, 6 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1236,8 +1236,8 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 5, 8,10)( 2, 7, 9, 3), ( 1,10, 2, 7, 5)( 3, 8, 9, 4, 6) ] ),
-  groupNumbers := [ 26, 1, 8 ],
+  autSubgroup := Group( [ ( 1, 4, 6)( 2, 9, 8)( 5, 7,10), ( 1, 6, 8, 9, 3)( 2, 7, 4,10, 5) ] ),
+  groupNumbers := [ 3, 1, 8 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -1249,9 +1249,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ ( 1, 3, 6)( 4, 5,10, 8, 7, 9), ( 1, 6,10, 8, 4, 5)( 2, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 8, 5,10)( 2, 4, 9, 6), ( 1,10, 2)( 3, 5, 4)( 6, 8, 7) ] ),
-  groupNumbers := [ 26, 1, 1 ],
+  autGroup := Group( [ ( 1, 4, 8, 6, 3,10)( 2, 7, 9), ( 1, 7,10, 9, 6)( 2, 5, 4, 8, 3) ] ),
+  autSubgroup := Group( [ ( 1, 4, 6, 9, 5)( 2, 3, 7, 8,10), (1,5,9)(2,6,7)(3,4,8) ] ),
+  groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1263,9 +1263,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ ( 1, 3, 6)( 4, 5,10, 8, 7, 9), ( 1, 6,10, 8, 4, 5)( 2, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 8, 5,10)( 2, 4, 9, 6), ( 1,10, 2)( 3, 5, 4)( 6, 8, 7) ] ),
-  groupNumbers := [ 26, 1, 1 ],
+  autGroup := Group( [ ( 1, 4, 8, 6, 3,10)( 2, 7, 9), ( 1, 7,10, 9, 6)( 2, 5, 4, 8, 3) ] ),
+  autSubgroup := Group( [ ( 1, 4, 6, 9, 5)( 2, 3, 7, 8,10), (1,5,9)(2,6,7)(3,4,8) ] ),
+  groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1277,9 +1277,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 90, 45, 5, 20 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), ( 1, 3, 4,10)( 6, 8, 7, 9), ( 1, 3)( 4,10)( 8, 9) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 5, 3)( 2, 8,10, 9, 7), ( 1, 9, 6, 4, 3)( 2, 7,10, 8, 5) ] ),
-  groupNumbers := [ 26, 1, 7 ],
+  autGroup := Group( [ ( 1, 8, 5,10, 4)( 2, 6, 7, 9, 3), ( 1, 9, 7)( 2,10, 6, 8, 5, 4) ] ),
+  autSubgroup := Group( [ ( 1, 6,10, 2, 4)( 3, 8, 7, 9, 5), ( 1, 9, 7, 4, 5)( 2,10, 3, 6, 8) ] ),
+  groupNumbers := [ 3, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1291,9 +1291,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4,10, 8, 2)( 3, 9, 6, 7, 5), ( 1, 6, 5)( 2, 7, 3)( 4,10, 8) ] ),
-  groupNumbers := [ 26, 1, 5 ],
+  autGroup := Group( [ ( 2, 3, 4,10, 6, 7, 8, 5), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ ( 1, 2,10, 8, 9)( 3, 5, 7, 4, 6), ( 1,10, 6, 7, 9)( 2, 4, 3, 5, 8) ] ),
+  groupNumbers := [ 3, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1305,9 +1305,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4,10, 5)( 7, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4,10, 8, 2)( 3, 9, 6, 7, 5), ( 1, 6, 5)( 2, 7, 3)( 4,10, 8) ] ),
-  groupNumbers := [ 26, 1, 5 ],
+  autGroup := Group( [ ( 2, 3, 4,10, 6, 7, 8, 5), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ ( 1, 2,10, 8, 9)( 3, 5, 7, 4, 6), ( 1,10, 6, 7, 9)( 2, 4, 3, 5, 8) ] ),
+  groupNumbers := [ 3, 1, 5 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1319,10 +1319,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 6,10, 5, 3, 7, 4, 2), ( 1, 3,10, 7)( 4, 8, 6, 5), ( 1, 2)( 3,10)( 4, 5)( 6, 9) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 6 ],
+  autGroup := Group( [ ( 1,10, 4, 2, 3, 8, 6, 5)( 7, 9), ( 3, 9)( 4, 5)( 6,10) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1333,10 +1333,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 6,10, 5, 3, 7, 4, 2), ( 1, 3,10, 7)( 4, 8, 6, 5), ( 1, 2)( 3,10)( 4, 5)( 6, 9) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 2 ],
-  baseBlock := [ 4, 5, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1,10, 4, 2, 3, 8, 6, 5)( 7, 9), ( 3, 9)( 4, 5)( 6,10) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1348,8 +1348,8 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 6 ],
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -1361,10 +1361,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 72, 36, 5, 16 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), (2,3,9,4)(5,6,8,7), ( 1, 3)( 4, 9)( 5, 7)( 8,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 4 ],
-  baseBlock := [ 1, 2, 3, 4, 7 ],
+  autGroup := Group( [ ( 2, 4, 6,10, 9, 7)( 3, 8, 5), ( 1, 3, 4, 8, 5, 9)( 6,10, 7), ( 1, 3, 8, 4)( 5,10, 9, 6) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1376,8 +1376,8 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 120, 36, 3, 8 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 1 ],
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1390,8 +1390,8 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 120, 84, 7, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 1 ],
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1403,9 +1403,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 2, 3, 4, 6,10, 8, 7, 5), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 3 ],
+  autGroup := Group( [ ( 3, 4,10, 5)( 6, 7, 9, 8), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1417,9 +1417,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 90, 5, 40 ],
-  autGroup := Group( [ ( 2, 5, 7, 8,10, 6, 4, 3), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 5 ],
+  autGroup := Group( [ ( 1, 8, 9, 6,10, 7, 4, 5, 3, 2), (1,5,3,8)(4,6,9,7), (1,5)(3,8)(6,7) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1431,135 +1431,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 2, 3, 4, 6,10, 8, 7, 5), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 30, 1, 3 ],
-  baseBlock := [ 5, 6, 7, 8, 9, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 108,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 2)( 3, 4,10, 7, 6, 5, 9, 8), ( 1, 2, 6, 9,10, 8, 7, 5)( 3, 4), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,2,3,7)(5,8,6,9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
-  groupNumbers := [ 31, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 6 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 2)( 3, 4,10, 7, 6, 5, 9, 8), ( 1, 2, 6, 9,10, 8, 7, 5)( 3, 4), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,2,3,7)(5,8,6,9), ( 1, 4, 6, 8)( 5, 9,10, 7) ] ),
-  groupNumbers := [ 31, 1, 2 ],
-  baseBlock := [ 4, 5, 7, 8, 9, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 10 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 36, 18, 5, 8 ],
-  autGroup := Group( [ ( 1, 2, 7, 5, 4,10, 9, 3)( 6, 8), ( 1, 3, 7, 4)( 5, 6, 9,10), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 5)( 3, 7, 9)( 6,10, 8), ( 1, 8, 4,10, 5, 7, 2, 3)( 6, 9) ] ),
-  groupNumbers := [ 31, 1, 4 ],
-  baseBlock := [ 1, 2, 3, 4, 7 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 45, 36, 8, 28 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 7)( 2, 4,10, 3, 8, 9, 6, 5), ( 1, 9,10, 8)( 2, 4, 5, 3) ] ),
-  groupNumbers := [ 31, 1, 6 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 36,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 120, 36, 3, 8 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 3, 2, 9, 5,10)( 7, 8), ( 1, 7, 9, 2)( 3,10, 8, 4) ] ),
-  groupNumbers := [ 31, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 36,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 120, 84, 7, 56 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 3, 2, 9, 5,10)( 7, 8), ( 1, 7, 9, 2)( 3,10, 8, 4) ] ),
-  groupNumbers := [ 31, 1, 1 ],
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 84,
-  tSubsetStructure := rec(
-  lambdas := [ 56 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ (1,2,4,5)(6,8,9,7), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,4,2,8)(3,7,6,5), ( 1, 8)( 2, 4, 3,10, 7, 6, 9, 5) ] ),
-  groupNumbers := [ 31, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 72,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 180, 90, 5, 40 ],
-  autGroup := Group( [ ( 1, 4, 7, 2, 5, 8)( 6, 9,10), ( 1, 5,10, 4, 2, 3)( 6, 7, 8), (2,5)(6,7)(8,9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 7, 6, 9)( 4,10, 8, 5), ( 1, 9, 8, 2)( 3, 5, 7,10) ] ),
-  groupNumbers := [ 31, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 90,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
-  t := 2 ),
-  v:= 10),
- rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ (1,2,4,5)(6,8,9,7), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,4,2,8)(3,7,6,5), ( 1, 8)( 2, 4, 3,10, 7, 6, 9, 5) ] ),
-  groupNumbers := [ 31, 1, 3 ],
+  autGroup := Group( [ ( 3, 4,10, 5)( 6, 7, 9, 8), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 4, 1, 3 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1571,10 +1445,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 6, 4, 2 ],
-  autGroup := Group( [ (1,6,8,9,5,3)(2,4,7), ( 3, 9, 6,10)( 4, 8, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 7,10, 2)( 4, 9, 6, 5, 8), ( 1,10, 9, 2)( 3, 5, 6, 8)( 4, 7) ] ),
-  groupNumbers := [ 32, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 6 ],
+  autGroup := Group( [ ( 1,10, 4, 6, 8, 3)( 2, 7, 5), ( 1,10, 8, 6)( 3, 5, 4, 9) ] ),
+  autSubgroup := Group( [ ( 2, 3,10)( 4, 9, 8)( 5, 7, 6), ( 1,10, 9, 4, 7, 8)( 2, 6, 5) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1585,10 +1459,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 15, 9, 6, 5 ],
-  autGroup := Group( [ (1,6,8,9,5,3)(2,4,7), ( 3, 9, 6,10)( 4, 8, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 7,10, 2)( 4, 9, 6, 5, 8), ( 1,10, 9, 2)( 3, 5, 6, 8)( 4, 7) ] ),
-  groupNumbers := [ 32, 1, 3 ],
-  baseBlock := [ 4, 5, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1,10, 4, 6, 8, 3)( 2, 7, 5), ( 1,10, 8, 6)( 3, 5, 4, 9) ] ),
+  autSubgroup := Group( [ ( 2, 3,10)( 4, 9, 8)( 5, 7, 6), ( 1,10, 9, 4, 7, 8)( 2, 6, 5) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1600,8 +1474,8 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9, 8, 7, 3)( 5, 6,10), ( 1, 9)( 2, 4,10, 7)( 3, 5, 8, 6) ] ),
-  groupNumbers := [ 32, 1, 8 ],
+  autSubgroup := Group( [ ( 1, 6,10, 8)( 2, 4, 7, 3)( 5, 9), ( 1, 9, 7, 3)( 4,10, 6, 5) ] ),
+  groupNumbers := [ 5, 1, 8 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -1613,9 +1487,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 18, 3, 4 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
-  groupNumbers := [ 32, 1, 1 ],
+  autGroup := Group( [ ( 2, 4, 3, 9,10, 8)( 5, 6, 7), ( 1, 4, 8)( 2, 3, 7, 6, 5,10) ] ),
+  autSubgroup := Group( [ ( 1, 4, 2,10, 7, 3)( 5, 9, 6), ( 1, 9, 2, 6)( 3,10)( 4, 5, 8, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1627,9 +1501,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 60, 42, 7, 28 ],
-  autGroup := Group( [ (1,8,5)(2,3,4,9,7,6), ( 1,10, 7, 9, 3)( 2, 8, 4, 6, 5) ] ),
-  autSubgroup := Group( [ ( 2, 7,10, 3, 9, 5)( 4, 8, 6), ( 1, 7,10, 9, 8)( 2, 6, 5, 4, 3) ] ),
-  groupNumbers := [ 32, 1, 1 ],
+  autGroup := Group( [ ( 2, 4, 3, 9,10, 8)( 5, 6, 7), ( 1, 4, 8)( 2, 3, 7, 6, 5,10) ] ),
+  autSubgroup := Group( [ ( 1, 4, 2,10, 7, 3)( 5, 9, 6), ( 1, 9, 2, 6)( 3,10)( 4, 5, 8, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1641,10 +1515,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 72, 36, 5, 16 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5, 8,10, 7), (2,3,9,4)(5,6,8,7), ( 1, 3)( 4, 9)( 5, 7)( 8,10) ] ),
-  autSubgroup := Group( [ ( 2, 3, 7, 4, 8,10)( 5, 9, 6), ( 1, 6, 7,10)( 2, 8)( 3, 9, 4, 5) ] ),
-  groupNumbers := [ 32, 1, 6 ],
-  baseBlock := [ 1, 2, 3, 4, 7 ],
+  autGroup := Group( [ (1,3,2)(4,9,5,7,6,8), ( 1, 3, 4, 2)( 5,10, 6, 7), (1,3)(4,9)(5,8)(6,7) ] ),
+  autSubgroup := Group( [ ( 1, 8,10, 6)( 2, 3, 7, 4)( 5, 9), ( 1, 8, 9,10, 3)( 2, 5, 4, 7, 6) ] ),
+  groupNumbers := [ 5, 1, 6 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1655,9 +1529,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 90, 45, 5, 20 ],
-  autGroup := Group( [ ( 1, 3, 4,10)( 6, 8, 7, 9), ( 1, 5, 6, 8,10, 4)( 2, 9, 3) ] ),
-  autSubgroup := Group( [ ( 1, 3, 4,10)( 2, 5)( 6, 9, 7, 8), ( 1, 6, 4, 8)( 2, 5, 3,10)( 7, 9) ] ),
-  groupNumbers := [ 32, 1, 7 ],
+  autGroup := Group( [ ( 1, 6,10, 7, 5, 4)( 2, 3, 8), ( 1, 6, 3, 2, 9,10)( 4, 5, 8) ] ),
+  autSubgroup := Group( [ ( 1, 3, 9, 7)( 2, 4, 8, 6)( 5,10), ( 1, 8, 9, 7, 2, 3)( 4,10, 5) ] ),
+  groupNumbers := [ 5, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1669,9 +1543,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 2, 3)( 5,10)( 7, 9), (1,2)(4,5)(7,8), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4)( 2,10)( 3, 5)( 7, 9), ( 1, 8, 2,10, 5, 9)( 3, 7, 6) ] ),
-  groupNumbers := [ 32, 1, 5 ],
+  autGroup := Group( [ ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9), (1,2)(4,5)(7,8) ] ),
+  autSubgroup := Group( [ (1,4,6,9,8,2)(3,7,5), ( 1, 9,10, 2, 7)( 3, 5, 4, 6, 8) ] ),
+  groupNumbers := [ 5, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1683,9 +1557,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 2, 3)( 5,10)( 7, 9), (1,2)(4,5)(7,8), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 4)( 2,10)( 3, 5)( 7, 9), ( 1, 8, 2,10, 5, 9)( 3, 7, 6) ] ),
-  groupNumbers := [ 32, 1, 5 ],
+  autGroup := Group( [ ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9), (1,2)(4,5)(7,8) ] ),
+  autSubgroup := Group( [ (1,4,6,9,8,2)(3,7,5), ( 1, 9,10, 2, 7)( 3, 5, 4, 6, 8) ] ),
+  groupNumbers := [ 5, 1, 5 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1697,10 +1571,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 12, 4, 4 ],
-  autGroup := Group( [ ( 1, 5, 9, 4, 8, 6, 3,10), ( 1, 2, 5,10, 7)( 3, 9, 6, 8, 4), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 6 ],
+  autGroup := Group( [ ( 1, 3, 8, 6, 2)( 4, 9,10, 5, 7), ( 3, 5,10, 4)( 6, 8, 9, 7), (1,2)(4,5)(7,8) ] ),
+  autSubgroup := Group( [ ( 1, 7, 9, 2, 8,10, 4, 6)( 3, 5), ( 1, 8,10, 3, 7)( 2, 6, 4, 5, 9) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1711,10 +1585,10 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 30, 18, 6, 10 ],
-  autGroup := Group( [ ( 1, 5, 9, 4, 8, 6, 3,10), ( 1, 2, 5,10, 7)( 3, 9, 6, 8, 4), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 2 ],
-  baseBlock := [ 4, 5, 7, 8, 9, 10 ],
+  autGroup := Group( [ ( 1, 3, 8, 6, 2)( 4, 9,10, 5, 7), ( 3, 5,10, 4)( 6, 8, 9, 7), (1,2)(4,5)(7,8) ] ),
+  autSubgroup := Group( [ ( 1, 7, 9, 2, 8,10, 4, 6)( 3, 5), ( 1, 8,10, 3, 7)( 2, 6, 4, 5, 9) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1724,10 +1598,24 @@ lD_10_all :=  [
   lambdas := [ 10 ],
   t := 2 ),
   v:= 10),
+ rec( parameters := [ 10, 36, 18, 5, 8 ],
+  autGroup := Group( [ ( 2, 4, 9, 3)( 5, 8, 7,10), ( 1, 3, 8, 4)( 5,10, 9, 6), (1,2)(4,8)(5,7)(6,9) ] ),
+  autSubgroup := Group( [ ( 1, 5,10)( 2, 3, 8)( 4, 7, 6), ( 1, 9, 7, 5,10, 8, 4, 6)( 2, 3) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 8 ],
+  t := 2 ),
+  v:= 10),
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 6 ],
+  autSubgroup := Group( [ (1,2,7,9)(3,6,8,5), ( 1, 6, 7)( 2, 8,10)( 3, 4, 9) ] ),
+  groupNumbers := [ 6, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -1738,24 +1626,10 @@ lD_10_all :=  [
   lambdas := [ 28 ],
   t := 2 ),
   v:= 10),
- rec( parameters := [ 10, 72, 36, 5, 16 ],
-  autGroup := Group( [ (1,4,7,6,5,9,3,2), ( 1, 3, 5, 8)( 6,10, 9, 7), (1,2)(4,5)(7,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 4 ],
-  baseBlock := [ 1, 2, 3, 4, 7 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 36,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 10),
  rec( parameters := [ 10, 120, 36, 3, 8 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 1 ],
+  autSubgroup := Group( [ ( 1, 7, 3, 2, 8, 6, 5,10)( 4, 9), ( 1, 8, 6, 7, 2, 4, 9, 5)( 3,10) ] ),
+  groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1768,8 +1642,8 @@ lD_10_all :=  [
   v:= 10),
  rec( parameters := [ 10, 120, 84, 7, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 1 ],
+  autSubgroup := Group( [ ( 1, 7, 3, 2, 8, 6, 5,10)( 4, 9), ( 1, 8, 6, 7, 2, 4, 9, 5)( 3,10) ] ),
+  groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1781,9 +1655,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 72, 4, 24 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 3 ],
+  autGroup := Group( [ ( 1, 2, 4, 5)( 7, 9, 8,10), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ ( 3, 8,10, 7)( 4, 9, 5, 6), ( 1, 8, 6, 5, 2)( 3, 4, 7,10, 9) ] ),
+  groupNumbers := [ 6, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1795,9 +1669,9 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 90, 5, 40 ],
-  autGroup := Group( [ ( 1, 5,10, 9, 6, 4, 8, 7, 3, 2), (2,5)(6,7)(8,9), (1,2)(4,5)(7,8) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 5 ],
+  autGroup := Group( [ ( 1, 2)( 3, 4, 6, 8,10, 5, 9, 7), ( 3, 6)( 7, 8)( 9,10), (2,3)(5,6)(8,9), (1,3)(4,6)(7,9) ] ),
+  autSubgroup := Group( [ ( 1, 4, 3, 2, 5, 9, 8,10)( 6, 7), ( 1,10, 8, 7)( 2, 4, 6, 9) ] ),
+  groupNumbers := [ 6, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1809,9 +1683,135 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10),
  rec( parameters := [ 10, 180, 108, 6, 60 ],
-  autGroup := Group( [ ( 3, 4, 6, 5)( 7,10, 8, 9), ( 2, 3)( 5,10)( 7, 9), ( 1, 2)( 3, 4)( 5, 6)( 7, 9)( 8,10) ] ),
-  autSubgroup := Group( [ (1,7,3,4,2,5,6,8), ( 1, 2,10)( 3, 4, 5)( 6, 7, 8), (3,6)(4,7)(5,8), ( 1, 2)( 4, 7)( 5, 8)( 9,10) ] ),
-  groupNumbers := [ 35, 1, 3 ],
+  autGroup := Group( [ ( 1, 2, 4, 5)( 7, 9, 8,10), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ ( 3, 8,10, 7)( 4, 9, 5, 6), ( 1, 8, 6, 5, 2)( 3, 4, 7,10, 9) ] ),
+  groupNumbers := [ 6, 1, 3 ],
+  baseBlock := [ 5, 6, 7, 8, 9, 10 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 108,
+  tSubsetStructure := rec(
+  lambdas := [ 60 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 30, 12, 4, 4 ],
+  autGroup := Group( [ ( 1,10, 9, 8, 6, 3, 2, 4)( 5, 7), ( 3, 5,10, 4)( 6, 8, 9, 7), ( 1, 2)( 3, 9,10, 6)( 4, 8, 5, 7) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 10 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 30, 18, 6, 10 ],
+  autGroup := Group( [ ( 1,10, 9, 8, 6, 3, 2, 4)( 5, 7), ( 3, 5,10, 4)( 6, 8, 9, 7), ( 1, 2)( 3, 9,10, 6)( 4, 8, 5, 7) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 10 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 45, 36, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 6 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 36,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 72, 36, 5, 16 ],
+  autGroup := Group( [ ( 1, 2, 8, 5, 6, 7,10, 9), ( 1, 3, 5, 7)( 6, 9, 8,10), (1,2)(4,5)(7,8), (1,2)(4,8)(5,7)(6,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 36,
+  tSubsetStructure := rec(
+  lambdas := [ 16 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 120, 36, 3, 8 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 1 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 36,
+  tSubsetStructure := rec(
+  lambdas := [ 8 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 120, 84, 7, 56 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 1 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 84,
+  tSubsetStructure := rec(
+  lambdas := [ 56 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 180, 72, 4, 24 ],
+  autGroup := Group( [ ( 2, 3, 4,10, 6, 7, 8, 5), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 72,
+  tSubsetStructure := rec(
+  lambdas := [ 24 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 180, 90, 5, 40 ],
+  autGroup := Group( [ (2,4,3,7)(5,6,9,8), ( 1, 2, 4, 3)( 5, 7, 6,10), (2,4)(3,7)(6,8) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 90,
+  tSubsetStructure := rec(
+  lambdas := [ 40 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 180, 108, 6, 60 ],
+  autGroup := Group( [ ( 2, 3, 4,10, 6, 7, 8, 5), ( 1, 3, 4, 2)( 5,10, 6, 7), (2,3)(5,6)(8,9) ] ),
+  autSubgroup := Group( [ (2,6,4,9,3,8,7,5), (1,2,3)(4,5,6)(7,8,9), (4,7)(5,8)(6,9), ( 1,10)( 4, 7)( 5, 6)( 8, 9) ] ),
+  groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1825,7 +1825,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 4 ],
+  groupNumbers := [ 8, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -1839,7 +1839,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 120, 36, 3, 8 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 1 ],
+  groupNumbers := [ 8, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1853,7 +1853,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 120, 84, 7, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 1 ],
+  groupNumbers := [ 8, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1867,7 +1867,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 210, 84, 4, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 2 ],
+  groupNumbers := [ 8, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1881,7 +1881,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 210, 126, 6, 70 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 2 ],
+  groupNumbers := [ 8, 1, 2 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1895,7 +1895,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 252, 126, 5, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7,8,9), ( 8, 9,10) ] ),
-  groupNumbers := [ 44, 1, 3 ],
+  groupNumbers := [ 8, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1909,7 +1909,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 45, 36, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 4 ],
+  groupNumbers := [ 9, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -1923,7 +1923,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 120, 36, 3, 8 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 1 ],
+  groupNumbers := [ 9, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1937,7 +1937,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 120, 84, 7, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 1 ],
+  groupNumbers := [ 9, 1, 1 ],
   baseBlock := [ 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1951,7 +1951,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 210, 84, 4, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 2 ],
+  groupNumbers := [ 9, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1965,7 +1965,7 @@ lD_10_all :=  [
  rec( parameters := [ 10, 210, 126, 6, 70 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 2 ],
+  groupNumbers := [ 9, 1, 2 ],
   baseBlock := [ 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1979,7 +1979,7 @@ lD_10_all :=  [
  rec( parameters:= [ 10, 252, 126, 5, 56 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
-  groupNumbers := [ 45, 1, 3 ],
+  groupNumbers := [ 9, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1991,4 +1991,4 @@ lD_10_all :=  [
   t := 2 ),
   v:= 10)
 ]; 
-for D in lD_10_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+for D in lD_10_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
