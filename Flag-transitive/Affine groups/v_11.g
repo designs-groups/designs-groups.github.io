@@ -28,20 +28,20 @@
 # -----------
 
 #    Non-isomorphic designs:
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b   r   k  λ  G      Gα  GB  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                              
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   11  11  5   5  2   11:5   5    5   PSL(2,11)  3      2           3      1        1       true             true             true             false                            true       Hadamard, Kantor or Paley parameters  
-# 2   11  22  10  5  4   11:10  10   5   11:10      2      2           4      1        1       true             false            true             false                                                                             
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b   r   k  λ  G          Gα  GB  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                              
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   11  11  5   5  2   11:5       5    5   PSL(2,11)  3      2           3      1        1       true             true             true             false                            true       Hadamard, Kantor or Paley parameters  
+# 2   11  22  10  5  4   AGL(1,11)  10   5   AGL(1,11)  2      2           4      1        1       true             false            true             false                                                                             
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b   r   k  λ  G      Gα  GB  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                              
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   11  11  5   5  2   11:5   5    5   PSL(2,11)  3      2           3      1        1       true             true             true             false                            true       Hadamard, Kantor or Paley parameters  
-# 2   11  22  10  5  4   11:10  10   5   11:10      2      2           4      1        1       true             false            true             false                                                                             
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b   r   k  λ  G          Gα  GB  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                              
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   11  11  5   5  2   11:5       5    5   PSL(2,11)  3      2           3      1        1       true             true             true             false                            true       Hadamard, Kantor or Paley parameters  
+# 2   11  22  10  5  4   AGL(1,11)  10   5   AGL(1,11)  2      2           4      1        1       true             false            true             false                                                                             
+# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
 # -------------------------------------------
@@ -73,40 +73,40 @@
 # -------------------------------------------------------
 
 # Design: 2
-# ----------------------------------------------------
+# -----------------------------------------------------------
 # Parameter set: [ 11, 22, 10, 5, 4 ]
 # Complement:    [ 11, 22, 12, 6, 6 ]
-# ----------------------------------------------------
-#                                      G      Aut(D)  
-# ----------------------------------------------------
-# Structure                            11:10  11:10   
-# Rank                                 2      2       
-# 2-Homogeneous                        true   true    
-# Point-stabiliser                     10     10      
-# Block-stabiliser                     5      5       
-# Orbit structure of point-stabiliser                 
-# Orbit structure of block-stabiliser                 
-# Point-transitive                     true   true    
-# Block-transitive                     true   true    
-# Flag-transitive                      true   true    
-# Anti-flag-transitive                 false  false   
-# Flag-semiregular                     true   true    
-# Flag-regular                         true   true    
-# Point-primitive                      true   true    
-# Point-primitive type                 1      1       
-# Block-primitive                      false  false   
-# Block-primitive type                                
-# ----------------------------------------------------
+# -----------------------------------------------------------
+#                                      G          Aut(D)     
+# -----------------------------------------------------------
+# Structure                            AGL(1,11)  AGL(1,11)  
+# Rank                                 2          2          
+# 2-Homogeneous                        true       true       
+# Point-stabiliser                     10         10         
+# Block-stabiliser                     5          5          
+# Orbit structure of point-stabiliser                        
+# Orbit structure of block-stabiliser                        
+# Point-transitive                     true       true       
+# Block-transitive                     true       true       
+# Flag-transitive                      true       true       
+# Anti-flag-transitive                 false      false      
+# Flag-semiregular                     true       true       
+# Flag-regular                         true       true       
+# Point-primitive                      true       true       
+# Point-primitive type                 1          1          
+# Block-primitive                      false      false      
+# Block-primitive type                                       
+# -----------------------------------------------------------
 
 # 4. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_11 :=  [
  rec( parameters := [ 11, 11, 5, 5, 2 ],
-  autGroup := Group( [ ( 1, 3, 5, 4, 9,11)( 2, 7, 6)( 8,10), ( 1, 7, 3, 9, 4,10, 8, 5, 2, 6,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3,10, 4, 6,11, 9, 5, 8, 7), ( 2, 4, 6, 8,10)( 3, 5, 7, 9,11) ] ),
+  autGroup := Group( [ ( 1, 5, 3)( 4,11, 9)( 6, 7,10), ( 1, 6, 2)( 4, 5,10)( 8,11, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 3, 9, 5, 4)( 2, 6, 7,10, 8) ] ),
   groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1, 2, 3, 4, 9 ],
+  baseBlock := [ 1, 2, 3, 5, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -117,10 +117,10 @@ lD_11 :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 22, 10, 5, 4 ],
-  autGroup := Group( [ ( 1, 3, 2, 9, 4)( 5, 8,10,11, 7), ( 1, 3)( 4, 8)( 5, 6)( 7,10)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3,10, 4, 6,11, 9, 5, 8, 7), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11) ] ),
+  autGroup := Group( [ ( 1, 2, 8,11, 7, 5, 4, 9, 6,10), ( 1, 2, 5, 3, 8)( 4,11,10, 7, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 2, 4, 8, 5,10, 9, 7, 3, 6) ] ),
   groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 3, 4, 9 ],
+  baseBlock := [ 1, 2, 3, 5, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -130,7 +130,7 @@ lD_11 :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 11)
-];
+]; 
 for D in lD_11 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (all): 
@@ -138,10 +138,10 @@ for D in lD_11 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_11_all :=  [
  rec( parameters := [ 11, 11, 5, 5, 2 ],
-  autGroup := Group( [ ( 1, 3, 5, 4, 9,11)( 2, 7, 6)( 8,10), ( 1, 7, 3, 9, 4,10, 8, 5, 2, 6,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3,10, 4, 6,11, 9, 5, 8, 7), ( 2, 4, 6, 8,10)( 3, 5, 7, 9,11) ] ),
+  autGroup := Group( [ ( 1, 5, 3)( 4,11, 9)( 6, 7,10), ( 1, 6, 2)( 4, 5,10)( 8,11, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 3, 9, 5, 4)( 2, 6, 7,10, 8) ] ),
   groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1, 2, 3, 4, 9 ],
+  baseBlock := [ 1, 2, 3, 5, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -152,10 +152,10 @@ lD_11_all :=  [
   t := 2 ),
   v:= 11),
  rec( parameters:= [ 11, 22, 10, 5, 4 ],
-  autGroup := Group( [ ( 1, 3, 2, 9, 4)( 5, 8,10,11, 7), ( 1, 3)( 4, 8)( 5, 6)( 7,10)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3,10, 4, 6,11, 9, 5, 8, 7), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11) ] ),
+  autGroup := Group( [ ( 1, 2, 8,11, 7, 5, 4, 9, 6,10), ( 1, 2, 5, 3, 8)( 4,11,10, 7, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 1, 2, 4, 8, 5,10, 9, 7, 3, 6) ] ),
   groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 3, 4, 9 ],
+  baseBlock := [ 1, 2, 3, 5, 8 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -165,6 +165,6 @@ lD_11_all :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 11)
-];
+]; 
 for D in lD_11_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
