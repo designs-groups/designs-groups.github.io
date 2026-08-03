@@ -1645,3 +1645,18 @@ h2 {
   box-shadow: none !important;
 }
 
+
+/* Parameter sets count columns. */
+.parameter-set-table th[colspan="5"] {
+  text-align: center;
+}
+
+.parameter-set-table th:nth-child(n+6),
+.parameter-set-table td:nth-child(n+6) {
+  text-align: center;
+}
+
+.parameter-set-table .parameter-groups {
+  text-align: left;
+}
+

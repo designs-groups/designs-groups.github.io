@@ -7,7 +7,6 @@ import importlib.util
 import re
 import sys
 import urllib.parse
-from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -37,8 +36,20 @@ PARAM_RE = re.compile(r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d
 @dataclass
 class ParameterRecord:
     param: tuple[int, int, int, int, int]
-    count: int = 0
+    total: int = 0
+    point_primitive: int = 0
+    point_imprimitive: int = 0
+    block_primitive: int = 0
+    block_imprimitive: int = 0
     groups: dict[str, tuple[str, str]] = field(default_factory=dict)
+
+
+@dataclass
+class DesignEntry:
+    param: tuple[int, int, int, int, int]
+    group_label: str
+    point_primitive: bool | None = None
+    block_primitive: bool | None = None
 
 
 def load_data_tools():
@@ -74,35 +85,23 @@ def first_parameter_in_line(line: str) -> tuple[int, int, int, int, int] | None:
     if match is None:
         return None
     param = tuple(int(x) for x in match.groups())
-    if is_valid_parameter_set(param):
-        return param
-    return None
+    return param if is_valid_parameter_set(param) else None
 
 
-def scan_lines(lines: list[str], predicate) -> list[tuple[int, int, int, int, int]]:
+def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
     candidates: list[tuple[int, int, int, int, int]] = []
-    for line in lines:
+    for line in text.splitlines():
         low = line.casefold()
         if "parametersc" in low or "complement" in low:
             continue
-        if not predicate(low):
+        if "parameter set" not in low and re.search(r"\bparameters\s*:=", low) is None:
             continue
         for match in PARAM_RE.finditer(line):
             param = tuple(int(x) for x in match.groups())
             if is_valid_parameter_set(param):
                 candidates.append(param)
-    return candidates
-
-
-def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
-    lines = text.splitlines()
-    candidates = scan_lines(lines, lambda low: "parameter set" in low)
     if candidates:
         return candidates
-    candidates = scan_lines(lines, lambda low: re.search(r"\bparameters\s*:=", low) is not None)
-    if candidates:
-        return candidates
-    candidates = []
     for match in PARAM_RE.finditer(text):
         param = tuple(int(x) for x in match.groups())
         if is_valid_parameter_set(param):
@@ -118,6 +117,15 @@ def looks_like_degree_filename(label: str) -> bool:
     return re.fullmatch(r"v[_-]?\d+", label.strip(), flags=re.I) is not None
 
 
+def bool_value(value: str) -> bool | None:
+    value = value.strip().casefold()
+    if value == "true":
+        return True
+    if value == "false":
+        return False
+    return None
+
+
 def group_label_from_text(text: str, fallback: str) -> str:
     match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M)
     if match:
@@ -129,22 +137,17 @@ def group_label_from_text(text: str, fallback: str) -> str:
     return fallback
 
 
-def nonisomorphic_design_table_entries(text: str) -> list[tuple[tuple[int, int, int, int, int], str]]:
-    """Extract (parameter set, G) from the Non-isomorphic designs table.
-
-    For Affine degree files such as v_09.g, the filename is only the degree.
-    The actual group names must come from the G column of this table.
-    """
-    entries: list[tuple[tuple[int, int, int, int, int], str]] = []
+def nonisomorphic_design_table_entries(text: str) -> list[DesignEntry]:
+    entries: list[DesignEntry] = []
     in_table = False
-    seen_header = False
+    header: list[str] | None = None
 
     for raw in text.splitlines():
         line = clean_comment_line(raw)
 
         if re.match(r"^Non-isomorphic designs\s*:\s*$", line, re.I):
             in_table = True
-            seen_header = False
+            header = None
             continue
 
         if not in_table:
@@ -156,67 +159,110 @@ def nonisomorphic_design_table_entries(text: str) -> list[tuple[tuple[int, int, 
         if not line or set(line) <= {"-"}:
             continue
 
-        if re.search(r"\bNr\s+v\s+b\s+r\s+k\b", line) and re.search(r"\bG\b", line):
-            seen_header = True
-            continue
-
-        if not seen_header:
-            continue
-
         parts = line.split()
-        if len(parts) < 7:
-            continue
-        if not re.fullmatch(r"\d+", parts[0]):
-            continue
-        if not all(re.fullmatch(r"\d+", item) for item in parts[1:6]):
+        if "Nr" in parts and "v" in parts and "b" in parts and "r" in parts and "k" in parts and "G" in parts:
+            header = parts
             continue
 
-        param = tuple(int(item) for item in parts[1:6])
-        group_label = parts[6].strip()
+        if header is None:
+            continue
 
-        if is_valid_parameter_set(param) and group_label and not looks_like_degree_filename(group_label):
-            entries.append((param, group_label))
+        # Some rows have an empty trailing comments field, so the data row can
+        # be shorter than the header.  We only require the columns used here.
+        required = ["Nr", "v", "b", "r", "k", "G"]
+        if any(name not in header for name in required):
+            continue
+
+        index = {name: header.index(name) for name in header}
+        lam_name = "λ" if "λ" in index else ("lambda" if "lambda" in index else "lambda_")
+        if lam_name not in index:
+            continue
+
+        needed_positions = [index[name] for name in required] + [index[lam_name]]
+        if max(needed_positions) >= len(parts):
+            continue
+
+        row = {name: parts[pos] for name, pos in index.items() if pos < len(parts)}
+        if not row.get("Nr", "").isdigit():
+            continue
+
+        lam_value = row.get(lam_name, "0")
+        try:
+            param = (int(row["v"]), int(row["b"]), int(row["r"]), int(row["k"]), int(lam_value))
+        except Exception:
+            continue
+
+        group_label = row.get("G", "").strip()
+        if not is_valid_parameter_set(param) or not group_label or looks_like_degree_filename(group_label):
+            continue
+
+        entries.append(
+            DesignEntry(
+                param=param,
+                group_label=group_label,
+                point_primitive=bool_value(row.get("point-primitive", "")),
+                block_primitive=bool_value(row.get("block-primitive", "")),
+            )
+        )
 
     return entries
 
 
-def further_information_entries(text: str) -> list[tuple[tuple[int, int, int, int, int], str]]:
-    """Fallback: extract (parameter set, G) from detailed Design blocks."""
-    entries: list[tuple[tuple[int, int, int, int, int], str]] = []
+def further_information_entries(text: str) -> list[DesignEntry]:
+    entries: list[DesignEntry] = []
     current_param: tuple[int, int, int, int, int] | None = None
+    current_point_primitive: bool | None = None
+    current_block_primitive: bool | None = None
 
     for raw in text.splitlines():
         line = clean_comment_line(raw)
 
         if re.match(r"^Design:\s*\d+\b", line, re.I):
             current_param = None
+            current_point_primitive = None
+            current_block_primitive = None
             continue
 
         if "Parameter set" in line:
             current_param = first_parameter_in_line(line)
             continue
 
+        low = line.casefold()
+        if "point-primitive" in low:
+            vals = re.findall(r"\b(true|false)\b", low)
+            if vals:
+                current_point_primitive = bool_value(vals[0])
+
+        if "block-primitive" in low:
+            vals = re.findall(r"\b(true|false)\b", low)
+            if vals:
+                current_block_primitive = bool_value(vals[0])
+
         if current_param is not None and re.match(r"^Structure\b", line):
             parts = line.split()
             if len(parts) >= 2:
                 group_label = parts[1].strip()
                 if group_label and not looks_like_degree_filename(group_label):
-                    entries.append((current_param, group_label))
+                    entries.append(
+                        DesignEntry(
+                            param=current_param,
+                            group_label=group_label,
+                            point_primitive=current_point_primitive,
+                            block_primitive=current_block_primitive,
+                        )
+                    )
             current_param = None
+            current_point_primitive = None
+            current_block_primitive = None
 
     return entries
 
 
-def parameter_group_entries(text: str, source_path: str) -> list[tuple[tuple[int, int, int, int, int], str]]:
+def design_entries(text: str) -> list[DesignEntry]:
     entries = nonisomorphic_design_table_entries(text)
     if entries:
         return entries
-
-    entries = further_information_entries(text)
-    if entries:
-        return entries
-
-    return []
+    return further_information_entries(text)
 
 
 def file_total_from_row(tools, path: Path, source_path: str) -> tuple[str, int | None]:
@@ -234,14 +280,6 @@ def file_total_from_row(tools, path: Path, source_path: str) -> tuple[str, int |
         return group_label_from_text(text, path.stem), None
 
 
-def counts_for_file(params: list[tuple[int, int, int, int, int]], total: int | None) -> Counter:
-    fallback = Counter(params)
-    if len(fallback) == 1 and total is not None:
-        param = next(iter(fallback))
-        return Counter({param: total})
-    return fallback
-
-
 def raw_url(repository: str, branch: str, source_path: str) -> str:
     encoded = urllib.parse.quote(source_path, safe="/")
     return f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded}"
@@ -254,7 +292,33 @@ def iter_gap_files(data_root: Path, category_folder: str):
             yield from sorted(folder.rglob("*.g"))
 
 
-def add_record(records, kind: str, param: tuple[int, int, int, int, int], group_label: str, url: str, tools, count: int = 1) -> None:
+def add_design_record(records, kind: str, entry: DesignEntry, url: str, tools) -> None:
+    if not entry.group_label or looks_like_degree_filename(entry.group_label):
+        return
+
+    recs = records[kind]
+    if entry.param not in recs:
+        recs[entry.param] = ParameterRecord(param=entry.param)
+
+    record = recs[entry.param]
+    record.total += 1
+
+    if entry.point_primitive is True:
+        record.point_primitive += 1
+    elif entry.point_primitive is False:
+        record.point_imprimitive += 1
+
+    if entry.block_primitive is True:
+        record.block_primitive += 1
+    elif entry.block_primitive is False:
+        record.block_imprimitive += 1
+
+    label = tools.math_label(entry.group_label)
+    sort_label = tools.normalize_group_sort_text(entry.group_label).casefold()
+    record.groups.setdefault(sort_label, (label, url))
+
+
+def add_fallback_record(records, kind: str, param: tuple[int, int, int, int, int], group_label: str, url: str, tools, count: int = 1) -> None:
     if not group_label or looks_like_degree_filename(group_label):
         return
 
@@ -262,10 +326,12 @@ def add_record(records, kind: str, param: tuple[int, int, int, int, int], group_
     if param not in recs:
         recs[param] = ParameterRecord(param=param)
 
-    recs[param].count += int(count)
+    record = recs[param]
+    record.total += int(count)
+
     label = tools.math_label(group_label)
     sort_label = tools.normalize_group_sort_text(group_label).casefold()
-    recs[param].groups.setdefault(sort_label, (label, url))
+    record.groups.setdefault(sort_label, (label, url))
 
 
 def collect_records(data_root: Path, repository: str, branch: str, tools):
@@ -280,16 +346,12 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
             text = path.read_text(encoding="utf-8", errors="replace")
             url = raw_url(repository, branch, source_path)
 
-            # Preferred for all files, and required for Affine degree files:
-            # read the actual G from the Non-isomorphic designs table or from
-            # the detailed Design block.
-            entries = parameter_group_entries(text, source_path)
+            entries = design_entries(text)
             if entries:
-                for param, group_label in entries:
-                    add_record(records, kind, param, group_label, url, tools, 1)
+                for entry in entries:
+                    add_design_record(records, kind, entry, url, tools)
                 continue
 
-            # For Affine degree files, never fall back to v_05, v_09, etc.
             if is_affine_source(source_path):
                 continue
 
@@ -297,9 +359,15 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
             if looks_like_degree_filename(group_label):
                 continue
 
-            counts = counts_for_file(parameter_candidates(text), total)
-            for param, count in counts.items():
-                add_record(records, kind, param, group_label, url, tools, count)
+            params = parameter_candidates(text)
+            if not params:
+                continue
+
+            if len(set(params)) == 1 and total is not None:
+                add_fallback_record(records, kind, params[0], group_label, url, tools, total)
+            else:
+                for param in params:
+                    add_fallback_record(records, kind, param, group_label, url, tools, 1)
 
     return records
 
@@ -316,7 +384,7 @@ def group_links(record: ParameterRecord) -> tuple[str, str]:
 
 def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) -> str:
     if not records:
-        return '          <tr><td colspan="7" class="empty-row">No parameter sets are currently available.</td></tr>'
+        return '          <tr><td colspan="11" class="empty-row">No parameter sets are currently available.</td></tr>'
 
     lines = []
     for param in sorted(records):
@@ -330,19 +398,48 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
             f'            <td data-sort="{r}">{r}</td>',
             f'            <td data-sort="{k}">{k}</td>',
             f'            <td data-sort="{lam}">{lam}</td>',
-            f'            <td data-sort="{record.count}">{record.count}</td>',
+            f'            <td data-sort="{record.total}">{record.total}</td>',
+            f'            <td data-sort="{record.point_primitive}">{record.point_primitive}</td>',
+            f'            <td data-sort="{record.point_imprimitive}">{record.point_imprimitive}</td>',
+            f'            <td data-sort="{record.block_primitive}">{record.block_primitive}</td>',
+            f'            <td data-sort="{record.block_imprimitive}">{record.block_imprimitive}</td>',
             f'            <td class="parameter-groups" data-sort="{html.escape(sort_groups, quote=True)}">{links}</td>',
             '          </tr>',
         ])
     return "\n".join(lines)
 
 
+def replace_table_header(page: Path) -> None:
+    text = page.read_text(encoding="utf-8")
+    thead = """        <thead>
+          <tr>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="0">\\(v\\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="1">\\(b\\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="2">\\(r\\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="3">\\(k\\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="4">\\(\\lambda\\)</button></th>
+            <th colspan="5">Number of designs</th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="10">Group</button></th>
+          </tr>
+          <tr>
+            <th><button type="button" class="parameter-sort" data-column="5">Total</button></th>
+            <th><button type="button" class="parameter-sort" data-column="6">Point-primitive</button></th>
+            <th><button type="button" class="parameter-sort" data-column="7">Point-imprimitive</button></th>
+            <th><button type="button" class="parameter-sort" data-column="8">Block-primitive</button></th>
+            <th><button type="button" class="parameter-sort" data-column="9">Block-imprimitive</button></th>
+          </tr>
+        </thead>"""
+    text = re.sub(r"\s*<thead>.*?</thead>", lambda match: "\n" + thead, text, count=1, flags=re.S)
+    page.write_text(text, encoding="utf-8")
+
+
 def replace_rows(page: Path, rows: str) -> None:
+    replace_table_header(page)
     text = page.read_text(encoding="utf-8")
     pattern = re.compile(r"(<!-- PARAMETER_SETS_ROWS_START -->).*?(<!-- PARAMETER_SETS_ROWS_END -->)", re.S)
     if not pattern.search(text):
         raise RuntimeError(f"Parameter-set markers not found in {page}")
-    page.write_text(pattern.sub(r"\1\n" + rows + r"\n\2", text), encoding="utf-8")
+    page.write_text(pattern.sub(lambda match: match.group(1) + "\n" + rows + "\n" + match.group(2), text), encoding="utf-8")
 
 
 def main() -> int:

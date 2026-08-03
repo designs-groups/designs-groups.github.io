@@ -469,7 +469,7 @@ is composited onto the same author-box background colour without face alteration
 
 - Version 30: removed bold styling from the `Click to access the data` link in the Parameter sets section; automatic parameter-set updating remains unchanged.
 
-- Version 31: added a notice to Transitive and Primitive group pages that the listed `.g` files are separate data files and that designs within each file are sorted first by group and then by parameters.
+- Version 31: added a notice to Transitive and Primitive group pages that the listed `.g` files are separate data files and that designs within each file are sorted by parameters.
 
 - Version 32: changed Parameter sets generation to collect only from group-type folders, excluding Transitive groups and Primitive groups folders.
 
@@ -520,3 +520,5 @@ is composited onto the same author-box background colour without face alteration
 - Version 56: based on version 54; the Parameter sets pages now use `parameters.html` URLs, and all internal website, script, sitemap, canonical, and workflow references were updated.
 
 - Version 57: Parameter sets now extract actual group names from the `G` column of the `Non-isomorphic designs` table in Affine `.g` files for both flag-transitive and block-transitive data; Affine degree filenames such as `v_09` are no longer displayed as group names.
+
+- Version 58: updated the sorted-by-parameters notice, changed Γ/Σ to Γ/Σ, and expanded Parameter sets pages to include Number of designs columns: Total, Point-primitive, Point-imprimitive, Block-primitive, and Block-imprimitive.

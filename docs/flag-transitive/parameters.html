@@ -88,7 +88,7 @@ async function downloadRawFile(url, filename) {
     </p>
     <p class="notice">
       Click a parameter-column heading to sort the table in ascending numerical order.<br>
-      The <strong>Number of designs</strong> column gives the number of recorded designs obtained from the groups in the <strong>Group</strong> column; it is not the total number of all designs with that parameter set.
+      The <strong>Number of designs</strong> columns give the recorded counts obtained from the groups in the <strong>Group</strong> column; they are not the total number of all designs with that parameter set.
 <br>
       The <strong>Group</strong> column lists the groups from which the parameter set is obtained. Group names are separated by commas, and each group name links to the corresponding raw GAP file.
     </p>
@@ -97,18 +97,25 @@ async function downloadRawFile(url, filename) {
       <table class="database-table parameter-set-table" id="flag-transitive-parameter-set-table">
         <thead>
           <tr>
-            <th><button type="button" class="parameter-sort" data-column="0" data-type="number">\(v\)</button></th>
-            <th><button type="button" class="parameter-sort" data-column="1" data-type="number">\(b\)</button></th>
-            <th><button type="button" class="parameter-sort" data-column="2" data-type="number">\(r\)</button></th>
-            <th><button type="button" class="parameter-sort" data-column="3" data-type="number">\(k\)</button></th>
-            <th><button type="button" class="parameter-sort" data-column="4" data-type="number">\(\lambda\)</button></th>
-            <th><button type="button" class="parameter-sort" data-column="5" data-type="number">Number of designs</button></th>
-            <th><button type="button" class="parameter-sort" data-column="6" data-type="text">Group</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="0">\(v\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="1">\(b\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="2">\(r\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="3">\(k\)</button></th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="4">\(\lambda\)</button></th>
+            <th colspan="5">Number of designs</th>
+            <th rowspan="2"><button type="button" class="parameter-sort" data-column="10">Group</button></th>
+          </tr>
+          <tr>
+            <th><button type="button" class="parameter-sort" data-column="5">Total</button></th>
+            <th><button type="button" class="parameter-sort" data-column="6">Point-primitive</button></th>
+            <th><button type="button" class="parameter-sort" data-column="7">Point-imprimitive</button></th>
+            <th><button type="button" class="parameter-sort" data-column="8">Block-primitive</button></th>
+            <th><button type="button" class="parameter-sort" data-column="9">Block-imprimitive</button></th>
           </tr>
         </thead>
         <tbody>
 <!-- PARAMETER_SETS_ROWS_START -->
-          <tr><td colspan="7" class="empty-row">No parameter sets are currently available.</td></tr>
+          <tr><td colspan="11" class="empty-row">No parameter sets are currently available.</td></tr>
 <!-- PARAMETER_SETS_ROWS_END -->
         </tbody>
       </table>
