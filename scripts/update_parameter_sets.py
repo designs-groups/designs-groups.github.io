@@ -602,10 +602,10 @@ def replace_table_header(page: Path) -> None:
           </tr>
           <tr>
             <th class="count-column count-total"><button type="button" class="parameter-sort" data-column="5" data-type="number">Total</button></th>
-            <th class="count-column count-point-primitive"><button type="button" class="parameter-sort" data-column="6" data-type="number">Point-primitive</button></th>
-            <th class="count-column count-point-imprimitive"><button type="button" class="parameter-sort" data-column="7" data-type="number">Point-imprimitive</button></th>
-            <th class="count-column count-block-primitive"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block-primitive</button></th>
-            <th class="count-column count-block-imprimitive"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block-imprimitive</button></th>
+            <th class="count-column count-point-primitive"><button type="button" class="parameter-sort" data-column="6" data-type="number">Point-<br>primitive</button></th>
+            <th class="count-column count-point-imprimitive"><button type="button" class="parameter-sort" data-column="7" data-type="number">Point-<br>imprimitive</button></th>
+            <th class="count-column count-block-primitive"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block-<br>primitive</button></th>
+            <th class="count-column count-block-imprimitive"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block-<br>imprimitive</button></th>
           </tr>
         </thead>'''
     updated, count = re.subn(r"\s*<thead>.*?</thead>", lambda _match: "\n" + thead, text, count=1, flags=re.S)
