@@ -66,13 +66,15 @@ def main() -> int:
         text = (root / rel).read_text(encoding="utf-8")
         for item in (
             "Number of designs",
-            "Point primitive",
-            "Point imprimitive",
-            "Block primitive",
-            "Block imprimitive",
+            "Point-primitive",
+            "Point-imprimitive",
+            "Block-primitive",
+            "Block-imprimitive",
             'class="parameter-column"',
             'class="count-column',
             'class="group-column"',
+            'class="count-column count-point-primitive"',
+            'class="count-column count-block-imprimitive"',
             "parameter-sort-script",
             'direction === "asc"',
             'direction === "desc"',
@@ -82,7 +84,7 @@ def main() -> int:
                 errors.append(f"{rel} missing: {item}")
 
     css = (docs / "assets" / "style.css").read_text(encoding="utf-8")
-    for item in ("width: 50px !important", "width: 92px !important", "td:nth-child(11)", "text-align: left !important"):
+    for item in ("width: 58px !important", "width: 50.296875px !important", "width: 117.203125px !important", "width: 133.859375px !important", "width: 120.390625px !important", "width: 137.0625px !important", "td:nth-child(11)", "text-align: left !important"):
         if item not in css:
             errors.append(f"style.css missing: {item}")
 

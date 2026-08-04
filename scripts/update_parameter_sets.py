@@ -470,12 +470,12 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
             f'            <td data-sort="{r}">{r}</td>',
             f'            <td data-sort="{k}">{k}</td>',
             f'            <td data-sort="{lam}">{lam}</td>',
-            f'            <td data-sort="{record.total}">{record.total}</td>',
-            f'            <td data-sort="{record.point_primitive}">{record.point_primitive}</td>',
-            f'            <td data-sort="{record.point_imprimitive}">{record.point_imprimitive}</td>',
-            f'            <td data-sort="{record.block_primitive}">{record.block_primitive}</td>',
-            f'            <td data-sort="{record.block_imprimitive}">{record.block_imprimitive}</td>',
-            f'            <td class="parameter-groups group-cell" data-sort="{html.escape(sort_groups, quote=True)}">{links}</td>',
+            f'            <td class="parameter-count count-total-cell" data-sort="{record.total}">{record.total}</td>',
+            f'            <td class="parameter-count count-point-primitive-cell" data-sort="{record.point_primitive}">{record.point_primitive}</td>',
+            f'            <td class="parameter-count count-point-imprimitive-cell" data-sort="{record.point_imprimitive}">{record.point_imprimitive}</td>',
+            f'            <td class="parameter-count count-block-primitive-cell" data-sort="{record.block_primitive}">{record.block_primitive}</td>',
+            f'            <td class="parameter-count count-block-imprimitive-cell" data-sort="{record.block_imprimitive}">{record.block_imprimitive}</td>',
+            f'            <td class="parameter-groups group-cell" style="text-align: left !important;" data-sort="{html.escape(sort_groups, quote=True)}">{links}</td>',
             '          </tr>',
         ])
     return "\n".join(lines)
@@ -491,14 +491,14 @@ def replace_table_header(page: Path) -> None:
             <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="3" data-type="number">\(k\)</button></th>
             <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="4" data-type="number">\(\lambda\)</button></th>
             <th colspan="5" class="count-group-heading">Number of designs</th>
-            <th rowspan="2" class="group-column"><button type="button" class="parameter-sort" data-column="10" data-type="text">Group</button></th>
+            <th rowspan="2" class="group-column" style="text-align: left !important;"><button type="button" class="parameter-sort" data-column="10" data-type="text">Group</button></th>
           </tr>
           <tr>
-            <th class="count-column total-column"><button type="button" class="parameter-sort" data-column="5" data-type="number">Total</button></th>
-            <th class="count-column"><button type="button" class="parameter-sort" data-column="6" data-type="number">Point primitive</button></th>
-            <th class="count-column"><button type="button" class="parameter-sort" data-column="7" data-type="number">Point imprimitive</button></th>
-            <th class="count-column"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block primitive</button></th>
-            <th class="count-column"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block imprimitive</button></th>
+            <th class="count-column count-total"><button type="button" class="parameter-sort" data-column="5" data-type="number">Total</button></th>
+            <th class="count-column count-point-primitive"><button type="button" class="parameter-sort" data-column="6" data-type="number">Point-primitive</button></th>
+            <th class="count-column count-point-imprimitive"><button type="button" class="parameter-sort" data-column="7" data-type="number">Point-imprimitive</button></th>
+            <th class="count-column count-block-primitive"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block-primitive</button></th>
+            <th class="count-column count-block-imprimitive"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block-imprimitive</button></th>
           </tr>
         </thead>"""
     text = re.sub(r"\s*<thead>.*?</thead>", lambda match: "\n" + thead, text, count=1, flags=re.S)

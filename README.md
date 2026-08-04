@@ -194,3 +194,5 @@ the footer date, and deploys the site.
 - Version 62: all Parameter sets data generation, final column widths, Group-column left alignment, three-state sorting support, notice correction, and Γ/Σ replacement are automatic in scripts and GitHub Actions. No manual HTML editing is required after a `.g` file is added or changed.
 
 - Version 63: one automatic pipeline (`scripts/update_site.py`) rebuilds all detailed tables from their associated `.g` folders, Parameter sets, catalogue pages, navigation, bibliography, footer and SEO, applies final text/symbol formatting, and runs `scripts/validate_site.py` before deployment.
+
+- Version 64: Parameter sets now use the exact Alternating-groups count headings and measured column widths, keep the five parameter columns at 58 px, force the Group heading and entries left, and retain automatic `.g`-driven rebuilding through `scripts/update_site.py`.
