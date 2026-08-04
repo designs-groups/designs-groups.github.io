@@ -4,45 +4,29 @@ from __future__ import annotations
 import argparse
 import html
 import importlib.util
+import json
 import re
 import sys
 import urllib.parse
+import urllib.request
 from dataclasses import dataclass, field
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+CONFIG_PATH = ROOT / "data" / "table_sources.json"
 
 PARAMETER_SET_PAGES = {
     "flag-transitive": Path("docs/flag-transitive/parameters.html"),
     "block-transitive": Path("docs/block-transitive/parameters.html"),
 }
 
-DATA_CATEGORIES = {
-    "flag-transitive": "Flag-transitive",
-    "block-transitive": "Block-transitive",
+CATEGORY_PREFIXES = {
+    "flag-transitive": "Flag-transitive/",
+    "block-transitive": "Block-transitive/",
 }
 
+EXCLUDED_SOURCE_FOLDERS = {"Transitive groups", "Primitive groups", "Parameter sets"}
 PARAM_RE = re.compile(r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]")
-
-
-@dataclass
-class CountRecord:
-    total: int = 0
-    point_primitive: int = 0
-    point_imprimitive: int = 0
-    block_primitive: int = 0
-    block_imprimitive: int = 0
-
-
-@dataclass
-class ParameterRecord:
-    param: tuple[int, int, int, int, int]
-    total: int = 0
-    point_primitive: int = 0
-    point_imprimitive: int = 0
-    block_primitive: int = 0
-    block_imprimitive: int = 0
-    groups: dict[str, tuple[str, str]] = field(default_factory=dict)
 
 
 @dataclass
@@ -51,6 +35,39 @@ class DesignEntry:
     group_label: str
     point_primitive: bool | None = None
     block_primitive: bool | None = None
+
+
+@dataclass
+class CountRecord:
+    total: int = 0
+    total_complete: bool = True
+    point_primitive: int = 0
+    point_imprimitive: int = 0
+    point_classified: int = 0
+    block_primitive: int = 0
+    block_imprimitive: int = 0
+    block_classified: int = 0
+
+
+@dataclass
+class ParameterRecord(CountRecord):
+    param: tuple[int, int, int, int, int] = (0, 0, 0, 0, 0)
+    groups: dict[str, tuple[str, str]] = field(default_factory=dict)
+
+
+@dataclass
+class SourceText:
+    source_path: str
+    text: str
+
+
+@dataclass
+class CollectionStats:
+    scanned: int = 0
+    contributing: int = 0
+    no_designs: int = 0
+    remote_files: int = 0
+    unresolved: list[str] = field(default_factory=list)
 
 
 def load_data_tools():
@@ -70,48 +87,26 @@ def clean_comment_line(raw: str) -> str:
 
 def is_valid_parameter_set(param: tuple[int, int, int, int, int]) -> bool:
     v, b, r, k, lam = param
-    if min(param) <= 0:
-        return False
-    if not (v > k > 1):
-        return False
-    if b * k != v * r:
-        return False
-    if r * (k - 1) != lam * (v - 1):
-        return False
-    return True
+    return min(param) > 0 and v > k > 1 and b * k == v * r and r * (k - 1) == lam * (v - 1)
+
+
+def parameter_from_match(match: re.Match[str]) -> tuple[int, int, int, int, int] | None:
+    param = tuple(int(value) for value in match.groups())
+    return param if is_valid_parameter_set(param) else None
 
 
 def first_parameter_in_line(line: str) -> tuple[int, int, int, int, int] | None:
     match = PARAM_RE.search(line)
-    if match is None:
-        return None
-    param = tuple(int(x) for x in match.groups())
-    return param if is_valid_parameter_set(param) else None
+    return parameter_from_match(match) if match else None
 
 
-def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
-    candidates: list[tuple[int, int, int, int, int]] = []
-    for line in text.splitlines():
-        low = line.casefold()
-        if "parametersc" in low or "complement" in low:
-            continue
-        if "parameter set" not in low and re.search(r"\bparameters\s*:=", low) is None:
-            continue
-        for match in PARAM_RE.finditer(line):
-            param = tuple(int(x) for x in match.groups())
-            if is_valid_parameter_set(param):
-                candidates.append(param)
-    if candidates:
-        return candidates
+def all_valid_parameters(text: str) -> list[tuple[int, int, int, int, int]]:
+    result = []
     for match in PARAM_RE.finditer(text):
-        param = tuple(int(x) for x in match.groups())
-        if is_valid_parameter_set(param):
-            candidates.append(param)
-    return candidates
-
-
-def looks_like_degree_filename(label: str) -> bool:
-    return re.fullmatch(r"v[_-]?\d+", label.strip(), flags=re.I) is not None
+        param = parameter_from_match(match)
+        if param is not None:
+            result.append(param)
+    return result
 
 
 def bool_value(value: str) -> bool | None:
@@ -123,8 +118,17 @@ def bool_value(value: str) -> bool | None:
     return None
 
 
+def first_boolean(line: str) -> bool | None:
+    match = re.search(r"\b(true|false)\b", line, re.I)
+    return bool_value(match.group(1)) if match else None
+
+
+def looks_like_degree_filename(label: str) -> bool:
+    return re.fullmatch(r"v[_-]?\d+", label.strip(), flags=re.I) is not None
+
+
 def group_label_from_text(text: str, fallback: str) -> str:
-    match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M)
+    match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M | re.I)
     if match:
         label = match.group(1).strip()
         if "=" in label:
@@ -134,27 +138,147 @@ def group_label_from_text(text: str, fallback: str) -> str:
     return fallback
 
 
-def parse_count_summary_table(text: str) -> CountRecord | None:
-    """Read counts from the Total column of the number-of-non-isomorphic-designs table."""
-    counts = CountRecord()
-    found = set()
-
+def has_no_designs_remark(text: str) -> bool:
     for raw in text.splitlines():
         line = clean_comment_line(raw)
-        if not line or set(line) <= {"-"}:
+        match = re.match(r"Remarks?\s*:\s*(.*)", line, re.I)
+        if match:
+            remark = match.group(1).strip().casefold()
+            return "no design" in remark or "there are no" in remark
+    return False
+
+
+def normalize_header_token(token: str) -> str:
+    token = token.strip().casefold().replace("_", "-")
+    token = token.rstrip(":")
+    if token in {"λ", "lambda", "lambda-", "lam"}:
+        return "lambda"
+    return token
+
+
+def comment_content(raw: str) -> str:
+    """Remove the GAP comment marker while preserving table-column spacing."""
+    return re.sub(r"^\s*# ?", "", raw.rstrip("\r\n"))
+
+
+def summary_table_entries(text: str) -> list[DesignEntry]:
+    """Read fixed-width design summary tables without shifting across blank columns."""
+    entries: list[DesignEntry] = []
+    spans: dict[str, tuple[int, int | None]] | None = None
+    required = {"nr", "v", "b", "r", "k", "lambda", "g"}
+
+    for raw in text.splitlines():
+        content = comment_content(raw).rstrip()
+        line = content.strip()
+        if not line or set(line) <= {"-", "="}:
             continue
 
+        token_matches = list(re.finditer(r"\S+", content))
+        normalized = [normalize_header_token(match.group()) for match in token_matches]
+        if required <= set(normalized):
+            spans = {}
+            for position, match in enumerate(token_matches):
+                name = normalized[position]
+                if name not in required | {"point-primitive", "block-primitive"} or name in spans:
+                    continue
+                end = token_matches[position + 1].start() if position + 1 < len(token_matches) else None
+                spans[name] = (match.start(), end)
+            continue
+
+        if re.match(r"^(?:\d+\.\s*)?(?:Further information|Designs|All designs|References)\s*:\s*$", line, re.I):
+            spans = None
+            continue
+
+        if spans is None:
+            continue
+
+        def field(name: str) -> str:
+            if name not in spans:
+                return ""
+            start, end = spans[name]
+            return content[start:end].strip() if end is not None else content[start:].strip()
+
+        if not field("nr").isdigit():
+            continue
+
+        try:
+            param = (int(field("v")), int(field("b")), int(field("r")), int(field("k")), int(field("lambda")))
+        except ValueError:
+            continue
+        if not is_valid_parameter_set(param):
+            continue
+
+        group_label = field("g")
+        if not group_label:
+            continue
+        entries.append(DesignEntry(param=param, group_label=group_label, point_primitive=bool_value(field("point-primitive")), block_primitive=bool_value(field("block-primitive"))))
+
+    return entries
+
+
+def detailed_design_entries(text: str, fallback_group: str) -> list[DesignEntry]:
+    """Read Parameter set, Structure and primitive properties from Design blocks."""
+    starts = list(re.finditer(r"^\s*#?\s*Design\s*:\s*\d+\b", text, re.I | re.M))
+    if not starts:
+        return []
+
+    entries: list[DesignEntry] = []
+    for position, start in enumerate(starts):
+        end = starts[position + 1].start() if position + 1 < len(starts) else len(text)
+        block_text = text[start.start():end]
+        param = None
+        group_label = fallback_group
+        point = None
+        block = None
+
+        for raw in block_text.splitlines():
+            line = clean_comment_line(raw)
+            low = line.casefold()
+            if low.startswith("parameter set"):
+                param = first_parameter_in_line(line)
+            elif re.match(r"^Structure\b", line):
+                parts = line.split()
+                if len(parts) >= 2:
+                    group_label = parts[1].strip()
+            elif low.startswith("point-primitive") and "type" not in low:
+                point = first_boolean(line)
+            elif low.startswith("block-primitive") and "type" not in low:
+                block = first_boolean(line)
+
+        if param is not None and group_label:
+            entries.append(DesignEntry(param=param, group_label=group_label, point_primitive=point, block_primitive=block))
+
+    return entries
+
+
+def gap_record_entries(text: str, group_label: str) -> list[DesignEntry]:
+    """Read one parameter set for every GAP design-record `parameters :=` component."""
+    entries: list[DesignEntry] = []
+    for raw in text.splitlines():
+        low = raw.casefold()
+        if "parametersc" in low or re.search(r"\bparameters\s*:=", low) is None:
+            continue
+        param = first_parameter_in_line(raw)
+        if param is not None:
+            entries.append(DesignEntry(param=param, group_label=group_label))
+    return entries
+
+
+def parse_count_summary_table(text: str) -> CountRecord | None:
+    counts = CountRecord()
+    found = set()
+    for raw in text.splitlines():
+        line = clean_comment_line(raw)
+        if not line or set(line) <= {"-", "="}:
+            continue
         parts = line.split()
-        if len(parts) < 4:
+        if len(parts) < 2:
             continue
-
         label = parts[0].casefold()
-        nums = [int(x) for x in parts[1:] if re.fullmatch(r"\d+", x)]
+        nums = [int(token) for token in parts[1:] if re.fullmatch(r"\d+", token)]
         if not nums:
             continue
-
         value = nums[-1]
-
         if label == "point-primitive":
             counts.point_primitive = value
             found.add("point_primitive")
@@ -171,140 +295,112 @@ def parse_count_summary_table(text: str) -> CountRecord | None:
             counts.total = value
             found.add("total")
 
-    if {"total", "point_primitive", "point_imprimitive", "block_primitive", "block_imprimitive"} <= found:
-        return counts
+    if "total" not in found:
+        return None
+    counts.point_classified = counts.point_primitive + counts.point_imprimitive if {"point_primitive", "point_imprimitive"} <= found else 0
+    counts.block_classified = counts.block_primitive + counts.block_imprimitive if {"block_primitive", "block_imprimitive"} <= found else 0
+    return counts
+
+
+def explicit_parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
+    result: list[tuple[int, int, int, int, int]] = []
+    for raw in text.splitlines():
+        low = raw.casefold()
+        if "parametersc" in low or "complement" in low:
+            continue
+        if "parameter set" not in low and re.search(r"\bparameters?\s*[:=]", low) is None:
+            continue
+        for match in PARAM_RE.finditer(raw):
+            param = parameter_from_match(match)
+            if param is not None:
+                result.append(param)
+    return result
+
+
+def add_entry(counts: CountRecord, entry: DesignEntry) -> None:
+    counts.total += 1
+    if entry.point_primitive is True:
+        counts.point_primitive += 1
+        counts.point_classified += 1
+    elif entry.point_primitive is False:
+        counts.point_imprimitive += 1
+        counts.point_classified += 1
+    if entry.block_primitive is True:
+        counts.block_primitive += 1
+        counts.block_classified += 1
+    elif entry.block_primitive is False:
+        counts.block_imprimitive += 1
+        counts.block_classified += 1
+
+
+def counts_by_parameter(entries: list[DesignEntry]) -> dict[tuple[int, int, int, int, int], CountRecord]:
+    result: dict[tuple[int, int, int, int, int], CountRecord] = {}
+    for entry in entries:
+        counts = result.setdefault(entry.param, CountRecord())
+        add_entry(counts, entry)
+    return result
+
+
+def relevant_source_folders(config: dict) -> dict[str, set[str]]:
+    """Return configured data folders plus explicitly mapped `.g` files."""
+    result = {kind: set() for kind in CATEGORY_PREFIXES}
+    for folder in config.get("folder_pages", {}):
+        for kind, prefix in CATEGORY_PREFIXES.items():
+            if not folder.startswith(prefix):
+                continue
+            leaf = folder[len(prefix):]
+            if leaf and leaf not in EXCLUDED_SOURCE_FOLDERS:
+                result[kind].add(folder.rstrip("/") + "/")
+    for source_path in config.get("file_page_overrides", {}):
+        normalized = source_path.replace("\\", "/").strip("/")
+        if not normalized.endswith(".g"):
+            continue
+        for kind, prefix in CATEGORY_PREFIXES.items():
+            if normalized.startswith(prefix):
+                result[kind].add(normalized)
+    return result
+
+
+def source_kind(source_path: str, source_folders: dict[str, set[str]]) -> str | None:
+    normalized = source_path.replace("\\", "/").strip("/")
+    for kind, locations in source_folders.items():
+        for location in locations:
+            if location.endswith("/") and normalized.startswith(location):
+                return kind
+            if normalized == location:
+                return kind
     return None
 
 
-def nonisomorphic_design_table_entries(text: str) -> list[DesignEntry]:
-    """Extract row-level data from Summary or Non-isomorphic designs tables."""
-    entries: list[DesignEntry] = []
-    in_table = False
-    header_seen = False
-
-    for raw in text.splitlines():
-        line = clean_comment_line(raw)
-
-        if re.match(r"^(?:\d+\.\s*)?(?:Summary|Non-isomorphic designs)\s*:\s*$", line, re.I):
-            in_table = True
-            header_seen = False
-            continue
-
-        if not in_table:
-            continue
-
-        if re.match(r"^(?:\d+\.\s*)?(?:Further information|Designs|All designs)\s*:\s*$", line, re.I):
-            break
-
-        if not line or set(line) <= {"-"}:
-            continue
-
-        parts = line.split()
-        if parts and parts[0].casefold() == "nr" and all(name in parts for name in ("v", "b", "r", "k", "G")):
-            header_seen = True
-            continue
-
-        if not header_seen or len(parts) < 7 or not parts[0].isdigit():
-            continue
-
-        try:
-            param = (int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4]), int(parts[5]))
-        except ValueError:
-            continue
-
-        group_label = parts[6].strip()
-        if not is_valid_parameter_set(param) or not group_label or looks_like_degree_filename(group_label):
-            continue
-
-        primitive_values = [bool_value(token) for token in parts[7:] if token.casefold() in {"true", "false"}]
-        entries.append(
-            DesignEntry(
-                param=param,
-                group_label=group_label,
-                point_primitive=primitive_values[0] if len(primitive_values) >= 1 else None,
-                block_primitive=primitive_values[1] if len(primitive_values) >= 2 else None,
-            )
-        )
-
-    return entries
+def local_sources(data_root: Path, source_folders: dict[str, set[str]]) -> dict[str, list[SourceText]]:
+    result = {kind: [] for kind in source_folders}
+    seen = {kind: set() for kind in source_folders}
+    for kind, locations in source_folders.items():
+        for location in sorted(locations):
+            path = data_root / location.rstrip("/")
+            if location.endswith("/"):
+                gap_files = sorted(path.rglob("*.g")) if path.exists() else []
+            else:
+                gap_files = [path] if path.is_file() else []
+            for gap_file in gap_files:
+                source_path = gap_file.relative_to(data_root).as_posix()
+                if source_path in seen[kind]:
+                    continue
+                seen[kind].add(source_path)
+                result[kind].append(SourceText(source_path, gap_file.read_text(encoding="utf-8", errors="replace")))
+    return result
 
 
-def further_information_entries(text: str) -> list[DesignEntry]:
-    """Fallback: extract complete design data from detailed Design blocks."""
-    entries: list[DesignEntry] = []
-    current_param: tuple[int, int, int, int, int] | None = None
-    current_group_label: str | None = None
-    current_point_primitive: bool | None = None
-    current_block_primitive: bool | None = None
-
-    def flush() -> None:
-        nonlocal current_param, current_group_label, current_point_primitive, current_block_primitive
-        if current_param is not None and current_group_label and not looks_like_degree_filename(current_group_label):
-            entries.append(
-                DesignEntry(
-                    param=current_param,
-                    group_label=current_group_label,
-                    point_primitive=current_point_primitive,
-                    block_primitive=current_block_primitive,
-                )
-            )
-        current_param = None
-        current_group_label = None
-        current_point_primitive = None
-        current_block_primitive = None
-
-    for raw in text.splitlines():
-        line = clean_comment_line(raw)
-
-        if re.match(r"^Design:\s*\d+\b", line, re.I):
-            flush()
-            continue
-
-        if "Parameter set" in line:
-            current_param = first_parameter_in_line(line)
-            continue
-
-        if re.match(r"^Structure\b", line):
-            parts = line.split()
-            if len(parts) >= 2:
-                current_group_label = parts[1].strip()
-            continue
-
-        low = line.casefold()
-        if low.startswith("point-primitive") and "type" not in low:
-            vals = re.findall(r"\b(true|false)\b", low)
-            if vals:
-                current_point_primitive = bool_value(vals[0])
-            continue
-
-        if low.startswith("block-primitive") and "type" not in low:
-            vals = re.findall(r"\b(true|false)\b", low)
-            if vals:
-                current_block_primitive = bool_value(vals[0])
-
-    flush()
-    return entries
-
-def design_entries(text: str) -> list[DesignEntry]:
-    entries = nonisomorphic_design_table_entries(text)
-    if entries:
-        return entries
-    return further_information_entries(text)
+def fetch_json(url: str) -> dict:
+    request = urllib.request.Request(url, headers={"User-Agent": "designs-groups-parameter-set-builder"})
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return json.load(response)
 
 
-def file_total_from_row(tools, path: Path, source_path: str) -> tuple[str, int | None]:
-    try:
-        row = tools.parse_gap_file(path, source_path)
-        group_label = getattr(row, "group_label", None) or path.stem
-        total = getattr(row, "total", None)
-        if isinstance(total, int):
-            return group_label, total
-        if isinstance(total, str) and total.strip().isdigit():
-            return group_label, int(total.strip())
-        return group_label, None
-    except Exception:
-        text = path.read_text(encoding="utf-8", errors="replace")
-        return group_label_from_text(text, path.stem), None
+def fetch_text(url: str) -> str:
+    request = urllib.request.Request(url, headers={"User-Agent": "designs-groups-parameter-set-builder"})
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return response.read().decode("utf-8", errors="replace")
 
 
 def raw_url(repository: str, branch: str, source_path: str) -> str:
@@ -312,11 +408,42 @@ def raw_url(repository: str, branch: str, source_path: str) -> str:
     return f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded}"
 
 
-def iter_gap_files(data_root: Path, category_folder: str):
-    folder = data_root / category_folder
-    if not folder.exists():
-        return
-    yield from sorted(folder.rglob("*.g"))
+def remote_sources(repository: str, branch: str, source_folders: dict[str, set[str]], needed_kinds: set[str]) -> dict[str, list[SourceText]]:
+    result = {kind: [] for kind in source_folders}
+    tree_url = f"https://api.github.com/repos/{repository}/git/trees/{urllib.parse.quote(branch, safe='')}?recursive=1"
+    tree = fetch_json(tree_url)
+    if tree.get("truncated"):
+        raise RuntimeError("GitHub returned a truncated repository tree; Parameter sets cannot be collected completely.")
+
+    paths_by_kind = {kind: [] for kind in needed_kinds}
+    for item in tree.get("tree", []):
+        source_path = item.get("path", "")
+        if item.get("type") != "blob" or not source_path.endswith(".g"):
+            continue
+        kind = source_kind(source_path, source_folders)
+        if kind in needed_kinds:
+            paths_by_kind[kind].append(source_path)
+
+    for kind in needed_kinds:
+        for source_path in sorted(paths_by_kind[kind]):
+            result[kind].append(SourceText(source_path, fetch_text(raw_url(repository, branch, source_path))))
+    return result
+
+
+def obtain_sources(data_root: Path, repository: str, branch: str, source_folders: dict[str, set[str]]) -> tuple[dict[str, list[SourceText]], dict[str, int]]:
+    sources = local_sources(data_root, source_folders)
+    remote_counts = {kind: 0 for kind in sources}
+    needed_kinds = {kind for kind, items in sources.items() if not items}
+    if needed_kinds:
+        try:
+            fetched = remote_sources(repository, branch, source_folders, needed_kinds)
+        except Exception as exc:
+            missing = ", ".join(sorted(needed_kinds))
+            raise RuntimeError(f"No local .g files were found for {missing}, and the GitHub fallback failed: {exc}") from exc
+        for kind in needed_kinds:
+            sources[kind] = fetched[kind]
+            remote_counts[kind] = len(fetched[kind])
+    return sources, remote_counts
 
 
 def add_group(record: ParameterRecord, group_label: str, url: str, tools) -> None:
@@ -327,97 +454,94 @@ def add_group(record: ParameterRecord, group_label: str, url: str, tools) -> Non
     record.groups.setdefault(sort_label, (label, url))
 
 
-def add_counts(record: ParameterRecord, counts: CountRecord) -> None:
+def merge_counts(record: ParameterRecord, counts: CountRecord) -> None:
     record.total += counts.total
+    record.total_complete = record.total_complete and counts.total_complete
     record.point_primitive += counts.point_primitive
     record.point_imprimitive += counts.point_imprimitive
+    record.point_classified += counts.point_classified
     record.block_primitive += counts.block_primitive
     record.block_imprimitive += counts.block_imprimitive
+    record.block_classified += counts.block_classified
 
 
-def row_level_counts(entries: list[DesignEntry]) -> dict[tuple[int, int, int, int, int], CountRecord]:
-    result: dict[tuple[int, int, int, int, int], CountRecord] = {}
-    for entry in entries:
-        counts = result.setdefault(entry.param, CountRecord())
-        counts.total += 1
-        if entry.point_primitive is True:
-            counts.point_primitive += 1
-        elif entry.point_primitive is False:
-            counts.point_imprimitive += 1
-        if entry.block_primitive is True:
-            counts.block_primitive += 1
-        elif entry.block_primitive is False:
-            counts.block_imprimitive += 1
-    return result
+def parse_source(source: SourceText) -> tuple[dict[tuple[int, int, int, int, int], CountRecord], dict[tuple[int, int, int, int, int], set[str]], bool]:
+    text = source.text
+    fallback_group = group_label_from_text(text, Path(source.source_path).stem)
+    summary_entries = summary_table_entries(text)
+    detailed_entries = detailed_design_entries(text, fallback_group)
+    record_entries = gap_record_entries(text, fallback_group)
+    entries = summary_entries or detailed_entries or record_entries
+    if summary_entries and detailed_entries and len(summary_entries) == len(detailed_entries):
+        if all(summary.param == detail.param for summary, detail in zip(summary_entries, detailed_entries)):
+            entries = [
+                DesignEntry(
+                    param=summary.param,
+                    group_label=summary.group_label,
+                    point_primitive=summary.point_primitive if summary.point_primitive is not None else detail.point_primitive,
+                    block_primitive=summary.block_primitive if summary.block_primitive is not None else detail.block_primitive,
+                )
+                for summary, detail in zip(summary_entries, detailed_entries)
+            ]
+    groups: dict[tuple[int, int, int, int, int], set[str]] = {}
+
+    if entries:
+        counts = counts_by_parameter(entries)
+        for entry in entries:
+            groups.setdefault(entry.param, set()).add(entry.group_label or fallback_group)
+        summary_counts = parse_count_summary_table(text)
+        if summary_counts is not None and len(counts) == 1:
+            only_param = next(iter(counts))
+            counts[only_param] = summary_counts
+        return counts, groups, True
+
+    candidates = sorted(set(explicit_parameter_candidates(text)))
+    if not candidates:
+        summary_counts = parse_count_summary_table(text)
+        return {}, {}, has_no_designs_remark(text) or (summary_counts is not None and summary_counts.total == 0)
+
+    summary_counts = parse_count_summary_table(text)
+    counts: dict[tuple[int, int, int, int, int], CountRecord] = {}
+    if summary_counts is not None and len(candidates) == 1:
+        counts[candidates[0]] = summary_counts
+    else:
+        for param in candidates:
+            counts[param] = CountRecord(total=0, total_complete=False)
+    for param in candidates:
+        groups[param] = {fallback_group}
+    return counts, groups, True
 
 
-def collect_records(data_root: Path, repository: str, branch: str, tools):
-    records: dict[str, dict[tuple[int, int, int, int, int], ParameterRecord]] = {
-        "flag-transitive": {},
-        "block-transitive": {},
-    }
-    scanned = {"flag-transitive": 0, "block-transitive": 0}
+def collect_records(data_root: Path, repository: str, branch: str, source_folders: dict[str, set[str]], tools):
+    records: dict[str, dict[tuple[int, int, int, int, int], ParameterRecord]] = {kind: {} for kind in CATEGORY_PREFIXES}
+    stats = {kind: CollectionStats() for kind in CATEGORY_PREFIXES}
+    sources, remote_counts = obtain_sources(data_root, repository, branch, source_folders)
 
-    for kind, category_folder in DATA_CATEGORIES.items():
-        for path in iter_gap_files(data_root, category_folder):
-            scanned[kind] += 1
-            source_path = path.relative_to(data_root).as_posix()
-            text = path.read_text(encoding="utf-8", errors="replace")
-            url = raw_url(repository, branch, source_path)
-
-            entries = design_entries(text)
-            summary_counts = parse_count_summary_table(text)
-            file_params = sorted(set(parameter_candidates(text)) | {entry.param for entry in entries})
-
-            if entries:
-                grouped_entries: dict[tuple[int, int, int, int, int], list[DesignEntry]] = {}
-                for entry in entries:
-                    grouped_entries.setdefault(entry.param, []).append(entry)
-
-                if summary_counts is not None and len(grouped_entries) == 1:
-                    param = next(iter(grouped_entries))
-                    record = records[kind].setdefault(param, ParameterRecord(param=param))
-                    add_counts(record, summary_counts)
-                    for entry in grouped_entries[param]:
-                        add_group(record, entry.group_label, url, tools)
-                    continue
-
-                per_param_counts = row_level_counts(entries)
-                for param, counts in per_param_counts.items():
-                    record = records[kind].setdefault(param, ParameterRecord(param=param))
-                    add_counts(record, counts)
-                    for entry in grouped_entries.get(param, []):
-                        add_group(record, entry.group_label, url, tools)
+    for kind, items in sources.items():
+        stats[kind].remote_files = remote_counts[kind]
+        for source in items:
+            stats[kind].scanned += 1
+            counts_by_param, groups_by_param, recognized = parse_source(source)
+            if not counts_by_param:
+                if recognized:
+                    stats[kind].no_designs += 1
+                elif all_valid_parameters(source.text):
+                    stats[kind].unresolved.append(source.source_path)
                 continue
 
-            group_label, total = file_total_from_row(tools, path, source_path)
-            if looks_like_degree_filename(group_label):
-                continue
-
-            params = file_params
-            if not params:
-                continue
-
-            if summary_counts is not None and len(params) == 1:
-                param = params[0]
+            stats[kind].contributing += 1
+            url = raw_url(repository, branch, source.source_path)
+            for param, counts in counts_by_param.items():
                 record = records[kind].setdefault(param, ParameterRecord(param=param))
-                add_counts(record, summary_counts)
-                add_group(record, group_label, url, tools)
-                continue
+                merge_counts(record, counts)
+                for group_label in groups_by_param.get(param, set()):
+                    add_group(record, group_label, url, tools)
 
-            if len(params) == 1 and total is not None:
-                param = params[0]
-                record = records[kind].setdefault(param, ParameterRecord(param=param))
-                record.total += int(total)
-                add_group(record, group_label, url, tools)
-                continue
+    return records, stats
 
-            for param in params:
-                record = records[kind].setdefault(param, ParameterRecord(param=param))
-                record.total += 1
-                add_group(record, group_label, url, tools)
 
-    return records, scanned
+def display_number(value: int, complete: bool) -> tuple[str, str]:
+    return (str(value), str(value)) if complete else ("—", "")
 
 
 def group_links(record: ParameterRecord) -> tuple[str, str]:
@@ -427,7 +551,7 @@ def group_links(record: ParameterRecord) -> tuple[str, str]:
         label, url = record.groups[key]
         pieces.append(f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener noreferrer" onclick="recordDataAccess();">{label}</a>')
         sort_parts.append(label)
-    return ", ".join(pieces), " ".join(sort_parts)
+    return ", ".join(pieces) if pieces else "—", " ".join(sort_parts)
 
 
 def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) -> str:
@@ -439,6 +563,13 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
         record = records[param]
         v, b, r, k, lam = param
         links, sort_groups = group_links(record)
+        total_text, total_sort = display_number(record.total, record.total_complete)
+        point_complete = record.total_complete and record.point_classified == record.total
+        block_complete = record.total_complete and record.block_classified == record.total
+        pp_text, pp_sort = display_number(record.point_primitive, point_complete)
+        pi_text, pi_sort = display_number(record.point_imprimitive, point_complete)
+        bp_text, bp_sort = display_number(record.block_primitive, block_complete)
+        bi_text, bi_sort = display_number(record.block_imprimitive, block_complete)
         lines.extend([
             f'          <tr class="parameter-set-row" data-original-index="{index}">',
             f'            <td data-sort="{v}">{v}</td>',
@@ -446,11 +577,11 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
             f'            <td data-sort="{r}">{r}</td>',
             f'            <td data-sort="{k}">{k}</td>',
             f'            <td data-sort="{lam}">{lam}</td>',
-            f'            <td class="parameter-count count-total-cell" data-sort="{record.total}">{record.total}</td>',
-            f'            <td class="parameter-count count-point-primitive-cell" data-sort="{record.point_primitive}">{record.point_primitive}</td>',
-            f'            <td class="parameter-count count-point-imprimitive-cell" data-sort="{record.point_imprimitive}">{record.point_imprimitive}</td>',
-            f'            <td class="parameter-count count-block-primitive-cell" data-sort="{record.block_primitive}">{record.block_primitive}</td>',
-            f'            <td class="parameter-count count-block-imprimitive-cell" data-sort="{record.block_imprimitive}">{record.block_imprimitive}</td>',
+            f'            <td class="parameter-count count-total-cell" data-sort="{total_sort}">{total_text}</td>',
+            f'            <td class="parameter-count count-point-primitive-cell" data-sort="{pp_sort}">{pp_text}</td>',
+            f'            <td class="parameter-count count-point-imprimitive-cell" data-sort="{pi_sort}">{pi_text}</td>',
+            f'            <td class="parameter-count count-block-primitive-cell" data-sort="{bp_sort}">{bp_text}</td>',
+            f'            <td class="parameter-count count-block-imprimitive-cell" data-sort="{bi_sort}">{bi_text}</td>',
             f'            <td class="parameter-groups group-cell" style="text-align: left !important;" data-sort="{html.escape(sort_groups, quote=True)}">{links}</td>',
             '          </tr>',
         ])
@@ -459,7 +590,7 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
 
 def replace_table_header(page: Path) -> None:
     text = page.read_text(encoding="utf-8")
-    thead = r"""        <thead>
+    thead = r'''        <thead>
           <tr>
             <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="0" data-type="number">\(v\)</button></th>
             <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="1" data-type="number">\(b\)</button></th>
@@ -476,9 +607,11 @@ def replace_table_header(page: Path) -> None:
             <th class="count-column count-block-primitive"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block-primitive</button></th>
             <th class="count-column count-block-imprimitive"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block-imprimitive</button></th>
           </tr>
-        </thead>"""
-    text = re.sub(r"\s*<thead>.*?</thead>", lambda match: "\n" + thead, text, count=1, flags=re.S)
-    page.write_text(text, encoding="utf-8")
+        </thead>'''
+    updated, count = re.subn(r"\s*<thead>.*?</thead>", lambda _match: "\n" + thead, text, count=1, flags=re.S)
+    if count != 1:
+        raise RuntimeError(f"Parameter-set table header not found in {page}")
+    page.write_text(updated, encoding="utf-8")
 
 
 def replace_rows(page: Path, rows: str) -> None:
@@ -490,107 +623,42 @@ def replace_rows(page: Path, rows: str) -> None:
     page.write_text(pattern.sub(lambda match: match.group(1) + "\n" + rows + "\n" + match.group(2), text), encoding="utf-8")
 
 
-
-SORT_SCRIPT = r"""
-<script class="parameter-sort-script">
-(function() {
-  document.querySelectorAll(".parameter-set-table").forEach(function(table) {
-    var tbody = table.tBodies[0];
-    if (!tbody) return;
-    var state = { column: null, direction: "original" };
-
-    Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row")).forEach(function(row, index) {
-      if (!row.hasAttribute("data-original-index")) row.setAttribute("data-original-index", String(index));
-    });
-
-    function originalIndex(row) {
-      return Number(row.getAttribute("data-original-index") || "0");
-    }
-
-    function cellValue(row, column, type) {
-      var cell = row.children[column];
-      if (!cell) return type === "number" ? 0 : "";
-      var raw = (cell.getAttribute("data-sort") || cell.textContent || "").trim();
-      return type === "number" ? Number(raw) : raw.toLowerCase();
-    }
-
-    table.querySelectorAll(".parameter-sort").forEach(function(button) {
-      button.addEventListener("click", function() {
-        var column = Number(button.getAttribute("data-column"));
-        var type = button.getAttribute("data-type") || "text";
-        var direction = "asc";
-
-        if (state.column === column) {
-          if (state.direction === "asc") direction = "desc";
-          else if (state.direction === "desc") direction = "original";
-        }
-
-        var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row"));
-        if (direction === "original") {
-          rows.sort(function(a, b) { return originalIndex(a) - originalIndex(b); });
-        } else {
-          rows.sort(function(a, b) {
-            var av = cellValue(a, column, type);
-            var bv = cellValue(b, column, type);
-            if (av < bv) return direction === "asc" ? -1 : 1;
-            if (av > bv) return direction === "asc" ? 1 : -1;
-            return originalIndex(a) - originalIndex(b);
-          });
-        }
-
-        rows.forEach(function(row) { tbody.appendChild(row); });
-        state = { column: column, direction: direction };
-      });
-    });
-  });
-})();
-</script>
-"""
-
-
-def ensure_sort_script(page: Path) -> None:
-    text = page.read_text(encoding="utf-8")
-    text = re.sub(
-        r'\s*<script(?: class="parameter-sort-script")?>\s*\(function\(\).*?parameter-sort.*?</script>',
-        "",
-        text,
-        flags=re.S,
-    )
-    text = text.replace("</article>", SORT_SCRIPT + "\n  </article>", 1)
-    page.write_text(text, encoding="utf-8")
-
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data-root", default=".", help="Repository root containing Flag-transitive and Block-transitive folders.")
-    parser.add_argument("--repository", default="designs-groups/designs-groups.github.io")
-    parser.add_argument("--branch", default="main")
+    parser.add_argument("--data-root", default=".", help="Repository root containing the GAP data folders.")
+    parser.add_argument("--repository", default=None)
+    parser.add_argument("--branch", default=None)
     args = parser.parse_args()
 
     data_root = Path(args.data_root).resolve()
+    config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    repository = args.repository or config["repository"]
+    branch = args.branch or config.get("branch", "main")
+    source_folders = relevant_source_folders(config)
     tools = load_data_tools()
-    records, scanned = collect_records(data_root, args.repository, args.branch, tools)
+    records, stats = collect_records(data_root, repository, branch, source_folders, tools)
 
+    errors = []
     for kind in PARAMETER_SET_PAGES:
-        if scanned[kind] == 0:
-            raise RuntimeError(f"No .g files were found under {DATA_CATEGORIES[kind]}; refusing to generate an empty Parameter sets page.")
+        if stats[kind].scanned == 0:
+            errors.append(f"No relevant .g files were found for {kind}.")
         if not records[kind]:
-            raise RuntimeError(f"No parameter sets could be parsed from the {scanned[kind]} .g files under {DATA_CATEGORIES[kind]}.")
+            errors.append(f"No parameter sets were collected for {kind} from {stats[kind].scanned} .g files.")
+        if stats[kind].unresolved:
+            errors.append(f"The following {kind} files contain valid parameter sets but could not be assigned to designs: {', '.join(stats[kind].unresolved)}")
+    if errors:
+        raise RuntimeError("\n".join(errors))
 
     for kind, rel_page in PARAMETER_SET_PAGES.items():
-        page = data_root / rel_page
-        replace_rows(page, render_rows(records[kind]))
-        ensure_sort_script(page)
+        replace_rows(data_root / rel_page, render_rows(records[kind]))
 
-    print(
-        "Updated parameter-set pages: "
-        f"{len(records['flag-transitive'])} flag-transitive parameter sets, "
-        f"{len(records['block-transitive'])} block-transitive parameter sets."
-    )
-    print(
-        "Scanned all .g files recursively: "
-        f"{scanned['flag-transitive']} under Flag-transitive and "
-        f"{scanned['block-transitive']} under Block-transitive."
-    )
+    for kind in PARAMETER_SET_PAGES:
+        source_note = f", including {stats[kind].remote_files} fetched from GitHub" if stats[kind].remote_files else ""
+        print(
+            f"{kind}: {len(records[kind])} parameter sets from "
+            f"{stats[kind].contributing} contributing files out of {stats[kind].scanned} scanned{source_note}; "
+            f"{stats[kind].no_designs} files recorded no designs."
+        )
     return 0
 
 

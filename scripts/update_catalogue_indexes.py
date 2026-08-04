@@ -6,6 +6,7 @@ import html
 import importlib.util
 import json
 import re
+import subprocess
 import sys
 import urllib.parse
 from pathlib import Path
@@ -325,9 +326,11 @@ def replace_catalogue(page_text: str, catalogue_html: str) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, required=True)
+    parser.add_argument("--skip-parameter-sets", action="store_true")
     args = parser.parse_args()
 
-
+    if not args.skip_parameter_sets:
+        subprocess.run([sys.executable, str(ROOT / "scripts" / "update_parameter_sets.py"), "--data-root", str(args.data_root.resolve())], cwd=ROOT, check=True)
 
     tools = load_table_tools()
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))

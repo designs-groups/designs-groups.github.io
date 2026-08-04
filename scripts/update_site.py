@@ -26,7 +26,7 @@ def main() -> int:
     run(root, "normalize_bibtex_keys.py", "--data-root", str(root))
     run(root, "update_data_tables.py", "--data-root", str(root))
     run(root, "update_parameter_sets.py", "--data-root", str(root))
-    run(root, "update_catalogue_indexes.py", "--data-root", str(root))
+    run(root, "update_catalogue_indexes.py", "--data-root", str(root), "--skip-parameter-sets")
     run(root, "update_navigation.py", "--data-root", str(root))
     run(root, "build_bibliography.py")
     run(root, "update_footer_date.py")

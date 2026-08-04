@@ -62,11 +62,7 @@ def main() -> int:
         except Exception as exc:
             errors.append(f"Python compile problem in {script.name}: {exc}")
 
-    parameter_sources = {
-        "docs/flag-transitive/parameters.html": root / "Flag-transitive",
-        "docs/block-transitive/parameters.html": root / "Block-transitive",
-    }
-    for rel, source_folder in parameter_sources.items():
+    for rel in ("docs/flag-transitive/parameters.html", "docs/block-transitive/parameters.html"):
         text = (root / rel).read_text(encoding="utf-8")
         for item in (
             "Number of designs",
@@ -86,10 +82,9 @@ def main() -> int:
         ):
             if item not in text:
                 errors.append(f"{rel} missing: {item}")
-        gap_files = list(source_folder.rglob("*.g")) if source_folder.exists() else []
-        if gap_files and 'class="parameter-set-row"' not in text:
-            errors.append(f"{rel} contains no generated Parameter sets rows although {len(gap_files)} .g files are available")
-        if gap_files and "No parameter sets are currently available." in text:
+        if 'class="parameter-set-row"' not in text:
+            errors.append(f"{rel} contains no generated Parameter sets rows")
+        if "No parameter sets are currently available." in text:
             errors.append(f"{rel} still contains the empty Parameter sets message")
 
     css = (docs / "assets" / "style.css").read_text(encoding="utf-8")
