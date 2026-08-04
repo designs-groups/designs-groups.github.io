@@ -16,13 +16,13 @@ PARAMETER_SET_PAGES = {
     "flag-transitive": Path("docs/flag-transitive/parameters.html"),
     "block-transitive": Path("docs/block-transitive/parameters.html"),
 }
+
 DATA_CATEGORIES = {
     "flag-transitive": "Flag-transitive",
     "block-transitive": "Block-transitive",
 }
 
 PARAM_RE = re.compile(r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]")
-DESIGN_START_RE = re.compile(r"^\s*#?\s*Design\s*:\s*(\d+)\b", re.I | re.M)
 
 
 @dataclass
@@ -51,15 +51,6 @@ class DesignEntry:
     group_label: str
     point_primitive: bool | None = None
     block_primitive: bool | None = None
-    design_number: int | None = None
-
-
-@dataclass
-class CollectionStats:
-    scanned: int = 0
-    contributing: int = 0
-    without_parameters: int = 0
-    parameter_occurrences: int = 0
 
 
 def load_data_tools():
@@ -79,9 +70,15 @@ def clean_comment_line(raw: str) -> str:
 
 def is_valid_parameter_set(param: tuple[int, int, int, int, int]) -> bool:
     v, b, r, k, lam = param
-    if min(param) <= 0 or not (v > k > 1):
+    if min(param) <= 0:
         return False
-    return b * k == v * r and r * (k - 1) == lam * (v - 1)
+    if not (v > k > 1):
+        return False
+    if b * k != v * r:
+        return False
+    if r * (k - 1) != lam * (v - 1):
+        return False
+    return True
 
 
 def first_parameter_in_line(line: str) -> tuple[int, int, int, int, int] | None:
@@ -113,19 +110,6 @@ def parameter_candidates(text: str) -> list[tuple[int, int, int, int, int]]:
     return candidates
 
 
-def record_parameter_occurrences(text: str) -> list[tuple[int, int, int, int, int]]:
-    """Return one parameter set for each GAP design-record `parameters :=` component."""
-    result: list[tuple[int, int, int, int, int]] = []
-    for line in text.splitlines():
-        low = line.casefold()
-        if "parametersc" in low or re.search(r"\bparameters\s*:=", low) is None:
-            continue
-        param = first_parameter_in_line(line)
-        if param is not None:
-            result.append(param)
-    return result
-
-
 def looks_like_degree_filename(label: str) -> bool:
     return re.fullmatch(r"v[_-]?\d+", label.strip(), flags=re.I) is not None
 
@@ -139,13 +123,8 @@ def bool_value(value: str) -> bool | None:
     return None
 
 
-def first_boolean(line: str) -> bool | None:
-    match = re.search(r"\b(true|false)\b", line, re.I)
-    return bool_value(match.group(1)) if match else None
-
-
 def group_label_from_text(text: str, fallback: str) -> str:
-    match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M | re.I)
+    match = re.search(r"^\s*#?\s*Group\s*\(autSubgroup\)\s*:\s*(.+?)\s*$", text, flags=re.M)
     if match:
         label = match.group(1).strip()
         if "=" in label:
@@ -156,20 +135,26 @@ def group_label_from_text(text: str, fallback: str) -> str:
 
 
 def parse_count_summary_table(text: str) -> CountRecord | None:
+    """Read counts from the Total column of the number-of-non-isomorphic-designs table."""
     counts = CountRecord()
     found = set()
+
     for raw in text.splitlines():
         line = clean_comment_line(raw)
         if not line or set(line) <= {"-"}:
             continue
+
         parts = line.split()
-        if len(parts) < 2:
+        if len(parts) < 4:
             continue
+
         label = parts[0].casefold()
         nums = [int(x) for x in parts[1:] if re.fullmatch(r"\d+", x)]
         if not nums:
             continue
+
         value = nums[-1]
+
         if label == "point-primitive":
             counts.point_primitive = value
             found.add("point_primitive")
@@ -185,128 +170,126 @@ def parse_count_summary_table(text: str) -> CountRecord | None:
         elif label == "total":
             counts.total = value
             found.add("total")
-    required = {"total", "point_primitive", "point_imprimitive", "block_primitive", "block_imprimitive"}
-    return counts if required <= found else None
+
+    if {"total", "point_primitive", "point_imprimitive", "block_primitive", "block_imprimitive"} <= found:
+        return counts
+    return None
 
 
-def normalize_header_token(token: str) -> str:
-    token = token.strip().casefold().replace("_", "-")
-    if token in {"λ", "lambda", "lambda-"}:
-        return "lambda"
-    return token
-
-
-def summary_table_entries(text: str) -> list[DesignEntry]:
-    """Extract design rows from any summary table headed by Nr, v, b, r, k, lambda and G."""
+def nonisomorphic_design_table_entries(text: str) -> list[DesignEntry]:
+    """Extract row-level data from Summary or Non-isomorphic designs tables."""
     entries: list[DesignEntry] = []
-    header: list[str] | None = None
-    index: dict[str, int] = {}
+    in_table = False
+    header_seen = False
 
     for raw in text.splitlines():
         line = clean_comment_line(raw)
-        if not line or set(line) <= {"-", "="}:
+
+        if re.match(r"^(?:\d+\.\s*)?(?:Summary|Non-isomorphic designs)\s*:\s*$", line, re.I):
+            in_table = True
+            header_seen = False
             continue
+
+        if not in_table:
+            continue
+
+        if re.match(r"^(?:\d+\.\s*)?(?:Further information|Designs|All designs)\s*:\s*$", line, re.I):
+            break
+
+        if not line or set(line) <= {"-"}:
+            continue
+
         parts = line.split()
-        normalized = [normalize_header_token(x) for x in parts]
-        required = {"nr", "v", "b", "r", "k", "lambda", "g"}
-        if required <= set(normalized):
-            header = normalized
-            index = {name: header.index(name) for name in required}
-            if "point-primitive" in header:
-                index["point-primitive"] = header.index("point-primitive")
-            if "block-primitive" in header:
-                index["block-primitive"] = header.index("block-primitive")
+        if parts and parts[0].casefold() == "nr" and all(name in parts for name in ("v", "b", "r", "k", "G")):
+            header_seen = True
             continue
-        if header is None:
+
+        if not header_seen or len(parts) < 7 or not parts[0].isdigit():
             continue
-        if re.match(r"^(?:\d+\.\s*)?(?:Further information|Designs)\b", line, re.I):
-            header = None
-            index = {}
-            continue
-        if not parts or not parts[0].isdigit():
-            continue
-        if max(index.values()) >= len(parts):
-            continue
+
         try:
-            param = tuple(int(parts[index[name]]) for name in ("v", "b", "r", "k", "lambda"))
-        except (ValueError, IndexError):
+            param = (int(parts[1]), int(parts[2]), int(parts[3]), int(parts[4]), int(parts[5]))
+        except ValueError:
             continue
-        if not is_valid_parameter_set(param):
+
+        group_label = parts[6].strip()
+        if not is_valid_parameter_set(param) or not group_label or looks_like_degree_filename(group_label):
             continue
-        group_label = parts[index["g"]].strip()
-        if not group_label or looks_like_degree_filename(group_label):
-            continue
-        boolean_values = [bool_value(token) for token in parts[index["g"] + 1:] if token.casefold() in {"true", "false"}]
+
+        primitive_values = [bool_value(token) for token in parts[7:] if token.casefold() in {"true", "false"}]
         entries.append(
             DesignEntry(
                 param=param,
                 group_label=group_label,
-                point_primitive=boolean_values[0] if len(boolean_values) >= 1 else None,
-                block_primitive=boolean_values[1] if len(boolean_values) >= 2 else None,
-                design_number=int(parts[index["nr"]]),
+                point_primitive=primitive_values[0] if len(primitive_values) >= 1 else None,
+                block_primitive=primitive_values[1] if len(primitive_values) >= 2 else None,
             )
         )
+
     return entries
 
 
-def detailed_design_entries(text: str) -> list[DesignEntry]:
-    """Extract complete Design blocks, reading primitive flags after the Structure line as well."""
-    starts = list(DESIGN_START_RE.finditer(text))
+def further_information_entries(text: str) -> list[DesignEntry]:
+    """Fallback: extract complete design data from detailed Design blocks."""
     entries: list[DesignEntry] = []
-    for position, match in enumerate(starts):
-        end = starts[position + 1].start() if position + 1 < len(starts) else len(text)
-        block = text[match.start():end]
-        param_match = re.search(r"^\s*#?\s*Parameter\s+set\s*:\s*(\[[^\n]+\])", block, re.I | re.M)
-        if not param_match:
-            continue
-        param = first_parameter_in_line(param_match.group(1))
-        if param is None:
-            continue
-        structure = re.search(r"^\s*#?\s*Structure\s+(\S+)", block, re.I | re.M)
-        if not structure:
-            continue
-        group_label = structure.group(1).strip()
-        if not group_label or looks_like_degree_filename(group_label):
-            continue
-        point_line = re.search(r"^\s*#?\s*Point-primitive\s+(.+)$", block, re.I | re.M)
-        block_line = re.search(r"^\s*#?\s*Block-primitive\s+(.+)$", block, re.I | re.M)
-        entries.append(
-            DesignEntry(
-                param=param,
-                group_label=group_label,
-                point_primitive=first_boolean(point_line.group(1)) if point_line else None,
-                block_primitive=first_boolean(block_line.group(1)) if block_line else None,
-                design_number=int(match.group(1)),
+    current_param: tuple[int, int, int, int, int] | None = None
+    current_group_label: str | None = None
+    current_point_primitive: bool | None = None
+    current_block_primitive: bool | None = None
+
+    def flush() -> None:
+        nonlocal current_param, current_group_label, current_point_primitive, current_block_primitive
+        if current_param is not None and current_group_label and not looks_like_degree_filename(current_group_label):
+            entries.append(
+                DesignEntry(
+                    param=current_param,
+                    group_label=current_group_label,
+                    point_primitive=current_point_primitive,
+                    block_primitive=current_block_primitive,
+                )
             )
-        )
+        current_param = None
+        current_group_label = None
+        current_point_primitive = None
+        current_block_primitive = None
+
+    for raw in text.splitlines():
+        line = clean_comment_line(raw)
+
+        if re.match(r"^Design:\s*\d+\b", line, re.I):
+            flush()
+            continue
+
+        if "Parameter set" in line:
+            current_param = first_parameter_in_line(line)
+            continue
+
+        if re.match(r"^Structure\b", line):
+            parts = line.split()
+            if len(parts) >= 2:
+                current_group_label = parts[1].strip()
+            continue
+
+        low = line.casefold()
+        if low.startswith("point-primitive") and "type" not in low:
+            vals = re.findall(r"\b(true|false)\b", low)
+            if vals:
+                current_point_primitive = bool_value(vals[0])
+            continue
+
+        if low.startswith("block-primitive") and "type" not in low:
+            vals = re.findall(r"\b(true|false)\b", low)
+            if vals:
+                current_block_primitive = bool_value(vals[0])
+
+    flush()
     return entries
-
-
-def merge_entries(primary: list[DesignEntry], secondary: list[DesignEntry]) -> list[DesignEntry]:
-    """Fill missing fields without counting the same numbered design twice."""
-    if not primary:
-        return secondary
-    by_number = {entry.design_number: entry for entry in secondary if entry.design_number is not None}
-    merged: list[DesignEntry] = []
-    for entry in primary:
-        other = by_number.get(entry.design_number)
-        if other is not None:
-            if entry.point_primitive is None:
-                entry.point_primitive = other.point_primitive
-            if entry.block_primitive is None:
-                entry.block_primitive = other.block_primitive
-            if not entry.group_label:
-                entry.group_label = other.group_label
-        merged.append(entry)
-    return merged
-
 
 def design_entries(text: str) -> list[DesignEntry]:
-    table = summary_table_entries(text)
-    detailed = detailed_design_entries(text)
-    if table:
-        return merge_entries(table, detailed)
-    return detailed
+    entries = nonisomorphic_design_table_entries(text)
+    if entries:
+        return entries
+    return further_information_entries(text)
 
 
 def file_total_from_row(tools, path: Path, source_path: str) -> tuple[str, int | None]:
@@ -330,11 +313,10 @@ def raw_url(repository: str, branch: str, source_path: str) -> str:
 
 
 def iter_gap_files(data_root: Path, category_folder: str):
-    """Scan every .g file below the category root, including all present and future subfolders."""
     folder = data_root / category_folder
     if not folder.exists():
         return
-    yield from sorted(path for path in folder.rglob("*.g") if path.is_file())
+    yield from sorted(folder.rglob("*.g"))
 
 
 def add_group(record: ParameterRecord, group_label: str, url: str, tools) -> None:
@@ -374,78 +356,68 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
         "flag-transitive": {},
         "block-transitive": {},
     }
-    stats = {kind: CollectionStats() for kind in DATA_CATEGORIES}
+    scanned = {"flag-transitive": 0, "block-transitive": 0}
 
     for kind, category_folder in DATA_CATEGORIES.items():
-        category_root = data_root / category_folder
-        if not category_root.exists():
-            raise RuntimeError(f"Missing data folder: {category_root}")
         for path in iter_gap_files(data_root, category_folder):
-            stats[kind].scanned += 1
+            scanned[kind] += 1
             source_path = path.relative_to(data_root).as_posix()
             text = path.read_text(encoding="utf-8", errors="replace")
             url = raw_url(repository, branch, source_path)
+
             entries = design_entries(text)
-            candidates = parameter_candidates(text)
-            if not candidates and not entries:
-                stats[kind].without_parameters += 1
-                continue
+            summary_counts = parse_count_summary_table(text)
+            file_params = sorted(set(parameter_candidates(text)) | {entry.param for entry in entries})
 
             if entries:
                 grouped_entries: dict[tuple[int, int, int, int, int], list[DesignEntry]] = {}
                 for entry in entries:
                     grouped_entries.setdefault(entry.param, []).append(entry)
-                for param, counts in row_level_counts(entries).items():
+
+                if summary_counts is not None and len(grouped_entries) == 1:
+                    param = next(iter(grouped_entries))
                     record = records[kind].setdefault(param, ParameterRecord(param=param))
-                    add_counts(record, counts)
+                    add_counts(record, summary_counts)
                     for entry in grouped_entries[param]:
                         add_group(record, entry.group_label, url, tools)
-                stats[kind].contributing += 1
-                stats[kind].parameter_occurrences += len(entries)
+                    continue
+
+                per_param_counts = row_level_counts(entries)
+                for param, counts in per_param_counts.items():
+                    record = records[kind].setdefault(param, ParameterRecord(param=param))
+                    add_counts(record, counts)
+                    for entry in grouped_entries.get(param, []):
+                        add_group(record, entry.group_label, url, tools)
                 continue
 
             group_label, total = file_total_from_row(tools, path, source_path)
-            summary_counts = parse_count_summary_table(text)
-            occurrences = record_parameter_occurrences(text)
-            unique_params = sorted(set(candidates))
+            if looks_like_degree_filename(group_label):
+                continue
 
-            if summary_counts is not None and len(unique_params) == 1:
-                param = unique_params[0]
+            params = file_params
+            if not params:
+                continue
+
+            if summary_counts is not None and len(params) == 1:
+                param = params[0]
                 record = records[kind].setdefault(param, ParameterRecord(param=param))
                 add_counts(record, summary_counts)
                 add_group(record, group_label, url, tools)
-                stats[kind].contributing += 1
-                stats[kind].parameter_occurrences += summary_counts.total
                 continue
 
-            if occurrences:
-                for param in occurrences:
-                    record = records[kind].setdefault(param, ParameterRecord(param=param))
-                    record.total += 1
-                    add_group(record, group_label, url, tools)
-                stats[kind].contributing += 1
-                stats[kind].parameter_occurrences += len(occurrences)
-                continue
-
-            if len(unique_params) == 1 and total is not None:
-                param = unique_params[0]
+            if len(params) == 1 and total is not None:
+                param = params[0]
                 record = records[kind].setdefault(param, ParameterRecord(param=param))
                 record.total += int(total)
                 add_group(record, group_label, url, tools)
-                stats[kind].contributing += 1
-                stats[kind].parameter_occurrences += int(total)
                 continue
 
-            # Last-resort data preservation: each explicit unique parameter contributes once.
-            for param in unique_params:
+            for param in params:
                 record = records[kind].setdefault(param, ParameterRecord(param=param))
                 record.total += 1
                 add_group(record, group_label, url, tools)
-            if unique_params:
-                stats[kind].contributing += 1
-                stats[kind].parameter_occurrences += len(unique_params)
 
-    return records, stats
+    return records, scanned
 
 
 def group_links(record: ParameterRecord) -> tuple[str, str]:
@@ -461,6 +433,7 @@ def group_links(record: ParameterRecord) -> tuple[str, str]:
 def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) -> str:
     if not records:
         return '          <tr><td colspan="11" class="empty-row">No parameter sets are currently available.</td></tr>'
+
     lines = []
     for index, param in enumerate(sorted(records)):
         record = records[param]
@@ -517,6 +490,7 @@ def replace_rows(page: Path, rows: str) -> None:
     page.write_text(pattern.sub(lambda match: match.group(1) + "\n" + rows + "\n" + match.group(2), text), encoding="utf-8")
 
 
+
 SORT_SCRIPT = r"""
 <script class="parameter-sort-script">
 (function() {
@@ -528,6 +502,7 @@ SORT_SCRIPT = r"""
     Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row")).forEach(function(row, index) {
       if (!row.hasAttribute("data-original-index")) row.setAttribute("data-original-index", String(index));
     });
+
     function originalIndex(row) {
       return Number(row.getAttribute("data-original-index") || "0");
     }
@@ -538,6 +513,7 @@ SORT_SCRIPT = r"""
       var raw = (cell.getAttribute("data-sort") || cell.textContent || "").trim();
       return type === "number" ? Number(raw) : raw.toLowerCase();
     }
+
     table.querySelectorAll(".parameter-sort").forEach(function(button) {
       button.addEventListener("click", function() {
         var column = Number(button.getAttribute("data-column"));
@@ -548,6 +524,7 @@ SORT_SCRIPT = r"""
           if (state.direction === "asc") direction = "desc";
           else if (state.direction === "desc") direction = "original";
         }
+
         var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row"));
         if (direction === "original") {
           rows.sort(function(a, b) { return originalIndex(a) - originalIndex(b); });
@@ -560,6 +537,7 @@ SORT_SCRIPT = r"""
             return originalIndex(a) - originalIndex(b);
           });
         }
+
         rows.forEach(function(row) { tbody.appendChild(row); });
         state = { column: column, direction: direction };
       });
@@ -581,16 +559,22 @@ def ensure_sort_script(page: Path) -> None:
     text = text.replace("</article>", SORT_SCRIPT + "\n  </article>", 1)
     page.write_text(text, encoding="utf-8")
 
-
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", default=".", help="Repository root containing Flag-transitive and Block-transitive folders.")
     parser.add_argument("--repository", default="designs-groups/designs-groups.github.io")
     parser.add_argument("--branch", default="main")
     args = parser.parse_args()
+
     data_root = Path(args.data_root).resolve()
     tools = load_data_tools()
-    records, stats = collect_records(data_root, args.repository, args.branch, tools)
+    records, scanned = collect_records(data_root, args.repository, args.branch, tools)
+
+    for kind in PARAMETER_SET_PAGES:
+        if scanned[kind] == 0:
+            raise RuntimeError(f"No .g files were found under {DATA_CATEGORIES[kind]}; refusing to generate an empty Parameter sets page.")
+        if not records[kind]:
+            raise RuntimeError(f"No parameter sets could be parsed from the {scanned[kind]} .g files under {DATA_CATEGORIES[kind]}.")
 
     for kind, rel_page in PARAMETER_SET_PAGES.items():
         page = data_root / rel_page
@@ -602,15 +586,11 @@ def main() -> int:
         f"{len(records['flag-transitive'])} flag-transitive parameter sets, "
         f"{len(records['block-transitive'])} block-transitive parameter sets."
     )
-    for kind in ("flag-transitive", "block-transitive"):
-        item = stats[kind]
-        print(
-            f"{kind}: scanned {item.scanned} .g files recursively; "
-            f"{item.contributing} files contributed {item.parameter_occurrences} design entries; "
-            f"{item.without_parameters} files contained no valid parameter set."
-        )
-    if not records["flag-transitive"] or not records["block-transitive"]:
-        raise RuntimeError("Parameter-set generation produced an empty category; refusing to publish empty tables.")
+    print(
+        "Scanned all .g files recursively: "
+        f"{scanned['flag-transitive']} under Flag-transitive and "
+        f"{scanned['block-transitive']} under Block-transitive."
+    )
     return 0
 
 
