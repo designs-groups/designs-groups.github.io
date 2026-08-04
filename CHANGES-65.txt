@@ -1,0 +1,31 @@
+Version 65: Parameter sets automatic collection fix
+
+Base: 64-designs-by-groups-final-automatic-visual-fix.zip
+
+Only the Parameter sets automatic pipeline is changed.
+
+1. scripts/update_parameter_sets.py
+   - scans every .g file recursively below Flag-transitive and Block-transitive;
+   - therefore includes Alternating, Affine, Classical, Exceptional, Sporadic,
+     Transitive, Primitive, and any later folders automatically;
+   - recognises the actual "Summary" tables in the .g files without requiring
+     the obsolete "Non-isomorphic designs:" heading;
+   - reads complete Design blocks before recording Point-primitive and
+     Block-primitive values;
+   - counts repeated parameters once per actual design record;
+   - includes affine sources instead of silently skipping them;
+   - refuses to publish if either Parameter sets category is empty;
+   - reports scanned files and contributing design entries.
+
+2. .github/workflows/pages.yml
+   - runs scripts/update_site.py, the complete automatic pipeline;
+   - this makes update_parameter_sets.py run before GitHub Pages deployment.
+
+3. scripts/validate_site.py
+   - rejects empty Parameter sets pages;
+   - checks generated totals and primitive-count consistency;
+   - checks that the deployment workflow runs the complete pipeline.
+
+No table heading, column width, sorting behavior, group-cell alignment, page
+layout, navigation rule, catalogue rule, bibliography rule, or other approved
+website feature is changed.

@@ -1,0 +1,12 @@
+Replace these three files in the root of version 64, keeping their paths:
+
+.github/workflows/pages.yml
+scripts/update_parameter_sets.py
+scripts/validate_site.py
+
+Then run:
+
+python3 scripts/update_site.py --data-root .
+
+Commit and push the rebuilt repository. The GitHub Pages workflow will repeat
+the complete rebuild and validation automatically before deployment.

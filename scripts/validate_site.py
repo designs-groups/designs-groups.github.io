@@ -29,6 +29,17 @@ REQUIRED_PAGES = (
 )
 
 
+def parameter_row_counts(text: str) -> list[tuple[int, int, int, int, int]]:
+    rows = []
+    row_re = re.compile(r'<tr class="parameter-set-row".*?</tr>', re.S)
+    count_re = re.compile(r'class="parameter-count [^"]+" data-sort="(\d+)"')
+    for row in row_re.findall(text):
+        counts = [int(value) for value in count_re.findall(row)]
+        if len(counts) == 5:
+            rows.append(tuple(counts))
+    return rows
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", default=".")
@@ -40,20 +51,17 @@ def main() -> int:
     for rel in REQUIRED_PAGES:
         if not (root / rel).exists():
             errors.append(f"Missing required page: {rel}")
-
     for stale in (
         docs / "flag-transitive" / "imprimitive.html",
         docs / "block-transitive" / "imprimitive.html",
     ):
         if stale.exists():
             errors.append(f"Stale page exists: {stale.relative_to(root)}")
-
     config = json.loads((root / "data" / "table_sources.json").read_text(encoding="utf-8"))
     for mapping in ("folder_pages", "special_pages"):
         for page_rel in config.get(mapping, {}).values():
             if not (root / page_rel).exists():
                 errors.append(f"Configured page missing: {page_rel}")
-
     for script in sorted((root / "scripts").glob("*.py")):
         try:
             with warnings.catch_warnings():
@@ -61,7 +69,6 @@ def main() -> int:
                 compile(script.read_text(encoding="utf-8"), str(script), "exec")
         except Exception as exc:
             errors.append(f"Python compile problem in {script.name}: {exc}")
-
     for rel in ("docs/flag-transitive/parameters.html", "docs/block-transitive/parameters.html"):
         text = (root / rel).read_text(encoding="utf-8")
         for item in (
@@ -82,18 +89,25 @@ def main() -> int:
         ):
             if item not in text:
                 errors.append(f"{rel} missing: {item}")
-
+        rows = parameter_row_counts(text)
+        if not rows or "No parameter sets are currently available." in text:
+            errors.append(f"{rel} has no generated parameter-set rows")
+        for number, (total, point_primitive, point_imprimitive, block_primitive, block_imprimitive) in enumerate(rows, 1):
+            if total <= 0:
+                errors.append(f"{rel} row {number} has a non-positive total")
+            if point_primitive + point_imprimitive > total:
+                errors.append(f"{rel} row {number} has point counts exceeding total")
+            if block_primitive + block_imprimitive > total:
+                errors.append(f"{rel} row {number} has block counts exceeding total")
     css = (docs / "assets" / "style.css").read_text(encoding="utf-8")
     for item in ("width: 58px !important", "width: 50.296875px !important", "width: 117.203125px !important", "width: 133.859375px !important", "width: 120.390625px !important", "width: 137.0625px !important", "td:nth-child(11)", "text-align: left !important"):
         if item not in css:
             errors.append(f"style.css missing: {item}")
-
     for page in docs.rglob("*.html"):
         text = page.read_text(encoding="utf-8", errors="replace")
         for stale in ("Gamma", "Sigma", "sorted first by group and then by parameters", "imprimitive.html"):
             if stale in text:
                 errors.append(f"{page.relative_to(root)} contains stale text: {stale}")
-
     for prefix, index_rel in (
         ("Flag-transitive", "docs/flag-transitive/index.html"),
         ("Block-transitive", "docs/block-transitive/index.html"),
@@ -103,7 +117,6 @@ def main() -> int:
             for key, page_rel in config.get(mapping, {}).items():
                 if key.startswith(prefix + "/") and Path(page_rel).name not in index_text:
                     errors.append(f"{index_rel} does not link to {page_rel}")
-
     link_re = re.compile(r'(?:href|src)="([^"]+)"')
     for page in docs.rglob("*.html"):
         text = page.read_text(encoding="utf-8")
@@ -113,7 +126,6 @@ def main() -> int:
             target = link.split("#", 1)[0]
             if target and not (page.parent / target).resolve().exists():
                 errors.append(f"Broken link in {page.relative_to(root)}: {link}")
-
     sitemap = docs / "sitemap.xml"
     if sitemap.exists():
         text = sitemap.read_text(encoding="utf-8")
@@ -121,6 +133,9 @@ def main() -> int:
             errors.append("sitemap.xml lacks parameters.html")
         if "imprimitive.html" in text:
             errors.append("sitemap.xml contains imprimitive.html")
+    workflow = (root / ".github" / "workflows" / "pages.yml").read_text(encoding="utf-8")
+    if "python3 scripts/update_site.py --data-root ." not in workflow:
+        errors.append("pages.yml does not run the complete automatic website pipeline")
 
     if errors:
         raise RuntimeError("Website validation failed:\n- " + "\n- ".join(errors))
