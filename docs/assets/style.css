@@ -1503,15 +1503,6 @@ h2 {
 }
 
 
-/* Narrow Number of designs column in parameter-set tables. */
-.parameter-set-table th:nth-child(6),
-.parameter-set-table td:nth-child(6) {
-  width: 82px;
-  max-width: 82px;
-  white-space: normal;
-  text-align: center;
-}
-
 .parameter-set-table th:nth-child(6) .parameter-sort {
   max-width: 78px;
   line-height: 1.08;
@@ -1646,11 +1637,6 @@ h2 {
 }
 
 
-/* Parameter sets count columns. */
-.parameter-set-table th[colspan="5"] {
-  text-align: center;
-}
-
 .parameter-set-table th:nth-child(n+6),
 .parameter-set-table td:nth-child(n+6) {
   text-align: center;
@@ -1658,5 +1644,110 @@ h2 {
 
 .parameter-set-table .parameter-groups {
   text-align: left;
+}
+
+/* Parameter sets table: use database-table-style count columns without cramped headers. */
+.parameter-set-table {
+  min-width: 1450px;
+  table-layout: auto;
+}
+
+.parameter-set-table th {
+  vertical-align: middle;
+}
+
+.parameter-set-table .parameter-small-column {
+  width: 58px;
+  min-width: 58px;
+  max-width: 58px;
+  text-align: center;
+}
+
+.parameter-set-table th.parameter-count-heading {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.parameter-set-table th.parameter-count-column,
+.parameter-set-table td.parameter-count {
+  min-width: 125px;
+  width: 125px;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.15;
+}
+
+.parameter-set-table th.parameter-count-total,
+.parameter-set-table td:nth-child(6) {
+  min-width: 78px;
+  width: 78px;
+}
+
+.parameter-set-table th.parameter-groups-heading {
+  min-width: 360px;
+  text-align: left;
+}
+
+.parameter-set-table td.parameter-groups {
+  min-width: 360px;
+  text-align: left !important;
+}
+
+.parameter-set-table td.parameter-groups a {
+  margin-right: 0.25em;
+}
+
+
+/* Parameter sets count columns. */
+.parameter-set-table {
+  table-layout: auto;
+}
+
+.parameter-set-table th[colspan="5"] {
+  text-align: center;
+}
+
+.parameter-set-table th,
+.parameter-set-table td {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.parameter-set-table th:nth-child(1),
+.parameter-set-table td:nth-child(1),
+.parameter-set-table th:nth-child(2),
+.parameter-set-table td:nth-child(2),
+.parameter-set-table th:nth-child(3),
+.parameter-set-table td:nth-child(3),
+.parameter-set-table th:nth-child(4),
+.parameter-set-table td:nth-child(4),
+.parameter-set-table th:nth-child(5),
+.parameter-set-table td:nth-child(5) {
+  width: 54px;
+  max-width: 54px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.parameter-set-table th:nth-child(6),
+.parameter-set-table td:nth-child(6),
+.parameter-set-table th:nth-child(7),
+.parameter-set-table td:nth-child(7),
+.parameter-set-table th:nth-child(8),
+.parameter-set-table td:nth-child(8),
+.parameter-set-table th:nth-child(9),
+.parameter-set-table td:nth-child(9),
+.parameter-set-table th:nth-child(10),
+.parameter-set-table td:nth-child(10) {
+  width: 116px;
+  min-width: 116px;
+  white-space: normal;
+  text-align: center;
+}
+
+.parameter-set-table .parameter-groups,
+.parameter-set-table td.parameter-groups {
+  text-align: left !important;
+  white-space: normal;
 }
 

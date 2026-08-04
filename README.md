@@ -184,3 +184,7 @@ the footer date, and deploys the site.
 - Version 57: Parameter sets now extract actual group names from the `G` column of the `Non-isomorphic designs` table in Affine `.g` files for both flag-transitive and block-transitive data; Affine degree filenames such as `v_09` are no longer displayed as group names.
 
 - Version 58: updated the sorted-by-parameters notice, changed Γ/Σ to Γ/Σ, and expanded Parameter sets pages to include Number of designs columns: Total, Point-primitive, Point-imprimitive, Block-primitive, and Block-imprimitive.
+
+- Version 59: fixed Parameter sets table widths/count-column styling, added three-state sorting, kept Group cells left aligned, rendered Γ/Σ as Γ/Σ in pages, and changed Parameter sets counts to use the All designs table in the associated `.g` files when present.
+
+- Version 60: Parameter sets count columns now read the Total column from the `number of non-isomorphic designs` summary table: Total, Point-primitive, Point-imprimitive, Block-primitive, and Block-imprimitive. Summary counts are used only when the file has a single parameter set; otherwise row-level data prevent assigning counts to the wrong parameter.

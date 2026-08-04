@@ -347,6 +347,7 @@ def math_label(group: str) -> str:
         3D4(2)      -> \({}^{3}D_{4}(2)\)
     """
     value = group.strip().replace("\\", r"\\")
+    value = value.replace("Γ", "Γ").replace("Σ", "Σ")
 
     # Canonical compact exceptional forms.
     value = re.sub(r"(?<![A-Za-z0-9^])2B_?2(?=\()", r"^2B2", value)

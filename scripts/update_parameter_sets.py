@@ -34,6 +34,15 @@ PARAM_RE = re.compile(r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d
 
 
 @dataclass
+class CountRecord:
+    total: int = 0
+    point_primitive: int = 0
+    point_imprimitive: int = 0
+    block_primitive: int = 0
+    block_imprimitive: int = 0
+
+
+@dataclass
 class ParameterRecord:
     param: tuple[int, int, int, int, int]
     total: int = 0
@@ -137,7 +146,50 @@ def group_label_from_text(text: str, fallback: str) -> str:
     return fallback
 
 
+def parse_count_summary_table(text: str) -> CountRecord | None:
+    """Read counts from the Total column of the number-of-non-isomorphic-designs table."""
+    counts = CountRecord()
+    found = set()
+
+    for raw in text.splitlines():
+        line = clean_comment_line(raw)
+        if not line or set(line) <= {"-"}:
+            continue
+
+        parts = line.split()
+        if len(parts) < 4:
+            continue
+
+        label = parts[0].casefold()
+        nums = [int(x) for x in parts[1:] if re.fullmatch(r"\d+", x)]
+        if not nums:
+            continue
+
+        value = nums[-1]
+
+        if label == "point-primitive":
+            counts.point_primitive = value
+            found.add("point_primitive")
+        elif label == "point-imprimitive":
+            counts.point_imprimitive = value
+            found.add("point_imprimitive")
+        elif label == "block-primitive":
+            counts.block_primitive = value
+            found.add("block_primitive")
+        elif label == "block-imprimitive":
+            counts.block_imprimitive = value
+            found.add("block_imprimitive")
+        elif label == "total":
+            counts.total = value
+            found.add("total")
+
+    if {"total", "point_primitive", "point_imprimitive", "block_primitive", "block_imprimitive"} <= found:
+        return counts
+    return None
+
+
 def nonisomorphic_design_table_entries(text: str) -> list[DesignEntry]:
+    """Extract row-level (parameter set, G) data from the Non-isomorphic designs table."""
     entries: list[DesignEntry] = []
     in_table = False
     header: list[str] | None = None
@@ -167,8 +219,6 @@ def nonisomorphic_design_table_entries(text: str) -> list[DesignEntry]:
         if header is None:
             continue
 
-        # Some rows have an empty trailing comments field, so the data row can
-        # be shorter than the header.  We only require the columns used here.
         required = ["Nr", "v", "b", "r", "k", "G"]
         if any(name not in header for name in required):
             continue
@@ -186,9 +236,8 @@ def nonisomorphic_design_table_entries(text: str) -> list[DesignEntry]:
         if not row.get("Nr", "").isdigit():
             continue
 
-        lam_value = row.get(lam_name, "0")
         try:
-            param = (int(row["v"]), int(row["b"]), int(row["r"]), int(row["k"]), int(lam_value))
+            param = (int(row["v"]), int(row["b"]), int(row["r"]), int(row["k"]), int(row[lam_name]))
         except Exception:
             continue
 
@@ -209,6 +258,7 @@ def nonisomorphic_design_table_entries(text: str) -> list[DesignEntry]:
 
 
 def further_information_entries(text: str) -> list[DesignEntry]:
+    """Fallback: extract parameter and G from detailed Design blocks."""
     entries: list[DesignEntry] = []
     current_param: tuple[int, int, int, int, int] | None = None
     current_point_primitive: bool | None = None
@@ -292,46 +342,36 @@ def iter_gap_files(data_root: Path, category_folder: str):
             yield from sorted(folder.rglob("*.g"))
 
 
-def add_design_record(records, kind: str, entry: DesignEntry, url: str, tools) -> None:
-    if not entry.group_label or looks_like_degree_filename(entry.group_label):
-        return
-
-    recs = records[kind]
-    if entry.param not in recs:
-        recs[entry.param] = ParameterRecord(param=entry.param)
-
-    record = recs[entry.param]
-    record.total += 1
-
-    if entry.point_primitive is True:
-        record.point_primitive += 1
-    elif entry.point_primitive is False:
-        record.point_imprimitive += 1
-
-    if entry.block_primitive is True:
-        record.block_primitive += 1
-    elif entry.block_primitive is False:
-        record.block_imprimitive += 1
-
-    label = tools.math_label(entry.group_label)
-    sort_label = tools.normalize_group_sort_text(entry.group_label).casefold()
-    record.groups.setdefault(sort_label, (label, url))
-
-
-def add_fallback_record(records, kind: str, param: tuple[int, int, int, int, int], group_label: str, url: str, tools, count: int = 1) -> None:
+def add_group(record: ParameterRecord, group_label: str, url: str, tools) -> None:
     if not group_label or looks_like_degree_filename(group_label):
         return
-
-    recs = records[kind]
-    if param not in recs:
-        recs[param] = ParameterRecord(param=param)
-
-    record = recs[param]
-    record.total += int(count)
-
     label = tools.math_label(group_label)
     sort_label = tools.normalize_group_sort_text(group_label).casefold()
     record.groups.setdefault(sort_label, (label, url))
+
+
+def add_counts(record: ParameterRecord, counts: CountRecord) -> None:
+    record.total += counts.total
+    record.point_primitive += counts.point_primitive
+    record.point_imprimitive += counts.point_imprimitive
+    record.block_primitive += counts.block_primitive
+    record.block_imprimitive += counts.block_imprimitive
+
+
+def row_level_counts(entries: list[DesignEntry]) -> dict[tuple[int, int, int, int, int], CountRecord]:
+    result: dict[tuple[int, int, int, int, int], CountRecord] = {}
+    for entry in entries:
+        counts = result.setdefault(entry.param, CountRecord())
+        counts.total += 1
+        if entry.point_primitive is True:
+            counts.point_primitive += 1
+        elif entry.point_primitive is False:
+            counts.point_imprimitive += 1
+        if entry.block_primitive is True:
+            counts.block_primitive += 1
+        elif entry.block_primitive is False:
+            counts.block_imprimitive += 1
+    return result
 
 
 def collect_records(data_root: Path, repository: str, branch: str, tools):
@@ -347,9 +387,28 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
             url = raw_url(repository, branch, source_path)
 
             entries = design_entries(text)
+            summary_counts = parse_count_summary_table(text)
+            file_params = sorted(set(parameter_candidates(text)) | {entry.param for entry in entries})
+
             if entries:
+                grouped_entries: dict[tuple[int, int, int, int, int], list[DesignEntry]] = {}
                 for entry in entries:
-                    add_design_record(records, kind, entry, url, tools)
+                    grouped_entries.setdefault(entry.param, []).append(entry)
+
+                if summary_counts is not None and len(grouped_entries) == 1:
+                    param = next(iter(grouped_entries))
+                    record = records[kind].setdefault(param, ParameterRecord(param=param))
+                    add_counts(record, summary_counts)
+                    for entry in grouped_entries[param]:
+                        add_group(record, entry.group_label, url, tools)
+                    continue
+
+                per_param_counts = row_level_counts(entries)
+                for param, counts in per_param_counts.items():
+                    record = records[kind].setdefault(param, ParameterRecord(param=param))
+                    add_counts(record, counts)
+                    for entry in grouped_entries.get(param, []):
+                        add_group(record, entry.group_label, url, tools)
                 continue
 
             if is_affine_source(source_path):
@@ -359,15 +418,28 @@ def collect_records(data_root: Path, repository: str, branch: str, tools):
             if looks_like_degree_filename(group_label):
                 continue
 
-            params = parameter_candidates(text)
+            params = file_params
             if not params:
                 continue
 
-            if len(set(params)) == 1 and total is not None:
-                add_fallback_record(records, kind, params[0], group_label, url, tools, total)
-            else:
-                for param in params:
-                    add_fallback_record(records, kind, param, group_label, url, tools, 1)
+            if summary_counts is not None and len(params) == 1:
+                param = params[0]
+                record = records[kind].setdefault(param, ParameterRecord(param=param))
+                add_counts(record, summary_counts)
+                add_group(record, group_label, url, tools)
+                continue
+
+            if len(params) == 1 and total is not None:
+                param = params[0]
+                record = records[kind].setdefault(param, ParameterRecord(param=param))
+                record.total += int(total)
+                add_group(record, group_label, url, tools)
+                continue
+
+            for param in params:
+                record = records[kind].setdefault(param, ParameterRecord(param=param))
+                record.total += 1
+                add_group(record, group_label, url, tools)
 
     return records
 
@@ -387,12 +459,12 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
         return '          <tr><td colspan="11" class="empty-row">No parameter sets are currently available.</td></tr>'
 
     lines = []
-    for param in sorted(records):
+    for index, param in enumerate(sorted(records)):
         record = records[param]
         v, b, r, k, lam = param
         links, sort_groups = group_links(record)
         lines.extend([
-            '          <tr class="parameter-set-row">',
+            f'          <tr class="parameter-set-row" data-original-index="{index}">',
             f'            <td data-sort="{v}">{v}</td>',
             f'            <td data-sort="{b}">{b}</td>',
             f'            <td data-sort="{r}">{r}</td>',
