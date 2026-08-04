@@ -32,8 +32,8 @@
 # Nr  v  b   r   k  λ  G             Gα       GB   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   8  14  7   4  3   AGL(1,8)      7         2^2  ASL(3,2)  2      2           8      1        1       true             false            true             true                 1                                
-# 2   8  28  21  6  15  AGammaL(1,8)  7:3       6    S8        2      2           12     1        3       true             false            true             true                                        complete  
-# 3   8  56  21  3  6   AGammaL(1,8)  7:3       3    S8        2      2           12     1        1       true             false            true             false                                       complete  
+# 2   8  28  21  6  15  AΓL(1,8)      7:3       6    S8        2      2           12     1        3       true             false            true             true                                        complete  
+# 3   8  56  21  3  6   AΓL(1,8)      7:3       3    S8        2      2           12     1        1       true             false            true             false                                       complete  
 # 4   8  56  28  4  12  ASL(3,2)      PSL(3,2)  S4   ASL(3,2)  2      2           15     1        3       true             false            true             true                 4                                
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -42,9 +42,9 @@
 # Nr  v  b   r   k  λ  G             Gα       GB       Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   8  14  7   4  3   AGL(1,8)      7         2^2      ASL(3,2)  2      2           8      1        1       true             false            true             true                 1                                
-# 2   8  14  7   4  3   AGammaL(1,8)  7:3       A4       ASL(3,2)  2      2           12     1        2       true             false            true             true                 2                                
-# 3   8  28  21  6  15  AGammaL(1,8)  7:3       6        S8        2      2           12     1        3       true             false            true             true                                        complete  
-# 4   8  56  21  3  6   AGammaL(1,8)  7:3       3        S8        2      2           12     1        1       true             false            true             false                                       complete  
+# 2   8  14  7   4  3   AΓL(1,8)      7:3       A4       ASL(3,2)  2      2           12     1        2       true             false            true             true                 2                                
+# 3   8  28  21  6  15  AΓL(1,8)      7:3       6        S8        2      2           12     1        3       true             false            true             true                                        complete  
+# 4   8  56  21  3  6   AΓL(1,8)      7:3       3        S8        2      2           12     1        1       true             false            true             false                                       complete  
 # 5   8  14  7   4  3   ASL(3,2)      PSL(3,2)  2^4:3:2  ASL(3,2)  2      2           15     1        2       true             false            true             true                 5                                
 # 6   8  28  21  6  15  ASL(3,2)      PSL(3,2)  2xS4     S8        2      2           15     1        4       true             false            true             true                                        complete  
 # 7   8  56  21  3  6   ASL(3,2)      PSL(3,2)  S4       S8        2      2           15     1        1       true             false            true             false                                       complete  
@@ -87,7 +87,7 @@
 # -----------------------------------------------------------
 #                                      G             Aut(D)  
 # -----------------------------------------------------------
-# Structure                            AGammaL(1,8)  S8      
+# Structure                            AΓL(1,8)      S8      
 # Rank                                 2             2       
 # 2-Homogeneous                        true          true    
 # Point-stabiliser                     7:3           S7      
@@ -113,7 +113,7 @@
 # -----------------------------------------------------------
 #                                      G             Aut(D)  
 # -----------------------------------------------------------
-# Structure                            AGammaL(1,8)  S8      
+# Structure                            AΓL(1,8)      S8      
 # Rank                                 2             2       
 # 2-Homogeneous                        true          true    
 # Point-stabiliser                     7:3           S7      

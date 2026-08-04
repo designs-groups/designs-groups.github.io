@@ -33,8 +33,8 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   9  12  4   3  1   3^2:(2'A(4))  SL(2,3)  3xS3  AGL(2,3)      2      2           15     1        1       true             false            true             true                 2                                
 # 2   9  12  8   6  5   3^2:(2'A(4))  SL(2,3)  3xS3  AGL(2,3)      2      2           15     1        1       true             false            true             true                 1                                
-# 3   9  18  8   4  3   AGL(1,9)      8        4     AGammaL(1,9)  2      2           11     1        2       true             false            true             false                                                 
-# 4   9  36  16  4  6   AGammaL(1,9)  QD16     4     AGammaL(1,9)  2      2           14     1        3       true             false            true             false                                                 
+# 3   9  18  8   4  3   AGL(1,9)      8        4     AΓL(1,9)      2      2           11     1        2       true             false            true             false                                                 
+# 4   9  36  16  4  6   AΓL(1,9)      QD16     4     AΓL(1,9)      2      2           14     1        3       true             false            true             false                                                 
 # 5   9  54  24  4  9   3^2:(2'A(4))  SL(2,3)  4     AGL(2,3)      2      2           15     1        3       true             false            true             false                                                 
 # 6   9  72  24  3  6   3^2:(2'A(4))  SL(2,3)  3     AGL(2,3)      2      2           15     1        2       true             false            true             false                                                 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -45,14 +45,14 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   9  12  4   3  1   M9            Q8       S3     AGL(2,3)      2      2           10     1        1       true             false            true             true                 2                                
 # 2   9  12  8   6  5   M9            Q8       S3     AGL(2,3)      2      2           10     1        1       true             false            true             true                 1                                
-# 3   9  18  8   4  3   M9            Q8       4      AGammaL(1,9)  2      2           10     1        2       true             false            true             false                                                 
+# 3   9  18  8   4  3   M9            Q8       4      AΓL(1,9)      2      2           10     1        2       true             false            true             false                                                 
 # 4   9  12  4   3  1   AGL(1,9)      8        S3     AGL(2,3)      2      2           11     1        1       true             false            true             true                 5                                
 # 5   9  12  8   6  5   AGL(1,9)      8        S3     AGL(2,3)      2      2           11     1        1       true             false            true             true                 4                                
-# 6   9  18  8   4  3   AGL(1,9)      8        4      AGammaL(1,9)  2      2           11     1        2       true             false            true             false                                                 
-# 7   9  12  4   3  1   AGammaL(1,9)  QD16     D12    AGL(2,3)      2      2           14     1        1       true             false            true             true                 8                                
-# 8   9  12  8   6  5   AGammaL(1,9)  QD16     D12    AGL(2,3)      2      2           14     1        1       true             false            true             true                 7                                
-# 9   9  18  8   4  3   AGammaL(1,9)  QD16     D8     AGammaL(1,9)  2      2           14     1        2       true             false            true             false                                                 
-# 10  9  36  16  4  6   AGammaL(1,9)  QD16     4      AGammaL(1,9)  2      2           14     1        3       true             false            true             false                                                 
+# 6   9  18  8   4  3   AGL(1,9)      8        4      AΓL(1,9)      2      2           11     1        2       true             false            true             false                                                 
+# 7   9  12  4   3  1   AΓL(1,9)      QD16     D12    AGL(2,3)      2      2           14     1        1       true             false            true             true                 8                                
+# 8   9  12  8   6  5   AΓL(1,9)      QD16     D12    AGL(2,3)      2      2           14     1        1       true             false            true             true                 7                                
+# 9   9  18  8   4  3   AΓL(1,9)      QD16     D8     AΓL(1,9)      2      2           14     1        2       true             false            true             false                                                 
+# 10  9  36  16  4  6   AΓL(1,9)      QD16     4      AΓL(1,9)      2      2           14     1        3       true             false            true             false                                                 
 # 11  9  12  4   3  1   3^2:(2'A(4))  SL(2,3)  3xS3   AGL(2,3)      2      2           15     1        1       true             false            true             true                 12                               
 # 12  9  12  8   6  5   3^2:(2'A(4))  SL(2,3)  3xS3   AGL(2,3)      2      2           15     1        1       true             false            true             true                 11                               
 # 13  9  54  24  4  9   3^2:(2'A(4))  SL(2,3)  4      AGL(2,3)      2      2           15     1        3       true             false            true             false                                                 
@@ -125,7 +125,7 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            AGL(1,9)  AGammaL(1,9)  
+# Structure                            AGL(1,9)  AΓL(1,9)  
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
 # Point-stabiliser                     8         QD16          
@@ -151,7 +151,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            AGammaL(1,9)  AGammaL(1,9)  
+# Structure                            AΓL(1,9)      AΓL(1,9)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     QD16          QD16          
