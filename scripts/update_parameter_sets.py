@@ -475,7 +475,7 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
             f'            <td data-sort="{record.point_imprimitive}">{record.point_imprimitive}</td>',
             f'            <td data-sort="{record.block_primitive}">{record.block_primitive}</td>',
             f'            <td data-sort="{record.block_imprimitive}">{record.block_imprimitive}</td>',
-            f'            <td class="parameter-groups" data-sort="{html.escape(sort_groups, quote=True)}">{links}</td>',
+            f'            <td class="parameter-groups group-cell" data-sort="{html.escape(sort_groups, quote=True)}">{links}</td>',
             '          </tr>',
         ])
     return "\n".join(lines)
@@ -483,22 +483,22 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
 
 def replace_table_header(page: Path) -> None:
     text = page.read_text(encoding="utf-8")
-    thead = """        <thead>
+    thead = r"""        <thead>
           <tr>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="0">\\(v\\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="1">\\(b\\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="2">\\(r\\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="3">\\(k\\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="4">\\(\\lambda\\)</button></th>
-            <th colspan="5">Number of designs</th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="10">Group</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="0" data-type="number">\(v\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="1" data-type="number">\(b\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="2" data-type="number">\(r\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="3" data-type="number">\(k\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="4" data-type="number">\(\lambda\)</button></th>
+            <th colspan="5" class="count-group-heading">Number of designs</th>
+            <th rowspan="2" class="group-column"><button type="button" class="parameter-sort" data-column="10" data-type="text">Group</button></th>
           </tr>
           <tr>
-            <th><button type="button" class="parameter-sort" data-column="5">Total</button></th>
-            <th><button type="button" class="parameter-sort" data-column="6">Point-primitive</button></th>
-            <th><button type="button" class="parameter-sort" data-column="7">Point-imprimitive</button></th>
-            <th><button type="button" class="parameter-sort" data-column="8">Block-primitive</button></th>
-            <th><button type="button" class="parameter-sort" data-column="9">Block-imprimitive</button></th>
+            <th class="count-column total-column"><button type="button" class="parameter-sort" data-column="5" data-type="number">Total</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="6" data-type="number">Point primitive</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="7" data-type="number">Point imprimitive</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block primitive</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block imprimitive</button></th>
           </tr>
         </thead>"""
     text = re.sub(r"\s*<thead>.*?</thead>", lambda match: "\n" + thead, text, count=1, flags=re.S)
@@ -514,6 +514,75 @@ def replace_rows(page: Path, rows: str) -> None:
     page.write_text(pattern.sub(lambda match: match.group(1) + "\n" + rows + "\n" + match.group(2), text), encoding="utf-8")
 
 
+
+SORT_SCRIPT = r"""
+<script class="parameter-sort-script">
+(function() {
+  document.querySelectorAll(".parameter-set-table").forEach(function(table) {
+    var tbody = table.tBodies[0];
+    if (!tbody) return;
+    var state = { column: null, direction: "original" };
+
+    Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row")).forEach(function(row, index) {
+      if (!row.hasAttribute("data-original-index")) row.setAttribute("data-original-index", String(index));
+    });
+
+    function originalIndex(row) {
+      return Number(row.getAttribute("data-original-index") || "0");
+    }
+
+    function cellValue(row, column, type) {
+      var cell = row.children[column];
+      if (!cell) return type === "number" ? 0 : "";
+      var raw = (cell.getAttribute("data-sort") || cell.textContent || "").trim();
+      return type === "number" ? Number(raw) : raw.toLowerCase();
+    }
+
+    table.querySelectorAll(".parameter-sort").forEach(function(button) {
+      button.addEventListener("click", function() {
+        var column = Number(button.getAttribute("data-column"));
+        var type = button.getAttribute("data-type") || "text";
+        var direction = "asc";
+
+        if (state.column === column) {
+          if (state.direction === "asc") direction = "desc";
+          else if (state.direction === "desc") direction = "original";
+        }
+
+        var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row"));
+        if (direction === "original") {
+          rows.sort(function(a, b) { return originalIndex(a) - originalIndex(b); });
+        } else {
+          rows.sort(function(a, b) {
+            var av = cellValue(a, column, type);
+            var bv = cellValue(b, column, type);
+            if (av < bv) return direction === "asc" ? -1 : 1;
+            if (av > bv) return direction === "asc" ? 1 : -1;
+            return originalIndex(a) - originalIndex(b);
+          });
+        }
+
+        rows.forEach(function(row) { tbody.appendChild(row); });
+        state = { column: column, direction: direction };
+      });
+    });
+  });
+})();
+</script>
+"""
+
+
+def ensure_sort_script(page: Path) -> None:
+    text = page.read_text(encoding="utf-8")
+    text = re.sub(
+        r'\s*<script(?: class="parameter-sort-script")?>\s*\(function\(\).*?parameter-sort.*?</script>',
+        "",
+        text,
+        flags=re.S,
+    )
+    text = text.replace("</article>", SORT_SCRIPT + "\n  </article>", 1)
+    page.write_text(text, encoding="utf-8")
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", default=".", help="Repository root containing Flag-transitive and Block-transitive folders.")
@@ -526,7 +595,9 @@ def main() -> int:
     records = collect_records(data_root, args.repository, args.branch, tools)
 
     for kind, rel_page in PARAMETER_SET_PAGES.items():
-        replace_rows(data_root / rel_page, render_rows(records[kind]))
+        page = data_root / rel_page
+        replace_rows(page, render_rows(records[kind]))
+        ensure_sort_script(page)
 
     print(
         "Updated parameter-set pages: "

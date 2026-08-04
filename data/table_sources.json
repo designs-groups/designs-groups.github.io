@@ -9,17 +9,19 @@
     "Flag-transitive/Transitive groups": "docs/flag-transitive/transitive.html",
     "Flag-transitive/Primitive groups": "docs/flag-transitive/primitive.html",
     "Flag-transitive/Affine groups": "docs/flag-transitive/affine.html",
-    "Flag-transitive/Imprimitive groups": "docs/flag-transitive/parameters.html",
     "Block-transitive/Alternating groups": "docs/block-transitive/alternating.html",
     "Block-transitive/Classical groups": "docs/block-transitive/classical.html",
     "Block-transitive/Exceptional groups": "docs/block-transitive/exceptional.html",
     "Block-transitive/Sporadic groups": "docs/block-transitive/sporadic.html",
     "Block-transitive/Transitive groups": "docs/block-transitive/transitive.html",
     "Block-transitive/Primitive groups": "docs/block-transitive/primitive.html",
-    "Block-transitive/Affine groups": "docs/block-transitive/affine.html",
-    "Block-transitive/Imprimitive groups": "docs/block-transitive/parameters.html"
+    "Block-transitive/Affine groups": "docs/block-transitive/affine.html"
   },
   "file_page_overrides": {
     "Block-transitive/A5.g": "docs/block-transitive/alternating.html"
+  },
+  "special_pages": {
+    "Flag-transitive/Parameter sets": "docs/flag-transitive/parameters.html",
+    "Block-transitive/Parameter sets": "docs/block-transitive/parameters.html"
   }
 }

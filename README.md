@@ -188,3 +188,9 @@ the footer date, and deploys the site.
 - Version 59: fixed Parameter sets table widths/count-column styling, added three-state sorting, kept Group cells left aligned, rendered Γ/Σ as Γ/Σ in pages, and changed Parameter sets counts to use the All designs table in the associated `.g` files when present.
 
 - Version 60: Parameter sets count columns now read the Total column from the `number of non-isomorphic designs` summary table: Total, Point-primitive, Point-imprimitive, Block-primitive, and Block-imprimitive. Summary counts are used only when the file has a single parameter set; otherwise row-level data prevent assigning counts to the wrong parameter.
+
+- Version 61: fixed Parameter sets table styling: parameter columns are narrow again, Number of designs columns use regular count-column styling, and the Group column is left-aligned. Also removed remaining Γ/Σ words from generated/static text.
+
+- Version 62: all Parameter sets data generation, final column widths, Group-column left alignment, three-state sorting support, notice correction, and Γ/Σ replacement are automatic in scripts and GitHub Actions. No manual HTML editing is required after a `.g` file is added or changed.
+
+- Version 63: one automatic pipeline (`scripts/update_site.py`) rebuilds all detailed tables from their associated `.g` folders, Parameter sets, catalogue pages, navigation, bibliography, footer and SEO, applies final text/symbol formatting, and runs `scripts/validate_site.py` before deployment.

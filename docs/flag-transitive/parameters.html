@@ -97,20 +97,20 @@ async function downloadRawFile(url, filename) {
       <table class="database-table parameter-set-table" id="flag-transitive-parameter-set-table">
         <thead>
           <tr>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="0">\(v\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="1">\(b\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="2">\(r\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="3">\(k\)</button></th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="4">\(\lambda\)</button></th>
-            <th colspan="5">Number of designs</th>
-            <th rowspan="2"><button type="button" class="parameter-sort" data-column="10">Group</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="0" data-type="number">\(v\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="1" data-type="number">\(b\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="2" data-type="number">\(r\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="3" data-type="number">\(k\)</button></th>
+            <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="4" data-type="number">\(\lambda\)</button></th>
+            <th colspan="5" class="count-group-heading">Number of designs</th>
+            <th rowspan="2" class="group-column"><button type="button" class="parameter-sort" data-column="10" data-type="text">Group</button></th>
           </tr>
           <tr>
-            <th><button type="button" class="parameter-sort" data-column="5">Total</button></th>
-            <th><button type="button" class="parameter-sort" data-column="6">Point-primitive</button></th>
-            <th><button type="button" class="parameter-sort" data-column="7">Point-imprimitive</button></th>
-            <th><button type="button" class="parameter-sort" data-column="8">Block-primitive</button></th>
-            <th><button type="button" class="parameter-sort" data-column="9">Block-imprimitive</button></th>
+            <th class="count-column total-column"><button type="button" class="parameter-sort" data-column="5" data-type="number">Total</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="6" data-type="number">Point primitive</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="7" data-type="number">Point imprimitive</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block primitive</button></th>
+            <th class="count-column"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block imprimitive</button></th>
           </tr>
         </thead>
         <tbody>
@@ -120,60 +120,62 @@ async function downloadRawFile(url, filename) {
         </tbody>
       </table>
     </div>
-    <script>
+
+  
+<script class="parameter-sort-script">
 (function() {
-  var table = document.getElementById("flag-transitive-parameter-set-table");
-  if (!table) return;
-  var tbody = table.tBodies[0];
-  var sortState = { column: null, direction: "original" };
+  document.querySelectorAll(".parameter-set-table").forEach(function(table) {
+    var tbody = table.tBodies[0];
+    if (!tbody) return;
+    var state = { column: null, direction: "original" };
 
-  function cellValue(row, column, type) {
-    var cell = row.children[column];
-    if (!cell) return type === "number" ? 0 : "";
-    var raw = cell.getAttribute("data-sort") || cell.textContent || "";
-    raw = raw.trim();
-    return type === "number" ? Number(raw) : raw.toLowerCase();
-  }
+    Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row")).forEach(function(row, index) {
+      if (!row.hasAttribute("data-original-index")) row.setAttribute("data-original-index", String(index));
+    });
 
-  function originalIndex(row) {
-    return Number(row.getAttribute("data-original-index") || "0");
-  }
+    function originalIndex(row) {
+      return Number(row.getAttribute("data-original-index") || "0");
+    }
 
-  function restoreOriginal(rows) {
-    rows.sort(function(a, b) { return originalIndex(a) - originalIndex(b); });
-  }
+    function cellValue(row, column, type) {
+      var cell = row.children[column];
+      if (!cell) return type === "number" ? 0 : "";
+      var raw = (cell.getAttribute("data-sort") || cell.textContent || "").trim();
+      return type === "number" ? Number(raw) : raw.toLowerCase();
+    }
 
-  table.querySelectorAll(".parameter-sort").forEach(function(button) {
-    button.addEventListener("click", function() {
-      var column = Number(button.getAttribute("data-column"));
-      var type = button.getAttribute("data-type") || "text";
-      var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row"));
-      var direction = "asc";
+    table.querySelectorAll(".parameter-sort").forEach(function(button) {
+      button.addEventListener("click", function() {
+        var column = Number(button.getAttribute("data-column"));
+        var type = button.getAttribute("data-type") || "text";
+        var direction = "asc";
 
-      if (sortState.column === column) {
-        if (sortState.direction === "asc") direction = "desc";
-        else if (sortState.direction === "desc") direction = "original";
-      }
+        if (state.column === column) {
+          if (state.direction === "asc") direction = "desc";
+          else if (state.direction === "desc") direction = "original";
+        }
 
-      if (direction === "original") {
-        restoreOriginal(rows);
-      } else {
-        rows.sort(function(a, b) {
-          var av = cellValue(a, column, type);
-          var bv = cellValue(b, column, type);
-          if (av < bv) return direction === "asc" ? -1 : 1;
-          if (av > bv) return direction === "asc" ? 1 : -1;
-          return originalIndex(a) - originalIndex(b);
-        });
-      }
+        var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr.parameter-set-row"));
+        if (direction === "original") {
+          rows.sort(function(a, b) { return originalIndex(a) - originalIndex(b); });
+        } else {
+          rows.sort(function(a, b) {
+            var av = cellValue(a, column, type);
+            var bv = cellValue(b, column, type);
+            if (av < bv) return direction === "asc" ? -1 : 1;
+            if (av > bv) return direction === "asc" ? 1 : -1;
+            return originalIndex(a) - originalIndex(b);
+          });
+        }
 
-      rows.forEach(function(row) { tbody.appendChild(row); });
-      sortState.column = column;
-      sortState.direction = direction;
+        rows.forEach(function(row) { tbody.appendChild(row); });
+        state = { column: column, direction: direction };
+      });
     });
   });
 })();
-    </script>
+</script>
+
   </article>
   
 
@@ -282,7 +284,7 @@ async function downloadRawFile(url, filename) {
     <div class="footer-text">
       <strong>Designs by Groups</strong> — Constructions and classifications of combinatorial block designs.<br>
     Seyed Hassan Alavi and Ashraf Daneshkhah<br>
-    Updated: 10 July 2026
+    Updated: 4 August 2026
       <div class="footer-visits">
       <a href="https://hits.sh/designs-groups.github.io/" target="_blank" rel="noopener noreferrer"
          aria-label="View visit statistics">

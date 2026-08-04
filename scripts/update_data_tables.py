@@ -12,10 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
 
-PARAMETER_SET_PAGES = {
-    "docs/flag-transitive/parameters.html",
-    "docs/block-transitive/parameters.html",
-}
+PARAMETER_SET_PAGES = {"docs/flag-transitive/parameters.html", "docs/block-transitive/parameters.html"}
 
 
 @dataclass
@@ -336,7 +333,7 @@ def row_anchor(source_path: str) -> str:
 
 
 def math_label(group: str) -> str:
-    """Render common finite-group notation as inline LaTeX.
+    r"""Render common finite-group notation as inline LaTeX.
 
     Examples:
         A6:2_1      -> \(A_{6}:2_{1}\)
@@ -347,6 +344,7 @@ def math_label(group: str) -> str:
         3D4(2)      -> \({}^{3}D_{4}(2)\)
     """
     value = group.strip().replace("\\", r"\\")
+    value = value.replace("Gamma", "Γ").replace("Sigma", "Σ")
     value = value.replace("Γ", "Γ").replace("Σ", "Σ")
 
     # Canonical compact exceptional forms.

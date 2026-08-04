@@ -6,38 +6,12 @@ import html
 import importlib.util
 import json
 import re
-import subprocess
 import sys
 import urllib.parse
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "data" / "table_sources.json"
-
-
-def run_navigation_update(data_root: str) -> None:
-    script = ROOT / "scripts" / "update_navigation.py"
-
-    if not script.exists():
-        return
-
-    result = subprocess.run(
-        [sys.executable, str(script), "--data-root", data_root],
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-    )
-
-    if result.returncode != 0:
-        raise RuntimeError(
-            "update_navigation.py failed\n"
-            + result.stdout
-            + result.stderr
-        )
-
-    if result.stdout.strip():
-        print(result.stdout.strip())
-
 
 
 
@@ -53,33 +27,6 @@ def degree_from_affine_label(text: str) -> str | None:
     if match:
         return str(int(match.group(1)))
     return None
-
-
-def fix_affine_catalogue_degree_labels(page: Path) -> None:
-    text = page.read_text(encoding="utf-8")
-    sections = re.findall(r'<section class="catalogue-family">.*?</section>', text, flags=re.S)
-
-    for section in sections:
-        if 'href="affine.html">Affine groups' not in section:
-            continue
-
-        def repl(match):
-            open_tag, label, close_tag = match.group(1), match.group(2), match.group(3)
-            degree = degree_from_affine_label(label) or degree_from_affine_label(open_tag)
-            if degree is None:
-                return match.group(0)
-            return open_tag + degree + close_tag
-
-        new_section = re.sub(
-            r'(<a\b[^>]*href="[^"]*Affine%20groups/[^"]*\.g"[^>]*>)(.*?)(</a>)',
-            repl,
-            section,
-            flags=re.S,
-        )
-
-        text = text.replace(section, new_section)
-
-    page.write_text(text, encoding="utf-8")
 
 
 
@@ -103,17 +50,15 @@ def source_path_from_raw_url(url: str, branch: str) -> str | None:
 
 def class_title(folder: str) -> str:
     title = folder.rsplit("/", 1)[1]
-    if title == "Imprimitive groups":
-        return "Parameter sets"
-    if title == "Transitive groups":
-        return "Transitive groups (of degree)"
-    if title == "Primitive groups":
-        return "Primitive groups (of degree)"
+    if title in {"Transitive groups", "Primitive groups", "Affine groups"}:
+        return f"{title} (of degree)"
     return title
 
 
+
 def is_parameter_sets_family(folder: str) -> bool:
-    return folder.endswith("/Imprimitive groups")
+    return folder.endswith("/Parameter sets")
+
 
 
 def parameter_count_from_page(page_rel: str) -> int:
@@ -125,7 +70,8 @@ def parameter_count_from_page(page_rel: str) -> int:
 
 
 def is_degree_family(folder: str) -> bool:
-    return folder.endswith("/Transitive groups") or folder.endswith("/Primitive groups")
+    return any(folder.endswith("/" + name) for name in ("Transitive groups", "Primitive groups", "Affine groups"))
+
 
 
 def grid_columns(folder: str) -> int:
@@ -374,87 +320,6 @@ def replace_catalogue(page_text: str, catalogue_html: str) -> str:
     return updated
 
 
-def run_parameter_set_update(data_root: Path) -> None:
-    script = ROOT / "scripts" / "update_parameter_sets.py"
-    if not script.exists():
-        return
-    result = subprocess.run(
-        [sys.executable, str(script), "--data-root", str(data_root)],
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-    )
-    if result.returncode != 0:
-        message = result.stdout + result.stderr
-        raise RuntimeError("Parameter-set update failed before catalogue rebuild.\n" + message)
-    output = result.stdout.strip()
-    if output:
-        print(output)
-
-
-
-def force_affine_degree_style(page: Path) -> None:
-    text = page.read_text(encoding="utf-8")
-
-    sections = re.findall(r'<section class="catalogue-family">.*?</section>', text, flags=re.S)
-    for section in sections:
-        if 'href="affine.html">Affine groups' not in section:
-            continue
-
-        new_section = section
-
-        new_section = new_section.replace(
-            '<h2><a href="affine.html">Affine groups</a></h2>',
-            '<h2><a href="affine.html">Affine groups (of degree)</a></h2>',
-        )
-
-        new_section = re.sub(
-            r'class="catalogue-group-grid(?: [^"]*)?"',
-            'class="catalogue-group-grid catalogue-degree-grid"',
-            new_section,
-            count=1,
-        )
-
-        new_section = re.sub(
-            r'data-columns="\d+"',
-            'data-columns="20"',
-            new_section,
-            count=1,
-        )
-
-        def link_repl(match):
-            open_tag, label, close_tag = match.group(1), match.group(2), match.group(3)
-            degree = degree_from_affine_label(label) or degree_from_affine_label(open_tag)
-            if degree is None:
-                return match.group(0)
-
-            open_tag = re.sub(r'class="[^"]*"', 'class="catalogue-degree-link"', open_tag)
-            if 'class=' not in open_tag:
-                open_tag = open_tag.replace('<a ', '<a class="catalogue-degree-link" ', 1)
-
-            return open_tag + degree + close_tag
-
-        new_section = re.sub(
-            r'(<a\b[^>]*href="[^"]*Affine%20groups/[^"]*\.g"[^>]*>)(.*?)(</a>)',
-            link_repl,
-            new_section,
-            flags=re.S,
-        )
-
-        # Pad incomplete degree-grid rows to 20 cells, like Transitive/Primitive sections.
-        def pad_row(row_match):
-            row = row_match.group(0)
-            count = len(re.findall(r'<td\b', row))
-            if count >= 20:
-                return row
-            return row.replace('</tr>', '<td></td>' * (20 - count) + '</tr>')
-
-        new_section = re.sub(r'<tr>.*?</tr>', pad_row, new_section, flags=re.S)
-
-        text = text.replace(section, new_section)
-
-    page.write_text(text, encoding="utf-8")
-
 
 
 def main() -> int:
@@ -462,13 +327,14 @@ def main() -> int:
     parser.add_argument("--data-root", type=Path, required=True)
     args = parser.parse_args()
 
-    run_parameter_set_update(args.data_root)
+
 
     tools = load_table_tools()
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     repository = config["repository"]
     branch = config.get("branch", "main")
     folder_pages = config["folder_pages"]
+    special_pages = config.get("special_pages", {})
 
     families = [
         ("Flag-transitive", ROOT / "docs" / "flag-transitive" / "index.html"),
@@ -488,19 +354,17 @@ def main() -> int:
 
             sections.append(build_family_section(index_page, folder, page_rel, rows))
 
+        for folder, page_rel in special_pages.items():
+            if folder.startswith(prefix + "/"):
+                sections.append(build_family_section(index_page, folder, page_rel, []))
+
         text = index_page.read_text(encoding="utf-8")
         updated = replace_catalogue(text, "\n".join(sections))
         if updated != text:
             index_page.write_text(updated, encoding="utf-8")
             updated_pages += 1
 
-    for rel_page in ("docs/flag-transitive/index.html", "docs/block-transitive/index.html"):
-        fix_affine_catalogue_degree_labels(Path(args.data_root) / rel_page)
 
-    for rel_page in ("docs/flag-transitive/index.html", "docs/block-transitive/index.html"):
-        force_affine_degree_style(Path(args.data_root) / rel_page)
-
-    run_navigation_update(args.data_root)
 
     print(f"Updated {updated_pages} catalogue landing pages.")
     return 0
