@@ -753,12 +753,63 @@ def replace_tbody(page_text: str, rows_html: str) -> str:
     return updated
 
 
+def collect_configured_sources(data_root: Path, folder_pages: dict[str, str], overrides: dict[str, str]):
+    """Return all GAP files assigned to catalogue pages by the configuration.
+
+    Every configured folder is scanned recursively.  File overrides are then
+    applied explicitly.  Empty/whitespace-only .g files are reported and
+    skipped because they contain no data yet; non-empty files must parse.
+    """
+    assignments: dict[str, tuple[Path, str]] = {}
+    folder_report: list[tuple[str, str, int, int]] = []
+    empty_sources: list[str] = []
+
+    for folder, page in folder_pages.items():
+        folder_path = data_root / folder
+        files = sorted(folder_path.rglob("*.g")) if folder_path.exists() else []
+        nonempty = 0
+        for path in files:
+            source_path = path.relative_to(data_root).as_posix()
+            if not path.read_text(encoding="utf-8", errors="replace").strip():
+                empty_sources.append(source_path)
+                continue
+            assignments[source_path] = (path, page)
+            nonempty += 1
+        folder_report.append((folder, page, len(files), nonempty))
+
+    for source_path, page in overrides.items():
+        path = data_root / source_path
+        if not path.exists():
+            continue
+        if not path.read_text(encoding="utf-8", errors="replace").strip():
+            if source_path not in empty_sources:
+                empty_sources.append(source_path)
+            assignments.pop(source_path, None)
+            continue
+        assignments[source_path] = (path, page)
+
+    return assignments, folder_report, sorted(set(empty_sources))
+
+
+def all_catalogue_gap_sources(data_root: Path) -> list[str]:
+    sources: list[str] = []
+    for prefix in ("Flag-transitive", "Block-transitive"):
+        base = data_root / prefix
+        if not base.exists():
+            continue
+        for path in base.rglob("*.g"):
+            sources.append(path.relative_to(data_root).as_posix())
+    return sorted(sources)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, required=True)
     args = parser.parse_args()
+    data_root = args.data_root.resolve()
 
-    config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    config_path = data_root / "data" / "table_sources.json"
+    config = json.loads(config_path.read_text(encoding="utf-8"))
     repository = config["repository"]
     branch = config.get("branch", "main")
     folder_pages = config["folder_pages"]
@@ -770,29 +821,14 @@ def main() -> int:
         if page not in PARAMETER_SET_PAGES
     }
 
-    unmatched = []
-    parsed_count = 0
+    assignments, folder_report, empty_sources = collect_configured_sources(
+        data_root, folder_pages, overrides
+    )
 
-    for path in sorted(args.data_root.rglob("*.g")):
-        source_path = path.relative_to(args.data_root).as_posix()
-
-        if not (
-            source_path.startswith("Flag-transitive/")
-            or source_path.startswith("Block-transitive/")
-        ):
-            continue
-
-        page = page_for_source(source_path, folder_pages, overrides)
-
-        if page is None:
-            unmatched.append(source_path)
-            continue
-
-        row = parse_gap_file(path, source_path)
-        if page not in PARAMETER_SET_PAGES:
-            page_rows.setdefault(page, []).append(row)
-        parsed_count += 1
-
+    assigned_sources = set(assignments)
+    all_sources = set(all_catalogue_gap_sources(data_root))
+    known_empty = set(empty_sources)
+    unmatched = sorted(all_sources - assigned_sources - known_empty)
     if unmatched:
         raise RuntimeError(
             "Unassigned GAP files. Move them into a configured family folder "
@@ -800,23 +836,35 @@ def main() -> int:
             + "\n  - ".join(unmatched)
         )
 
+    parse_errors: list[str] = []
+    parsed_count = 0
+    for source_path in sorted(assignments):
+        path, page = assignments[source_path]
+        try:
+            row = parse_gap_file(path, source_path)
+        except Exception as exc:
+            parse_errors.append(f"{source_path}: {exc}")
+            continue
+        if page not in PARAMETER_SET_PAGES:
+            page_rows.setdefault(page, []).append(row)
+        parsed_count += 1
+
+    if parse_errors:
+        raise RuntimeError(
+            "Could not parse one or more non-empty configured GAP files:\n  - "
+            + "\n  - ".join(parse_errors)
+        )
+
     updated_pages = 0
-
     for page_rel, rows in sorted(page_rows.items()):
-        page_path = ROOT / page_rel
-
+        page_path = data_root / page_rel
         if not page_path.exists():
             raise FileNotFoundError(page_rel)
 
         text = page_path.read_text(encoding="utf-8")
-
         if rows:
             rows_html = "\n".join(
-                build_row(
-                    row,
-                    repository,
-                    branch,
-                )
+                build_row(row, repository, branch)
                 for row in sorted(rows, key=row_sort_key)
             )
         else:
@@ -826,14 +874,22 @@ def main() -> int:
                 "</td></tr>"
             )
 
-        page_path.write_text(
-            replace_tbody(text, rows_html),
-            encoding="utf-8",
-        )
+        page_path.write_text(replace_tbody(text, rows_html), encoding="utf-8")
         updated_pages += 1
 
+    print("Automatic catalogue data collection report:")
+    for folder, page, total_files, nonempty_files in folder_report:
+        page_count = len(page_rows.get(page, []))
+        print(
+            f"  {folder} -> {page}: "
+            f"{total_files} .g file(s), {nonempty_files} non-empty, "
+            f"{page_count} generated row(s)"
+        )
+    for source_path in empty_sources:
+        print(f"  WARNING: skipped empty .g file: {source_path}")
+
     print(
-        f"Parsed {parsed_count} GAP data files and regenerated "
+        f"Parsed {parsed_count} non-empty GAP data files and regenerated "
         f"{updated_pages} website table pages."
     )
     return 0

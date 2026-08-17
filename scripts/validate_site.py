@@ -54,6 +54,46 @@ def main() -> int:
             if not (root / page_rel).exists():
                 errors.append(f"Configured page missing: {page_rel}")
 
+    # Every non-empty .g file in every configured catalogue folder must appear
+    # exactly once on its associated generated page.  This catches silent
+    # failures on Transitive/Primitive/Affine and all group-family pages.
+    folder_pages = config.get("folder_pages", {})
+    overrides = config.get("file_page_overrides", {})
+    expected_by_page = {page: set() for page in set(folder_pages.values()) | set(overrides.values())}
+
+    for folder, page_rel in folder_pages.items():
+        folder_path = root / folder
+        if not folder_path.exists():
+            continue
+        for gfile in folder_path.rglob("*.g"):
+            source = gfile.relative_to(root).as_posix()
+            if gfile.read_text(encoding="utf-8", errors="replace").strip():
+                expected_by_page.setdefault(page_rel, set()).add(source)
+
+    for source, page_rel in overrides.items():
+        gfile = root / source
+        if gfile.exists() and gfile.read_text(encoding="utf-8", errors="replace").strip():
+            for sources in expected_by_page.values():
+                sources.discard(source)
+            expected_by_page.setdefault(page_rel, set()).add(source)
+
+    for page_rel, expected_sources in sorted(expected_by_page.items()):
+        page_path = root / page_rel
+        if not page_path.exists():
+            continue
+        page_text = page_path.read_text(encoding="utf-8", errors="replace")
+        actual_sources = re.findall(r'data-source-path="([^"]+)"', page_text)
+        actual_set = set(actual_sources)
+        missing = sorted(expected_sources - actual_set)
+        unexpected = sorted(actual_set - expected_sources)
+        duplicates = sorted({source for source in actual_set if actual_sources.count(source) != 1})
+        if missing:
+            errors.append(f"{page_rel} is missing configured .g rows: {', '.join(missing)}")
+        if unexpected:
+            errors.append(f"{page_rel} contains rows not supplied by its configured folder: {', '.join(unexpected)}")
+        if duplicates:
+            errors.append(f"{page_rel} contains duplicate .g rows: {', '.join(duplicates)}")
+
     for script in sorted((root / "scripts").glob("*.py")):
         try:
             with warnings.catch_warnings():
