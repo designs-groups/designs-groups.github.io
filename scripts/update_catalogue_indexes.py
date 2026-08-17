@@ -196,6 +196,9 @@ def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: s
 
     for path in sorted(folder_path.rglob("*.g")):
         source_path = path.relative_to(data_root).as_posix()
+        text = path.read_text(encoding="utf-8", errors="replace")
+        if not tools.has_substantive_gap_data(text):
+            continue
         row = tools.parse_gap_file(path, source_path)
         degree = is_degree_family(folder) or tools.is_transitive_source(row.source_path)
         label = display_label(row, folder, tools)
@@ -204,7 +207,7 @@ def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: s
             "label": label,
             "degree": degree,
             "total": row.total,
-            "url": tools.raw_url(repository, branch, source_path),
+            "url": tools.view_url(repository, branch, source_path),
             "sort_key": tools.row_sort_key(row),
             "conditional": row.conditional,
         })

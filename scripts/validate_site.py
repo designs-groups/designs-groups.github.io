@@ -4,8 +4,19 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import urllib.parse
 import warnings
 from pathlib import Path
+
+def has_substantive_gap_data(text: str) -> bool:
+    meaningful = [line.strip() for line in text.splitlines() if line.strip()]
+    if not meaningful:
+        return False
+    return any(
+        re.fullmatch(r"#\s*References?\s*:\s*", line, flags=re.I) is None
+        for line in meaningful
+    )
+
 
 REQUIRED_PAGES = (
     "docs/flag-transitive/index.html",
@@ -67,12 +78,12 @@ def main() -> int:
             continue
         for gfile in folder_path.rglob("*.g"):
             source = gfile.relative_to(root).as_posix()
-            if gfile.read_text(encoding="utf-8", errors="replace").strip():
+            if has_substantive_gap_data(gfile.read_text(encoding="utf-8", errors="replace")):
                 expected_by_page.setdefault(page_rel, set()).add(source)
 
     for source, page_rel in overrides.items():
         gfile = root / source
-        if gfile.exists() and gfile.read_text(encoding="utf-8", errors="replace").strip():
+        if gfile.exists() and has_substantive_gap_data(gfile.read_text(encoding="utf-8", errors="replace")):
             for sources in expected_by_page.values():
                 sources.discard(source)
             expected_by_page.setdefault(page_rel, set()).add(source)
@@ -94,6 +105,33 @@ def main() -> int:
         if duplicates:
             errors.append(f"{page_rel} contains duplicate .g rows: {', '.join(duplicates)}")
 
+        repository = config.get("repository", "designs-groups/designs-groups.github.io")
+        branch = config.get("branch", "main")
+        encoded_branch = urllib.parse.quote(branch, safe="")
+        for source in sorted(expected_sources & actual_set):
+            encoded_source = urllib.parse.quote(source, safe="/")
+            view_url = f"https://github.com/{repository}/blob/{encoded_branch}/{encoded_source}"
+            download_url = f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded_source}"
+            row_match = re.search(
+                r'<tr[^>]*data-source-path="' + re.escape(source) + r'".*?</tr>',
+                page_text,
+                flags=re.S,
+            )
+            if row_match is None:
+                continue
+            row_html = row_match.group(0)
+            if f'data-view-url="{view_url}"' not in row_html:
+                errors.append(f"{page_rel} has an incorrect view link for {source}")
+            if f'data-download-url="{download_url}"' not in row_html:
+                errors.append(f"{page_rel} has an incorrect download link for {source}")
+            if f'href="{view_url}"' not in row_html:
+                errors.append(f"{page_rel} does not open {source} on its GitHub file page")
+            if not re.search(
+                r'class="download file-download-button"[^>]*href="' + re.escape(download_url) + r'"',
+                row_html,
+            ):
+                errors.append(f"{page_rel} Download .g link is incorrect for {source}")
+
     for script in sorted((root / "scripts").glob("*.py")):
         try:
             with warnings.catch_warnings():
@@ -106,10 +144,10 @@ def main() -> int:
         text = (root / rel).read_text(encoding="utf-8")
         for item in (
             "Number of designs",
-            "Point-primitive",
-            "Point-imprimitive",
-            "Block-primitive",
-            "Block-imprimitive",
+            "Point-<br>primitive",
+            "Point-<br>imprimitive",
+            "Block-<br>primitive",
+            "Block-<br>imprimitive",
             'class="parameter-column"',
             'class="count-column',
             'class="group-column"',
@@ -126,9 +164,11 @@ def main() -> int:
             errors.append(f"{rel} contains no generated Parameter sets rows")
         if "No parameter sets are currently available." in text:
             errors.append(f"{rel} still contains the empty Parameter sets message")
+        if "raw.githubusercontent.com" in text:
+            errors.append(f"{rel} contains raw GitHub view links; group links must open GitHub file pages")
 
     css = (docs / "assets" / "style.css").read_text(encoding="utf-8")
-    for item in ("width: 58px !important", "width: 50.296875px !important", "width: 117.203125px !important", "width: 133.859375px !important", "width: 120.390625px !important", "width: 137.0625px !important", "td:nth-child(11)", "text-align: left !important"):
+    for item in ("width: 58px !important", "width: 50.296875px !important", "width: 78px !important", "width: 94px !important", "td:nth-child(11)", "text-align: left !important"):
         if item not in css:
             errors.append(f"style.css missing: {item}")
 

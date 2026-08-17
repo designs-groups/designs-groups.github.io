@@ -9,6 +9,8 @@ args=parser.parse_args()
 changed=0
 for path in args.data_root.rglob('*.g'):
     text=path.read_text(encoding='utf-8',errors='replace')
+    if not text.strip():
+        continue
     if re.search(r'(?mi)^\s*#\s*References?\s*:',text):
         continue
     lines=text.splitlines()

@@ -492,6 +492,12 @@ def raw_url(repository: str, branch: str, source_path: str) -> str:
     return f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded}"
 
 
+def view_url(repository: str, branch: str, source_path: str) -> str:
+    encoded_branch = urllib.parse.quote(branch, safe="")
+    encoded_path = urllib.parse.quote(source_path, safe="/")
+    return f"https://github.com/{repository}/blob/{encoded_branch}/{encoded_path}"
+
+
 def source_path_from_raw_url(url: str, branch: str):
     marker = f"/{branch}/"
     if marker not in url:
@@ -676,7 +682,8 @@ def row_sort_key(row: RowData):
 
 
 def build_row(row, repository, branch):
-    url = raw_url(repository, branch, row.source_path)
+    open_url = view_url(repository, branch, row.source_path)
+    download_url = raw_url(repository, branch, row.source_path)
     filename = Path(row.source_path).name
 
     if is_degree_source(row.source_path) and str(row.v) != "—":
@@ -705,10 +712,11 @@ def build_row(row, repository, branch):
     elif row.source_path.startswith("Block-transitive/"):
         cells.append(row.flag_semiregular)
 
-    url_attr = html.escape(url, quote=True)
+    open_url_attr = html.escape(open_url, quote=True)
+    download_url_attr = html.escape(download_url, quote=True)
     numeric_cells = "".join(
         (
-            f'<td><a class="row-cell-link" href="{url_attr}" '
+            f'<td><a class="row-cell-link" href="{open_url_attr}" '
             f'target="_blank" rel="noopener noreferrer" '
             f'onclick="event.stopPropagation(); recordDataAccess();">'
             f'{html.escape(value)}</a></td>'
@@ -724,18 +732,20 @@ def build_row(row, repository, branch):
 
     return f'''<tr id="{anchor_attr}" class="linked-row" tabindex="0"
     data-source-path="{source_attr}"
+    data-view-url="{open_url_attr}"
+    data-download-url="{download_url_attr}"
     aria-label="{html.escape(aria_label, quote=True)}"
-    onclick="recordDataAccess(); window.open('{url_attr}', '_blank', 'noopener')"
-    onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();recordDataAccess();window.open('{url_attr}', '_blank', 'noopener');}}">
-  <th class="{first_cell_class}"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{label}</a></th>
-  <td class="list-name"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();"><code>{list_name}</code></a></td>
+    onclick="recordDataAccess(); window.open('{open_url_attr}', '_blank', 'noopener')"
+    onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();recordDataAccess();window.open('{open_url_attr}', '_blank', 'noopener');}}">
+  <th class="{first_cell_class}"><a class="row-cell-link" href="{open_url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{label}</a></th>
+  <td class="list-name"><a class="row-cell-link" href="{open_url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();"><code>{list_name}</code></a></td>
   {numeric_cells}
   <td class="file-actions">
-    <a class="download file-download-button" href="{url_attr}" target="_blank" rel="noopener noreferrer"
-      onclick="event.preventDefault(); event.stopPropagation(); recordDataAccess(); downloadRawFile('{url_attr}', '{filename_attr}');">Download .g</a>
+    <a class="download file-download-button" href="{download_url_attr}" target="_blank" rel="noopener noreferrer"
+      onclick="event.preventDefault(); event.stopPropagation(); recordDataAccess(); downloadRawFile('{download_url_attr}', '{filename_attr}');">Download .g</a>
   </td>
-  <td class="comments"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{comment}</a></td>
-  <td class="references" data-refkeys="{ref_attr}" data-url="{url_attr}"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">—</a></td>
+  <td class="comments"><a class="row-cell-link" href="{open_url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{comment}</a></td>
+  <td class="references" data-refkeys="{ref_attr}" data-url="{open_url_attr}"><a class="row-cell-link" href="{open_url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">—</a></td>
 </tr>'''
 
 
@@ -751,6 +761,16 @@ def replace_tbody(page_text: str, rows_html: str) -> str:
     if count != 1:
         raise RuntimeError("Expected exactly one <tbody> in database page")
     return updated
+
+
+def has_substantive_gap_data(text: str) -> bool:
+    meaningful = [line.strip() for line in text.splitlines() if line.strip()]
+    if not meaningful:
+        return False
+    return any(
+        re.fullmatch(r"#\s*References?\s*:\s*", line, flags=re.I) is None
+        for line in meaningful
+    )
 
 
 def collect_configured_sources(data_root: Path, folder_pages: dict[str, str], overrides: dict[str, str]):
@@ -770,7 +790,7 @@ def collect_configured_sources(data_root: Path, folder_pages: dict[str, str], ov
         nonempty = 0
         for path in files:
             source_path = path.relative_to(data_root).as_posix()
-            if not path.read_text(encoding="utf-8", errors="replace").strip():
+            if not has_substantive_gap_data(path.read_text(encoding="utf-8", errors="replace")):
                 empty_sources.append(source_path)
                 continue
             assignments[source_path] = (path, page)
@@ -781,7 +801,7 @@ def collect_configured_sources(data_root: Path, folder_pages: dict[str, str], ov
         path = data_root / source_path
         if not path.exists():
             continue
-        if not path.read_text(encoding="utf-8", errors="replace").strip():
+        if not has_substantive_gap_data(path.read_text(encoding="utf-8", errors="replace")):
             if source_path not in empty_sources:
                 empty_sources.append(source_path)
             assignments.pop(source_path, None)

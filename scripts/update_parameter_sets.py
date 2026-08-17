@@ -408,6 +408,12 @@ def raw_url(repository: str, branch: str, source_path: str) -> str:
     return f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded}"
 
 
+def view_url(repository: str, branch: str, source_path: str) -> str:
+    encoded_branch = urllib.parse.quote(branch, safe="")
+    encoded_path = urllib.parse.quote(source_path, safe="/")
+    return f"https://github.com/{repository}/blob/{encoded_branch}/{encoded_path}"
+
+
 def remote_sources(repository: str, branch: str, source_folders: dict[str, set[str]], needed_kinds: set[str]) -> dict[str, list[SourceText]]:
     result = {kind: [] for kind in source_folders}
     tree_url = f"https://api.github.com/repos/{repository}/git/trees/{urllib.parse.quote(branch, safe='')}?recursive=1"
@@ -530,7 +536,7 @@ def collect_records(data_root: Path, repository: str, branch: str, source_folder
                 continue
 
             stats[kind].contributing += 1
-            url = raw_url(repository, branch, source.source_path)
+            url = view_url(repository, branch, source.source_path)
             for param, counts in counts_by_param.items():
                 record = records[kind].setdefault(param, ParameterRecord(param=param))
                 merge_counts(record, counts)
