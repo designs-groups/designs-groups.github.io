@@ -63,6 +63,45 @@ def main() -> int:
 
     config = json.loads((root / "data" / "table_sources.json").read_text(encoding="utf-8"))
 
+    # The published Pages workflow must run the complete site pipeline, not a
+    # hand-maintained subset of generators.  This makes the validation below
+    # part of every deployment and prevents a page family from silently being
+    # skipped when the workflow is edited later.
+    workflow_path = root / ".github" / "workflows" / "pages.yml"
+    if not workflow_path.exists():
+        errors.append("Missing GitHub Pages workflow: .github/workflows/pages.yml")
+    else:
+        workflow_text = workflow_path.read_text(encoding="utf-8", errors="replace")
+        build_command = "python3 scripts/update_site.py --data-root ."
+        if build_command not in workflow_text:
+            errors.append(
+                "GitHub Pages workflow does not run the complete website build: "
+                + build_command
+            )
+
+    # The complete local build must regenerate detailed tables first, then
+    # Parameter sets and catalogue indexes, and must finish by validating the
+    # generated site.
+    update_site_path = root / "scripts" / "update_site.py"
+    if not update_site_path.exists():
+        errors.append("Missing complete build driver: scripts/update_site.py")
+    else:
+        update_site_text = update_site_path.read_text(encoding="utf-8", errors="replace")
+        pipeline_steps = [
+            'run(root, "update_data_tables.py"',
+            'run(root, "update_parameter_sets.py"',
+            'run(root, "update_catalogue_indexes.py"',
+            'run(root, "validate_site.py"',
+        ]
+        positions = [update_site_text.find(step) for step in pipeline_steps]
+        for step, position in zip(pipeline_steps, positions):
+            if position < 0:
+                errors.append(f"Complete build driver is missing pipeline step: {step}")
+        if all(position >= 0 for position in positions) and positions != sorted(positions):
+            errors.append(
+                "Complete build driver has the catalogue/Parameter-set/validation steps in the wrong order"
+            )
+
     # Parameter sets must automatically read every configured catalogue folder.
     parameter_script = root / "scripts" / "update_parameter_sets.py"
     spec = importlib.util.spec_from_file_location("validate_parameter_sets", parameter_script)
