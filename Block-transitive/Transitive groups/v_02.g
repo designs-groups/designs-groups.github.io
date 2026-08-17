@@ -1,7 +1,7 @@
 
 # ####################################################################################################
 # Block-transitive 2-designs 
-# Affine groups on 2 points 
+# Transitive groups on 2 points 
 # ####################################################################################################
 # Remark:       there exists no 2-design admitting block-transitive affine automorphism group
 # References:    

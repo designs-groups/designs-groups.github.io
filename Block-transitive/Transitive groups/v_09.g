@@ -1,10 +1,3 @@
-#I  Warning: R-base point is already fixed
-#I  Warning: R-base point is already fixed
-#I  Warning: R-base point is already fixed
-#I  Warning: R-base point is already fixed
-#I  Warning: R-base point is already fixed
-#I  Warning: R-base point is already fixed
-
 # ####################################################################################################
 # Block-transitive 2-designs 
 # Transitive groups on 9 points 
