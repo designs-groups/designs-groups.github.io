@@ -1,8 +1,8 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Group (autSubgroup): 2F4(2) = 2F(4,2)'.2
+# Group (autSubgroup): 2F4(2) = 2F4(2)'.2
 # ####################################################################################################
-# Remark:       there exists no 2-design admitting 2F(4,2)'.2 as a flag-transitive automorphism group
+# Remark:       there exists no 2-design admitting 2F4(2) = 2F4(2)'.2 as a flag-transitive automorphism group
 # References:    
 
 # 1. number of designs: 
