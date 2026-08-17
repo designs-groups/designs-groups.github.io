@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import argparse
+import importlib.util
 import json
 import re
+import sys
 import urllib.parse
 import warnings
 from pathlib import Path
@@ -60,6 +62,32 @@ def main() -> int:
             errors.append(f"Stale page exists: {stale.relative_to(root)}")
 
     config = json.loads((root / "data" / "table_sources.json").read_text(encoding="utf-8"))
+
+    # Parameter sets must automatically read every configured catalogue folder.
+    parameter_script = root / "scripts" / "update_parameter_sets.py"
+    spec = importlib.util.spec_from_file_location("validate_parameter_sets", parameter_script)
+    if spec is None or spec.loader is None:
+        errors.append("Could not load scripts/update_parameter_sets.py for validation")
+        parameter_module = None
+    else:
+        parameter_module = importlib.util.module_from_spec(spec)
+        sys.modules["validate_parameter_sets"] = parameter_module
+        spec.loader.exec_module(parameter_module)
+        source_folders = parameter_module.relevant_source_folders(config)
+        for kind, prefix in parameter_module.CATEGORY_PREFIXES.items():
+            expected_locations = {
+                folder.rstrip("/") + "/"
+                for folder in config.get("folder_pages", {})
+                if folder.startswith(prefix) and folder[len(prefix):] != "Parameter sets"
+            }
+            actual_locations = {location for location in source_folders.get(kind, set()) if location.endswith("/")}
+            missing_locations = sorted(expected_locations - actual_locations)
+            if missing_locations:
+                errors.append(
+                    f"Parameter sets for {kind} do not read all configured folders: "
+                    + ", ".join(missing_locations)
+                )
+
     for mapping in ("folder_pages", "special_pages"):
         for page_rel in config.get(mapping, {}).values():
             if not (root / page_rel).exists():
@@ -131,6 +159,36 @@ def main() -> int:
                 row_html,
             ):
                 errors.append(f"{page_rel} Download .g link is incorrect for {source}")
+
+    # Degree-based Parameter-set sources must be displayed by source label
+    # (transitive_v, primitive_v, affine_v) and link to their own .g file.
+    if parameter_module is not None:
+        for kind, prefix in parameter_module.CATEGORY_PREFIXES.items():
+            page_rel = parameter_module.PARAMETER_SET_PAGES[kind]
+            page_path = root / page_rel
+            if not page_path.exists():
+                continue
+            page_text = page_path.read_text(encoding="utf-8", errors="replace")
+            for folder, role in parameter_module.DEGREE_SOURCE_ROLES.items():
+                folder_path = root / f"{prefix}{folder}"
+                if not folder_path.exists():
+                    continue
+                for gfile in sorted(folder_path.rglob("*.g")):
+                    source = gfile.relative_to(root).as_posix()
+                    text = gfile.read_text(encoding="utf-8", errors="replace")
+                    entries = parameter_module.summary_table_entries(text, "all designs")
+                    if not entries:
+                        continue
+                    degree = parameter_module.degree_from_source_path(source)
+                    if degree is None:
+                        errors.append(f"Degree-based Parameter-set source has invalid filename: {source}")
+                        continue
+                    label = f"{role}_{degree}"
+                    encoded_branch = urllib.parse.quote(config.get("branch", "main"), safe="")
+                    encoded_source = urllib.parse.quote(source, safe="/")
+                    view = f"https://github.com/{config.get('repository', 'designs-groups/designs-groups.github.io')}/blob/{encoded_branch}/{encoded_source}"
+                    if f'>{label}</a>' not in page_text or f'href="{view}"' not in page_text:
+                        errors.append(f"{page_rel} does not display/link degree source {label} from {source}")
 
     for script in sorted((root / "scripts").glob("*.py")):
         try:

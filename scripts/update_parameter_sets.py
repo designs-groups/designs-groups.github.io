@@ -25,7 +25,12 @@ CATEGORY_PREFIXES = {
     "block-transitive": "Block-transitive/",
 }
 
-EXCLUDED_SOURCE_FOLDERS = {"Transitive groups", "Primitive groups", "Parameter sets"}
+EXCLUDED_SOURCE_FOLDERS = {"Parameter sets"}
+DEGREE_SOURCE_ROLES = {
+    "Transitive groups": "transitive",
+    "Primitive groups": "primitive",
+    "Affine groups": "affine",
+}
 PARAM_RE = re.compile(r"\[\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\]")
 
 
@@ -59,6 +64,14 @@ class ParameterRecord(CountRecord):
 class SourceText:
     source_path: str
     text: str
+
+
+@dataclass
+class SourceParamContribution:
+    source_path: str
+    role: str
+    entries: list[DesignEntry] = field(default_factory=list)
+    counts: CountRecord | None = None
 
 
 @dataclass
@@ -161,16 +174,37 @@ def comment_content(raw: str) -> str:
     return re.sub(r"^\s*# ?", "", raw.rstrip("\r\n"))
 
 
-def summary_table_entries(text: str) -> list[DesignEntry]:
-    """Read fixed-width design summary tables without shifting across blank columns."""
+def summary_table_entries(text: str, table: str | None = None) -> list[DesignEntry]:
+    """Read one fixed-width design summary table without shifting blank columns.
+
+    ``table`` may be ``"all designs"`` or ``"non-isomorphic designs"`` for
+    degree-based files that contain both tables.  With ``table=None`` the
+    ordinary group-type Summary table is read in the same way as before.
+    """
     entries: list[DesignEntry] = []
     spans: dict[str, tuple[int, int | None]] | None = None
     required = {"nr", "v", "b", "r", "k", "lambda", "g"}
+    target = table.casefold().strip().rstrip(":") if table else None
+    active_table: str | None = None
 
     for raw in text.splitlines():
         content = comment_content(raw).rstrip()
         line = content.strip()
         if not line or set(line) <= {"-", "="}:
+            continue
+
+        table_heading = re.fullmatch(r"(Non-isomorphic designs|All designs)\s*:", line, re.I)
+        if table_heading:
+            active_table = table_heading.group(1).casefold()
+            spans = None
+            continue
+
+        if re.match(r"^\d+\.\s*", line):
+            active_table = None
+            spans = None
+            continue
+
+        if target is not None and active_table != target:
             continue
 
         token_matches = list(re.finditer(r"\S+", content))
@@ -185,36 +219,48 @@ def summary_table_entries(text: str) -> list[DesignEntry]:
                 spans[name] = (match.start(), end)
             continue
 
-        if re.match(r"^(?:\d+\.\s*)?(?:Further information|Designs|All designs|References)\s*:\s*$", line, re.I):
+        if re.match(r"^(?:Further information|Designs|References)\s*:\s*$", line, re.I):
             spans = None
             continue
 
         if spans is None:
             continue
 
-        def field(name: str) -> str:
+        def field_value(name: str) -> str:
             if name not in spans:
                 return ""
             start, end = spans[name]
             return content[start:end].strip() if end is not None else content[start:].strip()
 
-        if not field("nr").isdigit():
+        if not field_value("nr").isdigit():
             continue
 
         try:
-            param = (int(field("v")), int(field("b")), int(field("r")), int(field("k")), int(field("lambda")))
+            param = (
+                int(field_value("v")),
+                int(field_value("b")),
+                int(field_value("r")),
+                int(field_value("k")),
+                int(field_value("lambda")),
+            )
         except ValueError:
             continue
         if not is_valid_parameter_set(param):
             continue
 
-        group_label = field("g")
+        group_label = field_value("g")
         if not group_label:
             continue
-        entries.append(DesignEntry(param=param, group_label=group_label, point_primitive=bool_value(field("point-primitive")), block_primitive=bool_value(field("block-primitive"))))
+        entries.append(
+            DesignEntry(
+                param=param,
+                group_label=group_label,
+                point_primitive=bool_value(field_value("point-primitive")),
+                block_primitive=bool_value(field_value("block-primitive")),
+            )
+        )
 
     return entries
-
 
 def detailed_design_entries(text: str, fallback_group: str) -> list[DesignEntry]:
     """Read Parameter set, Structure and primitive properties from Design blocks."""
@@ -452,12 +498,33 @@ def obtain_sources(data_root: Path, repository: str, branch: str, source_folders
     return sources, remote_counts
 
 
-def add_group(record: ParameterRecord, group_label: str, url: str, tools) -> None:
+def parameter_source_role(source_path: str) -> str:
+    """Classify a Parameter-sets source by its associated catalogue folder."""
+    parts = source_path.replace("\\", "/").strip("/").split("/")
+    for folder, role in DEGREE_SOURCE_ROLES.items():
+        if folder in parts:
+            return role
+    return "group_type"
+
+
+def degree_from_source_path(source_path: str) -> int | None:
+    match = re.fullmatch(r"v[_-]?(\d+)", Path(source_path).stem, re.I)
+    return int(match.group(1)) if match else None
+
+
+def add_named_group(record: ParameterRecord, group_label: str, url: str, tools) -> None:
+    """Add an ordinary named-group label using the existing mathematical style."""
     if not group_label or looks_like_degree_filename(group_label):
         return
     label = tools.math_label(group_label)
     sort_label = tools.normalize_group_sort_text(group_label).casefold()
-    record.groups.setdefault(sort_label, (label, url))
+    record.groups.setdefault("group:" + sort_label, (label, url))
+
+
+def add_degree_source_group(record: ParameterRecord, role: str, degree: int, url: str) -> None:
+    """Add affine_v, primitive_v or transitive_v as a literal linked label."""
+    label = f"{role}_{degree}"
+    record.groups.setdefault("degree:" + label.casefold(), (html.escape(label), url))
 
 
 def merge_counts(record: ParameterRecord, counts: CountRecord) -> None:
@@ -471,30 +538,52 @@ def merge_counts(record: ParameterRecord, counts: CountRecord) -> None:
     record.block_classified += counts.block_classified
 
 
-def parse_source(source: SourceText) -> tuple[dict[tuple[int, int, int, int, int], CountRecord], dict[tuple[int, int, int, int, int], set[str]], bool]:
+def entries_by_parameter(entries: list[DesignEntry]) -> dict[tuple[int, int, int, int, int], list[DesignEntry]]:
+    result: dict[tuple[int, int, int, int, int], list[DesignEntry]] = {}
+    for entry in entries:
+        result.setdefault(entry.param, []).append(entry)
+    return result
+
+
+def enrich_summary_entries(summary_entries: list[DesignEntry], detailed_entries: list[DesignEntry]) -> list[DesignEntry]:
+    """Fill missing primitive flags from detailed blocks when rows correspond exactly."""
+    if not summary_entries or not detailed_entries or len(summary_entries) != len(detailed_entries):
+        return summary_entries
+    if not all(summary.param == detail.param for summary, detail in zip(summary_entries, detailed_entries)):
+        return summary_entries
+    return [
+        DesignEntry(
+            param=summary.param,
+            group_label=summary.group_label,
+            point_primitive=summary.point_primitive if summary.point_primitive is not None else detail.point_primitive,
+            block_primitive=summary.block_primitive if summary.block_primitive is not None else detail.block_primitive,
+        )
+        for summary, detail in zip(summary_entries, detailed_entries)
+    ]
+
+
+def parse_group_type_source(source: SourceText) -> tuple[
+    dict[tuple[int, int, int, int, int], CountRecord],
+    dict[tuple[int, int, int, int, int], set[str]],
+    bool,
+]:
+    """Parse ordinary named-group files using their existing summary format."""
     text = source.text
     fallback_group = group_label_from_text(text, Path(source.source_path).stem)
-    summary_entries = summary_table_entries(text)
+    summary_entries = summary_table_entries(text, "non-isomorphic designs") or summary_table_entries(text)
     detailed_entries = detailed_design_entries(text, fallback_group)
     record_entries = gap_record_entries(text, fallback_group)
-    entries = summary_entries or detailed_entries or record_entries
-    if summary_entries and detailed_entries and len(summary_entries) == len(detailed_entries):
-        if all(summary.param == detail.param for summary, detail in zip(summary_entries, detailed_entries)):
-            entries = [
-                DesignEntry(
-                    param=summary.param,
-                    group_label=summary.group_label,
-                    point_primitive=summary.point_primitive if summary.point_primitive is not None else detail.point_primitive,
-                    block_primitive=summary.block_primitive if summary.block_primitive is not None else detail.block_primitive,
-                )
-                for summary, detail in zip(summary_entries, detailed_entries)
-            ]
+    entries = enrich_summary_entries(summary_entries, detailed_entries) if summary_entries else []
+    entries = entries or detailed_entries or record_entries
     groups: dict[tuple[int, int, int, int, int], set[str]] = {}
 
     if entries:
         counts = counts_by_parameter(entries)
         for entry in entries:
             groups.setdefault(entry.param, set()).add(entry.group_label or fallback_group)
+        # Some one-parameter group files expose only aggregate primitive counts.
+        # This is the established group-type fallback; there is no separate
+        # All-designs table for this source class.
         summary_counts = parse_count_summary_table(text)
         if summary_counts is not None and len(counts) == 1:
             only_param = next(iter(counts))
@@ -518,33 +607,215 @@ def parse_source(source: SourceText) -> tuple[dict[tuple[int, int, int, int, int
     return counts, groups, True
 
 
+def parse_degree_source(source: SourceText, role: str) -> tuple[
+    dict[tuple[int, int, int, int, int], list[DesignEntry]],
+    bool,
+    str | None,
+]:
+    """Parse Transitive/Primitive/Affine files from their All designs table.
+
+    Degree-based catalogues may also contain a Non-isomorphic designs table,
+    but Parameter-set counts deliberately ignore that table: this website is
+    counting designs by group/action.  If a degree file has designs but no
+    parseable All designs table, the build fails instead of silently falling
+    back to non-isomorphic counts.
+    """
+    text = source.text
+    all_entries = summary_table_entries(text, "all designs")
+    if all_entries:
+        return entries_by_parameter(all_entries), True, None
+
+    noniso_entries = summary_table_entries(text, "non-isomorphic designs")
+    candidates = sorted(set(explicit_parameter_candidates(text)))
+    summary_counts = parse_count_summary_table(text)
+    if has_no_designs_remark(text) or (summary_counts is not None and summary_counts.total == 0):
+        return {}, True, None
+    if noniso_entries or candidates or all_valid_parameters(text):
+        return {}, False, (
+            f"{source.source_path}: {role.title()} source contains designs/parameters "
+            "but no parseable 'All designs' summary table"
+        )
+    return {}, False, None
+
+
+def merge_group_type_counts(contributions: list[SourceParamContribution]) -> CountRecord:
+    result = CountRecord()
+    for contribution in contributions:
+        if contribution.counts is not None:
+            merge_counts(result, contribution.counts)
+    return result
+
+
+def counts_from_entries(entries: list[DesignEntry]) -> CountRecord:
+    result = CountRecord()
+    for entry in entries:
+        add_entry(result, entry)
+    return result
+
+
+def unique_degree_contribution(
+    contributions: list[SourceParamContribution],
+    kind: str,
+    param: tuple[int, int, int, int, int],
+    role: str,
+    errors: list[str],
+) -> SourceParamContribution | None:
+    if not contributions:
+        return None
+    paths = sorted({item.source_path for item in contributions})
+    if len(paths) > 1:
+        errors.append(
+            f"{kind} parameter {list(param)} occurs in more than one {role} degree file: "
+            + ", ".join(paths)
+        )
+        return None
+    return contributions[0]
+
+
+def apply_count_priority(
+    kind: str,
+    param: tuple[int, int, int, int, int],
+    record: ParameterRecord,
+    role_contributions: dict[str, list[SourceParamContribution]],
+    errors: list[str],
+) -> None:
+    """Apply the agreed non-overlapping Parameter-sets counting hierarchy.
+
+    Display is independent and already contains every matching source.
+
+    Counting priority:
+      1. Transitive All designs (suppresses every overlapping source).
+      2. If Transitive is absent, Primitive All designs plus only the
+         point-imprimitive Affine All-design rows.  Affine point-primitive
+         rows overlap Primitive and are not counted twice.
+      3. If Primitive is absent, use all Affine All-design rows.
+      4. Only when none of the degree catalogues contains the parameter, use
+         the existing named group-type counts.
+    """
+    transitive = unique_degree_contribution(role_contributions.get("transitive", []), kind, param, "transitive", errors)
+    primitive = unique_degree_contribution(role_contributions.get("primitive", []), kind, param, "primitive", errors)
+    affine = unique_degree_contribution(role_contributions.get("affine", []), kind, param, "affine", errors)
+
+    selected: CountRecord | None = None
+    if transitive is not None:
+        selected = counts_from_entries(transitive.entries)
+    elif primitive is not None:
+        bad_primitive = [entry for entry in primitive.entries if entry.point_primitive is not True]
+        if bad_primitive:
+            errors.append(
+                f"{primitive.source_path}: Primitive All-design rows for parameter {list(param)} "
+                "must all be point-primitive; the overlap rule cannot be applied safely"
+            )
+        selected_entries = list(primitive.entries)
+        if affine is not None:
+            for entry in affine.entries:
+                if entry.point_primitive is False:
+                    selected_entries.append(entry)
+                elif entry.point_primitive is None:
+                    errors.append(
+                        f"{affine.source_path}: Affine All-design row for parameter {list(param)} "
+                        "has no point-primitive value; Primitive/Affine overlap cannot be resolved safely"
+                    )
+        selected = counts_from_entries(selected_entries)
+    elif affine is not None:
+        selected = counts_from_entries(affine.entries)
+    else:
+        selected = merge_group_type_counts(role_contributions.get("group_type", []))
+
+    merge_counts(record, selected)
+
+
 def collect_records(data_root: Path, repository: str, branch: str, source_folders: dict[str, set[str]], tools):
     records: dict[str, dict[tuple[int, int, int, int, int], ParameterRecord]] = {kind: {} for kind in CATEGORY_PREFIXES}
     stats = {kind: CollectionStats() for kind in CATEGORY_PREFIXES}
+    contributions: dict[
+        str,
+        dict[tuple[int, int, int, int, int], dict[str, list[SourceParamContribution]]],
+    ] = {kind: {} for kind in CATEGORY_PREFIXES}
     sources, remote_counts = obtain_sources(data_root, repository, branch, source_folders)
 
     for kind, items in sources.items():
         stats[kind].remote_files = remote_counts[kind]
         for source in items:
             stats[kind].scanned += 1
-            counts_by_param, groups_by_param, recognized = parse_source(source)
+            role = parameter_source_role(source.source_path)
+            url = view_url(repository, branch, source.source_path)
+
+            if role in {"transitive", "primitive", "affine"}:
+                by_param, recognized, error = parse_degree_source(source, role)
+                if error:
+                    stats[kind].unresolved.append(error)
+                    continue
+                if not by_param:
+                    if recognized:
+                        stats[kind].no_designs += 1
+                    continue
+
+                degree = degree_from_source_path(source.source_path)
+                if degree is None:
+                    stats[kind].unresolved.append(
+                        f"{source.source_path}: {role.title()} source filename must have the form v_<degree>.g"
+                    )
+                    continue
+                bad_degree_params = [param for param in by_param if param[0] != degree]
+                if bad_degree_params:
+                    stats[kind].unresolved.append(
+                        f"{source.source_path}: filename degree {degree} disagrees with parameter degrees "
+                        + ", ".join(str(list(param)) for param in bad_degree_params)
+                    )
+                    continue
+
+                stats[kind].contributing += 1
+                for param, entries in by_param.items():
+                    record = records[kind].setdefault(param, ParameterRecord(param=param))
+                    add_degree_source_group(record, role, degree, url)
+                    role_map = contributions[kind].setdefault(param, {})
+                    role_map.setdefault(role, []).append(
+                        SourceParamContribution(source_path=source.source_path, role=role, entries=entries)
+                    )
+                continue
+
+            counts_by_param, groups_by_param, recognized = parse_group_type_source(source)
             if not counts_by_param:
                 if recognized:
                     stats[kind].no_designs += 1
                 elif all_valid_parameters(source.text):
-                    stats[kind].unresolved.append(source.source_path)
+                    stats[kind].unresolved.append(
+                        f"{source.source_path}: valid parameter sets were found but could not be assigned to designs"
+                    )
                 continue
 
             stats[kind].contributing += 1
-            url = view_url(repository, branch, source.source_path)
             for param, counts in counts_by_param.items():
                 record = records[kind].setdefault(param, ParameterRecord(param=param))
-                merge_counts(record, counts)
                 for group_label in groups_by_param.get(param, set()):
-                    add_group(record, group_label, url, tools)
+                    add_named_group(record, group_label, url, tools)
+                role_map = contributions[kind].setdefault(param, {})
+                role_map.setdefault("group_type", []).append(
+                    SourceParamContribution(source_path=source.source_path, role="group_type", counts=counts)
+                )
+
+    priority_errors: list[str] = []
+    for kind, kind_records in records.items():
+        for param, record in kind_records.items():
+            apply_count_priority(kind, param, record, contributions[kind].get(param, {}), priority_errors)
+    for error in priority_errors:
+        # Store these with the relevant category when possible so main() emits
+        # one concise build failure containing all overlap/data problems.
+        target_kind = "flag-transitive" if error.startswith("flag-transitive") else "block-transitive" if error.startswith("block-transitive") else None
+        if target_kind is not None:
+            stats[target_kind].unresolved.append(error)
+        else:
+            # Source-path errors already reveal their FT/BT prefix.
+            if error.startswith("Flag-transitive/"):
+                stats["flag-transitive"].unresolved.append(error)
+            elif error.startswith("Block-transitive/"):
+                stats["block-transitive"].unresolved.append(error)
+            else:
+                stats["flag-transitive"].unresolved.append(error)
+                stats["block-transitive"].unresolved.append(error)
 
     return records, stats
-
 
 def display_number(value: int, complete: bool) -> tuple[str, str]:
     return (str(value), str(value)) if complete else ("—", "")
@@ -651,7 +922,7 @@ def main() -> int:
         if not records[kind]:
             errors.append(f"No parameter sets were collected for {kind} from {stats[kind].scanned} .g files.")
         if stats[kind].unresolved:
-            errors.append(f"The following {kind} files contain valid parameter sets but could not be assigned to designs: {', '.join(stats[kind].unresolved)}")
+            errors.append(f"Parameter-set collection errors for {kind}: {' | '.join(stats[kind].unresolved)}")
     if errors:
         raise RuntimeError("\n".join(errors))
 
