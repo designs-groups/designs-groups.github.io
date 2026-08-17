@@ -1,6 +1,6 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Affine groups on 3 points 
+# Transitive groups on 3 points 
 # ####################################################################################################
 # Remark:       there exists no 2-design admitting flag-transitive affine automorphism group
 # References:    
