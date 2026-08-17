@@ -161,7 +161,7 @@ def main() -> int:
                 errors.append(f"{page_rel} Download .g link is incorrect for {source}")
 
     # Degree-based Parameter-set sources must be displayed by source label
-    # (transitive_v, primitive_v, affine_v) and link to their own .g file.
+    # (Trans(v), Prim(v), Aff(v)) and link to their own .g file.
     if parameter_module is not None:
         for kind, prefix in parameter_module.CATEGORY_PREFIXES.items():
             page_rel = parameter_module.PARAMETER_SET_PAGES[kind]
@@ -183,7 +183,8 @@ def main() -> int:
                     if degree is None:
                         errors.append(f"Degree-based Parameter-set source has invalid filename: {source}")
                         continue
-                    label = f"{role}_{degree}"
+                    labels = {"transitive": "Trans", "primitive": "Prim", "affine": "Aff"}
+                    label = f"{labels[role]}({degree})"
                     encoded_branch = urllib.parse.quote(config.get("branch", "main"), safe="")
                     encoded_source = urllib.parse.quote(source, safe="/")
                     view = f"https://github.com/{config.get('repository', 'designs-groups/designs-groups.github.io')}/blob/{encoded_branch}/{encoded_source}"
@@ -202,6 +203,8 @@ def main() -> int:
         text = (root / rel).read_text(encoding="utf-8")
         for item in (
             "Number of designs",
+            "associated group-type, Transitive,",
+            "Primitive, and Affine folders.",
             "Point-<br>primitive",
             "Point-<br>imprimitive",
             "Block-<br>primitive",
@@ -222,6 +225,8 @@ def main() -> int:
             errors.append(f"{rel} contains no generated Parameter sets rows")
         if "No parameter sets are currently available." in text:
             errors.append(f"{rel} still contains the empty Parameter sets message")
+        if re.search(r">(?:transitive|primitive|affine)_\d+</a>", text, re.I):
+            errors.append(f"{rel} still contains an obsolete degree-source label")
         if "raw.githubusercontent.com" in text:
             errors.append(f"{rel} contains raw GitHub view links; group links must open GitHub file pages")
 

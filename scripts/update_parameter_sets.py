@@ -522,9 +522,10 @@ def add_named_group(record: ParameterRecord, group_label: str, url: str, tools) 
 
 
 def add_degree_source_group(record: ParameterRecord, role: str, degree: int, url: str) -> None:
-    """Add affine_v, primitive_v or transitive_v as a literal linked label."""
-    label = f"{role}_{degree}"
-    record.groups.setdefault("degree:" + label.casefold(), (html.escape(label), url))
+    """Add Aff(v), Prim(v), or Trans(v) as a literal linked degree-source label."""
+    labels = {"affine": "Aff", "primitive": "Prim", "transitive": "Trans"}
+    label = f"{labels[role]}({degree})"
+    record.groups.setdefault("degree:" + role + f":{degree:010d}", (html.escape(label), url))
 
 
 def merge_counts(record: ParameterRecord, counts: CountRecord) -> None:
