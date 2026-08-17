@@ -454,11 +454,6 @@ def raw_url(repository: str, branch: str, source_path: str) -> str:
     return f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded}"
 
 
-def view_url(repository: str, branch: str, source_path: str) -> str:
-    encoded_branch = urllib.parse.quote(branch, safe="")
-    encoded_path = urllib.parse.quote(source_path, safe="/")
-    return f"https://github.com/{repository}/blob/{encoded_branch}/{encoded_path}"
-
 
 def remote_sources(repository: str, branch: str, source_folders: dict[str, set[str]], needed_kinds: set[str]) -> dict[str, list[SourceText]]:
     result = {kind: [] for kind in source_folders}
@@ -740,7 +735,7 @@ def collect_records(data_root: Path, repository: str, branch: str, source_folder
         for source in items:
             stats[kind].scanned += 1
             role = parameter_source_role(source.source_path)
-            url = view_url(repository, branch, source.source_path)
+            url = raw_url(repository, branch, source.source_path)
 
             if role in {"transitive", "primitive", "affine"}:
                 by_param, recognized, error = parse_degree_source(source, role)

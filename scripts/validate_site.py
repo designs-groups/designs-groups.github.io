@@ -135,11 +135,10 @@ def main() -> int:
 
         repository = config.get("repository", "designs-groups/designs-groups.github.io")
         branch = config.get("branch", "main")
-        encoded_branch = urllib.parse.quote(branch, safe="")
         for source in sorted(expected_sources & actual_set):
             encoded_source = urllib.parse.quote(source, safe="/")
-            view_url = f"https://github.com/{repository}/blob/{encoded_branch}/{encoded_source}"
-            download_url = f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded_source}"
+            view_url = f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded_source}"
+            download_url = view_url
             row_match = re.search(
                 r'<tr[^>]*data-source-path="' + re.escape(source) + r'".*?</tr>',
                 page_text,
@@ -153,7 +152,7 @@ def main() -> int:
             if f'data-download-url="{download_url}"' not in row_html:
                 errors.append(f"{page_rel} has an incorrect download link for {source}")
             if f'href="{view_url}"' not in row_html:
-                errors.append(f"{page_rel} does not open {source} on its GitHub file page")
+                errors.append(f"{page_rel} does not open the raw GAP file for {source}")
             if not re.search(
                 r'class="download file-download-button"[^>]*href="' + re.escape(download_url) + r'"',
                 row_html,
@@ -185,9 +184,9 @@ def main() -> int:
                         continue
                     labels = {"transitive": "Trans", "primitive": "Prim", "affine": "Aff"}
                     label = f"{labels[role]}({degree})"
-                    encoded_branch = urllib.parse.quote(config.get("branch", "main"), safe="")
                     encoded_source = urllib.parse.quote(source, safe="/")
-                    view = f"https://github.com/{config.get('repository', 'designs-groups/designs-groups.github.io')}/blob/{encoded_branch}/{encoded_source}"
+                    branch = config.get("branch", "main")
+                    view = f"https://raw.githubusercontent.com/{config.get('repository', 'designs-groups/designs-groups.github.io')}/{branch}/{encoded_source}"
                     if f'>{label}</a>' not in page_text or f'href="{view}"' not in page_text:
                         errors.append(f"{page_rel} does not display/link degree source {label} from {source}")
 
@@ -227,8 +226,8 @@ def main() -> int:
             errors.append(f"{rel} still contains the empty Parameter sets message")
         if re.search(r">(?:transitive|primitive|affine)_\d+</a>", text, re.I):
             errors.append(f"{rel} still contains an obsolete degree-source label")
-        if "raw.githubusercontent.com" in text:
-            errors.append(f"{rel} contains raw GitHub view links; group links must open GitHub file pages")
+        if 'class="parameter-set-row"' in text and "raw.githubusercontent.com" not in text:
+            errors.append(f"{rel} Parameter-set group links are not raw GAP-file links")
 
     css = (docs / "assets" / "style.css").read_text(encoding="utf-8")
     for item in ("width: 58px !important", "width: 50.296875px !important", "width: 78px !important", "width: 94px !important", "td:nth-child(11)", "text-align: left !important"):
@@ -250,6 +249,28 @@ def main() -> int:
             for key, page_rel in config.get(mapping, {}).items():
                 if key.startswith(prefix + "/") and Path(page_rel).name not in index_text:
                     errors.append(f"{index_rel} does not link to {page_rel}")
+
+    # Global invariant: every website URL that targets a .g file must open
+    # the raw file. This covers detailed catalogue pages, catalogue indexes,
+    # Parameter sets, and any future page that links to GAP data.
+    gap_link_attr_re = re.compile(r'(?:href|data-view-url|data-download-url)="([^"]+)"')
+    raw_prefix = "https://raw.githubusercontent.com/"
+    for page in docs.rglob("*.html"):
+        text = page.read_text(encoding="utf-8", errors="replace")
+        for link in gap_link_attr_re.findall(text):
+            decoded_path = urllib.parse.unquote(urllib.parse.urlsplit(link).path)
+            if not decoded_path.lower().endswith(".g"):
+                continue
+            if not link.startswith(raw_prefix):
+                errors.append(f"Non-raw .g link in {page.relative_to(root)}: {link}")
+
+        # Row click and keyboard handlers contain literal HTTP(S) URLs too.
+        for link in re.findall(r"https?://[^\s\"'<>]+", text):
+            decoded_path = urllib.parse.unquote(urllib.parse.urlsplit(link).path)
+            if not decoded_path.lower().endswith(".g"):
+                continue
+            if not link.startswith(raw_prefix):
+                errors.append(f"Non-raw .g URL in {page.relative_to(root)}: {link}")
 
     link_re = re.compile(r'(?:href|src)="([^"]+)"')
     for page in docs.rglob("*.html"):

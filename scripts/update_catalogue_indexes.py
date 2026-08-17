@@ -207,7 +207,7 @@ def rows_from_gap_files(data_root: Path, folder: str, repository: str, branch: s
             "label": label,
             "degree": degree,
             "total": row.total,
-            "url": tools.view_url(repository, branch, source_path),
+            "url": tools.raw_url(repository, branch, source_path),
             "sort_key": tools.row_sort_key(row),
             "conditional": row.conditional,
         })

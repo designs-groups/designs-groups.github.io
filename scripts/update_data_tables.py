@@ -492,11 +492,6 @@ def raw_url(repository: str, branch: str, source_path: str) -> str:
     return f"https://raw.githubusercontent.com/{repository}/{branch}/{encoded}"
 
 
-def view_url(repository: str, branch: str, source_path: str) -> str:
-    encoded_branch = urllib.parse.quote(branch, safe="")
-    encoded_path = urllib.parse.quote(source_path, safe="/")
-    return f"https://github.com/{repository}/blob/{encoded_branch}/{encoded_path}"
-
 
 def source_path_from_raw_url(url: str, branch: str):
     marker = f"/{branch}/"
@@ -682,7 +677,7 @@ def row_sort_key(row: RowData):
 
 
 def build_row(row, repository, branch):
-    open_url = view_url(repository, branch, row.source_path)
+    open_url = raw_url(repository, branch, row.source_path)
     download_url = raw_url(repository, branch, row.source_path)
     filename = Path(row.source_path).name
 

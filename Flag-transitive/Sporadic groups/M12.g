@@ -5,38 +5,41 @@
 # Remark: all designs
 #         lD_M12 is the list of designs  
 
-# 1. Number of designs: 
+# 1. number of designs:
 # ---------------------
 
 # ----------------------------------------------------
-#                    Symmetric  Non-symmetric  Total  
+#                      Symmetric  Non-symmetric  Total
 # ----------------------------------------------------
-# Point-primitive    1          8              9      
-# Point-imprimitive  1          0              1      
-#                                                     
-# Block-primitive    1          5              6      
-# Block-imprimitive  1          3              4      
+# Point-primitive      1          8              9
+# Point-imprimitive    1          0              1
+#
+# Block-primitive      1          5              6
+# Block-imprimitive    1          3              4
+#
+# Flag-transitive      2          8              10
+# AntiFlag-transitive  0          7              7
 # ----------------------------------------------------
-# Total              2          8              10     
+# Total                2          8              10
 # ----------------------------------------------------
 
 # 2. Summary: 
 # -----------
 
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v    b    r    k   λ    G    Gα         GB                   Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments          
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   12   66   55   10  45   M12  M11        (A6.2):2             S12     2      2           2        5       true             true                                    complete          
-# 2   12   132  66   6   30   M12  M11        S6                   M12     2      2           2        8       true             false            2                                        
-# 3   12   220  55   3   10   M12  M11        (((3^2):Q8):3):2     S12     2      2           2        15      true             true             4                      complete          
-# 4   12   220  165  9   120  M12  M11        (((3^2):Q8):3):2     S12     2      2           2        15      true             true             3                      complete          
-# 5   12   495  165  4   45   M12  M11        (((2^3):(2^2)):3):2  S12     2      2           2        21      true             true             6                      complete          
-# 6   12   495  330  8   210  M12  M11        (((2^3):(2^2)):3):2  S12     2      2           2        21      true             true             5                      complete          
-# 7   12   792  330  5   120  M12  M11        S5                   S12     2      2           2        26      true             false                                   complete          
-# 8   12   792  396  6   180  M12  M11        S5                   M12     2      2           2        29      true             false            8                                        
-# 9   144  144  66   66  30   M12  PSL(2,11)  PSL(2,11)            M12:2   5      4           13       13      true             true                         true       Menon parameters  
-# 10  144  144  66   66  30   M12  PSL(2,11)  PSL(2,11)            M12:2   5      4           12       12      false            false                        true       Menon parameters  
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v    b    r    k   λ    G    Gα         GB                   Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   12   66   55   10  45   M12  M11        (A6.2):2             S12     2      2                  2       5       true             true             true             true                                        complete
+# 2   12   132  66   6   30   M12  M11        S6                   M12     2      2                  2       8       true             false            true             true                 2
+# 3   12   220  55   3   10   M12  M11        (((3^2):Q8):3):2     S12     2      2                  2       15      true             true             true             true                 4                      complete
+# 4   12   220  165  9   120  M12  M11        (((3^2):Q8):3):2     S12     2      2                  2       15      true             true             true             true                 3                      complete
+# 5   12   495  165  4   45   M12  M11        (((2^3):(2^2)):3):2  S12     2      2                  2       21      true             true             true             true                 6                      complete
+# 6   12   495  330  8   210  M12  M11        (((2^3):(2^2)):3):2  S12     2      2                  2       21      true             true             true             true                 5                      complete
+# 7   12   792  330  5   120  M12  M11        S5                   S12     2      2                  2       26      true             false            true             false                                       complete
+# 8   12   792  396  6   180  M12  M11        S5                   M12     2      2                  2       29      true             false            true             true                 8
+# 9   144  144  66   66  30   M12  PSL(2,11)  PSL(2,11)            M12:2   5      4                  13      13      true             true             true             false                            true       Menon parameters
+# 10  144  144  66   66  30   M12  PSL(2,11)  PSL(2,11)            M12:2   5      4                  12      12      false            false            true             false                            true       Menon parameters
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information: 
 # -----------------------
@@ -59,6 +62,7 @@
 # Block-transitive                     true         true         
 # Flag-transitive                      true         true         
 # Anti-flag-transitive                 true         true         
+# Flag-semiregular                     false        false        
 # Flag-regular                         false        false        
 # Point-primitive                      true         true         
 # Point-primitive type                 2            2            
@@ -84,6 +88,7 @@
 # Block-transitive                     true         true         
 # Flag-transitive                      true         true         
 # Anti-flag-transitive                 true         true         
+# Flag-semiregular                     false        false        
 # Flag-regular                         false        false        
 # Point-primitive                      true         true         
 # Point-primitive type                 2            2            
@@ -109,6 +114,7 @@
 # Block-transitive                     true              true         
 # Flag-transitive                      true              true         
 # Anti-flag-transitive                 true              true         
+# Flag-semiregular                     false             false        
 # Flag-regular                         false             false        
 # Point-primitive                      true              true         
 # Point-primitive type                 2                 2            
@@ -134,6 +140,7 @@
 # Block-transitive                     true              true         
 # Flag-transitive                      true              true         
 # Anti-flag-transitive                 true              true         
+# Flag-semiregular                     false             false        
 # Flag-regular                         false             false        
 # Point-primitive                      true              true         
 # Point-primitive type                 2                 2            
@@ -159,6 +166,7 @@
 # Block-transitive                     true                 true         
 # Flag-transitive                      true                 true         
 # Anti-flag-transitive                 true                 true         
+# Flag-semiregular                     false                false        
 # Flag-regular                         false                false        
 # Point-primitive                      true                 true         
 # Point-primitive type                 2                    2            
@@ -184,6 +192,7 @@
 # Block-transitive                     true                 true         
 # Flag-transitive                      true                 true         
 # Anti-flag-transitive                 true                 true         
+# Flag-semiregular                     false                false        
 # Flag-regular                         false                false        
 # Point-primitive                      true                 true         
 # Point-primitive type                 2                    2            
@@ -209,6 +218,7 @@
 # Block-transitive                     true             true         
 # Flag-transitive                      true             true         
 # Anti-flag-transitive                 false            true         
+# Flag-semiregular                     false            false        
 # Flag-regular                         false            false        
 # Point-primitive                      true             true         
 # Point-primitive type                 2                2            
@@ -234,6 +244,7 @@
 # Block-transitive                     true         true         
 # Flag-transitive                      true         true         
 # Anti-flag-transitive                 true         true         
+# Flag-semiregular                     false        false        
 # Flag-regular                         false        false        
 # Point-primitive                      true         true         
 # Point-primitive type                 2            2            
@@ -259,6 +270,7 @@
 # Block-transitive                     true                     true                     
 # Flag-transitive                      true                     true                     
 # Anti-flag-transitive                 false                    false                    
+# Flag-semiregular                     false                    false                    
 # Flag-regular                         false                    false                    
 # Point-primitive                      true                     true                     
 # Point-primitive type                 2                        2                        
@@ -284,6 +296,7 @@
 # Block-transitive                     true                     true                     
 # Flag-transitive                      true                     true                     
 # Anti-flag-transitive                 false                    false                    
+# Flag-semiregular                     false                    false                    
 # Flag-regular                         false                    false                    
 # Point-primitive                      false                    true                     
 # Point-primitive type                 0                        2                        
@@ -298,6 +311,7 @@ lD_M12 := [
  rec(
   autGroup := SymmetricGroup( [ 1 .. 12 ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 10, 11, 12 ],
   blockSizes := [ 10 ],
   isBinary := true,
@@ -313,6 +327,7 @@ lD_M12 := [
   autGroup := Group( [ ( 1, 2)( 6,12)( 7, 8)(10,11), ( 1, 3)( 6, 7)( 8,11)(10,12), ( 1, 3)( 2, 4)( 6,12)( 7,10), ( 2, 3)( 4, 5)( 7,12)( 8,10), ( 5, 9)( 6,12)( 7,10)( 8,11), 
       ( 1, 2)( 5, 6)( 8,11)( 9,12), ( 1, 2)( 3, 4)( 7,10)( 8,11) ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 8 ],
   baseBlock := [ 1, 3, 8, 10, 11, 12 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -327,6 +342,7 @@ lD_M12 := [
  rec(
   autGroup := SymmetricGroup( [ 1 .. 12 ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 15 ],
   baseBlock := [ 2, 5, 11 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -341,6 +357,7 @@ lD_M12 := [
  rec(
   autGroup := SymmetricGroup( [ 1 .. 12 ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 15 ],
   baseBlock := [ 1, 3, 4, 6, 7, 8, 9, 10, 12 ],
   blockSizes := [ 9 ],
   isBinary := true,
@@ -355,6 +372,7 @@ lD_M12 := [
  rec(
   autGroup := SymmetricGroup( [ 1 .. 12 ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 21 ],
   baseBlock := [ 1, 4, 9, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -369,6 +387,7 @@ lD_M12 := [
  rec(
   autGroup := SymmetricGroup( [ 1 .. 12 ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 21 ],
   baseBlock := [ 2, 3, 5, 6, 7, 8, 11, 12 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -383,6 +402,7 @@ lD_M12 := [
  rec(
   autGroup := SymmetricGroup( [ 1 .. 12 ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 26 ],
   baseBlock := [ 1, 3, 8, 11, 12 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -397,6 +417,7 @@ lD_M12 := [
  rec(
   autGroup := Group( [ ( 1, 2)( 5, 6)( 8,11)( 9,12), ( 1, 3)( 6, 7)( 8,11)(10,12), ( 1, 4, 2, 3)( 7, 8,10,11), ( 1, 5, 3, 2)( 8,11,12,10) ] ),
   autSubgroup := Group( [ ( 1, 4, 3)( 2, 7,11)( 5, 8,10)( 6, 9,12), ( 1,11)( 4,10)( 5, 8)( 7,12) ] ),
+  groupNumbers := [ " ", 2, 29 ],
   baseBlock := [ 1, 3, 4, 7, 9, 12 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -431,6 +452,7 @@ lD_M12 := [
         ( 27, 79)( 28,122)( 29, 70)( 30,104)( 31, 89)( 32, 46)( 34, 58)( 35,116)( 36, 82)( 37, 72)( 38, 48)( 39,107)( 40, 74)( 41, 42)( 43, 56)( 44, 47)( 45,108)( 50,128)( 51, 81)( 53, 87)( 55, 88)( 57,129)( 59, 80)
         ( 60, 96)( 61,137)( 62,111)( 63,105)( 64, 84)( 65,113)( 66, 83)( 67, 93)( 68,115)( 75,114)( 76,119)( 77,134)( 85,120)( 86,131)( 90,127)( 92,141)( 95,125)( 97,130)( 98,123)( 99,118)(100,126)(101,132)
         (102,121)(103,133)(106,144)(109,117)(112,142) ] ),
+  groupNumbers := [ " ", 13, 13 ],
   baseBlock := [ 2, 5, 7, 18, 19, 21, 24, 27, 28, 30, 32, 38, 39, 42, 43, 45, 47, 50, 51, 52, 55, 56, 61, 62, 63, 67, 69, 70, 71, 72, 76, 77, 78, 
       79, 80, 84, 85, 88, 89, 91, 92, 94, 95, 100, 101, 102, 104, 105, 116, 118, 119, 120, 121, 122, 125, 126, 127, 130, 131, 133, 135, 137, 139, 140, 141, 144 ],
   blockSizes := [ 66 ],
@@ -468,6 +490,7 @@ lD_M12 := [
         (119,131,143)(120,132,144), (  2, 10)(  4, 11)(  5,  7)(  9, 12)( 13, 37)( 14, 38)( 15, 39)( 16, 40)( 17, 41)( 18, 42)( 19, 43)( 20, 44)( 21, 45)( 22, 46)( 23, 47)( 24, 48)( 25, 35)( 27, 29)
         ( 28, 31)( 30, 33)( 53, 56)( 54, 57)( 55, 58)( 59, 60)( 61, 73)( 62, 74)( 63, 75)( 64, 76)( 65, 77)( 66, 78)( 67, 79)( 68, 80)( 69, 81)( 70, 82)( 71, 83)( 72, 84)( 86, 94)( 87, 92)( 89, 96)( 91, 93)( 97,109)( 98,110)
         ( 99,111)(100,112)(101,113)(102,114)(103,115)(104,116)(105,117)(106,118)(107,119)(108,120)(121,143)(122,135)(123,136)(124,133)(125,139)(126,144)(127,141)(128,137)(129,134)(130,142)(131,138)(132,140) ] ),
+  groupNumbers := [ " ", 12, 12 ],
   baseBlock := [ 14, 15, 16, 20, 22, 23, 26, 28, 30, 31, 33, 34, 38, 39, 40, 44, 46, 47, 49, 51, 53, 56, 59, 60, 62, 63, 65, 66, 68, 69, 74, 75, 77, 
       78, 80, 81, 85, 89, 90, 91, 93, 96, 98, 101, 102, 106, 107, 108, 110, 113, 114, 118, 119, 120, 122, 123, 125, 126, 128, 129, 134, 135, 136, 137, 139, 144 ],
   blockSizes := [ 66 ],
