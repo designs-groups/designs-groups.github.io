@@ -95,55 +95,58 @@ async function downloadRawFile(url, filename) {
   condition. Otherwise, the remarks explain the current scope or status of the
   classification.
 </p>
-<p><strong>1.</strong> The number of designs is provided is a table
-(symmetric, non-symmetric, point-primitive, block-primitive, etc). For
-example, the table below provides all information about the number of
-2-designs with automorphism group A5.2 = S5. Therefore, there are in
-total 5 flag-transitive 2-designs, one is symmetric, and the remaining
-four designs are non-symmetric. The symmetric design is
-point-imprimitive and block-imprimitive. All non-symmetric designs are
-point-primitive; among them, three are block-imprimitive.</p>
-<pre><code>Number of designs: 
---------------------------------------------------------------
-                  Symmetric  Non-symmetric  Total
-Point-primitive    0          4              4      
-Point-impritive    1          0              1  
+<p><strong>1.</strong> Number of designs: The first section is a table giving the
+number of recorded designs according to symmetry, point primitivity, block
+primitivity, flag-transitivity, and anti-flag-transitivity. The columns separate
+symmetric and non-symmetric designs and give the total. For example, the table
+below is for <code>A5.2 = S5</code>. There are five flag-transitive designs in
+total: one symmetric and four non-symmetric. The symmetric design is
+point-imprimitive and block-imprimitive. All four non-symmetric designs are
+point-primitive, and three of them are block-imprimitive. Three of the five
+designs are also anti-flag-transitive.</p>
+<pre><code>Number of designs:
 
-Point-primitive    0          1              1      
-Point-impritive    1          3              4  
---------------------------------------------------------------
-Total              1          4              5 
---------------------------------------------------------------</code></pre>
-<p><strong>2.</strong> Summary: The second section is a table presenting
-information on designs; the first column is the number assigned to the
-design in the row, and it is indeed the design number presented in
-section 4 (see below). The parameters v, b, r, k, and λ are presented in
-the second column to the sixth one, respectively. The next columns are
-the group G, the point-stabiliser Gα, the block-stabiliser GB, Aut(D),
-the rank of G, and the rank of Aut(D). The next two columns namely
-nr(Gα) and nr(GB) are the numbers of the positions of the
-point-stabiliser Gα and the block-stabiliser GB in the list of subgroups
-of G (up to conjugation), respectively. This list is not provided here.
-Fifteenth and sixteenth columns say that if D is point-primitive and/or
-block-primitive, respectively. The seventeenth column, named complement,
-indicates the design number, which is the complement of the design in
-the row. The eighteenth column records whether the design is symmetric
-or not. The last column is a place for further comments if
-applicable.</p>
-<p>Below is the table for A5.2 = S5. The design in line 3 is isomorphic
-to its complement. It is point-primitive but not block-primitive. The
-parameter set of the fifth design is the parameter set of the complement
-of PG(3,2) or Hadamard design.</p>
-<pre><code> Summary:
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- Nr  v   b   r   k  λ   G   Gα   GB   Aut(D)  rk(G)  rk(Aut(D))  nr(Gα)   nr(GB)  point-primitive  block-primitive  complement  symmetric  comments                                      
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
- 1   5   10  6   3  3   S5  S4   D12  S5      2      2           3        5       true             true                                    complete                                      
- 2   6   15  10  4  6   S5  5:4  D8   S6      2      2           4        8       true             false                                   complete                                      
- 3   6   20  10  3  4   S5  5:4  S3   S6      2      2           4        10      true             false            3                      complete                                      
- 4   10  15  6   4  2   S5  D12  D8   S6      3      2           5        8       true             false                                                                                 
- 5   15  15  8   8  4   S5  D8   D8   A8      4      2           8        8       false            false                        true       complement of PG(3,2) or Hadamard parameters  
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</code></pre>
+----------------------------------------------------
+                     Symmetric  Non-symmetric  Total
+----------------------------------------------------
+Point-primitive      0          4              4
+Point-imprimitive    1          0              1
+
+Block-primitive      0          1              1
+Block-imprimitive    1          3              4
+
+Flag-transitive      1          4              5
+AntiFlag-transitive  0          3              3
+----------------------------------------------------
+Total                1          4              5
+----------------------------------------------------</code></pre>
+<p><strong>2.</strong> Summary: The second section is a table giving one row for
+each recorded design. The first column is the design number; it is the same
+number used in section 3 and the position of the design in the list in section
+4. The next five columns give the parameters <em>v</em>, <em>b</em>, <em>r</em>,
+<em>k</em>, and λ. The following columns record <em>G</em>, the point-stabiliser
+<em>G</em><sub>α</sub>, the block-stabiliser <em>G</em><sub>B</sub>,
+Aut(<em>D</em>), the ranks of <em>G</em> and Aut(<em>D</em>), and the recorded
+numbers <code>nr(G)</code>, <code>nr(Gα)</code>, and <code>nr(GB)</code> when
+available. The next columns record point-primitivity, block-primitivity,
+flag-transitivity, and anti-flag-transitivity. The final columns record the
+design number of the complement when it occurs in the list, whether the design
+is symmetric, and any comments.</p>
+<p>Below is the current summary table for <code>A5.2 = S5</code>. Design 3 is
+isomorphic to its complement. It is point-primitive but not block-primitive.
+The parameter set of design 5 is the parameter set of the complement of
+PG(3,2), or equivalently has Hadamard parameters.</p>
+<pre><code>Summary:
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nr  v   b   r   k  λ  G   Gα   GB   Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1   5   10  6   3  3  S5  S4   D12  S5      2      2                  3       5       true             true             true             true                                        complete
+2   6   15  10  4  6  S5  5:4  D8   S6      2      2                  4       8       true             false            true             true                                        complete
+3   6   20  10  3  4  S5  5:4  S3   S6      2      2                  4       10      true             false            true             true                 3                      complete
+4   10  15  6   4  2  S5  D12  D8   S6      3      2                  5       8       true             false            true             false
+5   15  15  8   8  4  S5  D8   D8   A8      4      2                  8       8       false            false            true             false                            true       complement of PG(3,2) or Hadamard parameters
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</code></pre>
 <p><strong>3.</strong> Further information: This section provides
 further information on 2-designs and their automorphism groups. It
 starts with the design number, which is the position of the design in

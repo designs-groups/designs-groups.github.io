@@ -1,198 +1,204 @@
-# Designs by Groups website
+# How to Read the Database
 
-Static GitHub Pages site for the Designs by Groups database.
+This database records nontrivial \(2\)-designs admitting block-transitive
+automorphism groups, with a dedicated collection for flag-transitive designs.
+The data are organised into two principal sections, **Block-transitive**
+and **Flag-transitive**, and each section is further divided by
+group family.
 
-## Site hierarchy
+Within these sections, data files are named after an acting group \(G\). For
+example, a file named `U3(3).g` contains designs constructed with
+\(G=\operatorname{{U}}\_3(3)\) as the specified automorphism subgroup. Each file
+presents information about the designs in four main parts. Header remarks
+describe the scope of the classification: if the header states
+*all designs*, or gives no qualifying restriction, the file is intended
+to record a complete classification for the stated group and transitivity
+condition. Otherwise, the remarks explain the current scope or status of the
+classification.
 
-```text
-Home
-|
-|-- Flag-transitive designs
-|   |-- Alternating groups
-|   |-- Classical groups
-|   |-- Exceptional groups
-|   |-- Sporadic groups
-|   |-- Transitive groups
-|   `-- Primitive groups
-|
-|-- Block-transitive designs
-|   |-- Alternating groups
-|   |-- Classical groups
-|   |-- Exceptional groups
-|   |-- Sporadic groups
-|   |-- Transitive groups
-|   `-- Primitive groups
-|
-`-- How to read the database
+**1.** Number of designs: The first section is a table giving the
+number of recorded designs according to symmetry, point primitivity, block
+primitivity, flag-transitivity, and anti-flag-transitivity. The columns separate
+symmetric and non-symmetric designs and give the total. For example, the table
+below is for `A5.2 = S5`. There are five flag-transitive designs in
+total: one symmetric and four non-symmetric. The symmetric design is
+point-imprimitive and block-imprimitive. All four non-symmetric designs are
+point-primitive, and three of them are block-imprimitive. Three of the five
+designs are also anti-flag-transitive.
+
+```
+Number of designs:
+
+----------------------------------------------------
+                     Symmetric  Non-symmetric  Total
+----------------------------------------------------
+Point-primitive      0          4              4
+Point-imprimitive    1          0              1
+
+Block-primitive      0          1              1
+Block-imprimitive    1          3              4
+
+Flag-transitive      1          4              5
+AntiFlag-transitive  0          3              3
+----------------------------------------------------
+Total                1          4              5
+----------------------------------------------------
 ```
 
-## Publishing
+**2.** Summary: The second section is a table giving one row for
+each recorded design. The first column is the design number; it is the same
+number used in section 3 and the position of the design in the list in section
+4. The next five columns give the parameters *v*, *b*, *r*,
+*k*, and λ. The following columns record *G*, the point-stabiliser
+*G*α, the block-stabiliser *G*B,
+Aut(*D*), the ranks of *G* and Aut(*D*), and the recorded
+numbers `nr(G)`, `nr(Gα)`, and `nr(GB)` when
+available. The next columns record point-primitivity, block-primitivity,
+flag-transitivity, and anti-flag-transitivity. The final columns record the
+design number of the complement when it occurs in the list, whether the design
+is symmetric, and any comments.
 
-Publish the `/docs` folder through GitHub Pages.
+Below is the current summary table for `A5.2 = S5`. Design 3 is
+isomorphic to its complement. It is point-primitive but not block-primitive.
+The parameter set of design 5 is the parameter set of the complement of
+PG(3,2), or equivalently has Hadamard parameters.
 
-## Data-file behaviour
+```
+Summary:
 
-Rows with known repository files are clickable and include:
-
-- View
-- Download .g
-
-The current site links the known `A5.g` files in the block-transitive and flag-transitive catalogues.
-
-
-## Current navigation behaviour
-
-- Data-row click: opens the raw `.g` file directly.
-- Download button: fetches the raw file and starts the browser download flow.
-- Package tab: present but disabled and marked as unavailable.
-- Licence tab: present as a local site page.
-- Flag-transitive and Block-transitive sections: use consistent side navigation with the six group classes plus How to read.
-- Site width increased to 1680 px maximum with a 168 px sidebar.
-
-
-## Bibliography page
-
-`docs/bibliography.html` is generated from `docs/assets/references.bib`
-using the BibTeX `abbrv` style.
-
-The rendered bibliography uses an HTML ordered list (`<ol>`), so deleting
-a reference `<li>` from the page source automatically renumbers the
-remaining entries.
-
-The uploaded BibTeX source is copied unchanged to:
-
-`docs/assets/references.bib`
-
-
-## Automatic bibliography updates
-
-The published bibliography is built automatically from
-`bibliography/references.bib` and the curated stable-key list
-`bibliography/keys.txt`.
-
-Table Reference cells store stable BibTeX keys in `data-refkeys`; bibliography
-numbers and links are regenerated automatically on each build.
-
-See `BIBLIOGRAPHY_BUILD.md` for details.
-
-
-## Automatic footer update date
-
-Before each GitHub Pages deployment, the workflow runs:
-
-```text
-scripts/update_footer_date.py
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Nr  v   b   r   k  λ  G   Gα   GB   Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1   5   10  6   3  3  S5  S4   D12  S5      2      2                  3       5       true             true             true             true                                        complete
+2   6   15  10  4  6  S5  5:4  D8   S6      2      2                  4       8       true             false            true             true                                        complete
+3   6   20  10  3  4  S5  5:4  S3   S6      2      2                  4       10      true             false            true             true                 3                      complete
+4   10  15  6   4  2  S5  D12  D8   S6      3      2                  5       8       true             false            true             false
+5   15  15  8   8  4  S5  D8   D8   A8      4      2                  8       8       false            false            true             false                            true       complement of PG(3,2) or Hadamard parameters
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ```
 
-This updates the `Updated:` date in the footer of every HTML page automatically.
+**3.** Further information: This section provides
+further information on 2-designs and their automorphism groups. It
+starts with the design number, which is the position of the design in
+the list lD in section 4, or equivalently, the row number in the Summary
+table in section 2. For example, let D be the 12th design D with
+automorphism group G = U3(3), see table below. This design has parameter
+set [v, b, r, k, λ] = [ 28, 336, 216, 18, 136 ] and its complement has
+parameter set [ 28, 336, 120, 10, 40 ]. The full automorphism group
+Aut(D) of D is autGroup = O(7,2), and here G = autSubgroup = U3(3). For
+the Point-primitive type (respectively, Block-primitive type), if G (or
+Aut(D)) is primitive, then the type of the primitive permutation group
+is provided according to the O'Nan-Scott classification; otherwise, we
+write "0". Therefore, in this case, both Aut(D) and G are
+point-primitive of type "2" (Almost Simple type), and Aut(D) is
+block-primitive of type "2" (Almost Simple type) while G is
+block-imprimitive. We also observe that the complement of D cannot be in
+the list lD as G = U3(3) is not anti-flag-transitive.
 
+```
+ Design: 12
+ ------------------------------------------------------------------
+ Parameter set: [ 28, 336, 216, 18, 136 ]
+ Complement:    [ 28, 336, 120, 10, 40 ]
+ ------------------------------------------------------------------
+                                      G                 Aut(D)        
+ ------------------------------------------------------------------
+ Structure                            PSU(3,3)          O(7,2)        
+ Rank                                 2                 2             
+ 2-Homogeneous                        true              true          
+ Point-stabiliser                     ((3^2):3):8       O(5,3):2      
+ Block-stabiliser                     3xS3              S3xS6         
+ Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}   
+ Orbit structure of block-stabiliser  1^{1}9^{1}18^{1}  10^{1}18^{1}  
+ Point-transitive                     true              true          
+ Block-transitive                     true              true          
+ Flag-transitive                      true              true          
+ Anti-flag-transitive                 false             true          
+ Flag-regular                         true              false         
+ Point-primitive                      true              true          
+ Point-primitive type                 2                 2             
+ Block-primitive                      false             true          
+ Block-primitive type                 0                 2             
+ ------------------------------------------------------------------
+```
 
-## Automatic database-table updates
+For the labelling of the type of the primitive permutation group, we
+follow the GAP notation, which we provide below for convenience.
 
-Website table rows are rebuilt from the GAP data repository on each Pages build.
-Because the GAP data and website now share the same repository, pushes to `main`
-rebuild the tables directly. The workflow also has an hourly synchronization fallback.
+```
+Label     ONan-Scott Type
+------------------------------------------------------------------------
+1         Affine (HA)                  
+2         Almost simple (AS)
+3a        Diagonal, Socle consists of two normal subgroups (HS)
+3b        Diagonal, Socle is minimal normal (SD)
+4a        Product action with the first factor primitive of type 3a (HC)
+4b        Product action with the first factor primitive of type 3b (CD)
+4c        Product action with the first factor primitive of type 2 (PA)
+5         Twisted wreath product (TW)   
+-------------------------------------------------------------------------
+```
 
-See `AUTOMATIC_TABLES.md`.
+**4.** Designs: In this section, we present a list
+lD\_name of 2-designs where ``name'' is a name of group. Each design is
+presented as a record which can be recognised by the GAP package DESIGN;
+however, in the record presented here, we have some modifications. For
+each design D, we have added three components, namely, parameters,
+autGroup and baseBlock, indicating the parameter set [v,b,r,k,λ] of D,
+Aut(D), and the base block B, where ℬ = B^G and G = D.autSubgroup. For
+saving space, we have unbinded the block set from each design; however,
+for further consideration, we have added a loop at the end of the list
+lD, which binds the block set to each design. Therefore, one can use
+these designs for further consideration.
 
+Below is the list lD\_A5 of all 2-designs admitting G = A5 as
+flag-transitive automorphism group.
 
-## BibTeX key author/editor rule
+```
+lD_A5 := [ 
+    rec( parameters:=[ 5, 10, 6, 3, 3 ],
+        autGroup := Group( [ (1,2,3,4,5), (1,4,5,3) ] ),
+        autSubgroup := Group( [ (1,2,4), (1,3)(2,5) ] ),
+        baseBlock := [ 2, 4, 5 ],
+        blockSizes := [ 3 ],
+        isBinary := true,
+        isBlockDesign := true,
+        isSimple := true,
+        r := 6,
+        tSubsetStructure := rec( lambdas := [ 3 ],t := 2 ),
+        v:= 5), 
+    rec( parameters:=[ 6, 10, 5, 3, 2 ],
+        autGroup := Group( [ (1,3,2)(4,5,6), (1,3,5,4,2) ] ),
+        autSubgroup := Group( [ (1,4,3)(2,6,5), (1,3)(4,6) ] ),
+        baseBlock := [ 1, 2, 3 ],
+        blockSizes := [ 3 ],
+        isBinary := true,
+        isBlockDesign := true,
+        isSimple := true,
+        r := 5,
+        tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ),
+        v:= 6)
+]; 
+for D in lD_A5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+```
 
-BibTeX keys use surname initials from the authors. If an entry has no author
-field, the editor surname initials are used instead, in editor order.
+As noted above, lD\_A5 contains 2-designs with no block sets, but if
+we run the loop below, then we can obtain all 2-designs with the same
+structure as in the GAP package DESIGN:
 
-
-## Automatic reference normalization
-
-The deployment workflow automatically adds missing `References:` headers to GAP
-files, normalizes BibTeX keys using `alpha.bst` labels, migrates GAP reference
-keys, rebuilds the tables, renders the Bibliography with `abbrv.bst`, updates
-the footer date, and deploys the site.
-
-- Version 18: both author portraits are ovally cropped while preserving the current right-side layout.
-
-- Version 19: moved Seyed Hassan Alavi's portrait slightly higher, with no other changes.
-
-- Version 20: made Ashraf Daneshkhah's oval portrait crop slightly smaller, with no other changes.
-
-- Version 21: fixed the page header so the title is only `Designs by Groups`; the dash and restricted-condition explanations stay in the notice boxes.
-
-- Version 22: optimized image weight by using WebP for the displayed author portraits and removing unused image source files, with no visual/content changes to the site.
-
-- Version 23: changed only the footer subtitle to `Constructions and classifications of combinatorial block designs.`
-
-- Version 26: replaced visible `Imprimitive groups` catalogue links/pages with `Parameter sets`; parameter-set pages are rebuilt automatically from GAP data files using `scripts/update_parameter_sets.py`.
-
-- Version 27: reordered the final symmetry columns in associated database tables to Flag-transitive, Anti-flag-transitive, then Flag-regular or Flag-semiregular.
-
-- Version 28: refined Parameter sets pages/landing sections: narrowed the Number of designs column, deduplicated repeated group labels, changed the landing-section link text, and kept automatic data generation from repository GAP files.
-
-- Version 29: removed `ft` and `bt` from the public Parameter sets enumeration-information wording.
-
-- Version 30: removed bold styling from the `Click to access the data` link in the Parameter sets section; automatic parameter-set updating remains unchanged.
-
-- Version 31: added a notice to Transitive and Primitive group pages that the listed `.g` files are separate data files and that designs within each file are sorted by parameters.
-
-- Version 32: changed Parameter sets generation to collect only from group-type folders, excluding Transitive groups and Primitive groups folders.
-
-- Version 33: added search-engine support with `docs/robots.txt`, `docs/sitemap.xml`, canonical links, meta descriptions, and an automatic `scripts/update_seo.py` workflow step.
-
-- Version 34: added a separate sidebar `Useful links` box below `Report an error`, with local lightweight GAP and ATLAS logo badges and links.
-
-- Version 35: moved GAP and ATLAS useful links into the sidebar list below Licence and removed the separate Useful links box.
-
-- Version 36: replaced logo/card useful links with simple GAP and ATLAS text links below Licence in the sidebar.
-
-- Version 37: arranged the sidebar into three boxes: main navigation through Licence, Useful links with simple GAP/ATLAS text links, and Report an error.
-
-- Version 38: adjusted the separate Useful links sidebar box so GAP and ATLAS rows use the same full-width dimensions as the main sidebar list rows such as Licence.
-
-- Version 39: reordered Useful links so ATLAS appears before GAP.
-
-- Version 40: fixed the GitHub Actions workflow to run `scripts/update_parameter_sets.py`; parameter-set generation now explicitly scans only Alternating, Classical, Exceptional, and Sporadic group folders and excludes Transitive and Primitive folders.
-
-- Version 41: made the separate Useful links sidebar box and its dark-blue title bar exactly full-width, matching the main sidebar box containing Licence.
-
-- Version 42: made the Useful links title a standard full-width sidebar row matching Licence, and preserved the parameter-set workflow/generator fix.
-
-- Version 43: restored Useful links as a separate box with a full-width dark heading matching Licence, and made the parameter-set generator explicitly exclude both Transitive groups and Primitive groups folders.
-
-- Version 44: rewrote parameter-set generation to collect data directly and only from `.g` files in the four group-type folders: Alternating groups, Classical groups, Exceptional groups, and Sporadic groups.
-
-- Version 45: made `update_catalogue_indexes.py` run `update_parameter_sets.py` before rebuilding catalogue landing pages, so Parameter sets are generated even if the older workflow omits the separate parameter-set step. Parameter data are collected only from `.g` files in Alternating, Classical, Exceptional, and Sporadic group folders.
-
-- Version 46: narrowed the parameter columns in Parameter sets tables and clarified that Number of designs counts designs obtained from the groups in the Group column, not all designs with that parameter set.
-
-- Version 47: added Affine groups pages for flag-transitive and block-transitive designs, configured automatic table generation from `.g` files in Affine groups folders, and included Affine groups in Parameter sets generation.
-
-- Version 48: moved Affine groups after Primitive groups in sidebars and on the flag-transitive/block-transitive catalogue pages.
-
-- Version 49: added automatic sidebar navigation rebuilding from `data/table_sources.json`; verified that Primitive groups and Affine groups pages are populated from their `.g` folders, with Affine groups ordered after Primitive groups.
-
-- Version 50: on main catalogue pages, Affine groups are displayed by degree, while Affine detailed tables and Parameter sets Group entries use the actual group label from the `.g` file.
-
-- Version 51: made Affine groups use the same degree-grid style as Transitive groups and Primitive groups on the main catalogue pages, while keeping the detailed Affine tables indexed by group G.
-
-- Version 52: made the detailed Affine groups pages match the Transitive/Primitive degree-page style: title with `(of degree)`, first column Degree, and degree row labels; Parameter sets still use actual group labels.
-
-- Version 53: removed underlines from degree-number links on catalogue degree grids and detailed degree pages.
-
-- Version 54: Parameter sets now read actual G labels from the Non-isomorphic designs summary table inside Affine `.g` files, instead of using degree filenames such as `v_05`; underline removal for block-transitive degree/table-number links was strengthened.
-
-- Version 56: based on version 54; the Parameter sets pages now use `parameters.html` URLs, and all internal website, script, sitemap, canonical, and workflow references were updated.
-
-- Version 57: Parameter sets now extract actual group names from the `G` column of the `Non-isomorphic designs` table in Affine `.g` files for both flag-transitive and block-transitive data; Affine degree filenames such as `v_09` are no longer displayed as group names.
-
-- Version 58: updated the sorted-by-parameters notice, changed Γ/Σ to Γ/Σ, and expanded Parameter sets pages to include Number of designs columns: Total, Point-primitive, Point-imprimitive, Block-primitive, and Block-imprimitive.
-
-- Version 59: fixed Parameter sets table widths/count-column styling, added three-state sorting, kept Group cells left aligned, rendered Γ/Σ as Γ/Σ in pages, and changed Parameter sets counts to use the All designs table in the associated `.g` files when present.
-
-- Version 60: Parameter sets count columns now read the Total column from the `number of non-isomorphic designs` summary table: Total, Point-primitive, Point-imprimitive, Block-primitive, and Block-imprimitive. Summary counts are used only when the file has a single parameter set; otherwise row-level data prevent assigning counts to the wrong parameter.
-
-- Version 61: fixed Parameter sets table styling: parameter columns are narrow again, Number of designs columns use regular count-column styling, and the Group column is left-aligned. Also removed remaining Γ/Σ words from generated/static text.
-
-- Version 62: all Parameter sets data generation, final column widths, Group-column left alignment, three-state sorting support, notice correction, and Γ/Σ replacement are automatic in scripts and GitHub Actions. No manual HTML editing is required after a `.g` file is added or changed.
-
-- Version 63: one automatic pipeline (`scripts/update_site.py`) rebuilds all detailed tables from their associated `.g` folders, Parameter sets, catalogue pages, navigation, bibliography, footer and SEO, applies final text/symbol formatting, and runs `scripts/validate_site.py` before deployment.
-
-- Version 64: Parameter sets now use the exact Alternating-groups count headings and measured column widths, keep the five parameter columns at 58 px, force the Group heading and entries left, and retain automatic `.g`-driven rebuilding through `scripts/update_site.py`.
+```
+gap> for D in lD_A5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+gap> lD;
+[ rec( autGroup := Group([ (1,2,3,4,5), (1,4,5,3) ]), autSubgroup := Group([ (1,2,4), (1,3)(2,5) ]), 
+      baseBlock := [ 2, 4, 5 ], blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 2, 5 ], [ 1, 3, 4 ], 
+          [ 1, 3, 5 ], [ 1, 4, 5 ], [ 2, 3, 4 ], [ 2, 3, 5 ], [ 2, 4, 5 ], [ 3, 4, 5 ] ], isBinary := true, 
+      isBlockDesign := true, isSimple := true, parameters := [ 5, 10, 6, 3, 3 ], r := 6, 
+      tSubsetStructure := rec( lambdas := [ 3 ], t := 2 ), v := 5 ), 
+  rec( autGroup := Group([ (1,3,2)(4,5,6), (1,3,5,4,2) ]), autSubgroup := Group([ (1,4,3)(2,6,5), (1,3)(4,6) ]), 
+      baseBlock := [ 1, 2, 3 ], blockSizes := [ 3 ], blocks := [ [ 1, 2, 3 ], [ 1, 2, 4 ], [ 1, 3, 5 ], [ 1, 4, 6 ], 
+          [ 1, 5, 6 ], [ 2, 3, 6 ], [ 2, 4, 5 ], [ 2, 5, 6 ], [ 3, 4, 5 ], [ 3, 4, 6 ] ], isBinary := true, 
+      isBlockDesign := true, isSimple := true, parameters := [ 6, 10, 5, 3, 2 ], r := 5, 
+      tSubsetStructure := rec( lambdas := [ 2 ], t := 2 ), v := 6 ) ]
+gap> IsIsomorphicBlockDesign( lD[ 1 ] , lD[ 2 ] );
+false
+```
