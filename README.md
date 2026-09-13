@@ -1,6 +1,6 @@
 # Designs by Groups 
 
-This database records nontrivial \(2\)-designs admitting block-transitive
+This database records nontrivial 2-designs admitting block-transitive
 automorphism groups, with a dedicated collection for flag-transitive designs.
 The data are organised into two principal sections, **Block-transitive**
 and **Flag-transitive**, and each section is further divided by
