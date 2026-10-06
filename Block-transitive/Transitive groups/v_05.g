@@ -15,10 +15,10 @@
 # Point-primitive      0          1              1      
 # Point-imprimitive    0          0              0      
 #                                                       
-# Block-primitive      0          1              1      
-# Block-imprimitive    0          0              0      
+# Block-primitive      0          0              0      
+# Block-imprimitive    0          1              1      
 #                                                       
-# Flag-transitive      0          1              1      
+# Flag-transitive      0          0              0      
 # AntiFlag-transitive  0          1              1      
 # ------------------------------------------------------
 # Total                0          1              1      
@@ -28,49 +28,58 @@
 # -----------
 
 #    Non-isomorphic designs:
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v  b   r  k  λ  G   Gα  GB  Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   5  10  6  3  3  A5  A4  S3  S5      2      2           4      1       1       true             true             true             true                                        complete  
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r  k  λ  G         Gα  GB  Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   5  10  6  3  3  AGL(1,5)  4   2   S5      2      2           3      1       1       true             false            false            true                                        complete  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#    Reduced designs (within each group):
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r  k  λ  G         Gα  GB                Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   5  10  6  3  3  AGL(1,5)  4   2                 S5      2      2           3      1       1       true             false            false            true                                        complete  
+# 2   5  10  6  3  3  A5        A4  (S3 x S2) cap A5  S5      2      2           4      1       1       true             true             true             true                                        complete  
+# 3   5  10  6  3  3  S5        S4  S3 x S2           S5      2      2           5      1       1       true             true             true             true                                        complete  
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v  b   r  k  λ  G         Gα  GB   Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   5  10  6  3  3  AGL(1,5)  4   2    S5      2      2           3      1       1       true             false            false            true                                        complete  
-# 2   5  10  6  3  3  A5        A4  S3   S5      2      2           4      1       1       true             true             true             true                                        complete  
-# 3   5  10  6  3  3  S5        S4  D12  S5      2      2           5      1       1       true             true             true             true                                        complete  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r  k  λ  G         Gα  GB                Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   5  10  6  3  3  AGL(1,5)  4   2                 S5      2      2           3      1       1       true             false            false            true                                        complete  
+# 2   5  10  6  3  3  A5        A4  (S3 x S2) cap A5  S5      2      2           4      1       1       true             true             true             true                                        complete  
+# 3   5  10  6  3  3  S5        S4  S3 x S2           S5      2      2           5      1       1       true             true             true             true                                        complete  
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
-# ----------------------------------------------------
+# -------------------------------------------------------
 # Parameter set: [ 5, 10, 6, 3, 3 ]
 # Complement:    [ 5, 10, 4, 2, 1 ]
-# ----------------------------------------------------
-#                                      G      Aut(D)  
-# ----------------------------------------------------
-# Structure                            A5     S5      
-# Rank                                 2      2       
-# 2-Homogeneous                        true   true    
-# Point-stabiliser                     A4     S4      
-# Block-stabiliser                     S3     D12     
-# Orbit structure of point-stabiliser                 
-# Orbit structure of block-stabiliser                 
-# Point-transitive                     true   true    
-# Block-transitive                     true   true    
-# Flag-transitive                      true   true    
-# Anti-flag-transitive                 true   true    
-# Flag-semiregular                     false  false   
-# Flag-regular                         false  false   
-# Point-primitive                      true   true    
-# Point-primitive type                 2      2       
-# Block-primitive                      true           
-# Block-primitive type                                
-# ----------------------------------------------------
+# -------------------------------------------------------
+#                                      G         Aut(D)  
+# -------------------------------------------------------
+# Structure                            AGL(1,5)  S5      
+# Rank                                 2         2       
+# 2-Homogeneous                        true      true    
+# Point-stabiliser                     4         S4      
+# Block-stabiliser                     2         D12     
+# Orbit structure of point-stabiliser                    
+# Orbit structure of block-stabiliser                    
+# Point-transitive                     true      true    
+# Block-transitive                     true      true    
+# Flag-transitive                      false     true    
+# Anti-flag-transitive                 true      true    
+# Flag-semiregular                     true      false   
+# Flag-regular                         false     false   
+# Point-primitive                      true      true    
+# Point-primitive type                 1         2       
+# Block-primitive                      false             
+# Block-primitive type                                   
+# -------------------------------------------------------
 
 # 4. Designs (up to isomorphism): 
 # -------------------------------
@@ -78,8 +87,8 @@
 lD_5 :=  [
  rec( parameters:= [ 5, 10, 6, 3, 3 ],
   autGroup := Group( [ (1,2,3,4,5), (1,2) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5), (3,4,5) ] ),
-  groupNumbers := [ 4, 1, 1 ],
+  autSubgroup := Group( [ (1,2,3,4,5), (1,2,4,3) ] ),
+  groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -93,7 +102,56 @@ lD_5 :=  [
 ]; 
 for D in lD_5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 5. Designs (all): 
+# 5. Designs (reduced within each group): 
+# ----------------------------------------
+
+lD_5_reduced :=  [
+ rec( parameters := [ 5, 10, 6, 3, 3 ],
+  autGroup := Group( [ (1,2,3,4,5), (1,2) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5), (1,2,4,3) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 5),
+ rec( parameters := [ 5, 10, 6, 3, 3 ],
+  autGroup := Group( [ (1,2), (1,2,3,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5), (3,4,5) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 5),
+ rec( parameters:= [ 5, 10, 6, 3, 3 ],
+  autGroup := Group( [ (1,2,3,4,5), (1,2) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5), (1,2) ] ),
+  groupNumbers := [ 5, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 5)
+]; 
+for D in lD_5_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+
+# 6. Designs (all): 
 # -----------------
 
 lD_5_all :=  [
@@ -112,10 +170,10 @@ lD_5_all :=  [
   t := 2 ),
   v:= 5),
  rec( parameters := [ 5, 10, 6, 3, 3 ],
-  autGroup := Group( [ (1,2,3,4,5), (1,2) ] ),
+  autGroup := Group( [ (1,2), (1,2,3,4,5) ] ),
   autSubgroup := Group( [ (1,2,3,4,5), (3,4,5) ] ),
   groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
+  baseBlock := [ 1 .. 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
@@ -129,7 +187,7 @@ lD_5_all :=  [
   autGroup := Group( [ (1,2,3,4,5), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5), (1,2) ] ),
   groupNumbers := [ 5, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
+  baseBlock := [ 1 .. 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,

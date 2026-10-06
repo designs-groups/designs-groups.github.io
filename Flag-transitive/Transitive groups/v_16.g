@@ -4287,7 +4287,7 @@ lD_16 :=  [
   t := 2 ),
   v:= 16)
 ]; 
-for D in lD_16 do if IsCompleteParameterSet( D.parameters ) then D.blocks := Combinations( [1..D.v], D.blockSizes[1] ); else D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); fi; od; 
+for D in lD_16 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 5. Designs (reduced within each group): 
 # ----------------------------------------
@@ -8298,7 +8298,7 @@ lD_16_reduced :=  [
   t := 2 ),
   v:= 16)
 ]; 
-for D in lD_16_reduced do if IsCompleteParameterSet( D.parameters ) then D.blocks := Combinations( [1..D.v], D.blockSizes[1] ); else D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); fi; od; 
+for D in lD_16_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
 # 6. Designs (all): 
 # -----------------
@@ -13065,5 +13065,5 @@ lD_16_all :=  [
   t := 2 ),
   v:= 16)
 ]; 
-for D in lD_16_all do if IsCompleteParameterSet( D.parameters ) then D.blocks := Combinations( [1..D.v], D.blockSizes[1] ); else D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); fi; od; 
+for D in lD_16_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
