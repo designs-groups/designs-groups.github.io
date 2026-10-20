@@ -2,7 +2,7 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): HN
 # ####################################################################################################
-# Remark:       HNere exists no 2-design admitting HN as a flag-transitive automorphism group
+# Remark:       there exists no 2-design admitting HN as a flag-transitive automorphism group
 # References:    
 
 # 1. number of designs: 
@@ -32,7 +32,7 @@
 #                                                                                                                                                                                          
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. FurHNer information: 
+# 3. Further information: 
 # -----------------------
 
 # 4. Designs: 
