@@ -2,7 +2,7 @@
 # Block-transitive 2-designs 
 # Group (autSubgroup): A6
 # ####################################################################################################
-# Remarks:      k<=10 
+# Remarks:      Restriction: k<=10 
 #               lD_A6 is the list of the designs
 # References:    
 
