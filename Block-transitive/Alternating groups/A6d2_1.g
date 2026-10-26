@@ -2,7 +2,7 @@
 # Block-transitive 2-designs 
 # Group (autSubgroup): A6.2_1 = S6 = PΣL2(9) = PSO5(2)
 # ####################################################################################################
-# Remarks:      all designs 
+# Remarks:      k<=10 
 #               lD_S6 is the list of the designs
 # References:    
 
