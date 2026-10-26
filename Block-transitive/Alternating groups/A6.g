@@ -32,15 +32,15 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1    6   15   10   4  6   A6        A5     (S4 x S2) cap A6  S6        2      2                  2       5       true             true             true             true                                        complete                                      
 # 2    6   20   10   3  4   A6        A5     (S3 x S3) cap A6  S6        2      2                  2       7       true             false            true             true                 2                      complete                                      
-# 3    10  15   6    4  2   PSL(2,9)  3^2:4  S4                PΣL(2,9)  2      2                  4       5       true             true             true             true                 4                                                                    
-# 4    10  15   9    6  5   PSL(2,9)  3^2:4  S4                PΣL(2,9)  2      2                  4       5       true             true             true             true                 3                                                                    
-# 5    10  36   18   5  8   PSL(2,9)  3^2:4  D10               M10       2      2                  4       10      true             false            true             true                                                                                      
-# 6    10  45   36   8  28  PSL(2,9)  3^2:4  D8                S10       2      2                  4       12      true             false            false            true                                        complete                                      
-# 7    10  60   18   3  4   PSL(2,9)  3^2:4  S3                PΣL(2,9)  2      2                  4       13      true             false            true             false                8                                                                    
-# 8    10  60   42   7  28  PSL(2,9)  3^2:4  S3                PΣL(2,9)  2      2                  4       13      true             false            false            true                 7                                                                    
-# 9    10  90   45   5  20  PSL(2,9)  3^2:4  4                 PΣL(2,9)  2      2                  4       18      true             false            false            false                                                                                     
-# 10   10  180  72   4  24  PSL(2,9)  3^2:4  2                 PΓL(2,9)  2      2                  4       21      true             false            false            false                11                                                                   
-# 11   10  180  108  6  60  PSL(2,9)  3^2:4  2                 PΓL(2,9)  2      2                  4       21      true             false            false            false                10                                                                   
+# 3    10  15   6    4  2   A6        3^2:4  S4                PΣL(2,9)  2      2                  4       5       true             true             true             true                 4                                                                    
+# 4    10  15   9    6  5   A6        3^2:4  S4                PΣL(2,9)  2      2                  4       5       true             true             true             true                 3                                                                    
+# 5    10  36   18   5  8   A6        3^2:4  D10               M10       2      2                  4       10      true             false            true             true                                                                                      
+# 6    10  45   36   8  28  A6        3^2:4  D8                S10       2      2                  4       12      true             false            false            true                                        complete                                      
+# 7    10  60   18   3  4   A6        3^2:4  S3                PΣL(2,9)  2      2                  4       13      true             false            true             false                8                                                                    
+# 8    10  60   42   7  28  A6        3^2:4  S3                PΣL(2,9)  2      2                  4       13      true             false            false            true                 7                                                                    
+# 9    10  90   45   5  20  A6        3^2:4  4                 PΣL(2,9)  2      2                  4       18      true             false            false            false                                                                                     
+# 10   10  180  72   4  24  A6        3^2:4  2                 PΓL(2,9)  2      2                  4       21      true             false            false            false                11                                                                   
+# 11   10  180  108  6  60  A6        3^2:4  2                 PΓL(2,9)  2      2                  4       21      true             false            false            false                10                                                                   
 # 12   15  15   7    7  3   A6        S4     S4                PSL(4,2)  3      2                  5       5       true             true             false            true                 13          true       PG(3,2) or Hadamard parameters                
 # 13   15  15   8    8  4   A6        S4     S4                PSL(4,2)  3      2                  5       5       true             true             true             false                12          true       complement of PG(3,2) or Hadamard parameters  
 # 14   15  120  56   7  24  A6        S4     3                 PSL(4,2)  3      2                  5       19      true             false            false            false                15                                                                   
@@ -237,7 +237,7 @@
 # ----------------------------------------------------------
 #                                      G         Aut(D)     
 # ----------------------------------------------------------
-# Structure                            PSL(2,9)  PΣL(2,9)   
+# Structure                            A6        PΣL(2,9)   
 # Rank                                 2         2          
 # 2-Homogeneous                        true      true       
 # Point-stabiliser                     3^2:4     (S3xS3):2  
@@ -263,7 +263,7 @@
 # ----------------------------------------------------------
 #                                      G         Aut(D)     
 # ----------------------------------------------------------
-# Structure                            PSL(2,9)  PΣL(2,9)   
+# Structure                            A6        PΣL(2,9)   
 # Rank                                 2         2          
 # 2-Homogeneous                        true      true       
 # Point-stabiliser                     3^2:4     (S3xS3):2  
@@ -289,7 +289,7 @@
 # -------------------------------------------------------
 #                                      G         Aut(D)  
 # -------------------------------------------------------
-# Structure                            PSL(2,9)  M10     
+# Structure                            A6        M10     
 # Rank                                 2         2       
 # 2-Homogeneous                        true      true    
 # Point-stabiliser                     3^2:4     3^2:Q8  
@@ -315,7 +315,7 @@
 # -------------------------------------------------------
 #                                      G         Aut(D)  
 # -------------------------------------------------------
-# Structure                            PSL(2,9)  S10     
+# Structure                            A6        S10     
 # Rank                                 2         2       
 # 2-Homogeneous                        true      true    
 # Point-stabiliser                     3^2:4     S9      
@@ -341,7 +341,7 @@
 # ----------------------------------------------------------
 #                                      G         Aut(D)     
 # ----------------------------------------------------------
-# Structure                            PSL(2,9)  PΣL(2,9)   
+# Structure                            A6        PΣL(2,9)   
 # Rank                                 2         2          
 # 2-Homogeneous                        true      true       
 # Point-stabiliser                     3^2:4     (S3xS3):2  
@@ -367,7 +367,7 @@
 # ----------------------------------------------------------
 #                                      G         Aut(D)     
 # ----------------------------------------------------------
-# Structure                            PSL(2,9)  PΣL(2,9)   
+# Structure                            A6        PΣL(2,9)   
 # Rank                                 2         2          
 # 2-Homogeneous                        true      true       
 # Point-stabiliser                     3^2:4     (S3xS3):2  
@@ -393,7 +393,7 @@
 # ----------------------------------------------------------
 #                                      G         Aut(D)     
 # ----------------------------------------------------------
-# Structure                            PSL(2,9)  PΣL(2,9)   
+# Structure                            A6        PΣL(2,9)   
 # Rank                                 2         2          
 # 2-Homogeneous                        true      true       
 # Point-stabiliser                     3^2:4     (S3xS3):2  
@@ -419,7 +419,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL(2,9)  PΓL(2,9)  
+# Structure                            A6        PΓL(2,9)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     3^2:4     3^2:QD16  
@@ -445,7 +445,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL(2,9)  PΓL(2,9)  
+# Structure                            A6        PΓL(2,9)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     3^2:4     3^2:QD16  
