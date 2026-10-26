@@ -3,7 +3,7 @@
 # Group (autSubgroup): A6.2^2 = PΓL(2,9)
 # ####################################################################################################
 # Remarks:      Restriction: k<=10
-#               lD_PΓL29 is the list of the designs
+#               lD_A6V4 is the list of the designs
 # References:    
 
 # 1. number of designs: 
@@ -41348,7 +41348,7 @@
 # 4. Designs: 
 # -----------
 
-lD_PΓL29 :=  [
+lD_A6V4 :=  [
  rec( parameters := [ 10, 30, 12, 4, 4 ],
   autGroup := Group( [ ( 2, 3)( 5, 7)( 9,10), (1,2,4,6)(3,5,8,9) ], () ),
   autSubgroup := Group( [ ( 2, 3)( 5, 7)( 9,10), (1,2,4,6)(3,5,8,9) ], () ),
@@ -62770,4 +62770,4 @@ lD_PΓL29 :=  [
   t := 2 ),
   v:= 36)
 ]; 
-for D in lD_PΓL29 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_A6V4 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
