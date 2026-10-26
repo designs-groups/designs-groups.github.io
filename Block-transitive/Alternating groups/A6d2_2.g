@@ -2,7 +2,7 @@
 # Block-transitive 2-designs 
 # Group (autSubgroup): A6.2_2 = PGL2(9) = SO3(9)
 # ####################################################################################################
-# Remarks:      all designs 
+# Remarks:      k<=10 
 #               lD_PGL29 is the list of the designs
 # References:    
 
