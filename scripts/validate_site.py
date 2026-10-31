@@ -198,6 +198,50 @@ def main() -> int:
             ):
                 errors.append(f"{page_rel} Download .g link is incorrect for {source}")
 
+    # Named group-type sources on Parameter sets must use exactly the same
+    # source-level group label as the corresponding main FT/BT catalogue page.
+    # Both are defined by update_data_tables.parse_group_label() followed by
+    # math_label(); Parameter sets must not invent a row-level alternative.
+    if parameter_module is not None:
+        tools = parameter_module.load_data_tools()
+        repository = config.get("repository", "designs-groups/designs-groups.github.io")
+        branch = config.get("branch", "main")
+        for kind, prefix in parameter_module.CATEGORY_PREFIXES.items():
+            page_rel = parameter_module.PARAMETER_SET_PAGES[kind]
+            page_path = root / page_rel
+            if not page_path.exists():
+                continue
+            page_text = page_path.read_text(encoding="utf-8", errors="replace")
+            for folder in parameter_module.relevant_source_folders(config).get(kind, set()):
+                if not folder.endswith("/"):
+                    continue
+                short_folder = folder[len(prefix):].rstrip("/") if folder.startswith(prefix) else ""
+                if short_folder in parameter_module.DEGREE_SOURCE_ROLES or short_folder in parameter_module.EXCLUDED_SOURCE_FOLDERS:
+                    continue
+                folder_path = root / folder.rstrip("/")
+                if not folder_path.exists():
+                    continue
+                for gfile in sorted(folder_path.rglob("*.g")):
+                    source = gfile.relative_to(root).as_posix()
+                    text = gfile.read_text(encoding="utf-8", errors="replace")
+                    src = parameter_module.SourceText(source_path=source, text=text)
+                    counts_by_param, _groups_by_param, recognized = parameter_module.parse_group_type_source(src)
+                    if not counts_by_param:
+                        continue
+                    expected_raw = parameter_module.raw_url(repository, branch, source)
+                    expected_label = tools.math_label(
+                        tools.parse_group_label(text.splitlines(), gfile.stem)
+                    )
+                    anchor = (
+                        f'href="{expected_raw}" target="_blank" rel="noopener noreferrer" '
+                        f'onclick="recordDataAccess();">{expected_label}</a>'
+                    )
+                    if anchor not in page_text:
+                        errors.append(
+                            f"{page_rel} does not use the main-page group label {expected_label!r} "
+                            f"for Parameter-set source {source}"
+                        )
+
     # Degree-based Parameter-set sources must be displayed by source label
     # (Trans(v), Prim(v), Aff(v)) and link to their own .g file.
     if parameter_module is not None:

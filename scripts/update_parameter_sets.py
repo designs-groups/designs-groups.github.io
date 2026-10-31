@@ -781,11 +781,18 @@ def collect_records(data_root: Path, repository: str, branch: str, source_folder
                     )
                 continue
 
+            # The Group column on Parameter sets must use exactly the same
+            # source-level group name as the corresponding main FT/BT catalogue
+            # page.  Do not derive a separate display name from individual
+            # Summary-table rows: the main pages use parse_group_label().
+            main_group_label = tools.parse_group_label(
+                source.text.splitlines(), Path(source.source_path).stem
+            )
+
             stats[kind].contributing += 1
             for param, counts in counts_by_param.items():
                 record = records[kind].setdefault(param, ParameterRecord(param=param))
-                for group_label in groups_by_param.get(param, set()):
-                    add_named_group(record, group_label, url, tools)
+                add_named_group(record, main_group_label, url, tools)
                 role_map = contributions[kind].setdefault(param, {})
                 role_map.setdefault("group_type", []).append(
                     SourceParamContribution(source_path=source.source_path, role="group_type", counts=counts)
