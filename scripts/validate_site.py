@@ -298,6 +298,15 @@ def main() -> int:
                 errors.append(f"docs/search.html missing: {item}")
     if not search_script.exists():
         errors.append("Missing search behavior: docs/assets/search.js")
+    else:
+        search_js_text = search_script.read_text(encoding="utf-8", errors="replace")
+        for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)"):
+            if required_js not in search_js_text:
+                errors.append(f"Search behavior missing fixed-layout/index safeguard: {required_js}")
+    style_text = (docs / "assets" / "style.css").read_text(encoding="utf-8", errors="replace")
+    for required_css in (".search-results-table,", "table-layout: fixed !important", "min-width: 0 !important"):
+        if required_css not in style_text:
+            errors.append(f"Search table fixed-width CSS missing: {required_css}")
     if not search_data.exists():
         errors.append("Missing generated search data: docs/assets/search-data.json")
     else:
@@ -306,16 +315,23 @@ def main() -> int:
             search_records = search_payload.get("records", [])
             if not search_records:
                 errors.append("Generated search data contain no parameter-set records")
+            classified_totals = {"flag_transitive": 0, "block_transitive": 0}
             for record in search_records:
                 if not isinstance(record.get("param"), list) or len(record["param"]) != 5:
                     errors.append("Search data contain an invalid parameter tuple")
                     continue
                 for kind_key in ("flag_transitive", "block_transitive"):
                     for property_key in ("point_primitive", "point_imprimitive", "block_primitive", "block_imprimitive"):
-                        for group in record.get(kind_key, {}).get(property_key, []):
+                        groups = record.get(kind_key, {}).get(property_key, [])
+                        classified_totals[kind_key] += len(groups)
+                        for group in groups:
                             url = group.get("url", "")
                             if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
                                 errors.append(f"Search data contain a non-raw .g link: {url}")
+            if search_records and classified_totals["flag_transitive"] == 0:
+                errors.append("Search data contain no flag-transitive classified group entries")
+            if search_records and classified_totals["block_transitive"] == 0:
+                errors.append("Search data contain no block-transitive classified group entries")
         except Exception as exc:
             errors.append(f"Could not validate search-data.json: {exc}")
 

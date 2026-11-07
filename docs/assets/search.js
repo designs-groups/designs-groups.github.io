@@ -29,6 +29,27 @@
     ];
   }
 
+
+  function rebuildColumns() {
+    const kinds = activeKinds();
+    const existing = table.querySelector("colgroup");
+    if (existing) existing.remove();
+    const colgroup = document.createElement("colgroup");
+    const parameterWidth = kinds.length === 2 ? 4.5 : 6.0;
+    const groupWidth = (100 - 5 * parameterWidth) / (kinds.length * 4);
+    for (let i = 0; i < 5; i += 1) {
+      const col = document.createElement("col");
+      col.style.width = parameterWidth + "%";
+      colgroup.appendChild(col);
+    }
+    for (let i = 0; i < kinds.length * 4; i += 1) {
+      const col = document.createElement("col");
+      col.style.width = groupWidth + "%";
+      colgroup.appendChild(col);
+    }
+    table.insertBefore(colgroup, thead);
+  }
+
   function rebuildHeader() {
     const kinds = activeKinds();
     const top = document.createElement("tr");
@@ -112,6 +133,10 @@
   }
 
   function render(records) {
+    if (!Array.isArray(records) || records.length === 0) {
+      throw new Error("Search index is empty.");
+    }
+    rebuildColumns();
     rebuildHeader();
     const kinds = activeKinds();
     const matchesList = records.filter(matches);
@@ -164,7 +189,10 @@
       render(Array.isArray(data.records) ? data.records : []);
     })
     .catch(function () {
+      rebuildColumns();
+      rebuildHeader();
       summary.textContent = "Search data are currently unavailable.";
-      tbody.innerHTML = '<tr><td class="empty-row">Search data are currently unavailable.</td></tr>';
+      const colspan = 5 + activeKinds().length * 4;
+      tbody.innerHTML = '<tr><td colspan="' + colspan + '" class="empty-row">Search data are currently unavailable. The website search index has not been generated successfully.</td></tr>';
     });
 })();

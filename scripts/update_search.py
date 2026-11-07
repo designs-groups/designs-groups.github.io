@@ -142,6 +142,7 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
         raise RuntimeError("Search-data collection errors:\n- " + "\n- ".join(unresolved))
 
     serialized = []
+    kind_group_totals = {"flag_transitive": 0, "block_transitive": 0}
     for param in sorted(records):
         record = records[param]
         output = {"param": record["param"]}
@@ -151,7 +152,22 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
                 values = list(record[kind_key][property_key].values())
                 values.sort(key=lambda item: (item["label"].casefold(), item["source"].casefold()))
                 output[kind_key][property_key] = values
+                kind_group_totals[kind_key] += len(values)
         serialized.append(output)
+
+    if not serialized:
+        raise RuntimeError(
+            "Search-data generation produced zero parameter sets. "
+            "The search index must never be published empty; check the configured .g source folders."
+        )
+    missing_kinds = [
+        label for key, label in (("flag_transitive", "Flag-transitive"), ("block_transitive", "Block-transitive"))
+        if kind_group_totals[key] == 0
+    ]
+    if missing_kinds:
+        raise RuntimeError(
+            "Search-data generation found no classified group entries for: " + ", ".join(missing_kinds)
+        )
     return serialized
 
 
@@ -173,7 +189,21 @@ def main() -> int:
         json.dumps({"version": 1, "records": records}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print(f"Updated search data: {len(records)} parameter sets.")
+    flag_links = sum(
+        len(groups)
+        for record in records
+        for groups in record["flag_transitive"].values()
+    )
+    block_links = sum(
+        len(groups)
+        for record in records
+        for groups in record["block_transitive"].values()
+    )
+    print(
+        f"Updated search data: {len(records)} parameter sets; "
+        f"{flag_links} flag-transitive classified group entries; "
+        f"{block_links} block-transitive classified group entries."
+    )
     return 0
 
 
