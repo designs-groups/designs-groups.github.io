@@ -1673,3 +1673,128 @@ h2 {
   margin-right: 0.25em;
 }
 
+
+/* Database search: scoped additions using the existing site palette and table system. */
+.database-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 10px 14px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  background: var(--blue-pale);
+}
+
+.search-parameter-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  align-items: end;
+}
+
+.database-search-form label {
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.database-search-form input,
+.database-search-form select {
+  height: 34px;
+  border: 1px solid #aebdcd;
+  border-radius: 2px;
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.database-search-form input {
+  width: 78px;
+  padding: 4px 7px;
+}
+
+.database-search-form select {
+  min-width: 150px;
+  padding: 4px 28px 4px 8px;
+}
+
+.search-submit {
+  min-height: 34px;
+  padding: 5px 15px;
+  border: 1px solid var(--blue);
+  border-radius: 2px;
+  background: var(--blue);
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+}
+
+.search-submit:hover {
+  background: var(--navy);
+}
+
+.home-search-section .database-search-form {
+  margin-top: 10px;
+}
+
+.search-page-form {
+  margin: 0 0 18px;
+}
+
+.search-notes ul {
+  margin: 6px 0 0 1.2rem;
+  padding-left: 1rem;
+}
+
+.search-results-summary {
+  margin: 18px 0 8px;
+  padding: 8px 10px;
+  background: var(--blue-pale);
+  border: 1px solid var(--line);
+  color: var(--navy);
+  font-weight: bold;
+}
+
+.search-results-table {
+  min-width: 1500px;
+}
+
+.search-results-table.search-results-single-kind {
+  min-width: 980px;
+}
+
+.search-results-table thead tr:nth-child(2) th,
+.search-results-table thead tr:nth-child(3) th {
+  background: var(--blue);
+}
+
+.search-group-cell {
+  min-width: 125px;
+}
+
+.search-group-links {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: center;
+}
+
+.search-group-links a {
+  white-space: nowrap;
+}
+
+.sidebar-how a.sidebar-current {
+  background: var(--blue);
+  color: #ffffff;
+}
+
+@media (max-width: 820px) {
+  .database-search-form,
+  .search-parameter-fields {
+    align-items: stretch;
+  }
+
+  .search-type-field {
+    width: 100%;
+  }
+}

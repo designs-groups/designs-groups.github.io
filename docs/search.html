@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search the Designs by Groups database by 2-design parameters and transitivity type.">
+<link rel="canonical" href="https://designs-groups.github.io/search.html">
+  <title>Search the database | Designs by Groups</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+
+function recordDataAccess() {
+  const tracker = document.createElement("img");
+  tracker.alt = "";
+  tracker.setAttribute("aria-hidden", "true");
+  tracker.style.display = "none";
+  tracker.onload = tracker.onerror = () => tracker.remove();
+  tracker.src =
+    "https://hits.sh/designs-groups.github.io.svg" +
+    "?label=Visits&color=1f5f99&labelColor=17365d" +
+    "&data_access=" + Date.now() + "-" + Math.random();
+  document.body.appendChild(tracker);
+}
+
+async function downloadRawFile(url, filename) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Download failed");
+    const blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = objectUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(objectUrl);
+  } catch (error) {
+    window.open(url, "_blank", "noopener");
+  }
+}
+</script>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <p class="site-title">Designs by Groups</p>
+    <p class="site-subtitle">constructions and classifications of combinatorial block designs</p>
+  </div>
+</header>
+<nav class="top-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+<a href="index.html">Home</a>
+<a href="flag-transitive/index.html">Flag-transitive</a>
+<a href="block-transitive/index.html">Block-transitive</a>
+<a href="search.html" aria-current="page">Search</a>
+<a href="how-to-read.html">How to read</a>
+<a href="how-to-cite.html">How to cite</a>
+<a href="software.html">Software and Packages</a>
+<a href="bibliography.html">Bibliography</a>
+<a href="authors.html">About authors</a>
+<a href="contact.html">Contact us</a>
+<a href="licence.html">Licence</a>
+  </div>
+</nav>
+<main>
+
+
+<div class="page-grid">
+  <article class="content-panel">
+    <div class="breadcrumbs"><a href="index.html">Home</a> › Search the database</div>
+    <h1>Search the database</h1>
+
+    <form class="database-search-form search-page-form" id="database-search-form" action="search.html" method="get">
+      <div class="search-parameter-fields" aria-label="Design parameters">
+        <label>\(v\) = <input type="number" min="0" step="1" name="v" inputmode="numeric"></label>
+        <label>\(b\) = <input type="number" min="0" step="1" name="b" inputmode="numeric"></label>
+        <label>\(r\) = <input type="number" min="0" step="1" name="r" inputmode="numeric"></label>
+        <label>\(k\) = <input type="number" min="0" step="1" name="k" inputmode="numeric"></label>
+        <label>\(\lambda\) = <input type="number" min="0" step="1" name="lambda" inputmode="numeric"></label>
+      </div>
+      <label class="search-type-field">Design type:
+        <select name="design_type">
+          <option value="both">Both</option>
+          <option value="flag-transitive">Flag-transitive</option>
+          <option value="block-transitive">Block-transitive</option>
+        </select>
+      </label>
+      <button class="search-submit" type="submit">Search</button>
+    </form>
+
+    <div class="notice search-notes">
+      <strong>Notes.</strong>
+      <ul>
+        <li>The table lists the recorded groups associated with each parameter set.</li>
+        <li>A group may appear in more than one column when designs with the same parameters have different point- or block-primitivity properties.</li>
+        <li>Several groups may occur in a single cell; each group is listed separately and links to its corresponding raw <code>.g</code> file.</li>
+        <li>The occurrence of the same group in different columns does not represent duplication; it indicates the corresponding different action properties.</li>
+        <li>Empty cells indicate that no recorded group with the corresponding property was found in the database.</li>
+        <li>Blank search fields are ignored; only the specified values of \(v,b,r,k,\lambda\) are used as search conditions.</li>
+        <li>When “Both” is selected, the results include both flag-transitive and block-transitive records.</li>
+      </ul>
+    </div>
+
+    <p class="search-results-summary" id="search-results-summary">Search results</p>
+    <div class="table-wrap search-results-wrap">
+      <table class="database-table search-results-table" id="search-results-table">
+        <thead id="search-results-head"></thead>
+        <tbody id="search-results-body">
+          <tr><td class="empty-row">Loading search data…</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <script defer src="assets/search.js"></script>
+  </article>
+
+<aside>
+  <section class="sidebar-box">
+    <h3>Database</h3>
+    <ul class="sidebar-links">
+      <li><a href="flag-transitive/index.html">Flag-transitive designs</a></li>
+      <li><a href="block-transitive/index.html">Block-transitive designs</a></li>
+      <li class="sidebar-how"><a class="sidebar-current" href="search.html">Search the database</a></li>
+      <li class="sidebar-how"><a href="how-to-read.html">How to read</a></li>
+      <li class="sidebar-how"><a href="how-to-cite.html">How to cite</a></li>
+      <li class="sidebar-package"><a href="software.html">Software and Packages</a></li>
+      <li class="sidebar-license"><a href="licence.html">Licence</a></li>
+    </ul>
+  </section>
+
+  <section class="sidebar-box sidebar-useful-links">
+    <h3>Useful links</h3>
+    <ul class="sidebar-links">
+      <li><a href="http://atlas.math.rwth-aachen.de/Atlas/v3/" target="_blank" rel="noopener noreferrer">ATLAS</a></li>
+      <li><a href="https://www.gap-system.org" target="_blank" rel="noopener noreferrer">GAP</a></li>
+    </ul>
+  </section>
+
+  <section class="report-box">
+    <h3>Report an error</h3>
+    <p>Found an error or missing reference?</p>
+    <p><a href="contact.html">Contact us</a></p>
+  </section>
+</aside>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      <strong>Designs by Groups</strong> — Constructions and classifications of combinatorial block designs.<br>
+    Seyed Hassan Alavi and Ashraf Daneshkhah<br>
+    Updated: 4 August 2026
+      <div class="footer-visits">
+      <a href="https://hits.sh/designs-groups.github.io/" target="_blank" rel="noopener noreferrer"
+         aria-label="View visit statistics">
+        <img src="https://hits.sh/designs-groups.github.io.svg?label=Visits&amp;color=1f5f99&amp;labelColor=17365d"
+             alt="Site visits">
+      </a>
+    </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

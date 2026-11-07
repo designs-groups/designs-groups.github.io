@@ -21,6 +21,7 @@ def has_substantive_gap_data(text: str) -> bool:
 
 
 REQUIRED_PAGES = (
+    "docs/search.html",
     "docs/flag-transitive/index.html",
     "docs/flag-transitive/alternating.html",
     "docs/flag-transitive/classical.html",
@@ -90,6 +91,7 @@ def main() -> int:
         pipeline_steps = [
             'run(root, "update_data_tables.py"',
             'run(root, "update_parameter_sets.py"',
+            'run(root, "update_search.py"',
             'run(root, "update_catalogue_indexes.py"',
             'run(root, "validate_site.py"',
         ]
@@ -273,6 +275,74 @@ def main() -> int:
                     if f'>{label}</a>' not in page_text or f'href="{view}"' not in page_text:
                         errors.append(f"{page_rel} does not display/link degree source {label} from {source}")
 
+    # Search page/data are generated from the same configured .g sources and
+    # must preserve the site's raw-file linking rule.
+    search_page = docs / "search.html"
+    search_script = docs / "assets" / "search.js"
+    search_data = docs / "assets" / "search-data.json"
+    if not search_page.exists():
+        errors.append("Missing search page: docs/search.html")
+    else:
+        search_text = search_page.read_text(encoding="utf-8", errors="replace")
+        for item in (
+            'id="database-search-form"',
+            'name="v"', 'name="b"', 'name="r"', 'name="k"', 'name="lambda"',
+            'name="design_type"',
+            'Groups',
+            'Several groups may occur in a single cell',
+            'corresponding raw <code>.g</code> file',
+            'same group in different columns does not represent duplication',
+            'Blank search fields are ignored',
+        ):
+            if item not in search_text:
+                errors.append(f"docs/search.html missing: {item}")
+    if not search_script.exists():
+        errors.append("Missing search behavior: docs/assets/search.js")
+    if not search_data.exists():
+        errors.append("Missing generated search data: docs/assets/search-data.json")
+    else:
+        try:
+            search_payload = json.loads(search_data.read_text(encoding="utf-8"))
+            search_records = search_payload.get("records", [])
+            if not search_records:
+                errors.append("Generated search data contain no parameter-set records")
+            for record in search_records:
+                if not isinstance(record.get("param"), list) or len(record["param"]) != 5:
+                    errors.append("Search data contain an invalid parameter tuple")
+                    continue
+                for kind_key in ("flag_transitive", "block_transitive"):
+                    for property_key in ("point_primitive", "point_imprimitive", "block_primitive", "block_imprimitive"):
+                        for group in record.get(kind_key, {}).get(property_key, []):
+                            url = group.get("url", "")
+                            if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
+                                errors.append(f"Search data contain a non-raw .g link: {url}")
+        except Exception as exc:
+            errors.append(f"Could not validate search-data.json: {exc}")
+
+    home_text = (docs / "index.html").read_text(encoding="utf-8", errors="replace")
+    if 'id="search-database-home"' not in home_text or 'action="search.html"' not in home_text:
+        errors.append("Home page does not contain the compact database search form")
+    if home_text.find('id="search-database-home"') > home_text.find('id="how-to-cite-home"'):
+        errors.append("Home search must appear before How to cite")
+
+    # Search is a site-level tool in the top navigation and directly above
+    # How to read in sidebars, without altering the existing navigation style.
+    for page in docs.rglob("*.html"):
+        text = page.read_text(encoding="utf-8", errors="replace")
+        rel = page.relative_to(docs)
+        search_href = "../" * (len(rel.parts) - 1) + "search.html"
+        if not re.search(r'<a href="' + re.escape(search_href) + r'"[^>]*>Search</a>', text):
+            errors.append(f"{page.relative_to(root)} lacks Search in the top navigation")
+        sidebar_match = re.search(r'<ul class="sidebar-links">.*?</ul>', text, flags=re.S)
+        if sidebar_match is not None:
+            sidebar_text = sidebar_match.group(0)
+            search_pos = sidebar_text.find(f'href="{search_href}">Search the database</a>')
+            how_pos = sidebar_text.find('how-to-read.html">How to read</a>')
+            if search_pos < 0:
+                errors.append(f"{page.relative_to(root)} lacks Search the database in the sidebar")
+            elif how_pos >= 0 and search_pos > how_pos:
+                errors.append(f"{page.relative_to(root)} places Search below How to read")
+
     for script in sorted((root / "scripts").glob("*.py")):
         try:
             with warnings.catch_warnings():
@@ -370,6 +440,8 @@ def main() -> int:
         text = sitemap.read_text(encoding="utf-8")
         if "parameters.html" not in text:
             errors.append("sitemap.xml lacks parameters.html")
+        if "search.html" not in text:
+            errors.append("sitemap.xml lacks search.html")
         if "imprimitive.html" in text:
             errors.append("sitemap.xml contains imprimitive.html")
 
