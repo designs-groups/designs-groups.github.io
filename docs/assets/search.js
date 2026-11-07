@@ -21,6 +21,15 @@
     return form.elements.design_type.value || "both";
   }
 
+
+  function selectedPointAction() {
+    return form.elements.point_action ? (form.elements.point_action.value || "any") : "any";
+  }
+
+  function selectedBlockAction() {
+    return form.elements.block_action ? (form.elements.block_action.value || "any") : "any";
+  }
+
   function activeKinds() {
     const choice = selectedKind();
     if (choice === "flag-transitive") return [["flag_transitive", "Flag-transitive"]];
@@ -116,6 +125,22 @@
     });
   }
 
+  function kindMatchesActions(record, kindKey) {
+    const point = selectedPointAction();
+    const block = selectedBlockAction();
+    if (point === "any" && block === "any") return hasGroups(record, kindKey);
+
+    const pointKey = point === "primitive" ? "point_primitive" : point === "imprimitive" ? "point_imprimitive" : null;
+    const blockKey = block === "primitive" ? "block_primitive" : block === "imprimitive" ? "block_imprimitive" : null;
+
+    if (pointKey && !blockKey) return (record[kindKey][pointKey] || []).length > 0;
+    if (!pointKey && blockKey) return (record[kindKey][blockKey] || []).length > 0;
+
+    const pairMap = record[kindKey + "_action_pairs"] || {};
+    const pairKey = pointKey + "__" + blockKey;
+    return (pairMap[pairKey] || []).length > 0;
+  }
+
   function currentFilters() {
     return ["v", "b", "r", "k", "lambda"].map(function (name) {
       const raw = String(form.elements[name].value || "").trim();
@@ -129,9 +154,9 @@
       if (filters[i] !== null && record.param[i] !== filters[i]) return false;
     }
     const choice = selectedKind();
-    if (choice === "flag-transitive") return hasGroups(record, "flag_transitive");
-    if (choice === "block-transitive") return hasGroups(record, "block_transitive");
-    return hasGroups(record, "flag_transitive") || hasGroups(record, "block_transitive");
+    if (choice === "flag-transitive") return kindMatchesActions(record, "flag_transitive");
+    if (choice === "block-transitive") return kindMatchesActions(record, "block_transitive");
+    return kindMatchesActions(record, "flag_transitive") || kindMatchesActions(record, "block_transitive");
   }
 
   function render(records) {
@@ -184,6 +209,10 @@
     });
     const type = selectedKind();
     if (type && type !== "both") params.set("design_type", type);
+    const pointAction = selectedPointAction();
+    const blockAction = selectedBlockAction();
+    if (pointAction !== "any") params.set("point_action", pointAction);
+    if (blockAction !== "any") params.set("block_action", blockAction);
     const query = params.toString();
     const next = window.location.pathname + (query ? "?" + query : "");
     window.history.replaceState(null, "", next);
@@ -201,6 +230,11 @@
     if (params.has(name)) form.elements[name].value = params.get(name);
   });
   if (params.has("design_type")) form.elements.design_type.value = params.get("design_type");
+  if (params.has("point_action") && form.elements.point_action) form.elements.point_action.value = params.get("point_action");
+  if (params.has("block_action") && form.elements.block_action) form.elements.block_action.value = params.get("block_action");
+  if ((params.has("point_action") || params.has("block_action")) && form.querySelector(".search-advanced")) {
+    form.querySelector(".search-advanced").open = true;
+  }
 
   function acceptData(data) {
     const records = Array.isArray(data && data.records) ? data.records : [];

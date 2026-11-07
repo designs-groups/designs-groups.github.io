@@ -1355,7 +1355,7 @@ h2 {
 
 
 
-/* Author portraits: fixed right-side blank area beside the address text. */
+/* Author portraits: fixed left-side photo area beside the address text. */
 .author-grid.author-grid-right-photos {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1366,7 +1366,8 @@ h2 {
 .author-card-right-photo {
   position: relative;
   min-height: 420px;
-  padding-right: 350px !important;
+  padding-left: 350px !important;
+  padding-right: 21px !important;
   background: var(--blue-pale);
   overflow: hidden;
 }
@@ -1384,7 +1385,8 @@ h2 {
 .author-photo-right {
   position: absolute;
   top: 19px;
-  right: 21px;
+  left: 21px;
+  right: auto;
   bottom: 19px;
   width: 320px;
   display: flex;
@@ -1406,7 +1408,8 @@ h2 {
 
 @media (max-width: 1280px) {
   .author-card-right-photo {
-    padding-right: 300px !important;
+    padding-left: 300px !important;
+    padding-right: 21px !important;
   }
 
   .author-photo-right {
@@ -1425,7 +1428,8 @@ h2 {
   }
 
   .author-card-right-photo {
-    padding-right: 350px !important;
+    padding-left: 350px !important;
+    padding-right: 21px !important;
   }
 
   .author-photo-right {
@@ -1440,6 +1444,7 @@ h2 {
 
 @media (max-width: 760px) {
   .author-card-right-photo {
+    padding-left: 21px !important;
     padding-right: 21px !important;
     padding-bottom: 330px !important;
   }
@@ -1817,6 +1822,33 @@ h2 {
 .sidebar-how a.sidebar-current {
   background: var(--blue);
   color: #ffffff;
+}
+
+.search-advanced {
+  flex-basis: 100%;
+  width: 100%;
+  margin-top: 2px;
+  border-top: 1px solid var(--line);
+}
+
+.search-advanced summary {
+  width: fit-content;
+  padding: 7px 0 3px;
+  color: var(--navy);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-advanced-fields {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+  padding: 6px 0 2px;
+}
+
+.search-advanced-fields select {
+  min-width: 135px;
 }
 
 @media (max-width: 820px) {

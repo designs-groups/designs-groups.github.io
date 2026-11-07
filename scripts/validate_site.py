@@ -289,6 +289,8 @@ def main() -> int:
             'id="database-search-form"',
             'name="v"', 'name="b"', 'name="r"', 'name="k"', 'name="lambda"',
             'name="design_type"',
+            'name="point_action"', 'name="block_action"',
+            'Advanced search',
             'Groups',
             'Several groups may occur in a single cell',
             'corresponding raw <code>.g</code> file',
@@ -341,6 +343,20 @@ def main() -> int:
                             url = group.get("url", "")
                             if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
                                 errors.append(f"Search data contain a non-raw .g link: {url}")
+                    pair_map = record.get(kind_key + "_action_pairs", {})
+                    for pair_key in (
+                        "point_primitive__block_primitive",
+                        "point_primitive__block_imprimitive",
+                        "point_imprimitive__block_primitive",
+                        "point_imprimitive__block_imprimitive",
+                    ):
+                        if pair_key not in pair_map:
+                            errors.append(f"Search data missing advanced-action pair {kind_key}:{pair_key}")
+                            continue
+                        for group in pair_map[pair_key]:
+                            url = group.get("url", "")
+                            if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
+                                errors.append(f"Search action-pair data contain a non-raw .g link: {url}")
             if search_records and classified_totals["flag_transitive"] == 0:
                 errors.append("Search data contain no flag-transitive classified group entries")
             if search_records and classified_totals["block_transitive"] == 0:
@@ -498,6 +514,37 @@ def main() -> int:
             errors.append(f"{page_rel}: Design type does not have tabindex 6")
         if not re.search(r'class="search-submit"[^>]*tabindex="7"', text):
             errors.append(f"{page_rel}: Search button does not have tabindex 7")
+        if page_rel == "docs/search.html":
+            if not re.search(r'<summary[^>]*tabindex="8"[^>]*>Advanced search</summary>', text):
+                errors.append("docs/search.html: Advanced search summary does not have tabindex 8")
+            if not re.search(r'name="point_action"[^>]*tabindex="9"', text):
+                errors.append("docs/search.html: Point action does not have tabindex 9")
+            if not re.search(r'name="block_action"[^>]*tabindex="10"', text):
+                errors.append("docs/search.html: Block action does not have tabindex 10")
+
+    # Authors: both cards use left-side portraits and right-side contact/address text.
+    authors_page = docs / "authors.html"
+    if authors_page.exists():
+        authors_text = authors_page.read_text(encoding="utf-8", errors="replace")
+        for name in ("Seyed Hassan Alavi", "Ashraf Daneshkhah"):
+            section_match = re.search(
+                r'<section class="author-card-simple author-card-right-photo">(.*?)</section>',
+                authors_text,
+                flags=re.S,
+            )
+            if section_match is None:
+                errors.append("Authors page is missing an author card")
+                break
+        if authors_text.count('<div class="author-photo-right">') != 2:
+            errors.append("Authors page must contain exactly two portrait containers")
+        if authors_text.count('<div class="author-text-block">') != 2:
+            errors.append("Authors page must contain exactly two author text blocks")
+        # The first portrait container in each card must precede the text block.
+        for card in re.findall(r'<section class="author-card-simple author-card-right-photo">(.*?)</section>', authors_text, flags=re.S):
+            if card.find('class="author-photo-right"') < 0 or card.find('class="author-text-block"') < 0 or card.find('class="author-photo-right"') > card.find('class="author-text-block"'):
+                errors.append("Authors page portrait must appear to the left/before the address text in each card")
+    if "padding-left: 350px !important" not in style_text or "left: 21px" not in style_text:
+        errors.append("Author portrait CSS does not place portraits on the left")
 
     if errors:
         raise RuntimeError("Website validation failed:\n- " + "\n- ".join(errors))

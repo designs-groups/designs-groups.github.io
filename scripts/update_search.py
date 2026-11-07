@@ -14,10 +14,20 @@ PROPERTY_KEYS = (
     "block_primitive",
     "block_imprimitive",
 )
+ACTION_PAIR_KEYS = (
+    "point_primitive__block_primitive",
+    "point_primitive__block_imprimitive",
+    "point_imprimitive__block_primitive",
+    "point_imprimitive__block_imprimitive",
+)
 
 
 def blank_property_map():
     return {key: {} for key in PROPERTY_KEYS}
+
+
+def blank_action_pair_map():
+    return {key: {} for key in ACTION_PAIR_KEYS}
 
 
 def add_group(bucket, key: str, label: str, url: str, source_path: str) -> None:
@@ -28,15 +38,23 @@ def add_group(bucket, key: str, label: str, url: str, source_path: str) -> None:
     })
 
 
-def add_entry_properties(bucket, entry: ps.DesignEntry, label: str, url: str, source_path: str) -> None:
+def add_entry_properties(bucket, pair_bucket, entry: ps.DesignEntry, label: str, url: str, source_path: str) -> None:
+    point_key = None
+    block_key = None
     if entry.point_primitive is True:
-        add_group(bucket, "point_primitive", label, url, source_path)
+        point_key = "point_primitive"
+        add_group(bucket, point_key, label, url, source_path)
     elif entry.point_primitive is False:
-        add_group(bucket, "point_imprimitive", label, url, source_path)
+        point_key = "point_imprimitive"
+        add_group(bucket, point_key, label, url, source_path)
     if entry.block_primitive is True:
-        add_group(bucket, "block_primitive", label, url, source_path)
+        block_key = "block_primitive"
+        add_group(bucket, block_key, label, url, source_path)
     elif entry.block_primitive is False:
-        add_group(bucket, "block_imprimitive", label, url, source_path)
+        block_key = "block_imprimitive"
+        add_group(bucket, block_key, label, url, source_path)
+    if point_key and block_key:
+        add_group(pair_bucket, point_key + "__" + block_key, label, url, source_path)
 
 
 def group_type_entries(source: ps.SourceText):
@@ -87,10 +105,13 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
                         "param": list(param),
                         "flag_transitive": blank_property_map(),
                         "block_transitive": blank_property_map(),
+                        "flag_transitive_action_pairs": blank_action_pair_map(),
+                        "block_transitive_action_pairs": blank_action_pair_map(),
                     })
                     bucket = record[kind_key]
+                    pair_bucket = record[kind_key + "_action_pairs"]
                     for entry in entries:
-                        add_entry_properties(bucket, entry, label, url, source.source_path)
+                        add_entry_properties(bucket, pair_bucket, entry, label, url, source.source_path)
                 continue
 
             entries = group_type_entries(source)
@@ -117,11 +138,14 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
                     "param": list(param),
                     "flag_transitive": blank_property_map(),
                     "block_transitive": blank_property_map(),
+                    "flag_transitive_action_pairs": blank_action_pair_map(),
+                    "block_transitive_action_pairs": blank_action_pair_map(),
                 })
                 bucket = record[kind_key]
+                pair_bucket = record[kind_key + "_action_pairs"]
                 before = {key: len(bucket[key]) for key in PROPERTY_KEYS}
                 for entry in param_entries:
-                    add_entry_properties(bucket, entry, label, url, source.source_path)
+                    add_entry_properties(bucket, pair_bucket, entry, label, url, source.source_path)
 
                 # If the file has only one parameter and row-level primitive
                 # flags are unavailable, use its aggregate summary counts only
@@ -153,6 +177,11 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
                 values.sort(key=lambda item: (item["label"].casefold(), item["source"].casefold()))
                 output[kind_key][property_key] = values
                 kind_group_totals[kind_key] += len(values)
+            output[kind_key + "_action_pairs"] = {}
+            for pair_key in ACTION_PAIR_KEYS:
+                values = list(record[kind_key + "_action_pairs"][pair_key].values())
+                values.sort(key=lambda item: (item["label"].casefold(), item["source"].casefold()))
+                output[kind_key + "_action_pairs"][pair_key] = values
         serialized.append(output)
 
     if not serialized:
@@ -184,7 +213,7 @@ def main() -> int:
     branch = args.branch or config.get("branch", "main")
 
     records = collect_search_records(root, repository, branch)
-    payload = {"version": 1, "records": records}
+    payload = {"version": 2, "records": records}
     output_path = root / "docs" / "assets" / "search-data.json"
     output_path.write_text(
         json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
