@@ -126,9 +126,17 @@ async function downloadRawFile(url, filename) {
               <option value="imprimitive">Imprimitive</option>
             </select>
           </div>
+          <div class="search-field search-select-field">
+            <label for="search-flag-action">Flag action</label>
+            <select id="search-flag-action" name="flag_action" tabindex="9">
+              <option value="any">Any</option>
+              <option value="flag-transitive">Flag-transitive</option>
+              <option value="antiflag-transitive">Antiflag-transitive</option>
+            </select>
+          </div>
           <div class="search-field search-button-field">
             <span class="search-button-spacer" aria-hidden="true">&nbsp;</span>
-            <button class="search-submit" type="submit" tabindex="9">Search</button>
+            <button class="search-submit" type="submit" tabindex="10">Search</button>
           </div>
         </div>
     </form>
@@ -143,21 +151,19 @@ async function downloadRawFile(url, filename) {
         <li>Empty cells indicate that no recorded group with the corresponding property was found in the database.</li>
         <li>Blank search fields are ignored; only the specified values of \(v,b,r,k,\lambda\) and the selected action filters are used as search conditions.</li>
         <li>Point action and Block action can restrict results to primitive or imprimitive actions.</li>
-        <li>Action filters determine which parameter sets are returned; each matching row still displays all recorded group-property cells.</li>
+        <li>Flag action can restrict results to flag-transitive or antiflag-transitive recorded designs.</li>
+        <li>When several action filters are selected, all selected properties must hold for the same recorded design; only groups satisfying the selected filters are displayed.</li>
         <li>When “Both” is selected, the results include both flag-transitive and block-transitive records.</li>
       </ul>
     </div>
 
-    <p class="search-results-summary" id="search-results-summary">Search results</p>
-    <div class="table-wrap search-results-wrap">
+    <p class="search-results-summary" id="search-results-summary">Enter at least one search condition and select Search.</p>
+    <div class="table-wrap search-results-wrap" id="search-results-wrap" hidden>
       <table class="database-table search-results-table" id="search-results-table">
         <thead id="search-results-head"></thead>
-        <tbody id="search-results-body">
-          <tr><td class="empty-row">Loading search data…</td></tr>
-        </tbody>
+        <tbody id="search-results-body"></tbody>
       </table>
     </div>
-    <script src="assets/search-data.js"></script>
     <script defer src="assets/search.js"></script>
   </article>
 

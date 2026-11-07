@@ -40,6 +40,8 @@ class DesignEntry:
     group_label: str
     point_primitive: bool | None = None
     block_primitive: bool | None = None
+    flag_transitive: bool | None = None
+    antiflag_transitive: bool | None = None
 
 
 @dataclass
@@ -166,6 +168,8 @@ def normalize_header_token(token: str) -> str:
     token = token.rstrip(":")
     if token in {"λ", "lambda", "lambda-", "lam"}:
         return "lambda"
+    if token in {"anti-flag-transitive", "antiflag-transitive"}:
+        return "antiflag-transitive"
     return token
 
 
@@ -213,7 +217,7 @@ def summary_table_entries(text: str, table: str | None = None) -> list[DesignEnt
             spans = {}
             for position, match in enumerate(token_matches):
                 name = normalized[position]
-                if name not in required | {"point-primitive", "block-primitive"} or name in spans:
+                if name not in required | {"point-primitive", "block-primitive", "flag-transitive", "antiflag-transitive"} or name in spans:
                     continue
                 end = token_matches[position + 1].start() if position + 1 < len(token_matches) else None
                 spans[name] = (match.start(), end)
@@ -257,6 +261,8 @@ def summary_table_entries(text: str, table: str | None = None) -> list[DesignEnt
                 group_label=group_label,
                 point_primitive=bool_value(field_value("point-primitive")),
                 block_primitive=bool_value(field_value("block-primitive")),
+                flag_transitive=bool_value(field_value("flag-transitive")),
+                antiflag_transitive=bool_value(field_value("antiflag-transitive")),
             )
         )
 
@@ -276,6 +282,8 @@ def detailed_design_entries(text: str, fallback_group: str) -> list[DesignEntry]
         group_label = fallback_group
         point = None
         block = None
+        flag = None
+        antiflag = None
 
         for raw in block_text.splitlines():
             line = clean_comment_line(raw)
@@ -290,9 +298,20 @@ def detailed_design_entries(text: str, fallback_group: str) -> list[DesignEntry]
                 point = first_boolean(line)
             elif low.startswith("block-primitive") and "type" not in low:
                 block = first_boolean(line)
+            elif low.startswith("flag-transitive"):
+                flag = first_boolean(line)
+            elif low.startswith("anti-flag-transitive") or low.startswith("antiflag-transitive"):
+                antiflag = first_boolean(line)
 
         if param is not None and group_label:
-            entries.append(DesignEntry(param=param, group_label=group_label, point_primitive=point, block_primitive=block))
+            entries.append(DesignEntry(
+                param=param,
+                group_label=group_label,
+                point_primitive=point,
+                block_primitive=block,
+                flag_transitive=flag,
+                antiflag_transitive=antiflag,
+            ))
 
     return entries
 
@@ -553,6 +572,8 @@ def enrich_summary_entries(summary_entries: list[DesignEntry], detailed_entries:
             group_label=summary.group_label,
             point_primitive=summary.point_primitive if summary.point_primitive is not None else detail.point_primitive,
             block_primitive=summary.block_primitive if summary.block_primitive is not None else detail.block_primitive,
+            flag_transitive=summary.flag_transitive if summary.flag_transitive is not None else detail.flag_transitive,
+            antiflag_transitive=summary.antiflag_transitive if summary.antiflag_transitive is not None else detail.antiflag_transitive,
         )
         for summary, detail in zip(summary_entries, detailed_entries)
     ]

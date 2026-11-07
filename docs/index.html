@@ -161,9 +161,17 @@ async function downloadRawFile(url, filename) {
               <option value="imprimitive">Imprimitive</option>
             </select>
           </div>
+          <div class="search-field search-select-field">
+            <label for="search-flag-action">Flag action</label>
+            <select id="search-flag-action" name="flag_action" tabindex="9">
+              <option value="any">Any</option>
+              <option value="flag-transitive">Flag-transitive</option>
+              <option value="antiflag-transitive">Antiflag-transitive</option>
+            </select>
+          </div>
           <div class="search-field search-button-field">
             <span class="search-button-spacer" aria-hidden="true">&nbsp;</span>
-            <button class="search-submit" type="submit" tabindex="9">Search</button>
+            <button class="search-submit" type="submit" tabindex="10">Search</button>
           </div>
         </div>
       </form>

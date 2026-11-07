@@ -289,16 +289,17 @@ def main() -> int:
             'id="database-search-form"',
             'name="v"', 'name="b"', 'name="r"', 'name="k"', 'name="lambda"',
             'name="design_type"',
-            'name="point_action"', 'name="block_action"',
+            'name="point_action"', 'name="block_action"', 'name="flag_action"',
             'Groups',
             'Several groups may occur in a single cell',
             'corresponding raw <code>.g</code> file',
             'same group in different columns does not represent duplication',
             'Blank search fields are ignored',
             'Point action and Block action can restrict results',
+            'Flag action can restrict results',
+            'all selected properties must hold for the same recorded design',
             'class="search-param-symbol" aria-hidden="true">v</span>',
             'class="search-param-symbol" aria-hidden="true">λ</span>',
-            'src="assets/search-data.js"',
         ):
             if item not in search_text:
                 errors.append(f"docs/search.html missing: {item}")
@@ -308,11 +309,11 @@ def main() -> int:
         errors.append("Missing search behavior: docs/assets/search.js")
     else:
         search_js_text = search_script.read_text(encoding="utf-8", errors="replace")
-        for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)", "filters[i] !== null", "form.addEventListener(\"submit\"", "window.DESIGNS_GROUPS_SEARCH_DATA"):
+        for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)", "filters[i] !== null", "form.addEventListener(\"submit\"", "hasSearchCondition", "loadSearchData", "fetch(\"assets/search-data.json\""):
             if required_js not in search_js_text:
                 errors.append(f"Search behavior missing fixed-layout/index safeguard: {required_js}")
     style_text = (docs / "assets" / "style.css").read_text(encoding="utf-8", errors="replace")
-    for required_css in (".search-results-table,", "table-layout: fixed !important", "min-width: 0 !important"):
+    for required_css in (".search-results-table,", "table-layout: fixed !important", "min-width: 0 !important", ".database-search-form label", "text-align: center"):
         if required_css not in style_text:
             errors.append(f"Search table fixed-width CSS missing: {required_css}")
     if not search_data_js.exists():
@@ -343,20 +344,17 @@ def main() -> int:
                             url = group.get("url", "")
                             if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
                                 errors.append(f"Search data contain a non-raw .g link: {url}")
-                    pair_map = record.get(kind_key + "_action_pairs", {})
-                    for pair_key in (
-                        "point_primitive__block_primitive",
-                        "point_primitive__block_imprimitive",
-                        "point_imprimitive__block_primitive",
-                        "point_imprimitive__block_imprimitive",
-                    ):
-                        if pair_key not in pair_map:
-                            errors.append(f"Search data missing advanced-action pair {kind_key}:{pair_key}")
-                            continue
-                        for group in pair_map[pair_key]:
-                            url = group.get("url", "")
-                            if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
-                                errors.append(f"Search action-pair data contain a non-raw .g link: {url}")
+                    design_entries = record.get(kind_key + "_design_entries", [])
+                    if not isinstance(design_entries, list):
+                        errors.append(f"Search data design-entry profiles are invalid for {kind_key}")
+                        continue
+                    for profile in design_entries:
+                        url = profile.get("url", "")
+                        if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
+                            errors.append(f"Search design-entry data contain a non-raw .g link: {url}")
+                        for action_key in ("point_primitive", "block_primitive", "flag_transitive", "antiflag_transitive"):
+                            if action_key not in profile:
+                                errors.append(f"Search design-entry profile missing {action_key} for {kind_key}")
             if search_records and classified_totals["flag_transitive"] == 0:
                 errors.append("Search data contain no flag-transitive classified group entries")
             if search_records and classified_totals["block_transitive"] == 0:
@@ -516,11 +514,13 @@ def main() -> int:
             errors.append(f"{page_rel}: Point action does not have tabindex 7")
         if not re.search(r'name="block_action"[^>]*tabindex="8"', text):
             errors.append(f"{page_rel}: Block action does not have tabindex 8")
-        if not re.search(r'class="search-submit"[^>]*tabindex="9"', text):
-            errors.append(f"{page_rel}: Search button does not have tabindex 9")
+        if not re.search(r'name="flag_action"[^>]*tabindex="9"', text):
+            errors.append(f"{page_rel}: Flag action does not have tabindex 9")
+        if not re.search(r'class="search-submit"[^>]*tabindex="10"', text):
+            errors.append(f"{page_rel}: Search button does not have tabindex 10")
         if "Advanced search" in text:
             errors.append(f"{page_rel} still contains the obsolete Advanced search label")
-        for bad_label in ("v</span> =", "b</span> =", "r</span> =", "k</span> =", "λ</span> =", "Design type:", "Point action:", "Block action:"):
+        for bad_label in ("v</span> =", "b</span> =", "r</span> =", "k</span> =", "λ</span> =", "Design type:", "Point action:", "Block action:", "Flag action:"):
             if bad_label in text:
                 errors.append(f"{page_rel}: obsolete inline search label remains: {bad_label}")
 
