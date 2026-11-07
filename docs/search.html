@@ -89,29 +89,24 @@ async function downloadRawFile(url, filename) {
         <label for="search-lambda"><span class="search-param-symbol" aria-hidden="true">λ</span> =</label> <input id="search-lambda" type="number" min="0" step="1" name="lambda" inputmode="numeric" aria-label="lambda" tabindex="5">
       </div>
       <label class="search-type-field" for="search-design-type">Design type:</label>
-        <select id="search-design-type" name="design_type" tabindex="6">
-          <option value="both">Both</option>
-          <option value="flag-transitive">Flag-transitive</option>
-          <option value="block-transitive">Block-transitive</option>
-        </select>
-      <button class="search-submit" type="submit" tabindex="7">Search</button>
-      <details class="search-advanced">
-        <summary tabindex="8">Advanced search</summary>
-        <div class="search-advanced-fields">
-          <label for="search-point-action">Point action:</label>
-          <select id="search-point-action" name="point_action" tabindex="9">
-            <option value="any">Any</option>
-            <option value="primitive">Primitive</option>
-            <option value="imprimitive">Imprimitive</option>
-          </select>
-          <label for="search-block-action">Block action:</label>
-          <select id="search-block-action" name="block_action" tabindex="10">
-            <option value="any">Any</option>
-            <option value="primitive">Primitive</option>
-            <option value="imprimitive">Imprimitive</option>
-          </select>
-        </div>
-      </details>
+      <select id="search-design-type" name="design_type" tabindex="6">
+        <option value="both">Both</option>
+        <option value="flag-transitive">Flag-transitive</option>
+        <option value="block-transitive">Block-transitive</option>
+      </select>
+      <label class="search-action-field" for="search-point-action">Point action:</label>
+      <select id="search-point-action" name="point_action" tabindex="7">
+        <option value="any">Any</option>
+        <option value="primitive">Primitive</option>
+        <option value="imprimitive">Imprimitive</option>
+      </select>
+      <label class="search-action-field" for="search-block-action">Block action:</label>
+      <select id="search-block-action" name="block_action" tabindex="8">
+        <option value="any">Any</option>
+        <option value="primitive">Primitive</option>
+        <option value="imprimitive">Imprimitive</option>
+      </select>
+      <button class="search-submit" type="submit" tabindex="9">Search</button>
     </form>
 
     <div class="notice search-notes">
@@ -123,8 +118,8 @@ async function downloadRawFile(url, filename) {
         <li>The occurrence of the same group in different columns does not represent duplication; it indicates the corresponding different action properties.</li>
         <li>Empty cells indicate that no recorded group with the corresponding property was found in the database.</li>
         <li>Blank search fields are ignored; only the specified values of \(v,b,r,k,\lambda\) and the selected action filters are used as search conditions.</li>
-        <li>Advanced search can restrict results to point-primitive/imprimitive and block-primitive/imprimitive actions.</li>
-        <li>Advanced action filters determine which parameter sets are returned; each matching row still displays all recorded group-property cells.</li>
+        <li>Point action and Block action can restrict results to primitive or imprimitive actions.</li>
+        <li>Action filters determine which parameter sets are returned; each matching row still displays all recorded group-property cells.</li>
         <li>When “Both” is selected, the results include both flag-transitive and block-transitive records.</li>
       </ul>
     </div>

@@ -232,9 +232,6 @@
   if (params.has("design_type")) form.elements.design_type.value = params.get("design_type");
   if (params.has("point_action") && form.elements.point_action) form.elements.point_action.value = params.get("point_action");
   if (params.has("block_action") && form.elements.block_action) form.elements.block_action.value = params.get("block_action");
-  if ((params.has("point_action") || params.has("block_action")) && form.querySelector(".search-advanced")) {
-    form.querySelector(".search-advanced").open = true;
-  }
 
   function acceptData(data) {
     const records = Array.isArray(data && data.records) ? data.records : [];
