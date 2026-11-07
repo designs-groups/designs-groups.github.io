@@ -330,10 +330,14 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-root", type=Path, required=True)
     parser.add_argument("--skip-parameter-sets", action="store_true")
+    parser.add_argument("--skip-search", action="store_true")
     args = parser.parse_args()
 
     if not args.skip_parameter_sets:
         subprocess.run([sys.executable, str(ROOT / "scripts" / "update_parameter_sets.py"), "--data-root", str(args.data_root.resolve())], cwd=ROOT, check=True)
+
+    if not args.skip_search:
+        subprocess.run([sys.executable, str(ROOT / "scripts" / "update_search.py"), "--data-root", str(args.data_root.resolve())], cwd=ROOT, check=True)
 
     tools = load_table_tools()
     config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))

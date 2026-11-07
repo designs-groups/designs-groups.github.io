@@ -1697,6 +1697,10 @@ h2 {
   white-space: nowrap;
 }
 
+.search-parameter-fields > label {
+  margin-right: -10px;
+}
+
 .search-param-symbol {
   display: inline-block;
   min-width: 0.9em;

@@ -82,20 +82,19 @@ async function downloadRawFile(url, filename) {
 
     <form class="database-search-form search-page-form" id="database-search-form" action="search.html" method="get">
       <div class="search-parameter-fields" aria-label="Design parameters">
-        <label><span class="search-param-symbol">v</span> = <input type="number" min="0" step="1" name="v" inputmode="numeric" aria-label="v"></label>
-        <label><span class="search-param-symbol">b</span> = <input type="number" min="0" step="1" name="b" inputmode="numeric" aria-label="b"></label>
-        <label><span class="search-param-symbol">r</span> = <input type="number" min="0" step="1" name="r" inputmode="numeric" aria-label="r"></label>
-        <label><span class="search-param-symbol">k</span> = <input type="number" min="0" step="1" name="k" inputmode="numeric" aria-label="k"></label>
-        <label><span class="search-param-symbol">λ</span> = <input type="number" min="0" step="1" name="lambda" inputmode="numeric" aria-label="lambda"></label>
+        <label for="search-v"><span class="search-param-symbol" aria-hidden="true">v</span> =</label> <input id="search-v" type="number" min="0" step="1" name="v" inputmode="numeric" aria-label="v" tabindex="1">
+        <label for="search-b"><span class="search-param-symbol" aria-hidden="true">b</span> =</label> <input id="search-b" type="number" min="0" step="1" name="b" inputmode="numeric" aria-label="b" tabindex="2">
+        <label for="search-r"><span class="search-param-symbol" aria-hidden="true">r</span> =</label> <input id="search-r" type="number" min="0" step="1" name="r" inputmode="numeric" aria-label="r" tabindex="3">
+        <label for="search-k"><span class="search-param-symbol" aria-hidden="true">k</span> =</label> <input id="search-k" type="number" min="0" step="1" name="k" inputmode="numeric" aria-label="k" tabindex="4">
+        <label for="search-lambda"><span class="search-param-symbol" aria-hidden="true">λ</span> =</label> <input id="search-lambda" type="number" min="0" step="1" name="lambda" inputmode="numeric" aria-label="lambda" tabindex="5">
       </div>
-      <label class="search-type-field">Design type:
-        <select name="design_type">
+      <label class="search-type-field" for="search-design-type">Design type:</label>
+        <select id="search-design-type" name="design_type" tabindex="6">
           <option value="both">Both</option>
           <option value="flag-transitive">Flag-transitive</option>
           <option value="block-transitive">Block-transitive</option>
         </select>
-      </label>
-      <button class="search-submit" type="submit">Search</button>
+      <button class="search-submit" type="submit" tabindex="7">Search</button>
     </form>
 
     <div class="notice search-notes">

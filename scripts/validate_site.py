@@ -294,8 +294,8 @@ def main() -> int:
             'corresponding raw <code>.g</code> file',
             'same group in different columns does not represent duplication',
             'Blank search fields are ignored',
-            'class="search-param-symbol">v</span>',
-            'class="search-param-symbol">λ</span>',
+            'class="search-param-symbol" aria-hidden="true">v</span>',
+            'class="search-param-symbol" aria-hidden="true">λ</span>',
             'src="assets/search-data.js"',
         ):
             if item not in search_text:
@@ -475,6 +475,29 @@ def main() -> int:
             errors.append("sitemap.xml lacks search.html")
         if "imprimitive.html" in text:
             errors.append("sitemap.xml contains imprimitive.html")
+
+    # The deployed workflow historically runs update_catalogue_indexes.py directly.
+    # Therefore that script must also rebuild Search data, so Search works even
+    # when the hidden .github workflow file was not replaced locally.
+    catalogue_script = root / "scripts" / "update_catalogue_indexes.py"
+    if catalogue_script.exists():
+        catalogue_text = catalogue_script.read_text(encoding="utf-8", errors="replace")
+        if "update_search.py" not in catalogue_text:
+            errors.append("update_catalogue_indexes.py does not rebuild search data")
+
+    # Search form keyboard order must be v,b,r,k,lambda,type,Search.
+    for page_rel in ("docs/index.html", "docs/search.html"):
+        page = root / page_rel
+        if not page.exists():
+            continue
+        text = page.read_text(encoding="utf-8", errors="replace")
+        for name, tab in (("v", 1), ("b", 2), ("r", 3), ("k", 4), ("lambda", 5)):
+            if not re.search(rf'name="{name}"[^>]*tabindex="{tab}"', text):
+                errors.append(f"{page_rel}: search field {name} does not have tabindex {tab}")
+        if not re.search(r'name="design_type"[^>]*tabindex="6"', text):
+            errors.append(f"{page_rel}: Design type does not have tabindex 6")
+        if not re.search(r'class="search-submit"[^>]*tabindex="7"', text):
+            errors.append(f"{page_rel}: Search button does not have tabindex 7")
 
     if errors:
         raise RuntimeError("Website validation failed:\n- " + "\n- ".join(errors))
