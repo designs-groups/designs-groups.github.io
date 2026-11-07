@@ -184,9 +184,17 @@ def main() -> int:
     branch = args.branch or config.get("branch", "main")
 
     records = collect_search_records(root, repository, branch)
+    payload = {"version": 1, "records": records}
     output_path = root / "docs" / "assets" / "search-data.json"
     output_path.write_text(
-        json.dumps({"version": 1, "records": records}, ensure_ascii=False, indent=2) + "\n",
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+    js_output_path = root / "docs" / "assets" / "search-data.js"
+    js_output_path.write_text(
+        "window.DESIGNS_GROUPS_SEARCH_DATA = "
+        + json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
+        + ";\n",
         encoding="utf-8",
     )
     flag_links = sum(

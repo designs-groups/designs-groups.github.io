@@ -117,11 +117,11 @@ async function downloadRawFile(url, filename) {
       <h2>Search the database</h2>
       <form class="database-search-form home-search-form" action="search.html" method="get">
         <div class="search-parameter-fields" aria-label="Design parameters">
-          <label>\(v\) = <input type="number" min="0" step="1" name="v" inputmode="numeric"></label>
-          <label>\(b\) = <input type="number" min="0" step="1" name="b" inputmode="numeric"></label>
-          <label>\(r\) = <input type="number" min="0" step="1" name="r" inputmode="numeric"></label>
-          <label>\(k\) = <input type="number" min="0" step="1" name="k" inputmode="numeric"></label>
-          <label>\(\lambda\) = <input type="number" min="0" step="1" name="lambda" inputmode="numeric"></label>
+          <label><span class="search-param-symbol">v</span> = <input type="number" min="0" step="1" name="v" inputmode="numeric" aria-label="v"></label>
+          <label><span class="search-param-symbol">b</span> = <input type="number" min="0" step="1" name="b" inputmode="numeric" aria-label="b"></label>
+          <label><span class="search-param-symbol">r</span> = <input type="number" min="0" step="1" name="r" inputmode="numeric" aria-label="r"></label>
+          <label><span class="search-param-symbol">k</span> = <input type="number" min="0" step="1" name="k" inputmode="numeric" aria-label="k"></label>
+          <label><span class="search-param-symbol">λ</span> = <input type="number" min="0" step="1" name="lambda" inputmode="numeric" aria-label="lambda"></label>
         </div>
         <label class="search-type-field">Design type:
           <select name="design_type">

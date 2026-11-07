@@ -1697,6 +1697,14 @@ h2 {
   white-space: nowrap;
 }
 
+.search-param-symbol {
+  display: inline-block;
+  min-width: 0.9em;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+}
+
 .database-search-form input,
 .database-search-form select {
   height: 34px;

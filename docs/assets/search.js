@@ -8,6 +8,8 @@
   const summary = document.getElementById("search-results-summary");
   if (!form || !table || !thead || !tbody || !summary) return;
 
+  let searchRecords = [];
+
   const propertyColumns = [
     ["point_primitive", "Point-<br>primitive"],
     ["point_imprimitive", "Point-<br>imprimitive"],
@@ -174,25 +176,63 @@
     }
   }
 
+  function updateUrlFromForm() {
+    const params = new URLSearchParams();
+    ["v", "b", "r", "k", "lambda"].forEach(function (name) {
+      const value = String(form.elements[name].value || "").trim();
+      if (value !== "") params.set(name, value);
+    });
+    const type = selectedKind();
+    if (type && type !== "both") params.set("design_type", type);
+    const query = params.toString();
+    const next = window.location.pathname + (query ? "?" + query : "");
+    window.history.replaceState(null, "", next);
+  }
+
+  form.addEventListener("submit", function (event) {
+    if (!searchRecords.length) return;
+    event.preventDefault();
+    updateUrlFromForm();
+    render(searchRecords);
+  });
+
   const params = new URLSearchParams(window.location.search);
   ["v", "b", "r", "k", "lambda"].forEach(function (name) {
     if (params.has(name)) form.elements[name].value = params.get(name);
   });
   if (params.has("design_type")) form.elements.design_type.value = params.get("design_type");
 
-  fetch("assets/search-data.json", { cache: "no-store" })
-    .then(function (response) {
-      if (!response.ok) throw new Error("Could not load search data.");
-      return response.json();
-    })
-    .then(function (data) {
-      render(Array.isArray(data.records) ? data.records : []);
-    })
-    .catch(function () {
-      rebuildColumns();
-      rebuildHeader();
-      summary.textContent = "Search data are currently unavailable.";
-      const colspan = 5 + activeKinds().length * 4;
-      tbody.innerHTML = '<tr><td colspan="' + colspan + '" class="empty-row">Search data are currently unavailable. The website search index has not been generated successfully.</td></tr>';
-    });
+  function acceptData(data) {
+    const records = Array.isArray(data && data.records) ? data.records : [];
+    if (!records.length) throw new Error("Search index is empty.");
+    searchRecords = records;
+    render(searchRecords);
+  }
+
+  try {
+    if (window.DESIGNS_GROUPS_SEARCH_DATA) {
+      acceptData(window.DESIGNS_GROUPS_SEARCH_DATA);
+    } else {
+      fetch("assets/search-data.json", { cache: "no-store" })
+        .then(function (response) {
+          if (!response.ok) throw new Error("Could not load search data.");
+          return response.json();
+        })
+        .then(acceptData)
+        .catch(function () {
+          rebuildColumns();
+          rebuildHeader();
+          summary.textContent = "Search data are currently unavailable.";
+          const colspan = 5 + activeKinds().length * 4;
+          tbody.innerHTML = '<tr><td colspan="' + colspan + '" class="empty-row">Search data are currently unavailable. The website search index has not been generated successfully.</td></tr>';
+        });
+    }
+  } catch (error) {
+    rebuildColumns();
+    rebuildHeader();
+    summary.textContent = "Search data are currently unavailable.";
+    const colspan = 5 + activeKinds().length * 4;
+    tbody.innerHTML = '<tr><td colspan="' + colspan + '" class="empty-row">Search data are currently unavailable. The website search index has not been generated successfully.</td></tr>';
+  }
+
 })();

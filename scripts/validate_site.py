@@ -280,6 +280,7 @@ def main() -> int:
     search_page = docs / "search.html"
     search_script = docs / "assets" / "search.js"
     search_data = docs / "assets" / "search-data.json"
+    search_data_js = docs / "assets" / "search-data.js"
     if not search_page.exists():
         errors.append("Missing search page: docs/search.html")
     else:
@@ -293,20 +294,32 @@ def main() -> int:
             'corresponding raw <code>.g</code> file',
             'same group in different columns does not represent duplication',
             'Blank search fields are ignored',
+            'class="search-param-symbol">v</span>',
+            'class="search-param-symbol">λ</span>',
+            'src="assets/search-data.js"',
         ):
             if item not in search_text:
                 errors.append(f"docs/search.html missing: {item}")
+        if re.search(r'<label>\\\([^<]+\\\)', search_text):
+            errors.append("Search form still uses MathJax parameter labels, which can interrupt keyboard Tab order")
     if not search_script.exists():
         errors.append("Missing search behavior: docs/assets/search.js")
     else:
         search_js_text = search_script.read_text(encoding="utf-8", errors="replace")
-        for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)"):
+        for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)", "filters[i] !== null", "form.addEventListener(\"submit\"", "window.DESIGNS_GROUPS_SEARCH_DATA"):
             if required_js not in search_js_text:
                 errors.append(f"Search behavior missing fixed-layout/index safeguard: {required_js}")
     style_text = (docs / "assets" / "style.css").read_text(encoding="utf-8", errors="replace")
     for required_css in (".search-results-table,", "table-layout: fixed !important", "min-width: 0 !important"):
         if required_css not in style_text:
             errors.append(f"Search table fixed-width CSS missing: {required_css}")
+    if not search_data_js.exists():
+        errors.append("Missing generated search script: docs/assets/search-data.js")
+    else:
+        search_data_js_text = search_data_js.read_text(encoding="utf-8", errors="replace")
+        if "window.DESIGNS_GROUPS_SEARCH_DATA" not in search_data_js_text:
+            errors.append("Generated search-data.js does not define the search payload")
+
     if not search_data.exists():
         errors.append("Missing generated search data: docs/assets/search-data.json")
     else:
@@ -338,6 +351,8 @@ def main() -> int:
     home_text = (docs / "index.html").read_text(encoding="utf-8", errors="replace")
     if 'id="search-database-home"' not in home_text or 'action="search.html"' not in home_text:
         errors.append("Home page does not contain the compact database search form")
+    if re.search(r'<label>\\\([^<]+\\\)', home_text):
+        errors.append("Home search form still uses MathJax parameter labels, which can interrupt keyboard Tab order")
     if home_text.find('id="search-database-home"') > home_text.find('id="how-to-cite-home"'):
         errors.append("Home search must appear before How to cite")
 
