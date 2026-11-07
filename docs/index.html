@@ -116,20 +116,56 @@ async function downloadRawFile(url, filename) {
     <section class="home-section home-search-section" id="search-database-home">
       <h2>Search the database</h2>
       <form class="database-search-form home-search-form" action="search.html" method="get">
-        <div class="search-parameter-fields" aria-label="Design parameters">
-          <label for="search-v"><span class="search-param-symbol" aria-hidden="true">v</span> =</label> <input id="search-v" type="number" min="0" step="1" name="v" inputmode="numeric" aria-label="v" tabindex="1">
-          <label for="search-b"><span class="search-param-symbol" aria-hidden="true">b</span> =</label> <input id="search-b" type="number" min="0" step="1" name="b" inputmode="numeric" aria-label="b" tabindex="2">
-          <label for="search-r"><span class="search-param-symbol" aria-hidden="true">r</span> =</label> <input id="search-r" type="number" min="0" step="1" name="r" inputmode="numeric" aria-label="r" tabindex="3">
-          <label for="search-k"><span class="search-param-symbol" aria-hidden="true">k</span> =</label> <input id="search-k" type="number" min="0" step="1" name="k" inputmode="numeric" aria-label="k" tabindex="4">
-          <label for="search-lambda"><span class="search-param-symbol" aria-hidden="true">λ</span> =</label> <input id="search-lambda" type="number" min="0" step="1" name="lambda" inputmode="numeric" aria-label="lambda" tabindex="5">
+        <div class="search-fields-row" aria-label="Database search fields">
+          <div class="search-field search-parameter-field">
+            <label for="search-v"><span class="search-param-symbol" aria-hidden="true">v</span></label>
+            <input id="search-v" type="number" min="0" step="1" name="v" inputmode="numeric" aria-label="v" tabindex="1">
+          </div>
+          <div class="search-field search-parameter-field">
+            <label for="search-b"><span class="search-param-symbol" aria-hidden="true">b</span></label>
+            <input id="search-b" type="number" min="0" step="1" name="b" inputmode="numeric" aria-label="b" tabindex="2">
+          </div>
+          <div class="search-field search-parameter-field">
+            <label for="search-r"><span class="search-param-symbol" aria-hidden="true">r</span></label>
+            <input id="search-r" type="number" min="0" step="1" name="r" inputmode="numeric" aria-label="r" tabindex="3">
+          </div>
+          <div class="search-field search-parameter-field">
+            <label for="search-k"><span class="search-param-symbol" aria-hidden="true">k</span></label>
+            <input id="search-k" type="number" min="0" step="1" name="k" inputmode="numeric" aria-label="k" tabindex="4">
+          </div>
+          <div class="search-field search-parameter-field">
+            <label for="search-lambda"><span class="search-param-symbol" aria-hidden="true">λ</span></label>
+            <input id="search-lambda" type="number" min="0" step="1" name="lambda" inputmode="numeric" aria-label="lambda" tabindex="5">
+          </div>
+          <div class="search-field search-select-field">
+            <label for="search-design-type">Design type</label>
+            <select id="search-design-type" name="design_type" tabindex="6">
+              <option value="both">Both</option>
+              <option value="flag-transitive">Flag-transitive</option>
+              <option value="block-transitive">Block-transitive</option>
+            </select>
+          </div>
+          <div class="search-field search-select-field">
+            <label for="search-point-action">Point action</label>
+            <select id="search-point-action" name="point_action" tabindex="7">
+              <option value="any">Any</option>
+              <option value="primitive">Primitive</option>
+              <option value="imprimitive">Imprimitive</option>
+            </select>
+          </div>
+          <div class="search-field search-select-field">
+            <label for="search-block-action">Block action</label>
+            <select id="search-block-action" name="block_action" tabindex="8">
+              <option value="any">Any</option>
+              <option value="primitive">Primitive</option>
+              <option value="imprimitive">Imprimitive</option>
+            </select>
+          </div>
+          <div class="search-field search-button-field">
+            <span class="search-button-spacer" aria-hidden="true">&nbsp;</span>
+            <button class="search-submit" type="submit" tabindex="9">Search</button>
+          </div>
         </div>
-        <label class="search-type-field" for="search-design-type">Design type:</label>
-        <select id="search-design-type" name="design_type" tabindex="6">
-            <option value="both">Both</option>
-            <option value="flag-transitive">Flag-transitive</option>
-            <option value="block-transitive">Block-transitive</option>
-          </select>
-        <button class="search-submit" type="submit" tabindex="7">Search</button>
       </form>
     </section>
 

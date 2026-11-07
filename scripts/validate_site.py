@@ -512,17 +512,17 @@ def main() -> int:
                 errors.append(f"{page_rel}: search field {name} does not have tabindex {tab}")
         if not re.search(r'name="design_type"[^>]*tabindex="6"', text):
             errors.append(f"{page_rel}: Design type does not have tabindex 6")
-        if page_rel == "docs/search.html":
-            if not re.search(r'name="point_action"[^>]*tabindex="7"', text):
-                errors.append("docs/search.html: Point action does not have tabindex 7")
-            if not re.search(r'name="block_action"[^>]*tabindex="8"', text):
-                errors.append("docs/search.html: Block action does not have tabindex 8")
-            if not re.search(r'class="search-submit"[^>]*tabindex="9"', text):
-                errors.append("docs/search.html: Search button does not have tabindex 9")
-            if "Advanced search" in text:
-                errors.append("docs/search.html still contains the obsolete Advanced search label")
-        elif not re.search(r'class="search-submit"[^>]*tabindex="7"', text):
-            errors.append(f"{page_rel}: Search button does not have tabindex 7")
+        if not re.search(r'name="point_action"[^>]*tabindex="7"', text):
+            errors.append(f"{page_rel}: Point action does not have tabindex 7")
+        if not re.search(r'name="block_action"[^>]*tabindex="8"', text):
+            errors.append(f"{page_rel}: Block action does not have tabindex 8")
+        if not re.search(r'class="search-submit"[^>]*tabindex="9"', text):
+            errors.append(f"{page_rel}: Search button does not have tabindex 9")
+        if "Advanced search" in text:
+            errors.append(f"{page_rel} still contains the obsolete Advanced search label")
+        for bad_label in ("v</span> =", "b</span> =", "r</span> =", "k</span> =", "λ</span> =", "Design type:", "Point action:", "Block action:"):
+            if bad_label in text:
+                errors.append(f"{page_rel}: obsolete inline search label remains: {bad_label}")
 
     # Authors: both cards use left-side portraits and right-side contact/address text.
     authors_page = docs / "authors.html"
