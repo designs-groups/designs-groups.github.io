@@ -1834,7 +1834,9 @@ h2 {
   text-align: center;
 }
 
-.sidebar-how a.sidebar-current {
+.sidebar-how a.sidebar-current,
+.sidebar-package a.sidebar-current,
+.sidebar-license a.sidebar-current {
   background: var(--blue);
   color: #ffffff;
 }

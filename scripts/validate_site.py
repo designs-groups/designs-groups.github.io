@@ -388,6 +388,28 @@ def main() -> int:
             elif how_pos >= 0 and search_pos > how_pos:
                 errors.append(f"{page.relative_to(root)} places Search below How to read")
 
+    # Site-level sidebar pages use the same active highlight as Search.
+    site_sidebar_pages = {
+        "search.html": "Search the database",
+        "how-to-read.html": "How to read",
+        "how-to-cite.html": "How to cite",
+        "software.html": "Software and Packages",
+        "licence.html": "Licence",
+    }
+    for filename, label in site_sidebar_pages.items():
+        page = docs / filename
+        text = page.read_text(encoding="utf-8", errors="replace")
+        sidebar_match = re.search(r'<ul class="sidebar-links">.*?</ul>', text, flags=re.S)
+        if sidebar_match is None:
+            errors.append(f"docs/{filename} has no sidebar links")
+            continue
+        sidebar_text = sidebar_match.group(0)
+        expected = re.compile(
+            r'<a class="sidebar-current" href="' + re.escape(filename) + r'">' + re.escape(label) + r'</a>'
+        )
+        if not expected.search(sidebar_text):
+            errors.append(f"docs/{filename} does not highlight its current sidebar item")
+
     for script in sorted((root / "scripts").glob("*.py")):
         try:
             with warnings.catch_warnings():

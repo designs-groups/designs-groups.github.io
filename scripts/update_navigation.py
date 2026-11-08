@@ -52,6 +52,31 @@ def search_href(page: Path, docs: Path) -> str:
     return "../" * (len(rel.parts) - 1) + "search.html"
 
 
+SITE_SIDEBAR_PAGES = {
+    "search.html",
+    "how-to-read.html",
+    "how-to-cite.html",
+    "software.html",
+    "licence.html",
+}
+
+
+def mark_site_sidebar_current(text: str, page: Path, docs: Path) -> str:
+    """Highlight the current site-level sidebar item exactly as Search is highlighted."""
+    current_name = page.name if page.parent == docs else ""
+    pattern = re.compile(
+        r'<a(?: class="sidebar-current")? href="((?:\.\./)*)(search|how-to-read|how-to-cite|software|licence)\.html">([^<]+)</a>'
+    )
+
+    def replace(match: re.Match[str]) -> str:
+        prefix, stem, label = match.groups()
+        filename = stem + ".html"
+        current = ' class="sidebar-current"' if filename == current_name else ""
+        return f'<a{current} href="{prefix}{filename}">{label}</a>'
+
+    return pattern.sub(replace, text)
+
+
 def ensure_search_navigation(page: Path, docs: Path) -> bool:
     text = page.read_text(encoding="utf-8")
     updated = text
@@ -83,6 +108,8 @@ def ensure_search_navigation(page: Path, docs: Path) -> bool:
         )
         if count != 1:
             raise RuntimeError(f"Could not add Search to sidebar in {page}")
+
+    updated = mark_site_sidebar_current(updated, page, docs)
 
     if updated != text:
         page.write_text(updated, encoding="utf-8")
