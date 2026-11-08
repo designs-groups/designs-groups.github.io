@@ -309,9 +309,11 @@ def main() -> int:
         errors.append("Missing search behavior: docs/assets/search.js")
     else:
         search_js_text = search_script.read_text(encoding="utf-8", errors="replace")
-        for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)", "filters[i] !== null", "form.addEventListener(\"submit\"", "hasSearchCondition", "loadSearchData", "fetch(\"assets/search-data.json\""):
+        for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)", "filters[i] !== null", "form.addEventListener(\"submit\"", "hasSearchCondition", "loadSearchData", "fetch(\"assets/search-data.json\"", "function displayKinds()", "[\"flag_transitive\", \"Flag-transitive\"]", "[\"block_transitive\", \"Block-transitive\"]", "choice === \"flag-transitive\" && kindKey === \"block_transitive\"", "choice === \"block-transitive\" && kindKey === \"flag_transitive\""):
             if required_js not in search_js_text:
                 errors.append(f"Search behavior missing fixed-layout/index safeguard: {required_js}")
+        if "function activeKinds()" in search_js_text:
+            errors.append("Design type must filter table contents without changing the FT/BT result-table structure")
     style_text = (docs / "assets" / "style.css").read_text(encoding="utf-8", errors="replace")
     for required_css in (".search-results-table,", "table-layout: fixed !important", "min-width: 0 !important", ".database-search-form label", "text-align: center"):
         if required_css not in style_text:

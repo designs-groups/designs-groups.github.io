@@ -36,10 +36,7 @@
     return form.elements.flag_action ? (form.elements.flag_action.value || "any") : "any";
   }
 
-  function activeKinds() {
-    const choice = selectedKind();
-    if (choice === "flag-transitive") return [["flag_transitive", "Flag-transitive"]];
-    if (choice === "block-transitive") return [["block_transitive", "Block-transitive"]];
+  function displayKinds() {
     return [
       ["flag_transitive", "Flag-transitive"],
       ["block_transitive", "Block-transitive"]
@@ -48,7 +45,7 @@
 
 
   function rebuildColumns() {
-    const kinds = activeKinds();
+    const kinds = displayKinds();
     const existing = table.querySelector("colgroup");
     if (existing) existing.remove();
     const colgroup = document.createElement("colgroup");
@@ -68,7 +65,7 @@
   }
 
   function rebuildHeader() {
-    const kinds = activeKinds();
+    const kinds = displayKinds();
     const top = document.createElement("tr");
     ["\\(v\\)", "\\(b\\)", "\\(r\\)", "\\(k\\)", "\\(\\lambda\\)"].forEach(function (label) {
       const th = document.createElement("th");
@@ -168,6 +165,9 @@
   }
 
   function groupsForCell(record, kindKey, propertyKey) {
+    const choice = selectedKind();
+    if (choice === "flag-transitive" && kindKey === "block_transitive") return [];
+    if (choice === "block-transitive" && kindKey === "flag_transitive") return [];
     if (actionsAreDefault()) return record[kindKey][propertyKey] || [];
     const unique = new Map();
     kindProfiles(record, kindKey).forEach(function (profile) {
@@ -225,7 +225,7 @@
     showResults();
     rebuildColumns();
     rebuildHeader();
-    const kinds = activeKinds();
+    const kinds = displayKinds();
     const matchesList = records.filter(matches);
     tbody.replaceChildren();
 
@@ -255,7 +255,7 @@
     }
 
     summary.textContent = "Search results: " + matchesList.length + " parameter set(s) found.";
-    table.classList.toggle("search-results-single-kind", kinds.length === 1);
+    table.classList.remove("search-results-single-kind");
     if (window.MathJax && typeof window.MathJax.typesetPromise === "function") {
       window.MathJax.typesetPromise([thead, tbody]).catch(function () {});
     }
