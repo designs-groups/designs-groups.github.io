@@ -91,6 +91,8 @@ def main() -> int:
                     errors.append("BDGroup resource must appear immediately after GRAPE")
                 if "A GAP package for constructing and classifying 2-designs." not in bdgroup_item:
                     errors.append("BDGroup resource is missing its description")
+                if "BDGroup package page" not in bdgroup_item:
+                    errors.append("BDGroup resource is missing its plain-text package page label")
                 if re.search(r"<a\b", bdgroup_item, flags=re.I):
                     errors.append("BDGroup resource must remain unlinked")
 
