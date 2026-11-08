@@ -295,14 +295,20 @@ def main() -> int:
             'corresponding raw <code>.g</code> file',
             'same group in different columns does not represent duplication',
             'Blank search fields are ignored',
-            'Point action and Block action can restrict results',
-            'Flag action can restrict results',
             'all selected properties must hold for the same recorded design',
             'class="search-param-symbol" aria-hidden="true">v</span>',
             'class="search-param-symbol" aria-hidden="true">λ</span>',
         ):
             if item not in search_text:
                 errors.append(f"docs/search.html missing: {item}")
+        for removed_note in (
+            'The table lists the recorded groups associated with each parameter set.',
+            'Point action and Block action can restrict results to primitive or imprimitive actions.',
+            'Flag action can restrict results to flag-transitive or antiflag-transitive recorded designs.',
+            'Design type filters the group possibilities without changing the table layout: selecting Flag-transitive leaves the Block-transitive cells empty, and vice versa.',
+        ):
+            if removed_note in search_text:
+                errors.append(f"docs/search.html contains removed explanatory text: {removed_note}")
         if re.search(r'<label>\\\([^<]+\\\)', search_text):
             errors.append("Search form still uses MathJax parameter labels, which can interrupt keyboard Tab order")
     if not search_script.exists():
