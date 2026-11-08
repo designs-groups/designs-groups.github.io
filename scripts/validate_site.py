@@ -62,6 +62,38 @@ def main() -> int:
         if stale.exists():
             errors.append(f"Stale page exists: {stale.relative_to(root)}")
 
+    # Keep the BDGroup Software resource intact directly after GRAPE.  The
+    # GRAPE package URL belongs to GRAPE and must not be linked as BDGroup.
+    software_page = docs / "software.html"
+    if not software_page.exists():
+        errors.append("Missing Software and Packages page: docs/software.html")
+    else:
+        software_text = software_page.read_text(encoding="utf-8", errors="replace")
+        resource_list = re.search(
+            r'<ul class="resource-list">(.*?)</ul>', software_text, flags=re.S
+        )
+        if resource_list is None:
+            errors.append("Software page is missing its resource list")
+        else:
+            resource_items = re.findall(
+                r'<li\b[^>]*>(.*?)</li>', resource_list.group(1), flags=re.S
+            )
+            bdgroup_indices = [
+                i for i, item in enumerate(resource_items)
+                if "BDGroup — Designs by Groups: constructions and classifications" in item
+            ]
+            if len(bdgroup_indices) != 1:
+                errors.append("Software page must contain exactly one BDGroup resource")
+            else:
+                bdgroup_index = bdgroup_indices[0]
+                bdgroup_item = resource_items[bdgroup_index]
+                if bdgroup_index == 0 or "GRAPE —" not in resource_items[bdgroup_index - 1]:
+                    errors.append("BDGroup resource must appear immediately after GRAPE")
+                if "A GAP package for constructing and classifying 2-designs." not in bdgroup_item:
+                    errors.append("BDGroup resource is missing its description")
+                if re.search(r"<a\b", bdgroup_item, flags=re.I):
+                    errors.append("BDGroup resource must remain unlinked")
+
     config = json.loads((root / "data" / "table_sources.json").read_text(encoding="utf-8"))
 
     # The published Pages workflow must run the complete site pipeline, not a
