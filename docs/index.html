@@ -161,17 +161,27 @@ async function downloadRawFile(url, filename) {
               <option value="imprimitive">Imprimitive</option>
             </select>
           </div>
-          <div class="search-field search-select-field">
-            <label for="search-flag-action">Flag action</label>
-            <select id="search-flag-action" name="flag_action" tabindex="9">
-              <option value="any">Any</option>
-              <option value="flag-transitive">Flag-transitive</option>
-              <option value="antiflag-transitive">Antiflag-transitive</option>
-            </select>
+          <div class="search-action-pair" role="group" aria-label="Flag and antiflag actions">
+            <div class="search-field search-select-field">
+              <label for="search-flag-action">Flag action</label>
+              <select id="search-flag-action" name="flag_action" tabindex="9">
+                <option value="any">Any</option>
+                <option value="flag-transitive">Flag-transitive</option>
+                <option value="non-flag-transitive">Non-flag-transitive</option>
+              </select>
+            </div>
+            <div class="search-field search-select-field">
+              <label for="search-antiflag-action">Antiflag action</label>
+              <select id="search-antiflag-action" name="antiflag_action" tabindex="10">
+                <option value="any">Any</option>
+                <option value="antiflag-transitive">Antiflag-transitive</option>
+                <option value="non-antiflag-transitive">Non-antiflag-transitive</option>
+              </select>
+            </div>
           </div>
           <div class="search-field search-button-field">
             <span class="search-button-spacer" aria-hidden="true">&nbsp;</span>
-            <button class="search-submit" type="submit" tabindex="10">Search</button>
+            <button class="search-submit" type="submit" tabindex="11">Search</button>
           </div>
         </div>
       </form>

@@ -36,6 +36,10 @@
     return form.elements.flag_action ? (form.elements.flag_action.value || "any") : "any";
   }
 
+  function selectedAntiflagAction() {
+    return form.elements.antiflag_action ? (form.elements.antiflag_action.value || "any") : "any";
+  }
+
   function displayKinds() {
     return [
       ["flag_transitive", "Flag-transitive"],
@@ -132,18 +136,21 @@
     const point = selectedPointAction();
     const block = selectedBlockAction();
     const flag = selectedFlagAction();
+    const antiflag = selectedAntiflagAction();
 
     if (point === "primitive" && profile.point_primitive !== true) return false;
     if (point === "imprimitive" && profile.point_primitive !== false) return false;
     if (block === "primitive" && profile.block_primitive !== true) return false;
     if (block === "imprimitive" && profile.block_primitive !== false) return false;
     if (flag === "flag-transitive" && profile.flag_transitive !== true) return false;
-    if (flag === "antiflag-transitive" && profile.antiflag_transitive !== true) return false;
+    if (flag === "non-flag-transitive" && profile.flag_transitive !== false) return false;
+    if (antiflag === "antiflag-transitive" && profile.antiflag_transitive !== true) return false;
+    if (antiflag === "non-antiflag-transitive" && profile.antiflag_transitive !== false) return false;
     return true;
   }
 
   function actionsAreDefault() {
-    return selectedPointAction() === "any" && selectedBlockAction() === "any" && selectedFlagAction() === "any";
+    return selectedPointAction() === "any" && selectedBlockAction() === "any" && selectedFlagAction() === "any" && selectedAntiflagAction() === "any";
   }
 
   function kindProfiles(record, kindKey) {
@@ -194,6 +201,7 @@
     if (selectedPointAction() !== "any") return true;
     if (selectedBlockAction() !== "any") return true;
     if (selectedFlagAction() !== "any") return true;
+    if (selectedAntiflagAction() !== "any") return true;
     return false;
   }
 
@@ -272,9 +280,11 @@
     const pointAction = selectedPointAction();
     const blockAction = selectedBlockAction();
     const flagAction = selectedFlagAction();
+    const antiflagAction = selectedAntiflagAction();
     if (pointAction !== "any") params.set("point_action", pointAction);
     if (blockAction !== "any") params.set("block_action", blockAction);
     if (flagAction !== "any") params.set("flag_action", flagAction);
+    if (antiflagAction !== "any") params.set("antiflag_action", antiflagAction);
     const query = params.toString();
     const next = window.location.pathname + (query ? "?" + query : "");
     window.history.replaceState(null, "", next);
@@ -331,7 +341,16 @@
   if (params.has("design_type")) form.elements.design_type.value = params.get("design_type");
   if (params.has("point_action") && form.elements.point_action) form.elements.point_action.value = params.get("point_action");
   if (params.has("block_action") && form.elements.block_action) form.elements.block_action.value = params.get("block_action");
-  if (params.has("flag_action") && form.elements.flag_action) form.elements.flag_action.value = params.get("flag_action");
+  if (params.has("flag_action") && form.elements.flag_action) {
+    const flagValue = params.get("flag_action");
+    if (flagValue === "antiflag-transitive" && form.elements.antiflag_action && !params.has("antiflag_action")) {
+      // Preserve links from the earlier single-dropdown version.
+      form.elements.antiflag_action.value = flagValue;
+    } else {
+      form.elements.flag_action.value = flagValue;
+    }
+  }
+  if (params.has("antiflag_action") && form.elements.antiflag_action) form.elements.antiflag_action.value = params.get("antiflag_action");
 
   if (hasSearchCondition()) {
     executeSearch();

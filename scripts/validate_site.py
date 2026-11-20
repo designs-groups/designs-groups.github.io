@@ -323,7 +323,7 @@ def main() -> int:
             'id="database-search-form"',
             'name="v"', 'name="b"', 'name="r"', 'name="k"', 'name="lambda"',
             'name="design_type"',
-            'name="point_action"', 'name="block_action"', 'name="flag_action"',
+            'name="point_action"', 'name="block_action"', 'name="flag_action"', 'name="antiflag_action"',
             'Groups',
             'Several groups may occur in a single cell',
             'corresponding raw <code>.g</code> file',
@@ -352,6 +352,18 @@ def main() -> int:
         for required_js in ("rebuildColumns", "Search index is empty", "table.insertBefore(colgroup, thead)", "filters[i] !== null", "form.addEventListener(\"submit\"", "hasSearchCondition", "loadSearchData", "fetch(\"assets/search-data.json\"", "function displayKinds()", "[\"flag_transitive\", \"Flag-transitive\"]", "[\"block_transitive\", \"Block-transitive\"]", "choice === \"flag-transitive\" && kindKey === \"block_transitive\"", "choice === \"block-transitive\" && kindKey === \"flag_transitive\""):
             if required_js not in search_js_text:
                 errors.append(f"Search behavior missing fixed-layout/index safeguard: {required_js}")
+        for required_js in (
+            'function selectedAntiflagAction()',
+            'profile.flag_transitive !== true',
+            'profile.flag_transitive !== false',
+            'profile.antiflag_transitive !== true',
+            'profile.antiflag_transitive !== false',
+            'selectedAntiflagAction() !== "any"',
+            'params.set("antiflag_action", antiflagAction)',
+            'params.has("antiflag_action")',
+        ):
+            if required_js not in search_js_text:
+                errors.append(f"Search action filter is missing: {required_js}")
         if "function activeKinds()" in search_js_text:
             errors.append("Design type must filter table contents without changing the FT/BT result-table structure")
     style_text = (docs / "assets" / "style.css").read_text(encoding="utf-8", errors="replace")
@@ -580,8 +592,23 @@ def main() -> int:
             errors.append(f"{page_rel}: Block action does not have tabindex 8")
         if not re.search(r'name="flag_action"[^>]*tabindex="9"', text):
             errors.append(f"{page_rel}: Flag action does not have tabindex 9")
-        if not re.search(r'class="search-submit"[^>]*tabindex="10"', text):
-            errors.append(f"{page_rel}: Search button does not have tabindex 10")
+        if not re.search(r'name="antiflag_action"[^>]*tabindex="10"', text):
+            errors.append(f"{page_rel}: Antiflag action does not have tabindex 10")
+        if not re.search(r'class="search-submit"[^>]*tabindex="11"', text):
+            errors.append(f"{page_rel}: Search button does not have tabindex 11")
+        for name, options in (
+            ("flag_action", ("any", "flag-transitive", "non-flag-transitive")),
+            ("antiflag_action", ("any", "antiflag-transitive", "non-antiflag-transitive")),
+        ):
+            select = re.search(rf'<select\b[^>]*name="{name}"[^>]*>(.*?)</select>', text, flags=re.S)
+            if select is None:
+                errors.append(f"{page_rel}: Missing {name} dropdown")
+            else:
+                actual = re.findall(r'<option value="([^"]+)"', select.group(1))
+                if tuple(actual) != options:
+                    errors.append(f"{page_rel}: Incorrect {name} options: {actual}")
+        if 'class="search-action-pair"' not in text:
+            errors.append(f"{page_rel}: Flag and antiflag comboboxes must remain paired")
         if "Advanced search" in text:
             errors.append(f"{page_rel} still contains the obsolete Advanced search label")
         for bad_label in ("v</span> =", "b</span> =", "r</span> =", "k</span> =", "λ</span> =", "Design type:", "Point action:", "Block action:", "Flag action:"):

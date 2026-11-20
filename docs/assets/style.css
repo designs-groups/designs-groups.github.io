@@ -1691,7 +1691,7 @@ h2 {
     minmax(125px, 1.05fr)
     minmax(125px, 1fr)
     minmax(125px, 1fr)
-    minmax(135px, 1.05fr)
+    minmax(310px, 2.15fr)
     auto;
   align-items: end;
   column-gap: 10px;
@@ -1703,6 +1703,23 @@ h2 {
   flex-direction: column;
   align-items: stretch;
   gap: 5px;
+}
+
+/* The flag and antiflag controls are independent but stay together. */
+.search-action-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  column-gap: 10px;
+  align-items: end;
+}
+
+.search-action-pair .search-field {
+  min-width: 0;
+}
+
+.search-action-pair select {
+  width: 100%;
+  min-width: 0;
 }
 
 .database-search-form label {
@@ -1849,7 +1866,7 @@ h2 {
   min-width: 142px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1550px) {
   .search-fields-row {
     display: flex;
     flex-wrap: wrap;
@@ -1867,5 +1884,13 @@ h2 {
   .search-type-field,
   .search-action-field {
     width: 100%;
+  }
+}
+
+@media (max-width: 510px) {
+  .search-action-pair {
+    width: 100%;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
   }
 }
