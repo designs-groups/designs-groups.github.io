@@ -5,49 +5,68 @@
 # Remark: all designs
 #         lD_M11 is the list of designs  
 
-# 1. number of designs:
+# 1. Group information:
 # ---------------------
 
-# ----------------------------------------------------
-#                      Symmetric  Non-symmetric  Total
-# ----------------------------------------------------
-# Point-primitive      0          16             16
-# Point-imprimitive    0          0              0
-#
-# Block-primitive      0          8              8
-# Block-imprimitive    0          8              8
-#
-# Flag-transitive      0          16             16
-# AntiFlag-transitive  0          10             10
-# ----------------------------------------------------
-# Total                0          16             16
-# ----------------------------------------------------
+# ATLAS name:          M11
+# GAP name:            M11
+# Order:               7920 = 2^4 * 3^2 * 5 * 11
+# No. maximal classes: 5
 
-# 2. Summary: 
+# Maximal subgroups:
+# -------------------------------------------
+# Nr   structure         order         index
+# -------------------------------------------
+# 1    A6.2_3            720           11
+# 2    L2(11)            660           12
+# 3    3^2:Q8.2          144           55
+# 4    A5.2              120           66
+# 5    2.S4              48            165
+# -------------------------------------------
+
+# 2. Number of designs:
+# ---------------------
+
+# ------------------------------------------------------
+#                      symmetric  non-symmetric  total  
+# ------------------------------------------------------
+# Point-primitive      0          16             16     
+# Point-imprimitive    0          0              0      
+#                                                       
+# Block-primitive      0          8              8      
+# Block-imprimitive    0          8              8      
+#                                                       
+# Flag-transitive      0          16             16     
+# AntiFlag-transitive  0          10             10     
+# ------------------------------------------------------
+# Total                0          16             16     
+# ------------------------------------------------------
+
+# 3. Summary: 
 # -----------
 
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b     r    k   λ   G    Gα         GB         Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   11  55    45   9   36  M11  A6.2       3^2:QD16   S11     2      2                  2       5       true             true             true             true                                        complete
-# 2   11  66    30   5   12  M11  A6.2       S5         M11     2      2                  2       6       true             true             true             true                 3
-# 3   11  66    36   6   18  M11  A6.2       S5         M11     2      2                  2       6       true             true             true             true                 2
-# 4   11  165   45   3   9   M11  A6.2       GL(2,3)    S11     2      2                  2       13      true             true             true             true                 5                      complete
-# 5   11  165   120  8   84  M11  A6.2       GL(2,3)    S11     2      2                  2       13      true             true             true             true                 4                      complete
-# 6   11  330   120  4   36  M11  A6.2       S4         S11     2      2                  2       17      true             false            true             false                                       complete
-# 7   11  396   180  5   72  M11  A6.2       5:4        M11     2      2                  2       19      true             false            true             false
-# 8   12  22    11   6   5   M11  PSL(2,11)  A6         M11     2      2                  3       4       true             false            true             true                 8
-# 9   12  66    55   10  45  M11  PSL(2,11)  S5         S12     2      2                  3       6       true             true             true             true                                        complete
-# 10  12  110   55   6   25  M11  PSL(2,11)  (S3xS3):2  M11     2      2                  3       8       true             false            true             true                 10
-# 11  12  132   55   5   20  M11  PSL(2,11)  A5         M11     2      2                  3       10      true             false            true             false
-# 12  12  165   55   4   15  M11  PSL(2,11)  GL(2,3)    M11     2      2                  3       13      true             true             true             true                 13
-# 13  12  165   110  8   70  M11  PSL(2,11)  GL(2,3)    M11     2      2                  3       13      true             true             true             true                 12
-# 14  12  220   55   3   10  M11  PSL(2,11)  S3xS3      S12     2      2                  3       14      true             false            true             false                                       complete
-# 15  12  330   110  4   30  M11  PSL(2,11)  S4         M11     2      2                  3       17      true             false            true             false
-# 16  55  1980  144  4   8   M11  3^2:QD16   2^2        M11     3      3                  5       36      true             false            true             false
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b     r    k   λ   G    Gα         GB         Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   11  55    45   9   36  M11  A6.2       3^2:QD16   S11     2      2                  2       5       true             true             true             true                                        complete  
+# 2   11  66    30   5   12  M11  A6.2       S5         M11     2      2                  2       6       true             true             true             true                 3                                
+# 3   11  66    36   6   18  M11  A6.2       S5         M11     2      2                  2       6       true             true             true             true                 2                                
+# 4   11  165   45   3   9   M11  A6.2       GL(2,3)    S11     2      2                  2       13      true             true             true             true                 5                      complete  
+# 5   11  165   120  8   84  M11  A6.2       GL(2,3)    S11     2      2                  2       13      true             true             true             true                 4                      complete  
+# 6   11  330   120  4   36  M11  A6.2       S4         S11     2      2                  2       17      true             false            true             false                                       complete  
+# 7   11  396   180  5   72  M11  A6.2       5:4        M11     2      2                  2       19      true             false            true             false                                                 
+# 8   12  22    11   6   5   M11  PSL(2,11)  A6         M11     2      2                  3       4       true             false            true             true                 8                                
+# 9   12  66    55   10  45  M11  PSL(2,11)  S5         S12     2      2                  3       6       true             true             true             true                                        complete  
+# 10  12  110   55   6   25  M11  PSL(2,11)  (S3xS3):2  M11     2      2                  3       8       true             false            true             true                 10                               
+# 11  12  132   55   5   20  M11  PSL(2,11)  A5         M11     2      2                  3       10      true             false            true             false                                                 
+# 12  12  165   55   4   15  M11  PSL(2,11)  GL(2,3)    M11     2      2                  3       13      true             true             true             true                 13                               
+# 13  12  165   110  8   70  M11  PSL(2,11)  GL(2,3)    M11     2      2                  3       13      true             true             true             true                 12                               
+# 14  12  220   55   3   10  M11  PSL(2,11)  S3xS3      S12     2      2                  3       14      true             false            true             false                                       complete  
+# 15  12  330   110  4   30  M11  PSL(2,11)  S4         M11     2      2                  3       17      true             false            true             false                                                 
+# 16  55  1980  144  4   8   M11  3^2:QD16   2^2        M11     3      3                  5       36      true             false            true             false                                                 
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
+# 4. Further information: 
 # -----------------------
 
 # Design: 1
@@ -86,7 +105,7 @@
 # Structure                            M11          M11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A6.2         A6.2         
+# Point-stabiliser                     A6.2         M10          
 # Block-stabiliser                     S5           S5           
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  5^{1}6^{1}   5^{1}6^{1}   
@@ -112,7 +131,7 @@
 # Structure                            M11          M11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A6.2         A6.2         
+# Point-stabiliser                     A6.2         M10          
 # Block-stabiliser                     S5           S5           
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  5^{1}6^{1}   5^{1}6^{1}   
@@ -216,7 +235,7 @@
 # Structure                            M11          M11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     A6.2         A6.2         
+# Point-stabiliser                     A6.2         M10          
 # Block-stabiliser                     5:4          5:4          
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  1^{1}5^{2}   1^{1}5^{2}   
@@ -466,12 +485,12 @@
 # Block-primitive type                 0                  0                  
 # ---------------------------------------------------------------------------
 
-# 4. Designs: 
+# 5. Designs: 
 # -----------
 
-lD_M11 := [ 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
+lD_M11 :=  [
+ rec( parameters := [ 11, 55, 45, 9, 36 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
   autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
   groupNumbers := [ " ", 2, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7, 9, 10, 11 ],
@@ -479,13 +498,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 55, 45, 9, 36 ],
   r := 45,
   tSubsetStructure := rec(
-      lambdas := [ 36 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
+lambdas := [ 36 ],
+t := 2 ),
+  aVector := [ [ 72, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 10, 1 ] ],
+  v:= 11),
+ rec( parameters := [ 11, 66, 30, 5, 12 ],
   autGroup := Group( [ ( 1, 2)( 5,11)( 6, 8)( 7,10), ( 2, 3)( 5,10)( 6,11)( 7, 8), ( 3, 4)( 5, 6)( 7,10)( 8,11), ( 4, 5, 9,10)( 6, 7, 8,11), ( 4, 6, 9, 8)( 5,11,10, 7) ] ),
   autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
   groupNumbers := [ " ", 2, 6 ],
@@ -494,13 +514,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 66, 30, 5, 12 ],
   r := 30,
   tSubsetStructure := rec(
-      lambdas := [ 12 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
+lambdas := [ 12 ],
+t := 2 ),
+  aVector := [ [ 20, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 10, 1 ] ],
+  v:= 11),
+ rec( parameters := [ 11, 66, 36, 6, 18 ],
   autGroup := Group( [ ( 1, 2)( 5,11)( 6, 8)( 7,10), ( 2, 3)( 5,10)( 6,11)( 7, 8), ( 3, 4)( 5, 6)( 7,10)( 8,11), ( 4, 5, 9,10)( 6, 7, 8,11), ( 4, 6, 9, 8)( 5,11,10, 7) ] ),
   autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
   groupNumbers := [ " ", 2, 6 ],
@@ -509,14 +530,15 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 66, 36, 6, 18 ],
   r := 36,
   tSubsetStructure := rec(
-      lambdas := [ 18 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
+lambdas := [ 18 ],
+t := 2 ),
+  aVector := [ [ 30, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 10, 1 ] ],
+  v:= 11),
+ rec( parameters := [ 11, 165, 45, 3, 9 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
   autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
   groupNumbers := [ " ", 2, 13 ],
   baseBlock := [ 2, 6, 8 ],
@@ -524,14 +546,15 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 165, 45, 3, 9 ],
   r := 45,
   tSubsetStructure := rec(
-      lambdas := [ 9 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
+lambdas := [ 9 ],
+t := 2 ),
+  aVector := [ [ 6, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 10, 1 ] ],
+  v:= 11),
+ rec( parameters := [ 11, 165, 120, 8, 84 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
   autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
   groupNumbers := [ " ", 2, 13 ],
   baseBlock := [ 1, 3, 4, 5, 7, 9, 10, 11 ],
@@ -539,14 +562,15 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 165, 120, 8, 84 ],
   r := 120,
   tSubsetStructure := rec(
-      lambdas := [ 84 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 11 ] ),
+lambdas := [ 84 ],
+t := 2 ),
+  aVector := [ [ 56, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 10, 1 ] ],
+  v:= 11),
+ rec( parameters := [ 11, 330, 120, 4, 36 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), (1,2) ] ),
   autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
   groupNumbers := [ " ", 2, 17 ],
   baseBlock := [ 1, 5, 7, 10 ],
@@ -554,13 +578,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 330, 120, 4, 36 ],
   r := 120,
   tSubsetStructure := rec(
-      lambdas := [ 36 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
+lambdas := [ 36 ],
+t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 10, 1 ] ],
+  v:= 11),
+ rec( parameters := [ 11, 396, 180, 5, 72 ],
   autGroup := Group( [ ( 1, 2)( 5,11)( 6, 8)( 7,10), ( 2, 3)( 5,10)( 6,11)( 7, 8), ( 3, 4)( 5, 6)( 7,10)( 8,11), ( 4, 5, 9,10)( 6, 7, 8,11), ( 4, 6, 9, 8)( 5,11,10, 7) ] ),
   autSubgroup := Group( [ ( 2, 3, 4, 6)( 7, 8, 9,10), ( 1, 2)( 3, 5)( 6, 7)( 9,11) ] ),
   groupNumbers := [ " ", 2, 19 ],
@@ -569,13 +594,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 11, 396, 180, 5, 72 ],
   r := 180,
   tSubsetStructure := rec(
-      lambdas := [ 72 ],
-      t := 2 ),
-  v := 11 ), 
- rec(
+lambdas := [ 72 ],
+t := 2 ),
+  aVector := [ [ 20, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 10, 1 ] ],
+  v:= 11),
+ rec( parameters := [ 12, 22, 11, 6, 5 ],
   autGroup := Group( [ ( 1, 2)( 6, 9)( 7,12)( 8,11), ( 2, 3)( 5, 9)( 8,11)(10,12), ( 3, 4)( 6,12)( 7, 9)( 8,11), ( 4, 7)( 5, 9)( 8,12)(10,11), ( 4, 8,11)( 5, 6, 9)( 7,10,12) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 4 ],
@@ -584,14 +610,15 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 22, 11, 6, 5 ],
   r := 11,
   tSubsetStructure := rec(
-      lambdas := [ 5 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 12 ] ),
+lambdas := [ 5 ],
+t := 2 ),
+  aVector := [ [ 30, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters := [ 12, 66, 55, 10, 45 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 6 ],
   baseBlock := [ 2, 3, 4, 5, 6, 8, 9, 10, 11, 12 ],
@@ -599,13 +626,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 66, 55, 10, 45 ],
   r := 55,
   tSubsetStructure := rec(
-      lambdas := [ 45 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
+lambdas := [ 45 ],
+t := 2 ),
+  aVector := [ [ 90, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters := [ 12, 110, 55, 6, 25 ],
   autGroup := Group( [ ( 1, 2)( 6, 9)( 7,12)( 8,11), ( 2, 3)( 5, 9)( 8,11)(10,12), ( 3, 4)( 6,12)( 7, 9)( 8,11), ( 4, 7)( 5, 9)( 8,12)(10,11), ( 4, 8,11)( 5, 6, 9)( 7,10,12) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 8 ],
@@ -614,13 +642,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 110, 55, 6, 25 ],
   r := 55,
   tSubsetStructure := rec(
-      lambdas := [ 25 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
+lambdas := [ 25 ],
+t := 2 ),
+  aVector := [ [ 30, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters := [ 12, 132, 55, 5, 20 ],
   autGroup := Group( [ ( 1, 2)( 6, 9)( 7,12)( 8,11), ( 2, 3)( 5, 9)( 8,11)(10,12), ( 3, 4)( 6,12)( 7, 9)( 8,11), ( 4, 7)( 5, 9)( 8,12)(10,11), ( 4, 8,11)( 5, 6, 9)( 7,10,12) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 10 ],
@@ -629,13 +658,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 132, 55, 5, 20 ],
   r := 55,
   tSubsetStructure := rec(
-      lambdas := [ 20 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
+lambdas := [ 20 ],
+t := 2 ),
+  aVector := [ [ 20, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters := [ 12, 165, 55, 4, 15 ],
   autGroup := Group( [ ( 1, 2)( 6, 9)( 7,12)( 8,11), ( 2, 3)( 5, 9)( 8,11)(10,12), ( 3, 4)( 6,12)( 7, 9)( 8,11), ( 4, 7)( 5, 9)( 8,12)(10,11), ( 4, 8,11)( 5, 6, 9)( 7,10,12) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 13 ],
@@ -644,13 +674,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 165, 55, 4, 15 ],
   r := 55,
   tSubsetStructure := rec(
-      lambdas := [ 15 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
+lambdas := [ 15 ],
+t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters := [ 12, 165, 110, 8, 70 ],
   autGroup := Group( [ ( 1, 2)( 6, 9)( 7,12)( 8,11), ( 2, 3)( 5, 9)( 8,11)(10,12), ( 3, 4)( 6,12)( 7, 9)( 8,11), ( 4, 7)( 5, 9)( 8,12)(10,11), ( 4, 8,11)( 5, 6, 9)( 7,10,12) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 13 ],
@@ -659,14 +690,15 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 165, 110, 8, 70 ],
   r := 110,
   tSubsetStructure := rec(
-      lambdas := [ 70 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 12 ] ),
+lambdas := [ 70 ],
+t := 2 ),
+  aVector := [ [ 56, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters := [ 12, 220, 55, 3, 10 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 14 ],
   baseBlock := [ 2, 8, 9 ],
@@ -674,13 +706,14 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 220, 55, 3, 10 ],
   r := 55,
   tSubsetStructure := rec(
-      lambdas := [ 10 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
+lambdas := [ 10 ],
+t := 2 ),
+  aVector := [ [ 6, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters := [ 12, 330, 110, 4, 30 ],
   autGroup := Group( [ ( 1, 2)( 6, 9)( 7,12)( 8,11), ( 2, 3)( 5, 9)( 8,11)(10,12), ( 3, 4)( 6,12)( 7, 9)( 8,11), ( 4, 7)( 5, 9)( 8,12)(10,11), ( 4, 8,11)( 5, 6, 9)( 7,10,12) ] ),
   autSubgroup := Group( [ ( 1, 5, 9,10)( 2, 7)( 3,11)( 4, 8,12, 6), ( 2, 9)( 3, 7)( 6,10)( 8,12) ] ),
   groupNumbers := [ " ", 3, 17 ],
@@ -689,31 +722,29 @@ lD_M11 := [
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 12, 330, 110, 4, 30 ],
   r := 110,
   tSubsetStructure := rec(
-      lambdas := [ 30 ],
-      t := 2 ),
-  v := 12 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 3,52)( 4,51)( 5,42)( 8,31)( 9,10)(11,25)(12,41)(13,20)(15,55)(17,45)(18,49)(19,44)(21,43)(23,24)(26,54)(27,38)(28,36)(29,47)(30,37)(32,48)(34,40)(35,46)(39,50), 
-      ( 2, 4,26,14,52,31)( 3,46, 6,18,38,19)( 5,23,28,40, 8, 7)( 9,41,44)(10,27,24,16,55,54)(11,30,43,48,34,17)(12,39,37,53,25,42)(13,20,15,45,21,35)(22,51,32,47,49,50)(29,36,33), 
-      ( 2, 5)( 4, 8,36,28)( 6,10,38,30)( 7,41,13,12)( 9,51,25,47)(11,18,19,43)(14,49,33,45)(15,44,40,37)(16,34,27,46)(17,48,24,55)(20,26,22,52)(21,42,23,39)(29,32,31,35)(50,53), 
-      ( 3,54)( 4,29)( 5,50)( 6,27)( 7,20)( 8,47)( 9,37)(10,11)(12,41)(13,22)(14,33)(15,32)(16,38)(17,18)(19,30)(21,49)(23,45)(24,43)(25,44)(28,51)(31,36)(34,55)(35,40)(46,48), 
-      ( 3,54)( 4,31)( 5,50)( 6,16)( 7,22)( 8,51)( 9,44)(10,19)(11,30)(13,20)(15,35)(17,43)(18,24)(21,45)(23,49)(25,37)(26,52)(27,38)(28,47)(29,36)(32,40)(34,48)(39,42)(46,55) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4, 7)( 3, 6, 9,13)( 8,12,17,23)(10,15,14,20)(11,16,21,28)(18,25)(19,26,24,32)(22,30,37,42)(27,35,41,48)(31,39,46,44)(33,34,40,47)(36,43,49,53)(38,45,50,54)(52,55), 
-      ( 1, 3)( 2, 5)( 4, 8)( 6,10)( 7,11)( 9,14)(12,18)(13,19)(16,22)(17,24)(20,27)(21,29)(23,31)(25,33)(26,34)(28,36)(30,38)(32,39)(35,42)(37,44)(41,43)(45,51)(46,52)(47,49) ] ),
+lambdas := [ 30 ],
+t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 11, 1 ] ],
+  v:= 12),
+ rec( parameters:= [ 55, 1980, 144, 4, 8 ],
+  autGroup := Group( [ ( 1, 2)( 3,52)( 4,51)( 5,42)( 8,31)( 9,10)(11,25)(12,41)(13,20)(15,55)(17,45)(18,49)(19,44)(21,43)(23,24)(26,54)(27,38)(28,36)(29,47)(30,37)(32,48)(34,40)(35,46)(39,50), ( 2, 4,26,14,52,31)( 3,46, 6,18,38,19)( 5,23,28,40, 8, 7)( 9,41,44)(10,27,24,16,55,54)(11,30,43,48,34,17)(12,39,37,53,25,42)(13,20,15,45,21,35)(22,51,32,47,49,50)(29,36,33), ( 2, 5)( 4, 8,36,28)( 6,10,38,30)( 7,41,13,12)( 9,51,25,47)(11,18,19,43)(14,49,33,45)(15,44,40,37)(16,34,27,46)(17,48,24,55)(20,26,22,52)(21,42,23,39)(29,32,31,35)(50,53), ( 3,54)( 4,29)( 5,50)( 6,27)( 7,20)( 8,47)( 9,37)(10,11)(12,41)(13,22)(14,33)(15,32)(16,38)(17,18)(19,30)(21,49)(23,45)(24,43)(25,44)(28,51)(31,36)(34,55)(35,40)(46,48), ( 3,54)( 4,31)( 5,50)( 6,16)( 7,22)( 8,51)( 9,44)(10,19)(11,30)(13,20)(15,35)(17,43)(18,24)(21,45)(23,49)(25,37)(26,52)(27,38)(28,47)(29,36)(32,40)(34,48)(39,42)(46,55) ] ),
+  autSubgroup := Group( [ ( 1, 2, 4, 7)( 3, 6, 9,13)( 8,12,17,23)(10,15,14,20)(11,16,21,28)(18,25)(19,26,24,32)(22,30,37,42)(27,35,41,48)(31,39,46,44)(33,34,40,47)(36,43,49,53)(38,45,50,54)(52,55), ( 1, 3)( 2, 5)( 4, 8)( 6,10)( 7,11)( 9,14)(12,18)(13,19)(16,22)(17,24)(20,27)(21,29)(23,31)(25,33)(26,34)(28,36)(30,38)(32,39)(35,42)(37,44)(41,43)(45,51)(46,52)(47,49) ] ),
   groupNumbers := [ " ", 5, 36 ],
   baseBlock := [ 4, 36, 45, 49 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 55, 1980, 144, 4, 8 ],
   r := 144,
   tSubsetStructure := rec(
-      lambdas := [ 8 ],
-      t := 2 ),
-  v := 55 )
+lambdas := [ 8 ],
+t := 2 ),
+  aVector := [ [ 4, 1 ], [ 8, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 18, 1 ], [ 36, 1 ] ],
+  v:= 55)
 ]; 
-for D in lD_M11 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_M11 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
+
