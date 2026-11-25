@@ -53,7 +53,7 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   23   253     77     7   21     M23  M22     2^4:A7          M23     2      2                  1       2       true             true             true             true                 2                                
 # 2   23   253     176    16  120    M23  M22     2^4:A7          M23     2      2                  1       2       true             true             true             true                 1                                
-# 3   23   253     231    21  210    M23  M22     PSL(3,4):2      S23     2      2                  1       3       true             true             true             true                                        complete  
+# 3   23   253     231    21  210    M23  M22     PSL3(4):2       S23     2      2                  1       3       true             true             true             true                                        complete  
 # 4   23   506     176    8   56     M23  M22     A8              M23     2      2                  1       5       true             true             true             true                 5                                
 # 5   23   506     330    15  210    M23  M22     A8              M23     2      2                  1       5       true             true             true             true                 4                                
 # 6   23   1288    616    11  280    M23  M22     M11             M23     2      2                  1       6       true             true             true             true                 7                                
@@ -64,19 +64,19 @@
 # 11  23   4048    1232   7   336    M23  M22     A7              M23     2      2                  1       12      true             false            true             false                                                 
 # 12  23   4048    2640   15  1680   M23  M22     A7              M23     2      2                  1       13      true             false            true             false                                                 
 # 13  23   5313    1155   5   210    M23  M22     2^4:S5          M23     2      2                  1       14      true             false            true             false                                                 
-# 14  23   7590    4620   14  2730   M23  M22     2^3:PSL(3,2)    M23     2      2                  1       17      true             false            true             false                                                 
+# 14  23   7590    4620   14  2730   M23  M22     2^3:PSL3(2)     M23     2      2                  1       17      true             false            true             false                                                 
 # 15  23   8855    1540   4   210    M23  M22     2^4:2:2:3^2:2   S23     2      2                  1       18      true             false            true             false                                       complete  
 # 16  23   14168   3696   6   840    M23  M22     S6              M23     2      2                  1       23      true             false            true             false                                                 
 # 17  23   14168   6160   10  2520   M23  M22     A6.2            M23     2      2                  1       24      true             false            true             false                                                 
-# 18  23   15456   7392   11  3360   M23  M22     PSL(2,11)       M23     2      2                  1       25      true             false            true             false                                                 
+# 18  23   15456   7392   11  3360   M23  M22     PSL2(11)        M23     2      2                  1       25      true             false            true             false                                                 
 # 19  23   17710   9240   12  4620   M23  M22     (A4xA4):2:2     M23     2      2                  1       28      true             false            true             false                                                 
 # 20  23   28336   6160   5   1120   M23  M22     A5:S3           M23     2      2                  1       38      true             false            true             false                                                 
-# 21  23   30360   18480  14  10920  M23  M22     2xPSL(3,2)      M23     2      2                  1       41      true             false            true             false                                                 
+# 21  23   30360   18480  14  10920  M23  M22     2xPSL3(2)       M23     2      2                  1       41      true             false            true             false                                                 
 # 22  23   70840   27720  9   10080  M23  M22     3^2:QD16        M23     2      2                  1       72      true             false            true             false                                                 
 # 23  23   85008   36960  10  15120  M23  M22     S5              M23     2      2                  1       76      true             false            true             false                                                 
-# 24  23   212520  73920  8   23520  M23  M22     GL(2,3)         M23     2      2                  1       125     true             false            true             false                                                 
-# 25  253  3795    420    28  45     M23  2^4:A7  2^4:PSL(3,2)    M23     3      3                  2       11      true             false            true             false                                                 
-# 26  253  3795    420    28  45     M23  2^4:A7  2^3:PSL(3,2):2  M23     3      3                  2       10      true             false            true             false                                                 
+# 24  23   212520  73920  8   23520  M23  M22     GL2(3)          M23     2      2                  1       125     true             false            true             false                                                 
+# 25  253  3795    420    28  45     M23  2^4:A7  2^4:PSL3(2)     M23     3      3                  2       11      true             false            true             false                                                 
+# 26  253  3795    420    28  45     M23  2^4:A7  2^3:PSL3(2):2   M23     3      3                  2       10      true             false            true             false                                                 
 # 27  253  60720   6720   28  720    M23  2^4:A7  2^3:7:3         M23     3      3                  2       64      true             false            true             false                                                 
 # 28  253  91080   10080  28  1080   M23  2^4:A7  2x((2^3):7)     M23     3      3                  2       77      true             false            true             false                                                 
 # 29  253  182160  20160  28  2160   M23  2^4:A7  2^3:7           M23     3      3                  2       109     true             false            true             false                                                 
@@ -148,7 +148,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     M22          S22          
-# Block-stabiliser                     PSL(3,4):2   2xS21        
+# Block-stabiliser                     PSL3(4):2    2xS21        
 # Orbit structure of point-stabiliser  1^{1}22^{1}  1^{1}22^{1}  
 # Orbit structure of block-stabiliser  2^{1}21^{1}  2^{1}21^{1}  
 # Point-transitive                     true         true         
@@ -434,7 +434,7 @@
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     M22               M22               
-# Block-stabiliser                     2^3:PSL(3,2)      2^3:PSL(3,2)      
+# Block-stabiliser                     2^3:PSL3(2)       2^3:PSL3(2)      
 # Orbit structure of point-stabiliser  1^{1}22^{1}       1^{1}22^{1}       
 # Orbit structure of block-stabiliser  1^{1}8^{1}14^{1}  1^{1}8^{1}14^{1}  
 # Point-transitive                     true              true              
@@ -538,7 +538,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     M22          M22          
-# Block-stabiliser                     PSL(2,11)    PSL(2,11)    
+# Block-stabiliser                     PSL2(11)     PSL2(11)    
 # Orbit structure of point-stabiliser  1^{1}22^{1}  1^{1}22^{1}  
 # Orbit structure of block-stabiliser  1^{1}11^{2}  1^{1}11^{2}  
 # Point-transitive                     true         true         
@@ -616,7 +616,7 @@
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     M22               M22               
-# Block-stabiliser                     2xPSL(3,2)        2xPSL(3,2)        
+# Block-stabiliser                     2xPSL3(2)         2xPSL3(2)        
 # Orbit structure of point-stabiliser  1^{1}22^{1}       1^{1}22^{1}       
 # Orbit structure of block-stabiliser  2^{1}7^{1}14^{1}  2^{1}7^{1}14^{1}  
 # Point-transitive                     true              true              
@@ -694,7 +694,7 @@
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     M22              M22              
-# Block-stabiliser                     GL(2,3)          GL(2,3)          
+# Block-stabiliser                     GL2(3)           GL2(3)          
 # Orbit structure of point-stabiliser  1^{1}22^{1}      1^{1}22^{1}      
 # Orbit structure of block-stabiliser  3^{1}4^{1}8^{2}  3^{1}4^{1}8^{2}  
 # Point-transitive                     true             true             
@@ -720,7 +720,7 @@
 # Rank                                 3                    3                    
 # 2-Homogeneous                        false                false                
 # Point-stabiliser                     2^4:A7               2^4:A7               
-# Block-stabiliser                     2^4:PSL(3,2)         2^4:PSL(3,2)         
+# Block-stabiliser                     2^4:PSL3(2)          2^4:PSL3(2)         
 # Orbit structure of point-stabiliser  1^{1}112^{1}140^{1}  1^{1}112^{1}140^{1}  
 # Orbit structure of block-stabiliser  1^{1}28^{1}112^{2}   1^{1}28^{1}112^{2}   
 # Point-transitive                     true                 true                 
@@ -746,7 +746,7 @@
 # Rank                                 3                    3                    
 # 2-Homogeneous                        false                false                
 # Point-stabiliser                     2^4:A7               2^4:A7               
-# Block-stabiliser                     2^3:PSL(3,2):2       2^3:PSL(3,2):2       
+# Block-stabiliser                     2^3:PSL3(2):2        2^3:PSL3(2):2       
 # Orbit structure of point-stabiliser  1^{1}112^{1}140^{1}  1^{1}112^{1}140^{1}  
 # Orbit structure of block-stabiliser  1^{1}28^{1}112^{2}   1^{1}28^{1}112^{2}   
 # Point-transitive                     true                 true                 

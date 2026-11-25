@@ -6,7 +6,7 @@
 #               lD_L28 is the list of the designs
 # References:
 
-# 1. number of designs:
+# 1. Number of designs:
 # ---------------------
 
 # ------------------------------------------------------

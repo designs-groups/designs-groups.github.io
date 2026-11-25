@@ -6,7 +6,7 @@
 #               lD_16 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -33,77 +33,77 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   16  16     6     6   2     (A4xA4):2     3xS3   3xS3                     2^4.S6        3      2           4      1       1       true             true             true             false                            true       Menon or Kantor parameters                
 # 2   16  16     10    10  6     (2^4:5).4     5:4    5:4                      2^4.S6        3      2           5      1       3       true             true             true             false                            true       complement of Menon or Kantor parameters  
-# 3   16  20     5     4   1     2^4:5         5      2^2                      AΓL(2,4)      4      2           1      1       1       true             false            true             false                                                                                 
-# 4   16  20     15    12  11    AGL(1,16)     15     A4                       AΓL(2,4)      2      2           3      1       2       true             false            true             true                                                                                  
-# 5   16  30     15    8   7     AGL(1,16)     15     2^3                      2^4.PSL(4,2)  2      2           3      1       6       true             false            true             true                 5                                                                
-# 6   16  32     12    6   4     ASL(2,4):2    S5     A5                       ASL(2,4):2    2      2           13     1       11      true             false            true             true                 7                                                                
-# 7   16  32     20    10  12    ASL(2,4):2    S5     A5                       ASL(2,4):2    2      2           13     1       11      true             false            true             true                 6                                                                
-# 8   16  40     10    4   2     (2^4:5).4     5:4    D8                       ASL(2,4):2    3      2           5      1       2       true             false            true             false                                                                                 
-# 9   16  40     30    12  22    ASL(2,4):2    S5     2xS4                     ASL(2,4):2    2      2           13     1       5       true             false            true             true                                                                                  
-# 10  16  48     15    5   4     AGL(1,16)     15     5                        AΓL(1,16)     2      2           3      1       5       true             false            true             false                                                                                 
-# 11  16  48     18    6   6     (A4xA4):2     3xS3   6                        AΓL(2,4)      3      2           4      1       2       true             false            true             false                                                                                 
-# 12  16  48     30    10  18    AΓL(1,16)     15:4   5:4                      AΓL(2,4)      2      2           9      1       5       true             false            true             false                                                                                 
-# 13  16  60     15    4   3     AGL(1,16)     15     2^2                      AGL(1,16):2   2      2           3      1       3       true             false            true             false                                                                                 
+# 3   16  20     5     4   1     2^4:5         5      2^2                      AΓL2(4)       4      2           1      1       1       true             false            true             false                                                                                 
+# 4   16  20     15    12  11    AGL1(16)      15     A4                       AΓL2(4)       2      2           3      1       2       true             false            true             true                                                                                  
+# 5   16  30     15    8   7     AGL1(16)      15     2^3                      2^4.PSL4(2)   2      2           3      1       6       true             false            true             true                 5                                                                
+# 6   16  32     12    6   4     ASL2(4):2     S5     A5                       ASL2(4):2     2      2           13     1       11      true             false            true             true                 7                                                                
+# 7   16  32     20    10  12    ASL2(4):2     S5     A5                       ASL2(4):2     2      2           13     1       11      true             false            true             true                 6                                                                
+# 8   16  40     10    4   2     (2^4:5).4     5:4    D8                       ASL2(4):2     3      2           5      1       2       true             false            true             false                                                                                 
+# 9   16  40     30    12  22    ASL2(4):2     S5     2xS4                     ASL2(4):2     2      2           13     1       5       true             false            true             true                                                                                  
+# 10  16  48     15    5   4     AGL1(16)      15     5                        AΓL1(16)      2      2           3      1       5       true             false            true             false                                                                                 
+# 11  16  48     18    6   6     (A4xA4):2     3xS3   6                        AΓL2(4)       3      2           4      1       2       true             false            true             false                                                                                 
+# 12  16  48     30    10  18    AΓL1(16)      15:4   5:4                      AΓL2(4)       2      2           9      1       5       true             false            true             false                                                                                 
+# 13  16  60     15    4   3     AGL1(16)      15     2^2                      AGL1(16):2    2      2           3      1       3       true             false            true             false                                                                                 
 # 14  16  60     15    4   3     2^4.S6        S6     2x(((2^4):3):2)          2^4.S6        2      2           16     1       3       true             false            true             true                 15                                                               
 # 15  16  60     45    12  33    2^4.S6        S6     2x(((2^4):3):2)          2^4.S6        2      2           16     1       3       true             false            true             true                 14                                                               
-# 16  16  80     15    3   2     AGL(1,16)     15     3                        AΓL(2,4)      2      2           3      1       1       true             false            true             false                                                                                 
-# 17  16  80     20    4   4     ASL(2,4):2    S5     S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 20                                                               
-# 18  16  80     30    6   10    AGL(1,16):2   3xD10  6                        AGL(1,16):2   2      2           6      1       1       true             false            true             false                                                                                 
-# 19  16  80     30    6   10    ASL(2,4):2    S5     S4                       ASL(2,4):2    2      2           13     1       12      true             false            true             false                                                                                 
-# 20  16  80     60    12  44    ASL(2,4):2    S5     S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 17                                                               
-# 21  16  96     30    5   8     ASL(2,4):2    S5     5:4                      2^4.S6        2      2           13     1       8       true             false            true             false                                                                                 
+# 16  16  80     15    3   2     AGL1(16)      15     3                        AΓL2(4)       2      2           3      1       1       true             false            true             false                                                                                 
+# 17  16  80     20    4   4     ASL2(4):2     S5     S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 20                                                               
+# 18  16  80     30    6   10    AGL1(16):2    3xD10  6                        AGL1(16):2    2      2           6      1       1       true             false            true             false                                                                                 
+# 19  16  80     30    6   10    ASL2(4):2     S5     S4                       ASL2(4):2     2      2           13     1       12      true             false            true             false                                                                                 
+# 20  16  80     60    12  44    ASL2(4):2     S5     S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 17                                                               
+# 21  16  96     30    5   8     ASL2(4):2     S5     5:4                      2^4.S6        2      2           13     1       8       true             false            true             false                                                                                 
 # 22  16  96     36    6   12    2^4.3^2:4     3^2:4  S3                       (S4xS4):2     3      3           8      1       2       true             false            true             false                                                                                 
 # 23  16  96     36    6   12    2^4.A6        A6     A5                       2^4.A6        2      2           17     1       9       true             false            true             true                 24                                                               
 # 24  16  96     60    10  36    2^4.A6        A6     A5                       2^4.A6        2      2           17     1       9       true             false            true             true                 23                                                               
 # 25  16  112    42    6   14    2^4.A7        A7     A6                       2^4.A7        2      2           20     1       6       true             false            true             true                 26                                                               
 # 26  16  112    70    10  42    2^4.A7        A7     A6                       2^4.A7        2      2           20     1       6       true             false            true             true                 25                                                               
-# 27  16  120    30    4   6     AΓL(1,16)     15:4   D8                       AΓL(2,4)      2      2           9      1       3       true             false            true             false                                                                                 
+# 27  16  120    30    4   6     AΓL1(16)      15:4   D8                       AΓL2(4)       2      2           9      1       3       true             false            true             false                                                                                 
 # 28  16  120    45    6   15    2^4.S6        S6     2^2xS4                   2^4.S6        2      2           16     1       9       true             false            true             false                                                                                 
-# 29  16  120    60    8   28    AΓL(1,16)     15:4   8                        AΓL(2,4)      2      2           9      1       8       true             false            true             true                 29                                                               
-# 30  16  120    90    12  66    AΓL(2,4)      A5:S3  2xS4                     AΓL(2,4)      2      2           12     1       4       true             false            true             true                                                                                  
-# 31  16  120    105   14  91    2^4.PSL(4,2)  A8     2x(2^3:PSL(3,2))         S16           2      2           11     1       11      true             false            true             true                                        complete                                  
-# 32  16  140    35    4   7     2^4.PSL(4,2)  A8     2^6:3^2:2:2              2^4.PSL(4,2)  2      2           11     1       2       true             false            true             true                 33                                                               
-# 33  16  140    105   12  77    2^4.PSL(4,2)  A8     2^6:3^2:2:2              2^4.PSL(4,2)  2      2           11     1       2       true             false            true             true                 32                                                               
-# 34  16  160    30    3   4     ASL(2,4):2    S5     D12                      ASL(2,4):2    2      2           13     1       2       true             false            true             false                                                                                 
-# 35  16  160    60    6   20    AΓL(1,16)     15:4   6                        AΓL(2,4)      2      2           9      1       6       true             false            true             false                                                                                 
-# 36  16  160    60    6   20    ASL(2,4):2    S5     A4                       ASL(2,4):2    2      2           13     1       13      true             false            true             false                                                                                 
-# 37  16  160    90    9   48    AΓL(2,4)      A5:S3  S3xS3                    AΓL(2,4)      2      2           12     1       8       true             false            true             false                                                                                 
+# 29  16  120    60    8   28    AΓL1(16)      15:4   8                        AΓL2(4)       2      2           9      1       8       true             false            true             true                 29                                                               
+# 30  16  120    90    12  66    AΓL2(4)       A5:S3  2xS4                     AΓL2(4)       2      2           12     1       4       true             false            true             true                                                                                  
+# 31  16  120    105   14  91    2^4.PSL4(2)   A8     2x(2^3:PSL3(2))          S16           2      2           11     1       11      true             false            true             true                                        complete                                  
+# 32  16  140    35    4   7     2^4.PSL4(2)   A8     2^6:3^2:2:2              2^4.PSL4(2)   2      2           11     1       2       true             false            true             true                 33                                                               
+# 33  16  140    105   12  77    2^4.PSL4(2)   A8     2^6:3^2:2:2              2^4.PSL4(2)   2      2           11     1       2       true             false            true             true                 32                                                               
+# 34  16  160    30    3   4     ASL2(4):2     S5     D12                      ASL2(4):2     2      2           13     1       2       true             false            true             false                                                                                 
+# 35  16  160    60    6   20    AΓL1(16)      15:4   6                        AΓL2(4)       2      2           9      1       6       true             false            true             false                                                                                 
+# 36  16  160    60    6   20    ASL2(4):2     S5     A4                       ASL2(4):2     2      2           13     1       13      true             false            true             false                                                                                 
+# 37  16  160    90    9   48    AΓL2(4)       A5:S3  S3xS3                    AΓL2(4)       2      2           12     1       8       true             false            true             false                                                                                 
 # 38  16  160    90    9   48    2^4.S6        S6     (S3xS3):2                2^4.S6        2      2           16     1       14      true             false            true             false                                                                                 
-# 39  16  192    60    5   16    ASL(2,4):2    S5     D10                      ASL(2,4):2    2      2           13     1       9       true             false            true             false                                                                                 
+# 39  16  192    60    5   16    ASL2(4):2     S5     D10                      ASL2(4):2     2      2           13     1       9       true             false            true             false                                                                                 
 # 40  16  192    72    6   24    2^4.S6        S6     A5                       2^4.S6        2      2           16     1       10      true             false            true             true                 41                                                               
 # 41  16  192    120   10  72    2^4.S6        S6     A5                       2^4.S6        2      2           16     1       10      true             false            true             true                 40                                                               
 # 42  16  240    45    3   6     2^4.S6        S6     2xS4                     2^4.S6        2      2           16     1       1       true             false            true             false                                                                                 
-# 43  16  240    60    4   12    AΓL(1,16)     15:4   4                        AΓL(1,16)     2      2           9      1       4       true             false            true             false                                                                                 
-# 44  16  240    60    4   12    ASL(2,4):2    S5     D8                       2^4.S6        2      2           13     1       7       true             false            true             false                                                                                 
-# 45  16  240    90    6   30    AΓL(2,4)      A5:S3  S4                       AΓL(2,4)      2      2           12     1       9       true             false            true             false                                                                                 
+# 43  16  240    60    4   12    AΓL1(16)      15:4   4                        AΓL1(16)      2      2           9      1       4       true             false            true             false                                                                                 
+# 44  16  240    60    4   12    ASL2(4):2     S5     D8                       2^4.S6        2      2           13     1       7       true             false            true             false                                                                                 
+# 45  16  240    90    6   30    AΓL2(4)       A5:S3  S4                       AΓL2(4)       2      2           12     1       9       true             false            true             false                                                                                 
 # 46  16  240    90    6   30    2^4.S6        S6     2xS4                     2^4.S6        2      2           16     1       11      true             false            true             false                                                                                 
-# 47  16  240    105   7   42    2^4.PSL(4,2)  A8     2^3:PSL(3,2)             2^4.PSL(4,2)  2      2           11     1       7       true             false            true             false                                                                                 
-# 48  16  288    90    5   24    AΓL(2,4)      A5:S3  5:4                      AΓL(2,4)      2      2           12     1       6       true             false            true             false                                                                                 
-# 49  16  320    60    3   8     ASL(2,4):2    S5     S3                       2^4.S6        2      2           13     1       3       true             false            true             false                                                                                 
+# 47  16  240    105   7   42    2^4.PSL4(2)   A8     2^3:PSL3(2)              2^4.PSL4(2)   2      2           11     1       7       true             false            true             false                                                                                 
+# 48  16  288    90    5   24    AΓL2(4)       A5:S3  5:4                      AΓL2(4)       2      2           12     1       6       true             false            true             false                                                                                 
+# 49  16  320    60    3   8     ASL2(4):2     S5     S3                       2^4.S6        2      2           13     1       3       true             false            true             false                                                                                 
 # 50  16  336    126   6   42    2^4.A7        A7     S5                       2^4.A7        2      2           20     1       7       true             false            true             true                 51                                                               
 # 51  16  336    210   10  126   2^4.A7        A7     S5                       2^4.A7        2      2           20     1       7       true             false            true             true                 50                                                               
 # 52  16  360    180   8   84    2^4.S6        S6     8:2^2                    2^4.S6        2      2           16     1       13      true             false            true             true                 52                                                               
-# 53  16  448    168   6   56    2^4.PSL(4,2)  A8     S6                       2^4.PSL(4,2)  2      2           11     1       5       true             false            true             true                 54                                                               
-# 54  16  448    280   10  168   2^4.PSL(4,2)  A8     S6                       2^4.PSL(4,2)  2      2           11     1       5       true             false            true             true                 53                                                               
-# 55  16  480    90    3   12    AΓL(2,4)      A5:S3  D12                      AΓL(2,4)      2      2           12     1       2       true             false            true             false                                                                                 
-# 56  16  480    180   6   60    AΓL(2,4)      A5:S3  D12                      AΓL(2,4)      2      2           12     1       10      true             false            true             false                                                                                 
-# 57  16  560    105   3   14    2^4.PSL(4,2)  A8     (A4xA4):2:2              S16           2      2           11     1       1       true             false            true             false                                       complete                                  
+# 53  16  448    168   6   56    2^4.PSL4(2)   A8     S6                       2^4.PSL4(2)   2      2           11     1       5       true             false            true             true                 54                                                               
+# 54  16  448    280   10  168   2^4.PSL4(2)   A8     S6                       2^4.PSL4(2)   2      2           11     1       5       true             false            true             true                 53                                                               
+# 55  16  480    90    3   12    AΓL2(4)       A5:S3  D12                      AΓL2(4)       2      2           12     1       2       true             false            true             false                                                                                 
+# 56  16  480    180   6   60    AΓL2(4)       A5:S3  D12                      AΓL2(4)       2      2           12     1       10      true             false            true             false                                                                                 
+# 57  16  560    105   3   14    2^4.PSL4(2)   A8     (A4xA4):2:2              S16           2      2           11     1       1       true             false            true             false                                       complete                                  
 # 58  16  560    455   13  364   A16           A15    (S13 x S3) cap A16       S16           2      2           21     1       1       true             true             true             true                                        complete                                  
 # 59  16  576    180   5   48    2^4.A6        A6     D10                      2^4.A6        2      2           17     1       7       true             false            true             false                                                                                 
 # 60  16  672    210   5   56    2^4.A7        A7     A5                       2^4.A7        2      2           20     1       4       true             false            true             false                                                                                 
-# 61  16  720    180   4   36    AΓL(2,4)      A5:S3  D8                       AΓL(2,4)      2      2           12     1       5       true             false            true             false                                                                                 
-# 62  16  840    315   6   105   2^4.PSL(4,2)  A8     2x((((2^3):(2^2)):3):2)  2^4.PSL(4,2)  2      2           11     1       6       true             false            true             false                                                                                 
-# 63  16  840    420   8   196   2^4.PSL(4,2)  A8     2^4:2:2:3:2              2^4.PSL(4,2)  2      2           11     1       9       true             false            true             true                 63                                                               
+# 61  16  720    180   4   36    AΓL2(4)       A5:S3  D8                       AΓL2(4)       2      2           12     1       5       true             false            true             false                                                                                 
+# 62  16  840    315   6   105   2^4.PSL4(2)   A8     2x((((2^3):(2^2)):3):2)  2^4.PSL4(2)   2      2           11     1       6       true             false            true             false                                                                                 
+# 63  16  840    420   8   196   2^4.PSL4(2)   A8     2^4:2:2:3:2              2^4.PSL4(2)   2      2           11     1       9       true             false            true             true                 63                                                               
 # 64  16  1120   630   9   336   2^4.A7        A7     3^2:4                    2^4.A7        2      2           20     1       12      true             false            true             false                                                                                 
 # 65  16  1152   360   5   96    2^4.S6        S6     D10                      2^4.S6        2      2           16     1       7       true             false            true             false                                                                                 
-# 66  16  1680   420   4   84    2^4.PSL(4,2)  A8     2^3:2^2:3:2              2^4.PSL(4,2)  2      2           11     1       3       true             false            true             false                                                                                 
+# 66  16  1680   420   4   84    2^4.PSL4(2)   A8     2^3:2^2:3:2              2^4.PSL4(2)   2      2           11     1       3       true             false            true             false                                                                                 
 # 67  16  1820   455   4   91    A16           A15    (S4 x S12) cap A16       S16           2      2           21     1       2       true             true             true             true                 68                     complete                                  
 # 68  16  1820   1365  12  1001  A16           A15    (S12 x S4) cap A16       S16           2      2           21     1       2       true             true             true             true                 67                     complete                                  
 # 69  16  2016   630   5   168   2^4.A7        A7     5:4                      2^4.A7        2      2           20     1       5       true             false            true             false                                                                                 
-# 70  16  2688   840   5   224   2^4.PSL(4,2)  A8     S5                       2^4.PSL(4,2)  2      2           11     1       4       true             false            true             false                                                                                 
+# 70  16  2688   840   5   224   2^4.PSL4(2)   A8     S5                       2^4.PSL4(2)   2      2           11     1       4       true             false            true             false                                                                                 
 # 71  16  4368   1365  5   364   A16           A15    (S5 x S11) cap A16       S16           2      2           21     1       3       true             true             true             true                 72                     complete                                  
 # 72  16  4368   3003  11  2002  A16           A15    (S11 x S5) cap A16       S16           2      2           21     1       3       true             true             true             true                 71                     complete                                  
-# 73  16  4480   2520  9   1344  2^4.PSL(4,2)  A8     (S3xS3):2                2^4.PSL(4,2)  2      2           11     1       10      true             false            true             false                                                                                 
+# 73  16  4480   2520  9   1344  2^4.PSL4(2)   A8     (S3xS3):2                2^4.PSL4(2)   2      2           11     1       10      true             false            true             false                                                                                 
 # 74  16  8008   3003  6   1001  A16           A15    (S6 x S10) cap A16       S16           2      2           21     1       4       true             true             true             true                 75                     complete                                  
 # 75  16  8008   5005  10  3003  A16           A15    (S10 x S6) cap A16       S16           2      2           21     1       4       true             true             true             true                 74                     complete                                  
 # 76  16  11440  5005  7   2002  A16           A15    (S7 x S9) cap A16        S16           2      2           21     1       5       true             true             true             true                 77                     complete                                  
@@ -119,88 +119,88 @@
 # 2    16  16     6     6   2     2^4.S3xS3     S3xS3      S3xS3                    2^4.S6        3      2           7      1       1       true             true             true             false                            true       Menon or Kantor parameters                
 # 3    16  16     6     6   2     2^4.3^2:4     3^2:4      3^2:4                    2^4.S6        3      2           8      1       1       true             true             true             false                            true       Menon or Kantor parameters                
 # 4    16  16     6     6   2     (S4xS4):2     (S3xS3):2  (S3xS3):2                2^4.S6        3      2           10     1       1       true             true             true             false                            true       Menon or Kantor parameters                
-# 5    16  16     6     6   2     ASL(2,4):2    S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 10          true       Menon or Kantor parameters                
-# 6    16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                             true       Menon or Kantor parameters                
+# 5    16  16     6     6   2     ASL2(4):2     S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 10          true       Menon or Kantor parameters                
+# 6    16  16     6     6   2     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                             true       Menon or Kantor parameters                
 # 7    16  16     6     6   2     2^4.S6        S6         S6                       2^4.S6        2      2           16     1       8       true             true             true             true                 12          true       Menon or Kantor parameters                
 # 8    16  16     6     6   2     2^4.A6        A6         A6                       2^4.S6        2      2           17     1       8       true             true             true             true                 13          true       Menon or Kantor parameters                
 # 9    16  16     10    10  6     (2^4:5).4     5:4        5:4                      2^4.S6        3      2           5      1       3       true             true             true             false                            true       complement of Menon or Kantor parameters  
-# 10   16  16     10    10  6     ASL(2,4):2    S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 5           true       complement of Menon or Kantor parameters  
-# 11   16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                             true       complement of Menon or Kantor parameters  
+# 10   16  16     10    10  6     ASL2(4):2     S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 5           true       complement of Menon or Kantor parameters  
+# 11   16  16     10    10  6     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                             true       complement of Menon or Kantor parameters  
 # 12   16  16     10    10  6     2^4.S6        S6         S6                       2^4.S6        2      2           16     1       8       true             true             true             true                 7           true       complement of Menon or Kantor parameters  
 # 13   16  16     10    10  6     2^4.A6        A6         A6                       2^4.S6        2      2           17     1       8       true             true             true             true                 8           true       complement of Menon or Kantor parameters  
 # 14   16  16     10    10  6     2^4:S5        S5         S5                       2^4.S6        3      2           18     1       2       true             true             true             false                            true       complement of Menon or Kantor parameters  
 # 15   16  16     10    10  6     2^4:A5        A5         A5                       2^4.S6        3      2           19     1       2       true             true             true             false                            true       complement of Menon or Kantor parameters  
-# 16   16  20     5     4   1     2^4:5         5          2^2                      AΓL(2,4)      4      2           1      1       1       true             false            true             false                                                                                 
-# 17   16  20     5     4   1     2^4:D10       D10        2^3                      AΓL(2,4)      4      2           2      1       1       true             false            true             false                                                                                 
-# 18   16  20     5     4   1     AGL(1,16)     15         A4                       AΓL(2,4)      2      2           3      1       2       true             false            true             true                 26                                                               
-# 19   16  20     5     4   1     (2^4:5).4     5:4        (4x2):2                  AΓL(2,4)      3      2           5      1       1       true             false            true             false                                                                                 
-# 20   16  20     5     4   1     AGL(1,16):2   3xD10      2xA4                     AΓL(2,4)      2      2           6      1       2       true             false            true             true                 27                                                               
-# 21   16  20     5     4   1     AΓL(1,16)     15:4       A4:4                     AΓL(2,4)      2      2           9      1       2       true             false            true             true                 28                                                               
-# 22   16  20     5     4   1     AΓL(2,4)      A5:S3      (A4xA4):2                AΓL(2,4)      2      2           12     1       3       true             false            true             true                 29                                                               
-# 23   16  20     5     4   1     ASL(2,4):2    S5         2^4:3:2                  AΓL(2,4)      2      2           13     1       4       true             false            true             true                 30                                                               
-# 24   16  20     5     4   1     AGL(2,4)      GL(2,4)    A4xA4                    AΓL(2,4)      2      2           14     1       3       true             false            true             true                 31                                                               
-# 25   16  20     5     4   1     ASL(2,4)      A5         2^4:3                    AΓL(2,4)      2      2           15     1       3       true             false            true             true                 32                                                               
-# 26   16  20     15    12  11    AGL(1,16)     15         A4                       AΓL(2,4)      2      2           3      1       2       true             false            true             true                 18                                                               
-# 27   16  20     15    12  11    AGL(1,16):2   3xD10      2xA4                     AΓL(2,4)      2      2           6      1       2       true             false            true             true                 20                                                               
-# 28   16  20     15    12  11    AΓL(1,16)     15:4       A4:4                     AΓL(2,4)      2      2           9      1       2       true             false            true             true                 21                                                               
-# 29   16  20     15    12  11    AΓL(2,4)      A5:S3      (A4xA4):2                AΓL(2,4)      2      2           12     1       3       true             false            true             true                 22                                                               
-# 30   16  20     15    12  11    ASL(2,4):2    S5         2^4:3:2                  AΓL(2,4)      2      2           13     1       4       true             false            true             true                 23                                                               
-# 31   16  20     15    12  11    AGL(2,4)      GL(2,4)    A4xA4                    AΓL(2,4)      2      2           14     1       3       true             false            true             true                 24                                                               
-# 32   16  20     15    12  11    ASL(2,4)      A5         2^4:3                    AΓL(2,4)      2      2           15     1       3       true             false            true             true                 25                                                               
-# 33   16  30     15    8   7     AGL(1,16)     15         2^3                      2^4.PSL(4,2)  2      2           3      1       6       true             false            true             true                 33                                                               
-# 34   16  30     15    8   7     AGL(1,16):2   3xD10      2xD8                     2^4.PSL(4,2)  2      2           6      1       6       true             false            true             true                 34                                                               
-# 35   16  30     15    8   7     AΓL(1,16)     15:4       2^3:4                    2^4.PSL(4,2)  2      2           9      1       7       true             false            true             true                 35                                                               
-# 36   16  30     15    8   7     2^4.PSL(4,2)  A8         2^3:2^3:PSL(3,2)         2^4.PSL(4,2)  2      2           11     1       8       true             false            true             true                 36                                                               
-# 37   16  30     15    8   7     AΓL(2,4)      A5:S3      2^4:3:2:2                2^4.PSL(4,2)  2      2           12     1       11      true             false            true             true                 37                                                               
-# 38   16  30     15    8   7     ASL(2,4):2    S5         2^4:2:2                  2^4.PSL(4,2)  2      2           13     1       14      true             false            true             true                 38                                                               
-# 39   16  30     15    8   7     AGL(2,4)      GL(2,4)    2^4:2:3                  2^4.PSL(4,2)  2      2           14     1       10      true             false            true             true                 39                                                               
-# 40   16  30     15    8   7     ASL(2,4)      A5         2^4:2                    2^4.PSL(4,2)  2      2           15     1       14      true             false            true             true                 40                                                               
-# 41   16  30     15    8   7     2^4.S6        S6         2x((((2^3):(2^2)):3):2)  2^4.PSL(4,2)  2      2           16     1       12      true             false            true             true                 41                                                               
-# 42   16  30     15    8   7     2^4.A6        A6         2^3:2^2:3:2              2^4.PSL(4,2)  2      2           17     1       13      true             false            true             true                 42                                                               
-# 43   16  30     15    8   7     2^4.A7        A7         2^3:PSL(3,2)             2^4.PSL(4,2)  2      2           20     1       10      true             false            true             true                 43                                                               
-# 44   16  32     12    6   4     ASL(2,4):2    S5         A5                       ASL(2,4):2    2      2           13     1       11      true             false            true             true                 45                                                               
-# 45   16  32     20    10  12    ASL(2,4):2    S5         A5                       ASL(2,4):2    2      2           13     1       11      true             false            true             true                 44                                                               
-# 46   16  40     10    4   2     (2^4:5).4     5:4        D8                       ASL(2,4):2    3      2           5      1       2       true             false            true             false                                                                                 
-# 47   16  40     10    4   2     ASL(2,4):2    S5         2xS4                     ASL(2,4):2    2      2           13     1       5       true             false            true             true                 49                                                               
-# 48   16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       4       true             false            true             true                 50                                                               
-# 49   16  40     30    12  22    ASL(2,4):2    S5         2xS4                     ASL(2,4):2    2      2           13     1       5       true             false            true             true                 47                                                               
-# 50   16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       4       true             false            true             true                 48                                                               
-# 51   16  48     15    5   4     AGL(1,16)     15         5                        AΓL(1,16)     2      2           3      1       5       true             false            true             false                                                                                 
-# 52   16  48     15    5   4     AGL(1,16):2   3xD10      D10                      AΓL(1,16)     2      2           6      1       5       true             false            true             false                                                                                 
-# 53   16  48     15    5   4     AΓL(1,16)     15:4       5:4                      AΓL(1,16)     2      2           9      1       5       true             false            true             false                                                                                 
-# 54   16  48     18    6   6     (A4xA4):2     3xS3       6                        AΓL(2,4)      3      2           4      1       2       true             false            true             false                                                                                 
-# 55   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL(2,4)      3      2           7      1       2       true             false            true             false                                                                                 
-# 56   16  48     18    6   6     AΓL(2,4)      A5:S3      S5                       AΓL(2,4)      2      2           12     1       7       true             false            true             true                 59                                                               
-# 57   16  48     18    6   6     AGL(2,4)      GL(2,4)    A5                       AΓL(2,4)      2      2           14     1       6       true             false            true             true                 60                                                               
-# 58   16  48     30    10  18    AΓL(1,16)     15:4       5:4                      AΓL(2,4)      2      2           9      1       5       true             false            true             false                                                                                 
-# 59   16  48     30    10  18    AΓL(2,4)      A5:S3      S5                       AΓL(2,4)      2      2           12     1       7       true             false            true             true                 56                                                               
-# 60   16  48     30    10  18    AGL(2,4)      GL(2,4)    A5                       AΓL(2,4)      2      2           14     1       6       true             false            true             true                 57                                                               
-# 61   16  60     15    4   3     AGL(1,16)     15         2^2                      AGL(1,16):2   2      2           3      1       3       true             false            true             false                                                                                 
-# 62   16  60     15    4   3     AGL(1,16):2   3xD10      D8                       AGL(1,16):2   2      2           6      1       3       true             false            true             false                                                                                 
+# 16   16  20     5     4   1     2^4:5         5          2^2                      AΓL2(4)       4      2           1      1       1       true             false            true             false                                                                                 
+# 17   16  20     5     4   1     2^4:D10       D10        2^3                      AΓL2(4)       4      2           2      1       1       true             false            true             false                                                                                 
+# 18   16  20     5     4   1     AGL1(16)      15         A4                       AΓL2(4)       2      2           3      1       2       true             false            true             true                 26                                                               
+# 19   16  20     5     4   1     (2^4:5).4     5:4        (4x2):2                  AΓL2(4)       3      2           5      1       1       true             false            true             false                                                                                 
+# 20   16  20     5     4   1     AGL1(16):2    3xD10      2xA4                     AΓL2(4)       2      2           6      1       2       true             false            true             true                 27                                                               
+# 21   16  20     5     4   1     AΓL1(16)      15:4       A4:4                     AΓL2(4)       2      2           9      1       2       true             false            true             true                 28                                                               
+# 22   16  20     5     4   1     AΓL2(4)       A5:S3      (A4xA4):2                AΓL2(4)       2      2           12     1       3       true             false            true             true                 29                                                               
+# 23   16  20     5     4   1     ASL2(4):2     S5         2^4:3:2                  AΓL2(4)       2      2           13     1       4       true             false            true             true                 30                                                               
+# 24   16  20     5     4   1     AGL2(4)       GL2(4)     A4xA4                    AΓL2(4)       2      2           14     1       3       true             false            true             true                 31                                                               
+# 25   16  20     5     4   1     ASL2(4)       A5         2^4:3                    AΓL2(4)       2      2           15     1       3       true             false            true             true                 32                                                               
+# 26   16  20     15    12  11    AGL1(16)      15         A4                       AΓL2(4)       2      2           3      1       2       true             false            true             true                 18                                                               
+# 27   16  20     15    12  11    AGL1(16):2    3xD10      2xA4                     AΓL2(4)       2      2           6      1       2       true             false            true             true                 20                                                               
+# 28   16  20     15    12  11    AΓL1(16)      15:4       A4:4                     AΓL2(4)       2      2           9      1       2       true             false            true             true                 21                                                               
+# 29   16  20     15    12  11    AΓL2(4)       A5:S3      (A4xA4):2                AΓL2(4)       2      2           12     1       3       true             false            true             true                 22                                                               
+# 30   16  20     15    12  11    ASL2(4):2     S5         2^4:3:2                  AΓL2(4)       2      2           13     1       4       true             false            true             true                 23                                                               
+# 31   16  20     15    12  11    AGL2(4)       GL2(4)     A4xA4                    AΓL2(4)       2      2           14     1       3       true             false            true             true                 24                                                               
+# 32   16  20     15    12  11    ASL2(4)       A5         2^4:3                    AΓL2(4)       2      2           15     1       3       true             false            true             true                 25                                                               
+# 33   16  30     15    8   7     AGL1(16)      15         2^3                      2^4.PSL4(2)   2      2           3      1       6       true             false            true             true                 33                                                               
+# 34   16  30     15    8   7     AGL1(16):2    3xD10      2xD8                     2^4.PSL4(2)   2      2           6      1       6       true             false            true             true                 34                                                               
+# 35   16  30     15    8   7     AΓL1(16)      15:4       2^3:4                    2^4.PSL4(2)   2      2           9      1       7       true             false            true             true                 35                                                               
+# 36   16  30     15    8   7     2^4.PSL4(2)   A8         2^3:2^3:PSL3(2)          2^4.PSL4(2)   2      2           11     1       8       true             false            true             true                 36                                                               
+# 37   16  30     15    8   7     AΓL2(4)       A5:S3      2^4:3:2:2                2^4.PSL4(2)   2      2           12     1       11      true             false            true             true                 37                                                               
+# 38   16  30     15    8   7     ASL2(4):2     S5         2^4:2:2                  2^4.PSL4(2)   2      2           13     1       14      true             false            true             true                 38                                                               
+# 39   16  30     15    8   7     AGL2(4)       GL2(4)     2^4:2:3                  2^4.PSL4(2)   2      2           14     1       10      true             false            true             true                 39                                                               
+# 40   16  30     15    8   7     ASL2(4)       A5         2^4:2                    2^4.PSL4(2)   2      2           15     1       14      true             false            true             true                 40                                                               
+# 41   16  30     15    8   7     2^4.S6        S6         2x((((2^3):(2^2)):3):2)  2^4.PSL4(2)   2      2           16     1       12      true             false            true             true                 41                                                               
+# 42   16  30     15    8   7     2^4.A6        A6         2^3:2^2:3:2              2^4.PSL4(2)   2      2           17     1       13      true             false            true             true                 42                                                               
+# 43   16  30     15    8   7     2^4.A7        A7         2^3:PSL3(2)              2^4.PSL4(2)   2      2           20     1       10      true             false            true             true                 43                                                               
+# 44   16  32     12    6   4     ASL2(4):2     S5         A5                       ASL2(4):2     2      2           13     1       11      true             false            true             true                 45                                                               
+# 45   16  32     20    10  12    ASL2(4):2     S5         A5                       ASL2(4):2     2      2           13     1       11      true             false            true             true                 44                                                               
+# 46   16  40     10    4   2     (2^4:5).4     5:4        D8                       ASL2(4):2     3      2           5      1       2       true             false            true             false                                                                                 
+# 47   16  40     10    4   2     ASL2(4):2     S5         2xS4                     ASL2(4):2     2      2           13     1       5       true             false            true             true                 49                                                               
+# 48   16  40     10    4   2     ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       4       true             false            true             true                 50                                                               
+# 49   16  40     30    12  22    ASL2(4):2     S5         2xS4                     ASL2(4):2     2      2           13     1       5       true             false            true             true                 47                                                               
+# 50   16  40     30    12  22    ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       4       true             false            true             true                 48                                                               
+# 51   16  48     15    5   4     AGL1(16)      15         5                        AΓL1(16)      2      2           3      1       5       true             false            true             false                                                                                 
+# 52   16  48     15    5   4     AGL1(16):2    3xD10      D10                      AΓL1(16)      2      2           6      1       5       true             false            true             false                                                                                 
+# 53   16  48     15    5   4     AΓL1(16)      15:4       5:4                      AΓL1(16)      2      2           9      1       5       true             false            true             false                                                                                 
+# 54   16  48     18    6   6     (A4xA4):2     3xS3       6                        AΓL2(4)       3      2           4      1       2       true             false            true             false                                                                                 
+# 55   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL2(4)       3      2           7      1       2       true             false            true             false                                                                                 
+# 56   16  48     18    6   6     AΓL2(4)       A5:S3      S5                       AΓL2(4)       2      2           12     1       7       true             false            true             true                 59                                                               
+# 57   16  48     18    6   6     AGL2(4)       GL2(4)     A5                       AΓL2(4)       2      2           14     1       6       true             false            true             true                 60                                                               
+# 58   16  48     30    10  18    AΓL1(16)      15:4       5:4                      AΓL2(4)       2      2           9      1       5       true             false            true             false                                                                                 
+# 59   16  48     30    10  18    AΓL2(4)       A5:S3      S5                       AΓL2(4)       2      2           12     1       7       true             false            true             true                 56                                                               
+# 60   16  48     30    10  18    AGL2(4)       GL2(4)     A5                       AΓL2(4)       2      2           14     1       6       true             false            true             true                 57                                                               
+# 61   16  60     15    4   3     AGL1(16)      15         2^2                      AGL1(16):2    2      2           3      1       3       true             false            true             false                                                                                 
+# 62   16  60     15    4   3     AGL1(16):2    3xD10      D8                       AGL1(16):2    2      2           6      1       3       true             false            true             false                                                                                 
 # 63   16  60     15    4   3     2^4.S6        S6         2x(((2^4):3):2)          2^4.S6        2      2           16     1       3       true             false            true             true                 67                                                               
 # 64   16  60     15    4   3     2^4.A6        A6         2^4:3:2                  2^4.S6        2      2           17     1       3       true             false            true             true                 68                                                               
 # 65   16  60     15    4   3     2^4:S5        S5         2^4:2                    2^4.S6        3      2           18     1       1       true             false            true             false                                                                                 
 # 66   16  60     15    4   3     2^4:A5        A5         2xD8                     2^4.S6        3      2           19     1       1       true             false            true             false                                                                                 
 # 67   16  60     45    12  33    2^4.S6        S6         2x(((2^4):3):2)          2^4.S6        2      2           16     1       3       true             false            true             true                 63                                                               
 # 68   16  60     45    12  33    2^4.A6        A6         2^4:3:2                  2^4.S6        2      2           17     1       3       true             false            true             true                 64                                                               
-# 69   16  80     15    3   2     AGL(1,16)     15         3                        AΓL(2,4)      2      2           3      1       1       true             false            true             false                                                                                 
-# 70   16  80     15    3   2     AGL(1,16):2   3xD10      6                        AΓL(2,4)      2      2           6      1       1       true             false            true             false                                                                                 
-# 71   16  80     15    3   2     AΓL(1,16)     15:4       3:4                      AΓL(2,4)      2      2           9      1       1       true             false            true             false                                                                                 
-# 72   16  80     15    3   2     AΓL(2,4)      A5:S3      (3xA4):2                 AΓL(2,4)      2      2           12     1       1       true             false            true             false                                                                                 
-# 73   16  80     15    3   2     ASL(2,4):2    S5         S4                       AΓL(2,4)      2      2           13     1       1       true             false            true             false                                                                                 
-# 74   16  80     15    3   2     AGL(2,4)      GL(2,4)    3xA4                     AΓL(2,4)      2      2           14     1       1       true             false            true             false                                                                                 
-# 75   16  80     15    3   2     ASL(2,4)      A5         A4                       AΓL(2,4)      2      2           15     1       1       true             false            true             false                                                                                 
-# 76   16  80     20    4   4     ASL(2,4):2    S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 82                                                               
+# 69   16  80     15    3   2     AGL1(16)      15         3                        AΓL2(4)       2      2           3      1       1       true             false            true             false                                                                                 
+# 70   16  80     15    3   2     AGL1(16):2    3xD10      6                        AΓL2(4)       2      2           6      1       1       true             false            true             false                                                                                 
+# 71   16  80     15    3   2     AΓL1(16)      15:4       3:4                      AΓL2(4)       2      2           9      1       1       true             false            true             false                                                                                 
+# 72   16  80     15    3   2     AΓL2(4)       A5:S3      (3xA4):2                 AΓL2(4)       2      2           12     1       1       true             false            true             false                                                                                 
+# 73   16  80     15    3   2     ASL2(4):2     S5         S4                       AΓL2(4)       2      2           13     1       1       true             false            true             false                                                                                 
+# 74   16  80     15    3   2     AGL2(4)       GL2(4)     3xA4                     AΓL2(4)       2      2           14     1       1       true             false            true             false                                                                                 
+# 75   16  80     15    3   2     ASL2(4)       A5         A4                       AΓL2(4)       2      2           15     1       1       true             false            true             false                                                                                 
+# 76   16  80     20    4   4     ASL2(4):2     S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 82                                                               
 # 77   16  80     20    4   4     2^4.S6        S6         S4xS3                    2^4.S6        2      2           16     1       4       true             false            true             true                 83                                                               
 # 78   16  80     20    4   4     2^4.A6        A6         (3xA4):2                 2^4.S6        2      2           17     1       4       true             false            true             true                 84                                                               
-# 79   16  80     30    6   10    AGL(1,16):2   3xD10      6                        AGL(1,16):2   2      2           6      1       1       true             false            true             false                                                                                 
-# 80   16  80     30    6   10    ASL(2,4):2    S5         S4                       ASL(2,4):2    2      2           13     1       12      true             false            true             false                                                                                 
-# 81   16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       11      true             false            true             false                                                                                 
-# 82   16  80     60    12  44    ASL(2,4):2    S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 76                                                               
+# 79   16  80     30    6   10    AGL1(16):2    3xD10      6                        AGL1(16):2    2      2           6      1       1       true             false            true             false                                                                                 
+# 80   16  80     30    6   10    ASL2(4):2     S5         S4                       ASL2(4):2     2      2           13     1       12      true             false            true             false                                                                                 
+# 81   16  80     30    6   10    ASL2(4)       A5         A4                       ASL2(4):2     2      2           15     1       11      true             false            true             false                                                                                 
+# 82   16  80     60    12  44    ASL2(4):2     S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 76                                                               
 # 83   16  80     60    12  44    2^4.S6        S6         S4xS3                    2^4.S6        2      2           16     1       4       true             false            true             true                 77                                                               
 # 84   16  80     60    12  44    2^4.A6        A6         (3xA4):2                 2^4.S6        2      2           17     1       4       true             false            true             true                 78                                                               
-# 85   16  96     30    5   8     ASL(2,4):2    S5         5:4                      2^4.S6        2      2           13     1       8       true             false            true             false                                                                                 
-# 86   16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
+# 85   16  96     30    5   8     ASL2(4):2     S5         5:4                      2^4.S6        2      2           13     1       8       true             false            true             false                                                                                 
+# 86   16  96     30    5   8     ASL2(4)       A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
 # 87   16  96     30    5   8     2^4.S6        S6         S5                       2^4.S6        2      2           16     1       6       true             false            true             false                                                                                 
 # 88   16  96     30    5   8     2^4.A6        A6         A5                       2^4.S6        2      2           17     1       6       true             false            true             false                                                                                 
 # 89   16  96     36    6   12    2^4.3^2:4     3^2:4      S3                       (S4xS4):2     3      3           8      1       2       true             false            true             false                                                                                 
@@ -209,69 +209,69 @@
 # 92   16  96     60    10  36    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       9       true             false            true             true                 91                                                               
 # 93   16  112    42    6   14    2^4.A7        A7         A6                       2^4.A7        2      2           20     1       6       true             false            true             true                 94                                                               
 # 94   16  112    70    10  42    2^4.A7        A7         A6                       2^4.A7        2      2           20     1       6       true             false            true             true                 93                                                               
-# 95   16  120    30    4   6     AΓL(1,16)     15:4       D8                       AΓL(2,4)      2      2           9      1       3       true             false            true             false                                                                                 
-# 96   16  120    30    4   6     AΓL(2,4)      A5:S3      2xS4                     AΓL(2,4)      2      2           12     1       4       true             false            true             true                 105                                                              
-# 97   16  120    30    4   6     AGL(2,4)      GL(2,4)    S4                       AΓL(2,4)      2      2           14     1       4       true             false            true             true                 106                                                              
+# 95   16  120    30    4   6     AΓL1(16)      15:4       D8                       AΓL2(4)       2      2           9      1       3       true             false            true             false                                                                                 
+# 96   16  120    30    4   6     AΓL2(4)       A5:S3      2xS4                     AΓL2(4)       2      2           12     1       4       true             false            true             true                 105                                                              
+# 97   16  120    30    4   6     AGL2(4)       GL2(4)     S4                       AΓL2(4)       2      2           14     1       4       true             false            true             true                 106                                                              
 # 98   16  120    45    6   15    2^4.S6        S6         2^2xS4                   2^4.S6        2      2           16     1       9       true             false            true             false                                                                                 
 # 99   16  120    45    6   15    2^4.A6        A6         2xS4                     2^4.S6        2      2           17     1       11      true             false            true             false                                                                                 
-# 100  16  120    60    8   28    AΓL(1,16)     15:4       8                        AΓL(2,4)      2      2           9      1       8       true             false            true             true                 100                                                              
-# 101  16  120    60    8   28    AΓL(2,4)      A5:S3      GL(2,3)                  AΓL(2,4)      2      2           12     1       12      true             false            true             true                 101                                                              
-# 102  16  120    60    8   28    ASL(2,4):2    S5         QD16                     AΓL(2,4)      2      2           13     1       15      true             false            true             true                 102                                                              
-# 103  16  120    60    8   28    AGL(2,4)      GL(2,4)    SL(2,3)                  AΓL(2,4)      2      2           14     1       11      true             false            true             true                 103                                                              
-# 104  16  120    60    8   28    ASL(2,4)      A5         Q8                       AΓL(2,4)      2      2           15     1       15      true             false            true             true                 104                                                              
-# 105  16  120    90    12  66    AΓL(2,4)      A5:S3      2xS4                     AΓL(2,4)      2      2           12     1       4       true             false            true             true                 96                                                               
-# 106  16  120    90    12  66    AGL(2,4)      GL(2,4)    S4                       AΓL(2,4)      2      2           14     1       4       true             false            true             true                 97                                                               
-# 107  16  120    105   14  91    2^4.PSL(4,2)  A8         2x(2^3:PSL(3,2))         S16           2      2           11     1       11      true             false            true             true                                        complete                                  
-# 108  16  120    105   14  91    2^4.A7        A7         2xPSL(3,2)               S16           2      2           20     1       13      true             false            true             true                                        complete                                  
+# 100  16  120    60    8   28    AΓL1(16)      15:4       8                        AΓL2(4)       2      2           9      1       8       true             false            true             true                 100                                                              
+# 101  16  120    60    8   28    AΓL2(4)       A5:S3      GL2(3)                   AΓL2(4)       2      2           12     1       12      true             false            true             true                 101                                                              
+# 102  16  120    60    8   28    ASL2(4):2     S5         QD16                     AΓL2(4)       2      2           13     1       15      true             false            true             true                 102                                                              
+# 103  16  120    60    8   28    AGL2(4)       GL2(4)     SL2(3)                   AΓL2(4)       2      2           14     1       11      true             false            true             true                 103                                                              
+# 104  16  120    60    8   28    ASL2(4)       A5         Q8                       AΓL2(4)       2      2           15     1       15      true             false            true             true                 104                                                              
+# 105  16  120    90    12  66    AΓL2(4)       A5:S3      2xS4                     AΓL2(4)       2      2           12     1       4       true             false            true             true                 96                                                               
+# 106  16  120    90    12  66    AGL2(4)       GL2(4)     S4                       AΓL2(4)       2      2           14     1       4       true             false            true             true                 97                                                               
+# 107  16  120    105   14  91    2^4.PSL4(2)   A8         2x(2^3:PSL3(2))          S16           2      2           11     1       11      true             false            true             true                                        complete                                  
+# 108  16  120    105   14  91    2^4.A7        A7         2xPSL3(2)                S16           2      2           20     1       13      true             false            true             true                                        complete                                  
 # 109  16  120    105   14  91    A16           A15        (S14 x S2) cap A16       S16           2      2           21     1       7       true             true             true             true                                        complete                                  
 # 110  16  120    105   14  91    S16           S15        S14 x S2                 S16           2      2           22     1       7       true             true             true             true                                        complete                                  
-# 111  16  140    35    4   7     2^4.PSL(4,2)  A8         2^6:3^2:2:2              2^4.PSL(4,2)  2      2           11     1       2       true             false            true             true                 113                                                              
-# 112  16  140    35    4   7     2^4.A7        A7         (A4xA4):2                2^4.PSL(4,2)  2      2           20     1       2       true             false            true             true                 114                                                              
-# 113  16  140    105   12  77    2^4.PSL(4,2)  A8         2^6:3^2:2:2              2^4.PSL(4,2)  2      2           11     1       2       true             false            true             true                 111                                                              
-# 114  16  140    105   12  77    2^4.A7        A7         (A4xA4):2                2^4.PSL(4,2)  2      2           20     1       2       true             false            true             true                 112                                                              
-# 115  16  160    30    3   4     ASL(2,4):2    S5         D12                      ASL(2,4):2    2      2           13     1       2       true             false            true             false                                                                                 
-# 116  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true             false            true             false                                                                                 
-# 117  16  160    60    6   20    AΓL(1,16)     15:4       6                        AΓL(2,4)      2      2           9      1       6       true             false            true             false                                                                                 
-# 118  16  160    60    6   20    AΓL(2,4)      A5:S3      S3xS3                    AΓL(2,4)      2      2           12     1       8       true             false            true             false                                                                                 
-# 119  16  160    60    6   20    ASL(2,4):2    S5         A4                       ASL(2,4):2    2      2           13     1       13      true             false            true             false                                                                                 
-# 120  16  160    60    6   20    ASL(2,4):2    S5         D12                      AΓL(2,4)      2      2           13     1       2       true             false            true             false                                                                                 
-# 121  16  160    60    6   20    AGL(2,4)      GL(2,4)    3xS3                     AΓL(2,4)      2      2           14     1       7       true             false            true             false                                                                                 
-# 122  16  160    60    6   20    ASL(2,4)      A5         S3                       AΓL(2,4)      2      2           15     1       2       true             false            true             false                                                                                 
-# 123  16  160    90    9   48    AΓL(2,4)      A5:S3      S3xS3                    AΓL(2,4)      2      2           12     1       8       true             false            true             false                                                                                 
-# 124  16  160    90    9   48    AGL(2,4)      GL(2,4)    3xS3                     AΓL(2,4)      2      2           14     1       7       true             false            true             false                                                                                 
+# 111  16  140    35    4   7     2^4.PSL4(2)   A8         2^6:3^2:2:2              2^4.PSL4(2)   2      2           11     1       2       true             false            true             true                 113                                                              
+# 112  16  140    35    4   7     2^4.A7        A7         (A4xA4):2                2^4.PSL4(2)   2      2           20     1       2       true             false            true             true                 114                                                              
+# 113  16  140    105   12  77    2^4.PSL4(2)   A8         2^6:3^2:2:2              2^4.PSL4(2)   2      2           11     1       2       true             false            true             true                 111                                                              
+# 114  16  140    105   12  77    2^4.A7        A7         (A4xA4):2                2^4.PSL4(2)   2      2           20     1       2       true             false            true             true                 112                                                              
+# 115  16  160    30    3   4     ASL2(4):2     S5         D12                      ASL2(4):2     2      2           13     1       2       true             false            true             false                                                                                 
+# 116  16  160    30    3   4     ASL2(4)       A5         S3                       ASL2(4):2     2      2           15     1       2       true             false            true             false                                                                                 
+# 117  16  160    60    6   20    AΓL1(16)      15:4       6                        AΓL2(4)       2      2           9      1       6       true             false            true             false                                                                                 
+# 118  16  160    60    6   20    AΓL2(4)       A5:S3      S3xS3                    AΓL2(4)       2      2           12     1       8       true             false            true             false                                                                                 
+# 119  16  160    60    6   20    ASL2(4):2     S5         A4                       ASL2(4):2     2      2           13     1       13      true             false            true             false                                                                                 
+# 120  16  160    60    6   20    ASL2(4):2     S5         D12                      AΓL2(4)       2      2           13     1       2       true             false            true             false                                                                                 
+# 121  16  160    60    6   20    AGL2(4)       GL2(4)     3xS3                     AΓL2(4)       2      2           14     1       7       true             false            true             false                                                                                 
+# 122  16  160    60    6   20    ASL2(4)       A5         S3                       AΓL2(4)       2      2           15     1       2       true             false            true             false                                                                                 
+# 123  16  160    90    9   48    AΓL2(4)       A5:S3      S3xS3                    AΓL2(4)       2      2           12     1       8       true             false            true             false                                                                                 
+# 124  16  160    90    9   48    AGL2(4)       GL2(4)     3xS3                     AΓL2(4)       2      2           14     1       7       true             false            true             false                                                                                 
 # 125  16  160    90    9   48    2^4.S6        S6         (S3xS3):2                2^4.S6        2      2           16     1       14      true             false            true             false                                                                                 
 # 126  16  160    90    9   48    2^4.A6        A6         3^2:4                    2^4.S6        2      2           17     1       15      true             false            true             false                                                                                 
-# 127  16  192    60    5   16    ASL(2,4):2    S5         D10                      ASL(2,4):2    2      2           13     1       9       true             false            true             false                                                                                 
+# 127  16  192    60    5   16    ASL2(4):2     S5         D10                      ASL2(4):2     2      2           13     1       9       true             false            true             false                                                                                 
 # 128  16  192    72    6   24    2^4.S6        S6         A5                       2^4.S6        2      2           16     1       10      true             false            true             true                 129                                                              
 # 129  16  192    120   10  72    2^4.S6        S6         A5                       2^4.S6        2      2           16     1       10      true             false            true             true                 128                                                              
 # 130  16  240    45    3   6     2^4.S6        S6         2xS4                     2^4.S6        2      2           16     1       1       true             false            true             false                                                                                 
 # 131  16  240    45    3   6     2^4.A6        A6         S4                       2^4.S6        2      2           17     1       1       true             false            true             false                                                                                 
-# 132  16  240    60    4   12    AΓL(1,16)     15:4       4                        AΓL(1,16)     2      2           9      1       4       true             false            true             false                                                                                 
-# 133  16  240    60    4   12    ASL(2,4):2    S5         D8                       2^4.S6        2      2           13     1       7       true             false            true             false                                                                                 
+# 132  16  240    60    4   12    AΓL1(16)      15:4       4                        AΓL1(16)      2      2           9      1       4       true             false            true             false                                                                                 
+# 133  16  240    60    4   12    ASL2(4):2     S5         D8                       2^4.S6        2      2           13     1       7       true             false            true             false                                                                                 
 # 134  16  240    60    4   12    2^4.S6        S6         2xS4                     2^4.S6        2      2           16     1       5       true             false            true             false                                                                                 
 # 135  16  240    60    4   12    2^4.A6        A6         S4                       2^4.S6        2      2           17     1       5       true             false            true             false                                                                                 
-# 136  16  240    90    6   30    AΓL(2,4)      A5:S3      S4                       AΓL(2,4)      2      2           12     1       9       true             false            true             false                                                                                 
-# 137  16  240    90    6   30    AGL(2,4)      GL(2,4)    A4                       AΓL(2,4)      2      2           14     1       8       true             false            true             false                                                                                 
+# 136  16  240    90    6   30    AΓL2(4)       A5:S3      S4                       AΓL2(4)       2      2           12     1       9       true             false            true             false                                                                                 
+# 137  16  240    90    6   30    AGL2(4)       GL2(4)     A4                       AΓL2(4)       2      2           14     1       8       true             false            true             false                                                                                 
 # 138  16  240    90    6   30    2^4.S6        S6         2xS4                     2^4.S6        2      2           16     1       11      true             false            true             false                                                                                 
 # 139  16  240    90    6   30    2^4.A6        A6         S4                       2^4.S6        2      2           17     1       12      true             false            true             false                                                                                 
-# 140  16  240    105   7   42    2^4.PSL(4,2)  A8         2^3:PSL(3,2)             2^4.PSL(4,2)  2      2           11     1       7       true             false            true             false                                                                                 
-# 141  16  240    105   7   42    2^4.A7        A7         PSL(3,2)                 2^4.PSL(4,2)  2      2           20     1       9       true             false            true             false                                                                                 
-# 142  16  288    90    5   24    AΓL(2,4)      A5:S3      5:4                      AΓL(2,4)      2      2           12     1       6       true             false            true             false                                                                                 
-# 143  16  288    90    5   24    AGL(2,4)      GL(2,4)    D10                      AΓL(2,4)      2      2           14     1       5       true             false            true             false                                                                                 
-# 144  16  320    60    3   8     ASL(2,4):2    S5         S3                       2^4.S6        2      2           13     1       3       true             false            true             false                                                                                 
+# 140  16  240    105   7   42    2^4.PSL4(2)   A8         2^3:PSL3(2)              2^4.PSL4(2)   2      2           11     1       7       true             false            true             false                                                                                 
+# 141  16  240    105   7   42    2^4.A7        A7         PSL3(2)                  2^4.PSL4(2)   2      2           20     1       9       true             false            true             false                                                                                 
+# 142  16  288    90    5   24    AΓL2(4)       A5:S3      5:4                      AΓL2(4)       2      2           12     1       6       true             false            true             false                                                                                 
+# 143  16  288    90    5   24    AGL2(4)       GL2(4)     D10                      AΓL2(4)       2      2           14     1       5       true             false            true             false                                                                                 
+# 144  16  320    60    3   8     ASL2(4):2     S5         S3                       2^4.S6        2      2           13     1       3       true             false            true             false                                                                                 
 # 145  16  320    60    3   8     2^4.S6        S6         S3xS3                    2^4.S6        2      2           16     1       2       true             false            true             false                                                                                 
 # 146  16  320    60    3   8     2^4.A6        A6         3^2:2                    2^4.S6        2      2           17     1       2       true             false            true             false                                                                                 
 # 147  16  336    126   6   42    2^4.A7        A7         S5                       2^4.A7        2      2           20     1       7       true             false            true             true                 148                                                              
 # 148  16  336    210   10  126   2^4.A7        A7         S5                       2^4.A7        2      2           20     1       7       true             false            true             true                 147                                                              
 # 149  16  360    180   8   84    2^4.S6        S6         8:2^2                    2^4.S6        2      2           16     1       13      true             false            true             true                 149                                                              
 # 150  16  360    180   8   84    2^4.A6        A6         QD16                     2^4.S6        2      2           17     1       14      true             false            true             true                 150                                                              
-# 151  16  448    168   6   56    2^4.PSL(4,2)  A8         S6                       2^4.PSL(4,2)  2      2           11     1       5       true             false            true             true                 152                                                              
-# 152  16  448    280   10  168   2^4.PSL(4,2)  A8         S6                       2^4.PSL(4,2)  2      2           11     1       5       true             false            true             true                 151                                                              
-# 153  16  480    90    3   12    AΓL(2,4)      A5:S3      D12                      AΓL(2,4)      2      2           12     1       2       true             false            true             false                                                                                 
-# 154  16  480    90    3   12    AGL(2,4)      GL(2,4)    S3                       AΓL(2,4)      2      2           14     1       2       true             false            true             false                                                                                 
-# 155  16  480    180   6   60    AΓL(2,4)      A5:S3      D12                      AΓL(2,4)      2      2           12     1       10      true             false            true             false                                                                                 
-# 156  16  480    180   6   60    AGL(2,4)      GL(2,4)    6                        AΓL(2,4)      2      2           14     1       9       true             false            true             false                                                                                 
-# 157  16  560    105   3   14    2^4.PSL(4,2)  A8         (A4xA4):2:2              S16           2      2           11     1       1       true             false            true             false                                       complete                                  
+# 151  16  448    168   6   56    2^4.PSL4(2)   A8         S6                       2^4.PSL4(2)   2      2           11     1       5       true             false            true             true                 152                                                              
+# 152  16  448    280   10  168   2^4.PSL4(2)   A8         S6                       2^4.PSL4(2)   2      2           11     1       5       true             false            true             true                 151                                                              
+# 153  16  480    90    3   12    AΓL2(4)       A5:S3      D12                      AΓL2(4)       2      2           12     1       2       true             false            true             false                                                                                 
+# 154  16  480    90    3   12    AGL2(4)       GL2(4)     S3                       AΓL2(4)       2      2           14     1       2       true             false            true             false                                                                                 
+# 155  16  480    180   6   60    AΓL2(4)       A5:S3      D12                      AΓL2(4)       2      2           12     1       10      true             false            true             false                                                                                 
+# 156  16  480    180   6   60    AGL2(4)       GL2(4)     6                        AΓL2(4)       2      2           14     1       9       true             false            true             false                                                                                 
+# 157  16  560    105   3   14    2^4.PSL4(2)   A8         (A4xA4):2:2              S16           2      2           11     1       1       true             false            true             false                                       complete                                  
 # 158  16  560    105   3   14    2^4.A7        A7         (3xA4):2                 S16           2      2           20     1       1       true             false            true             false                                       complete                                  
 # 159  16  560    105   3   14    A16           A15        (S3 x S13) cap A16       S16           2      2           21     1       1       true             true             true             true                 161                    complete                                  
 # 160  16  560    105   3   14    S16           S15        S3 x S13                 S16           2      2           22     1       1       true             true             true             true                 162                    complete                                  
@@ -279,26 +279,26 @@
 # 162  16  560    455   13  364   S16           S15        S13 x S3                 S16           2      2           22     1       1       true             true             true             true                 160                    complete                                  
 # 163  16  576    180   5   48    2^4.A6        A6         D10                      2^4.A6        2      2           17     1       7       true             false            true             false                                                                                 
 # 164  16  672    210   5   56    2^4.A7        A7         A5                       2^4.A7        2      2           20     1       4       true             false            true             false                                                                                 
-# 165  16  720    180   4   36    AΓL(2,4)      A5:S3      D8                       AΓL(2,4)      2      2           12     1       5       true             false            true             false                                                                                 
-# 166  16  840    315   6   105   2^4.PSL(4,2)  A8         2x((((2^3):(2^2)):3):2)  2^4.PSL(4,2)  2      2           11     1       6       true             false            true             false                                                                                 
-# 167  16  840    315   6   105   2^4.A7        A7         2xS4                     2^4.PSL(4,2)  2      2           20     1       8       true             false            true             false                                                                                 
-# 168  16  840    420   8   196   2^4.PSL(4,2)  A8         2^4:2:2:3:2              2^4.PSL(4,2)  2      2           11     1       9       true             false            true             true                 168                                                              
-# 169  16  840    420   8   196   2^4.A7        A7         GL(2,3)                  2^4.PSL(4,2)  2      2           20     1       11      true             false            true             true                 169                                                              
+# 165  16  720    180   4   36    AΓL2(4)       A5:S3      D8                       AΓL2(4)       2      2           12     1       5       true             false            true             false                                                                                 
+# 166  16  840    315   6   105   2^4.PSL4(2)   A8         2x((((2^3):(2^2)):3):2)  2^4.PSL4(2)   2      2           11     1       6       true             false            true             false                                                                                 
+# 167  16  840    315   6   105   2^4.A7        A7         2xS4                     2^4.PSL4(2)   2      2           20     1       8       true             false            true             false                                                                                 
+# 168  16  840    420   8   196   2^4.PSL4(2)   A8         2^4:2:2:3:2              2^4.PSL4(2)   2      2           11     1       9       true             false            true             true                 168                                                              
+# 169  16  840    420   8   196   2^4.A7        A7         GL2(3)                   2^4.PSL4(2)   2      2           20     1       11      true             false            true             true                 169                                                              
 # 170  16  1120   630   9   336   2^4.A7        A7         3^2:4                    2^4.A7        2      2           20     1       12      true             false            true             false                                                                                 
 # 171  16  1152   360   5   96    2^4.S6        S6         D10                      2^4.S6        2      2           16     1       7       true             false            true             false                                                                                 
-# 172  16  1680   420   4   84    2^4.PSL(4,2)  A8         2^3:2^2:3:2              2^4.PSL(4,2)  2      2           11     1       3       true             false            true             false                                                                                 
-# 173  16  1680   420   4   84    2^4.A7        A7         S4                       2^4.PSL(4,2)  2      2           20     1       3       true             false            true             false                                                                                 
+# 172  16  1680   420   4   84    2^4.PSL4(2)   A8         2^3:2^2:3:2              2^4.PSL4(2)   2      2           11     1       3       true             false            true             false                                                                                 
+# 173  16  1680   420   4   84    2^4.A7        A7         S4                       2^4.PSL4(2)   2      2           20     1       3       true             false            true             false                                                                                 
 # 174  16  1820   455   4   91    A16           A15        (S4 x S12) cap A16       S16           2      2           21     1       2       true             true             true             true                 176                    complete                                  
 # 175  16  1820   455   4   91    S16           S15        S4 x S12                 S16           2      2           22     1       2       true             true             true             true                 177                    complete                                  
 # 176  16  1820   1365  12  1001  A16           A15        (S12 x S4) cap A16       S16           2      2           21     1       2       true             true             true             true                 174                    complete                                  
 # 177  16  1820   1365  12  1001  S16           S15        S12 x S4                 S16           2      2           22     1       2       true             true             true             true                 175                    complete                                  
 # 178  16  2016   630   5   168   2^4.A7        A7         5:4                      2^4.A7        2      2           20     1       5       true             false            true             false                                                                                 
-# 179  16  2688   840   5   224   2^4.PSL(4,2)  A8         S5                       2^4.PSL(4,2)  2      2           11     1       4       true             false            true             false                                                                                 
+# 179  16  2688   840   5   224   2^4.PSL4(2)   A8         S5                       2^4.PSL4(2)   2      2           11     1       4       true             false            true             false                                                                                 
 # 180  16  4368   1365  5   364   A16           A15        (S5 x S11) cap A16       S16           2      2           21     1       3       true             true             true             true                 182                    complete                                  
 # 181  16  4368   1365  5   364   S16           S15        S5 x S11                 S16           2      2           22     1       3       true             true             true             true                 183                    complete                                  
 # 182  16  4368   3003  11  2002  A16           A15        (S11 x S5) cap A16       S16           2      2           21     1       3       true             true             true             true                 180                    complete                                  
 # 183  16  4368   3003  11  2002  S16           S15        S11 x S5                 S16           2      2           22     1       3       true             true             true             true                 181                    complete                                  
-# 184  16  4480   2520  9   1344  2^4.PSL(4,2)  A8         (S3xS3):2                2^4.PSL(4,2)  2      2           11     1       10      true             false            true             false                                                                                 
+# 184  16  4480   2520  9   1344  2^4.PSL4(2)   A8         (S3xS3):2                2^4.PSL4(2)   2      2           11     1       10      true             false            true             false                                                                                 
 # 185  16  8008   3003  6   1001  A16           A15        (S6 x S10) cap A16       S16           2      2           21     1       4       true             true             true             true                 187                    complete                                  
 # 186  16  8008   3003  6   1001  S16           S15        S6 x S10                 S16           2      2           22     1       4       true             true             true             true                 188                    complete                                  
 # 187  16  8008   5005  10  3003  A16           A15        (S10 x S6) cap A16       S16           2      2           21     1       4       true             true             true             true                 185                    complete                                  
@@ -319,104 +319,104 @@
 # 2    16  16     6     6   2     2^4.S3xS3     S3xS3      S3xS3                    2^4.S6        3      2           7      1       1       true             true             true             false                            true       Menon or Kantor parameters                
 # 3    16  16     6     6   2     2^4.3^2:4     3^2:4      3^2:4                    2^4.S6        3      2           8      1       1       true             true             true             false                            true       Menon or Kantor parameters                
 # 4    16  16     6     6   2     (S4xS4):2     (S3xS3):2  (S3xS3):2                2^4.S6        3      2           10     1       1       true             true             true             false                            true       Menon or Kantor parameters                
-# 5    16  16     6     6   2     ASL(2,4):2    S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 12          true       Menon or Kantor parameters                
-# 6    16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                 15          true       Menon or Kantor parameters                
-# 7    16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                 13          true       Menon or Kantor parameters                
-# 8    16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       9       true             true             true             true                 14          true       Menon or Kantor parameters                
+# 5    16  16     6     6   2     ASL2(4):2     S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 12          true       Menon or Kantor parameters                
+# 6    16  16     6     6   2     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                 15          true       Menon or Kantor parameters                
+# 7    16  16     6     6   2     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                 13          true       Menon or Kantor parameters                
+# 8    16  16     6     6   2     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       9       true             true             true             true                 14          true       Menon or Kantor parameters                
 # 9    16  16     6     6   2     2^4.S6        S6         S6                       2^4.S6        2      2           16     1       8       true             true             true             true                 16          true       Menon or Kantor parameters                
 # 10   16  16     6     6   2     2^4.A6        A6         A6                       2^4.S6        2      2           17     1       8       true             true             true             true                 17          true       Menon or Kantor parameters                
 # 11   16  16     10    10  6     (2^4:5).4     5:4        5:4                      2^4.S6        3      2           5      1       3       true             true             true             false                            true       complement of Menon or Kantor parameters  
-# 12   16  16     10    10  6     ASL(2,4):2    S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 5           true       complement of Menon or Kantor parameters  
-# 13   16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                 7           true       complement of Menon or Kantor parameters  
-# 14   16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       9       true             true             true             true                 8           true       complement of Menon or Kantor parameters  
-# 15   16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                 6           true       complement of Menon or Kantor parameters  
+# 12   16  16     10    10  6     ASL2(4):2     S5         S5                       2^4.S6        2      2           13     1       10      true             true             true             true                 5           true       complement of Menon or Kantor parameters  
+# 13   16  16     10    10  6     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                 7           true       complement of Menon or Kantor parameters  
+# 14   16  16     10    10  6     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       9       true             true             true             true                 8           true       complement of Menon or Kantor parameters  
+# 15   16  16     10    10  6     ASL2(4)       A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                 6           true       complement of Menon or Kantor parameters  
 # 16   16  16     10    10  6     2^4.S6        S6         S6                       2^4.S6        2      2           16     1       8       true             true             true             true                 9           true       complement of Menon or Kantor parameters  
 # 17   16  16     10    10  6     2^4.A6        A6         A6                       2^4.S6        2      2           17     1       8       true             true             true             true                 10          true       complement of Menon or Kantor parameters  
 # 18   16  16     10    10  6     2^4:S5        S5         S5                       2^4.S6        3      2           18     1       2       true             true             true             false                            true       complement of Menon or Kantor parameters  
 # 19   16  16     10    10  6     2^4:A5        A5         A5                       2^4.S6        3      2           19     1       2       true             true             true             false                            true       complement of Menon or Kantor parameters  
-# 20   16  20     5     4   1     2^4:5         5          2^2                      AΓL(2,4)      4      2           1      1       1       true             false            true             false                                                                                 
-# 21   16  20     5     4   1     2^4:D10       D10        2^3                      AΓL(2,4)      4      2           2      1       1       true             false            true             false                                                                                 
-# 22   16  20     5     4   1     AGL(1,16)     15         A4                       AΓL(2,4)      2      2           3      1       2       true             false            true             true                 30                                                               
-# 23   16  20     5     4   1     (2^4:5).4     5:4        (4x2):2                  AΓL(2,4)      3      2           5      1       1       true             false            true             false                                                                                 
-# 24   16  20     5     4   1     AGL(1,16):2   3xD10      2xA4                     AΓL(2,4)      2      2           6      1       2       true             false            true             true                 31                                                               
-# 25   16  20     5     4   1     AΓL(1,16)     15:4       A4:4                     AΓL(2,4)      2      2           9      1       2       true             false            true             true                 32                                                               
-# 26   16  20     5     4   1     AΓL(2,4)      A5:S3      (A4xA4):2                AΓL(2,4)      2      2           12     1       3       true             false            true             true                 33                                                               
-# 27   16  20     5     4   1     ASL(2,4):2    S5         2^4:3:2                  AΓL(2,4)      2      2           13     1       4       true             false            true             true                 34                                                               
-# 28   16  20     5     4   1     AGL(2,4)      GL(2,4)    A4xA4                    AΓL(2,4)      2      2           14     1       3       true             false            true             true                 35                                                               
-# 29   16  20     5     4   1     ASL(2,4)      A5         2^4:3                    AΓL(2,4)      2      2           15     1       3       true             false            true             true                 36                                                               
-# 30   16  20     15    12  11    AGL(1,16)     15         A4                       AΓL(2,4)      2      2           3      1       2       true             false            true             true                 22                                                               
-# 31   16  20     15    12  11    AGL(1,16):2   3xD10      2xA4                     AΓL(2,4)      2      2           6      1       2       true             false            true             true                 24                                                               
-# 32   16  20     15    12  11    AΓL(1,16)     15:4       A4:4                     AΓL(2,4)      2      2           9      1       2       true             false            true             true                 25                                                               
-# 33   16  20     15    12  11    AΓL(2,4)      A5:S3      (A4xA4):2                AΓL(2,4)      2      2           12     1       3       true             false            true             true                 26                                                               
-# 34   16  20     15    12  11    ASL(2,4):2    S5         2^4:3:2                  AΓL(2,4)      2      2           13     1       4       true             false            true             true                 27                                                               
-# 35   16  20     15    12  11    AGL(2,4)      GL(2,4)    A4xA4                    AΓL(2,4)      2      2           14     1       3       true             false            true             true                 28                                                               
-# 36   16  20     15    12  11    ASL(2,4)      A5         2^4:3                    AΓL(2,4)      2      2           15     1       3       true             false            true             true                 29                                                               
-# 37   16  30     15    8   7     AGL(1,16)     15         2^3                      2^4.PSL(4,2)  2      2           3      1       6       true             false            true             true                 37                                                               
-# 38   16  30     15    8   7     AGL(1,16):2   3xD10      2xD8                     2^4.PSL(4,2)  2      2           6      1       6       true             false            true             true                 38                                                               
-# 39   16  30     15    8   7     AΓL(1,16)     15:4       2^3:4                    2^4.PSL(4,2)  2      2           9      1       7       true             false            true             true                 39                                                               
-# 40   16  30     15    8   7     2^4.PSL(4,2)  A8         2^3:2^3:PSL(3,2)         2^4.PSL(4,2)  2      2           11     1       8       true             false            true             true                 40                                                               
-# 41   16  30     15    8   7     AΓL(2,4)      A5:S3      2^4:3:2:2                2^4.PSL(4,2)  2      2           12     1       11      true             false            true             true                 41                                                               
-# 42   16  30     15    8   7     ASL(2,4):2    S5         2^4:2:2                  2^4.PSL(4,2)  2      2           13     1       14      true             false            true             true                 42                                                               
-# 43   16  30     15    8   7     AGL(2,4)      GL(2,4)    2^4:2:3                  2^4.PSL(4,2)  2      2           14     1       10      true             false            true             true                 43                                                               
-# 44   16  30     15    8   7     ASL(2,4)      A5         2^4:2                    2^4.PSL(4,2)  2      2           15     1       14      true             false            true             true                 44                                                               
-# 45   16  30     15    8   7     2^4.S6        S6         2x((((2^3):(2^2)):3):2)  2^4.PSL(4,2)  2      2           16     1       12      true             false            true             true                 45                                                               
-# 46   16  30     15    8   7     2^4.A6        A6         2^3:2^2:3:2              2^4.PSL(4,2)  2      2           17     1       13      true             false            true             true                 46                                                               
-# 47   16  30     15    8   7     2^4.A7        A7         2^3:PSL(3,2)             2^4.PSL(4,2)  2      2           20     1       10      true             false            true             true                 47                                                               
-# 48   16  32     12    6   4     ASL(2,4):2    S5         A5                       ASL(2,4):2    2      2           13     1       11      true             false            true             true                 49                                                               
-# 49   16  32     20    10  12    ASL(2,4):2    S5         A5                       ASL(2,4):2    2      2           13     1       11      true             false            true             true                 48                                                               
-# 50   16  40     10    4   2     (2^4:5).4     5:4        D8                       ASL(2,4):2    3      2           5      1       2       true             false            true             false                                                                                 
-# 51   16  40     10    4   2     ASL(2,4):2    S5         2xS4                     ASL(2,4):2    2      2           13     1       5       true             false            true             true                 55                                                               
-# 52   16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       4       true             false            true             true                 56                                                               
-# 53   16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       5       true             false            true             true                 58                                                               
-# 54   16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       6       true             false            true             true                 57                                                               
-# 55   16  40     30    12  22    ASL(2,4):2    S5         2xS4                     ASL(2,4):2    2      2           13     1       5       true             false            true             true                 51                                                               
-# 56   16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       4       true             false            true             true                 52                                                               
-# 57   16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       6       true             false            true             true                 54                                                               
-# 58   16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       5       true             false            true             true                 53                                                               
-# 59   16  48     15    5   4     AGL(1,16)     15         5                        AΓL(1,16)     2      2           3      1       5       true             false            true             false                                                                                 
-# 60   16  48     15    5   4     AGL(1,16):2   3xD10      D10                      AΓL(1,16)     2      2           6      1       5       true             false            true             false                                                                                 
-# 61   16  48     15    5   4     AΓL(1,16)     15:4       5:4                      AΓL(1,16)     2      2           9      1       5       true             false            true             false                                                                                 
-# 62   16  48     18    6   6     (A4xA4):2     3xS3       6                        AΓL(2,4)      3      2           4      1       2       true             false            true             false                                                                                 
-# 63   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL(2,4)      3      2           7      1       2       true             false            true             false                                                                                 
-# 64   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL(2,4)      3      2           7      1       3       true             false            true             false                                                                                 
-# 65   16  48     18    6   6     AΓL(2,4)      A5:S3      S5                       AΓL(2,4)      2      2           12     1       7       true             false            true             true                 68                                                               
-# 66   16  48     18    6   6     AGL(2,4)      GL(2,4)    A5                       AΓL(2,4)      2      2           14     1       6       true             false            true             true                 69                                                               
-# 67   16  48     30    10  18    AΓL(1,16)     15:4       5:4                      AΓL(2,4)      2      2           9      1       5       true             false            true             false                                                                                 
-# 68   16  48     30    10  18    AΓL(2,4)      A5:S3      S5                       AΓL(2,4)      2      2           12     1       7       true             false            true             true                 65                                                               
-# 69   16  48     30    10  18    AGL(2,4)      GL(2,4)    A5                       AΓL(2,4)      2      2           14     1       6       true             false            true             true                 66                                                               
-# 70   16  60     15    4   3     AGL(1,16)     15         2^2                      AGL(1,16):2   2      2           3      1       4       true             false            true             false                                                                                 
-# 71   16  60     15    4   3     AGL(1,16)     15         2^2                      AGL(1,16):2   2      2           3      1       3       true             false            true             false                                                                                 
-# 72   16  60     15    4   3     AGL(1,16):2   3xD10      D8                       AGL(1,16):2   2      2           6      1       4       true             false            true             false                                                                                 
-# 73   16  60     15    4   3     AGL(1,16):2   3xD10      D8                       AGL(1,16):2   2      2           6      1       3       true             false            true             false                                                                                 
+# 20   16  20     5     4   1     2^4:5         5          2^2                      AΓL2(4)       4      2           1      1       1       true             false            true             false                                                                                 
+# 21   16  20     5     4   1     2^4:D10       D10        2^3                      AΓL2(4)       4      2           2      1       1       true             false            true             false                                                                                 
+# 22   16  20     5     4   1     AGL1(16)      15         A4                       AΓL2(4)       2      2           3      1       2       true             false            true             true                 30                                                               
+# 23   16  20     5     4   1     (2^4:5).4     5:4        (4x2):2                  AΓL2(4)       3      2           5      1       1       true             false            true             false                                                                                 
+# 24   16  20     5     4   1     AGL1(16):2    3xD10      2xA4                     AΓL2(4)       2      2           6      1       2       true             false            true             true                 31                                                               
+# 25   16  20     5     4   1     AΓL1(16)      15:4       A4:4                     AΓL2(4)       2      2           9      1       2       true             false            true             true                 32                                                               
+# 26   16  20     5     4   1     AΓL2(4)       A5:S3      (A4xA4):2                AΓL2(4)       2      2           12     1       3       true             false            true             true                 33                                                               
+# 27   16  20     5     4   1     ASL2(4):2     S5         2^4:3:2                  AΓL2(4)       2      2           13     1       4       true             false            true             true                 34                                                               
+# 28   16  20     5     4   1     AGL2(4)       GL2(4)     A4xA4                    AΓL2(4)       2      2           14     1       3       true             false            true             true                 35                                                               
+# 29   16  20     5     4   1     ASL2(4)       A5         2^4:3                    AΓL2(4)       2      2           15     1       3       true             false            true             true                 36                                                               
+# 30   16  20     15    12  11    AGL1(16)      15         A4                       AΓL2(4)       2      2           3      1       2       true             false            true             true                 22                                                               
+# 31   16  20     15    12  11    AGL1(16):2    3xD10      2xA4                     AΓL2(4)       2      2           6      1       2       true             false            true             true                 24                                                               
+# 32   16  20     15    12  11    AΓL1(16)      15:4       A4:4                     AΓL2(4)       2      2           9      1       2       true             false            true             true                 25                                                               
+# 33   16  20     15    12  11    AΓL2(4)       A5:S3      (A4xA4):2                AΓL2(4)       2      2           12     1       3       true             false            true             true                 26                                                               
+# 34   16  20     15    12  11    ASL2(4):2     S5         2^4:3:2                  AΓL2(4)       2      2           13     1       4       true             false            true             true                 27                                                               
+# 35   16  20     15    12  11    AGL2(4)       GL2(4)     A4xA4                    AΓL2(4)       2      2           14     1       3       true             false            true             true                 28                                                               
+# 36   16  20     15    12  11    ASL2(4)       A5         2^4:3                    AΓL2(4)       2      2           15     1       3       true             false            true             true                 29                                                               
+# 37   16  30     15    8   7     AGL1(16)      15         2^3                      2^4.PSL4(2)   2      2           3      1       6       true             false            true             true                 37                                                               
+# 38   16  30     15    8   7     AGL1(16):2    3xD10      2xD8                     2^4.PSL4(2)   2      2           6      1       6       true             false            true             true                 38                                                               
+# 39   16  30     15    8   7     AΓL1(16)      15:4       2^3:4                    2^4.PSL4(2)   2      2           9      1       7       true             false            true             true                 39                                                               
+# 40   16  30     15    8   7     2^4.PSL4(2)   A8         2^3:2^3:PSL3(2)          2^4.PSL4(2)   2      2           11     1       8       true             false            true             true                 40                                                               
+# 41   16  30     15    8   7     AΓL2(4)       A5:S3      2^4:3:2:2                2^4.PSL4(2)   2      2           12     1       11      true             false            true             true                 41                                                               
+# 42   16  30     15    8   7     ASL2(4):2     S5         2^4:2:2                  2^4.PSL4(2)   2      2           13     1       14      true             false            true             true                 42                                                               
+# 43   16  30     15    8   7     AGL2(4)       GL2(4)     2^4:2:3                  2^4.PSL4(2)   2      2           14     1       10      true             false            true             true                 43                                                               
+# 44   16  30     15    8   7     ASL2(4)       A5         2^4:2                    2^4.PSL4(2)   2      2           15     1       14      true             false            true             true                 44                                                               
+# 45   16  30     15    8   7     2^4.S6        S6         2x((((2^3):(2^2)):3):2)  2^4.PSL4(2)   2      2           16     1       12      true             false            true             true                 45                                                               
+# 46   16  30     15    8   7     2^4.A6        A6         2^3:2^2:3:2              2^4.PSL4(2)   2      2           17     1       13      true             false            true             true                 46                                                               
+# 47   16  30     15    8   7     2^4.A7        A7         2^3:PSL3(2)              2^4.PSL4(2)   2      2           20     1       10      true             false            true             true                 47                                                               
+# 48   16  32     12    6   4     ASL2(4):2     S5         A5                       ASL2(4):2     2      2           13     1       11      true             false            true             true                 49                                                               
+# 49   16  32     20    10  12    ASL2(4):2     S5         A5                       ASL2(4):2     2      2           13     1       11      true             false            true             true                 48                                                               
+# 50   16  40     10    4   2     (2^4:5).4     5:4        D8                       ASL2(4):2     3      2           5      1       2       true             false            true             false                                                                                 
+# 51   16  40     10    4   2     ASL2(4):2     S5         2xS4                     ASL2(4):2     2      2           13     1       5       true             false            true             true                 55                                                               
+# 52   16  40     10    4   2     ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       4       true             false            true             true                 56                                                               
+# 53   16  40     10    4   2     ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       5       true             false            true             true                 58                                                               
+# 54   16  40     10    4   2     ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       6       true             false            true             true                 57                                                               
+# 55   16  40     30    12  22    ASL2(4):2     S5         2xS4                     ASL2(4):2     2      2           13     1       5       true             false            true             true                 51                                                               
+# 56   16  40     30    12  22    ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       4       true             false            true             true                 52                                                               
+# 57   16  40     30    12  22    ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       6       true             false            true             true                 54                                                               
+# 58   16  40     30    12  22    ASL2(4)       A5         S4                       ASL2(4):2     2      2           15     1       5       true             false            true             true                 53                                                               
+# 59   16  48     15    5   4     AGL1(16)      15         5                        AΓL1(16)      2      2           3      1       5       true             false            true             false                                                                                 
+# 60   16  48     15    5   4     AGL1(16):2    3xD10      D10                      AΓL1(16)      2      2           6      1       5       true             false            true             false                                                                                 
+# 61   16  48     15    5   4     AΓL1(16)      15:4       5:4                      AΓL1(16)      2      2           9      1       5       true             false            true             false                                                                                 
+# 62   16  48     18    6   6     (A4xA4):2     3xS3       6                        AΓL2(4)       3      2           4      1       2       true             false            true             false                                                                                 
+# 63   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL2(4)       3      2           7      1       2       true             false            true             false                                                                                 
+# 64   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL2(4)       3      2           7      1       3       true             false            true             false                                                                                 
+# 65   16  48     18    6   6     AΓL2(4)       A5:S3      S5                       AΓL2(4)       2      2           12     1       7       true             false            true             true                 68                                                               
+# 66   16  48     18    6   6     AGL2(4)       GL2(4)     A5                       AΓL2(4)       2      2           14     1       6       true             false            true             true                 69                                                               
+# 67   16  48     30    10  18    AΓL1(16)      15:4       5:4                      AΓL2(4)       2      2           9      1       5       true             false            true             false                                                                                 
+# 68   16  48     30    10  18    AΓL2(4)       A5:S3      S5                       AΓL2(4)       2      2           12     1       7       true             false            true             true                 65                                                               
+# 69   16  48     30    10  18    AGL2(4)       GL2(4)     A5                       AΓL2(4)       2      2           14     1       6       true             false            true             true                 66                                                               
+# 70   16  60     15    4   3     AGL1(16)      15         2^2                      AGL1(16):2    2      2           3      1       4       true             false            true             false                                                                                 
+# 71   16  60     15    4   3     AGL1(16)      15         2^2                      AGL1(16):2    2      2           3      1       3       true             false            true             false                                                                                 
+# 72   16  60     15    4   3     AGL1(16):2    3xD10      D8                       AGL1(16):2    2      2           6      1       4       true             false            true             false                                                                                 
+# 73   16  60     15    4   3     AGL1(16):2    3xD10      D8                       AGL1(16):2    2      2           6      1       3       true             false            true             false                                                                                 
 # 74   16  60     15    4   3     2^4.S6        S6         2x(((2^4):3):2)          2^4.S6        2      2           16     1       3       true             false            true             true                 78                                                               
 # 75   16  60     15    4   3     2^4.A6        A6         2^4:3:2                  2^4.S6        2      2           17     1       3       true             false            true             true                 79                                                               
 # 76   16  60     15    4   3     2^4:S5        S5         2^4:2                    2^4.S6        3      2           18     1       1       true             false            true             false                                                                                 
 # 77   16  60     15    4   3     2^4:A5        A5         2xD8                     2^4.S6        3      2           19     1       1       true             false            true             false                                                                                 
 # 78   16  60     45    12  33    2^4.S6        S6         2x(((2^4):3):2)          2^4.S6        2      2           16     1       3       true             false            true             true                 74                                                               
 # 79   16  60     45    12  33    2^4.A6        A6         2^4:3:2                  2^4.S6        2      2           17     1       3       true             false            true             true                 75                                                               
-# 80   16  80     15    3   2     AGL(1,16)     15         3                        AΓL(2,4)      2      2           3      1       1       true             false            true             false                                                                                 
-# 81   16  80     15    3   2     AGL(1,16):2   3xD10      6                        AΓL(2,4)      2      2           6      1       1       true             false            true             false                                                                                 
-# 82   16  80     15    3   2     AΓL(1,16)     15:4       3:4                      AΓL(2,4)      2      2           9      1       1       true             false            true             false                                                                                 
-# 83   16  80     15    3   2     AΓL(2,4)      A5:S3      (3xA4):2                 AΓL(2,4)      2      2           12     1       1       true             false            true             false                                                                                 
-# 84   16  80     15    3   2     ASL(2,4):2    S5         S4                       AΓL(2,4)      2      2           13     1       1       true             false            true             false                                                                                 
-# 85   16  80     15    3   2     AGL(2,4)      GL(2,4)    3xA4                     AΓL(2,4)      2      2           14     1       1       true             false            true             false                                                                                 
-# 86   16  80     15    3   2     ASL(2,4)      A5         A4                       AΓL(2,4)      2      2           15     1       1       true             false            true             false                                                                                 
-# 87   16  80     20    4   4     ASL(2,4):2    S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 96                                                               
+# 80   16  80     15    3   2     AGL1(16)      15         3                        AΓL2(4)       2      2           3      1       1       true             false            true             false                                                                                 
+# 81   16  80     15    3   2     AGL1(16):2    3xD10      6                        AΓL2(4)       2      2           6      1       1       true             false            true             false                                                                                 
+# 82   16  80     15    3   2     AΓL1(16)      15:4       3:4                      AΓL2(4)       2      2           9      1       1       true             false            true             false                                                                                 
+# 83   16  80     15    3   2     AΓL2(4)       A5:S3      (3xA4):2                 AΓL2(4)       2      2           12     1       1       true             false            true             false                                                                                 
+# 84   16  80     15    3   2     ASL2(4):2     S5         S4                       AΓL2(4)       2      2           13     1       1       true             false            true             false                                                                                 
+# 85   16  80     15    3   2     AGL2(4)       GL2(4)     3xA4                     AΓL2(4)       2      2           14     1       1       true             false            true             false                                                                                 
+# 86   16  80     15    3   2     ASL2(4)       A5         A4                       AΓL2(4)       2      2           15     1       1       true             false            true             false                                                                                 
+# 87   16  80     20    4   4     ASL2(4):2     S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 96                                                               
 # 88   16  80     20    4   4     2^4.S6        S6         S4xS3                    2^4.S6        2      2           16     1       4       true             false            true             true                 97                                                               
 # 89   16  80     20    4   4     2^4.A6        A6         (3xA4):2                 2^4.S6        2      2           17     1       4       true             false            true             true                 98                                                               
-# 90   16  80     30    6   10    AGL(1,16):2   3xD10      6                        AGL(1,16):2   2      2           6      1       1       true             false            true             false                                                                                 
-# 91   16  80     30    6   10    AGL(1,16):2   3xD10      6                        AGL(1,16):2   2      2           6      1       1       true             false            true             false                                                                                 
-# 92   16  80     30    6   10    ASL(2,4):2    S5         S4                       ASL(2,4):2    2      2           13     1       12      true             false            true             false                                                                                 
-# 93   16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       11      true             false            true             false                                                                                 
-# 94   16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       13      true             false            true             false                                                                                 
-# 95   16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       12      true             false            true             false                                                                                 
-# 96   16  80     60    12  44    ASL(2,4):2    S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 87                                                               
+# 90   16  80     30    6   10    AGL1(16):2    3xD10      6                        AGL1(16):2    2      2           6      1       1       true             false            true             false                                                                                 
+# 91   16  80     30    6   10    AGL1(16):2    3xD10      6                        AGL1(16):2    2      2           6      1       1       true             false            true             false                                                                                 
+# 92   16  80     30    6   10    ASL2(4):2     S5         S4                       ASL2(4):2     2      2           13     1       12      true             false            true             false                                                                                 
+# 93   16  80     30    6   10    ASL2(4)       A5         A4                       ASL2(4):2     2      2           15     1       11      true             false            true             false                                                                                 
+# 94   16  80     30    6   10    ASL2(4)       A5         A4                       ASL2(4):2     2      2           15     1       13      true             false            true             false                                                                                 
+# 95   16  80     30    6   10    ASL2(4)       A5         A4                       ASL2(4):2     2      2           15     1       12      true             false            true             false                                                                                 
+# 96   16  80     60    12  44    ASL2(4):2     S5         S4                       2^4.S6        2      2           13     1       6       true             false            true             true                 87                                                               
 # 97   16  80     60    12  44    2^4.S6        S6         S4xS3                    2^4.S6        2      2           16     1       4       true             false            true             true                 88                                                               
 # 98   16  80     60    12  44    2^4.A6        A6         (3xA4):2                 2^4.S6        2      2           17     1       4       true             false            true             true                 89                                                               
-# 99   16  96     30    5   8     ASL(2,4):2    S5         5:4                      2^4.S6        2      2           13     1       8       true             false            true             false                                                                                 
-# 100  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
-# 101  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
-# 102  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
+# 99   16  96     30    5   8     ASL2(4):2     S5         5:4                      2^4.S6        2      2           13     1       8       true             false            true             false                                                                                 
+# 100  16  96     30    5   8     ASL2(4)       A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
+# 101  16  96     30    5   8     ASL2(4)       A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
+# 102  16  96     30    5   8     ASL2(4)       A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
 # 103  16  96     30    5   8     2^4.S6        S6         S5                       2^4.S6        2      2           16     1       6       true             false            true             false                                                                                 
 # 104  16  96     30    5   8     2^4.A6        A6         A5                       2^4.S6        2      2           17     1       6       true             false            true             false                                                                                 
 # 105  16  96     36    6   12    2^4.3^2:4     3^2:4      S3                       (S4xS4):2     3      3           8      1       2       true             false            true             false                                                                                 
@@ -427,71 +427,71 @@
 # 110  16  96     60    10  36    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       10      true             false            true             true                 108                                                              
 # 111  16  112    42    6   14    2^4.A7        A7         A6                       2^4.A7        2      2           20     1       6       true             false            true             true                 112                                                              
 # 112  16  112    70    10  42    2^4.A7        A7         A6                       2^4.A7        2      2           20     1       6       true             false            true             true                 111                                                              
-# 113  16  120    30    4   6     AΓL(1,16)     15:4       D8                       AΓL(2,4)      2      2           9      1       3       true             false            true             false                                                                                 
-# 114  16  120    30    4   6     AΓL(2,4)      A5:S3      2xS4                     AΓL(2,4)      2      2           12     1       4       true             false            true             true                 123                                                              
-# 115  16  120    30    4   6     AGL(2,4)      GL(2,4)    S4                       AΓL(2,4)      2      2           14     1       4       true             false            true             true                 124                                                              
+# 113  16  120    30    4   6     AΓL1(16)      15:4       D8                       AΓL2(4)       2      2           9      1       3       true             false            true             false                                                                                 
+# 114  16  120    30    4   6     AΓL2(4)       A5:S3      2xS4                     AΓL2(4)       2      2           12     1       4       true             false            true             true                 123                                                              
+# 115  16  120    30    4   6     AGL2(4)       GL2(4)     S4                       AΓL2(4)       2      2           14     1       4       true             false            true             true                 124                                                              
 # 116  16  120    45    6   15    2^4.S6        S6         2^2xS4                   2^4.S6        2      2           16     1       9       true             false            true             false                                                                                 
 # 117  16  120    45    6   15    2^4.A6        A6         2xS4                     2^4.S6        2      2           17     1       11      true             false            true             false                                                                                 
-# 118  16  120    60    8   28    AΓL(1,16)     15:4       8                        AΓL(2,4)      2      2           9      1       8       true             false            true             true                 118                                                              
-# 119  16  120    60    8   28    AΓL(2,4)      A5:S3      GL(2,3)                  AΓL(2,4)      2      2           12     1       12      true             false            true             true                 119                                                              
-# 120  16  120    60    8   28    ASL(2,4):2    S5         QD16                     AΓL(2,4)      2      2           13     1       15      true             false            true             true                 120                                                              
-# 121  16  120    60    8   28    AGL(2,4)      GL(2,4)    SL(2,3)                  AΓL(2,4)      2      2           14     1       11      true             false            true             true                 121                                                              
-# 122  16  120    60    8   28    ASL(2,4)      A5         Q8                       AΓL(2,4)      2      2           15     1       15      true             false            true             true                 122                                                              
-# 123  16  120    90    12  66    AΓL(2,4)      A5:S3      2xS4                     AΓL(2,4)      2      2           12     1       4       true             false            true             true                 114                                                              
-# 124  16  120    90    12  66    AGL(2,4)      GL(2,4)    S4                       AΓL(2,4)      2      2           14     1       4       true             false            true             true                 115                                                              
-# 125  16  120    105   14  91    2^4.PSL(4,2)  A8         2x(2^3:PSL(3,2))         S16           2      2           11     1       11      true             false            true             true                                        complete                                  
-# 126  16  120    105   14  91    2^4.A7        A7         2xPSL(3,2)               S16           2      2           20     1       13      true             false            true             true                                        complete                                  
+# 118  16  120    60    8   28    AΓL1(16)      15:4       8                        AΓL2(4)       2      2           9      1       8       true             false            true             true                 118                                                              
+# 119  16  120    60    8   28    AΓL2(4)       A5:S3      GL2(3)                   AΓL2(4)       2      2           12     1       12      true             false            true             true                 119                                                              
+# 120  16  120    60    8   28    ASL2(4):2     S5         QD16                     AΓL2(4)       2      2           13     1       15      true             false            true             true                 120                                                              
+# 121  16  120    60    8   28    AGL2(4)       GL2(4)     SL2(3)                   AΓL2(4)       2      2           14     1       11      true             false            true             true                 121                                                              
+# 122  16  120    60    8   28    ASL2(4)       A5         Q8                       AΓL2(4)       2      2           15     1       15      true             false            true             true                 122                                                              
+# 123  16  120    90    12  66    AΓL2(4)       A5:S3      2xS4                     AΓL2(4)       2      2           12     1       4       true             false            true             true                 114                                                              
+# 124  16  120    90    12  66    AGL2(4)       GL2(4)     S4                       AΓL2(4)       2      2           14     1       4       true             false            true             true                 115                                                              
+# 125  16  120    105   14  91    2^4.PSL4(2)   A8         2x(2^3:PSL3(2))          S16           2      2           11     1       11      true             false            true             true                                        complete                                  
+# 126  16  120    105   14  91    2^4.A7        A7         2xPSL3(2)                S16           2      2           20     1       13      true             false            true             true                                        complete                                  
 # 127  16  120    105   14  91    A16           A15        (S14 x S2) cap A16       S16           2      2           21     1       7       true             true             true             true                                        complete                                  
 # 128  16  120    105   14  91    S16           S15        S14 x S2                 S16           2      2           22     1       7       true             true             true             true                                        complete                                  
-# 129  16  140    35    4   7     2^4.PSL(4,2)  A8         2^6:3^2:2:2              2^4.PSL(4,2)  2      2           11     1       2       true             false            true             true                 131                                                              
-# 130  16  140    35    4   7     2^4.A7        A7         (A4xA4):2                2^4.PSL(4,2)  2      2           20     1       2       true             false            true             true                 132                                                              
-# 131  16  140    105   12  77    2^4.PSL(4,2)  A8         2^6:3^2:2:2              2^4.PSL(4,2)  2      2           11     1       2       true             false            true             true                 129                                                              
-# 132  16  140    105   12  77    2^4.A7        A7         (A4xA4):2                2^4.PSL(4,2)  2      2           20     1       2       true             false            true             true                 130                                                              
-# 133  16  160    30    3   4     ASL(2,4):2    S5         D12                      ASL(2,4):2    2      2           13     1       2       true             false            true             false                                                                                 
-# 134  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true             false            true             false                                                                                 
-# 135  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true             false            true             false                                                                                 
-# 136  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true             false            true             false                                                                                 
-# 137  16  160    60    6   20    AΓL(1,16)     15:4       6                        AΓL(2,4)      2      2           9      1       6       true             false            true             false                                                                                 
-# 138  16  160    60    6   20    AΓL(2,4)      A5:S3      S3xS3                    AΓL(2,4)      2      2           12     1       8       true             false            true             false                                                                                 
-# 139  16  160    60    6   20    ASL(2,4):2    S5         A4                       ASL(2,4):2    2      2           13     1       13      true             false            true             false                                                                                 
-# 140  16  160    60    6   20    ASL(2,4):2    S5         D12                      AΓL(2,4)      2      2           13     1       2       true             false            true             false                                                                                 
-# 141  16  160    60    6   20    AGL(2,4)      GL(2,4)    3xS3                     AΓL(2,4)      2      2           14     1       7       true             false            true             false                                                                                 
-# 142  16  160    60    6   20    ASL(2,4)      A5         S3                       AΓL(2,4)      2      2           15     1       2       true             false            true             false                                                                                 
-# 143  16  160    90    9   48    AΓL(2,4)      A5:S3      S3xS3                    AΓL(2,4)      2      2           12     1       8       true             false            true             false                                                                                 
-# 144  16  160    90    9   48    AGL(2,4)      GL(2,4)    3xS3                     AΓL(2,4)      2      2           14     1       7       true             false            true             false                                                                                 
+# 129  16  140    35    4   7     2^4.PSL4(2)   A8         2^6:3^2:2:2              2^4.PSL4(2)   2      2           11     1       2       true             false            true             true                 131                                                              
+# 130  16  140    35    4   7     2^4.A7        A7         (A4xA4):2                2^4.PSL4(2)   2      2           20     1       2       true             false            true             true                 132                                                              
+# 131  16  140    105   12  77    2^4.PSL4(2)   A8         2^6:3^2:2:2              2^4.PSL4(2)   2      2           11     1       2       true             false            true             true                 129                                                              
+# 132  16  140    105   12  77    2^4.A7        A7         (A4xA4):2                2^4.PSL4(2)   2      2           20     1       2       true             false            true             true                 130                                                              
+# 133  16  160    30    3   4     ASL2(4):2     S5         D12                      ASL2(4):2     2      2           13     1       2       true             false            true             false                                                                                 
+# 134  16  160    30    3   4     ASL2(4)       A5         S3                       ASL2(4):2     2      2           15     1       2       true             false            true             false                                                                                 
+# 135  16  160    30    3   4     ASL2(4)       A5         S3                       ASL2(4):2     2      2           15     1       2       true             false            true             false                                                                                 
+# 136  16  160    30    3   4     ASL2(4)       A5         S3                       ASL2(4):2     2      2           15     1       2       true             false            true             false                                                                                 
+# 137  16  160    60    6   20    AΓL1(16)      15:4       6                        AΓL2(4)       2      2           9      1       6       true             false            true             false                                                                                 
+# 138  16  160    60    6   20    AΓL2(4)       A5:S3      S3xS3                    AΓL2(4)       2      2           12     1       8       true             false            true             false                                                                                 
+# 139  16  160    60    6   20    ASL2(4):2     S5         A4                       ASL2(4):2     2      2           13     1       13      true             false            true             false                                                                                 
+# 140  16  160    60    6   20    ASL2(4):2     S5         D12                      AΓL2(4)       2      2           13     1       2       true             false            true             false                                                                                 
+# 141  16  160    60    6   20    AGL2(4)       GL2(4)     3xS3                     AΓL2(4)       2      2           14     1       7       true             false            true             false                                                                                 
+# 142  16  160    60    6   20    ASL2(4)       A5         S3                       AΓL2(4)       2      2           15     1       2       true             false            true             false                                                                                 
+# 143  16  160    90    9   48    AΓL2(4)       A5:S3      S3xS3                    AΓL2(4)       2      2           12     1       8       true             false            true             false                                                                                 
+# 144  16  160    90    9   48    AGL2(4)       GL2(4)     3xS3                     AΓL2(4)       2      2           14     1       7       true             false            true             false                                                                                 
 # 145  16  160    90    9   48    2^4.S6        S6         (S3xS3):2                2^4.S6        2      2           16     1       14      true             false            true             false                                                                                 
 # 146  16  160    90    9   48    2^4.A6        A6         3^2:4                    2^4.S6        2      2           17     1       15      true             false            true             false                                                                                 
-# 147  16  192    60    5   16    ASL(2,4):2    S5         D10                      ASL(2,4):2    2      2           13     1       9       true             false            true             false                                                                                 
+# 147  16  192    60    5   16    ASL2(4):2     S5         D10                      ASL2(4):2     2      2           13     1       9       true             false            true             false                                                                                 
 # 148  16  192    72    6   24    2^4.S6        S6         A5                       2^4.S6        2      2           16     1       10      true             false            true             true                 149                                                              
 # 149  16  192    120   10  72    2^4.S6        S6         A5                       2^4.S6        2      2           16     1       10      true             false            true             true                 148                                                              
 # 150  16  240    45    3   6     2^4.S6        S6         2xS4                     2^4.S6        2      2           16     1       1       true             false            true             false                                                                                 
 # 151  16  240    45    3   6     2^4.A6        A6         S4                       2^4.S6        2      2           17     1       1       true             false            true             false                                                                                 
-# 152  16  240    60    4   12    AΓL(1,16)     15:4       4                        AΓL(1,16)     2      2           9      1       4       true             false            true             false                                                                                 
-# 153  16  240    60    4   12    ASL(2,4):2    S5         D8                       2^4.S6        2      2           13     1       7       true             false            true             false                                                                                 
+# 152  16  240    60    4   12    AΓL1(16)      15:4       4                        AΓL1(16)      2      2           9      1       4       true             false            true             false                                                                                 
+# 153  16  240    60    4   12    ASL2(4):2     S5         D8                       2^4.S6        2      2           13     1       7       true             false            true             false                                                                                 
 # 154  16  240    60    4   12    2^4.S6        S6         2xS4                     2^4.S6        2      2           16     1       5       true             false            true             false                                                                                 
 # 155  16  240    60    4   12    2^4.A6        A6         S4                       2^4.S6        2      2           17     1       5       true             false            true             false                                                                                 
-# 156  16  240    90    6   30    AΓL(2,4)      A5:S3      S4                       AΓL(2,4)      2      2           12     1       9       true             false            true             false                                                                                 
-# 157  16  240    90    6   30    AGL(2,4)      GL(2,4)    A4                       AΓL(2,4)      2      2           14     1       8       true             false            true             false                                                                                 
+# 156  16  240    90    6   30    AΓL2(4)       A5:S3      S4                       AΓL2(4)       2      2           12     1       9       true             false            true             false                                                                                 
+# 157  16  240    90    6   30    AGL2(4)       GL2(4)     A4                       AΓL2(4)       2      2           14     1       8       true             false            true             false                                                                                 
 # 158  16  240    90    6   30    2^4.S6        S6         2xS4                     2^4.S6        2      2           16     1       11      true             false            true             false                                                                                 
 # 159  16  240    90    6   30    2^4.A6        A6         S4                       2^4.S6        2      2           17     1       12      true             false            true             false                                                                                 
-# 160  16  240    105   7   42    2^4.PSL(4,2)  A8         2^3:PSL(3,2)             2^4.PSL(4,2)  2      2           11     1       7       true             false            true             false                                                                                 
-# 161  16  240    105   7   42    2^4.A7        A7         PSL(3,2)                 2^4.PSL(4,2)  2      2           20     1       9       true             false            true             false                                                                                 
-# 162  16  288    90    5   24    AΓL(2,4)      A5:S3      5:4                      AΓL(2,4)      2      2           12     1       6       true             false            true             false                                                                                 
-# 163  16  288    90    5   24    AGL(2,4)      GL(2,4)    D10                      AΓL(2,4)      2      2           14     1       5       true             false            true             false                                                                                 
-# 164  16  320    60    3   8     ASL(2,4):2    S5         S3                       2^4.S6        2      2           13     1       3       true             false            true             false                                                                                 
+# 160  16  240    105   7   42    2^4.PSL4(2)   A8         2^3:PSL3(2)              2^4.PSL4(2)   2      2           11     1       7       true             false            true             false                                                                                 
+# 161  16  240    105   7   42    2^4.A7        A7         PSL3(2)                  2^4.PSL4(2)   2      2           20     1       9       true             false            true             false                                                                                 
+# 162  16  288    90    5   24    AΓL2(4)       A5:S3      5:4                      AΓL2(4)       2      2           12     1       6       true             false            true             false                                                                                 
+# 163  16  288    90    5   24    AGL2(4)       GL2(4)     D10                      AΓL2(4)       2      2           14     1       5       true             false            true             false                                                                                 
+# 164  16  320    60    3   8     ASL2(4):2     S5         S3                       2^4.S6        2      2           13     1       3       true             false            true             false                                                                                 
 # 165  16  320    60    3   8     2^4.S6        S6         S3xS3                    2^4.S6        2      2           16     1       2       true             false            true             false                                                                                 
 # 166  16  320    60    3   8     2^4.A6        A6         3^2:2                    2^4.S6        2      2           17     1       2       true             false            true             false                                                                                 
 # 167  16  336    126   6   42    2^4.A7        A7         S5                       2^4.A7        2      2           20     1       7       true             false            true             true                 168                                                              
 # 168  16  336    210   10  126   2^4.A7        A7         S5                       2^4.A7        2      2           20     1       7       true             false            true             true                 167                                                              
 # 169  16  360    180   8   84    2^4.S6        S6         8:2^2                    2^4.S6        2      2           16     1       13      true             false            true             true                 169                                                              
 # 170  16  360    180   8   84    2^4.A6        A6         QD16                     2^4.S6        2      2           17     1       14      true             false            true             true                 170                                                              
-# 171  16  448    168   6   56    2^4.PSL(4,2)  A8         S6                       2^4.PSL(4,2)  2      2           11     1       5       true             false            true             true                 172                                                              
-# 172  16  448    280   10  168   2^4.PSL(4,2)  A8         S6                       2^4.PSL(4,2)  2      2           11     1       5       true             false            true             true                 171                                                              
-# 173  16  480    90    3   12    AΓL(2,4)      A5:S3      D12                      AΓL(2,4)      2      2           12     1       2       true             false            true             false                                                                                 
-# 174  16  480    90    3   12    AGL(2,4)      GL(2,4)    S3                       AΓL(2,4)      2      2           14     1       2       true             false            true             false                                                                                 
-# 175  16  480    180   6   60    AΓL(2,4)      A5:S3      D12                      AΓL(2,4)      2      2           12     1       10      true             false            true             false                                                                                 
-# 176  16  480    180   6   60    AGL(2,4)      GL(2,4)    6                        AΓL(2,4)      2      2           14     1       9       true             false            true             false                                                                                 
-# 177  16  560    105   3   14    2^4.PSL(4,2)  A8         (A4xA4):2:2              S16           2      2           11     1       1       true             false            true             false                                       complete                                  
+# 171  16  448    168   6   56    2^4.PSL4(2)   A8         S6                       2^4.PSL4(2)   2      2           11     1       5       true             false            true             true                 172                                                              
+# 172  16  448    280   10  168   2^4.PSL4(2)   A8         S6                       2^4.PSL4(2)   2      2           11     1       5       true             false            true             true                 171                                                              
+# 173  16  480    90    3   12    AΓL2(4)       A5:S3      D12                      AΓL2(4)       2      2           12     1       2       true             false            true             false                                                                                 
+# 174  16  480    90    3   12    AGL2(4)       GL2(4)     S3                       AΓL2(4)       2      2           14     1       2       true             false            true             false                                                                                 
+# 175  16  480    180   6   60    AΓL2(4)       A5:S3      D12                      AΓL2(4)       2      2           12     1       10      true             false            true             false                                                                                 
+# 176  16  480    180   6   60    AGL2(4)       GL2(4)     6                        AΓL2(4)       2      2           14     1       9       true             false            true             false                                                                                 
+# 177  16  560    105   3   14    2^4.PSL4(2)   A8         (A4xA4):2:2              S16           2      2           11     1       1       true             false            true             false                                       complete                                  
 # 178  16  560    105   3   14    2^4.A7        A7         (3xA4):2                 S16           2      2           20     1       1       true             false            true             false                                       complete                                  
 # 179  16  560    105   3   14    A16           A15        (S3 x S13) cap A16       S16           2      2           21     1       1       true             true             true             true                 181                    complete                                  
 # 180  16  560    105   3   14    S16           S15        S3 x S13                 S16           2      2           22     1       1       true             true             true             true                 182                    complete                                  
@@ -500,26 +500,26 @@
 # 183  16  576    180   5   48    2^4.A6        A6         D10                      2^4.A6        2      2           17     1       7       true             false            true             false                                                                                 
 # 184  16  576    180   5   48    2^4.A6        A6         D10                      2^4.A6        2      2           17     1       7       true             false            true             false                                                                                 
 # 185  16  672    210   5   56    2^4.A7        A7         A5                       2^4.A7        2      2           20     1       4       true             false            true             false                                                                                 
-# 186  16  720    180   4   36    AΓL(2,4)      A5:S3      D8                       AΓL(2,4)      2      2           12     1       5       true             false            true             false                                                                                 
-# 187  16  840    315   6   105   2^4.PSL(4,2)  A8         2x((((2^3):(2^2)):3):2)  2^4.PSL(4,2)  2      2           11     1       6       true             false            true             false                                                                                 
-# 188  16  840    315   6   105   2^4.A7        A7         2xS4                     2^4.PSL(4,2)  2      2           20     1       8       true             false            true             false                                                                                 
-# 189  16  840    420   8   196   2^4.PSL(4,2)  A8         2^4:2:2:3:2              2^4.PSL(4,2)  2      2           11     1       9       true             false            true             true                 189                                                              
-# 190  16  840    420   8   196   2^4.A7        A7         GL(2,3)                  2^4.PSL(4,2)  2      2           20     1       11      true             false            true             true                 190                                                              
+# 186  16  720    180   4   36    AΓL2(4)       A5:S3      D8                       AΓL2(4)       2      2           12     1       5       true             false            true             false                                                                                 
+# 187  16  840    315   6   105   2^4.PSL4(2)   A8         2x((((2^3):(2^2)):3):2)  2^4.PSL4(2)   2      2           11     1       6       true             false            true             false                                                                                 
+# 188  16  840    315   6   105   2^4.A7        A7         2xS4                     2^4.PSL4(2)   2      2           20     1       8       true             false            true             false                                                                                 
+# 189  16  840    420   8   196   2^4.PSL4(2)   A8         2^4:2:2:3:2              2^4.PSL4(2)   2      2           11     1       9       true             false            true             true                 189                                                              
+# 190  16  840    420   8   196   2^4.A7        A7         GL2(3)                   2^4.PSL4(2)   2      2           20     1       11      true             false            true             true                 190                                                              
 # 191  16  1120   630   9   336   2^4.A7        A7         3^2:4                    2^4.A7        2      2           20     1       12      true             false            true             false                                                                                 
 # 192  16  1152   360   5   96    2^4.S6        S6         D10                      2^4.S6        2      2           16     1       7       true             false            true             false                                                                                 
-# 193  16  1680   420   4   84    2^4.PSL(4,2)  A8         2^3:2^2:3:2              2^4.PSL(4,2)  2      2           11     1       3       true             false            true             false                                                                                 
-# 194  16  1680   420   4   84    2^4.A7        A7         S4                       2^4.PSL(4,2)  2      2           20     1       3       true             false            true             false                                                                                 
+# 193  16  1680   420   4   84    2^4.PSL4(2)   A8         2^3:2^2:3:2              2^4.PSL4(2)   2      2           11     1       3       true             false            true             false                                                                                 
+# 194  16  1680   420   4   84    2^4.A7        A7         S4                       2^4.PSL4(2)   2      2           20     1       3       true             false            true             false                                                                                 
 # 195  16  1820   455   4   91    A16           A15        (S4 x S12) cap A16       S16           2      2           21     1       2       true             true             true             true                 197                    complete                                  
 # 196  16  1820   455   4   91    S16           S15        S4 x S12                 S16           2      2           22     1       2       true             true             true             true                 198                    complete                                  
 # 197  16  1820   1365  12  1001  A16           A15        (S12 x S4) cap A16       S16           2      2           21     1       2       true             true             true             true                 195                    complete                                  
 # 198  16  1820   1365  12  1001  S16           S15        S12 x S4                 S16           2      2           22     1       2       true             true             true             true                 196                    complete                                  
 # 199  16  2016   630   5   168   2^4.A7        A7         5:4                      2^4.A7        2      2           20     1       5       true             false            true             false                                                                                 
-# 200  16  2688   840   5   224   2^4.PSL(4,2)  A8         S5                       2^4.PSL(4,2)  2      2           11     1       4       true             false            true             false                                                                                 
+# 200  16  2688   840   5   224   2^4.PSL4(2)   A8         S5                       2^4.PSL4(2)   2      2           11     1       4       true             false            true             false                                                                                 
 # 201  16  4368   1365  5   364   A16           A15        (S5 x S11) cap A16       S16           2      2           21     1       3       true             true             true             true                 203                    complete                                  
 # 202  16  4368   1365  5   364   S16           S15        S5 x S11                 S16           2      2           22     1       3       true             true             true             true                 204                    complete                                  
 # 203  16  4368   3003  11  2002  A16           A15        (S11 x S5) cap A16       S16           2      2           21     1       3       true             true             true             true                 201                    complete                                  
 # 204  16  4368   3003  11  2002  S16           S15        S11 x S5                 S16           2      2           22     1       3       true             true             true             true                 202                    complete                                  
-# 205  16  4480   2520  9   1344  2^4.PSL(4,2)  A8         (S3xS3):2                2^4.PSL(4,2)  2      2           11     1       10      true             false            true             false                                                                                 
+# 205  16  4480   2520  9   1344  2^4.PSL4(2)   A8         (S3xS3):2                2^4.PSL4(2)   2      2           11     1       10      true             false            true             false                                                                                 
 # 206  16  8008   3003  6   1001  A16           A15        (S6 x S10) cap A16       S16           2      2           21     1       4       true             true             true             true                 208                    complete                                  
 # 207  16  8008   3003  6   1001  S16           S15        S6 x S10                 S16           2      2           22     1       4       true             true             true             true                 209                    complete                                  
 # 208  16  8008   5005  10  3003  A16           A15        (S10 x S6) cap A16       S16           2      2           21     1       4       true             true             true             true                 206                    complete                                  
@@ -594,7 +594,7 @@
 # -------------------------------------------------------
 #                                      G      Aut(D)     
 # -------------------------------------------------------
-# Structure                            2^4:5  AΓL(2,4)   
+# Structure                            2^4:5  AΓL2(4)   
 # Rank                                 4      2          
 # 2-Homogeneous                        false  true       
 # Point-stabiliser                     5      A5:S3      
@@ -620,7 +620,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,16)  AΓL(2,4)   
+# Structure                            AGL1(16)   AΓL2(4)   
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     15         A5:S3      
@@ -646,11 +646,11 @@
 # ------------------------------------------------------------------
 #                                      G          Aut(D)            
 # ------------------------------------------------------------------
-# Structure                            AGL(1,16)  2^4.PSL(4,2)      
+# Structure                            AGL1(16)   2^4.PSL4(2)      
 # Rank                                 2          2                 
 # 2-Homogeneous                        true       true              
 # Point-stabiliser                     15         A8                
-# Block-stabiliser                     2^3        2^3:2^3:PSL(3,2)  
+# Block-stabiliser                     2^3        2^3:2^3:PSL3(2)  
 # Orbit structure of point-stabiliser                               
 # Orbit structure of block-stabiliser                               
 # Point-transitive                     true       true              
@@ -672,7 +672,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            ASL(2,4):2  ASL(2,4):2  
+# Structure                            ASL2(4):2   ASL2(4):2  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S5          S5          
@@ -698,7 +698,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            ASL(2,4):2  ASL(2,4):2  
+# Structure                            ASL2(4):2   ASL2(4):2  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S5          S5          
@@ -724,7 +724,7 @@
 # ------------------------------------------------------------
 #                                      G          Aut(D)      
 # ------------------------------------------------------------
-# Structure                            (2^4:5).4  ASL(2,4):2  
+# Structure                            (2^4:5).4  ASL2(4):2  
 # Rank                                 3          2           
 # 2-Homogeneous                        false      true        
 # Point-stabiliser                     5:4        S5          
@@ -750,7 +750,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            ASL(2,4):2  ASL(2,4):2  
+# Structure                            ASL2(4):2   ASL2(4):2  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S5          S5          
@@ -776,7 +776,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,16)  AΓL(1,16)  
+# Structure                            AGL1(16)   AΓL1(16)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     15         15:4       
@@ -802,7 +802,7 @@
 # ----------------------------------------------------------
 #                                      G          Aut(D)    
 # ----------------------------------------------------------
-# Structure                            (A4xA4):2  AΓL(2,4)  
+# Structure                            (A4xA4):2  AΓL2(4)  
 # Rank                                 3          2         
 # 2-Homogeneous                        false      true      
 # Point-stabiliser                     3xS3       A5:S3     
@@ -828,7 +828,7 @@
 # ----------------------------------------------------------
 #                                      G          Aut(D)    
 # ----------------------------------------------------------
-# Structure                            AΓL(1,16)  AΓL(2,4)  
+# Structure                            AΓL1(16)   AΓL2(4)  
 # Rank                                 2          2         
 # 2-Homogeneous                        true       true      
 # Point-stabiliser                     15:4       A5:S3     
@@ -854,7 +854,7 @@
 # -------------------------------------------------------------
 #                                      G          Aut(D)       
 # -------------------------------------------------------------
-# Structure                            AGL(1,16)  AGL(1,16):2  
+# Structure                            AGL1(16)   AGL1(16):2  
 # Rank                                 2          2            
 # 2-Homogeneous                        true       true         
 # Point-stabiliser                     15         3xD10        
@@ -932,7 +932,7 @@
 # ----------------------------------------------------------
 #                                      G          Aut(D)    
 # ----------------------------------------------------------
-# Structure                            AGL(1,16)  AΓL(2,4)  
+# Structure                            AGL1(16)   AΓL2(4)  
 # Rank                                 2          2         
 # 2-Homogeneous                        true       true      
 # Point-stabiliser                     15         A5:S3     
@@ -958,7 +958,7 @@
 # ---------------------------------------------------------
 #                                      G           Aut(D)  
 # ---------------------------------------------------------
-# Structure                            ASL(2,4):2  2^4.S6  
+# Structure                            ASL2(4):2   2^4.S6  
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     S5          S6      
@@ -984,7 +984,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL(1,16):2  AGL(1,16):2  
+# Structure                            AGL1(16):2   AGL1(16):2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3xD10        3xD10        
@@ -1010,7 +1010,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            ASL(2,4):2  ASL(2,4):2  
+# Structure                            ASL2(4):2   ASL2(4):2  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S5          S5          
@@ -1036,7 +1036,7 @@
 # ---------------------------------------------------------
 #                                      G           Aut(D)  
 # ---------------------------------------------------------
-# Structure                            ASL(2,4):2  2^4.S6  
+# Structure                            ASL2(4):2   2^4.S6  
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     S5          S6      
@@ -1062,7 +1062,7 @@
 # ---------------------------------------------------------
 #                                      G           Aut(D)  
 # ---------------------------------------------------------
-# Structure                            ASL(2,4):2  2^4.S6  
+# Structure                            ASL2(4):2   2^4.S6  
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     S5          S6      
@@ -1218,7 +1218,7 @@
 # ----------------------------------------------------------
 #                                      G          Aut(D)    
 # ----------------------------------------------------------
-# Structure                            AΓL(1,16)  AΓL(2,4)  
+# Structure                            AΓL1(16)   AΓL2(4)  
 # Rank                                 2          2         
 # 2-Homogeneous                        true       true      
 # Point-stabiliser                     15:4       A5:S3     
@@ -1270,11 +1270,11 @@
 # ----------------------------------------------------------
 #                                      G          Aut(D)    
 # ----------------------------------------------------------
-# Structure                            AΓL(1,16)  AΓL(2,4)  
+# Structure                            AΓL1(16)   AΓL2(4)  
 # Rank                                 2          2         
 # 2-Homogeneous                        true       true      
 # Point-stabiliser                     15:4       A5:S3     
-# Block-stabiliser                     8          GL(2,3)   
+# Block-stabiliser                     8          GL2(3)   
 # Orbit structure of point-stabiliser                       
 # Orbit structure of block-stabiliser                       
 # Point-transitive                     true       true      
@@ -1296,7 +1296,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AΓL(2,4)  AΓL(2,4)  
+# Structure                            AΓL2(4)   AΓL2(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     A5:S3     A5:S3     
@@ -1322,11 +1322,11 @@
 # ---------------------------------------------------------------
 #                                      G                 Aut(D)  
 # ---------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)      S16     
+# Structure                            2^4.PSL4(2)       S16     
 # Rank                                 2                 2       
 # 2-Homogeneous                        true              true    
 # Point-stabiliser                     A8                S15     
-# Block-stabiliser                     2x(2^3:PSL(3,2))  2xS14   
+# Block-stabiliser                     2x(2^3:PSL3(2))   2xS14   
 # Orbit structure of point-stabiliser                            
 # Orbit structure of block-stabiliser                            
 # Point-transitive                     true              true    
@@ -1348,7 +1348,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
@@ -1374,7 +1374,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
@@ -1400,7 +1400,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            ASL(2,4):2  ASL(2,4):2  
+# Structure                            ASL2(4):2   ASL2(4):2  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S5          S5          
@@ -1426,7 +1426,7 @@
 # ----------------------------------------------------------
 #                                      G          Aut(D)    
 # ----------------------------------------------------------
-# Structure                            AΓL(1,16)  AΓL(2,4)  
+# Structure                            AΓL1(16)   AΓL2(4)  
 # Rank                                 2          2         
 # 2-Homogeneous                        true       true      
 # Point-stabiliser                     15:4       A5:S3     
@@ -1452,7 +1452,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            ASL(2,4):2  ASL(2,4):2  
+# Structure                            ASL2(4):2   ASL2(4):2  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S5          S5          
@@ -1478,7 +1478,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AΓL(2,4)  AΓL(2,4)  
+# Structure                            AΓL2(4)   AΓL2(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     A5:S3     A5:S3     
@@ -1530,7 +1530,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            ASL(2,4):2  ASL(2,4):2  
+# Structure                            ASL2(4):2   ASL2(4):2  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S5          S5          
@@ -1634,7 +1634,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AΓL(1,16)  AΓL(1,16)  
+# Structure                            AΓL1(16)   AΓL1(16)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     15:4       15:4       
@@ -1660,7 +1660,7 @@
 # ---------------------------------------------------------
 #                                      G           Aut(D)  
 # ---------------------------------------------------------
-# Structure                            ASL(2,4):2  2^4.S6  
+# Structure                            ASL2(4):2   2^4.S6  
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     S5          S6      
@@ -1686,7 +1686,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AΓL(2,4)  AΓL(2,4)  
+# Structure                            AΓL2(4)   AΓL2(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     A5:S3     A5:S3     
@@ -1738,11 +1738,11 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
-# Block-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
+# Block-stabiliser                     2^3:PSL3(2)   2^3:PSL3(2)  
 # Orbit structure of point-stabiliser                              
 # Orbit structure of block-stabiliser                              
 # Point-transitive                     true          true          
@@ -1764,7 +1764,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AΓL(2,4)  AΓL(2,4)  
+# Structure                            AΓL2(4)   AΓL2(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     A5:S3     A5:S3     
@@ -1790,7 +1790,7 @@
 # ---------------------------------------------------------
 #                                      G           Aut(D)  
 # ---------------------------------------------------------
-# Structure                            ASL(2,4):2  2^4.S6  
+# Structure                            ASL2(4):2   2^4.S6  
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     S5          S6      
@@ -1894,7 +1894,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
@@ -1920,7 +1920,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
@@ -1946,7 +1946,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AΓL(2,4)  AΓL(2,4)  
+# Structure                            AΓL2(4)   AΓL2(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     A5:S3     A5:S3     
@@ -1972,7 +1972,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AΓL(2,4)  AΓL(2,4)  
+# Structure                            AΓL2(4)   AΓL2(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     A5:S3     A5:S3     
@@ -1998,7 +1998,7 @@
 # -----------------------------------------------------------
 #                                      G             Aut(D)  
 # -----------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  S16     
+# Structure                            2^4.PSL4(2)   S16     
 # Rank                                 2             2       
 # 2-Homogeneous                        true          true    
 # Point-stabiliser                     A8            S15     
@@ -2102,7 +2102,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AΓL(2,4)  AΓL(2,4)  
+# Structure                            AΓL2(4)   AΓL2(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     A5:S3     A5:S3     
@@ -2128,7 +2128,7 @@
 # ---------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                   
 # ---------------------------------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)             2^4.PSL(4,2)             
+# Structure                            2^4.PSL4(2)              2^4.PSL4(2)             
 # Rank                                 2                        2                        
 # 2-Homogeneous                        true                     true                     
 # Point-stabiliser                     A8                       A8                       
@@ -2154,7 +2154,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
@@ -2232,7 +2232,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
@@ -2336,7 +2336,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            
@@ -2414,7 +2414,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            2^4.PSL(4,2)  2^4.PSL(4,2)  
+# Structure                            2^4.PSL4(2)   2^4.PSL4(2)  
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     A8            A8            

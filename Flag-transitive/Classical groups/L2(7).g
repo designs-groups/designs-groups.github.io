@@ -1,44 +1,62 @@
-# ##################################################################################################### 
+# ####################################################################################################
 # Flag-transitive 2-designs 
 # Group (autSubgroup): L2(7) = L3(4) = U2(7) = S2(7) = O3(7)
-# #####################################################################################################
-# Remark: all designs 
-#         lD_L27 is the list of the designs
+# ####################################################################################################
+# Remarks:      all designs 
+#               lD_L32 is the list of the designs
+# References:    
 
-# 1. number of designs:
+# 1. Group information:
 # ---------------------
 
-# ----------------------------------------------------
-#                      Symmetric  Non-symmetric  Total
-# ----------------------------------------------------
-# Point-primitive      2          5              7
-# Point-imprimitive    0          0              0
-#
-# Block-primitive      2          0              2
-# Block-imprimitive    0          5              5
-#
-# Flag-transitive      2          5              7
-# AntiFlag-transitive  2          3              5
-# ----------------------------------------------------
-# Total                2          5              7
-# ----------------------------------------------------
+# ATLAS name:          L3(2)
+# GAP name:            L27
+# Order:               168 = 2^3 * 3 * 7
+# No. maximal classes: 3
 
-# 2. Summary: 
+# Maximal subgroups:
+# -------------------------------------------
+# Nr   structure         order         index
+# -------------------------------------------
+# 1    S4                24            7
+# 2    S4                24            7
+# 3    7:3               21            8
+# -------------------------------------------
+
+# 2. Number of designs:
+# ---------------------
+
+# ------------------------------------------------------
+#                      symmetric  non-symmetric  total  
+# ------------------------------------------------------
+# Point-primitive      2          5              7      
+# Point-imprimitive    0          0              0      
+#                                                       
+# Block-primitive      2          0              2      
+# Block-imprimitive    0          5              5      
+#                                                       
+# Flag-transitive      2          5              7      
+# AntiFlag-transitive  2          3              5      
+# ------------------------------------------------------
+# Total                2          5              7      
+# ------------------------------------------------------
+
+# 3. Summary: 
 # -----------
 
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v  b   r   k  λ   G         Gα   GB  Aut(D)        rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   PSL(3,2)  S4   S4  PSL(3,2)      2      2                  2       3       true             true             true             true                 2           true       PG(2,2), Hadamard or Paley parameters
-# 2   7  7   4   4  2   PSL(3,2)  S4   S4  PSL(3,2)      2      2                  2       3       true             true             true             true                 1           true       complement of PG(2,2), Hadamard or Paley parameters
-# 3   7  28  12  3  4   PSL(3,2)  S4   S3  PSL(3,2)      2      2                  2       9       true             false            true             false
-# 4   8  14  7   4  3   PSL(3,2)  7:3  A4  2^3:PSL(3,2)  2      2                  4       5       true             false            true             true                 4
-# 5   8  28  21  6  15  PSL(3,2)  7:3  S3  S8            2      2                  4       9       true             false            true             true                                        complete
-# 6   8  42  21  4  9   PSL(3,2)  7:3  4   PSL(3,2):2    2      2                  4       10      true             false            true             true                 6
-# 7   8  56  21  3  6   PSL(3,2)  7:3  3   S8            2      2                  4       13      true             false            true             false                                       complete
-# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b   r   k  λ   G         Gα   GB  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   7  7   3   3  1   PSL3(2)   S4   S4  PSL3(2)   2      2                  1       2       true             true             true             true                 2           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   4   4  2   PSL3(2)   S4   S4  PSL3(2)   2      2                  1       2       true             true             true             true                 1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 3   7  28  12  3  4   PSL3(2)   S4   S3  PSL3(2)   2      2                  1       7       true             false            true             false                                                                                            
+# 4   8  14  7   4  3   PSL2(7)   7:3  A4  ASL3(2)   2      2                  3       4       true             false            true             true                 4                                                                           
+# 5   8  28  21  6  15  PSL2(7)   7:3  S3  S8        2      2                  3       7       true             false            true             true                                        complete                                             
+# 6   8  42  21  4  9   PSL2(7)   7:3  4   PGL2(7)   2      2                  3       10      true             false            true             true                 6                                                                           
+# 7   8  56  21  3  6   PSL2(7)   7:3  3   S8        2      2                  3       11      true             false            true             false                                       complete                                             
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
+# 4. Further information: 
 # -----------------------
 
 # Design: 1
@@ -48,7 +66,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(3,2)    PSL(3,2)    
+# Structure                            PSL3(2)     PSL3(2)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
@@ -74,7 +92,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(3,2)    PSL(3,2)    
+# Structure                            PSL3(2)     PSL3(2)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
@@ -100,7 +118,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(3,2)    PSL(3,2)    
+# Structure                            PSL3(2)     PSL3(2)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
@@ -120,30 +138,30 @@
 # -------------------------------------------------------------
 
 # Design: 4
-# ---------------------------------------------------------------
+# -------------------------------------------------------------
 # Parameter set: [ 8, 14, 7, 4, 3 ]
 # Complement:    [ 8, 14, 7, 4, 3 ]
-# ---------------------------------------------------------------
-#                                      G           Aut(D)        
-# ---------------------------------------------------------------
-# Structure                            PSL(3,2)    2^3:PSL(3,2)  
-# Rank                                 2           2             
-# 2-Homogeneous                        true        true          
-# Point-stabiliser                     7:3         PSL(3,2)      
-# Block-stabiliser                     A4          ((2^4):3):2   
-# Orbit structure of point-stabiliser  1^{1}7^{1}  1^{1}7^{1}    
-# Orbit structure of block-stabiliser  4^{2}       4^{2}         
-# Point-transitive                     true        true          
-# Block-transitive                     true        true          
-# Flag-transitive                      true        true          
-# Anti-flag-transitive                 true        true          
-# Flag-semiregular                     false       false         
-# Flag-regular                         false       false         
-# Point-primitive                      true        true          
-# Point-primitive type                 2           1             
-# Block-primitive                      false       false         
-# Block-primitive type                 0           0             
-# ---------------------------------------------------------------
+# -------------------------------------------------------------
+#                                      G           Aut(D)      
+# -------------------------------------------------------------
+# Structure                            PSL2(7)     ASL3(2)    
+# Rank                                 2           2           
+# 2-Homogeneous                        true        true        
+# Point-stabiliser                     7:3         PSL3(2)    
+# Block-stabiliser                     A4          2^4:3:2     
+# Orbit structure of point-stabiliser  1^{1}7^{1}  1^{1}7^{1}  
+# Orbit structure of block-stabiliser  4^{2}       4^{2}       
+# Point-transitive                     true        true        
+# Block-transitive                     true        true        
+# Flag-transitive                      true        true        
+# Anti-flag-transitive                 true        true        
+# Flag-semiregular                     false       false       
+# Flag-regular                         false       false       
+# Point-primitive                      true        true        
+# Point-primitive type                 2           1           
+# Block-primitive                      false       false       
+# Block-primitive type                 0           0           
+# -------------------------------------------------------------
 
 # Design: 5
 # -------------------------------------------------------------
@@ -152,7 +170,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(3,2)    S8          
+# Structure                            PSL2(7)     S8          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     7:3         S7          
@@ -178,10 +196,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(3,2)    PSL(3,2):2  
+# Structure                            PSL2(7)     PGL2(7)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     7:3         7:6         
+# Point-stabiliser                     7:3         AGL1(7)    
 # Block-stabiliser                     4           D8          
 # Orbit structure of point-stabiliser  1^{1}7^{1}  1^{1}7^{1}  
 # Orbit structure of block-stabiliser  4^{2}       4^{2}       
@@ -204,7 +222,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(3,2)    S8          
+# Structure                            PSL2(7)     S8          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     7:3         S7          
@@ -223,116 +241,122 @@
 # Block-primitive type                 0           2           
 # -------------------------------------------------------------
 
-# 4. Designs: 
+# 5. Designs: 
 # -----------
 
-lD_L27 :=  [
- rec(
-  autGroup := Group( [ (1,2)(4,6), (2,3)(4,5), (2,5)(6,7), (3,4)(6,7), (3,6)(4,7) ] ),
-  autSubgroup := Group( [ (1,2,3)(4,5,6), (3,4)(6,7) ] ),
-  groupNumbers := [ " ", 2, 3 ],
-  baseBlock := [ 1, 2, 5 ],
+lD_L32 :=  [
+ rec( parameters := [ 7, 7, 3, 3, 1 ],
+  autGroup := Group( [ (1,2)(3,7,4,5), (1,4,7,5,2,6,3) ] ),
+  autSubgroup := Group( [ (1,2)(3,4), (2,3,5)(4,6,7) ] ),
+  groupNumbers := [ " ", 1, 2 ],
+  baseBlock := [ 2, 3, 5 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 7, 7, 3, 3, 1 ],
   r := 3,
   tSubsetStructure := rec(
-      lambdas := [ 1 ],
-      t := 2 ),
-  v := 7 ), 
- rec(
-  autGroup := Group( [ (1,2)(4,6), (2,3)(4,5), (3,6)(4,7), (3,7)(4,6) ] ),
-  autSubgroup := Group( [ (1,2,3)(4,5,6), (3,4)(6,7) ] ),
-  groupNumbers := [ " ", 2, 3 ],
-  baseBlock := [ 3, 4, 6, 7 ],
+  lambdas := [ 1 ],
+  t := 2 ),
+  aVector := [ [ 6, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 6, 1 ] ],
+  v:= 7),
+ rec( parameters := [ 7, 7, 4, 4, 2 ],
+  autGroup := Group( [ (1,6,2)(3,4,7), (1,7,3)(2,4,6), (1,5)(2,3,7,6) ] ),
+  autSubgroup := Group( [ (1,2)(3,4), (2,3,5)(4,6,7) ] ),
+  groupNumbers := [ " ", 1, 2 ],
+  baseBlock := [ 1, 4, 6, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 7, 7, 4, 4, 2 ],
   r := 4,
   tSubsetStructure := rec(
-      lambdas := [ 2 ],
-      t := 2 ),
-  v := 7 ), 
- rec(
-  autGroup := Group( [ (1,3)(5,6), (3,4)(6,7), (2,3)(4,5) ] ),
-  autSubgroup := Group( [ (1,2,3)(4,5,6), (3,4)(6,7) ] ),
-  groupNumbers := [ " ", 2, 9 ],
-  baseBlock := [ 4, 5, 7 ],
+  lambdas := [ 2 ],
+  t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 6, 1 ] ],
+  v:= 7),
+ rec( parameters := [ 7, 28, 12, 3, 4 ],
+  autGroup := Group( [ (2,3)(6,7), (1,3,2)(5,6,7), (1,3,4,2)(6,7), (1,2)(3,7,4,5) ] ),
+  autSubgroup := Group( [ (1,2)(3,4), (2,3,5)(4,6,7) ] ),
+  groupNumbers := [ " ", 1, 7 ],
+  baseBlock := [ 3, 5, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 7, 28, 12, 3, 4 ],
   r := 12,
   tSubsetStructure := rec(
-      lambdas := [ 4 ],
-      t := 2 ),
-
-  v := 7 ), 
- rec(
-  autGroup := Group( [ (1,2)(5,6), (2,3)(6,7), (3,4)(7,8), (3,8)(5,6), (4,6)(5,7), (4,7)(5,6) ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  groupNumbers := [ " ", 4, 5 ],
-  baseBlock := [ 1, 2, 4, 7 ],
+  lambdas := [ 4 ],
+  t := 2 ),
+  aVector := [ [ 6, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 6, 1 ] ],
+  v:= 7),
+ rec( parameters := [ 8, 14, 7, 4, 3 ],
+  autGroup := Group( [ (1,8,4)(2,3,7), (1,2,8,5)(3,7,4,6) ] ),
+  autSubgroup := Group( [ (1,7)(2,4)(3,6)(5,8), (2,3,4)(6,7,8) ] ),
+  groupNumbers := [ " ", 3, 4 ],
+  baseBlock := [ 1, 6, 7, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 8, 14, 7, 4, 3 ],
   r := 7,
   tSubsetStructure := rec(
-      lambdas := [ 3 ],
-      t := 2 ),
-  v := 8 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 8 ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  groupNumbers := [ " ", 4, 9 ],
-  baseBlock := [ 2, 3, 4, 5, 6, 8 ],
+  lambdas := [ 3 ],
+  t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 7, 1 ] ],
+  v:= 8),
+ rec( parameters := [ 8, 28, 21, 6, 15 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
+  autSubgroup := Group( [ (1,7)(2,4)(3,6)(5,8), (2,3,4)(6,7,8) ] ),
+  groupNumbers := [ " ", 3, 7 ],
+  baseBlock := [ 1, 2, 3, 5, 7, 8 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 8, 28, 21, 6, 15 ],
   r := 21,
   tSubsetStructure := rec(
-      lambdas := [ 15 ],
-      t := 2 ),
-  v := 8 ), 
- rec(
-  autGroup := Group( [ (1,2)(4,8)(6,7), (2,3)(4,8)(5,7), (3,4,7,5,6,8) ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  groupNumbers := [ " ", 4, 10 ],
-  baseBlock := [ 1, 5, 7, 8 ],
+  lambdas := [ 15 ],
+  t := 2 ),
+  aVector := [ [ 30, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 7, 1 ] ],
+  v:= 8),
+ rec( parameters := [ 8, 42, 21, 4, 9 ],
+  autGroup := Group( [ (1,2)(3,6)(4,5), (1,2,4,5)(3,8,6,7), (2,4,3)(6,8,7) ] ),
+  autSubgroup := Group( [ (1,7)(2,4)(3,6)(5,8), (2,3,4)(6,7,8) ] ),
+  groupNumbers := [ " ", 3, 10 ],
+  baseBlock := [ 1, 2, 4, 8 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 8, 42, 21, 4, 9 ],
   r := 21,
   tSubsetStructure := rec(
-      lambdas := [ 9 ],
-      t := 2 ),
-  v := 8 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 8 ] ),
-  autSubgroup := Group( [ (1,4,3)(5,8,7), (1,3)(2,8)(4,5)(6,7) ] ),
-  groupNumbers := [ " ", 4, 13 ],
-  baseBlock := [ 2, 3, 8 ],
+  lambdas := [ 9 ],
+  t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 7, 1 ] ],
+  v:= 8),
+ rec( parameters:= [ 8, 56, 21, 3, 6 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
+  autSubgroup := Group( [ (1,7)(2,4)(3,6)(5,8), (2,3,4)(6,7,8) ] ),
+  groupNumbers := [ " ", 3, 11 ],
+  baseBlock := [ 2, 5, 6 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 8, 56, 21, 3, 6 ],
   r := 21,
   tSubsetStructure := rec(
-      lambdas := [ 6 ],
-      t := 2 ),
-  v := 8 )
+  lambdas := [ 6 ],
+  t := 2 ),
+  aVector := [ [ 6, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 7, 1 ] ],
+  v:= 8)
 ]; 
-for D in lD_L27 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_L32 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 

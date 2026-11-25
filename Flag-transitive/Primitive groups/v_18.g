@@ -6,7 +6,7 @@
 #               lD_18 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,26 +31,26 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b      r      k   λ      G          Gα     GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   18  102    34     6   10     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       4       true             true             true             true                 2                                
-# 2   18  102    68     12  44     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       4       true             true             true             true                 1                                
-# 3   18  136    68     9   32     PSL(2,17)  17:8   D18                 PSL(2,17)  2      2           1      1       7       true             true             true             true                                                  
-# 4   18  153    68     8   28     PSL(2,17)  17:8   D16                 PSL(2,17)  2      2           1      1       6       true             true             true             false                                                 
-# 5   18  153    136    16  120    PGL(2,17)  17:16  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
-# 6   18  204    68     6   20     PGL(2,17)  17:16  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 7                                
-# 7   18  204    136    12  88     PGL(2,17)  17:16  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 6                                
-# 8   18  272    136    9   64     PGL(2,17)  17:16  D18                 PGL(2,17)  2      2           2      1       9       true             false            true             true                 8                                
-# 9   18  306    68     4   12     PSL(2,17)  17:8   D8                  PSL(2,17)  2      2           1      1       2       true             false            true             false                                                 
-# 10  18  306    136    8   56     PGL(2,17)  17:16  D16                 PGL(2,17)  2      2           2      1       7       true             false            true             false                                                 
-# 11  18  408    68     3   8      PSL(2,17)  17:8   S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
-# 12  18  408    136    6   40     PGL(2,17)  17:16  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 13                               
-# 13  18  408    272    12  176    PGL(2,17)  17:16  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 12                               
-# 14  18  612    136    4   24     PGL(2,17)  17:16  D8                  PGL(2,17)  2      2           2      1       2       true             false            true             false                                                 
-# 15  18  612    272    8   112    PGL(2,17)  17:16  D8                  PGL(2,17)  2      2           2      1       8       true             false            true             false                                                 
-# 16  18  816    136    3   16     PGL(2,17)  17:16  S3                  S18        2      2           2      1       1       true             false            true             false                                       complete  
-# 17  18  816    272    6   80     PGL(2,17)  17:16  S3                  PGL(2,17)  2      2           2      1       6       true             false            true             false                                                 
+# 1   18  102    34     6   10     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       4       true             true             true             true                 2                                
+# 2   18  102    68     12  44     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       4       true             true             true             true                 1                                
+# 3   18  136    68     9   32     PSL2(17)   17:8   D18                 PSL2(17)   2      2           1      1       7       true             true             true             true                                                  
+# 4   18  153    68     8   28     PSL2(17)   17:8   D16                 PSL2(17)   2      2           1      1       6       true             true             true             false                                                 
+# 5   18  153    136    16  120    PGL2(17)   17:16  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
+# 6   18  204    68     6   20     PGL2(17)   17:16  S4                  PGL2(17)   2      2           2      1       4       true             false            true             true                 7                                
+# 7   18  204    136    12  88     PGL2(17)   17:16  S4                  PGL2(17)   2      2           2      1       4       true             false            true             true                 6                                
+# 8   18  272    136    9   64     PGL2(17)   17:16  D18                 PGL2(17)   2      2           2      1       9       true             false            true             true                 8                                
+# 9   18  306    68     4   12     PSL2(17)   17:8   D8                  PSL2(17)   2      2           1      1       2       true             false            true             false                                                 
+# 10  18  306    136    8   56     PGL2(17)   17:16  D16                 PGL2(17)   2      2           2      1       7       true             false            true             false                                                 
+# 11  18  408    68     3   8      PSL2(17)   17:8   S3                  PSL2(17)   2      2           1      1       1       true             false            true             false                                                 
+# 12  18  408    136    6   40     PGL2(17)   17:16  D12                 PGL2(17)   2      2           2      1       5       true             false            true             true                 13                               
+# 13  18  408    272    12  176    PGL2(17)   17:16  D12                 PGL2(17)   2      2           2      1       5       true             false            true             true                 12                               
+# 14  18  612    136    4   24     PGL2(17)   17:16  D8                  PGL2(17)   2      2           2      1       2       true             false            true             false                                                 
+# 15  18  612    272    8   112    PGL2(17)   17:16  D8                  PGL2(17)   2      2           2      1       8       true             false            true             false                                                 
+# 16  18  816    136    3   16     PGL2(17)   17:16  S3                  S18        2      2           2      1       1       true             false            true             false                                       complete  
+# 17  18  816    272    6   80     PGL2(17)   17:16  S3                  PGL2(17)   2      2           2      1       6       true             false            true             false                                                 
 # 18  18  816    680    15  560    A18        A17    (S15 x S3) cap A18  S18        2      2           3      1       1       true             true             true             true                                        complete  
-# 19  18  1224   272    4   48     PGL(2,17)  17:16  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
-# 20  18  1224   272    4   48     PGL(2,17)  17:16  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
+# 19  18  1224   272    4   48     PGL2(17)   17:16  2^2                 PGL2(17)   2      2           2      1       3       true             false            true             false                                                 
+# 20  18  1224   272    4   48     PGL2(17)   17:16  2^2                 PGL2(17)   2      2           2      1       3       true             false            true             false                                                 
 # 21  18  3060   680    4   120    A18        A17    (S4 x S14) cap A18  S18        2      2           3      1       2       true             true             true             true                 22                     complete  
 # 22  18  3060   2380   14  1820   A18        A17    (S14 x S4) cap A18  S18        2      2           3      1       2       true             true             true             true                 21                     complete  
 # 23  18  8568   2380   5   560    A18        A17    (S5 x S13) cap A18  S18        2      2           3      1       3       true             true             true             true                 24                     complete  
@@ -68,31 +68,31 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b      r      k   λ      G          Gα     GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   18  102    34     6   10     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       4       true             true             true             true                 2                                
-# 2   18  102    68     12  44     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       4       true             true             true             true                 1                                
-# 3   18  136    68     9   32     PSL(2,17)  17:8   D18                 PSL(2,17)  2      2           1      1       7       true             true             true             true                                                  
-# 4   18  153    68     8   28     PSL(2,17)  17:8   D16                 PSL(2,17)  2      2           1      1       6       true             true             true             false                                                 
-# 5   18  153    136    16  120    PGL(2,17)  17:16  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
+# 1   18  102    34     6   10     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       4       true             true             true             true                 2                                
+# 2   18  102    68     12  44     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       4       true             true             true             true                 1                                
+# 3   18  136    68     9   32     PSL2(17)   17:8   D18                 PSL2(17)   2      2           1      1       7       true             true             true             true                                                  
+# 4   18  153    68     8   28     PSL2(17)   17:8   D16                 PSL2(17)   2      2           1      1       6       true             true             true             false                                                 
+# 5   18  153    136    16  120    PGL2(17)   17:16  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
 # 6   18  153    136    16  120    A18        A17    (S16 x S2) cap A18  S18        2      2           3      1       8       true             true             true             true                                        complete  
 # 7   18  153    136    16  120    S18        S17    S16 x S2            S18        2      2           4      1       8       true             true             true             true                                        complete  
-# 8   18  204    68     6   20     PGL(2,17)  17:16  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 9                                
-# 9   18  204    136    12  88     PGL(2,17)  17:16  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 8                                
-# 10  18  272    136    9   64     PGL(2,17)  17:16  D18                 PGL(2,17)  2      2           2      1       9       true             false            true             true                 10                               
-# 11  18  306    68     4   12     PSL(2,17)  17:8   D8                  PSL(2,17)  2      2           1      1       2       true             false            true             false                                                 
-# 12  18  306    136    8   56     PGL(2,17)  17:16  D16                 PGL(2,17)  2      2           2      1       7       true             false            true             false                                                 
-# 13  18  408    68     3   8      PSL(2,17)  17:8   S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
-# 14  18  408    136    6   40     PGL(2,17)  17:16  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 15                               
-# 15  18  408    272    12  176    PGL(2,17)  17:16  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 14                               
-# 16  18  612    136    4   24     PGL(2,17)  17:16  D8                  PGL(2,17)  2      2           2      1       2       true             false            true             false                                                 
-# 17  18  612    272    8   112    PGL(2,17)  17:16  D8                  PGL(2,17)  2      2           2      1       8       true             false            true             false                                                 
-# 18  18  816    136    3   16     PGL(2,17)  17:16  S3                  S18        2      2           2      1       1       true             false            true             false                                       complete  
+# 8   18  204    68     6   20     PGL2(17)   17:16  S4                  PGL2(17)   2      2           2      1       4       true             false            true             true                 9                                
+# 9   18  204    136    12  88     PGL2(17)   17:16  S4                  PGL2(17)   2      2           2      1       4       true             false            true             true                 8                                
+# 10  18  272    136    9   64     PGL2(17)   17:16  D18                 PGL2(17)   2      2           2      1       9       true             false            true             true                 10                               
+# 11  18  306    68     4   12     PSL2(17)   17:8   D8                  PSL2(17)   2      2           1      1       2       true             false            true             false                                                 
+# 12  18  306    136    8   56     PGL2(17)   17:16  D16                 PGL2(17)   2      2           2      1       7       true             false            true             false                                                 
+# 13  18  408    68     3   8      PSL2(17)   17:8   S3                  PSL2(17)   2      2           1      1       1       true             false            true             false                                                 
+# 14  18  408    136    6   40     PGL2(17)   17:16  D12                 PGL2(17)   2      2           2      1       5       true             false            true             true                 15                               
+# 15  18  408    272    12  176    PGL2(17)   17:16  D12                 PGL2(17)   2      2           2      1       5       true             false            true             true                 14                               
+# 16  18  612    136    4   24     PGL2(17)   17:16  D8                  PGL2(17)   2      2           2      1       2       true             false            true             false                                                 
+# 17  18  612    272    8   112    PGL2(17)   17:16  D8                  PGL2(17)   2      2           2      1       8       true             false            true             false                                                 
+# 18  18  816    136    3   16     PGL2(17)   17:16  S3                  S18        2      2           2      1       1       true             false            true             false                                       complete  
 # 19  18  816    136    3   16     A18        A17    (S3 x S15) cap A18  S18        2      2           3      1       1       true             true             true             true                 22                     complete  
 # 20  18  816    136    3   16     S18        S17    S3 x S15            S18        2      2           4      1       1       true             true             true             true                 23                     complete  
-# 21  18  816    272    6   80     PGL(2,17)  17:16  S3                  PGL(2,17)  2      2           2      1       6       true             false            true             false                                                 
+# 21  18  816    272    6   80     PGL2(17)   17:16  S3                  PGL2(17)   2      2           2      1       6       true             false            true             false                                                 
 # 22  18  816    680    15  560    A18        A17    (S15 x S3) cap A18  S18        2      2           3      1       1       true             true             true             true                 19                     complete  
 # 23  18  816    680    15  560    S18        S17    S15 x S3            S18        2      2           4      1       1       true             true             true             true                 20                     complete  
-# 24  18  1224   272    4   48     PGL(2,17)  17:16  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
-# 25  18  1224   272    4   48     PGL(2,17)  17:16  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
+# 24  18  1224   272    4   48     PGL2(17)   17:16  2^2                 PGL2(17)   2      2           2      1       3       true             false            true             false                                                 
+# 25  18  1224   272    4   48     PGL2(17)   17:16  2^2                 PGL2(17)   2      2           2      1       3       true             false            true             false                                                 
 # 26  18  3060   680    4   120    A18        A17    (S4 x S14) cap A18  S18        2      2           3      1       2       true             true             true             true                 28                     complete  
 # 27  18  3060   680    4   120    S18        S17    S4 x S14            S18        2      2           4      1       2       true             true             true             true                 29                     complete  
 # 28  18  3060   2380   14  1820   A18        A17    (S14 x S4) cap A18  S18        2      2           3      1       2       true             true             true             true                 26                     complete  
@@ -121,37 +121,37 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b      r      k   λ      G          Gα     GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   18  102    34     6   10     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       4       true             true             true             true                 3                                
-# 2   18  102    34     6   10     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       5       true             true             true             true                 4                                
-# 3   18  102    68     12  44     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       4       true             true             true             true                 1                                
-# 4   18  102    68     12  44     PSL(2,17)  17:8   S4                  PSL(2,17)  2      2           1      1       5       true             true             true             true                 2                                
-# 5   18  136    68     9   32     PSL(2,17)  17:8   D18                 PSL(2,17)  2      2           1      1       7       true             true             true             true                 6                                
-# 6   18  136    68     9   32     PSL(2,17)  17:8   D18                 PSL(2,17)  2      2           1      1       7       true             true             true             true                 5                                
-# 7   18  153    68     8   28     PSL(2,17)  17:8   D16                 PSL(2,17)  2      2           1      1       6       true             true             true             false                                                 
-# 8   18  153    68     8   28     PSL(2,17)  17:8   D16                 PSL(2,17)  2      2           1      1       6       true             true             true             false                                                 
-# 9   18  153    136    16  120    PGL(2,17)  17:16  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
+# 1   18  102    34     6   10     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       4       true             true             true             true                 3                                
+# 2   18  102    34     6   10     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       5       true             true             true             true                 4                                
+# 3   18  102    68     12  44     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       4       true             true             true             true                 1                                
+# 4   18  102    68     12  44     PSL2(17)   17:8   S4                  PSL2(17)   2      2           1      1       5       true             true             true             true                 2                                
+# 5   18  136    68     9   32     PSL2(17)   17:8   D18                 PSL2(17)   2      2           1      1       7       true             true             true             true                 6                                
+# 6   18  136    68     9   32     PSL2(17)   17:8   D18                 PSL2(17)   2      2           1      1       7       true             true             true             true                 5                                
+# 7   18  153    68     8   28     PSL2(17)   17:8   D16                 PSL2(17)   2      2           1      1       6       true             true             true             false                                                 
+# 8   18  153    68     8   28     PSL2(17)   17:8   D16                 PSL2(17)   2      2           1      1       6       true             true             true             false                                                 
+# 9   18  153    136    16  120    PGL2(17)   17:16  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
 # 10  18  153    136    16  120    A18        A17    (S16 x S2) cap A18  S18        2      2           3      1       8       true             true             true             true                                        complete  
 # 11  18  153    136    16  120    S18        S17    S16 x S2            S18        2      2           4      1       8       true             true             true             true                                        complete  
-# 12  18  204    68     6   20     PGL(2,17)  17:16  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 13                               
-# 13  18  204    136    12  88     PGL(2,17)  17:16  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 12                               
-# 14  18  272    136    9   64     PGL(2,17)  17:16  D18                 PGL(2,17)  2      2           2      1       9       true             false            true             true                 14                               
-# 15  18  306    68     4   12     PSL(2,17)  17:8   D8                  PSL(2,17)  2      2           1      1       2       true             false            true             false                                                 
-# 16  18  306    68     4   12     PSL(2,17)  17:8   D8                  PSL(2,17)  2      2           1      1       3       true             false            true             false                                                 
-# 17  18  306    136    8   56     PGL(2,17)  17:16  D16                 PGL(2,17)  2      2           2      1       7       true             false            true             false                                                 
-# 18  18  408    68     3   8      PSL(2,17)  17:8   S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
-# 19  18  408    68     3   8      PSL(2,17)  17:8   S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
-# 20  18  408    136    6   40     PGL(2,17)  17:16  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 21                               
-# 21  18  408    272    12  176    PGL(2,17)  17:16  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 20                               
-# 22  18  612    136    4   24     PGL(2,17)  17:16  D8                  PGL(2,17)  2      2           2      1       2       true             false            true             false                                                 
-# 23  18  612    272    8   112    PGL(2,17)  17:16  D8                  PGL(2,17)  2      2           2      1       8       true             false            true             false                                                 
-# 24  18  816    136    3   16     PGL(2,17)  17:16  S3                  S18        2      2           2      1       1       true             false            true             false                                       complete  
+# 12  18  204    68     6   20     PGL2(17)   17:16  S4                  PGL2(17)   2      2           2      1       4       true             false            true             true                 13                               
+# 13  18  204    136    12  88     PGL2(17)   17:16  S4                  PGL2(17)   2      2           2      1       4       true             false            true             true                 12                               
+# 14  18  272    136    9   64     PGL2(17)   17:16  D18                 PGL2(17)   2      2           2      1       9       true             false            true             true                 14                               
+# 15  18  306    68     4   12     PSL2(17)   17:8   D8                  PSL2(17)   2      2           1      1       2       true             false            true             false                                                 
+# 16  18  306    68     4   12     PSL2(17)   17:8   D8                  PSL2(17)   2      2           1      1       3       true             false            true             false                                                 
+# 17  18  306    136    8   56     PGL2(17)   17:16  D16                 PGL2(17)   2      2           2      1       7       true             false            true             false                                                 
+# 18  18  408    68     3   8      PSL2(17)   17:8   S3                  PSL2(17)   2      2           1      1       1       true             false            true             false                                                 
+# 19  18  408    68     3   8      PSL2(17)   17:8   S3                  PSL2(17)   2      2           1      1       1       true             false            true             false                                                 
+# 20  18  408    136    6   40     PGL2(17)   17:16  D12                 PGL2(17)   2      2           2      1       5       true             false            true             true                 21                               
+# 21  18  408    272    12  176    PGL2(17)   17:16  D12                 PGL2(17)   2      2           2      1       5       true             false            true             true                 20                               
+# 22  18  612    136    4   24     PGL2(17)   17:16  D8                  PGL2(17)   2      2           2      1       2       true             false            true             false                                                 
+# 23  18  612    272    8   112    PGL2(17)   17:16  D8                  PGL2(17)   2      2           2      1       8       true             false            true             false                                                 
+# 24  18  816    136    3   16     PGL2(17)   17:16  S3                  S18        2      2           2      1       1       true             false            true             false                                       complete  
 # 25  18  816    136    3   16     A18        A17    (S3 x S15) cap A18  S18        2      2           3      1       1       true             true             true             true                 28                     complete  
 # 26  18  816    136    3   16     S18        S17    S3 x S15            S18        2      2           4      1       1       true             true             true             true                 29                     complete  
-# 27  18  816    272    6   80     PGL(2,17)  17:16  S3                  PGL(2,17)  2      2           2      1       6       true             false            true             false                                                 
+# 27  18  816    272    6   80     PGL2(17)   17:16  S3                  PGL2(17)   2      2           2      1       6       true             false            true             false                                                 
 # 28  18  816    680    15  560    A18        A17    (S15 x S3) cap A18  S18        2      2           3      1       1       true             true             true             true                 25                     complete  
 # 29  18  816    680    15  560    S18        S17    S15 x S3            S18        2      2           4      1       1       true             true             true             true                 26                     complete  
-# 30  18  1224   272    4   48     PGL(2,17)  17:16  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
-# 31  18  1224   272    4   48     PGL(2,17)  17:16  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
+# 30  18  1224   272    4   48     PGL2(17)   17:16  2^2                 PGL2(17)   2      2           2      1       3       true             false            true             false                                                 
+# 31  18  1224   272    4   48     PGL2(17)   17:16  2^2                 PGL2(17)   2      2           2      1       3       true             false            true             false                                                 
 # 32  18  3060   680    4   120    A18        A17    (S4 x S14) cap A18  S18        2      2           3      1       2       true             true             true             true                 34                     complete  
 # 33  18  3060   680    4   120    S18        S17    S4 x S14            S18        2      2           4      1       2       true             true             true             true                 35                     complete  
 # 34  18  3060   2380   14  1820   A18        A17    (S14 x S4) cap A18  S18        2      2           3      1       2       true             true             true             true                 32                     complete  
@@ -186,7 +186,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,17)  PSL(2,17)  
+# Structure                            PSL2(17)   PSL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:8       17:8       
@@ -212,7 +212,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,17)  PSL(2,17)  
+# Structure                            PSL2(17)   PSL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:8       17:8       
@@ -238,7 +238,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,17)  PSL(2,17)  
+# Structure                            PSL2(17)   PSL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:8       17:8       
@@ -264,7 +264,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,17)  PSL(2,17)  
+# Structure                            PSL2(17)   PSL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:8       17:8       
@@ -290,7 +290,7 @@
 # --------------------------------------------------------
 #                                      G          Aut(D)  
 # --------------------------------------------------------
-# Structure                            PGL(2,17)  S18     
+# Structure                            PGL2(17)   S18     
 # Rank                                 2          2       
 # 2-Homogeneous                        true       true    
 # Point-stabiliser                     17:16      S17     
@@ -316,7 +316,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -342,7 +342,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -368,7 +368,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -394,7 +394,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,17)  PSL(2,17)  
+# Structure                            PSL2(17)   PSL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:8       17:8       
@@ -420,7 +420,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -446,7 +446,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,17)  PSL(2,17)  
+# Structure                            PSL2(17)   PSL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:8       17:8       
@@ -472,7 +472,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -498,7 +498,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -524,7 +524,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -550,7 +550,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -576,7 +576,7 @@
 # --------------------------------------------------------
 #                                      G          Aut(D)  
 # --------------------------------------------------------
-# Structure                            PGL(2,17)  S18     
+# Structure                            PGL2(17)   S18     
 # Rank                                 2          2       
 # 2-Homogeneous                        true       true    
 # Point-stabiliser                     17:16      S17     
@@ -602,7 +602,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -654,7 +654,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      
@@ -680,7 +680,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,17)  PGL(2,17)  
+# Structure                            PGL2(17)   PGL2(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     17:16      17:16      

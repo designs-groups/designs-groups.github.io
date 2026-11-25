@@ -54,10 +54,10 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b       r      k   λ     G     Gα                     GB       Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   100  25200   3024   12  336   J2.2  PSU(3,3):2             2xS4     J_2.2   3      3                  3       154     true             false            true             false                                                 
-# 2   100  25200   3024   12  336   J2.2  PSU(3,3):2             D8xS3    J_2.2   3      3                  3       155     true             false            true             false                                                 
-# 3   100  50400   6048   12  672   J2.2  PSU(3,3):2             2^2xS3   J_2.2   3      3                  3       227     true             false            true             false                                                 
-# 4   100  100800  12096  12  1344  J2.2  PSU(3,3):2             12       J_2.2   3      3                  3       303     true             false            true             false                                                 
+# 1   100  25200   3024   12  336   J2.2  PSU3(3):2              2xS4     J_2.2   3      3                  3       154     true             false            true             false                                                 
+# 2   100  25200   3024   12  336   J2.2  PSU3(3):2              D8xS3    J_2.2   3      3                  3       155     true             false            true             false                                                 
+# 3   100  50400   6048   12  672   J2.2  PSU3(3):2              2^2xS3   J_2.2   3      3                  3       227     true             false            true             false                                                 
+# 4   100  100800  12096  12  1344  J2.2  PSU3(3):2              12       J_2.2   3      3                  3       303     true             false            true             false                                                 
 # 5   280  12600   1440   32  160   J2.2  (3.(A6.2)=(3.A6).2):2  2^4:3:2  J_2.2   4      4                  5       100     true             false            true             false                                                 
 # 6   280  18900   2160   32  240   J2.2  (3.(A6.2)=(3.A6).2):2  2^4:2:2  J_2.2   4      4                  5       126     true             false            true             false                                                 
 # 7   280  37800   4320   32  480   J2.2  (3.(A6.2)=(3.A6).2):2  2xD16    J_2.2   4      4                  5       189     true             false            true             false                                                 
@@ -76,7 +76,7 @@
 # Structure                            J2.2                                   J_2.2                                  
 # Rank                                 3                                      3                                      
 # 2-Homogeneous                        false                                  false                                  
-# Point-stabiliser                     PSU(3,3):2                             PSU(3,3):2                             
+# Point-stabiliser                     PSU3(3):2                              PSU3(3):2                             
 # Block-stabiliser                     2xS4                                   2xS4                                   
 # Orbit structure of point-stabiliser  1^{1}36^{1}63^{1}                      1^{1}36^{1}63^{1}                      
 # Orbit structure of block-stabiliser  1^{1}2^{1}3^{1}4^{1}6^{3}12^{2}24^{2}  1^{1}2^{1}3^{1}4^{1}6^{3}12^{2}24^{2}  
@@ -102,7 +102,7 @@
 # Structure                            J2.2                              J_2.2                             
 # Rank                                 3                                 3                                 
 # 2-Homogeneous                        false                             false                             
-# Point-stabiliser                     PSU(3,3):2                        PSU(3,3):2                        
+# Point-stabiliser                     PSU3(3):2                         PSU3(3):2                        
 # Block-stabiliser                     D8xS3                             D8xS3                             
 # Orbit structure of point-stabiliser  1^{1}36^{1}63^{1}                 1^{1}36^{1}63^{1}                 
 # Orbit structure of block-stabiliser  2^{1}3^{2}4^{2}6^{2}12^{2}24^{2}  2^{1}3^{2}4^{2}6^{2}12^{2}24^{2}  
@@ -128,7 +128,7 @@
 # Structure                            J2.2               J_2.2              
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
-# Point-stabiliser                     PSU(3,3):2         PSU(3,3):2         
+# Point-stabiliser                     PSU3(3):2          PSU3(3):2         
 # Block-stabiliser                     2^2xS3             2^2xS3             
 # Orbit structure of point-stabiliser  1^{1}36^{1}63^{1}  1^{1}36^{1}63^{1}  
 # Orbit structure of block-stabiliser  2^{2}6^{4}12^{6}   2^{2}6^{4}12^{6}   
@@ -154,7 +154,7 @@
 # Structure                            J2.2                   J_2.2                  
 # Rank                                 3                      3                      
 # 2-Homogeneous                        false                  false                  
-# Point-stabiliser                     PSU(3,3):2             PSU(3,3):2             
+# Point-stabiliser                     PSU3(3):2              PSU3(3):2             
 # Block-stabiliser                     12                     12                     
 # Orbit structure of point-stabiliser  1^{1}36^{1}63^{1}      1^{1}36^{1}63^{1}      
 # Orbit structure of block-stabiliser  1^{2}4^{2}6^{3}12^{6}  1^{2}4^{2}6^{3}12^{6}  

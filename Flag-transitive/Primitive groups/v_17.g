@@ -6,7 +6,7 @@
 #               lD_17 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,21 +31,21 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b      r      k   λ     G           Gα        GB                  Aut(D)        rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   17  34     16     8   7     AGL(1,17)   16        8                   AGL(1,17)     2      2           5      1       2       true             false            true             false                                                 
-# 2   17  68     16     4   3     AGL(1,17)   16        4                   AGL(1,17)     2      2           5      1       1       true             false            true             false                                                 
-# 3   17  68     20     5   5     PSL(2,2^4)  2^4:15    A5                  PΓL(2,2^4)    2      2           6      1       5       true             true             true             true                 4                                
-# 4   17  68     48     12  33    PSL(2,2^4)  2^4:15    A5                  PΓL(2,2^4)    2      2           6      1       5       true             true             true             true                 3                                
-# 5   17  136    120    15  105   PSL(2,2^4)  2^4:15    D30                 S17           2      2           6      1       8       true             true             true             true                                        complete  
-# 6   17  340    80     4   15    PSL(2,2^4)  2^4:15    A4                  PΓL(2,2^4)    2      2           6      1       2       true             false            true             false                                                 
-# 7   17  408    240    10  135   PSL(2,2^4)  2^4:15    D10                 PΓL(2,2^4)    2      2           6      1       7       true             false            true             false                                                 
-# 8   17  510    240    8   105   PSL(2,2^4)  2^4:15    2^3                 PΓL(2,2^4)    2      2           6      1       6       true             false            true             false                                                 
-# 9   17  680    120    3   15    PSL(2,2^4)  2^4:15    S3                  S17           2      2           6      1       1       true             false            true             false                                       complete  
-# 10  17  680    240    6   75    PSL(2,2^4)  2^4:15    S3                  PSL(2,2^4):2  2      2           6      1       1       true             false            true             false                                                 
+# 1   17  34     16     8   7     AGL1(17)    16        8                   AGL1(17)      2      2           5      1       2       true             false            true             false                                                 
+# 2   17  68     16     4   3     AGL1(17)    16        4                   AGL1(17)      2      2           5      1       1       true             false            true             false                                                 
+# 3   17  68     20     5   5     PSL2(2^4)   2^4:15    A5                  PΓL2(2^4)     2      2           6      1       5       true             true             true             true                 4                                
+# 4   17  68     48     12  33    PSL2(2^4)   2^4:15    A5                  PΓL2(2^4)     2      2           6      1       5       true             true             true             true                 3                                
+# 5   17  136    120    15  105   PSL2(2^4)   2^4:15    D30                 S17           2      2           6      1       8       true             true             true             true                                        complete  
+# 6   17  340    80     4   15    PSL2(2^4)   2^4:15    A4                  PΓL2(2^4)     2      2           6      1       2       true             false            true             false                                                 
+# 7   17  408    240    10  135   PSL2(2^4)   2^4:15    D10                 PΓL2(2^4)     2      2           6      1       7       true             false            true             false                                                 
+# 8   17  510    240    8   105   PSL2(2^4)   2^4:15    2^3                 PΓL2(2^4)     2      2           6      1       6       true             false            true             false                                                 
+# 9   17  680    120    3   15    PSL2(2^4)   2^4:15    S3                  S17           2      2           6      1       1       true             false            true             false                                       complete  
+# 10  17  680    240    6   75    PSL2(2^4)   2^4:15    S3                  PSL2(2^4):2   2      2           6      1       1       true             false            true             false                                                 
 # 11  17  680    560    14  455   A17         A16       (S14 x S3) cap A17  S17           2      2           9      1       1       true             true             true             true                                        complete  
-# 12  17  1020   240    4   45    PSL(2,2^4)  2^4:15    2^2                 PSL(2,2^4):2  2      2           6      1       3       true             false            true             false                                                 
-# 13  17  1360   480    6   150   PΓL(2,2^4)  2^4:15:4  D12                 PΓL(2,2^4)    2      2           8      1       5       true             false            true             false                                                 
-# 14  17  2040   480    4   90    PΓL(2,2^4)  2^4:15:4  D8                  PΓL(2,2^4)    2      2           8      1       3       true             false            true             false                                                 
-# 15  17  2040   960    8   420   PΓL(2,2^4)  2^4:15:4  8                   PΓL(2,2^4)    2      2           8      1       7       true             false            true             false                                                 
+# 12  17  1020   240    4   45    PSL2(2^4)   2^4:15    2^2                 PSL2(2^4):2   2      2           6      1       3       true             false            true             false                                                 
+# 13  17  1360   480    6   150   PΓL2(2^4)   2^4:15:4  D12                 PΓL2(2^4)     2      2           8      1       5       true             false            true             false                                                 
+# 14  17  2040   480    4   90    PΓL2(2^4)   2^4:15:4  D8                  PΓL2(2^4)     2      2           8      1       3       true             false            true             false                                                 
+# 15  17  2040   960    8   420   PΓL2(2^4)   2^4:15:4  8                   PΓL2(2^4)     2      2           8      1       7       true             false            true             false                                                 
 # 16  17  2380   560    4   105   A17         A16       (S4 x S13) cap A17  S17           2      2           9      1       2       true             true             true             true                 17                     complete  
 # 17  17  2380   1820   13  1365  A17         A16       (S13 x S4) cap A17  S17           2      2           9      1       2       true             true             true             true                 16                     complete  
 # 18  17  6188   1820   5   455   A17         A16       (S5 x S12) cap A17  S17           2      2           9      1       3       true             true             true             true                 19                     complete  
@@ -62,42 +62,42 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b      r      k   λ     G             Gα         GB                  Aut(D)        rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   17  34     16     8   7     AGL(1,17)     16         8                   AGL(1,17)     2      2           5      1       2       true             false            true             false                                                 
-# 2   17  68     16     4   3     AGL(1,17)     16         4                   AGL(1,17)     2      2           5      1       1       true             false            true             false                                                 
-# 3   17  68     20     5   5     PSL(2,2^4)    2^4:15     A5                  PΓL(2,2^4)    2      2           6      1       5       true             true             true             true                 6                                
-# 4   17  68     20     5   5     PSL(2,2^4):2  2^4:5:2:3  2xA5                PΓL(2,2^4)    2      2           7      1       5       true             true             true             true                 7                                
-# 5   17  68     20     5   5     PΓL(2,2^4)    2^4:15:4   A5:4                PΓL(2,2^4)    2      2           8      1       4       true             true             true             true                 8                                
-# 6   17  68     48     12  33    PSL(2,2^4)    2^4:15     A5                  PΓL(2,2^4)    2      2           6      1       5       true             true             true             true                 3                                
-# 7   17  68     48     12  33    PSL(2,2^4):2  2^4:5:2:3  2xA5                PΓL(2,2^4)    2      2           7      1       5       true             true             true             true                 4                                
-# 8   17  68     48     12  33    PΓL(2,2^4)    2^4:15:4   A5:4                PΓL(2,2^4)    2      2           8      1       4       true             true             true             true                 5                                
-# 9   17  136    120    15  105   PSL(2,2^4)    2^4:15     D30                 S17           2      2           6      1       8       true             true             true             true                                        complete  
-# 10  17  136    120    15  105   PSL(2,2^4):2  2^4:5:2:3  S3xD10              S17           2      2           7      1       8       true             true             true             true                                        complete  
-# 11  17  136    120    15  105   PΓL(2,2^4)    2^4:15:4   (5:4)xS3            S17           2      2           8      1       9       true             true             true             true                                        complete  
+# 1   17  34     16     8   7     AGL1(17)      16         8                   AGL1(17)      2      2           5      1       2       true             false            true             false                                                 
+# 2   17  68     16     4   3     AGL1(17)      16         4                   AGL1(17)      2      2           5      1       1       true             false            true             false                                                 
+# 3   17  68     20     5   5     PSL2(2^4)     2^4:15     A5                  PΓL2(2^4)     2      2           6      1       5       true             true             true             true                 6                                
+# 4   17  68     20     5   5     PSL2(2^4):2   2^4:5:2:3  2xA5                PΓL2(2^4)     2      2           7      1       5       true             true             true             true                 7                                
+# 5   17  68     20     5   5     PΓL2(2^4)     2^4:15:4   A5:4                PΓL2(2^4)     2      2           8      1       4       true             true             true             true                 8                                
+# 6   17  68     48     12  33    PSL2(2^4)     2^4:15     A5                  PΓL2(2^4)     2      2           6      1       5       true             true             true             true                 3                                
+# 7   17  68     48     12  33    PSL2(2^4):2   2^4:5:2:3  2xA5                PΓL2(2^4)     2      2           7      1       5       true             true             true             true                 4                                
+# 8   17  68     48     12  33    PΓL2(2^4)     2^4:15:4   A5:4                PΓL2(2^4)     2      2           8      1       4       true             true             true             true                 5                                
+# 9   17  136    120    15  105   PSL2(2^4)     2^4:15     D30                 S17           2      2           6      1       8       true             true             true             true                                        complete  
+# 10  17  136    120    15  105   PSL2(2^4):2   2^4:5:2:3  S3xD10              S17           2      2           7      1       8       true             true             true             true                                        complete  
+# 11  17  136    120    15  105   PΓL2(2^4)     2^4:15:4   (5:4)xS3            S17           2      2           8      1       9       true             true             true             true                                        complete  
 # 12  17  136    120    15  105   A17           A16        (S15 x S2) cap A17  S17           2      2           9      1       7       true             true             true             true                                        complete  
 # 13  17  136    120    15  105   S17           S16        S15 x S2            S17           2      2           10     1       7       true             true             true             true                                        complete  
-# 14  17  340    80     4   15    PSL(2,2^4)    2^4:15     A4                  PΓL(2,2^4)    2      2           6      1       2       true             false            true             false                                                 
-# 15  17  340    80     4   15    PSL(2,2^4):2  2^4:5:2:3  2xA4                PΓL(2,2^4)    2      2           7      1       2       true             false            true             false                                                 
-# 16  17  340    80     4   15    PΓL(2,2^4)    2^4:15:4   A4:4                PΓL(2,2^4)    2      2           8      1       2       true             false            true             false                                                 
-# 17  17  408    240    10  135   PSL(2,2^4)    2^4:15     D10                 PΓL(2,2^4)    2      2           6      1       7       true             false            true             false                                                 
-# 18  17  408    240    10  135   PSL(2,2^4):2  2^4:5:2:3  D20                 PΓL(2,2^4)    2      2           7      1       7       true             false            true             false                                                 
-# 19  17  408    240    10  135   PΓL(2,2^4)    2^4:15:4   2x(5:4)             PΓL(2,2^4)    2      2           8      1       8       true             false            true             false                                                 
-# 20  17  510    240    8   105   PSL(2,2^4)    2^4:15     2^3                 PΓL(2,2^4)    2      2           6      1       6       true             false            true             false                                                 
-# 21  17  510    240    8   105   PSL(2,2^4):2  2^4:5:2:3  2xD8                PΓL(2,2^4)    2      2           7      1       6       true             false            true             false                                                 
-# 22  17  510    240    8   105   PΓL(2,2^4)    2^4:15:4   2^3:4               PΓL(2,2^4)    2      2           8      1       6       true             false            true             false                                                 
-# 23  17  680    120    3   15    PSL(2,2^4)    2^4:15     S3                  S17           2      2           6      1       1       true             false            true             false                                       complete  
-# 24  17  680    120    3   15    PSL(2,2^4):2  2^4:5:2:3  D12                 S17           2      2           7      1       1       true             false            true             false                                       complete  
-# 25  17  680    120    3   15    PΓL(2,2^4)    2^4:15:4   4xS3                S17           2      2           8      1       1       true             false            true             false                                       complete  
+# 14  17  340    80     4   15    PSL2(2^4)     2^4:15     A4                  PΓL2(2^4)     2      2           6      1       2       true             false            true             false                                                 
+# 15  17  340    80     4   15    PSL2(2^4):2   2^4:5:2:3  2xA4                PΓL2(2^4)     2      2           7      1       2       true             false            true             false                                                 
+# 16  17  340    80     4   15    PΓL2(2^4)     2^4:15:4   A4:4                PΓL2(2^4)     2      2           8      1       2       true             false            true             false                                                 
+# 17  17  408    240    10  135   PSL2(2^4)     2^4:15     D10                 PΓL2(2^4)     2      2           6      1       7       true             false            true             false                                                 
+# 18  17  408    240    10  135   PSL2(2^4):2   2^4:5:2:3  D20                 PΓL2(2^4)     2      2           7      1       7       true             false            true             false                                                 
+# 19  17  408    240    10  135   PΓL2(2^4)     2^4:15:4   2x(5:4)             PΓL2(2^4)     2      2           8      1       8       true             false            true             false                                                 
+# 20  17  510    240    8   105   PSL2(2^4)     2^4:15     2^3                 PΓL2(2^4)     2      2           6      1       6       true             false            true             false                                                 
+# 21  17  510    240    8   105   PSL2(2^4):2   2^4:5:2:3  2xD8                PΓL2(2^4)     2      2           7      1       6       true             false            true             false                                                 
+# 22  17  510    240    8   105   PΓL2(2^4)     2^4:15:4   2^3:4               PΓL2(2^4)     2      2           8      1       6       true             false            true             false                                                 
+# 23  17  680    120    3   15    PSL2(2^4)     2^4:15     S3                  S17           2      2           6      1       1       true             false            true             false                                       complete  
+# 24  17  680    120    3   15    PSL2(2^4):2   2^4:5:2:3  D12                 S17           2      2           7      1       1       true             false            true             false                                       complete  
+# 25  17  680    120    3   15    PΓL2(2^4)     2^4:15:4   4xS3                S17           2      2           8      1       1       true             false            true             false                                       complete  
 # 26  17  680    120    3   15    A17           A16        (S3 x S14) cap A17  S17           2      2           9      1       1       true             true             true             true                 30                     complete  
 # 27  17  680    120    3   15    S17           S16        S3 x S14            S17           2      2           10     1       1       true             true             true             true                 31                     complete  
-# 28  17  680    240    6   75    PSL(2,2^4)    2^4:15     S3                  PSL(2,2^4):2  2      2           6      1       1       true             false            true             false                                                 
-# 29  17  680    240    6   75    PSL(2,2^4):2  2^4:5:2:3  D12                 PSL(2,2^4):2  2      2           7      1       1       true             false            true             false                                                 
+# 28  17  680    240    6   75    PSL2(2^4)     2^4:15     S3                  PSL2(2^4):2   2      2           6      1       1       true             false            true             false                                                 
+# 29  17  680    240    6   75    PSL2(2^4):2   2^4:5:2:3  D12                 PSL2(2^4):2   2      2           7      1       1       true             false            true             false                                                 
 # 30  17  680    560    14  455   A17           A16        (S14 x S3) cap A17  S17           2      2           9      1       1       true             true             true             true                 26                     complete  
 # 31  17  680    560    14  455   S17           S16        S14 x S3            S17           2      2           10     1       1       true             true             true             true                 27                     complete  
-# 32  17  1020   240    4   45    PSL(2,2^4)    2^4:15     2^2                 PSL(2,2^4):2  2      2           6      1       3       true             false            true             false                                                 
-# 33  17  1020   240    4   45    PSL(2,2^4):2  2^4:5:2:3  D8                  PSL(2,2^4):2  2      2           7      1       3       true             false            true             false                                                 
-# 34  17  1360   480    6   150   PΓL(2,2^4)    2^4:15:4   D12                 PΓL(2,2^4)    2      2           8      1       5       true             false            true             false                                                 
-# 35  17  2040   480    4   90    PΓL(2,2^4)    2^4:15:4   D8                  PΓL(2,2^4)    2      2           8      1       3       true             false            true             false                                                 
-# 36  17  2040   960    8   420   PΓL(2,2^4)    2^4:15:4   8                   PΓL(2,2^4)    2      2           8      1       7       true             false            true             false                                                 
+# 32  17  1020   240    4   45    PSL2(2^4)     2^4:15     2^2                 PSL2(2^4):2   2      2           6      1       3       true             false            true             false                                                 
+# 33  17  1020   240    4   45    PSL2(2^4):2   2^4:5:2:3  D8                  PSL2(2^4):2   2      2           7      1       3       true             false            true             false                                                 
+# 34  17  1360   480    6   150   PΓL2(2^4)     2^4:15:4   D12                 PΓL2(2^4)     2      2           8      1       5       true             false            true             false                                                 
+# 35  17  2040   480    4   90    PΓL2(2^4)     2^4:15:4   D8                  PΓL2(2^4)     2      2           8      1       3       true             false            true             false                                                 
+# 36  17  2040   960    8   420   PΓL2(2^4)     2^4:15:4   8                   PΓL2(2^4)     2      2           8      1       7       true             false            true             false                                                 
 # 37  17  2380   560    4   105   A17           A16        (S4 x S13) cap A17  S17           2      2           9      1       2       true             true             true             true                 39                     complete  
 # 38  17  2380   560    4   105   S17           S16        S4 x S13            S17           2      2           10     1       2       true             true             true             true                 40                     complete  
 # 39  17  2380   1820   13  1365  A17           A16        (S13 x S4) cap A17  S17           2      2           9      1       2       true             true             true             true                 37                     complete  
@@ -124,46 +124,46 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b      r      k   λ     G             Gα         GB                  Aut(D)        rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   17  34     16     8   7     AGL(1,17)     16         8                   AGL(1,17)     2      2           5      1       2       true             false            true             false                                                 
-# 2   17  68     16     4   3     AGL(1,17)     16         4                   AGL(1,17)     2      2           5      1       1       true             false            true             false                                                 
-# 3   17  68     20     5   5     PSL(2,2^4)    2^4:15     A5                  PΓL(2,2^4)    2      2           6      1       5       true             true             true             true                 6                                
-# 4   17  68     20     5   5     PSL(2,2^4):2  2^4:5:2:3  2xA5                PΓL(2,2^4)    2      2           7      1       5       true             true             true             true                 7                                
-# 5   17  68     20     5   5     PΓL(2,2^4)    2^4:15:4   A5:4                PΓL(2,2^4)    2      2           8      1       4       true             true             true             true                 8                                
-# 6   17  68     48     12  33    PSL(2,2^4)    2^4:15     A5                  PΓL(2,2^4)    2      2           6      1       5       true             true             true             true                 3                                
-# 7   17  68     48     12  33    PSL(2,2^4):2  2^4:5:2:3  2xA5                PΓL(2,2^4)    2      2           7      1       5       true             true             true             true                 4                                
-# 8   17  68     48     12  33    PΓL(2,2^4)    2^4:15:4   A5:4                PΓL(2,2^4)    2      2           8      1       4       true             true             true             true                 5                                
-# 9   17  136    120    15  105   PSL(2,2^4)    2^4:15     D30                 S17           2      2           6      1       8       true             true             true             true                                        complete  
-# 10  17  136    120    15  105   PSL(2,2^4):2  2^4:5:2:3  S3xD10              S17           2      2           7      1       8       true             true             true             true                                        complete  
-# 11  17  136    120    15  105   PΓL(2,2^4)    2^4:15:4   (5:4)xS3            S17           2      2           8      1       9       true             true             true             true                                        complete  
+# 1   17  34     16     8   7     AGL1(17)      16         8                   AGL1(17)      2      2           5      1       2       true             false            true             false                                                 
+# 2   17  68     16     4   3     AGL1(17)      16         4                   AGL1(17)      2      2           5      1       1       true             false            true             false                                                 
+# 3   17  68     20     5   5     PSL2(2^4)     2^4:15     A5                  PΓL2(2^4)     2      2           6      1       5       true             true             true             true                 6                                
+# 4   17  68     20     5   5     PSL2(2^4):2   2^4:5:2:3  2xA5                PΓL2(2^4)     2      2           7      1       5       true             true             true             true                 7                                
+# 5   17  68     20     5   5     PΓL2(2^4)     2^4:15:4   A5:4                PΓL2(2^4)     2      2           8      1       4       true             true             true             true                 8                                
+# 6   17  68     48     12  33    PSL2(2^4)     2^4:15     A5                  PΓL2(2^4)     2      2           6      1       5       true             true             true             true                 3                                
+# 7   17  68     48     12  33    PSL2(2^4):2   2^4:5:2:3  2xA5                PΓL2(2^4)     2      2           7      1       5       true             true             true             true                 4                                
+# 8   17  68     48     12  33    PΓL2(2^4)     2^4:15:4   A5:4                PΓL2(2^4)     2      2           8      1       4       true             true             true             true                 5                                
+# 9   17  136    120    15  105   PSL2(2^4)     2^4:15     D30                 S17           2      2           6      1       8       true             true             true             true                                        complete  
+# 10  17  136    120    15  105   PSL2(2^4):2   2^4:5:2:3  S3xD10              S17           2      2           7      1       8       true             true             true             true                                        complete  
+# 11  17  136    120    15  105   PΓL2(2^4)     2^4:15:4   (5:4)xS3            S17           2      2           8      1       9       true             true             true             true                                        complete  
 # 12  17  136    120    15  105   A17           A16        (S15 x S2) cap A17  S17           2      2           9      1       7       true             true             true             true                                        complete  
 # 13  17  136    120    15  105   S17           S16        S15 x S2            S17           2      2           10     1       7       true             true             true             true                                        complete  
-# 14  17  340    80     4   15    PSL(2,2^4)    2^4:15     A4                  PΓL(2,2^4)    2      2           6      1       2       true             false            true             false                                                 
-# 15  17  340    80     4   15    PSL(2,2^4):2  2^4:5:2:3  2xA4                PΓL(2,2^4)    2      2           7      1       2       true             false            true             false                                                 
-# 16  17  340    80     4   15    PΓL(2,2^4)    2^4:15:4   A4:4                PΓL(2,2^4)    2      2           8      1       2       true             false            true             false                                                 
-# 17  17  408    240    10  135   PSL(2,2^4)    2^4:15     D10                 PΓL(2,2^4)    2      2           6      1       7       true             false            true             false                                                 
-# 18  17  408    240    10  135   PSL(2,2^4):2  2^4:5:2:3  D20                 PΓL(2,2^4)    2      2           7      1       7       true             false            true             false                                                 
-# 19  17  408    240    10  135   PΓL(2,2^4)    2^4:15:4   2x(5:4)             PΓL(2,2^4)    2      2           8      1       8       true             false            true             false                                                 
-# 20  17  510    240    8   105   PSL(2,2^4)    2^4:15     2^3                 PΓL(2,2^4)    2      2           6      1       6       true             false            true             false                                                 
-# 21  17  510    240    8   105   PSL(2,2^4):2  2^4:5:2:3  2xD8                PΓL(2,2^4)    2      2           7      1       6       true             false            true             false                                                 
-# 22  17  510    240    8   105   PΓL(2,2^4)    2^4:15:4   2^3:4               PΓL(2,2^4)    2      2           8      1       6       true             false            true             false                                                 
-# 23  17  680    120    3   15    PSL(2,2^4)    2^4:15     S3                  S17           2      2           6      1       1       true             false            true             false                                       complete  
-# 24  17  680    120    3   15    PSL(2,2^4):2  2^4:5:2:3  D12                 S17           2      2           7      1       1       true             false            true             false                                       complete  
-# 25  17  680    120    3   15    PΓL(2,2^4)    2^4:15:4   4xS3                S17           2      2           8      1       1       true             false            true             false                                       complete  
+# 14  17  340    80     4   15    PSL2(2^4)     2^4:15     A4                  PΓL2(2^4)     2      2           6      1       2       true             false            true             false                                                 
+# 15  17  340    80     4   15    PSL2(2^4):2   2^4:5:2:3  2xA4                PΓL2(2^4)     2      2           7      1       2       true             false            true             false                                                 
+# 16  17  340    80     4   15    PΓL2(2^4)     2^4:15:4   A4:4                PΓL2(2^4)     2      2           8      1       2       true             false            true             false                                                 
+# 17  17  408    240    10  135   PSL2(2^4)     2^4:15     D10                 PΓL2(2^4)     2      2           6      1       7       true             false            true             false                                                 
+# 18  17  408    240    10  135   PSL2(2^4):2   2^4:5:2:3  D20                 PΓL2(2^4)     2      2           7      1       7       true             false            true             false                                                 
+# 19  17  408    240    10  135   PΓL2(2^4)     2^4:15:4   2x(5:4)             PΓL2(2^4)     2      2           8      1       8       true             false            true             false                                                 
+# 20  17  510    240    8   105   PSL2(2^4)     2^4:15     2^3                 PΓL2(2^4)     2      2           6      1       6       true             false            true             false                                                 
+# 21  17  510    240    8   105   PSL2(2^4):2   2^4:5:2:3  2xD8                PΓL2(2^4)     2      2           7      1       6       true             false            true             false                                                 
+# 22  17  510    240    8   105   PΓL2(2^4)     2^4:15:4   2^3:4               PΓL2(2^4)     2      2           8      1       6       true             false            true             false                                                 
+# 23  17  680    120    3   15    PSL2(2^4)     2^4:15     S3                  S17           2      2           6      1       1       true             false            true             false                                       complete  
+# 24  17  680    120    3   15    PSL2(2^4):2   2^4:5:2:3  D12                 S17           2      2           7      1       1       true             false            true             false                                       complete  
+# 25  17  680    120    3   15    PΓL2(2^4)     2^4:15:4   4xS3                S17           2      2           8      1       1       true             false            true             false                                       complete  
 # 26  17  680    120    3   15    A17           A16        (S3 x S14) cap A17  S17           2      2           9      1       1       true             true             true             true                 32                     complete  
 # 27  17  680    120    3   15    S17           S16        S3 x S14            S17           2      2           10     1       1       true             true             true             true                 33                     complete  
-# 28  17  680    240    6   75    PSL(2,2^4)    2^4:15     S3                  PSL(2,2^4):2  2      2           6      1       1       true             false            true             false                                                 
-# 29  17  680    240    6   75    PSL(2,2^4)    2^4:15     S3                  PSL(2,2^4):2  2      2           6      1       1       true             false            true             false                                                 
-# 30  17  680    240    6   75    PSL(2,2^4):2  2^4:5:2:3  D12                 PSL(2,2^4):2  2      2           7      1       1       true             false            true             false                                                 
-# 31  17  680    240    6   75    PSL(2,2^4):2  2^4:5:2:3  D12                 PSL(2,2^4):2  2      2           7      1       1       true             false            true             false                                                 
+# 28  17  680    240    6   75    PSL2(2^4)     2^4:15     S3                  PSL2(2^4):2   2      2           6      1       1       true             false            true             false                                                 
+# 29  17  680    240    6   75    PSL2(2^4)     2^4:15     S3                  PSL2(2^4):2   2      2           6      1       1       true             false            true             false                                                 
+# 30  17  680    240    6   75    PSL2(2^4):2   2^4:5:2:3  D12                 PSL2(2^4):2   2      2           7      1       1       true             false            true             false                                                 
+# 31  17  680    240    6   75    PSL2(2^4):2   2^4:5:2:3  D12                 PSL2(2^4):2   2      2           7      1       1       true             false            true             false                                                 
 # 32  17  680    560    14  455   A17           A16        (S14 x S3) cap A17  S17           2      2           9      1       1       true             true             true             true                 26                     complete  
 # 33  17  680    560    14  455   S17           S16        S14 x S3            S17           2      2           10     1       1       true             true             true             true                 27                     complete  
-# 34  17  1020   240    4   45    PSL(2,2^4)    2^4:15     2^2                 PSL(2,2^4):2  2      2           6      1       3       true             false            true             false                                                 
-# 35  17  1020   240    4   45    PSL(2,2^4)    2^4:15     2^2                 PSL(2,2^4):2  2      2           6      1       4       true             false            true             false                                                 
-# 36  17  1020   240    4   45    PSL(2,2^4):2  2^4:5:2:3  D8                  PSL(2,2^4):2  2      2           7      1       4       true             false            true             false                                                 
-# 37  17  1020   240    4   45    PSL(2,2^4):2  2^4:5:2:3  D8                  PSL(2,2^4):2  2      2           7      1       3       true             false            true             false                                                 
-# 38  17  1360   480    6   150   PΓL(2,2^4)    2^4:15:4   D12                 PΓL(2,2^4)    2      2           8      1       5       true             false            true             false                                                 
-# 39  17  2040   480    4   90    PΓL(2,2^4)    2^4:15:4   D8                  PΓL(2,2^4)    2      2           8      1       3       true             false            true             false                                                 
-# 40  17  2040   960    8   420   PΓL(2,2^4)    2^4:15:4   8                   PΓL(2,2^4)    2      2           8      1       7       true             false            true             false                                                 
+# 34  17  1020   240    4   45    PSL2(2^4)     2^4:15     2^2                 PSL2(2^4):2   2      2           6      1       3       true             false            true             false                                                 
+# 35  17  1020   240    4   45    PSL2(2^4)     2^4:15     2^2                 PSL2(2^4):2   2      2           6      1       4       true             false            true             false                                                 
+# 36  17  1020   240    4   45    PSL2(2^4):2   2^4:5:2:3  D8                  PSL2(2^4):2   2      2           7      1       4       true             false            true             false                                                 
+# 37  17  1020   240    4   45    PSL2(2^4):2   2^4:5:2:3  D8                  PSL2(2^4):2   2      2           7      1       3       true             false            true             false                                                 
+# 38  17  1360   480    6   150   PΓL2(2^4)     2^4:15:4   D12                 PΓL2(2^4)     2      2           8      1       5       true             false            true             false                                                 
+# 39  17  2040   480    4   90    PΓL2(2^4)     2^4:15:4   D8                  PΓL2(2^4)     2      2           8      1       3       true             false            true             false                                                 
+# 40  17  2040   960    8   420   PΓL2(2^4)     2^4:15:4   8                   PΓL2(2^4)     2      2           8      1       7       true             false            true             false                                                 
 # 41  17  2380   560    4   105   A17           A16        (S4 x S13) cap A17  S17           2      2           9      1       2       true             true             true             true                 43                     complete  
 # 42  17  2380   560    4   105   S17           S16        S4 x S13            S17           2      2           10     1       2       true             true             true             true                 44                     complete  
 # 43  17  2380   1820   13  1365  A17           A16        (S13 x S4) cap A17  S17           2      2           9      1       2       true             true             true             true                 41                     complete  
@@ -196,7 +196,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,17)  AGL(1,17)  
+# Structure                            AGL1(17)   AGL1(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     16         16         
@@ -222,7 +222,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,17)  AGL(1,17)  
+# Structure                            AGL1(17)   AGL1(17)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     16         16         
@@ -248,7 +248,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PSL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15      2^4:15:4    
@@ -274,7 +274,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PSL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15      2^4:15:4    
@@ -300,7 +300,7 @@
 # ---------------------------------------------------------
 #                                      G           Aut(D)  
 # ---------------------------------------------------------
-# Structure                            PSL(2,2^4)  S17     
+# Structure                            PSL2(2^4)   S17     
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     2^4:15      S16     
@@ -326,7 +326,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PSL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15      2^4:15:4    
@@ -352,7 +352,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PSL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15      2^4:15:4    
@@ -378,7 +378,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PSL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15      2^4:15:4    
@@ -404,7 +404,7 @@
 # ---------------------------------------------------------
 #                                      G           Aut(D)  
 # ---------------------------------------------------------
-# Structure                            PSL(2,2^4)  S17     
+# Structure                            PSL2(2^4)   S17     
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     2^4:15      S16     
@@ -430,7 +430,7 @@
 # ---------------------------------------------------------------
 #                                      G           Aut(D)        
 # ---------------------------------------------------------------
-# Structure                            PSL(2,2^4)  PSL(2,2^4):2  
+# Structure                            PSL2(2^4)   PSL2(2^4):2  
 # Rank                                 2           2             
 # 2-Homogeneous                        true        true          
 # Point-stabiliser                     2^4:15      2^4:5:2:3     
@@ -482,7 +482,7 @@
 # ---------------------------------------------------------------
 #                                      G           Aut(D)        
 # ---------------------------------------------------------------
-# Structure                            PSL(2,2^4)  PSL(2,2^4):2  
+# Structure                            PSL2(2^4)   PSL2(2^4):2  
 # Rank                                 2           2             
 # 2-Homogeneous                        true        true          
 # Point-stabiliser                     2^4:15      2^4:5:2:3     
@@ -508,7 +508,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΓL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PΓL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15:4    2^4:15:4    
@@ -534,7 +534,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΓL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PΓL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15:4    2^4:15:4    
@@ -560,7 +560,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΓL(2,2^4)  PΓL(2,2^4)  
+# Structure                            PΓL2(2^4)   PΓL2(2^4)  
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     2^4:15:4    2^4:15:4    

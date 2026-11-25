@@ -6,7 +6,7 @@
 #               lD_12 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,23 +31,23 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k   λ    G          Gα         GB           Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   12  22   11   6   5    M11        PSL(2,11)  A6           M11        2      2           272    1       5       true             false            true             true                 1                                
+# 1   12  22   11   6   5    M11        PSL2(11)   A6           M11        2      2           272    1       5       true             false            true             true                 1                                
 # 2   12  66   55   10  45   S12        S11        2xS10        S12        2      2           301    1       5       true             true             true             true                                        complete  
-# 3   12  110  55   6   25   PSL(2,11)  11:5       6            PGL(2,11)  2      2           179    1       6       true             false            true             true                 3                                
-# 4   12  110  55   6   25   PSL(2,11)  11:5       S3           PSL(2,11)  2      2           179    1       4       true             false            true             true                 4                                
-# 5   12  110  55   6   25   M11        PSL(2,11)  (S3xS3):2    M11        2      2           272    1       6       true             false            true             true                 5                                
-# 6   12  132  55   5   20   PGL(2,11)  11:10      D10          PGL(2,11)  2      2           218    1       4       true             false            true             false                                                 
-# 7   12  132  55   5   20   M11        PSL(2,11)  A5           M11        2      2           272    1       4       true             false            true             false                                                 
+# 3   12  110  55   6   25   PSL2(11)   11:5       6            PGL2(11)   2      2           179    1       6       true             false            true             true                 3                                
+# 4   12  110  55   6   25   PSL2(11)   11:5       S3           PSL2(11)   2      2           179    1       4       true             false            true             true                 4                                
+# 5   12  110  55   6   25   M11        PSL2(11)   (S3xS3):2    M11        2      2           272    1       6       true             false            true             true                 5                                
+# 6   12  132  55   5   20   PGL2(11)   11:10      D10          PGL2(11)   2      2           218    1       4       true             false            true             false                                                 
+# 7   12  132  55   5   20   M11        PSL2(11)   A5           M11        2      2           272    1       4       true             false            true             false                                                 
 # 8   12  132  66   6   30   M12        M11        S6           M12        2      2           295    1       4       true             false            true             true                 8                                
-# 9   12  165  55   4   15   PGL(2,11)  11:10      D8           PGL(2,11)  2      2           218    1       2       true             false            true             true                 11                               
-# 10  12  165  55   4   15   M11        PSL(2,11)  GL(2,3)      M11        2      2           272    1       2       true             true             true             true                 12                               
-# 11  12  165  110  8   70   PGL(2,11)  11:10      D8           PGL(2,11)  2      2           218    1       2       true             false            true             true                 9                                
-# 12  12  165  110  8   70   M11        PSL(2,11)  GL(2,3)      M11        2      2           272    1       2       true             true             true             true                 10                               
-# 13  12  220  55   3   10   PSL(2,11)  11:5       3            S12        2      2           179    1       1       true             false            true             false                                       complete  
-# 14  12  220  110  6   50   PGL(2,11)  11:10      S3           PGL(2,11)  2      2           218    1       6       true             false            true             true                 14                               
+# 9   12  165  55   4   15   PGL2(11)   11:10      D8           PGL2(11)   2      2           218    1       2       true             false            true             true                 11                               
+# 10  12  165  55   4   15   M11        PSL2(11)   GL2(3)       M11        2      2           272    1       2       true             true             true             true                 12                               
+# 11  12  165  110  8   70   PGL2(11)   11:10      D8           PGL2(11)   2      2           218    1       2       true             false            true             true                 9                                
+# 12  12  165  110  8   70   M11        PSL2(11)   GL2(3)       M11        2      2           272    1       2       true             true             true             true                 10                               
+# 13  12  220  55   3   10   PSL2(11)   11:5       3            S12        2      2           179    1       1       true             false            true             false                                       complete  
+# 14  12  220  110  6   50   PGL2(11)   11:10      S3           PGL2(11)   2      2           218    1       6       true             false            true             true                 14                               
 # 15  12  220  165  9   120  S12        S11        S3xS9        S12        2      2           301    1       1       true             true             true             true                                        complete  
-# 16  12  330  110  4   30   PGL(2,11)  11:10      2^2          PGL(2,11)  2      2           218    1       3       true             false            true             false                                                 
-# 17  12  330  110  4   30   M11        PSL(2,11)  S4           M11        2      2           272    1       3       true             false            true             false                                                 
+# 16  12  330  110  4   30   PGL2(11)   11:10      2^2          PGL2(11)   2      2           218    1       3       true             false            true             false                                                 
+# 17  12  330  110  4   30   M11        PSL2(11)   S4           M11        2      2           272    1       3       true             false            true             false                                                 
 # 18  12  495  165  4   45   M12        M11        2^3:2^2:3:2  S12        2      2           295    1       2       true             true             true             true                                        complete  
 # 19  12  495  330  8   210  A12        A11        2^2:A8:S3    S12        2      2           300    1       2       true             true             true             true                                        complete  
 # 20  12  792  330  5   120  A12        A11        A7:S5        S12        2      2           300    1       3       true             true             true             true                 22                     complete  
@@ -60,38 +60,38 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k   λ    G          Gα         GB           Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   12  22   11   6   5    M11        PSL(2,11)  A6           M11        2      2           272    1       5       true             false            true             true                 1                                
-# 2   12  66   55   10  45   PSL(2,11)  11:5       D10          S12        2      2           179    1       7       true             false            true             true                                        complete  
-# 3   12  66   55   10  45   PGL(2,11)  11:10      D20          S12        2      2           218    1       7       true             true             true             true                                        complete  
-# 4   12  66   55   10  45   M11        PSL(2,11)  S5           S12        2      2           272    1       7       true             true             true             true                                        complete  
+# 1   12  22   11   6   5    M11        PSL2(11)   A6           M11        2      2           272    1       5       true             false            true             true                 1                                
+# 2   12  66   55   10  45   PSL2(11)   11:5       D10          S12        2      2           179    1       7       true             false            true             true                                        complete  
+# 3   12  66   55   10  45   PGL2(11)   11:10      D20          S12        2      2           218    1       7       true             true             true             true                                        complete  
+# 4   12  66   55   10  45   M11        PSL2(11)   S5           S12        2      2           272    1       7       true             true             true             true                                        complete  
 # 5   12  66   55   10  45   M12        M11        A6:2:2       S12        2      2           295    1       6       true             true             true             true                                        complete  
 # 6   12  66   55   10  45   A12        A11        S10          S12        2      2           300    1       5       true             true             true             true                                        complete  
 # 7   12  66   55   10  45   S12        S11        2xS10        S12        2      2           301    1       5       true             true             true             true                                        complete  
-# 8   12  110  55   6   25   PSL(2,11)  11:5       S3           PSL(2,11)  2      2           179    1       4       true             false            true             true                 8                                
-# 9   12  110  55   6   25   PSL(2,11)  11:5       6            PGL(2,11)  2      2           179    1       6       true             false            true             true                 9                                
-# 10  12  110  55   6   25   PGL(2,11)  11:10      D12          PGL(2,11)  2      2           218    1       5       true             false            true             true                 10                               
-# 11  12  110  55   6   25   M11        PSL(2,11)  (S3xS3):2    M11        2      2           272    1       6       true             false            true             true                 11                               
-# 12  12  132  55   5   20   PSL(2,11)  11:5       5            PGL(2,11)  2      2           179    1       3       true             false            true             false                                                 
-# 13  12  132  55   5   20   PGL(2,11)  11:10      D10          PGL(2,11)  2      2           218    1       4       true             false            true             false                                                 
-# 14  12  132  55   5   20   M11        PSL(2,11)  A5           M11        2      2           272    1       4       true             false            true             false                                                 
+# 8   12  110  55   6   25   PSL2(11)   11:5       S3           PSL2(11)   2      2           179    1       4       true             false            true             true                 8                                
+# 9   12  110  55   6   25   PSL2(11)   11:5       6            PGL2(11)   2      2           179    1       6       true             false            true             true                 9                                
+# 10  12  110  55   6   25   PGL2(11)   11:10      D12          PGL2(11)   2      2           218    1       5       true             false            true             true                 10                               
+# 11  12  110  55   6   25   M11        PSL2(11)   (S3xS3):2    M11        2      2           272    1       6       true             false            true             true                 11                               
+# 12  12  132  55   5   20   PSL2(11)   11:5       5            PGL2(11)   2      2           179    1       3       true             false            true             false                                                 
+# 13  12  132  55   5   20   PGL2(11)   11:10      D10          PGL2(11)   2      2           218    1       4       true             false            true             false                                                 
+# 14  12  132  55   5   20   M11        PSL2(11)   A5           M11        2      2           272    1       4       true             false            true             false                                                 
 # 15  12  132  66   6   30   M12        M11        S6           M12        2      2           295    1       4       true             false            true             true                 15                               
-# 16  12  165  55   4   15   PSL(2,11)  11:5       2^2          PGL(2,11)  2      2           179    1       2       true             false            true             false                                                 
-# 17  12  165  55   4   15   PGL(2,11)  11:10      D8           PGL(2,11)  2      2           218    1       2       true             false            true             true                 19                               
-# 18  12  165  55   4   15   M11        PSL(2,11)  GL(2,3)      M11        2      2           272    1       2       true             true             true             true                 20                               
-# 19  12  165  110  8   70   PGL(2,11)  11:10      D8           PGL(2,11)  2      2           218    1       2       true             false            true             true                 17                               
-# 20  12  165  110  8   70   M11        PSL(2,11)  GL(2,3)      M11        2      2           272    1       2       true             true             true             true                 18                               
-# 21  12  220  55   3   10   PSL(2,11)  11:5       3            S12        2      2           179    1       1       true             false            true             false                                       complete  
-# 22  12  220  55   3   10   PGL(2,11)  11:10      S3           S12        2      2           218    1       1       true             false            true             false                                       complete  
-# 23  12  220  55   3   10   M11        PSL(2,11)  S3xS3        S12        2      2           272    1       1       true             false            true             false                                       complete  
+# 16  12  165  55   4   15   PSL2(11)   11:5       2^2          PGL2(11)   2      2           179    1       2       true             false            true             false                                                 
+# 17  12  165  55   4   15   PGL2(11)   11:10      D8           PGL2(11)   2      2           218    1       2       true             false            true             true                 19                               
+# 18  12  165  55   4   15   M11        PSL2(11)   GL2(3)       M11        2      2           272    1       2       true             true             true             true                 20                               
+# 19  12  165  110  8   70   PGL2(11)   11:10      D8           PGL2(11)   2      2           218    1       2       true             false            true             true                 17                               
+# 20  12  165  110  8   70   M11        PSL2(11)   GL2(3)       M11        2      2           272    1       2       true             true             true             true                 18                               
+# 21  12  220  55   3   10   PSL2(11)   11:5       3            S12        2      2           179    1       1       true             false            true             false                                       complete  
+# 22  12  220  55   3   10   PGL2(11)   11:10      S3           S12        2      2           218    1       1       true             false            true             false                                       complete  
+# 23  12  220  55   3   10   M11        PSL2(11)   S3xS3        S12        2      2           272    1       1       true             false            true             false                                       complete  
 # 24  12  220  55   3   10   M12        M11        3^2:Q8:3:2   S12        2      2           295    1       1       true             true             true             true                 28                     complete  
 # 25  12  220  55   3   10   A12        A11        A9:S3        S12        2      2           300    1       1       true             true             true             true                 29                     complete  
 # 26  12  220  55   3   10   S12        S11        S9xS3        S12        2      2           301    1       1       true             true             true             true                 30                     complete  
-# 27  12  220  110  6   50   PGL(2,11)  11:10      S3           PGL(2,11)  2      2           218    1       6       true             false            true             true                 27                               
+# 27  12  220  110  6   50   PGL2(11)   11:10      S3           PGL2(11)   2      2           218    1       6       true             false            true             true                 27                               
 # 28  12  220  165  9   120  M12        M11        3^2:Q8:3:2   S12        2      2           295    1       1       true             true             true             true                 24                     complete  
 # 29  12  220  165  9   120  A12        A11        3:S9         S12        2      2           300    1       1       true             true             true             true                 25                     complete  
 # 30  12  220  165  9   120  S12        S11        S3xS9        S12        2      2           301    1       1       true             true             true             true                 26                     complete  
-# 31  12  330  110  4   30   PGL(2,11)  11:10      2^2          PGL(2,11)  2      2           218    1       3       true             false            true             false                                                 
-# 32  12  330  110  4   30   M11        PSL(2,11)  S4           M11        2      2           272    1       3       true             false            true             false                                                 
+# 31  12  330  110  4   30   PGL2(11)   11:10      2^2          PGL2(11)   2      2           218    1       3       true             false            true             false                                                 
+# 32  12  330  110  4   30   M11        PSL2(11)   S4           M11        2      2           272    1       3       true             false            true             false                                                 
 # 33  12  495  165  4   45   M12        M11        2^3:2^2:3:2  S12        2      2           295    1       2       true             true             true             true                 36                     complete  
 # 34  12  495  165  4   45   A12        A11        A8:S4        S12        2      2           300    1       2       true             true             true             true                 37                     complete  
 # 35  12  495  165  4   45   S12        S11        S8xS4        S12        2      2           301    1       2       true             true             true             true                 38                     complete  
@@ -121,7 +121,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Point-stabiliser                     PSL2(11)   PSL2(11)  
 # Block-stabiliser                     A6         A6         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -170,7 +170,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,11)  PGL(2,11)  
+# Structure                            PSL2(11)   PGL2(11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:5       11:10      
@@ -196,7 +196,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,11)  PSL(2,11)  
+# Structure                            PSL2(11)   PSL2(11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:5       11:5       
@@ -225,7 +225,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Point-stabiliser                     PSL2(11)   PSL2(11)  
 # Block-stabiliser                     (S3xS3):2  (S3xS3):2  
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -248,7 +248,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,11)  PGL(2,11)  
+# Structure                            PGL2(11)   PGL2(11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:10      11:10      
@@ -277,7 +277,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Point-stabiliser                     PSL2(11)   PSL2(11)  
 # Block-stabiliser                     A5         A5         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -326,7 +326,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,11)  PGL(2,11)  
+# Structure                            PGL2(11)   PGL2(11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:10      11:10      
@@ -355,8 +355,8 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
-# Block-stabiliser                     GL(2,3)    GL(2,3)    
+# Point-stabiliser                     PSL2(11)   PSL2(11)  
+# Block-stabiliser                     GL2(3)     GL2(3)    
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
@@ -378,7 +378,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,11)  PGL(2,11)  
+# Structure                            PGL2(11)   PGL2(11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:10      11:10      
@@ -407,8 +407,8 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
-# Block-stabiliser                     GL(2,3)    GL(2,3)    
+# Point-stabiliser                     PSL2(11)   PSL2(11)  
+# Block-stabiliser                     GL2(3)     GL2(3)    
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
@@ -430,7 +430,7 @@
 # --------------------------------------------------------
 #                                      G          Aut(D)  
 # --------------------------------------------------------
-# Structure                            PSL(2,11)  S12     
+# Structure                            PSL2(11)   S12     
 # Rank                                 2          2       
 # 2-Homogeneous                        true       true    
 # Point-stabiliser                     11:5       S11     
@@ -456,7 +456,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,11)  PGL(2,11)  
+# Structure                            PGL2(11)   PGL2(11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:10      11:10      
@@ -508,7 +508,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,11)  PGL(2,11)  
+# Structure                            PGL2(11)   PGL2(11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:10      11:10      
@@ -537,7 +537,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Point-stabiliser                     PSL2(11)   PSL2(11)  
 # Block-stabiliser                     S4         S4         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        

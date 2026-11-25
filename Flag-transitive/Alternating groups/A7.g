@@ -26,7 +26,7 @@
 # -------------------------------------------
 #
 
-# 2. number of designs: 
+# 2. Number of designs: 
 # ---------------------
 
 # ------------------------------------------------------
@@ -53,24 +53,24 @@
 # 1   7   21   15   5   10  A7  A6        (S5 x S2) cap A7  S7        2      2                  2       5       20^{1}                1^{1}6^{1}              true             true             true             true                                        complete                                      
 # 2   7   35   15   3   5   A7  A6        (S3 x S4) cap A7  S7        2      2                  2       6       6^{1}                 1^{1}6^{1}              true             true             true             true                 3                      complete                                      
 # 3   7   35   20   4   10  A7  A6        (S4 x S3) cap A7  S7        2      2                  2       6       12^{1}                1^{1}6^{1}              true             true             true             true                 2                      complete                                      
-# 4   15  15   7    7   3   A7  PSL(3,2)  PSL(3,2)          PSL(4,2)  2      2                  3       4       42^{1}                1^{1}14^{1}             true             true             true             true                 5           true       PG(3,2) or Hadamard parameters                
-# 5   15  15   8    8   4   A7  PSL(3,2)  PSL(3,2)          PSL(4,2)  2      2                  3       4       56^{1}                1^{1}14^{1}             true             true             true             true                 4           true       complement of PG(3,2) or Hadamard parameters  
-# 6   15  35   7    3   1   A7  PSL(3,2)  (3xA4):2          PSL(4,2)  2      2                  3       6       6^{1}                 1^{1}14^{1}             true             true             true             true                 7                                                                    
-# 7   15  35   28   12  22  A7  PSL(3,2)  (3xA4):2          PSL(4,2)  2      2                  3       6       132^{1}               1^{1}14^{1}             true             true             true             true                 6                                                                    
-# 8   15  42   14   5   4   A7  PSL(3,2)  A5                A7        2      2                  3       7       20^{1}                1^{1}14^{1}             true             false            true             true                 9                                                                    
-# 9   15  42   28   10  18  A7  PSL(3,2)  A5                A7        2      2                  3       7       90^{1}                1^{1}14^{1}             true             false            true             true                 8                                                                    
-# 10  15  70   28   6   10  A7  PSL(3,2)  3^2:4             A7        2      2                  3       9       30^{1}                1^{1}14^{1}             true             false            true             true                 11                                                                   
-# 11  15  70   42   9   24  A7  PSL(3,2)  3^2:4             A7        2      2                  3       9       72^{1}                1^{1}14^{1}             true             false            true             true                 10                                                                   
-# 12  15  105  28   4   6   A7  PSL(3,2)  S4                PSL(4,2)  2      2                  3       15      12^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
-# 13  15  105  42   6   15  A7  PSL(3,2)  S4                PSL(4,2)  2      2                  3       13      30^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
-# 14  15  120  56   7   24  A7  PSL(3,2)  7:3               PSL(4,2)  2      2                  3       16      42^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
-# 15  15  126  42   5   12  A7  PSL(3,2)  5:4               A7        2      2                  3       17      20^{1}                1^{1}14^{1}             true             false            true             true                 16                                                                   
-# 16  15  126  84   10  54  A7  PSL(3,2)  5:4               A7        2      2                  3       17      90^{1}                1^{1}14^{1}             true             false            true             true                 15                                                                   
-# 17  15  210  56   4   12  A7  PSL(3,2)  A4                A7        2      2                  3       24      12^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
-# 18  15  210  84   6   30  A7  PSL(3,2)  D12               A7        2      2                  3       25      30^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
-# 19  15  420  84   3   12  A7  PSL(3,2)  S3                PSL(4,2)  2      2                  3       30      6^{1}                 1^{1}14^{1}             true             false            true             false                                                                                     
-# 20  15  420  168  6   60  A7  PSL(3,2)  S3                PSL(4,2)  2      2                  3       30      30^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
-# 21  15  630  168  4   36  A7  PSL(3,2)  4                 A7        2      2                  3       34      12^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
+# 4   15  15   7    7   3   A7  PSL3(2)   PSL3(2)           PSL4(2)   2      2                  3       4       42^{1}                1^{1}14^{1}             true             true             true             true                 5           true       PG(3,2) or Hadamard parameters                
+# 5   15  15   8    8   4   A7  PSL3(2)   PSL3(2)           PSL4(2)   2      2                  3       4       56^{1}                1^{1}14^{1}             true             true             true             true                 4           true       complement of PG(3,2) or Hadamard parameters  
+# 6   15  35   7    3   1   A7  PSL3(2)   (3xA4):2          PSL4(2)   2      2                  3       6       6^{1}                 1^{1}14^{1}             true             true             true             true                 7                                                                    
+# 7   15  35   28   12  22  A7  PSL3(2)   (3xA4):2          PSL4(2)   2      2                  3       6       132^{1}               1^{1}14^{1}             true             true             true             true                 6                                                                    
+# 8   15  42   14   5   4   A7  PSL3(2)   A5                A7        2      2                  3       7       20^{1}                1^{1}14^{1}             true             false            true             true                 9                                                                    
+# 9   15  42   28   10  18  A7  PSL3(2)   A5                A7        2      2                  3       7       90^{1}                1^{1}14^{1}             true             false            true             true                 8                                                                    
+# 10  15  70   28   6   10  A7  PSL3(2)   3^2:4             A7        2      2                  3       9       30^{1}                1^{1}14^{1}             true             false            true             true                 11                                                                   
+# 11  15  70   42   9   24  A7  PSL3(2)   3^2:4             A7        2      2                  3       9       72^{1}                1^{1}14^{1}             true             false            true             true                 10                                                                   
+# 12  15  105  28   4   6   A7  PSL3(2)   S4                PSL4(2)   2      2                  3       15      12^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
+# 13  15  105  42   6   15  A7  PSL3(2)   S4                PSL4(2)   2      2                  3       13      30^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
+# 14  15  120  56   7   24  A7  PSL3(2)   7:3               PSL4(2)   2      2                  3       16      42^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
+# 15  15  126  42   5   12  A7  PSL3(2)   5:4               A7        2      2                  3       17      20^{1}                1^{1}14^{1}             true             false            true             true                 16                                                                   
+# 16  15  126  84   10  54  A7  PSL3(2)   5:4               A7        2      2                  3       17      90^{1}                1^{1}14^{1}             true             false            true             true                 15                                                                   
+# 17  15  210  56   4   12  A7  PSL3(2)   A4                A7        2      2                  3       24      12^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
+# 18  15  210  84   6   30  A7  PSL3(2)   D12               A7        2      2                  3       25      30^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
+# 19  15  420  84   3   12  A7  PSL3(2)   S3                PSL4(2)   2      2                  3       30      6^{1}                 1^{1}14^{1}             true             false            true             false                                                                                     
+# 20  15  420  168  6   60  A7  PSL3(2)   S3                PSL4(2)   2      2                  3       30      30^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
+# 21  15  630  168  4   36  A7  PSL3(2)   4                 A7        2      2                  3       34      12^{1}                1^{1}14^{1}             true             false            true             false                                                                                     
 # 22  21  70   30   9   12  A7  S5        3^2:4             S7        3      3                  5       9       36^{2}                1^{1}10^{2}             true             false            true             false                                                                                     
 # 23  21  252  60   5   12  A7  S5        D10               S7        3      3                  5       26      10^{2}                1^{1}10^{2}             true             false            true             false                                                                                     
 # 24  35  35   18   18  9   A7  (3xA4):2  (3xA4):2          S8        4      3                  6       6       36^{1}108^{1}162^{1}  1^{1}4^{1}12^{1}18^{1}  true             true             true             false                            true       complement of Hadamard parameters             
@@ -164,11 +164,11 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            A7           PSL(4,2)      
+# Structure                            A7           PSL4(2)      
 # Rank                                 2            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
-# Block-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)      2^3:PSL3(2)  
+# Block-stabiliser                     PSL3(2)      2^3:PSL3(2)  
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
 # Orbit structure of block-stabiliser  7^{1}8^{1}   7^{1}8^{1}    
 # Point-transitive                     true         true          
@@ -190,11 +190,11 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            A7           PSL(4,2)      
+# Structure                            A7           PSL4(2)      
 # Rank                                 2            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
-# Block-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)      2^3:PSL3(2)  
+# Block-stabiliser                     PSL3(2)      2^3:PSL3(2)  
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
 # Orbit structure of block-stabiliser  7^{1}8^{1}   7^{1}8^{1}    
 # Point-transitive                     true         true          
@@ -216,10 +216,10 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            A7           PSL(4,2)      
+# Structure                            A7           PSL4(2)      
 # Rank                                 2            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)      2^3:PSL3(2)  
 # Block-stabiliser                     (3xA4):2     (A4xA4):2:2   
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
 # Orbit structure of block-stabiliser  3^{1}12^{1}  3^{1}12^{1}   
@@ -242,10 +242,10 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            A7           PSL(4,2)      
+# Structure                            A7           PSL4(2)      
 # Rank                                 2            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)      2^3:PSL3(2)  
 # Block-stabiliser                     (3xA4):2     (A4xA4):2:2   
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
 # Orbit structure of block-stabiliser  3^{1}12^{1}  3^{1}12^{1}   
@@ -271,7 +271,7 @@
 # Structure                            A7           A7           
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
+# Point-stabiliser                     PSL3(2)      PSL3(2)     
 # Block-stabiliser                     A5           A5           
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
 # Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
@@ -297,7 +297,7 @@
 # Structure                            A7           A7           
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
+# Point-stabiliser                     PSL3(2)      PSL3(2)     
 # Block-stabiliser                     A5           A5           
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
 # Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
@@ -323,7 +323,7 @@
 # Structure                            A7           A7           
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
+# Point-stabiliser                     PSL3(2)      PSL3(2)     
 # Block-stabiliser                     3^2:4        3^2:4        
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
 # Orbit structure of block-stabiliser  6^{1}9^{1}   6^{1}9^{1}   
@@ -349,7 +349,7 @@
 # Structure                            A7           A7           
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
+# Point-stabiliser                     PSL3(2)      PSL3(2)     
 # Block-stabiliser                     3^2:4        3^2:4        
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
 # Orbit structure of block-stabiliser  6^{1}9^{1}   6^{1}9^{1}   
@@ -372,10 +372,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            A7               PSL(4,2)         
+# Structure                            A7               PSL4(2)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         2^3:PSL(3,2)     
+# Point-stabiliser                     PSL3(2)          2^3:PSL3(2)     
 # Block-stabiliser                     S4               2^4:2:3:2        
 # Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
 # Orbit structure of block-stabiliser  3^{1}4^{1}8^{1}  3^{1}4^{1}8^{1}  
@@ -398,10 +398,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            A7               PSL(4,2)         
+# Structure                            A7               PSL4(2)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         2^3:PSL(3,2)     
+# Point-stabiliser                     PSL3(2)          2^3:PSL3(2)     
 # Block-stabiliser                     S4               2^3:2^2:3:2      
 # Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
 # Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}  1^{1}6^{1}8^{1}  
@@ -424,11 +424,11 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            A7           PSL(4,2)      
+# Structure                            A7           PSL4(2)      
 # Rank                                 2            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     PSL(3,2)     2^3:PSL(3,2)  
-# Block-stabiliser                     7:3          PSL(3,2)      
+# Point-stabiliser                     PSL3(2)      2^3:PSL3(2)  
+# Block-stabiliser                     7:3          PSL3(2)      
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}   
 # Orbit structure of block-stabiliser  1^{1}7^{2}   1^{1}7^{2}    
 # Point-transitive                     true         true          
@@ -453,7 +453,7 @@
 # Structure                            A7           A7           
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
+# Point-stabiliser                     PSL3(2)      PSL3(2)     
 # Block-stabiliser                     5:4          5:4          
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
 # Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
@@ -479,7 +479,7 @@
 # Structure                            A7           A7           
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
+# Point-stabiliser                     PSL3(2)      PSL3(2)     
 # Block-stabiliser                     5:4          5:4          
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
 # Orbit structure of block-stabiliser  5^{1}10^{1}  5^{1}10^{1}  
@@ -505,7 +505,7 @@
 # Structure                            A7               A7               
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
+# Point-stabiliser                     PSL3(2)          PSL3(2)         
 # Block-stabiliser                     A4               A4               
 # Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{2}6^{1}  1^{1}4^{2}6^{1}  
@@ -531,7 +531,7 @@
 # Structure                            A7           A7           
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL(3,2)     PSL(3,2)     
+# Point-stabiliser                     PSL3(2)      PSL3(2)     
 # Block-stabiliser                     D12          D12          
 # Orbit structure of point-stabiliser  1^{1}14^{1}  1^{1}14^{1}  
 # Orbit structure of block-stabiliser  3^{1}6^{2}   3^{1}6^{2}   
@@ -554,10 +554,10 @@
 # ----------------------------------------------------------------------------
 #                                      G                     Aut(D)           
 # ----------------------------------------------------------------------------
-# Structure                            A7                    PSL(4,2)         
+# Structure                            A7                    PSL4(2)         
 # Rank                                 2                     2                
 # 2-Homogeneous                        true                  true             
-# Point-stabiliser                     PSL(3,2)              2^3:PSL(3,2)     
+# Point-stabiliser                     PSL3(2)               2^3:PSL3(2)     
 # Block-stabiliser                     S3                    2xS4             
 # Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}      
 # Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}3^{2}8^{1}  
@@ -580,10 +580,10 @@
 # ----------------------------------------------------------------------------
 #                                      G                     Aut(D)           
 # ----------------------------------------------------------------------------
-# Structure                            A7                    PSL(4,2)         
+# Structure                            A7                    PSL4(2)         
 # Rank                                 2                     2                
 # 2-Homogeneous                        true                  true             
-# Point-stabiliser                     PSL(3,2)              2^3:PSL(3,2)     
+# Point-stabiliser                     PSL3(2)               2^3:PSL3(2)     
 # Block-stabiliser                     S3                    2xS4             
 # Orbit structure of point-stabiliser  1^{1}14^{1}           1^{1}14^{1}      
 # Orbit structure of block-stabiliser  1^{1}2^{1}3^{2}6^{1}  1^{1}2^{1}6^{2}  
@@ -609,7 +609,7 @@
 # Structure                            A7               A7               
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL(3,2)         PSL(3,2)         
+# Point-stabiliser                     PSL3(2)          PSL3(2)         
 # Block-stabiliser                     4                4                
 # Orbit structure of point-stabiliser  1^{1}14^{1}      1^{1}14^{1}      
 # Orbit structure of block-stabiliser  1^{1}2^{1}4^{3}  1^{1}2^{1}4^{3}  

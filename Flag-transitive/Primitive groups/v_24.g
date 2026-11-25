@@ -6,7 +6,7 @@
 #               lD_24 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -32,32 +32,32 @@
 # Nr  v   b        r        k   λ       G          Gα     GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   24  276      253      22  231     M24        M23    M22:2                S24        2      2           1      1       17      true             true             true             true                                        complete  
-# 2   24  506      253      12  121     PSL(2,23)  23:11  A4                   PSL(2,23)  2      2           2      1       10      true             false            true             true                 2                                
-# 3   24  506      253      12  121     PSL(2,23)  23:11  D12                  PSL(2,23)  2      2           2      1       13      true             false            true             true                 3                                
-# 4   24  506      253      12  121     PSL(2,23)  23:11  12                   PGL(2,23)  2      2           2      1       12      true             false            true             true                 4                                
-# 5   24  552      253      11  110     PSL(2,23)  23:11  11                   PGL(2,23)  2      2           2      1       9       true             false            true             false                                                 
+# 2   24  506      253      12  121     PSL2(23)   23:11  A4                   PSL2(23)   2      2           2      1       10      true             false            true             true                 2                                
+# 3   24  506      253      12  121     PSL2(23)   23:11  D12                  PSL2(23)   2      2           2      1       13      true             false            true             true                 3                                
+# 4   24  506      253      12  121     PSL2(23)   23:11  12                   PGL2(23)   2      2           2      1       12      true             false            true             true                 4                                
+# 5   24  552      253      11  110     PSL2(23)   23:11  11                   PGL2(23)   2      2           2      1       9       true             false            true             false                                                 
 # 6   24  759      253      8   77      M24        M23    2^4:A8               M24        2      2           1      1       7       true             true             true             true                 8                                
-# 7   24  759      253      8   77      PSL(2,23)  23:11  D8                   PGL(2,23)  2      2           2      1       8       true             false            true             false                                                 
+# 7   24  759      253      8   77      PSL2(23)   23:11  D8                   PGL2(23)   2      2           2      1       8       true             false            true             false                                                 
 # 8   24  759      506      16  330     M24        M23    2^4:A8               M24        2      2           1      1       7       true             true             true             true                 6                                
-# 9   24  759      506      16  330     PGL(2,23)  23:22  D16                  PGL(2,23)  2      2           3      1       7       true             false            true             true                                                  
-# 10  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       5       true             false            true             false                                                 
-# 11  24  1012     253      6   55      PSL(2,23)  23:11  6                    PGL(2,23)  2      2           2      1       7       true             false            true             false                                                 
-# 12  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       5       true             false            true             false                                                 
-# 13  24  1012     506      12  242     PGL(2,23)  23:22  A4                   PGL(2,23)  2      2           3      1       11      true             false            true             true                 13                               
-# 14  24  1012     506      12  242     PGL(2,23)  23:22  D12                  PGL(2,23)  2      2           3      1       12      true             false            true             true                 14                               
-# 15  24  1518     253      4   33      PSL(2,23)  23:11  2^2                  PSL(2,23)  2      2           2      1       2       true             false            true             false                                                 
-# 16  24  1518     253      4   33      PSL(2,23)  23:11  4                    PGL(2,23)  2      2           2      1       4       true             false            true             false                                                 
-# 17  24  1518     506      8   154     PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       2       true             false            true             false                                                 
-# 18  24  1518     506      8   154     PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       8       true             false            true             false                                                 
-# 19  24  2024     253      3   22      M24        M23    PSL(3,4):S3          S24        2      2           1      1       1       true             true             true             true                 23                     complete  
-# 20  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       1       true             false            true             false                                                 
-# 21  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       6       true             false            true             false                                                 
-# 22  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       6       true             false            true             false                                                 
-# 23  24  2024     1771     21  1540    M24        M23    PSL(3,4):S3          S24        2      2           1      1       1       true             true             true             true                 19                     complete  
+# 9   24  759      506      16  330     PGL2(23)   23:22  D16                  PGL2(23)   2      2           3      1       7       true             false            true             true                                                  
+# 10  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       5       true             false            true             false                                                 
+# 11  24  1012     253      6   55      PSL2(23)   23:11  6                    PGL2(23)   2      2           2      1       7       true             false            true             false                                                 
+# 12  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       5       true             false            true             false                                                 
+# 13  24  1012     506      12  242     PGL2(23)   23:22  A4                   PGL2(23)   2      2           3      1       11      true             false            true             true                 13                               
+# 14  24  1012     506      12  242     PGL2(23)   23:22  D12                  PGL2(23)   2      2           3      1       12      true             false            true             true                 14                               
+# 15  24  1518     253      4   33      PSL2(23)   23:11  2^2                  PSL2(23)   2      2           2      1       2       true             false            true             false                                                 
+# 16  24  1518     253      4   33      PSL2(23)   23:11  4                    PGL2(23)   2      2           2      1       4       true             false            true             false                                                 
+# 17  24  1518     506      8   154     PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       2       true             false            true             false                                                 
+# 18  24  1518     506      8   154     PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       8       true             false            true             false                                                 
+# 19  24  2024     253      3   22      M24        M23    PSL3(4):S3           S24        2      2           1      1       1       true             true             true             true                 23                     complete  
+# 20  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       1       true             false            true             false                                                 
+# 21  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       6       true             false            true             false                                                 
+# 22  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       6       true             false            true             false                                                 
+# 23  24  2024     1771     21  1540    M24        M23    PSL3(4):S3           S24        2      2           1      1       1       true             true             true             true                 19                     complete  
 # 24  24  2576     1288     12  616     M24        M23    M12                  M24        2      2           1      1       12      true             false            true             true                 24                               
-# 25  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       3       true             false            true             false                                                 
-# 26  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       3       true             false            true             false                                                 
-# 27  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       4       true             false            true             false                                                 
+# 25  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       3       true             false            true             false                                                 
+# 26  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       3       true             false            true             false                                                 
+# 27  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       4       true             false            true             false                                                 
 # 28  24  6072     1771     7   462     M24        M23    2^4:A7               M24        2      2           1      1       6       true             false            true             false                                                 
 # 29  24  10626    1771     4   231     M24        M23    2^4:A5:S4            S24        2      2           1      1       2       true             false            true             true                 30                     complete  
 # 30  24  10626    8855     20  7315    M24        M23    2^4:A5:S4            S24        2      2           1      1       2       true             false            true             true                 29                     complete  
@@ -67,7 +67,7 @@
 # 34  24  35420    17710    12  8470    M24        M23    2^6:3^2:3:2:2        M24        2      2           1      1       13      true             false            true             true                 34                               
 # 35  24  42504    8855     5   1540    M24        M23    2^4:A5:S3            S24        2      2           1      1       3       true             false            true             false                                       complete  
 # 36  24  42504    33649    19  26334   A24        A23    (S19 x S5) cap A24   S24        2      2           4      1       3       true             true             true             true                                        complete  
-# 37  24  91080    53130    14  30030   M24        M23    2x(2^3:PSL(3,2))     M24        2      2           1      1       15      true             false            true             false                                                 
+# 37  24  91080    53130    14  30030   M24        M23    2x(2^3:PSL3(2))      M24        2      2           1      1       15      true             false            true             false                                                 
 # 38  24  113344   28336    6   6160    M24        M23    (3.A6):2             M24        2      2           1      1       5       true             false            true             true                 39                               
 # 39  24  113344   85008    18  62832   M24        M23    (3.A6):2             M24        2      2           1      1       5       true             false            true             true                 38                               
 # 40  24  134596   33649    6   7315    A24        A23    (S6 x S18) cap A24   S24        2      2           4      1       4       true             true             true             true                 41                     complete  
@@ -94,48 +94,48 @@
 # Nr  v   b        r        k   λ       G          Gα     GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   24  276      253      22  231     M24        M23    M22:2                S24        2      2           1      1       17      true             true             true             true                                        complete  
-# 2   24  276      253      22  231     PSL(2,23)  23:11  D22                  S24        2      2           2      1       15      true             true             true             true                                        complete  
-# 3   24  276      253      22  231     PGL(2,23)  23:22  D44                  S24        2      2           3      1       13      true             true             true             true                                        complete  
+# 2   24  276      253      22  231     PSL2(23)   23:11  D22                  S24        2      2           2      1       15      true             true             true             true                                        complete  
+# 3   24  276      253      22  231     PGL2(23)   23:22  D44                  S24        2      2           3      1       13      true             true             true             true                                        complete  
 # 4   24  276      253      22  231     A24        A23    (S22 x S2) cap A24   S24        2      2           4      1       11      true             true             true             true                                        complete  
 # 5   24  276      253      22  231     S24        S23    S22 x S2             S24        2      2           5      1       11      true             true             true             true                                        complete  
-# 6   24  506      253      12  121     PSL(2,23)  23:11  A4                   PSL(2,23)  2      2           2      1       10      true             false            true             true                 6                                
-# 7   24  506      253      12  121     PSL(2,23)  23:11  D12                  PSL(2,23)  2      2           2      1       13      true             false            true             true                 7                                
-# 8   24  506      253      12  121     PSL(2,23)  23:11  12                   PGL(2,23)  2      2           2      1       12      true             false            true             true                 8                                
-# 9   24  506      253      12  121     PGL(2,23)  23:22  D24                  PGL(2,23)  2      2           3      1       10      true             false            true             true                 9                                
-# 10  24  552      253      11  110     PSL(2,23)  23:11  11                   PGL(2,23)  2      2           2      1       9       true             false            true             false                                                 
-# 11  24  552      253      11  110     PGL(2,23)  23:22  D22                  PGL(2,23)  2      2           3      1       9       true             false            true             false                                                 
+# 6   24  506      253      12  121     PSL2(23)   23:11  A4                   PSL2(23)   2      2           2      1       10      true             false            true             true                 6                                
+# 7   24  506      253      12  121     PSL2(23)   23:11  D12                  PSL2(23)   2      2           2      1       13      true             false            true             true                 7                                
+# 8   24  506      253      12  121     PSL2(23)   23:11  12                   PGL2(23)   2      2           2      1       12      true             false            true             true                 8                                
+# 9   24  506      253      12  121     PGL2(23)   23:22  D24                  PGL2(23)   2      2           3      1       10      true             false            true             true                 9                                
+# 10  24  552      253      11  110     PSL2(23)   23:11  11                   PGL2(23)   2      2           2      1       9       true             false            true             false                                                 
+# 11  24  552      253      11  110     PGL2(23)   23:22  D22                  PGL2(23)   2      2           3      1       9       true             false            true             false                                                 
 # 12  24  759      253      8   77      M24        M23    2^4:A8               M24        2      2           1      1       7       true             true             true             true                 16                               
-# 13  24  759      253      8   77      PSL(2,23)  23:11  D8                   M24        2      2           2      1       8       true             false            true             false                                                 
-# 14  24  759      253      8   77      PSL(2,23)  23:11  D8                   PGL(2,23)  2      2           2      1       8       true             false            true             false                                                 
-# 15  24  759      253      8   77      PGL(2,23)  23:22  D16                  PGL(2,23)  2      2           3      1       7       true             false            true             true                 17                               
+# 13  24  759      253      8   77      PSL2(23)   23:11  D8                   M24        2      2           2      1       8       true             false            true             false                                                 
+# 14  24  759      253      8   77      PSL2(23)   23:11  D8                   PGL2(23)   2      2           2      1       8       true             false            true             false                                                 
+# 15  24  759      253      8   77      PGL2(23)   23:22  D16                  PGL2(23)   2      2           3      1       7       true             false            true             true                 17                               
 # 16  24  759      506      16  330     M24        M23    2^4:A8               M24        2      2           1      1       7       true             true             true             true                 12                               
-# 17  24  759      506      16  330     PGL(2,23)  23:22  D16                  PGL(2,23)  2      2           3      1       7       true             false            true             true                 15                               
-# 18  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       5       true             false            true             false                                                 
-# 19  24  1012     253      6   55      PSL(2,23)  23:11  6                    PGL(2,23)  2      2           2      1       7       true             false            true             false                                                 
-# 20  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       5       true             false            true             false                                                 
-# 21  24  1012     253      6   55      PGL(2,23)  23:22  D12                  PGL(2,23)  2      2           3      1       5       true             false            true             false                                                 
-# 22  24  1012     506      12  242     PGL(2,23)  23:22  D12                  PGL(2,23)  2      2           3      1       12      true             false            true             true                 22                               
-# 23  24  1012     506      12  242     PGL(2,23)  23:22  A4                   PGL(2,23)  2      2           3      1       11      true             false            true             true                 23                               
-# 24  24  1518     253      4   33      PSL(2,23)  23:11  4                    PGL(2,23)  2      2           2      1       4       true             false            true             false                                                 
-# 25  24  1518     253      4   33      PSL(2,23)  23:11  2^2                  PSL(2,23)  2      2           2      1       2       true             false            true             false                                                 
-# 26  24  1518     253      4   33      PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       2       true             false            true             false                                                 
-# 27  24  1518     506      8   154     PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       8       true             false            true             false                                                 
-# 28  24  1518     506      8   154     PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       2       true             false            true             false                                                 
-# 29  24  2024     253      3   22      M24        M23    PSL(3,4):S3          S24        2      2           1      1       1       true             true             true             true                 37                     complete  
-# 30  24  2024     253      3   22      PSL(2,23)  23:11  3                    S24        2      2           2      1       1       true             false            true             false                                       complete  
-# 31  24  2024     253      3   22      PGL(2,23)  23:22  S3                   S24        2      2           3      1       1       true             false            true             false                                       complete  
+# 17  24  759      506      16  330     PGL2(23)   23:22  D16                  PGL2(23)   2      2           3      1       7       true             false            true             true                 15                               
+# 18  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       5       true             false            true             false                                                 
+# 19  24  1012     253      6   55      PSL2(23)   23:11  6                    PGL2(23)   2      2           2      1       7       true             false            true             false                                                 
+# 20  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       5       true             false            true             false                                                 
+# 21  24  1012     253      6   55      PGL2(23)   23:22  D12                  PGL2(23)   2      2           3      1       5       true             false            true             false                                                 
+# 22  24  1012     506      12  242     PGL2(23)   23:22  D12                  PGL2(23)   2      2           3      1       12      true             false            true             true                 22                               
+# 23  24  1012     506      12  242     PGL2(23)   23:22  A4                   PGL2(23)   2      2           3      1       11      true             false            true             true                 23                               
+# 24  24  1518     253      4   33      PSL2(23)   23:11  4                    PGL2(23)   2      2           2      1       4       true             false            true             false                                                 
+# 25  24  1518     253      4   33      PSL2(23)   23:11  2^2                  PSL2(23)   2      2           2      1       2       true             false            true             false                                                 
+# 26  24  1518     253      4   33      PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       2       true             false            true             false                                                 
+# 27  24  1518     506      8   154     PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       8       true             false            true             false                                                 
+# 28  24  1518     506      8   154     PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       2       true             false            true             false                                                 
+# 29  24  2024     253      3   22      M24        M23    PSL3(4):S3           S24        2      2           1      1       1       true             true             true             true                 37                     complete  
+# 30  24  2024     253      3   22      PSL2(23)   23:11  3                    S24        2      2           2      1       1       true             false            true             false                                       complete  
+# 31  24  2024     253      3   22      PGL2(23)   23:22  S3                   S24        2      2           3      1       1       true             false            true             false                                       complete  
 # 32  24  2024     253      3   22      A24        A23    (S3 x S21) cap A24   S24        2      2           4      1       1       true             true             true             true                 38                     complete  
 # 33  24  2024     253      3   22      S24        S23    S3 x S21             S24        2      2           5      1       1       true             true             true             true                 39                     complete  
-# 34  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       1       true             false            true             false                                                 
-# 35  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       6       true             false            true             false                                                 
-# 36  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       6       true             false            true             false                                                 
-# 37  24  2024     1771     21  1540    M24        M23    PSL(3,4):S3          S24        2      2           1      1       1       true             true             true             true                 29                     complete  
+# 34  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       1       true             false            true             false                                                 
+# 35  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       6       true             false            true             false                                                 
+# 36  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       6       true             false            true             false                                                 
+# 37  24  2024     1771     21  1540    M24        M23    PSL3(4):S3           S24        2      2           1      1       1       true             true             true             true                 29                     complete  
 # 38  24  2024     1771     21  1540    A24        A23    (S21 x S3) cap A24   S24        2      2           4      1       1       true             true             true             true                 32                     complete  
 # 39  24  2024     1771     21  1540    S24        S23    S21 x S3             S24        2      2           5      1       1       true             true             true             true                 33                     complete  
 # 40  24  2576     1288     12  616     M24        M23    M12                  M24        2      2           1      1       12      true             false            true             true                 40                               
-# 41  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       3       true             false            true             false                                                 
-# 42  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       3       true             false            true             false                                                 
-# 43  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       4       true             false            true             false                                                 
+# 41  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       3       true             false            true             false                                                 
+# 42  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       3       true             false            true             false                                                 
+# 43  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       4       true             false            true             false                                                 
 # 44  24  6072     1771     7   462     M24        M23    2^4:A7               M24        2      2           1      1       6       true             false            true             false                                                 
 # 45  24  10626    1771     4   231     M24        M23    2^4:A5:S4            S24        2      2           1      1       2       true             false            true             true                 48                     complete  
 # 46  24  10626    1771     4   231     A24        A23    (S4 x S20) cap A24   S24        2      2           4      1       2       true             true             true             true                 49                     complete  
@@ -152,7 +152,7 @@
 # 57  24  42504    8855     5   1540    S24        S23    S5 x S19             S24        2      2           5      1       3       true             true             true             true                 59                     complete  
 # 58  24  42504    33649    19  26334   A24        A23    (S19 x S5) cap A24   S24        2      2           4      1       3       true             true             true             true                 56                     complete  
 # 59  24  42504    33649    19  26334   S24        S23    S19 x S5             S24        2      2           5      1       3       true             true             true             true                 57                     complete  
-# 60  24  91080    53130    14  30030   M24        M23    2x(2^3:PSL(3,2))     M24        2      2           1      1       15      true             false            true             false                                                 
+# 60  24  91080    53130    14  30030   M24        M23    2x(2^3:PSL3(2))      M24        2      2           1      1       15      true             false            true             false                                                 
 # 61  24  113344   28336    6   6160    M24        M23    (3.A6):2             M24        2      2           1      1       5       true             false            true             true                 62                               
 # 62  24  113344   85008    18  62832   M24        M23    (3.A6):2             M24        2      2           1      1       5       true             false            true             true                 61                               
 # 63  24  134596   33649    6   7315    A24        A23    (S6 x S18) cap A24   S24        2      2           4      1       4       true             true             true             true                 65                     complete  
@@ -192,54 +192,54 @@
 # Nr  v   b        r        k   λ       G          Gα     GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   24  276      253      22  231     M24        M23    M22:2                S24        2      2           1      1       17      true             true             true             true                                        complete  
-# 2   24  276      253      22  231     PSL(2,23)  23:11  D22                  S24        2      2           2      1       15      true             true             true             true                                        complete  
-# 3   24  276      253      22  231     PGL(2,23)  23:22  D44                  S24        2      2           3      1       13      true             true             true             true                                        complete  
+# 2   24  276      253      22  231     PSL2(23)   23:11  D22                  S24        2      2           2      1       15      true             true             true             true                                        complete  
+# 3   24  276      253      22  231     PGL2(23)   23:22  D44                  S24        2      2           3      1       13      true             true             true             true                                        complete  
 # 4   24  276      253      22  231     A24        A23    (S22 x S2) cap A24   S24        2      2           4      1       11      true             true             true             true                                        complete  
 # 5   24  276      253      22  231     S24        S23    S22 x S2             S24        2      2           5      1       11      true             true             true             true                                        complete  
-# 6   24  506      253      12  121     PSL(2,23)  23:11  A4                   PSL(2,23)  2      2           2      1       11      true             false            true             true                 6                                
-# 7   24  506      253      12  121     PSL(2,23)  23:11  D12                  PSL(2,23)  2      2           2      1       14      true             false            true             true                 7                                
-# 8   24  506      253      12  121     PSL(2,23)  23:11  D12                  PSL(2,23)  2      2           2      1       13      true             false            true             true                 8                                
-# 9   24  506      253      12  121     PSL(2,23)  23:11  12                   PGL(2,23)  2      2           2      1       12      true             false            true             true                 9                                
-# 10  24  506      253      12  121     PSL(2,23)  23:11  A4                   PSL(2,23)  2      2           2      1       10      true             false            true             true                 10                               
-# 11  24  506      253      12  121     PGL(2,23)  23:22  D24                  PGL(2,23)  2      2           3      1       10      true             false            true             true                 11                               
-# 12  24  552      253      11  110     PSL(2,23)  23:11  11                   PGL(2,23)  2      2           2      1       9       true             false            true             false                                                 
-# 13  24  552      253      11  110     PGL(2,23)  23:22  D22                  PGL(2,23)  2      2           3      1       9       true             false            true             false                                                 
+# 6   24  506      253      12  121     PSL2(23)   23:11  A4                   PSL2(23)   2      2           2      1       11      true             false            true             true                 6                                
+# 7   24  506      253      12  121     PSL2(23)   23:11  D12                  PSL2(23)   2      2           2      1       14      true             false            true             true                 7                                
+# 8   24  506      253      12  121     PSL2(23)   23:11  D12                  PSL2(23)   2      2           2      1       13      true             false            true             true                 8                                
+# 9   24  506      253      12  121     PSL2(23)   23:11  12                   PGL2(23)   2      2           2      1       12      true             false            true             true                 9                                
+# 10  24  506      253      12  121     PSL2(23)   23:11  A4                   PSL2(23)   2      2           2      1       10      true             false            true             true                 10                               
+# 11  24  506      253      12  121     PGL2(23)   23:22  D24                  PGL2(23)   2      2           3      1       10      true             false            true             true                 11                               
+# 12  24  552      253      11  110     PSL2(23)   23:11  11                   PGL2(23)   2      2           2      1       9       true             false            true             false                                                 
+# 13  24  552      253      11  110     PGL2(23)   23:22  D22                  PGL2(23)   2      2           3      1       9       true             false            true             false                                                 
 # 14  24  759      253      8   77      M24        M23    2^4:A8               M24        2      2           1      1       7       true             true             true             true                 19                               
-# 15  24  759      253      8   77      PSL(2,23)  23:11  D8                   M24        2      2           2      1       8       true             false            true             false                                                 
-# 16  24  759      253      8   77      PSL(2,23)  23:11  D8                   PGL(2,23)  2      2           2      1       8       true             false            true             false                                                 
-# 17  24  759      253      8   77      PSL(2,23)  23:11  D8                   M24        2      2           2      1       8       true             false            true             false                                                 
-# 18  24  759      253      8   77      PGL(2,23)  23:22  D16                  PGL(2,23)  2      2           3      1       7       true             false            true             true                 20                               
+# 15  24  759      253      8   77      PSL2(23)   23:11  D8                   M24        2      2           2      1       8       true             false            true             false                                                 
+# 16  24  759      253      8   77      PSL2(23)   23:11  D8                   PGL2(23)   2      2           2      1       8       true             false            true             false                                                 
+# 17  24  759      253      8   77      PSL2(23)   23:11  D8                   M24        2      2           2      1       8       true             false            true             false                                                 
+# 18  24  759      253      8   77      PGL2(23)   23:22  D16                  PGL2(23)   2      2           3      1       7       true             false            true             true                 20                               
 # 19  24  759      506      16  330     M24        M23    2^4:A8               M24        2      2           1      1       7       true             true             true             true                 14                               
-# 20  24  759      506      16  330     PGL(2,23)  23:22  D16                  PGL(2,23)  2      2           3      1       7       true             false            true             true                 18                               
-# 21  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       5       true             false            true             false                                                 
-# 22  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       6       true             false            true             false                                                 
-# 23  24  1012     253      6   55      PSL(2,23)  23:11  6                    PGL(2,23)  2      2           2      1       7       true             false            true             false                                                 
-# 24  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       5       true             false            true             false                                                 
-# 25  24  1012     253      6   55      PSL(2,23)  23:11  S3                   PSL(2,23)  2      2           2      1       6       true             false            true             false                                                 
-# 26  24  1012     253      6   55      PGL(2,23)  23:22  D12                  PGL(2,23)  2      2           3      1       5       true             false            true             false                                                 
-# 27  24  1012     506      12  242     PGL(2,23)  23:22  A4                   PGL(2,23)  2      2           3      1       11      true             false            true             true                 27                               
-# 28  24  1012     506      12  242     PGL(2,23)  23:22  D12                  PGL(2,23)  2      2           3      1       12      true             false            true             true                 28                               
-# 29  24  1518     253      4   33      PSL(2,23)  23:11  2^2                  PSL(2,23)  2      2           2      1       2       true             false            true             false                                                 
-# 30  24  1518     253      4   33      PSL(2,23)  23:11  4                    PGL(2,23)  2      2           2      1       4       true             false            true             false                                                 
-# 31  24  1518     253      4   33      PSL(2,23)  23:11  2^2                  PSL(2,23)  2      2           2      1       3       true             false            true             false                                                 
-# 32  24  1518     253      4   33      PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       2       true             false            true             false                                                 
-# 33  24  1518     506      8   154     PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       8       true             false            true             false                                                 
-# 34  24  1518     506      8   154     PGL(2,23)  23:22  D8                   PGL(2,23)  2      2           3      1       2       true             false            true             false                                                 
-# 35  24  2024     253      3   22      M24        M23    PSL(3,4):S3          S24        2      2           1      1       1       true             true             true             true                 43                     complete  
-# 36  24  2024     253      3   22      PSL(2,23)  23:11  3                    S24        2      2           2      1       1       true             false            true             false                                       complete  
-# 37  24  2024     253      3   22      PGL(2,23)  23:22  S3                   S24        2      2           3      1       1       true             false            true             false                                       complete  
+# 20  24  759      506      16  330     PGL2(23)   23:22  D16                  PGL2(23)   2      2           3      1       7       true             false            true             true                 18                               
+# 21  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       5       true             false            true             false                                                 
+# 22  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       6       true             false            true             false                                                 
+# 23  24  1012     253      6   55      PSL2(23)   23:11  6                    PGL2(23)   2      2           2      1       7       true             false            true             false                                                 
+# 24  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       5       true             false            true             false                                                 
+# 25  24  1012     253      6   55      PSL2(23)   23:11  S3                   PSL2(23)   2      2           2      1       6       true             false            true             false                                                 
+# 26  24  1012     253      6   55      PGL2(23)   23:22  D12                  PGL2(23)   2      2           3      1       5       true             false            true             false                                                 
+# 27  24  1012     506      12  242     PGL2(23)   23:22  A4                   PGL2(23)   2      2           3      1       11      true             false            true             true                 27                               
+# 28  24  1012     506      12  242     PGL2(23)   23:22  D12                  PGL2(23)   2      2           3      1       12      true             false            true             true                 28                               
+# 29  24  1518     253      4   33      PSL2(23)   23:11  2^2                  PSL2(23)   2      2           2      1       2       true             false            true             false                                                 
+# 30  24  1518     253      4   33      PSL2(23)   23:11  4                    PGL2(23)   2      2           2      1       4       true             false            true             false                                                 
+# 31  24  1518     253      4   33      PSL2(23)   23:11  2^2                  PSL2(23)   2      2           2      1       3       true             false            true             false                                                 
+# 32  24  1518     253      4   33      PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       2       true             false            true             false                                                 
+# 33  24  1518     506      8   154     PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       8       true             false            true             false                                                 
+# 34  24  1518     506      8   154     PGL2(23)   23:22  D8                   PGL2(23)   2      2           3      1       2       true             false            true             false                                                 
+# 35  24  2024     253      3   22      M24        M23    PSL3(4):S3           S24        2      2           1      1       1       true             true             true             true                 43                     complete  
+# 36  24  2024     253      3   22      PSL2(23)   23:11  3                    S24        2      2           2      1       1       true             false            true             false                                       complete  
+# 37  24  2024     253      3   22      PGL2(23)   23:22  S3                   S24        2      2           3      1       1       true             false            true             false                                       complete  
 # 38  24  2024     253      3   22      A24        A23    (S3 x S21) cap A24   S24        2      2           4      1       1       true             true             true             true                 44                     complete  
 # 39  24  2024     253      3   22      S24        S23    S3 x S21             S24        2      2           5      1       1       true             true             true             true                 45                     complete  
-# 40  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       6       true             false            true             false                                                 
-# 41  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       6       true             false            true             false                                                 
-# 42  24  2024     506      6   110     PGL(2,23)  23:22  S3                   PGL(2,23)  2      2           3      1       1       true             false            true             false                                                 
-# 43  24  2024     1771     21  1540    M24        M23    PSL(3,4):S3          S24        2      2           1      1       1       true             true             true             true                 35                     complete  
+# 40  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       6       true             false            true             false                                                 
+# 41  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       6       true             false            true             false                                                 
+# 42  24  2024     506      6   110     PGL2(23)   23:22  S3                   PGL2(23)   2      2           3      1       1       true             false            true             false                                                 
+# 43  24  2024     1771     21  1540    M24        M23    PSL3(4):S3           S24        2      2           1      1       1       true             true             true             true                 35                     complete  
 # 44  24  2024     1771     21  1540    A24        A23    (S21 x S3) cap A24   S24        2      2           4      1       1       true             true             true             true                 38                     complete  
 # 45  24  2024     1771     21  1540    S24        S23    S21 x S3             S24        2      2           5      1       1       true             true             true             true                 39                     complete  
 # 46  24  2576     1288     12  616     M24        M23    M12                  M24        2      2           1      1       12      true             false            true             true                 46                               
-# 47  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       4       true             false            true             false                                                 
-# 48  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       3       true             false            true             false                                                 
-# 49  24  3036     506      4   66      PGL(2,23)  23:22  2^2                  PGL(2,23)  2      2           3      1       3       true             false            true             false                                                 
+# 47  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       4       true             false            true             false                                                 
+# 48  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       3       true             false            true             false                                                 
+# 49  24  3036     506      4   66      PGL2(23)   23:22  2^2                  PGL2(23)   2      2           3      1       3       true             false            true             false                                                 
 # 50  24  6072     1771     7   462     M24        M23    2^4:A7               M24        2      2           1      1       6       true             false            true             false                                                 
 # 51  24  10626    1771     4   231     M24        M23    2^4:A5:S4            S24        2      2           1      1       2       true             false            true             true                 54                     complete  
 # 52  24  10626    1771     4   231     A24        A23    (S4 x S20) cap A24   S24        2      2           4      1       2       true             true             true             true                 55                     complete  
@@ -256,7 +256,7 @@
 # 63  24  42504    8855     5   1540    S24        S23    S5 x S19             S24        2      2           5      1       3       true             true             true             true                 65                     complete  
 # 64  24  42504    33649    19  26334   A24        A23    (S19 x S5) cap A24   S24        2      2           4      1       3       true             true             true             true                 62                     complete  
 # 65  24  42504    33649    19  26334   S24        S23    S19 x S5             S24        2      2           5      1       3       true             true             true             true                 63                     complete  
-# 66  24  91080    53130    14  30030   M24        M23    2x(2^3:PSL(3,2))     M24        2      2           1      1       15      true             false            true             false                                                 
+# 66  24  91080    53130    14  30030   M24        M23    2x(2^3:PSL3(2))      M24        2      2           1      1       15      true             false            true             false                                                 
 # 67  24  113344   28336    6   6160    M24        M23    (3.A6):2             M24        2      2           1      1       5       true             false            true             true                 68                               
 # 68  24  113344   85008    18  62832   M24        M23    (3.A6):2             M24        2      2           1      1       5       true             false            true             true                 67                               
 # 69  24  134596   33649    6   7315    A24        A23    (S6 x S18) cap A24   S24        2      2           4      1       4       true             true             true             true                 71                     complete  
@@ -327,7 +327,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PSL(2,23)  
+# Structure                            PSL2(23)   PSL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:11      
@@ -353,7 +353,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PSL(2,23)  
+# Structure                            PSL2(23)   PSL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:11      
@@ -379,7 +379,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PGL(2,23)  
+# Structure                            PSL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:22      
@@ -405,7 +405,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PGL(2,23)  
+# Structure                            PSL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:22      
@@ -457,7 +457,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PGL(2,23)  
+# Structure                            PSL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:22      
@@ -509,7 +509,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -535,7 +535,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PSL(2,23)  
+# Structure                            PSL2(23)   PSL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:11      
@@ -561,7 +561,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PGL(2,23)  
+# Structure                            PSL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:22      
@@ -587,7 +587,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PSL(2,23)  
+# Structure                            PSL2(23)   PSL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:11      
@@ -613,7 +613,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -639,7 +639,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -665,7 +665,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PSL(2,23)  
+# Structure                            PSL2(23)   PSL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:11      
@@ -691,7 +691,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,23)  PGL(2,23)  
+# Structure                            PSL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:11      23:22      
@@ -717,7 +717,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -743,7 +743,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -773,7 +773,7 @@
 # Rank                                 2            2       
 # 2-Homogeneous                        true         true    
 # Point-stabiliser                     M23          S23     
-# Block-stabiliser                     PSL(3,4):S3  S21xS3  
+# Block-stabiliser                     PSL3(4):S3   S21xS3  
 # Orbit structure of point-stabiliser                       
 # Orbit structure of block-stabiliser                       
 # Point-transitive                     true         true    
@@ -795,7 +795,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -821,7 +821,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -847,7 +847,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -877,7 +877,7 @@
 # Rank                                 2            2       
 # 2-Homogeneous                        true         true    
 # Point-stabiliser                     M23          S23     
-# Block-stabiliser                     PSL(3,4):S3  S3xS21  
+# Block-stabiliser                     PSL3(4):S3   S3xS21  
 # Orbit structure of point-stabiliser                       
 # Orbit structure of block-stabiliser                       
 # Point-transitive                     true         true    
@@ -925,7 +925,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -951,7 +951,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -977,7 +977,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,23)  PGL(2,23)  
+# Structure                            PGL2(23)   PGL2(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     23:22      23:22      
@@ -1241,7 +1241,7 @@
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     M23               M23               
-# Block-stabiliser                     2x(2^3:PSL(3,2))  2x(2^3:PSL(3,2))  
+# Block-stabiliser                     2x(2^3:PSL3(2))   2x(2^3:PSL3(2))  
 # Orbit structure of point-stabiliser                                      
 # Orbit structure of block-stabiliser                                      
 # Point-transitive                     true              true              

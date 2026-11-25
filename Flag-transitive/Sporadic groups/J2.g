@@ -52,8 +52,8 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b      r     k   λ    G   Gα        GB       Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   100  25200  3024  12  336  J2  PSU(3,3)  3xD8     HJ:2    3      3                  2       82      true             false            true             false                                                 
-# 2   100  25200  3024  12  336  J2  PSU(3,3)  S4       HJ:2    3      3                  2       80      true             false            true             false                                                 
+# 1   100  25200  3024  12  336  J2  PSU3(3)   3xD8     HJ:2    3      3                  2       82      true             false            true             false                                                 
+# 2   100  25200  3024  12  336  J2  PSU3(3)   S4       HJ:2    3      3                  2       80      true             false            true             false                                                 
 # 3   280  18900  2160  32  240  J2  (3.A6):2  (2^4):2  HJ:2    4      4                  3       69      true             false            true             false                                                 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -70,7 +70,7 @@
 # Structure                            J2                                HJ:2                              
 # Rank                                 3                                 3                                 
 # 2-Homogeneous                        false                             false                             
-# Point-stabiliser                     PSU(3,3)                          PSU(3,3):2                        
+# Point-stabiliser                     PSU3(3)                           PSU3(3):2                        
 # Block-stabiliser                     3xD8                              D8xS3                             
 # Orbit structure of point-stabiliser  1^{1}36^{1}63^{1}                 1^{1}36^{1}63^{1}                 
 # Orbit structure of block-stabiliser  2^{1}3^{2}4^{2}6^{2}12^{2}24^{2}  2^{1}3^{2}4^{2}6^{2}12^{2}24^{2}  
@@ -96,7 +96,7 @@
 # Structure                            J2                                HJ:2                                   
 # Rank                                 3                                 3                                      
 # 2-Homogeneous                        false                             false                                  
-# Point-stabiliser                     PSU(3,3)                          PSU(3,3):2                             
+# Point-stabiliser                     PSU3(3)                           PSU3(3):2                             
 # Block-stabiliser                     S4                                2xS4                                   
 # Orbit structure of point-stabiliser  1^{1}36^{1}63^{1}                 1^{1}36^{1}63^{1}                      
 # Orbit structure of block-stabiliser  1^{3}3^{3}4^{1}6^{4}12^{3}24^{1}  1^{1}2^{1}3^{1}4^{1}6^{3}12^{2}24^{2}  

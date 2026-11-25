@@ -1,15 +1,29 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Group (autSubgroup): L3(7):S3 = PSL(3,7):S3
+# Group (autSubgroup): L3(7):S3 = PSL3(7):S3
 # ####################################################################################################
-# Remark:       there exists no 2-design admitting PSL(3,7):S3 as a flag-transitive automorphism group
+# Remark:       there exists no 2-design admitting PSL3(7):S3 as a flag-transitive automorphism group
 # References:    
 
-# 1. number of designs: 
+# 1. Group information:
+# ---------------------
+
+# ATLAS name:          L3(7).S3
+# GAP name:            L3(7).S3
+# Order:               11261376 = 2^6 * 3^3 * 7^3 * 19
+# No. maximal classes: 
+
+# Maximal subgroups:
+# -------------------------------------------
+# Nr   structure         order         index
+# -------------------------------------------
+# -------------------------------------------
+
+# 2. Number of designs:
 # ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          0              0      
 # Point-imprimitive    0          0              0      
@@ -23,7 +37,7 @@
 # Total                0          0              0      
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,11 +46,12 @@
 #                                                                                                                                                                                          
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
+# 4. Further information: 
 # -----------------------
 
-# 4. Designs: 
+# 5. Designs: 
 # -----------
 
 lD_L37dS3 := [  ];
-for D in lD_L37dS3 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+for D in lD_L37dS3 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
+

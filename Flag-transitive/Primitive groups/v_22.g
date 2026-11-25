@@ -6,7 +6,7 @@
 #               lD_22 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,44 +31,44 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b       r       k   λ       G      Gα          GB                   Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   22  77      21      6   5       M22    PSL(3,4)    2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 2                                
-# 2   22  77      56      16  40      M22    PSL(3,4)    2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 1                                
-# 3   22  176     56      7   16      M22    PSL(3,4)    A7                   M22     2      2           1      1       11      true             true             true             true                 4                                
-# 4   22  176     120     15  80      M22    PSL(3,4)    A7                   M22     2      2           1      1       11      true             true             true             true                 3                                
-# 5   22  231     210     20  190     M22    PSL(3,4)    2^4:S5               S22     2      2           1      1       26      true             true             true             true                                        complete  
-# 6   22  330     120     8   40      M22    PSL(3,4)    2^3:PSL(3,2)         M22:2   2      2           1      1       14      true             true             true             true                 7                                
-# 7   22  330     210     14  130     M22    PSL(3,4)    2^3:PSL(3,2)         M22:2   2      2           1      1       14      true             true             true             true                 6                                
-# 8   22  352     112     7   32      M22:2  PSL(3,4):2  A7                   M22:2   2      2           2      1       9       true             false            true             true                 9                                
-# 9   22  352     240     15  160     M22:2  PSL(3,4):2  A7                   M22:2   2      2           2      1       9       true             false            true             true                 8                                
-# 10  22  462     105     5   20      M22    PSL(3,4)    2^4:A5               M22:2   2      2           1      1       4       true             false            true             false                                                 
-# 11  22  616     280     10  120     M22    PSL(3,4)    A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 12                               
-# 12  22  616     336     12  176     M22    PSL(3,4)    A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 11                               
-# 13  22  672     336     11  160     M22    PSL(3,4)    PSL(2,11)            M22     2      2           1      1       21      true             true             true             true                                                  
-# 14  22  1155    210     4   30      M22    PSL(3,4)    2^4:2:2:3:2          M22:2   2      2           1      1       2       true             false            true             false                                                 
-# 15  22  1232    336     6   80      M22    PSL(3,4)    A6                   M22     2      2           1      1       8       true             false            true             false                                                 
-# 16  22  1232    840     15  560     M22    PSL(3,4)    A6                   M22:2   2      2           1      1       25      true             false            true             false                                                 
-# 17  22  1344    672     11  320     M22:2  PSL(3,4):2  PSL(2,11)            M22:2   2      2           2      1       17      true             false            true             true                 17                               
-# 18  22  1540    210     3   20      M22    PSL(3,4)    (A4xA4):2            S22     2      2           1      1       1       true             false            true             false                                       complete  
+# 1   22  77      21      6   5       M22    PSL3(4)     2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 2                                
+# 2   22  77      56      16  40      M22    PSL3(4)     2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 1                                
+# 3   22  176     56      7   16      M22    PSL3(4)     A7                   M22     2      2           1      1       11      true             true             true             true                 4                                
+# 4   22  176     120     15  80      M22    PSL3(4)     A7                   M22     2      2           1      1       11      true             true             true             true                 3                                
+# 5   22  231     210     20  190     M22    PSL3(4)     2^4:S5               S22     2      2           1      1       26      true             true             true             true                                        complete  
+# 6   22  330     120     8   40      M22    PSL3(4)     2^3:PSL3(2)          M22:2   2      2           1      1       14      true             true             true             true                 7                                
+# 7   22  330     210     14  130     M22    PSL3(4)     2^3:PSL3(2)          M22:2   2      2           1      1       14      true             true             true             true                 6                                
+# 8   22  352     112     7   32      M22:2  PSL3(4):2   A7                   M22:2   2      2           2      1       9       true             false            true             true                 9                                
+# 9   22  352     240     15  160     M22:2  PSL3(4):2   A7                   M22:2   2      2           2      1       9       true             false            true             true                 8                                
+# 10  22  462     105     5   20      M22    PSL3(4)     2^4:A5               M22:2   2      2           1      1       4       true             false            true             false                                                 
+# 11  22  616     280     10  120     M22    PSL3(4)     A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 12                               
+# 12  22  616     336     12  176     M22    PSL3(4)     A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 11                               
+# 13  22  672     336     11  160     M22    PSL3(4)     PSL2(11)             M22     2      2           1      1       21      true             true             true             true                                                  
+# 14  22  1155    210     4   30      M22    PSL3(4)     2^4:2:2:3:2          M22:2   2      2           1      1       2       true             false            true             false                                                 
+# 15  22  1232    336     6   80      M22    PSL3(4)     A6                   M22     2      2           1      1       8       true             false            true             false                                                 
+# 16  22  1232    840     15  560     M22    PSL3(4)     A6                   M22:2   2      2           1      1       25      true             false            true             false                                                 
+# 17  22  1344    672     11  320     M22:2  PSL3(4):2   PSL2(11)             M22:2   2      2           2      1       17      true             false            true             true                 17                               
+# 18  22  1540    210     3   20      M22    PSL3(4)     (A4xA4):2            S22     2      2           1      1       1       true             false            true             false                                       complete  
 # 19  22  1540    1330    19  1140    A22    A21         (S19 x S3) cap A22   S22     2      2           3      1       1       true             true             true             true                                        complete  
-# 20  22  2310    1260    12  660     M22    PSL(3,4)    2^4:3:2:2            M22:2   2      2           1      1       22      true             false            true             false                                                 
-# 21  22  2464    672     6   160     M22:2  PSL(3,4):2  A6                   M22:2   2      2           2      1       7       true             false            true             false                                                 
-# 22  22  2640    840     7   240     M22    PSL(3,4)    PSL(3,2)             M22:2   2      2           1      1       13      true             false            true             false                                                 
-# 23  22  2640    1680    14  1040    M22    PSL(3,4)    PSL(3,2)             M22     2      2           1      1       23      true             false            true             false                                                 
-# 24  22  3696    840     5   160     M22    PSL(3,4)    S5                   M22     2      2           1      1       5       true             false            true             false                                                 
-# 25  22  5280    3360    14  2080    M22:2  PSL(3,4):2  PSL(3,2)             M22:2   2      2           2      1       19      true             false            true             false                                                 
-# 26  22  6160    1120    4   160     M22    PSL(3,4)    (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
-# 27  22  6160    2520    9   960     M22    PSL(3,4)    3^2:Q8               M22:2   2      2           1      1       16      true             false            true             false                                                 
-# 28  22  6160    3360    12  1760    M22    PSL(3,4)    (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
+# 20  22  2310    1260    12  660     M22    PSL3(4)     2^4:3:2:2            M22:2   2      2           1      1       22      true             false            true             false                                                 
+# 21  22  2464    672     6   160     M22:2  PSL3(4):2   A6                   M22:2   2      2           2      1       7       true             false            true             false                                                 
+# 22  22  2640    840     7   240     M22    PSL3(4)     PSL3(2)              M22:2   2      2           1      1       13      true             false            true             false                                                 
+# 23  22  2640    1680    14  1040    M22    PSL3(4)     PSL3(2)              M22     2      2           1      1       23      true             false            true             false                                                 
+# 24  22  3696    840     5   160     M22    PSL3(4)     S5                   M22     2      2           1      1       5       true             false            true             false                                                 
+# 25  22  5280    3360    14  2080    M22:2  PSL3(4):2   PSL3(2)              M22:2   2      2           2      1       19      true             false            true             false                                                 
+# 26  22  6160    1120    4   160     M22    PSL3(4)     (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
+# 27  22  6160    2520    9   960     M22    PSL3(4)     3^2:Q8               M22:2   2      2           1      1       16      true             false            true             false                                                 
+# 28  22  6160    3360    12  1760    M22    PSL3(4)     (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
 # 29  22  7315    1330    4   190     A22    A21         (S4 x S18) cap A22   S22     2      2           3      1       2       true             true             true             true                 30                     complete  
 # 30  22  7315    5985    18  4845    A22    A21         (S18 x S4) cap A22   S22     2      2           3      1       2       true             true             true             true                 29                     complete  
-# 31  22  7392    1680    5   320     M22:2  PSL(3,4):2  S5                   M22:2   2      2           2      1       5       true             false            true             false                                                 
-# 32  22  7392    3360    10  1440    M22    PSL(3,4)    A5                   M22     2      2           1      1       18      true             false            true             false                                                 
-# 33  22  9240    2520    6   600     M22    PSL(3,4)    2xS4                 M22:2   2      2           1      1       10      true             false            true             false                                                 
-# 34  22  14784   6720    10  2880    M22:2  PSL(3,4):2  A5                   M22:2   2      2           2      1       15      true             false            true             false                                                 
-# 35  22  22176   10080   10  4320    M22    PSL(3,4)    5:4                  M22:2   2      2           1      1       20      true             false            true             false                                                 
+# 31  22  7392    1680    5   320     M22:2  PSL3(4):2   S5                   M22:2   2      2           2      1       5       true             false            true             false                                                 
+# 32  22  7392    3360    10  1440    M22    PSL3(4)     A5                   M22     2      2           1      1       18      true             false            true             false                                                 
+# 33  22  9240    2520    6   600     M22    PSL3(4)     2xS4                 M22:2   2      2           1      1       10      true             false            true             false                                                 
+# 34  22  14784   6720    10  2880    M22:2  PSL3(4):2   A5                   M22:2   2      2           2      1       15      true             false            true             false                                                 
+# 35  22  22176   10080   10  4320    M22    PSL3(4)     5:4                  M22:2   2      2           1      1       20      true             false            true             false                                                 
 # 36  22  26334   5985    5   1140    A22    A21         (S5 x S17) cap A22   S22     2      2           3      1       3       true             true             true             true                 37                     complete  
 # 37  22  26334   20349   17  15504   A22    A21         (S17 x S5) cap A22   S22     2      2           3      1       3       true             true             true             true                 36                     complete  
-# 38  22  27720   10080   8   3360    M22    PSL(3,4)    QD16                 M22:2   2      2           1      1       15      true             false            true             false                                                 
+# 38  22  27720   10080   8   3360    M22    PSL3(4)     QD16                 M22:2   2      2           1      1       15      true             false            true             false                                                 
 # 39  22  74613   20349   6   4845    A22    A21         (S6 x S16) cap A22   S22     2      2           3      1       4       true             true             true             true                 40                     complete  
 # 40  22  74613   54264   16  38760   A22    A21         (S16 x S6) cap A22   S22     2      2           3      1       4       true             true             true             true                 39                     complete  
 # 41  22  170544  54264   7   15504   A22    A21         (S7 x S15) cap A22   S22     2      2           3      1       5       true             true             true             true                 42                     complete  
@@ -86,72 +86,72 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b       r       k   λ       G      Gα          GB                   Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   22  77      21      6   5       M22    PSL(3,4)    2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 3                                
-# 2   22  77      21      6   5       M22:2  PSL(3,4):2  2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 4                                
-# 3   22  77      56      16  40      M22    PSL(3,4)    2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 1                                
-# 4   22  77      56      16  40      M22:2  PSL(3,4):2  2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 2                                
-# 5   22  176     56      7   16      M22    PSL(3,4)    A7                   M22     2      2           1      1       11      true             true             true             true                 6                                
-# 6   22  176     120     15  80      M22    PSL(3,4)    A7                   M22     2      2           1      1       11      true             true             true             true                 5                                
-# 7   22  231     210     20  190     M22    PSL(3,4)    2^4:S5               S22     2      2           1      1       26      true             true             true             true                                        complete  
-# 8   22  231     210     20  190     M22:2  PSL(3,4):2  2^4:A5:2^2           S22     2      2           2      1       21      true             true             true             true                                        complete  
+# 1   22  77      21      6   5       M22    PSL3(4)     2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 3                                
+# 2   22  77      21      6   5       M22:2  PSL3(4):2   2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 4                                
+# 3   22  77      56      16  40      M22    PSL3(4)     2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 1                                
+# 4   22  77      56      16  40      M22:2  PSL3(4):2   2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 2                                
+# 5   22  176     56      7   16      M22    PSL3(4)     A7                   M22     2      2           1      1       11      true             true             true             true                 6                                
+# 6   22  176     120     15  80      M22    PSL3(4)     A7                   M22     2      2           1      1       11      true             true             true             true                 5                                
+# 7   22  231     210     20  190     M22    PSL3(4)     2^4:S5               S22     2      2           1      1       26      true             true             true             true                                        complete  
+# 8   22  231     210     20  190     M22:2  PSL3(4):2   2^4:A5:2^2           S22     2      2           2      1       21      true             true             true             true                                        complete  
 # 9   22  231     210     20  190     A22    A21         (S20 x S2) cap A22   S22     2      2           3      1       10      true             true             true             true                                        complete  
 # 10  22  231     210     20  190     S22    S21         S20 x S2             S22     2      2           4      1       10      true             true             true             true                                        complete  
-# 11  22  330     120     8   40      M22    PSL(3,4)    2^3:PSL(3,2)         M22:2   2      2           1      1       14      true             true             true             true                 13                               
-# 12  22  330     120     8   40      M22:2  PSL(3,4):2  2x(2^3:PSL(3,2))     M22:2   2      2           2      1       11      true             true             true             true                 14                               
-# 13  22  330     210     14  130     M22    PSL(3,4)    2^3:PSL(3,2)         M22:2   2      2           1      1       14      true             true             true             true                 11                               
-# 14  22  330     210     14  130     M22:2  PSL(3,4):2  2x(2^3:PSL(3,2))     M22:2   2      2           2      1       11      true             true             true             true                 12                               
-# 15  22  352     112     7   32      M22:2  PSL(3,4):2  A7                   M22:2   2      2           2      1       9       true             false            true             true                 16                               
-# 16  22  352     240     15  160     M22:2  PSL(3,4):2  A7                   M22:2   2      2           2      1       9       true             false            true             true                 15                               
-# 17  22  462     105     5   20      M22    PSL(3,4)    2^4:A5               M22:2   2      2           1      1       4       true             false            true             false                                                 
-# 18  22  462     105     5   20      M22:2  PSL(3,4):2  2^4:S5               M22:2   2      2           2      1       4       true             false            true             false                                                 
-# 19  22  616     280     10  120     M22    PSL(3,4)    A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 21                               
-# 20  22  616     280     10  120     M22:2  PSL(3,4):2  A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 22                               
-# 21  22  616     336     12  176     M22    PSL(3,4)    A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 19                               
-# 22  22  616     336     12  176     M22:2  PSL(3,4):2  A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 20                               
-# 23  22  672     336     11  160     M22    PSL(3,4)    PSL(2,11)            M22     2      2           1      1       21      true             true             true             true                                                  
-# 24  22  1155    210     4   30      M22    PSL(3,4)    2^4:2:2:3:2          M22:2   2      2           1      1       2       true             false            true             false                                                 
-# 25  22  1155    210     4   30      M22:2  PSL(3,4):2  (2x((2^4):2)):2:3:2  M22:2   2      2           2      1       2       true             false            true             false                                                 
-# 26  22  1232    336     6   80      M22    PSL(3,4)    A6                   M22     2      2           1      1       8       true             false            true             false                                                 
-# 27  22  1232    840     15  560     M22    PSL(3,4)    A6                   M22:2   2      2           1      1       25      true             false            true             false                                                 
-# 28  22  1232    840     15  560     M22:2  PSL(3,4):2  S6                   M22:2   2      2           2      1       20      true             false            true             false                                                 
-# 29  22  1344    672     11  320     M22:2  PSL(3,4):2  PSL(2,11)            M22:2   2      2           2      1       17      true             false            true             true                 29                               
-# 30  22  1540    210     3   20      M22    PSL(3,4)    (A4xA4):2            S22     2      2           1      1       1       true             false            true             false                                       complete  
-# 31  22  1540    210     3   20      M22:2  PSL(3,4):2  (A4xA4):2:2          S22     2      2           2      1       1       true             false            true             false                                       complete  
+# 11  22  330     120     8   40      M22    PSL3(4)     2^3:PSL3(2)          M22:2   2      2           1      1       14      true             true             true             true                 13                               
+# 12  22  330     120     8   40      M22:2  PSL3(4):2   2x(2^3:PSL3(2))      M22:2   2      2           2      1       11      true             true             true             true                 14                               
+# 13  22  330     210     14  130     M22    PSL3(4)     2^3:PSL3(2)          M22:2   2      2           1      1       14      true             true             true             true                 11                               
+# 14  22  330     210     14  130     M22:2  PSL3(4):2   2x(2^3:PSL3(2))      M22:2   2      2           2      1       11      true             true             true             true                 12                               
+# 15  22  352     112     7   32      M22:2  PSL3(4):2   A7                   M22:2   2      2           2      1       9       true             false            true             true                 16                               
+# 16  22  352     240     15  160     M22:2  PSL3(4):2   A7                   M22:2   2      2           2      1       9       true             false            true             true                 15                               
+# 17  22  462     105     5   20      M22    PSL3(4)     2^4:A5               M22:2   2      2           1      1       4       true             false            true             false                                                 
+# 18  22  462     105     5   20      M22:2  PSL3(4):2   2^4:S5               M22:2   2      2           2      1       4       true             false            true             false                                                 
+# 19  22  616     280     10  120     M22    PSL3(4)     A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 21                               
+# 20  22  616     280     10  120     M22:2  PSL3(4):2   A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 22                               
+# 21  22  616     336     12  176     M22    PSL3(4)     A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 19                               
+# 22  22  616     336     12  176     M22:2  PSL3(4):2   A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 20                               
+# 23  22  672     336     11  160     M22    PSL3(4)     PSL2(11)             M22     2      2           1      1       21      true             true             true             true                                                  
+# 24  22  1155    210     4   30      M22    PSL3(4)     2^4:2:2:3:2          M22:2   2      2           1      1       2       true             false            true             false                                                 
+# 25  22  1155    210     4   30      M22:2  PSL3(4):2   (2x((2^4):2)):2:3:2  M22:2   2      2           2      1       2       true             false            true             false                                                 
+# 26  22  1232    336     6   80      M22    PSL3(4)     A6                   M22     2      2           1      1       8       true             false            true             false                                                 
+# 27  22  1232    840     15  560     M22    PSL3(4)     A6                   M22:2   2      2           1      1       25      true             false            true             false                                                 
+# 28  22  1232    840     15  560     M22:2  PSL3(4):2   S6                   M22:2   2      2           2      1       20      true             false            true             false                                                 
+# 29  22  1344    672     11  320     M22:2  PSL3(4):2   PSL2(11)             M22:2   2      2           2      1       17      true             false            true             true                 29                               
+# 30  22  1540    210     3   20      M22    PSL3(4)     (A4xA4):2            S22     2      2           1      1       1       true             false            true             false                                       complete  
+# 31  22  1540    210     3   20      M22:2  PSL3(4):2   (A4xA4):2:2          S22     2      2           2      1       1       true             false            true             false                                       complete  
 # 32  22  1540    210     3   20      A22    A21         (S3 x S19) cap A22   S22     2      2           3      1       1       true             true             true             true                 34                     complete  
 # 33  22  1540    210     3   20      S22    S21         S3 x S19             S22     2      2           4      1       1       true             true             true             true                 35                     complete  
 # 34  22  1540    1330    19  1140    A22    A21         (S19 x S3) cap A22   S22     2      2           3      1       1       true             true             true             true                 32                     complete  
 # 35  22  1540    1330    19  1140    S22    S21         S19 x S3             S22     2      2           4      1       1       true             true             true             true                 33                     complete  
-# 36  22  2310    1260    12  660     M22    PSL(3,4)    2^4:3:2:2            M22:2   2      2           1      1       22      true             false            true             false                                                 
-# 37  22  2310    1260    12  660     M22:2  PSL(3,4):2  2x((((2^4):2):3):2)  M22:2   2      2           2      1       18      true             false            true             false                                                 
-# 38  22  2464    672     6   160     M22:2  PSL(3,4):2  A6                   M22:2   2      2           2      1       7       true             false            true             false                                                 
-# 39  22  2640    840     7   240     M22    PSL(3,4)    PSL(3,2)             M22:2   2      2           1      1       13      true             false            true             false                                                 
-# 40  22  2640    840     7   240     M22:2  PSL(3,4):2  2xPSL(3,2)           M22:2   2      2           2      1       10      true             false            true             false                                                 
-# 41  22  2640    1680    14  1040    M22    PSL(3,4)    PSL(3,2)             M22     2      2           1      1       23      true             false            true             false                                                 
-# 42  22  3696    840     5   160     M22    PSL(3,4)    S5                   M22     2      2           1      1       5       true             false            true             false                                                 
-# 43  22  5280    3360    14  2080    M22:2  PSL(3,4):2  PSL(3,2)             M22:2   2      2           2      1       19      true             false            true             false                                                 
-# 44  22  6160    1120    4   160     M22    PSL(3,4)    (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
-# 45  22  6160    1120    4   160     M22:2  PSL(3,4):2  S3xS4                M22:2   2      2           2      1       3       true             false            true             false                                                 
-# 46  22  6160    2520    9   960     M22    PSL(3,4)    3^2:Q8               M22:2   2      2           1      1       16      true             false            true             false                                                 
-# 47  22  6160    2520    9   960     M22:2  PSL(3,4):2  3^2:QD16             M22:2   2      2           2      1       13      true             false            true             false                                                 
-# 48  22  6160    3360    12  1760    M22    PSL(3,4)    (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
-# 49  22  6160    3360    12  1760    M22:2  PSL(3,4):2  S4xS3                M22:2   2      2           2      1       3       true             false            true             false                                                 
+# 36  22  2310    1260    12  660     M22    PSL3(4)     2^4:3:2:2            M22:2   2      2           1      1       22      true             false            true             false                                                 
+# 37  22  2310    1260    12  660     M22:2  PSL3(4):2   2x((((2^4):2):3):2)  M22:2   2      2           2      1       18      true             false            true             false                                                 
+# 38  22  2464    672     6   160     M22:2  PSL3(4):2   A6                   M22:2   2      2           2      1       7       true             false            true             false                                                 
+# 39  22  2640    840     7   240     M22    PSL3(4)     PSL3(2)              M22:2   2      2           1      1       13      true             false            true             false                                                 
+# 40  22  2640    840     7   240     M22:2  PSL3(4):2   2xPSL3(2)            M22:2   2      2           2      1       10      true             false            true             false                                                 
+# 41  22  2640    1680    14  1040    M22    PSL3(4)     PSL3(2)              M22     2      2           1      1       23      true             false            true             false                                                 
+# 42  22  3696    840     5   160     M22    PSL3(4)     S5                   M22     2      2           1      1       5       true             false            true             false                                                 
+# 43  22  5280    3360    14  2080    M22:2  PSL3(4):2   PSL3(2)              M22:2   2      2           2      1       19      true             false            true             false                                                 
+# 44  22  6160    1120    4   160     M22    PSL3(4)     (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
+# 45  22  6160    1120    4   160     M22:2  PSL3(4):2   S3xS4                M22:2   2      2           2      1       3       true             false            true             false                                                 
+# 46  22  6160    2520    9   960     M22    PSL3(4)     3^2:Q8               M22:2   2      2           1      1       16      true             false            true             false                                                 
+# 47  22  6160    2520    9   960     M22:2  PSL3(4):2   3^2:QD16             M22:2   2      2           2      1       13      true             false            true             false                                                 
+# 48  22  6160    3360    12  1760    M22    PSL3(4)     (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
+# 49  22  6160    3360    12  1760    M22:2  PSL3(4):2   S4xS3                M22:2   2      2           2      1       3       true             false            true             false                                                 
 # 50  22  7315    1330    4   190     A22    A21         (S4 x S18) cap A22   S22     2      2           3      1       2       true             true             true             true                 52                     complete  
 # 51  22  7315    1330    4   190     S22    S21         S4 x S18             S22     2      2           4      1       2       true             true             true             true                 53                     complete  
 # 52  22  7315    5985    18  4845    A22    A21         (S18 x S4) cap A22   S22     2      2           3      1       2       true             true             true             true                 50                     complete  
 # 53  22  7315    5985    18  4845    S22    S21         S18 x S4             S22     2      2           4      1       2       true             true             true             true                 51                     complete  
-# 54  22  7392    1680    5   320     M22:2  PSL(3,4):2  S5                   M22:2   2      2           2      1       5       true             false            true             false                                                 
-# 55  22  7392    3360    10  1440    M22    PSL(3,4)    A5                   M22     2      2           1      1       18      true             false            true             false                                                 
-# 56  22  9240    2520    6   600     M22    PSL(3,4)    2xS4                 M22:2   2      2           1      1       10      true             false            true             false                                                 
-# 57  22  9240    2520    6   600     M22:2  PSL(3,4):2  2^2xS4               M22:2   2      2           2      1       8       true             false            true             false                                                 
-# 58  22  14784   6720    10  2880    M22:2  PSL(3,4):2  A5                   M22:2   2      2           2      1       15      true             false            true             false                                                 
-# 59  22  22176   10080   10  4320    M22    PSL(3,4)    5:4                  M22:2   2      2           1      1       20      true             false            true             false                                                 
-# 60  22  22176   10080   10  4320    M22:2  PSL(3,4):2  2x(5:4)              M22:2   2      2           2      1       16      true             false            true             false                                                 
+# 54  22  7392    1680    5   320     M22:2  PSL3(4):2   S5                   M22:2   2      2           2      1       5       true             false            true             false                                                 
+# 55  22  7392    3360    10  1440    M22    PSL3(4)     A5                   M22     2      2           1      1       18      true             false            true             false                                                 
+# 56  22  9240    2520    6   600     M22    PSL3(4)     2xS4                 M22:2   2      2           1      1       10      true             false            true             false                                                 
+# 57  22  9240    2520    6   600     M22:2  PSL3(4):2   2^2xS4               M22:2   2      2           2      1       8       true             false            true             false                                                 
+# 58  22  14784   6720    10  2880    M22:2  PSL3(4):2   A5                   M22:2   2      2           2      1       15      true             false            true             false                                                 
+# 59  22  22176   10080   10  4320    M22    PSL3(4)     5:4                  M22:2   2      2           1      1       20      true             false            true             false                                                 
+# 60  22  22176   10080   10  4320    M22:2  PSL3(4):2   2x(5:4)              M22:2   2      2           2      1       16      true             false            true             false                                                 
 # 61  22  26334   5985    5   1140    A22    A21         (S5 x S17) cap A22   S22     2      2           3      1       3       true             true             true             true                 63                     complete  
 # 62  22  26334   5985    5   1140    S22    S21         S5 x S17             S22     2      2           4      1       3       true             true             true             true                 64                     complete  
 # 63  22  26334   20349   17  15504   A22    A21         (S17 x S5) cap A22   S22     2      2           3      1       3       true             true             true             true                 61                     complete  
 # 64  22  26334   20349   17  15504   S22    S21         S17 x S5             S22     2      2           4      1       3       true             true             true             true                 62                     complete  
-# 65  22  27720   10080   8   3360    M22    PSL(3,4)    QD16                 M22:2   2      2           1      1       15      true             false            true             false                                                 
-# 66  22  27720   10080   8   3360    M22:2  PSL(3,4):2  8:2^2                M22:2   2      2           2      1       12      true             false            true             false                                                 
+# 65  22  27720   10080   8   3360    M22    PSL3(4)     QD16                 M22:2   2      2           1      1       15      true             false            true             false                                                 
+# 66  22  27720   10080   8   3360    M22:2  PSL3(4):2   8:2^2                M22:2   2      2           2      1       12      true             false            true             false                                                 
 # 67  22  74613   20349   6   4845    A22    A21         (S6 x S16) cap A22   S22     2      2           3      1       4       true             true             true             true                 69                     complete  
 # 68  22  74613   20349   6   4845    S22    S21         S6 x S16             S22     2      2           4      1       4       true             true             true             true                 70                     complete  
 # 69  22  74613   54264   16  38760   A22    A21         (S16 x S6) cap A22   S22     2      2           3      1       4       true             true             true             true                 67                     complete  
@@ -180,79 +180,79 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b       r       k   λ       G      Gα          GB                   Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   22  77      21      6   5       M22    PSL(3,4)    2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 3                                
-# 2   22  77      21      6   5       M22:2  PSL(3,4):2  2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 4                                
-# 3   22  77      56      16  40      M22    PSL(3,4)    2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 1                                
-# 4   22  77      56      16  40      M22:2  PSL(3,4):2  2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 2                                
-# 5   22  176     56      7   16      M22    PSL(3,4)    A7                   M22     2      2           1      1       11      true             true             true             true                 8                                
-# 6   22  176     56      7   16      M22    PSL(3,4)    A7                   M22     2      2           1      1       12      true             true             true             true                 7                                
-# 7   22  176     120     15  80      M22    PSL(3,4)    A7                   M22     2      2           1      1       12      true             true             true             true                 6                                
-# 8   22  176     120     15  80      M22    PSL(3,4)    A7                   M22     2      2           1      1       11      true             true             true             true                 5                                
-# 9   22  231     210     20  190     M22    PSL(3,4)    2^4:S5               S22     2      2           1      1       26      true             true             true             true                                        complete  
-# 10  22  231     210     20  190     M22:2  PSL(3,4):2  2^4:A5:2^2           S22     2      2           2      1       21      true             true             true             true                                        complete  
+# 1   22  77      21      6   5       M22    PSL3(4)     2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 3                                
+# 2   22  77      21      6   5       M22:2  PSL3(4):2   2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 4                                
+# 3   22  77      56      16  40      M22    PSL3(4)     2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 1                                
+# 4   22  77      56      16  40      M22:2  PSL3(4):2   2^4:S6               M22:2   2      2           2      1       6       true             true             true             true                 2                                
+# 5   22  176     56      7   16      M22    PSL3(4)     A7                   M22     2      2           1      1       11      true             true             true             true                 8                                
+# 6   22  176     56      7   16      M22    PSL3(4)     A7                   M22     2      2           1      1       12      true             true             true             true                 7                                
+# 7   22  176     120     15  80      M22    PSL3(4)     A7                   M22     2      2           1      1       12      true             true             true             true                 6                                
+# 8   22  176     120     15  80      M22    PSL3(4)     A7                   M22     2      2           1      1       11      true             true             true             true                 5                                
+# 9   22  231     210     20  190     M22    PSL3(4)     2^4:S5               S22     2      2           1      1       26      true             true             true             true                                        complete  
+# 10  22  231     210     20  190     M22:2  PSL3(4):2   2^4:A5:2^2           S22     2      2           2      1       21      true             true             true             true                                        complete  
 # 11  22  231     210     20  190     A22    A21         (S20 x S2) cap A22   S22     2      2           3      1       10      true             true             true             true                                        complete  
 # 12  22  231     210     20  190     S22    S21         S20 x S2             S22     2      2           4      1       10      true             true             true             true                                        complete  
-# 13  22  330     120     8   40      M22    PSL(3,4)    2^3:PSL(3,2)         M22:2   2      2           1      1       14      true             true             true             true                 15                               
-# 14  22  330     120     8   40      M22:2  PSL(3,4):2  2x(2^3:PSL(3,2))     M22:2   2      2           2      1       11      true             true             true             true                 16                               
-# 15  22  330     210     14  130     M22    PSL(3,4)    2^3:PSL(3,2)         M22:2   2      2           1      1       14      true             true             true             true                 13                               
-# 16  22  330     210     14  130     M22:2  PSL(3,4):2  2x(2^3:PSL(3,2))     M22:2   2      2           2      1       11      true             true             true             true                 14                               
-# 17  22  352     112     7   32      M22:2  PSL(3,4):2  A7                   M22:2   2      2           2      1       9       true             false            true             true                 18                               
-# 18  22  352     240     15  160     M22:2  PSL(3,4):2  A7                   M22:2   2      2           2      1       9       true             false            true             true                 17                               
-# 19  22  462     105     5   20      M22    PSL(3,4)    2^4:A5               M22:2   2      2           1      1       4       true             false            true             false                                                 
-# 20  22  462     105     5   20      M22:2  PSL(3,4):2  2^4:S5               M22:2   2      2           2      1       4       true             false            true             false                                                 
-# 21  22  616     280     10  120     M22    PSL(3,4)    A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 23                               
-# 22  22  616     280     10  120     M22:2  PSL(3,4):2  A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 24                               
-# 23  22  616     336     12  176     M22    PSL(3,4)    A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 21                               
-# 24  22  616     336     12  176     M22:2  PSL(3,4):2  A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 22                               
-# 25  22  672     336     11  160     M22    PSL(3,4)    PSL(2,11)            M22     2      2           1      1       21      true             true             true             true                 26                               
-# 26  22  672     336     11  160     M22    PSL(3,4)    PSL(2,11)            M22     2      2           1      1       21      true             true             true             true                 25                               
-# 27  22  1155    210     4   30      M22    PSL(3,4)    2^4:2:2:3:2          M22:2   2      2           1      1       2       true             false            true             false                                                 
-# 28  22  1155    210     4   30      M22:2  PSL(3,4):2  (2x((2^4):2)):2:3:2  M22:2   2      2           2      1       2       true             false            true             false                                                 
-# 29  22  1232    336     6   80      M22    PSL(3,4)    A6                   M22     2      2           1      1       8       true             false            true             false                                                 
-# 30  22  1232    336     6   80      M22    PSL(3,4)    A6                   M22     2      2           1      1       9       true             false            true             false                                                 
-# 31  22  1232    840     15  560     M22    PSL(3,4)    A6                   M22:2   2      2           1      1       25      true             false            true             false                                                 
-# 32  22  1232    840     15  560     M22:2  PSL(3,4):2  S6                   M22:2   2      2           2      1       20      true             false            true             false                                                 
-# 33  22  1344    672     11  320     M22:2  PSL(3,4):2  PSL(2,11)            M22:2   2      2           2      1       17      true             false            true             true                 33                               
-# 34  22  1540    210     3   20      M22    PSL(3,4)    (A4xA4):2            S22     2      2           1      1       1       true             false            true             false                                       complete  
-# 35  22  1540    210     3   20      M22:2  PSL(3,4):2  (A4xA4):2:2          S22     2      2           2      1       1       true             false            true             false                                       complete  
+# 13  22  330     120     8   40      M22    PSL3(4)     2^3:PSL3(2)          M22:2   2      2           1      1       14      true             true             true             true                 15                               
+# 14  22  330     120     8   40      M22:2  PSL3(4):2   2x(2^3:PSL3(2))      M22:2   2      2           2      1       11      true             true             true             true                 16                               
+# 15  22  330     210     14  130     M22    PSL3(4)     2^3:PSL3(2)          M22:2   2      2           1      1       14      true             true             true             true                 13                               
+# 16  22  330     210     14  130     M22:2  PSL3(4):2   2x(2^3:PSL3(2))      M22:2   2      2           2      1       11      true             true             true             true                 14                               
+# 17  22  352     112     7   32      M22:2  PSL3(4):2   A7                   M22:2   2      2           2      1       9       true             false            true             true                 18                               
+# 18  22  352     240     15  160     M22:2  PSL3(4):2   A7                   M22:2   2      2           2      1       9       true             false            true             true                 17                               
+# 19  22  462     105     5   20      M22    PSL3(4)     2^4:A5               M22:2   2      2           1      1       4       true             false            true             false                                                 
+# 20  22  462     105     5   20      M22:2  PSL3(4):2   2^4:S5               M22:2   2      2           2      1       4       true             false            true             false                                                 
+# 21  22  616     280     10  120     M22    PSL3(4)     A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 23                               
+# 22  22  616     280     10  120     M22:2  PSL3(4):2   A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 24                               
+# 23  22  616     336     12  176     M22    PSL3(4)     A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 21                               
+# 24  22  616     336     12  176     M22:2  PSL3(4):2   A6:2:2               M22:2   2      2           2      1       14      true             true             true             true                 22                               
+# 25  22  672     336     11  160     M22    PSL3(4)     PSL2(11)             M22     2      2           1      1       21      true             true             true             true                 26                               
+# 26  22  672     336     11  160     M22    PSL3(4)     PSL2(11)             M22     2      2           1      1       21      true             true             true             true                 25                               
+# 27  22  1155    210     4   30      M22    PSL3(4)     2^4:2:2:3:2          M22:2   2      2           1      1       2       true             false            true             false                                                 
+# 28  22  1155    210     4   30      M22:2  PSL3(4):2   (2x((2^4):2)):2:3:2  M22:2   2      2           2      1       2       true             false            true             false                                                 
+# 29  22  1232    336     6   80      M22    PSL3(4)     A6                   M22     2      2           1      1       8       true             false            true             false                                                 
+# 30  22  1232    336     6   80      M22    PSL3(4)     A6                   M22     2      2           1      1       9       true             false            true             false                                                 
+# 31  22  1232    840     15  560     M22    PSL3(4)     A6                   M22:2   2      2           1      1       25      true             false            true             false                                                 
+# 32  22  1232    840     15  560     M22:2  PSL3(4):2   S6                   M22:2   2      2           2      1       20      true             false            true             false                                                 
+# 33  22  1344    672     11  320     M22:2  PSL3(4):2   PSL2(11)             M22:2   2      2           2      1       17      true             false            true             true                 33                               
+# 34  22  1540    210     3   20      M22    PSL3(4)     (A4xA4):2            S22     2      2           1      1       1       true             false            true             false                                       complete  
+# 35  22  1540    210     3   20      M22:2  PSL3(4):2   (A4xA4):2:2          S22     2      2           2      1       1       true             false            true             false                                       complete  
 # 36  22  1540    210     3   20      A22    A21         (S3 x S19) cap A22   S22     2      2           3      1       1       true             true             true             true                 38                     complete  
 # 37  22  1540    210     3   20      S22    S21         S3 x S19             S22     2      2           4      1       1       true             true             true             true                 39                     complete  
 # 38  22  1540    1330    19  1140    A22    A21         (S19 x S3) cap A22   S22     2      2           3      1       1       true             true             true             true                 36                     complete  
 # 39  22  1540    1330    19  1140    S22    S21         S19 x S3             S22     2      2           4      1       1       true             true             true             true                 37                     complete  
-# 40  22  2310    1260    12  660     M22    PSL(3,4)    2^4:3:2:2            M22:2   2      2           1      1       22      true             false            true             false                                                 
-# 41  22  2310    1260    12  660     M22:2  PSL(3,4):2  2x((((2^4):2):3):2)  M22:2   2      2           2      1       18      true             false            true             false                                                 
-# 42  22  2464    672     6   160     M22:2  PSL(3,4):2  A6                   M22:2   2      2           2      1       7       true             false            true             false                                                 
-# 43  22  2640    840     7   240     M22    PSL(3,4)    PSL(3,2)             M22:2   2      2           1      1       13      true             false            true             false                                                 
-# 44  22  2640    840     7   240     M22:2  PSL(3,4):2  2xPSL(3,2)           M22:2   2      2           2      1       10      true             false            true             false                                                 
-# 45  22  2640    1680    14  1040    M22    PSL(3,4)    PSL(3,2)             M22     2      2           1      1       24      true             false            true             false                                                 
-# 46  22  2640    1680    14  1040    M22    PSL(3,4)    PSL(3,2)             M22     2      2           1      1       23      true             false            true             false                                                 
-# 47  22  3696    840     5   160     M22    PSL(3,4)    S5                   M22     2      2           1      1       5       true             false            true             false                                                 
-# 48  22  3696    840     5   160     M22    PSL(3,4)    S5                   M22     2      2           1      1       6       true             false            true             false                                                 
-# 49  22  5280    3360    14  2080    M22:2  PSL(3,4):2  PSL(3,2)             M22:2   2      2           2      1       19      true             false            true             false                                                 
-# 50  22  6160    1120    4   160     M22    PSL(3,4)    (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
-# 51  22  6160    1120    4   160     M22:2  PSL(3,4):2  S3xS4                M22:2   2      2           2      1       3       true             false            true             false                                                 
-# 52  22  6160    2520    9   960     M22    PSL(3,4)    3^2:Q8               M22:2   2      2           1      1       16      true             false            true             false                                                 
-# 53  22  6160    2520    9   960     M22:2  PSL(3,4):2  3^2:QD16             M22:2   2      2           2      1       13      true             false            true             false                                                 
-# 54  22  6160    3360    12  1760    M22    PSL(3,4)    (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
-# 55  22  6160    3360    12  1760    M22:2  PSL(3,4):2  S4xS3                M22:2   2      2           2      1       3       true             false            true             false                                                 
+# 40  22  2310    1260    12  660     M22    PSL3(4)     2^4:3:2:2            M22:2   2      2           1      1       22      true             false            true             false                                                 
+# 41  22  2310    1260    12  660     M22:2  PSL3(4):2   2x((((2^4):2):3):2)  M22:2   2      2           2      1       18      true             false            true             false                                                 
+# 42  22  2464    672     6   160     M22:2  PSL3(4):2   A6                   M22:2   2      2           2      1       7       true             false            true             false                                                 
+# 43  22  2640    840     7   240     M22    PSL3(4)     PSL3(2)              M22:2   2      2           1      1       13      true             false            true             false                                                 
+# 44  22  2640    840     7   240     M22:2  PSL3(4):2   2xPSL3(2)            M22:2   2      2           2      1       10      true             false            true             false                                                 
+# 45  22  2640    1680    14  1040    M22    PSL3(4)     PSL3(2)              M22     2      2           1      1       24      true             false            true             false                                                 
+# 46  22  2640    1680    14  1040    M22    PSL3(4)     PSL3(2)              M22     2      2           1      1       23      true             false            true             false                                                 
+# 47  22  3696    840     5   160     M22    PSL3(4)     S5                   M22     2      2           1      1       5       true             false            true             false                                                 
+# 48  22  3696    840     5   160     M22    PSL3(4)     S5                   M22     2      2           1      1       6       true             false            true             false                                                 
+# 49  22  5280    3360    14  2080    M22:2  PSL3(4):2   PSL3(2)              M22:2   2      2           2      1       19      true             false            true             false                                                 
+# 50  22  6160    1120    4   160     M22    PSL3(4)     (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
+# 51  22  6160    1120    4   160     M22:2  PSL3(4):2   S3xS4                M22:2   2      2           2      1       3       true             false            true             false                                                 
+# 52  22  6160    2520    9   960     M22    PSL3(4)     3^2:Q8               M22:2   2      2           1      1       16      true             false            true             false                                                 
+# 53  22  6160    2520    9   960     M22:2  PSL3(4):2   3^2:QD16             M22:2   2      2           2      1       13      true             false            true             false                                                 
+# 54  22  6160    3360    12  1760    M22    PSL3(4)     (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
+# 55  22  6160    3360    12  1760    M22:2  PSL3(4):2   S4xS3                M22:2   2      2           2      1       3       true             false            true             false                                                 
 # 56  22  7315    1330    4   190     A22    A21         (S4 x S18) cap A22   S22     2      2           3      1       2       true             true             true             true                 58                     complete  
 # 57  22  7315    1330    4   190     S22    S21         S4 x S18             S22     2      2           4      1       2       true             true             true             true                 59                     complete  
 # 58  22  7315    5985    18  4845    A22    A21         (S18 x S4) cap A22   S22     2      2           3      1       2       true             true             true             true                 56                     complete  
 # 59  22  7315    5985    18  4845    S22    S21         S18 x S4             S22     2      2           4      1       2       true             true             true             true                 57                     complete  
-# 60  22  7392    1680    5   320     M22:2  PSL(3,4):2  S5                   M22:2   2      2           2      1       5       true             false            true             false                                                 
-# 61  22  7392    3360    10  1440    M22    PSL(3,4)    A5                   M22     2      2           1      1       19      true             false            true             false                                                 
-# 62  22  7392    3360    10  1440    M22    PSL(3,4)    A5                   M22     2      2           1      1       18      true             false            true             false                                                 
-# 63  22  9240    2520    6   600     M22    PSL(3,4)    2xS4                 M22:2   2      2           1      1       10      true             false            true             false                                                 
-# 64  22  9240    2520    6   600     M22:2  PSL(3,4):2  2^2xS4               M22:2   2      2           2      1       8       true             false            true             false                                                 
-# 65  22  14784   6720    10  2880    M22:2  PSL(3,4):2  A5                   M22:2   2      2           2      1       15      true             false            true             false                                                 
-# 66  22  22176   10080   10  4320    M22    PSL(3,4)    5:4                  M22:2   2      2           1      1       20      true             false            true             false                                                 
-# 67  22  22176   10080   10  4320    M22:2  PSL(3,4):2  2x(5:4)              M22:2   2      2           2      1       16      true             false            true             false                                                 
+# 60  22  7392    1680    5   320     M22:2  PSL3(4):2   S5                   M22:2   2      2           2      1       5       true             false            true             false                                                 
+# 61  22  7392    3360    10  1440    M22    PSL3(4)     A5                   M22     2      2           1      1       19      true             false            true             false                                                 
+# 62  22  7392    3360    10  1440    M22    PSL3(4)     A5                   M22     2      2           1      1       18      true             false            true             false                                                 
+# 63  22  9240    2520    6   600     M22    PSL3(4)     2xS4                 M22:2   2      2           1      1       10      true             false            true             false                                                 
+# 64  22  9240    2520    6   600     M22:2  PSL3(4):2   2^2xS4               M22:2   2      2           2      1       8       true             false            true             false                                                 
+# 65  22  14784   6720    10  2880    M22:2  PSL3(4):2   A5                   M22:2   2      2           2      1       15      true             false            true             false                                                 
+# 66  22  22176   10080   10  4320    M22    PSL3(4)     5:4                  M22:2   2      2           1      1       20      true             false            true             false                                                 
+# 67  22  22176   10080   10  4320    M22:2  PSL3(4):2   2x(5:4)              M22:2   2      2           2      1       16      true             false            true             false                                                 
 # 68  22  26334   5985    5   1140    A22    A21         (S5 x S17) cap A22   S22     2      2           3      1       3       true             true             true             true                 70                     complete  
 # 69  22  26334   5985    5   1140    S22    S21         S5 x S17             S22     2      2           4      1       3       true             true             true             true                 71                     complete  
 # 70  22  26334   20349   17  15504   A22    A21         (S17 x S5) cap A22   S22     2      2           3      1       3       true             true             true             true                 68                     complete  
 # 71  22  26334   20349   17  15504   S22    S21         S17 x S5             S22     2      2           4      1       3       true             true             true             true                 69                     complete  
-# 72  22  27720   10080   8   3360    M22    PSL(3,4)    QD16                 M22:2   2      2           1      1       15      true             false            true             false                                                 
-# 73  22  27720   10080   8   3360    M22:2  PSL(3,4):2  8:2^2                M22:2   2      2           2      1       12      true             false            true             false                                                 
+# 72  22  27720   10080   8   3360    M22    PSL3(4)     QD16                 M22:2   2      2           1      1       15      true             false            true             false                                                 
+# 73  22  27720   10080   8   3360    M22:2  PSL3(4):2   8:2^2                M22:2   2      2           2      1       12      true             false            true             false                                                 
 # 74  22  74613   20349   6   4845    A22    A21         (S6 x S16) cap A22   S22     2      2           3      1       4       true             true             true             true                 76                     complete  
 # 75  22  74613   20349   6   4845    S22    S21         S6 x S16             S22     2      2           4      1       4       true             true             true             true                 77                     complete  
 # 76  22  74613   54264   16  38760   A22    A21         (S16 x S6) cap A22   S22     2      2           3      1       4       true             true             true             true                 74                     complete  
@@ -290,7 +290,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     2^4:A6    2^4:S6      
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -316,7 +316,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     2^4:A6    2^4:S6      
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -342,7 +342,7 @@
 # Structure                            M22       M22       
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,4)  PSL(3,4)  
+# Point-stabiliser                     PSL3(4)   PSL3(4)  
 # Block-stabiliser                     A7        A7        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -368,7 +368,7 @@
 # Structure                            M22       M22       
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,4)  PSL(3,4)  
+# Point-stabiliser                     PSL3(4)   PSL3(4)  
 # Block-stabiliser                     A7        A7        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -394,7 +394,7 @@
 # Structure                            M22       S22     
 # Rank                                 2         2       
 # 2-Homogeneous                        true      true    
-# Point-stabiliser                     PSL(3,4)  S21     
+# Point-stabiliser                     PSL3(4)   S21     
 # Block-stabiliser                     2^4:S5    2xS20   
 # Orbit structure of point-stabiliser                    
 # Orbit structure of block-stabiliser                    
@@ -420,8 +420,8 @@
 # Structure                            M22           M22:2             
 # Rank                                 2             2                 
 # 2-Homogeneous                        true          true              
-# Point-stabiliser                     PSL(3,4)      PSL(3,4):2        
-# Block-stabiliser                     2^3:PSL(3,2)  2x(2^3:PSL(3,2))  
+# Point-stabiliser                     PSL3(4)       PSL3(4):2        
+# Block-stabiliser                     2^3:PSL3(2)   2x(2^3:PSL3(2))  
 # Orbit structure of point-stabiliser                                  
 # Orbit structure of block-stabiliser                                  
 # Point-transitive                     true          true              
@@ -446,8 +446,8 @@
 # Structure                            M22           M22:2             
 # Rank                                 2             2                 
 # 2-Homogeneous                        true          true              
-# Point-stabiliser                     PSL(3,4)      PSL(3,4):2        
-# Block-stabiliser                     2^3:PSL(3,2)  2x(2^3:PSL(3,2))  
+# Point-stabiliser                     PSL3(4)       PSL3(4):2        
+# Block-stabiliser                     2^3:PSL3(2)   2x(2^3:PSL3(2))  
 # Orbit structure of point-stabiliser                                  
 # Orbit structure of block-stabiliser                                  
 # Point-transitive                     true          true              
@@ -472,7 +472,7 @@
 # Structure                            M22:2       M22:2       
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     PSL(3,4):2  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4):2   PSL3(4):2  
 # Block-stabiliser                     A7          A7          
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -498,7 +498,7 @@
 # Structure                            M22:2       M22:2       
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     PSL(3,4):2  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4):2   PSL3(4):2  
 # Block-stabiliser                     A7          A7          
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -524,7 +524,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     2^4:A5    2^4:S5      
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -550,7 +550,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     A6.2      A6:2:2      
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -576,7 +576,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     A6.2      A6:2:2      
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -602,8 +602,8 @@
 # Structure                            M22        M22        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL(3,4)   PSL(3,4)   
-# Block-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Point-stabiliser                     PSL3(4)    PSL3(4)   
+# Block-stabiliser                     PSL2(11)   PSL2(11)  
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
@@ -628,7 +628,7 @@
 # Structure                            M22          M22:2                
 # Rank                                 2            2                    
 # 2-Homogeneous                        true         true                 
-# Point-stabiliser                     PSL(3,4)     PSL(3,4):2           
+# Point-stabiliser                     PSL3(4)      PSL3(4):2           
 # Block-stabiliser                     2^4:2:2:3:2  (2x((2^4):2)):2:3:2  
 # Orbit structure of point-stabiliser                                    
 # Orbit structure of block-stabiliser                                    
@@ -654,7 +654,7 @@
 # Structure                            M22       M22       
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,4)  PSL(3,4)  
+# Point-stabiliser                     PSL3(4)   PSL3(4)  
 # Block-stabiliser                     A6        A6        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -680,7 +680,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     A6        S6          
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -706,8 +706,8 @@
 # Structure                            M22:2       M22:2       
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     PSL(3,4):2  PSL(3,4):2  
-# Block-stabiliser                     PSL(2,11)   PSL(2,11)   
+# Point-stabiliser                     PSL3(4):2   PSL3(4):2  
+# Block-stabiliser                     PSL2(11)    PSL2(11)   
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
 # Point-transitive                     true        true        
@@ -732,7 +732,7 @@
 # Structure                            M22        S22     
 # Rank                                 2          2       
 # 2-Homogeneous                        true       true    
-# Point-stabiliser                     PSL(3,4)   S21     
+# Point-stabiliser                     PSL3(4)    S21     
 # Block-stabiliser                     (A4xA4):2  S19xS3  
 # Orbit structure of point-stabiliser                     
 # Orbit structure of block-stabiliser                     
@@ -784,7 +784,7 @@
 # Structure                            M22        M22:2                
 # Rank                                 2          2                    
 # 2-Homogeneous                        true       true                 
-# Point-stabiliser                     PSL(3,4)   PSL(3,4):2           
+# Point-stabiliser                     PSL3(4)    PSL3(4):2           
 # Block-stabiliser                     2^4:3:2:2  2x((((2^4):2):3):2)  
 # Orbit structure of point-stabiliser                                  
 # Orbit structure of block-stabiliser                                  
@@ -810,7 +810,7 @@
 # Structure                            M22:2       M22:2       
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     PSL(3,4):2  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4):2   PSL3(4):2  
 # Block-stabiliser                     A6          A6          
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -836,8 +836,8 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
-# Block-stabiliser                     PSL(3,2)  2xPSL(3,2)  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
+# Block-stabiliser                     PSL3(2)   2xPSL3(2)  
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true      true        
@@ -862,8 +862,8 @@
 # Structure                            M22       M22       
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,4)  PSL(3,4)  
-# Block-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(4)   PSL3(4)  
+# Block-stabiliser                     PSL3(2)   PSL3(2)  
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
 # Point-transitive                     true      true      
@@ -888,7 +888,7 @@
 # Structure                            M22       M22       
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,4)  PSL(3,4)  
+# Point-stabiliser                     PSL3(4)   PSL3(4)  
 # Block-stabiliser                     S5        S5        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -914,8 +914,8 @@
 # Structure                            M22:2       M22:2       
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     PSL(3,4):2  PSL(3,4):2  
-# Block-stabiliser                     PSL(3,2)    PSL(3,2)    
+# Point-stabiliser                     PSL3(4):2   PSL3(4):2  
+# Block-stabiliser                     PSL3(2)     PSL3(2)    
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
 # Point-transitive                     true        true        
@@ -940,7 +940,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     (3xA4):2  S3xS4       
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -966,7 +966,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     3^2:Q8    3^2:QD16    
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -992,7 +992,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     (3xA4):2  S4xS3       
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -1070,7 +1070,7 @@
 # Structure                            M22:2       M22:2       
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     PSL(3,4):2  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4):2   PSL3(4):2  
 # Block-stabiliser                     S5          S5          
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1096,7 +1096,7 @@
 # Structure                            M22       M22       
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,4)  PSL(3,4)  
+# Point-stabiliser                     PSL3(4)   PSL3(4)  
 # Block-stabiliser                     A5        A5        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -1122,7 +1122,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     2xS4      2^2xS4      
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -1148,7 +1148,7 @@
 # Structure                            M22:2       M22:2       
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     PSL(3,4):2  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4):2   PSL3(4):2  
 # Block-stabiliser                     A5          A5          
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1174,7 +1174,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     5:4       2x(5:4)     
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -1252,7 +1252,7 @@
 # Structure                            M22       M22:2       
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
-# Point-stabiliser                     PSL(3,4)  PSL(3,4):2  
+# Point-stabiliser                     PSL3(4)   PSL3(4):2  
 # Block-stabiliser                     QD16      8:2^2       
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        

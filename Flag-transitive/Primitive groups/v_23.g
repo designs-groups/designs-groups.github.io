@@ -6,7 +6,7 @@
 #               lD_23 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -32,10 +32,10 @@
 # Nr  v   b        r       k   λ       G          Gα   GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   23  23       11      11  5       23:11      11   11                   23:11      3      3           3      1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 2   23  46       22      11  10      AGL(1,23)  22   11                   AGL(1,23)  2      2           4      1       1       true             false            true             false                                                                     
+# 2   23  46       22      11  10      AGL1(23)   22   11                   AGL1(23)   2      2           4      1       1       true             false            true             false                                                                     
 # 3   23  253      77      7   21      M23        M22  2^4:A7               M23        2      2           5      1       7       true             true             true             true                 4                                                    
 # 4   23  253      176     16  120     M23        M22  2^4:A7               M23        2      2           5      1       7       true             true             true             true                 3                                                    
-# 5   23  253      231     21  210     M23        M22  PSL(3,4):2           S23        2      2           5      1       20      true             true             true             true                                        complete                      
+# 5   23  253      231     21  210     M23        M22  PSL3(4):2            S23        2      2           5      1       20      true             true             true             true                                        complete                      
 # 6   23  506      176     8   56      M23        M22  A8                   M23        2      2           5      1       9       true             true             true             true                 7                                                    
 # 7   23  506      330     15  210     M23        M22  A8                   M23        2      2           5      1       9       true             true             true             true                 6                                                    
 # 8   23  1288     616     11  280     M23        M22  M11                  M23        2      2           5      1       14      true             true             true             true                 9                                                    
@@ -46,22 +46,22 @@
 # 13  23  4048     1232    7   336     M23        M22  A7                   M23        2      2           5      1       8       true             false            true             false                                                                     
 # 14  23  4048     2640    15  1680    M23        M22  A7                   M23        2      2           5      1       19      true             false            true             false                                                                     
 # 15  23  5313     1155    5   210     M23        M22  2^4:S5               M23        2      2           5      1       3       true             false            true             false                                                                     
-# 16  23  7590     4620    14  2730    M23        M22  2^3:PSL(3,2)         M23        2      2           5      1       17      true             false            true             false                                                                     
+# 16  23  7590     4620    14  2730    M23        M22  2^3:PSL3(2)          M23        2      2           5      1       17      true             false            true             false                                                                     
 # 17  23  8855     1540    4   210     M23        M22  2^4:2:2:3^2:2        S23        2      2           5      1       2       true             false            true             false                                       complete                      
 # 18  23  8855     7315    19  5985    A23        A22  (S19 x S4) cap A23   S23        2      2           6      1       2       true             true             true             true                                        complete                      
 # 19  23  14168    3696    6   840     M23        M22  S6                   M23        2      2           5      1       6       true             false            true             false                                                                     
 # 20  23  14168    6160    10  2520    M23        M22  A6.2                 M23        2      2           5      1       12      true             false            true             false                                                                     
-# 21  23  15456    7392    11  3360    M23        M22  PSL(2,11)            M23        2      2           5      1       15      true             false            true             false                                                                     
+# 21  23  15456    7392    11  3360    M23        M22  PSL2(11)             M23        2      2           5      1       15      true             false            true             false                                                                     
 # 22  23  17710    9240    12  4620    M23        M22  (A4xA4):2:2          M23        2      2           5      1       16      true             false            true             false                                                                     
 # 23  23  28336    6160    5   1120    M23        M22  A5:S3                M23        2      2           5      1       4       true             false            true             false                                                                     
-# 24  23  30360    18480   14  10920   M23        M22  2xPSL(3,2)           M23        2      2           5      1       18      true             false            true             false                                                                     
+# 24  23  30360    18480   14  10920   M23        M22  2xPSL3(2)            M23        2      2           5      1       18      true             false            true             false                                                                     
 # 25  23  33649    7315    5   1330    A23        A22  (S5 x S18) cap A23   S23        2      2           6      1       3       true             true             true             true                 26                     complete                      
 # 26  23  33649    26334   18  20349   A23        A22  (S18 x S5) cap A23   S23        2      2           6      1       3       true             true             true             true                 25                     complete                      
 # 27  23  70840    27720   9   10080   M23        M22  3^2:QD16             M23        2      2           5      1       11      true             false            true             false                                                                     
 # 28  23  85008    36960   10  15120   M23        M22  S5                   M23        2      2           5      1       13      true             false            true             false                                                                     
 # 29  23  100947   26334   6   5985    A23        A22  (S6 x S17) cap A23   S23        2      2           6      1       4       true             true             true             true                 30                     complete                      
 # 30  23  100947   74613   17  54264   A23        A22  (S17 x S6) cap A23   S23        2      2           6      1       4       true             true             true             true                 29                     complete                      
-# 31  23  212520   73920   8   23520   M23        M22  GL(2,3)              M23        2      2           5      1       10      true             false            true             false                                                                     
+# 31  23  212520   73920   8   23520   M23        M22  GL2(3)               M23        2      2           5      1       10      true             false            true             false                                                                     
 # 32  23  245157   74613   7   20349   A23        A22  (S7 x S16) cap A23   S23        2      2           6      1       5       true             true             true             true                 33                     complete                      
 # 33  23  245157   170544  16  116280  A23        A22  (S16 x S7) cap A23   S23        2      2           6      1       5       true             true             true             true                 32                     complete                      
 # 34  23  490314   170544  8   54264   A23        A22  (S8 x S15) cap A23   S23        2      2           6      1       6       true             true             true             true                 35                     complete                      
@@ -79,10 +79,10 @@
 # Nr  v   b        r       k   λ       G          Gα   GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   23  23       11      11  5       23:11      11   11                   23:11      3      3           3      1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 2   23  46       22      11  10      AGL(1,23)  22   11                   AGL(1,23)  2      2           4      1       1       true             false            true             false                                                                     
+# 2   23  46       22      11  10      AGL1(23)   22   11                   AGL1(23)   2      2           4      1       1       true             false            true             false                                                                     
 # 3   23  253      77      7   21      M23        M22  2^4:A7               M23        2      2           5      1       7       true             true             true             true                 4                                                    
 # 4   23  253      176     16  120     M23        M22  2^4:A7               M23        2      2           5      1       7       true             true             true             true                 3                                                    
-# 5   23  253      231     21  210     M23        M22  PSL(3,4):2           S23        2      2           5      1       20      true             true             true             true                                        complete                      
+# 5   23  253      231     21  210     M23        M22  PSL3(4):2            S23        2      2           5      1       20      true             true             true             true                                        complete                      
 # 6   23  253      231     21  210     A23        A22  (S21 x S2) cap A23   S23        2      2           6      1       10      true             true             true             true                                        complete                      
 # 7   23  253      231     21  210     S23        S22  S21 x S2             S23        2      2           7      1       10      true             true             true             true                                        complete                      
 # 8   23  506      176     8   56      M23        M22  A8                   M23        2      2           5      1       9       true             true             true             true                 9                                                    
@@ -99,7 +99,7 @@
 # 19  23  4048     1232    7   336     M23        M22  A7                   M23        2      2           5      1       8       true             false            true             false                                                                     
 # 20  23  4048     2640    15  1680    M23        M22  A7                   M23        2      2           5      1       19      true             false            true             false                                                                     
 # 21  23  5313     1155    5   210     M23        M22  2^4:S5               M23        2      2           5      1       3       true             false            true             false                                                                     
-# 22  23  7590     4620    14  2730    M23        M22  2^3:PSL(3,2)         M23        2      2           5      1       17      true             false            true             false                                                                     
+# 22  23  7590     4620    14  2730    M23        M22  2^3:PSL3(2)          M23        2      2           5      1       17      true             false            true             false                                                                     
 # 23  23  8855     1540    4   210     M23        M22  2^4:2:2:3^2:2        S23        2      2           5      1       2       true             false            true             false                                       complete                      
 # 24  23  8855     1540    4   210     A23        A22  (S4 x S19) cap A23   S23        2      2           6      1       2       true             true             true             true                 26                     complete                      
 # 25  23  8855     1540    4   210     S23        S22  S4 x S19             S23        2      2           7      1       2       true             true             true             true                 27                     complete                      
@@ -107,10 +107,10 @@
 # 27  23  8855     7315    19  5985    S23        S22  S19 x S4             S23        2      2           7      1       2       true             true             true             true                 25                     complete                      
 # 28  23  14168    3696    6   840     M23        M22  S6                   M23        2      2           5      1       6       true             false            true             false                                                                     
 # 29  23  14168    6160    10  2520    M23        M22  A6.2                 M23        2      2           5      1       12      true             false            true             false                                                                     
-# 30  23  15456    7392    11  3360    M23        M22  PSL(2,11)            M23        2      2           5      1       15      true             false            true             false                                                                     
+# 30  23  15456    7392    11  3360    M23        M22  PSL2(11)             M23        2      2           5      1       15      true             false            true             false                                                                     
 # 31  23  17710    9240    12  4620    M23        M22  (A4xA4):2:2          M23        2      2           5      1       16      true             false            true             false                                                                     
 # 32  23  28336    6160    5   1120    M23        M22  A5:S3                M23        2      2           5      1       4       true             false            true             false                                                                     
-# 33  23  30360    18480   14  10920   M23        M22  2xPSL(3,2)           M23        2      2           5      1       18      true             false            true             false                                                                     
+# 33  23  30360    18480   14  10920   M23        M22  2xPSL3(2)            M23        2      2           5      1       18      true             false            true             false                                                                     
 # 34  23  33649    7315    5   1330    A23        A22  (S5 x S18) cap A23   S23        2      2           6      1       3       true             true             true             true                 36                     complete                      
 # 35  23  33649    7315    5   1330    S23        S22  S5 x S18             S23        2      2           7      1       3       true             true             true             true                 37                     complete                      
 # 36  23  33649    26334   18  20349   A23        A22  (S18 x S5) cap A23   S23        2      2           6      1       3       true             true             true             true                 34                     complete                      
@@ -121,7 +121,7 @@
 # 41  23  100947   26334   6   5985    S23        S22  S6 x S17             S23        2      2           7      1       4       true             true             true             true                 43                     complete                      
 # 42  23  100947   74613   17  54264   A23        A22  (S17 x S6) cap A23   S23        2      2           6      1       4       true             true             true             true                 40                     complete                      
 # 43  23  100947   74613   17  54264   S23        S22  S17 x S6             S23        2      2           7      1       4       true             true             true             true                 41                     complete                      
-# 44  23  212520   73920   8   23520   M23        M22  GL(2,3)              M23        2      2           5      1       10      true             false            true             false                                                                     
+# 44  23  212520   73920   8   23520   M23        M22  GL2(3)               M23        2      2           5      1       10      true             false            true             false                                                                     
 # 45  23  245157   74613   7   20349   A23        A22  (S7 x S16) cap A23   S23        2      2           6      1       5       true             true             true             true                 47                     complete                      
 # 46  23  245157   74613   7   20349   S23        S22  S7 x S16             S23        2      2           7      1       5       true             true             true             true                 48                     complete                      
 # 47  23  245157   170544  16  116280  A23        A22  (S16 x S7) cap A23   S23        2      2           6      1       5       true             true             true             true                 45                     complete                      
@@ -150,10 +150,10 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   23  23       11      11  5       23:11      11   11                   23:11      3      3           3      1       1       true             true             true             false                            true       Hadamard or Paley parameters  
 # 2   23  23       11      11  5       23:11      11   11                   23:11      3      3           3      1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 3   23  46       22      11  10      AGL(1,23)  22   11                   AGL(1,23)  2      2           4      1       1       true             false            true             false                                                                     
+# 3   23  46       22      11  10      AGL1(23)   22   11                   AGL1(23)   2      2           4      1       1       true             false            true             false                                                                     
 # 4   23  253      77      7   21      M23        M22  2^4:A7               M23        2      2           5      1       7       true             true             true             true                 5                                                    
 # 5   23  253      176     16  120     M23        M22  2^4:A7               M23        2      2           5      1       7       true             true             true             true                 4                                                    
-# 6   23  253      231     21  210     M23        M22  PSL(3,4):2           S23        2      2           5      1       20      true             true             true             true                                        complete                      
+# 6   23  253      231     21  210     M23        M22  PSL3(4):2            S23        2      2           5      1       20      true             true             true             true                                        complete                      
 # 7   23  253      231     21  210     A23        A22  (S21 x S2) cap A23   S23        2      2           6      1       10      true             true             true             true                                        complete                      
 # 8   23  253      231     21  210     S23        S22  S21 x S2             S23        2      2           7      1       10      true             true             true             true                                        complete                      
 # 9   23  506      176     8   56      M23        M22  A8                   M23        2      2           5      1       9       true             true             true             true                 10                                                   
@@ -170,7 +170,7 @@
 # 20  23  4048     1232    7   336     M23        M22  A7                   M23        2      2           5      1       8       true             false            true             false                                                                     
 # 21  23  4048     2640    15  1680    M23        M22  A7                   M23        2      2           5      1       19      true             false            true             false                                                                     
 # 22  23  5313     1155    5   210     M23        M22  2^4:S5               M23        2      2           5      1       3       true             false            true             false                                                                     
-# 23  23  7590     4620    14  2730    M23        M22  2^3:PSL(3,2)         M23        2      2           5      1       17      true             false            true             false                                                                     
+# 23  23  7590     4620    14  2730    M23        M22  2^3:PSL3(2)          M23        2      2           5      1       17      true             false            true             false                                                                     
 # 24  23  8855     1540    4   210     M23        M22  2^4:2:2:3^2:2        S23        2      2           5      1       2       true             false            true             false                                       complete                      
 # 25  23  8855     1540    4   210     A23        A22  (S4 x S19) cap A23   S23        2      2           6      1       2       true             true             true             true                 27                     complete                      
 # 26  23  8855     1540    4   210     S23        S22  S4 x S19             S23        2      2           7      1       2       true             true             true             true                 28                     complete                      
@@ -178,10 +178,10 @@
 # 28  23  8855     7315    19  5985    S23        S22  S19 x S4             S23        2      2           7      1       2       true             true             true             true                 26                     complete                      
 # 29  23  14168    3696    6   840     M23        M22  S6                   M23        2      2           5      1       6       true             false            true             false                                                                     
 # 30  23  14168    6160    10  2520    M23        M22  A6.2                 M23        2      2           5      1       12      true             false            true             false                                                                     
-# 31  23  15456    7392    11  3360    M23        M22  PSL(2,11)            M23        2      2           5      1       15      true             false            true             false                                                                     
+# 31  23  15456    7392    11  3360    M23        M22  PSL2(11)             M23        2      2           5      1       15      true             false            true             false                                                                     
 # 32  23  17710    9240    12  4620    M23        M22  (A4xA4):2:2          M23        2      2           5      1       16      true             false            true             false                                                                     
 # 33  23  28336    6160    5   1120    M23        M22  A5:S3                M23        2      2           5      1       4       true             false            true             false                                                                     
-# 34  23  30360    18480   14  10920   M23        M22  2xPSL(3,2)           M23        2      2           5      1       18      true             false            true             false                                                                     
+# 34  23  30360    18480   14  10920   M23        M22  2xPSL3(2)            M23        2      2           5      1       18      true             false            true             false                                                                     
 # 35  23  33649    7315    5   1330    A23        A22  (S5 x S18) cap A23   S23        2      2           6      1       3       true             true             true             true                 37                     complete                      
 # 36  23  33649    7315    5   1330    S23        S22  S5 x S18             S23        2      2           7      1       3       true             true             true             true                 38                     complete                      
 # 37  23  33649    26334   18  20349   A23        A22  (S18 x S5) cap A23   S23        2      2           6      1       3       true             true             true             true                 35                     complete                      
@@ -192,7 +192,7 @@
 # 42  23  100947   26334   6   5985    S23        S22  S6 x S17             S23        2      2           7      1       4       true             true             true             true                 44                     complete                      
 # 43  23  100947   74613   17  54264   A23        A22  (S17 x S6) cap A23   S23        2      2           6      1       4       true             true             true             true                 41                     complete                      
 # 44  23  100947   74613   17  54264   S23        S22  S17 x S6             S23        2      2           7      1       4       true             true             true             true                 42                     complete                      
-# 45  23  212520   73920   8   23520   M23        M22  GL(2,3)              M23        2      2           5      1       10      true             false            true             false                                                                     
+# 45  23  212520   73920   8   23520   M23        M22  GL2(3)               M23        2      2           5      1       10      true             false            true             false                                                                     
 # 46  23  245157   74613   7   20349   A23        A22  (S7 x S16) cap A23   S23        2      2           6      1       5       true             true             true             true                 48                     complete                      
 # 47  23  245157   74613   7   20349   S23        S22  S7 x S16             S23        2      2           7      1       5       true             true             true             true                 49                     complete                      
 # 48  23  245157   170544  16  116280  A23        A22  (S16 x S7) cap A23   S23        2      2           6      1       5       true             true             true             true                 46                     complete                      
@@ -251,7 +251,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,23)  AGL(1,23)  
+# Structure                            AGL1(23)   AGL1(23)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     22         22         
@@ -333,7 +333,7 @@
 # Rank                                 2           2       
 # 2-Homogeneous                        true        true    
 # Point-stabiliser                     M22         S22     
-# Block-stabiliser                     PSL(3,4):2  2xS21   
+# Block-stabiliser                     PSL3(4):2   2xS21   
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
 # Point-transitive                     true        true    
@@ -619,7 +619,7 @@
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     M22           M22           
-# Block-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
+# Block-stabiliser                     2^3:PSL3(2)   2^3:PSL3(2)  
 # Orbit structure of point-stabiliser                              
 # Orbit structure of block-stabiliser                              
 # Point-transitive                     true          true          
@@ -749,7 +749,7 @@
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     M22        M22        
-# Block-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Block-stabiliser                     PSL2(11)   PSL2(11)  
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
@@ -827,7 +827,7 @@
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     M22         M22         
-# Block-stabiliser                     2xPSL(3,2)  2xPSL(3,2)  
+# Block-stabiliser                     2xPSL3(2)   2xPSL3(2)  
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
 # Point-transitive                     true        true        
@@ -1009,7 +1009,7 @@
 # Rank                                 2        2        
 # 2-Homogeneous                        true     true     
 # Point-stabiliser                     M22      M22      
-# Block-stabiliser                     GL(2,3)  GL(2,3)  
+# Block-stabiliser                     GL2(3)   GL2(3)  
 # Orbit structure of point-stabiliser                    
 # Orbit structure of block-stabiliser                    
 # Point-transitive                     true     true     

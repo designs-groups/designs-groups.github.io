@@ -1,54 +1,74 @@
-# #####################################################################################################
+# ####################################################################################################
 # Flag-transitive 2-designs 
 # Group (autSubgroup): L2(19).2
-# #####################################################################################################
-# Remark: all designs 
-#         lD_L219d2 is the list of the designs
+# ####################################################################################################
+# Remarks:      all designs 
+#               lD_PGL219 is the list of the designs
+# References:    
 
-# 1. number of designs:
+# 1. Group information:
 # ---------------------
 
-# ----------------------------------------------------
-#                      Symmetric  Non-symmetric  Total
-# ----------------------------------------------------
-# Point-primitive      0          17             17
-# Point-imprimitive    0          0              0
-#
-# Block-primitive      0          3              3
-# Block-imprimitive    0          14             14
-#
-# Flag-transitive      0          17             17
-# AntiFlag-transitive  0          5              5
-# ----------------------------------------------------
-# Total                0          17             17
-# ----------------------------------------------------
+# ATLAS name:          L2(19).2
+# GAP name:            L219d2
+# Order:               6840 = 2^3 * 3^2 * 5 * 19
+# No. maximal classes: 5
 
-# 2. Summary: 
+# Maximal subgroups:
+# -------------------------------------------
+# Nr   structure         order         index
+# -------------------------------------------
+# 1                      3420          2
+# 2                      342           20
+# 3                      40            171
+# 4                      36            190
+# 5                      24            285
+# -------------------------------------------
+
+# 2. Number of designs:
+# ---------------------
+
+# ------------------------------------------------------
+#                      symmetric  non-symmetric  total  
+# ------------------------------------------------------
+# Point-primitive      0          17             17     
+# Point-imprimitive    0          0              0      
+#                                                       
+# Block-primitive      0          3              3      
+# Block-imprimitive    0          14             14     
+#                                                       
+# Flag-transitive      0          17             17     
+# AntiFlag-transitive  0          5              5      
+# ------------------------------------------------------
+# Total                0          17             17     
+# ------------------------------------------------------
+
+# 3. Summary: 
 # -----------
 
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b     r    k   λ    G            Gα     GB   Aut(D)       rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   20  190   171  18  153  PSL(2,19):2  19:18  D36  S20          2      2                  3       10      true             true             true             true                                        complete
-# 2   20  285   114  8   42   PSL(2,19):2  19:18  S4   PSL(2,19):2  2      2                  3       11      true             true             true             true                 3
-# 3   20  285   171  12  99   PSL(2,19):2  19:18  S4   PSL(2,19):2  2      2                  3       11      true             true             true             true                 2
-# 4   20  342   171  10  81   PSL(2,19):2  19:18  D20  PSL(2,19):2  2      2                  3       12      true             false            true             true                 4
-# 5   20  380   171  9   72   PSL(2,19):2  19:18  D18  PSL(2,19):2  2      2                  3       17      true             false            true             false
-# 6   20  570   114  4   18   PSL(2,19):2  19:18  A4   PSL(2,19):2  2      2                  3       20      true             false            true             false
-# 7   20  570   171  6   45   PSL(2,19):2  19:18  D12  PSL(2,19):2  2      2                  3       19      true             false            true             false
-# 8   20  570   342  12  198  PSL(2,19):2  19:18  D12  PSL(2,19):2  2      2                  3       19      true             false            true             false
-# 9   20  684   171  5   36   PSL(2,19):2  19:18  D10  PSL(2,19):2  2      2                  3       22      true             false            true             false
-# 10  20  684   342  10  162  PSL(2,19):2  19:18  D10  PSL(2,19):2  2      2                  3       23      true             false            true             true                 10
-# 11  20  855   171  4   27   PSL(2,19):2  19:18  D8   PSL(2,19):2  2      2                  3       25      true             false            true             false
-# 12  20  855   342  8   126  PSL(2,19):2  19:18  D8   PSL(2,19):2  2      2                  3       25      true             false            true             false
-# 13  20  1140  171  3   18   PSL(2,19):2  19:18  S3   S20          2      2                  3       27      true             false            true             false                                       complete
-# 14  20  1140  342  6   90   PSL(2,19):2  19:18  S3   PSL(2,19):2  2      2                  3       28      true             false            true             false
-# 15  20  1140  342  6   90   PSL(2,19):2  19:18  S3   PSL(2,19):2  2      2                  3       27      true             false            true             false
-# 16  20  1710  342  4   54   PSL(2,19):2  19:18  2^2  PSL(2,19):2  2      2                  3       32      true             false            true             false
-# 17  20  1710  342  4   54   PSL(2,19):2  19:18  2^2  PSL(2,19):2  2      2                  3       32      true             false            true             false
-# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b     r    k   λ    G          Gα         GB   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   20  190   171  18  153  PGL2(19)   AGL1(19)   D36  S20        2      2                  1       6       true             true             true             true                                        complete  
+# 2   20  285   114  8   42   PGL2(19)   AGL1(19)   S4   PGL2(19)   2      2                  1       7       true             true             true             true                 3                                
+# 3   20  285   171  12  99   PGL2(19)   AGL1(19)   S4   PGL2(19)   2      2                  1       7       true             true             true             true                 2                                
+# 4   20  342   171  10  81   PGL2(19)   AGL1(19)   D20  PGL2(19)   2      2                  1       9       true             false            true             true                 4                                
+# 5   20  380   171  9   72   PGL2(19)   AGL1(19)   D18  PGL2(19)   2      2                  1       11      true             false            true             false                                                 
+# 6   20  570   114  4   18   PGL2(19)   AGL1(19)   A4   PGL2(19)   2      2                  1       14      true             false            true             false                                                 
+# 7   20  570   171  6   45   PGL2(19)   AGL1(19)   D12  PGL2(19)   2      2                  1       15      true             false            true             false                                                 
+# 8   20  570   342  12  198  PGL2(19)   AGL1(19)   D12  PGL2(19)   2      2                  1       15      true             false            true             false                                                 
+# 9   20  684   171  5   36   PGL2(19)   AGL1(19)   D10  PGL2(19)   2      2                  1       16      true             false            true             false                                                 
+# 10  20  684   342  10  162  PGL2(19)   AGL1(19)   D10  PGL2(19)   2      2                  1       18      true             false            true             true                 10                               
+# 11  20  855   171  4   27   PGL2(19)   AGL1(19)   D8   PGL2(19)   2      2                  1       20      true             false            true             false                                                 
+# 12  20  855   342  8   126  PGL2(19)   AGL1(19)   D8   PGL2(19)   2      2                  1       20      true             false            true             false                                                 
+# 13  20  1140  171  3   18   PGL2(19)   AGL1(19)   S3   S20        2      2                  1       21      true             false            true             false                                       complete  
+# 14  20  1140  342  6   90   PGL2(19)   AGL1(19)   S3   PGL2(19)   2      2                  1       21      true             false            true             false                                                 
+# 15  20  1140  342  6   90   PGL2(19)   AGL1(19)   S3   PGL2(19)   2      2                  1       23      true             false            true             false                                                 
+# 16  20  1710  342  4   54   PGL2(19)   AGL1(19)   2^2  PGL2(19)   2      2                  1       26      true             false            true             false                                                 
+# 17  20  1710  342  4   54   PGL2(19)   AGL1(19)   2^2  PGL2(19)   2      2                  1       26      true             false            true             false                                                 
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
+# 4. Further information: 
 # -----------------------
 
 # Design: 1
@@ -58,10 +78,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  S20          
+# Structure                            PGL2(19)     S20          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        S19          
+# Point-stabiliser                     AGL1(19)     S19          
 # Block-stabiliser                     D36          2xS18        
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{1}18^{1}  2^{1}18^{1}  
@@ -84,10 +104,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     S4           S4           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  8^{1}12^{1}  8^{1}12^{1}  
@@ -110,10 +130,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     S4           S4           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  8^{1}12^{1}  8^{1}12^{1}  
@@ -136,10 +156,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     D20          D20          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  10^{2}       10^{2}       
@@ -162,10 +182,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     D18          D18          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{1}9^{2}   2^{1}9^{2}   
@@ -188,10 +208,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     A4           A4           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{2}12^{1}  4^{2}12^{1}  
@@ -214,10 +234,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PSL(2,19):2       PSL(2,19):2       
+# Structure                            PGL2(19)          PGL2(19)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     19:18             19:18             
+# Point-stabiliser                     AGL1(19)          AGL1(19)         
 # Block-stabiliser                     D12               D12               
 # Orbit structure of point-stabiliser  1^{1}19^{1}       1^{1}19^{1}       
 # Orbit structure of block-stabiliser  2^{1}6^{1}12^{1}  2^{1}6^{1}12^{1}  
@@ -240,10 +260,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PSL(2,19):2       PSL(2,19):2       
+# Structure                            PGL2(19)          PGL2(19)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     19:18             19:18             
+# Point-stabiliser                     AGL1(19)          AGL1(19)         
 # Block-stabiliser                     D12               D12               
 # Orbit structure of point-stabiliser  1^{1}19^{1}       1^{1}19^{1}       
 # Orbit structure of block-stabiliser  2^{1}6^{1}12^{1}  2^{1}6^{1}12^{1}  
@@ -266,10 +286,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     D10          D10          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  5^{2}10^{1}  5^{2}10^{1}  
@@ -292,10 +312,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     D10          D10          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  10^{2}       10^{2}       
@@ -318,10 +338,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     D8           D8           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{2}   4^{1}8^{2}   
@@ -344,10 +364,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     D8           D8           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{2}   4^{1}8^{2}   
@@ -370,10 +390,10 @@
 # -------------------------------------------------------------------
 #                                      G                Aut(D)       
 # -------------------------------------------------------------------
-# Structure                            PSL(2,19):2      S20          
+# Structure                            PGL2(19)         S20          
 # Rank                                 2                2            
 # 2-Homogeneous                        true             true         
-# Point-stabiliser                     19:18            S19          
+# Point-stabiliser                     AGL1(19)         S19          
 # Block-stabiliser                     S3               S17xS3       
 # Orbit structure of point-stabiliser  1^{1}19^{1}      1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{1}3^{2}6^{2}  3^{1}17^{1}  
@@ -390,42 +410,16 @@
 # -------------------------------------------------------------------
 
 # Design: 14
-# ---------------------------------------------------------------
-# Parameter set: [ 20, 1140, 342, 6, 90 ]
-# Complement:    [ 20, 1140, 798, 14, 546 ]
-# ---------------------------------------------------------------
-#                                      G            Aut(D)       
-# ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
-# Rank                                 2            2            
-# 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
-# Block-stabiliser                     S3           S3           
-# Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
-# Orbit structure of block-stabiliser  2^{1}6^{3}   2^{1}6^{3}   
-# Point-transitive                     true         true         
-# Block-transitive                     true         true         
-# Flag-transitive                      true         true         
-# Anti-flag-transitive                 false        false        
-# Flag-semiregular                     true         true         
-# Flag-regular                         true         true         
-# Point-primitive                      true         true         
-# Point-primitive type                 2            2            
-# Block-primitive                      false        false        
-# Block-primitive type                 0            0            
-# ---------------------------------------------------------------
-
-# Design: 15
 # -----------------------------------------------------------------------
 # Parameter set: [ 20, 1140, 342, 6, 90 ]
 # Complement:    [ 20, 1140, 798, 14, 546 ]
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL(2,19):2      PSL(2,19):2      
+# Structure                            PGL2(19)         PGL2(19)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     19:18            19:18            
+# Point-stabiliser                     AGL1(19)         AGL1(19)        
 # Block-stabiliser                     S3               S3               
 # Orbit structure of point-stabiliser  1^{1}19^{1}      1^{1}19^{1}      
 # Orbit structure of block-stabiliser  2^{1}3^{2}6^{2}  2^{1}3^{2}6^{2}  
@@ -441,6 +435,32 @@
 # Block-primitive type                 0                0                
 # -----------------------------------------------------------------------
 
+# Design: 15
+# ---------------------------------------------------------------
+# Parameter set: [ 20, 1140, 342, 6, 90 ]
+# Complement:    [ 20, 1140, 798, 14, 546 ]
+# ---------------------------------------------------------------
+#                                      G            Aut(D)       
+# ---------------------------------------------------------------
+# Structure                            PGL2(19)     PGL2(19)    
+# Rank                                 2            2            
+# 2-Homogeneous                        true         true         
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
+# Block-stabiliser                     S3           S3           
+# Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
+# Orbit structure of block-stabiliser  2^{1}6^{3}   2^{1}6^{3}   
+# Point-transitive                     true         true         
+# Block-transitive                     true         true         
+# Flag-transitive                      true         true         
+# Anti-flag-transitive                 false        false        
+# Flag-semiregular                     true         true         
+# Flag-regular                         true         true         
+# Point-primitive                      true         true         
+# Point-primitive type                 2            2            
+# Block-primitive                      false        false        
+# Block-primitive type                 0            0            
+# ---------------------------------------------------------------
+
 # Design: 16
 # ---------------------------------------------------------------
 # Parameter set: [ 20, 1710, 342, 4, 54 ]
@@ -448,10 +468,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     2^2          2^2          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{2}4^{4}   2^{2}4^{4}   
@@ -474,10 +494,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL(2,19):2  PSL(2,19):2  
+# Structure                            PGL2(19)     PGL2(19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:18        19:18        
+# Point-stabiliser                     AGL1(19)     AGL1(19)    
 # Block-stabiliser                     2^2          2^2          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{2}4^{4}   2^{2}4^{4}   
@@ -493,276 +513,282 @@
 # Block-primitive type                 0            0            
 # ---------------------------------------------------------------
 
-# 4. Designs: 
+# 5. Designs: 
 # -----------
 
-lD_L219d2 :=  [
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 20 ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 10 ],
-  baseBlock := [ 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ],
+lD_PGL219 :=  [
+ rec( parameters := [ 20, 190, 171, 18, 153 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 6 ],
+  baseBlock := [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20 ],
   blockSizes := [ 18 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 190, 171, 18, 153 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 153 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 11 ],
-  baseBlock := [ 3, 4, 5, 7, 14, 16, 18, 20 ],
+  lambdas := [ 153 ],
+  t := 2 ),
+  aVector := [ [ 306, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 285, 114, 8, 42 ],
+  autGroup := Group( [ ( 3,16, 4)( 5, 7,18)( 6,10, 8)( 9,20,15)(11,13,17)(12,19,14), ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3)( 2,18)( 4,16)( 5, 7)( 6,20)( 8,13)( 9,12)(10,14)(11,15)(17,19), ( 1, 7,18,11,10)( 2,16,14, 9,20)( 3, 4, 5,17,19)( 6, 8,13,12,15) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 7 ],
+  baseBlock := [ 3, 5, 11, 12, 13, 14, 16, 19 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 285, 114, 8, 42 ],
   r := 114,
   tSubsetStructure := rec(
-      lambdas := [ 42 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 11 ],
-  baseBlock := [ 1, 2, 6, 8, 9, 10, 11, 12, 13, 15, 17, 19 ],
+  lambdas := [ 42 ],
+  t := 2 ),
+  aVector := [ [ 56, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 285, 171, 12, 99 ],
+  autGroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 4)( 2, 3)( 5,17)( 6, 8)( 7,20)( 9,15)(10,19)(11,16)(12,18)(13,14), ( 1, 6)( 4, 8)( 5,19)( 7,20)( 9,16)(10,17)(11,15)(12,14)(13,18), ( 2, 7, 4,19,11,18)( 3, 5,17,13,12, 6)( 8,15, 9,10,14,16) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 7 ],
+  baseBlock := [ 1, 2, 4, 6, 7, 8, 9, 10, 15, 17, 18, 20 ],
   blockSizes := [ 12 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 285, 171, 12, 99 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 99 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 12 ],
-  baseBlock := [ 1, 2, 3, 6, 8, 13, 14, 16, 17, 19 ],
+  lambdas := [ 99 ],
+  t := 2 ),
+  aVector := [ [ 132, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 342, 171, 10, 81 ],
+  autGroup := Group( [ ( 1, 5,11, 6, 9, 3, 2, 4,19, 7)( 8,14,16,15,13,18,12,10,17,20), ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 7,18,12,11, 8,17,16,10,20)( 2, 5, 3, 6,14, 4,19,13,15, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 9 ],
+  baseBlock := [ 1, 2, 3, 5, 7, 14, 15, 16, 17, 19 ],
   blockSizes := [ 10 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 342, 171, 10, 81 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 81 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 17 ],
-  baseBlock := [ 1, 3, 4, 5, 7, 8, 9, 11, 12 ],
+  lambdas := [ 81 ],
+  t := 2 ),
+  aVector := [ [ 90, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 380, 171, 9, 72 ],
+  autGroup := Group( [ ( 1, 3)( 2, 8)( 5,16)( 7,20)( 9,14)(10,15)(11,18)(12,19)(13,17), ( 1, 2)( 3, 4)( 5,14)( 6,15)( 7,19)( 8, 9)(10,20)(12,18)(13,17), ( 1, 4,14, 8, 7,13,19,17,10)( 3,16,15, 6,20, 9,18,12,11) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 11 ],
+  baseBlock := [ 2, 3, 6, 11, 12, 13, 16, 19, 20 ],
   blockSizes := [ 9 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 380, 171, 9, 72 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 72 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 20 ],
-  baseBlock := [ 3, 5, 14, 18 ],
+  lambdas := [ 72 ],
+  t := 2 ),
+  aVector := [ [ 72, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 570, 114, 4, 18 ],
+  autGroup := Group( [ ( 2,11, 3)( 4,10,13)( 5,19,17)( 6,14, 7)( 8,15,20)( 9,16,12), ( 1,11, 2)( 5,14,16)( 6,19, 8)( 7,15, 9)(10,18,13)(12,20,17), ( 1, 3, 2,11,18,14,16,10, 6,20,17, 8, 9,15, 4, 7,19,13) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 14 ],
+  baseBlock := [ 2, 10, 13, 14 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 570, 114, 4, 18 ],
   r := 114,
   tSubsetStructure := rec(
-      lambdas := [ 18 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 19 ],
-  baseBlock := [ 4, 8, 12, 14, 18, 19 ],
+  lambdas := [ 18 ],
+  t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 570, 171, 6, 45 ],
+  autGroup := Group( [ ( 1, 2)( 3, 8)( 4, 6)( 5,15)( 7,20)( 9,18)(10,16)(11,14)(12,17)(13,19), ( 1, 3)( 2, 8)( 5,16)( 7,20)( 9,14)(10,15)(11,18)(12,19)(13,17), ( 1, 2, 6, 8, 3, 4)( 5,11,12,10, 9,13)(14,15,19,18,16,17), ( 1, 8, 5,19, 7,16,14,12,17,11,10,20,13,15, 3, 2, 6,18, 9, 4) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 15 ],
+  baseBlock := [ 4, 6, 8, 9, 12, 20 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 570, 171, 6, 45 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 45 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 19 ],
-  baseBlock := [ 2, 3, 5, 6, 7, 9, 10, 11, 13, 15, 16, 17 ],
+  lambdas := [ 45 ],
+  t := 2 ),
+  aVector := [ [ 30, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 570, 342, 12, 198 ],
+  autGroup := Group( [ ( 1, 2, 5)( 3, 4,17)( 6,20,11)( 7, 8,16)(10,12,14)(13,18,19), ( 1, 4)( 2, 3)( 5,17)( 6, 8)( 7,20)( 9,15)(10,19)(11,16)(12,18)(13,14), ( 1,20, 2,11, 5, 6)( 3, 7, 4, 8,17,16)(10,13,12,18,14,19), ( 1, 3)( 2, 8)( 5,16)( 7,20)( 9,14)(10,15)(11,18)(12,19)(13,17) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 15 ],
+  baseBlock := [ 2, 3, 5, 7, 10, 11, 13, 14, 16, 17, 18, 19 ],
   blockSizes := [ 12 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 570, 342, 12, 198 ],
   r := 342,
   tSubsetStructure := rec(
-      lambdas := [ 198 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 22 ],
-  baseBlock := [ 2, 3, 11, 19, 20 ],
+  lambdas := [ 198 ],
+  t := 2 ),
+  aVector := [ [ 132, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 684, 171, 5, 36 ],
+  autGroup := Group( [ ( 2, 5)( 3,12)( 4,10)( 6,20)( 7,13)( 8,19)( 9,15)(14,17)(16,18), ( 1, 2)( 4,16)( 5,12)( 6, 9)( 7,14)( 8,20)(10,15)(11,13)(18,19), ( 1,12,13,19,15,14, 2, 3, 5)( 4, 7,20,11,18, 6,16, 9,17) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 16 ],
+  baseBlock := [ 4, 6, 10, 12, 18 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 684, 171, 5, 36 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 36 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 23 ],
-  baseBlock := [ 1, 3, 4, 5, 7, 10, 11, 12, 15, 17 ],
+  lambdas := [ 36 ],
+  t := 2 ),
+  aVector := [ [ 20, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 684, 342, 10, 162 ],
+  autGroup := Group( [ ( 1, 3)( 2, 9)( 4,17)( 5, 8)( 6,15)( 7,14)(10,11)(12,16)(13,19)(18,20), ( 1, 5)( 2, 4)( 3,15)( 6,17)( 7,12)( 8, 9)(10,14)(11,18)(13,20)(16,19), ( 1, 8, 9,14,20,12,18, 2,17,10,13,16,19,15,11, 3, 5, 4) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 18 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 9, 13, 16, 19, 20 ],
   blockSizes := [ 10 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 684, 342, 10, 162 ],
   r := 342,
   tSubsetStructure := rec(
-      lambdas := [ 162 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 25 ],
-  baseBlock := [ 7, 11, 14, 19 ],
+  lambdas := [ 162 ],
+  t := 2 ),
+  aVector := [ [ 90, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 855, 171, 4, 27 ],
+  autGroup := Group( [ ( 2, 3)( 4,19)( 5, 8)( 7,12)( 9,17)(10,16)(11,13)(14,20)(15,18), ( 1, 3, 6, 2)( 4,16, 5,17)( 7,18,14,11)( 8,10,19, 9)(12,13,20,15), ( 1, 3, 2, 6,10,13,18, 8,12, 4,17,16, 5,20,19,11,15, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 20 ],
+  baseBlock := [ 5, 6, 9, 19 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 855, 171, 4, 27 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 27 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 4,18)( 5,17)( 6,16)( 7,15)( 8,20)( 9,14)(10,19)(11,13), ( 2, 3)( 4,14)( 5, 6)( 7,15)( 8,12)( 9,10)(11,16)(13,17)(18,19), ( 3, 4,16,19,11,13,10, 6,18)( 5,15,14, 9, 7,17,20,12, 8), 
-      ( 3, 5,11, 7,18, 8,19, 9, 6,12,16,14,10,20, 4,15,13,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 25 ],
-  baseBlock := [ 1, 4, 8, 12, 15, 16, 18, 20 ],
+  lambdas := [ 27 ],
+  t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 855, 342, 8, 126 ],
+  autGroup := Group( [ ( 1, 3, 6, 2)( 4,16, 5,17)( 7,18,14,11)( 8,10,19, 9)(12,13,20,15), ( 1, 4)( 2,16)( 3,17)( 5, 6)( 8,15)( 9,12)(10,20)(11,18)(13,19), ( 1,17,16,10,11,15,12,19,14,13, 9, 8,18,20, 2, 3, 4, 6, 7, 5) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 20 ],
+  baseBlock := [ 1, 4, 10, 13, 14, 15, 16, 20 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 855, 342, 8, 126 ],
   r := 342,
   tSubsetStructure := rec(
-      lambdas := [ 126 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 20 ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 27 ],
-  baseBlock := [ 2, 3, 10 ],
+  lambdas := [ 126 ],
+  t := 2 ),
+  aVector := [ [ 56, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 1140, 171, 3, 18 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 21 ],
+  baseBlock := [ 2, 9, 17 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 1140, 171, 3, 18 ],
   r := 171,
   tSubsetStructure := rec(
-      lambdas := [ 18 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 3,15)( 4, 5)( 6, 9)( 7,10)( 8,16)(11,20)(12,19)(13,17)(14,18), ( 1, 3)( 2, 4)( 5,15)( 6,11)( 7,14)( 8,16)( 9,13)(10,19)(12,18)(17,20), 
-      ( 1,17,10, 8,12, 7,16,18, 6, 5, 4, 2,20,13,19,14,11, 9,15, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 28 ],
-  baseBlock := [ 2, 6, 7, 9, 11, 17 ],
+  lambdas := [ 18 ],
+  t := 2 ),
+  aVector := [ [ 6, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 1140, 342, 6, 90 ],
+  autGroup := Group( [ ( 1, 2)( 3, 7)( 4,18)( 5,16)( 6,10)( 9,13)(11,20)(14,19)(15,17), ( 1, 3, 4)( 2,18, 7)( 6,14, 9)( 8,20,11)(10,13,19)(12,17,15), ( 1,18,14,13, 8, 9,19, 4, 2)( 5, 6,12,10,16,11,15,17,20) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 21 ],
+  baseBlock := [ 1, 7, 10, 15, 18, 20 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 1140, 342, 6, 90 ],
   r := 342,
   tSubsetStructure := rec(
-      lambdas := [ 90 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2, 6, 3,10,17,19,16,14,11,20,18, 8,12,13, 7,15, 9), ( 1, 6)( 2, 3)( 4, 9)( 5,10)( 7,11)( 8,19)(12,15)(14,17)(18,20), ( 1, 9)( 2, 6)( 3, 4)( 5,15)( 7,16)( 8,10)(12,19)(13,18)(14,17) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 27 ],
-  baseBlock := [ 1, 5, 13, 15, 17, 18 ],
+  lambdas := [ 90 ],
+  t := 2 ),
+  aVector := [ [ 30, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 1140, 342, 6, 90 ],
+  autGroup := Group( [ ( 1, 3)( 2,17)( 4, 5)( 6, 7)( 8,11)( 9,15)(10,18)(12,13)(14,19)(16,20), ( 1, 4)( 2, 3)( 5,17)( 6, 8)( 7,20)( 9,15)(10,19)(11,16)(12,18)(13,14), ( 1, 5,10,11, 6,15,20,12,19, 8, 9,16, 7,13, 3,17,18,14) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 23 ],
+  baseBlock := [ 1, 3, 9, 15, 18, 20 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 1140, 342, 6, 90 ],
   r := 342,
   tSubsetStructure := rec(
-      lambdas := [ 90 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2)( 3, 4)( 5,20)( 6,19)( 7,14)( 8,12)(10,11)(15,17)(16,18), ( 1, 2, 3)( 4, 9,19)( 5,16,13)( 6,17,11)( 8,12,20)(10,14,18), ( 1, 3)( 2, 4)( 5,15)( 6,11)( 7,14)( 8,16)( 9,13)(10,19)(12,18)(17,20) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 32 ],
-  baseBlock := [ 2, 9, 17, 18 ],
+  lambdas := [ 90 ],
+  t := 2 ),
+  aVector := [ [ 30, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters := [ 20, 1710, 342, 4, 54 ],
+  autGroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3)( 2, 5)( 4,11)( 6,19)( 7, 9)( 8,18)(10,16)(12,14)(13,20)(15,17), ( 2, 5,17, 6,11, 9,20, 4,16,13,15,19,18, 8,14,10, 7, 3) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 26 ],
+  baseBlock := [ 1, 14, 15, 16 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 1710, 342, 4, 54 ],
   r := 342,
   tSubsetStructure := rec(
-      lambdas := [ 54 ],
-      t := 2 ),
-  v := 20 ), 
- rec(
-  autGroup := Group( [ ( 1, 2, 6, 9, 4,15, 8,17,16,19,18,11,13,12, 7,14,10, 5, 3), ( 1, 5)( 2, 3)( 4,13)( 6, 9)( 7, 8)(10,14)(12,18)(15,16)(19,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4)( 3, 6, 9)( 5, 8,12)( 7,11,16)(10,15,19)(13,18,20), ( 1, 3)( 2, 5)( 4, 7)( 6,10)( 8,13)( 9,14)(11,17)(12,15)(16,18) ] ),
-  groupNumbers := [ " ", 3, 32 ],
-  baseBlock := [ 1, 4, 6, 15 ],
+  lambdas := [ 54 ],
+  t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20),
+ rec( parameters:= [ 20, 1710, 342, 4, 54 ],
+  autGroup := Group( [ ( 1, 2)( 3, 4)( 5,14)( 6,15)( 7,19)( 8, 9)(10,20)(12,18)(13,17), ( 1, 3)( 2, 4)( 5,13)( 6, 9)( 7,10)( 8,15)(11,16)(14,17)(19,20), ( 1, 2, 3)( 4,18,10)( 5,20, 7)( 6, 9,17)( 8,12,14)(15,19,16) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 5)( 4, 7)( 8,10)( 9,11)(12,14)(13,15)(16,18)(17,20), ( 1, 3, 6)( 2, 4, 8)( 5, 9,12)(10,11,13)(14,16,19)(15,17,18) ] ),
+  groupNumbers := [ " ", 1, 26 ],
+  baseBlock := [ 2, 3, 7, 17 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 20, 1710, 342, 4, 54 ],
   r := 342,
   tSubsetStructure := rec(
-      lambdas := [ 54 ],
-      t := 2 ),
-  v := 20 )
+  lambdas := [ 54 ],
+  t := 2 ),
+  aVector := [ [ 12, 1 ] ],
+  Subdegrees := [ [ 1, 1 ], [ 19, 1 ] ],
+  v:= 20)
 ]; 
-for D in lD_L219d2 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_PGL219 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
+

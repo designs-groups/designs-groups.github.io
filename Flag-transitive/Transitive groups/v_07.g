@@ -6,7 +6,7 @@
 #               lD_7 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,11 +31,11 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα  GB        Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   7:3       3   3         PSL(3,2)  3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   4   4  2   PSL(3,2)  S4  S4        PSL(3,2)  2      2           5      1       1       true             true             true             true                             true       complement of PG(2,2), Hadamard or Paley parameters  
-# 3   7  14  6   3  2   AGL(1,7)  6   3         AGL(1,7)  2      2           4      1       1       true             false            true             false                                                                                            
+# 1   7  7   3   3  1   7:3       3   3         PSL3(2)   3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   4   4  2   PSL3(2)   S4  S4        PSL3(2)   2      2           5      1       1       true             true             true             true                             true       complement of PG(2,2), Hadamard or Paley parameters  
+# 3   7  14  6   3  2   AGL1(7)   6   3         AGL1(7)   2      2           4      1       1       true             false            true             false                                                                                            
 # 4   7  21  15  5  10  A7        A6  S5        S7        2      2           6      1       2       true             true             true             true                                        complete                                             
-# 5   7  28  12  3  4   PSL(3,2)  S4  S3        PSL(3,2)  2      2           5      1       2       true             false            true             false                                                                                            
+# 5   7  28  12  3  4   PSL3(2)   S4  S3        PSL3(2)   2      2           5      1       2       true             false            true             false                                                                                            
 # 6   7  35  15  3  5   A7        A6  (3xA4):2  S7        2      2           6      1       1       true             true             true             true                 7                      complete                                             
 # 7   7  35  20  4  10  A7        A6  (3xA4):2  S7        2      2           6      1       1       true             true             true             true                 6                      complete                                             
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -44,13 +44,13 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα  GB        Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   7:3       3   3         PSL(3,2)  3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   3   3  1   PSL(3,2)  S4  S4        PSL(3,2)  2      2           5      1       1       true             true             true             true                 3           true       PG(2,2), Hadamard or Paley parameters                
-# 3   7  7   4   4  2   PSL(3,2)  S4  S4        PSL(3,2)  2      2           5      1       1       true             true             true             true                 2           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 4   7  14  6   3  2   AGL(1,7)  6   3         AGL(1,7)  2      2           4      1       1       true             false            true             false                                                                                            
+# 1   7  7   3   3  1   7:3       3   3         PSL3(2)   3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   3   3  1   PSL3(2)   S4  S4        PSL3(2)   2      2           5      1       1       true             true             true             true                 3           true       PG(2,2), Hadamard or Paley parameters                
+# 3   7  7   4   4  2   PSL3(2)   S4  S4        PSL3(2)   2      2           5      1       1       true             true             true             true                 2           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 4   7  14  6   3  2   AGL1(7)   6   3         AGL1(7)   2      2           4      1       1       true             false            true             false                                                                                            
 # 5   7  21  15  5  10  A7        A6  S5        S7        2      2           6      1       2       true             true             true             true                                        complete                                             
 # 6   7  21  15  5  10  S7        S6  2xS5      S7        2      2           7      1       2       true             true             true             true                                        complete                                             
-# 7   7  28  12  3  4   PSL(3,2)  S4  S3        PSL(3,2)  2      2           5      1       2       true             false            true             false                                                                                            
+# 7   7  28  12  3  4   PSL3(2)   S4  S3        PSL3(2)   2      2           5      1       2       true             false            true             false                                                                                            
 # 8   7  35  15  3  5   A7        A6  (3xA4):2  S7        2      2           6      1       1       true             true             true             true                 10                     complete                                             
 # 9   7  35  15  3  5   S7        S6  S4xS3     S7        2      2           7      1       1       true             true             true             true                 11                     complete                                             
 # 10  7  35  20  4  10  A7        A6  (3xA4):2  S7        2      2           6      1       1       true             true             true             true                 8                      complete                                             
@@ -67,7 +67,7 @@
 # ------------------------------------------------------
 #                                      G      Aut(D)    
 # ------------------------------------------------------
-# Structure                            7:3    PSL(3,2)  
+# Structure                            7:3    PSL3(2)  
 # Rank                                 3      2         
 # 2-Homogeneous                        true   true      
 # Point-stabiliser                     3      S4        
@@ -93,7 +93,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL(3,2)  PSL(3,2)  
+# Structure                            PSL3(2)   PSL3(2)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     S4        S4        
@@ -119,7 +119,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AGL(1,7)  AGL(1,7)  
+# Structure                            AGL1(7)   AGL1(7)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     6         6         
@@ -171,7 +171,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL(3,2)  PSL(3,2)  
+# Structure                            PSL3(2)   PSL3(2)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     S4        S4        

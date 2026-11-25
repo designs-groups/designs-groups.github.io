@@ -6,7 +6,7 @@
 #               lD_14 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,20 +31,20 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ    G          Gα     GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   14  78    39    7   18   PSL(2,13)  13:6   D14                 PSL(2,13)  2      2           1      1       5       true             true             true             true                                                  
-# 2   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 3   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 4   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       4       true             true             true             false                                                 
-# 5   14  91    52    8   28   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       5       true             true             true             true                                                  
-# 6   14  91    78    12  66   PGL(2,13)  13:12  D24                 S14        2      2           2      1       8       true             true             true             true                                        complete  
-# 7   14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       7       true             false            true             true                 7                                
-# 8   14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                                                 
-# 9   14  182   52    4   12   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                                                 
-# 10  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       6       true             false            true             false                                                 
-# 11  14  273   78    4   18   PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                                                 
-# 12  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                                       complete  
+# 1   14  78    39    7   18   PSL2(13)   13:6   D14                 PSL2(13)   2      2           1      1       5       true             true             true             true                                                  
+# 2   14  91    26    4   6    PSL2(13)   13:6   A4                  PSL2(13)   2      2           1      1       3       true             true             true             false                                                 
+# 3   14  91    39    6   15   PSL2(13)   13:6   A4                  PGL2(13)   2      2           1      1       3       true             true             true             false                                                 
+# 4   14  91    39    6   15   PSL2(13)   13:6   D12                 PSL2(13)   2      2           1      1       4       true             true             true             false                                                 
+# 5   14  91    52    8   28   PGL2(13)   13:12  S4                  PGL2(13)   2      2           2      1       5       true             true             true             true                                                  
+# 6   14  91    78    12  66   PGL2(13)   13:12  D24                 S14        2      2           2      1       8       true             true             true             true                                        complete  
+# 7   14  156   78    7   36   PGL2(13)   13:12  D14                 PGL2(13)   2      2           2      1       7       true             false            true             true                 7                                
+# 8   14  182   39    3   6    PSL2(13)   13:6   S3                  PSL2(13)   2      2           1      1       1       true             false            true             false                                                 
+# 9   14  182   52    4   12   PGL2(13)   13:12  A4                  PGL2(13)   2      2           2      1       2       true             false            true             false                                                 
+# 10  14  182   78    6   30   PGL2(13)   13:12  D12                 PGL2(13)   2      2           2      1       6       true             false            true             false                                                 
+# 11  14  273   78    4   18   PGL2(13)   13:12  D8                  PGL2(13)   2      2           2      1       3       true             false            true             false                                                 
+# 12  14  364   78    3   12   PGL2(13)   13:12  S3                  S14        2      2           2      1       1       true             false            true             false                                       complete  
 # 13  14  364   286   11  220  A14        A13    (S11 x S3) cap A14  S14        2      2           3      1       1       true             true             true             true                                        complete  
-# 14  14  546   156   4   36   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                                                 
+# 14  14  546   156   4   36   PGL2(13)   13:12  2^2                 PGL2(13)   2      2           2      1       4       true             false            true             false                                                 
 # 15  14  1001  286   4   66   A14        A13    (S4 x S10) cap A14  S14        2      2           3      1       2       true             true             true             true                 16                     complete  
 # 16  14  1001  715   10  495  A14        A13    (S10 x S4) cap A14  S14        2      2           3      1       2       true             true             true             true                 15                     complete  
 # 17  14  2002  715   5   220  A14        A13    (S5 x S9) cap A14   S14        2      2           3      1       3       true             true             true             true                 18                     complete  
@@ -58,26 +58,26 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ    G          Gα     GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   14  78    39    7   18   PSL(2,13)  13:6   D14                 PSL(2,13)  2      2           1      1       5       true             true             true             true                                                  
-# 2   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 3   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 4   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       4       true             true             true             false                                                 
-# 5   14  91    39    6   15   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       5       true             true             true             true                 6                                
-# 6   14  91    52    8   28   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       5       true             true             true             true                 5                                
-# 7   14  91    78    12  66   PGL(2,13)  13:12  D24                 S14        2      2           2      1       8       true             true             true             true                                        complete  
+# 1   14  78    39    7   18   PSL2(13)   13:6   D14                 PSL2(13)   2      2           1      1       5       true             true             true             true                                                  
+# 2   14  91    26    4   6    PSL2(13)   13:6   A4                  PSL2(13)   2      2           1      1       3       true             true             true             false                                                 
+# 3   14  91    39    6   15   PSL2(13)   13:6   A4                  PGL2(13)   2      2           1      1       3       true             true             true             false                                                 
+# 4   14  91    39    6   15   PSL2(13)   13:6   D12                 PSL2(13)   2      2           1      1       4       true             true             true             false                                                 
+# 5   14  91    39    6   15   PGL2(13)   13:12  S4                  PGL2(13)   2      2           2      1       5       true             true             true             true                 6                                
+# 6   14  91    52    8   28   PGL2(13)   13:12  S4                  PGL2(13)   2      2           2      1       5       true             true             true             true                 5                                
+# 7   14  91    78    12  66   PGL2(13)   13:12  D24                 S14        2      2           2      1       8       true             true             true             true                                        complete  
 # 8   14  91    78    12  66   A14        A13    (S12 x S2) cap A14  S14        2      2           3      1       6       true             true             true             true                                        complete  
 # 9   14  91    78    12  66   S14        S13    S12 x S2            S14        2      2           4      1       6       true             true             true             true                                        complete  
-# 10  14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       7       true             false            true             true                 10                               
-# 11  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                                                 
-# 12  14  182   52    4   12   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                                                 
-# 13  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       6       true             false            true             false                                                 
-# 14  14  273   78    4   18   PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                                                 
-# 15  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                                       complete  
+# 10  14  156   78    7   36   PGL2(13)   13:12  D14                 PGL2(13)   2      2           2      1       7       true             false            true             true                 10                               
+# 11  14  182   39    3   6    PSL2(13)   13:6   S3                  PSL2(13)   2      2           1      1       1       true             false            true             false                                                 
+# 12  14  182   52    4   12   PGL2(13)   13:12  A4                  PGL2(13)   2      2           2      1       2       true             false            true             false                                                 
+# 13  14  182   78    6   30   PGL2(13)   13:12  D12                 PGL2(13)   2      2           2      1       6       true             false            true             false                                                 
+# 14  14  273   78    4   18   PGL2(13)   13:12  D8                  PGL2(13)   2      2           2      1       3       true             false            true             false                                                 
+# 15  14  364   78    3   12   PGL2(13)   13:12  S3                  S14        2      2           2      1       1       true             false            true             false                                       complete  
 # 16  14  364   78    3   12   A14        A13    (S3 x S11) cap A14  S14        2      2           3      1       1       true             true             true             true                 18                     complete  
 # 17  14  364   78    3   12   S14        S13    S3 x S11            S14        2      2           4      1       1       true             true             true             true                 19                     complete  
 # 18  14  364   286   11  220  A14        A13    (S11 x S3) cap A14  S14        2      2           3      1       1       true             true             true             true                 16                     complete  
 # 19  14  364   286   11  220  S14        S13    S11 x S3            S14        2      2           4      1       1       true             true             true             true                 17                     complete  
-# 20  14  546   156   4   36   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                                                 
+# 20  14  546   156   4   36   PGL2(13)   13:12  2^2                 PGL2(13)   2      2           2      1       4       true             false            true             false                                                 
 # 21  14  1001  286   4   66   A14        A13    (S4 x S10) cap A14  S14        2      2           3      1       2       true             true             true             true                 23                     complete  
 # 22  14  1001  286   4   66   S14        S13    S4 x S10            S14        2      2           4      1       2       true             true             true             true                 24                     complete  
 # 23  14  1001  715   10  495  A14        A13    (S10 x S4) cap A14  S14        2      2           3      1       2       true             true             true             true                 21                     complete  
@@ -98,30 +98,30 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ    G          Gα     GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   14  78    39    7   18   PSL(2,13)  13:6   D14                 PSL(2,13)  2      2           1      1       5       true             true             true             true                 2                                
-# 2   14  78    39    7   18   PSL(2,13)  13:6   D14                 PSL(2,13)  2      2           1      1       5       true             true             true             true                 1                                
-# 3   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 4   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 5   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       4       true             true             true             false                                                 
-# 6   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       4       true             true             true             false                                                 
-# 7   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 8   14  91    39    6   15   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       5       true             true             true             true                 9                                
-# 9   14  91    52    8   28   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       5       true             true             true             true                 8                                
-# 10  14  91    78    12  66   PGL(2,13)  13:12  D24                 S14        2      2           2      1       8       true             true             true             true                                        complete  
+# 1   14  78    39    7   18   PSL2(13)   13:6   D14                 PSL2(13)   2      2           1      1       5       true             true             true             true                 2                                
+# 2   14  78    39    7   18   PSL2(13)   13:6   D14                 PSL2(13)   2      2           1      1       5       true             true             true             true                 1                                
+# 3   14  91    26    4   6    PSL2(13)   13:6   A4                  PSL2(13)   2      2           1      1       3       true             true             true             false                                                 
+# 4   14  91    26    4   6    PSL2(13)   13:6   A4                  PSL2(13)   2      2           1      1       3       true             true             true             false                                                 
+# 5   14  91    39    6   15   PSL2(13)   13:6   D12                 PSL2(13)   2      2           1      1       4       true             true             true             false                                                 
+# 6   14  91    39    6   15   PSL2(13)   13:6   D12                 PSL2(13)   2      2           1      1       4       true             true             true             false                                                 
+# 7   14  91    39    6   15   PSL2(13)   13:6   A4                  PGL2(13)   2      2           1      1       3       true             true             true             false                                                 
+# 8   14  91    39    6   15   PGL2(13)   13:12  S4                  PGL2(13)   2      2           2      1       5       true             true             true             true                 9                                
+# 9   14  91    52    8   28   PGL2(13)   13:12  S4                  PGL2(13)   2      2           2      1       5       true             true             true             true                 8                                
+# 10  14  91    78    12  66   PGL2(13)   13:12  D24                 S14        2      2           2      1       8       true             true             true             true                                        complete  
 # 11  14  91    78    12  66   A14        A13    (S12 x S2) cap A14  S14        2      2           3      1       6       true             true             true             true                                        complete  
 # 12  14  91    78    12  66   S14        S13    S12 x S2            S14        2      2           4      1       6       true             true             true             true                                        complete  
-# 13  14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       7       true             false            true             true                 13                               
-# 14  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                                                 
-# 15  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            true             false                                                 
-# 16  14  182   52    4   12   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                                                 
-# 17  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       6       true             false            true             false                                                 
-# 18  14  273   78    4   18   PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                                                 
-# 19  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                                       complete  
+# 13  14  156   78    7   36   PGL2(13)   13:12  D14                 PGL2(13)   2      2           2      1       7       true             false            true             true                 13                               
+# 14  14  182   39    3   6    PSL2(13)   13:6   S3                  PSL2(13)   2      2           1      1       1       true             false            true             false                                                 
+# 15  14  182   39    3   6    PSL2(13)   13:6   S3                  PSL2(13)   2      2           1      1       2       true             false            true             false                                                 
+# 16  14  182   52    4   12   PGL2(13)   13:12  A4                  PGL2(13)   2      2           2      1       2       true             false            true             false                                                 
+# 17  14  182   78    6   30   PGL2(13)   13:12  D12                 PGL2(13)   2      2           2      1       6       true             false            true             false                                                 
+# 18  14  273   78    4   18   PGL2(13)   13:12  D8                  PGL2(13)   2      2           2      1       3       true             false            true             false                                                 
+# 19  14  364   78    3   12   PGL2(13)   13:12  S3                  S14        2      2           2      1       1       true             false            true             false                                       complete  
 # 20  14  364   78    3   12   A14        A13    (S3 x S11) cap A14  S14        2      2           3      1       1       true             true             true             true                 22                     complete  
 # 21  14  364   78    3   12   S14        S13    S3 x S11            S14        2      2           4      1       1       true             true             true             true                 23                     complete  
 # 22  14  364   286   11  220  A14        A13    (S11 x S3) cap A14  S14        2      2           3      1       1       true             true             true             true                 20                     complete  
 # 23  14  364   286   11  220  S14        S13    S11 x S3            S14        2      2           4      1       1       true             true             true             true                 21                     complete  
-# 24  14  546   156   4   36   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                                                 
+# 24  14  546   156   4   36   PGL2(13)   13:12  2^2                 PGL2(13)   2      2           2      1       4       true             false            true             false                                                 
 # 25  14  1001  286   4   66   A14        A13    (S4 x S10) cap A14  S14        2      2           3      1       2       true             true             true             true                 27                     complete  
 # 26  14  1001  286   4   66   S14        S13    S4 x S10            S14        2      2           4      1       2       true             true             true             true                 28                     complete  
 # 27  14  1001  715   10  495  A14        A13    (S10 x S4) cap A14  S14        2      2           3      1       2       true             true             true             true                 25                     complete  
@@ -148,7 +148,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,13)  PSL(2,13)  
+# Structure                            PSL2(13)   PSL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:6       13:6       
@@ -174,7 +174,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,13)  PSL(2,13)  
+# Structure                            PSL2(13)   PSL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:6       13:6       
@@ -200,7 +200,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,13)  PGL(2,13)  
+# Structure                            PSL2(13)   PGL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:6       13:12      
@@ -226,7 +226,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,13)  PSL(2,13)  
+# Structure                            PSL2(13)   PSL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:6       13:6       
@@ -252,7 +252,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,13)  PGL(2,13)  
+# Structure                            PGL2(13)   PGL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:12      13:12      
@@ -278,7 +278,7 @@
 # --------------------------------------------------------
 #                                      G          Aut(D)  
 # --------------------------------------------------------
-# Structure                            PGL(2,13)  S14     
+# Structure                            PGL2(13)   S14     
 # Rank                                 2          2       
 # 2-Homogeneous                        true       true    
 # Point-stabiliser                     13:12      S13     
@@ -304,7 +304,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,13)  PGL(2,13)  
+# Structure                            PGL2(13)   PGL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:12      13:12      
@@ -330,7 +330,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL(2,13)  PSL(2,13)  
+# Structure                            PSL2(13)   PSL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:6       13:6       
@@ -356,7 +356,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,13)  PGL(2,13)  
+# Structure                            PGL2(13)   PGL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:12      13:12      
@@ -382,7 +382,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,13)  PGL(2,13)  
+# Structure                            PGL2(13)   PGL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:12      13:12      
@@ -408,7 +408,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,13)  PGL(2,13)  
+# Structure                            PGL2(13)   PGL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:12      13:12      
@@ -434,7 +434,7 @@
 # --------------------------------------------------------
 #                                      G          Aut(D)  
 # --------------------------------------------------------
-# Structure                            PGL(2,13)  S14     
+# Structure                            PGL2(13)   S14     
 # Rank                                 2          2       
 # 2-Homogeneous                        true       true    
 # Point-stabiliser                     13:12      S13     
@@ -486,7 +486,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL(2,13)  PGL(2,13)  
+# Structure                            PGL2(13)   PGL2(13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     13:12      13:12      

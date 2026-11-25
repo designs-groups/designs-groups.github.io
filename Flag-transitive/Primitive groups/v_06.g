@@ -6,7 +6,7 @@
 #               lD_6 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,20 +31,20 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ  G         Gα   GB  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   6  10  5   3  2  PSL(2,5)  D10  S3  PSL(2,5)  2      2           1      1       1       true             true             true             true                                                  
-# 2   6  15  10  4  6  PGL(2,5)  5:4  D8  S6        2      2           2      1       2       true             false            true             true                                        complete  
-# 3   6  20  10  3  4  PGL(2,5)  5:4  S3  S6        2      2           2      1       1       true             false            true             true                 3                      complete  
+# 1   6  10  5   3  2  PSL2(5)   D10  S3  PSL2(5)   2      2           1      1       1       true             true             true             true                                                  
+# 2   6  15  10  4  6  PGL2(5)   5:4  D8  S6        2      2           2      1       2       true             false            true             true                                        complete  
+# 3   6  20  10  3  4  PGL2(5)   5:4  S3  S6        2      2           2      1       1       true             false            true             true                 3                      complete  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    Reduced designs (within each group):
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ  G         Gα   GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   6  10  5   3  2  PSL(2,5)  D10  S3                PSL(2,5)  2      2           1      1       1       true             true             true             true                                                  
-# 2   6  15  10  4  6  PGL(2,5)  5:4  D8                S6        2      2           2      1       2       true             false            true             true                                        complete  
+# 1   6  10  5   3  2  PSL2(5)   D10  S3                PSL2(5)   2      2           1      1       1       true             true             true             true                                                  
+# 2   6  15  10  4  6  PGL2(5)   5:4  D8                S6        2      2           2      1       2       true             false            true             true                                        complete  
 # 3   6  15  10  4  6  A6        A5   (S4 x S2) cap A6  S6        2      2           3      1       2       true             true             true             true                                        complete  
 # 4   6  15  10  4  6  S6        S5   S4 x S2           S6        2      2           4      1       2       true             true             true             true                                        complete  
-# 5   6  20  10  3  4  PGL(2,5)  5:4  S3                S6        2      2           2      1       1       true             false            true             true                 5                      complete  
+# 5   6  20  10  3  4  PGL2(5)   5:4  S3                S6        2      2           2      1       1       true             false            true             true                 5                      complete  
 # 6   6  20  10  3  4  A6        A5   (S3 x S3) cap A6  S6        2      2           3      1       1       true             false            true             true                 6                      complete  
 # 7   6  20  10  3  4  S6        S5   S3 x S3           S6        2      2           4      1       1       true             false            true             true                 7                      complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -53,12 +53,12 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ  G         Gα   GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   6  10  5   3  2  PSL(2,5)  D10  S3                PSL(2,5)  2      2           1      1       1       true             true             true             true                 2                                
-# 2   6  10  5   3  2  PSL(2,5)  D10  S3                PSL(2,5)  2      2           1      1       1       true             true             true             true                 1                                
-# 3   6  15  10  4  6  PGL(2,5)  5:4  D8                S6        2      2           2      1       2       true             false            true             true                                        complete  
+# 1   6  10  5   3  2  PSL2(5)   D10  S3                PSL2(5)   2      2           1      1       1       true             true             true             true                 2                                
+# 2   6  10  5   3  2  PSL2(5)   D10  S3                PSL2(5)   2      2           1      1       1       true             true             true             true                 1                                
+# 3   6  15  10  4  6  PGL2(5)   5:4  D8                S6        2      2           2      1       2       true             false            true             true                                        complete  
 # 4   6  15  10  4  6  A6        A5   (S4 x S2) cap A6  S6        2      2           3      1       2       true             true             true             true                                        complete  
 # 5   6  15  10  4  6  S6        S5   S4 x S2           S6        2      2           4      1       2       true             true             true             true                                        complete  
-# 6   6  20  10  3  4  PGL(2,5)  5:4  S3                S6        2      2           2      1       1       true             false            true             true                 6                      complete  
+# 6   6  20  10  3  4  PGL2(5)   5:4  S3                S6        2      2           2      1       1       true             false            true             true                 6                      complete  
 # 7   6  20  10  3  4  A6        A5   (S3 x S3) cap A6  S6        2      2           3      1       1       true             false            true             true                 7                      complete  
 # 8   6  20  10  3  4  S6        S5   S3 x S3           S6        2      2           4      1       1       true             false            true             true                 8                      complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,7 +73,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL(2,5)  PSL(2,5)  
+# Structure                            PSL2(5)   PSL2(5)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     D10       D10       
@@ -99,7 +99,7 @@
 # -------------------------------------------------------
 #                                      G         Aut(D)  
 # -------------------------------------------------------
-# Structure                            PGL(2,5)  S6      
+# Structure                            PGL2(5)   S6      
 # Rank                                 2         2       
 # 2-Homogeneous                        true      true    
 # Point-stabiliser                     5:4       S5      
@@ -125,7 +125,7 @@
 # -------------------------------------------------------
 #                                      G         Aut(D)  
 # -------------------------------------------------------
-# Structure                            PGL(2,5)  S6      
+# Structure                            PGL2(5)   S6      
 # Rank                                 2         2       
 # 2-Homogeneous                        true      true    
 # Point-stabiliser                     5:4       S5      

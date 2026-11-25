@@ -5,7 +5,7 @@
 # Remark:       there exists no 2-design admitting Flag-transitive automorphism group
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------

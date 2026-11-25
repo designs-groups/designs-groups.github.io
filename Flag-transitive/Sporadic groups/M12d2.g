@@ -52,8 +52,8 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b    r   k   λ   G      Gα           GB           Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments          
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   144  144  66  66  30  M12.2  PSL(2,11):2  PSL(2,11):2  M12:2   4      4                  5       5       true             true             true             false                            true       Menon parameters  
-# 2   144  144  66  66  30  M12.2  PSL(2,11):2  PSL(2,11):2  M12:2   4      4                  6       6       true             true             true             false                            true       Menon parameters  
+# 1   144  144  66  66  30  M12.2  PSL2(11):2   PSL2(11):2   M12:2   4      4                  5       5       true             true             true             false                            true       Menon parameters  
+# 2   144  144  66  66  30  M12.2  PSL2(11):2   PSL2(11):2   M12:2   4      4                  6       6       true             true             true             false                            true       Menon parameters  
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -69,8 +69,8 @@
 # Structure                            M12.2                    M12:2                    
 # Rank                                 4                        4                        
 # 2-Homogeneous                        false                    false                    
-# Point-stabiliser                     PSL(2,11):2              PSL(2,11):2              
-# Block-stabiliser                     PSL(2,11):2              PSL(2,11):2              
+# Point-stabiliser                     PSL2(11):2               PSL2(11):2              
+# Block-stabiliser                     PSL2(11):2               PSL2(11):2              
 # Orbit structure of point-stabiliser  1^{1}22^{1}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Orbit structure of block-stabiliser  1^{1}22^{1}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Point-transitive                     true                     true                     
@@ -95,8 +95,8 @@
 # Structure                            M12.2                    M12:2                    
 # Rank                                 4                        4                        
 # 2-Homogeneous                        false                    false                    
-# Point-stabiliser                     PSL(2,11):2              PSL(2,11):2              
-# Block-stabiliser                     PSL(2,11):2              PSL(2,11):2              
+# Point-stabiliser                     PSL2(11):2               PSL2(11):2              
+# Block-stabiliser                     PSL2(11):2               PSL2(11):2              
 # Orbit structure of point-stabiliser  1^{1}22^{1}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Orbit structure of block-stabiliser  1^{1}22^{1}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Point-transitive                     true                     true                     

@@ -1,15 +1,29 @@
 # ####################################################################################################
 # Flag-transitive 2-designs 
-# Group (autSubgroup): S4(4):4 = O(5,4):4
+# Group (autSubgroup): S4(4):4 = O5(4):4
 # ####################################################################################################
-# Remark:       there exists no 2-design admitting S4(4):4 = O(5,4):4 as a flag-transitive automorphism group
+# Remark:       there exists no 2-design admitting S4(4):4 = O5(4):4 as a flag-transitive automorphism group
 # References:    
 
-# 1. number of designs: 
+# 1. Group information:
+# ---------------------
+
+# ATLAS name:          S4(4).4
+# GAP name:            S4(4).4
+# Order:               3916800 = 2^10 * 3^2 * 5^2 * 17
+# No. maximal classes: 
+
+# Maximal subgroups:
+# -------------------------------------------
+# Nr   structure         order         index
+# -------------------------------------------
+# -------------------------------------------
+
+# 2. Number of designs:
 # ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          0              0      
 # Point-imprimitive    0          0              0      
@@ -23,7 +37,7 @@
 # Total                0          0              0      
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,11 +46,12 @@
 #                                                                                                                                                                                          
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
+# 4. Further information: 
 # -----------------------
 
-# 4. Designs: 
+# 5. Designs: 
 # -----------
 
 lD_S44d4 := [  ];
-for D in lD_O54d4 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_S44d4 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
+

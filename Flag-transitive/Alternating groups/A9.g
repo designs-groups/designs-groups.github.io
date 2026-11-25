@@ -29,7 +29,7 @@
 # -------------------------------------------
 #
 
-# 2. number of designs: 
+# 2. Number of designs: 
 # ---------------------
 
 # ------------------------------------------------------
@@ -62,9 +62,9 @@
 # 7   36   840    140   6   20   A9  S7          3^3:D8            S9      3      3                  3       30      12^{1}18^{1}    1^{1}14^{1}21^{1}  true             false            true             false                                                 
 # 8   36   5040   840   6   120  A9  S7          S3xS3             S9      3      3                  3       95      12^{1}18^{1}    1^{1}14^{1}21^{1}  true             false            true             false                                                 
 # 9   36   5040   840   6   120  A9  S7          S3xS3             S9      3      3                  3       96      12^{1}18^{1}    1^{1}14^{1}21^{1}  true             false            true             false                                                 
-# 10  120  3360   504   18  72   A9  PSL(2,8):3  3^2:6             A9      3      3                  6       78      144^{1}162^{1}  1^{1}56^{1}63^{1}  true             false            true             false                                                 
-# 11  120  10080  1512  18  216  A9  PSL(2,8):3  3xS3              A9      3      3                  6       145     144^{1}162^{1}  1^{1}56^{1}63^{1}  true             false            true             false                                                 
-# 12  120  10080  1512  18  216  A9  PSL(2,8):3  D18               A9      3      3                  6       146     144^{1}162^{1}  1^{1}56^{1}63^{1}  true             false            true             false                                                 
+# 10  120  3360   504   18  72   A9  PSL2(8):3   3^2:6             A9      3      3                  6       78      144^{1}162^{1}  1^{1}56^{1}63^{1}  true             false            true             false                                                 
+# 11  120  10080  1512  18  216  A9  PSL2(8):3   3xS3              A9      3      3                  6       145     144^{1}162^{1}  1^{1}56^{1}63^{1}  true             false            true             false                                                 
+# 12  120  10080  1512  18  216  A9  PSL2(8):3   D18               A9      3      3                  6       146     144^{1}162^{1}  1^{1}56^{1}63^{1}  true             false            true             false                                                 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -314,7 +314,7 @@
 # Structure                            A9                            A9                            
 # Rank                                 3                             3                             
 # 2-Homogeneous                        false                         false                         
-# Point-stabiliser                     PSL(2,8):3                    PSL(2,8):3                    
+# Point-stabiliser                     PSL2(8):3                     PSL2(8):3                    
 # Block-stabiliser                     3^2:6                         3^2:6                         
 # Orbit structure of point-stabiliser  1^{1}56^{1}63^{1}             1^{1}56^{1}63^{1}             
 # Orbit structure of block-stabiliser  3^{1}9^{2}18^{1}27^{1}54^{1}  3^{1}9^{2}18^{1}27^{1}54^{1}  
@@ -340,7 +340,7 @@
 # Structure                            A9                     A9                     
 # Rank                                 3                      3                      
 # 2-Homogeneous                        false                  false                  
-# Point-stabiliser                     PSL(2,8):3             PSL(2,8):3             
+# Point-stabiliser                     PSL2(8):3              PSL2(8):3             
 # Block-stabiliser                     3xS3                   3xS3                   
 # Orbit structure of point-stabiliser  1^{1}56^{1}63^{1}      1^{1}56^{1}63^{1}      
 # Orbit structure of block-stabiliser  3^{2}6^{1}9^{2}18^{5}  3^{2}6^{1}9^{2}18^{5}  
@@ -366,7 +366,7 @@
 # Structure                            A9                 A9                 
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
-# Point-stabiliser                     PSL(2,8):3         PSL(2,8):3         
+# Point-stabiliser                     PSL2(8):3          PSL2(8):3         
 # Block-stabiliser                     D18                D18                
 # Orbit structure of point-stabiliser  1^{1}56^{1}63^{1}  1^{1}56^{1}63^{1}  
 # Orbit structure of block-stabiliser  3^{1}9^{7}18^{3}   3^{1}9^{7}18^{3}   

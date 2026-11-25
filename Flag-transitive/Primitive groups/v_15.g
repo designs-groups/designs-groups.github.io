@@ -6,7 +6,7 @@
 #               lD_15 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,32 +31,32 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ     G         Gα            GB                  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                      
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   15  15    7     7   3     A7        PSL(3,2)      PSL(3,2)            PSL(4,2)  2      2           1      1       11      true             true             true             true                 2           true       PG(3,2) or Hadamard parameters                
-# 2   15  15    8     8   4     A7        PSL(3,2)      PSL(3,2)            PSL(4,2)  2      2           1      1       11      true             true             true             true                 1           true       complement of PG(3,2) or Hadamard parameters  
-# 3   15  35    7     3   1     A7        PSL(3,2)      (3xA4):2            PSL(4,2)  2      2           1      1       1       true             true             true             true                 4                                                                    
-# 4   15  35    28    12  22    A7        PSL(3,2)      (3xA4):2            PSL(4,2)  2      2           1      1       1       true             true             true             true                 3                                                                    
-# 5   15  42    14    5   4     A7        PSL(3,2)      A5                  A7        2      2           1      1       6       true             false            true             true                 6                                                                    
-# 6   15  42    28    10  18    A7        PSL(3,2)      A5                  A7        2      2           1      1       6       true             false            true             true                 5                                                                    
-# 7   15  70    28    6   10    A7        PSL(3,2)      3^2:4               A7        2      2           1      1       8       true             false            true             true                 8                                                                    
-# 8   15  70    42    9   24    A7        PSL(3,2)      3^2:4               A7        2      2           1      1       8       true             false            true             true                 7                                                                    
-# 9   15  105   28    4   6     A7        PSL(3,2)      S4                  PSL(4,2)  2      2           1      1       3       true             false            true             false                                                                                     
-# 10  15  105   42    6   15    A7        PSL(3,2)      S4                  PSL(4,2)  2      2           1      1       9       true             false            true             false                                                                                     
+# 1   15  15    7     7   3     A7        PSL3(2)       PSL3(2)             PSL4(2)   2      2           1      1       11      true             true             true             true                 2           true       PG(3,2) or Hadamard parameters                
+# 2   15  15    8     8   4     A7        PSL3(2)       PSL3(2)             PSL4(2)   2      2           1      1       11      true             true             true             true                 1           true       complement of PG(3,2) or Hadamard parameters  
+# 3   15  35    7     3   1     A7        PSL3(2)       (3xA4):2            PSL4(2)   2      2           1      1       1       true             true             true             true                 4                                                                    
+# 4   15  35    28    12  22    A7        PSL3(2)       (3xA4):2            PSL4(2)   2      2           1      1       1       true             true             true             true                 3                                                                    
+# 5   15  42    14    5   4     A7        PSL3(2)       A5                  A7        2      2           1      1       6       true             false            true             true                 6                                                                    
+# 6   15  42    28    10  18    A7        PSL3(2)       A5                  A7        2      2           1      1       6       true             false            true             true                 5                                                                    
+# 7   15  70    28    6   10    A7        PSL3(2)       3^2:4               A7        2      2           1      1       8       true             false            true             true                 8                                                                    
+# 8   15  70    42    9   24    A7        PSL3(2)       3^2:4               A7        2      2           1      1       8       true             false            true             true                 7                                                                    
+# 9   15  105   28    4   6     A7        PSL3(2)       S4                  PSL4(2)   2      2           1      1       3       true             false            true             false                                                                                     
+# 10  15  105   42    6   15    A7        PSL3(2)       S4                  PSL4(2)   2      2           1      1       9       true             false            true             false                                                                                     
 # 11  15  105   91    13  78    A15       A14           (S13 x S2) cap A15  S15       2      2           5      1       6       true             true             true             true                                        complete                                      
-# 12  15  120   56    7   24    A7        PSL(3,2)      7:3                 PSL(4,2)  2      2           1      1       12      true             false            true             false                                                                                     
-# 13  15  126   42    5   12    A7        PSL(3,2)      5:4                 A7        2      2           1      1       7       true             false            true             true                 14                                                                   
-# 14  15  126   84    10  54    A7        PSL(3,2)      5:4                 A7        2      2           1      1       7       true             false            true             true                 13                                                                   
-# 15  15  168   56    5   16    PSL(4,2)  2^3:PSL(3,2)  S5                  PSL(4,2)  2      2           4      1       5       true             false            true             true                 16                                                                   
-# 16  15  168   112   10  72    PSL(4,2)  2^3:PSL(3,2)  S5                  PSL(4,2)  2      2           4      1       5       true             false            true             true                 15                                                                   
-# 17  15  210   56    4   12    A7        PSL(3,2)      A4                  A7        2      2           1      1       4       true             false            true             false                                                                                     
-# 18  15  210   84    6   30    A7        PSL(3,2)      D12                 A7        2      2           1      1       10      true             false            true             false                                                                                     
-# 19  15  280   112   6   40    PSL(4,2)  2^3:PSL(3,2)  (S3xS3):2           PSL(4,2)  2      2           4      1       7       true             false            true             true                 20                                                                   
-# 20  15  280   168   9   96    PSL(4,2)  2^3:PSL(3,2)  (S3xS3):2           PSL(4,2)  2      2           4      1       7       true             false            true             true                 19                                                                   
-# 21  15  420   84    3   12    A7        PSL(3,2)      S3                  PSL(4,2)  2      2           1      1       2       true             false            true             false                                                                                     
-# 22  15  420   168   6   60    A7        PSL(3,2)      S3                  PSL(4,2)  2      2           1      1       2       true             false            true             false                                                                                     
+# 12  15  120   56    7   24    A7        PSL3(2)       7:3                 PSL4(2)   2      2           1      1       12      true             false            true             false                                                                                     
+# 13  15  126   42    5   12    A7        PSL3(2)       5:4                 A7        2      2           1      1       7       true             false            true             true                 14                                                                   
+# 14  15  126   84    10  54    A7        PSL3(2)       5:4                 A7        2      2           1      1       7       true             false            true             true                 13                                                                   
+# 15  15  168   56    5   16    PSL4(2)   2^3:PSL3(2)   S5                  PSL4(2)   2      2           4      1       5       true             false            true             true                 16                                                                   
+# 16  15  168   112   10  72    PSL4(2)   2^3:PSL3(2)   S5                  PSL4(2)   2      2           4      1       5       true             false            true             true                 15                                                                   
+# 17  15  210   56    4   12    A7        PSL3(2)       A4                  A7        2      2           1      1       4       true             false            true             false                                                                                     
+# 18  15  210   84    6   30    A7        PSL3(2)       D12                 A7        2      2           1      1       10      true             false            true             false                                                                                     
+# 19  15  280   112   6   40    PSL4(2)   2^3:PSL3(2)   (S3xS3):2           PSL4(2)   2      2           4      1       7       true             false            true             true                 20                                                                   
+# 20  15  280   168   9   96    PSL4(2)   2^3:PSL3(2)   (S3xS3):2           PSL4(2)   2      2           4      1       7       true             false            true             true                 19                                                                   
+# 21  15  420   84    3   12    A7        PSL3(2)       S3                  PSL4(2)   2      2           1      1       2       true             false            true             false                                                                                     
+# 22  15  420   168   6   60    A7        PSL3(2)       S3                  PSL4(2)   2      2           1      1       2       true             false            true             false                                                                                     
 # 23  15  455   91    3   13    A15       A14           (S3 x S12) cap A15  S15       2      2           5      1       1       true             true             true             true                 24                     complete                                      
 # 24  15  455   364   12  286   A15       A14           (S12 x S3) cap A15  S15       2      2           5      1       1       true             true             true             true                 23                     complete                                      
-# 25  15  630   168   4   36    A7        PSL(3,2)      4                   A7        2      2           1      1       5       true             false            true             false                                                                                     
-# 26  15  840   224   4   48    PSL(4,2)  2^3:PSL(3,2)  S4                  PSL(4,2)  2      2           4      1       4       true             false            true             false                                                                                     
+# 25  15  630   168   4   36    A7        PSL3(2)       4                   A7        2      2           1      1       5       true             false            true             false                                                                                     
+# 26  15  840   224   4   48    PSL4(2)   2^3:PSL3(2)   S4                  PSL4(2)   2      2           4      1       4       true             false            true             false                                                                                     
 # 27  15  1365  364   4   78    A15       A14           (S4 x S11) cap A15  S15       2      2           5      1       2       true             true             true             true                 28                     complete                                      
 # 28  15  1365  1001  11  715   A15       A14           (S11 x S4) cap A15  S15       2      2           5      1       2       true             true             true             true                 27                     complete                                      
 # 29  15  3003  1001  5   286   A15       A14           (S5 x S10) cap A15  S15       2      2           5      1       3       true             true             true             true                 30                     complete                                      
@@ -71,46 +71,46 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ     G         Gα            GB                  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                      
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   15  15    7     7   3     A7        PSL(3,2)      PSL(3,2)            PSL(4,2)  2      2           1      1       11      true             true             true             true                 3           true       PG(3,2) or Hadamard parameters                
-# 2   15  15    7     7   3     PSL(4,2)  2^3:PSL(3,2)  2^3:PSL(3,2)        PSL(4,2)  2      2           4      1       9       true             true             true             true                 6           true       PG(3,2) or Hadamard parameters                
-# 3   15  15    8     8   4     A7        PSL(3,2)      PSL(3,2)            PSL(4,2)  2      2           1      1       11      true             true             true             true                 1           true       complement of PG(3,2) or Hadamard parameters  
-# 4   15  15    8     8   4     A6        S4            S4                  PSL(4,2)  3      2           2      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
-# 5   15  15    8     8   4     S6        2xS4          2xS4                PSL(4,2)  3      2           3      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
-# 6   15  15    8     8   4     PSL(4,2)  2^3:PSL(3,2)  2^3:PSL(3,2)        PSL(4,2)  2      2           4      1       9       true             true             true             true                 2           true       complement of PG(3,2) or Hadamard parameters  
-# 7   15  35    7     3   1     A7        PSL(3,2)      (3xA4):2            PSL(4,2)  2      2           1      1       1       true             true             true             true                 9                                                                    
-# 8   15  35    7     3   1     PSL(4,2)  2^3:PSL(3,2)  (A4xA4):2:2         PSL(4,2)  2      2           4      1       1       true             true             true             true                 10                                                                   
-# 9   15  35    28    12  22    A7        PSL(3,2)      (3xA4):2            PSL(4,2)  2      2           1      1       1       true             true             true             true                 7                                                                    
-# 10  15  35    28    12  22    PSL(4,2)  2^3:PSL(3,2)  (A4xA4):2:2         PSL(4,2)  2      2           4      1       1       true             true             true             true                 8                                                                    
-# 11  15  42    14    5   4     A7        PSL(3,2)      A5                  A7        2      2           1      1       6       true             false            true             true                 12                                                                   
-# 12  15  42    28    10  18    A7        PSL(3,2)      A5                  A7        2      2           1      1       6       true             false            true             true                 11                                                                   
-# 13  15  70    28    6   10    A7        PSL(3,2)      3^2:4               A7        2      2           1      1       8       true             false            true             true                 14                                                                   
-# 14  15  70    42    9   24    A7        PSL(3,2)      3^2:4               A7        2      2           1      1       8       true             false            true             true                 13                                                                   
-# 15  15  105   28    4   6     A7        PSL(3,2)      S4                  PSL(4,2)  2      2           1      1       3       true             false            true             false                                                                                     
-# 16  15  105   28    4   6     PSL(4,2)  2^3:PSL(3,2)  2^4:2:3:2           PSL(4,2)  2      2           4      1       3       true             false            true             false                                                                                     
-# 17  15  105   42    6   15    A7        PSL(3,2)      S4                  PSL(4,2)  2      2           1      1       9       true             false            true             false                                                                                     
-# 18  15  105   42    6   15    PSL(4,2)  2^3:PSL(3,2)  2^3:2^2:3:2         PSL(4,2)  2      2           4      1       6       true             false            true             false                                                                                     
+# 1   15  15    7     7   3     A7        PSL3(2)       PSL3(2)             PSL4(2)   2      2           1      1       11      true             true             true             true                 3           true       PG(3,2) or Hadamard parameters                
+# 2   15  15    7     7   3     PSL4(2)   2^3:PSL3(2)   2^3:PSL3(2)         PSL4(2)   2      2           4      1       9       true             true             true             true                 6           true       PG(3,2) or Hadamard parameters                
+# 3   15  15    8     8   4     A7        PSL3(2)       PSL3(2)             PSL4(2)   2      2           1      1       11      true             true             true             true                 1           true       complement of PG(3,2) or Hadamard parameters  
+# 4   15  15    8     8   4     A6        S4            S4                  PSL4(2)   3      2           2      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
+# 5   15  15    8     8   4     S6        2xS4          2xS4                PSL4(2)   3      2           3      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
+# 6   15  15    8     8   4     PSL4(2)   2^3:PSL3(2)   2^3:PSL3(2)         PSL4(2)   2      2           4      1       9       true             true             true             true                 2           true       complement of PG(3,2) or Hadamard parameters  
+# 7   15  35    7     3   1     A7        PSL3(2)       (3xA4):2            PSL4(2)   2      2           1      1       1       true             true             true             true                 9                                                                    
+# 8   15  35    7     3   1     PSL4(2)   2^3:PSL3(2)   (A4xA4):2:2         PSL4(2)   2      2           4      1       1       true             true             true             true                 10                                                                   
+# 9   15  35    28    12  22    A7        PSL3(2)       (3xA4):2            PSL4(2)   2      2           1      1       1       true             true             true             true                 7                                                                    
+# 10  15  35    28    12  22    PSL4(2)   2^3:PSL3(2)   (A4xA4):2:2         PSL4(2)   2      2           4      1       1       true             true             true             true                 8                                                                    
+# 11  15  42    14    5   4     A7        PSL3(2)       A5                  A7        2      2           1      1       6       true             false            true             true                 12                                                                   
+# 12  15  42    28    10  18    A7        PSL3(2)       A5                  A7        2      2           1      1       6       true             false            true             true                 11                                                                   
+# 13  15  70    28    6   10    A7        PSL3(2)       3^2:4               A7        2      2           1      1       8       true             false            true             true                 14                                                                   
+# 14  15  70    42    9   24    A7        PSL3(2)       3^2:4               A7        2      2           1      1       8       true             false            true             true                 13                                                                   
+# 15  15  105   28    4   6     A7        PSL3(2)       S4                  PSL4(2)   2      2           1      1       3       true             false            true             false                                                                                     
+# 16  15  105   28    4   6     PSL4(2)   2^3:PSL3(2)   2^4:2:3:2           PSL4(2)   2      2           4      1       3       true             false            true             false                                                                                     
+# 17  15  105   42    6   15    A7        PSL3(2)       S4                  PSL4(2)   2      2           1      1       9       true             false            true             false                                                                                     
+# 18  15  105   42    6   15    PSL4(2)   2^3:PSL3(2)   2^3:2^2:3:2         PSL4(2)   2      2           4      1       6       true             false            true             false                                                                                     
 # 19  15  105   91    13  78    A15       A14           (S13 x S2) cap A15  S15       2      2           5      1       6       true             true             true             true                                        complete                                      
 # 20  15  105   91    13  78    S15       S14           S13 x S2            S15       2      2           6      1       6       true             true             true             true                                        complete                                      
-# 21  15  120   56    7   24    A7        PSL(3,2)      7:3                 PSL(4,2)  2      2           1      1       12      true             false            true             false                                                                                     
-# 22  15  120   56    7   24    PSL(4,2)  2^3:PSL(3,2)  PSL(3,2)            PSL(4,2)  2      2           4      1       10      true             false            true             false                                                                                     
-# 23  15  126   42    5   12    A7        PSL(3,2)      5:4                 A7        2      2           1      1       7       true             false            true             true                 24                                                                   
-# 24  15  126   84    10  54    A7        PSL(3,2)      5:4                 A7        2      2           1      1       7       true             false            true             true                 23                                                                   
-# 25  15  168   56    5   16    PSL(4,2)  2^3:PSL(3,2)  S5                  PSL(4,2)  2      2           4      1       5       true             false            true             true                 26                                                                   
-# 26  15  168   112   10  72    PSL(4,2)  2^3:PSL(3,2)  S5                  PSL(4,2)  2      2           4      1       5       true             false            true             true                 25                                                                   
-# 27  15  210   56    4   12    A7        PSL(3,2)      A4                  A7        2      2           1      1       4       true             false            true             false                                                                                     
-# 28  15  210   84    6   30    A7        PSL(3,2)      D12                 A7        2      2           1      1       10      true             false            true             false                                                                                     
-# 29  15  280   112   6   40    PSL(4,2)  2^3:PSL(3,2)  (S3xS3):2           PSL(4,2)  2      2           4      1       7       true             false            true             true                 30                                                                   
-# 30  15  280   168   9   96    PSL(4,2)  2^3:PSL(3,2)  (S3xS3):2           PSL(4,2)  2      2           4      1       7       true             false            true             true                 29                                                                   
-# 31  15  420   84    3   12    A7        PSL(3,2)      S3                  PSL(4,2)  2      2           1      1       2       true             false            true             false                                                                                     
-# 32  15  420   84    3   12    PSL(4,2)  2^3:PSL(3,2)  2xS4                PSL(4,2)  2      2           4      1       2       true             false            true             false                                                                                     
-# 33  15  420   168   6   60    A7        PSL(3,2)      S3                  PSL(4,2)  2      2           1      1       2       true             false            true             false                                                                                     
-# 34  15  420   168   6   60    PSL(4,2)  2^3:PSL(3,2)  2xS4                PSL(4,2)  2      2           4      1       8       true             false            true             false                                                                                     
+# 21  15  120   56    7   24    A7        PSL3(2)       7:3                 PSL4(2)   2      2           1      1       12      true             false            true             false                                                                                     
+# 22  15  120   56    7   24    PSL4(2)   2^3:PSL3(2)   PSL3(2)             PSL4(2)   2      2           4      1       10      true             false            true             false                                                                                     
+# 23  15  126   42    5   12    A7        PSL3(2)       5:4                 A7        2      2           1      1       7       true             false            true             true                 24                                                                   
+# 24  15  126   84    10  54    A7        PSL3(2)       5:4                 A7        2      2           1      1       7       true             false            true             true                 23                                                                   
+# 25  15  168   56    5   16    PSL4(2)   2^3:PSL3(2)   S5                  PSL4(2)   2      2           4      1       5       true             false            true             true                 26                                                                   
+# 26  15  168   112   10  72    PSL4(2)   2^3:PSL3(2)   S5                  PSL4(2)   2      2           4      1       5       true             false            true             true                 25                                                                   
+# 27  15  210   56    4   12    A7        PSL3(2)       A4                  A7        2      2           1      1       4       true             false            true             false                                                                                     
+# 28  15  210   84    6   30    A7        PSL3(2)       D12                 A7        2      2           1      1       10      true             false            true             false                                                                                     
+# 29  15  280   112   6   40    PSL4(2)   2^3:PSL3(2)   (S3xS3):2           PSL4(2)   2      2           4      1       7       true             false            true             true                 30                                                                   
+# 30  15  280   168   9   96    PSL4(2)   2^3:PSL3(2)   (S3xS3):2           PSL4(2)   2      2           4      1       7       true             false            true             true                 29                                                                   
+# 31  15  420   84    3   12    A7        PSL3(2)       S3                  PSL4(2)   2      2           1      1       2       true             false            true             false                                                                                     
+# 32  15  420   84    3   12    PSL4(2)   2^3:PSL3(2)   2xS4                PSL4(2)   2      2           4      1       2       true             false            true             false                                                                                     
+# 33  15  420   168   6   60    A7        PSL3(2)       S3                  PSL4(2)   2      2           1      1       2       true             false            true             false                                                                                     
+# 34  15  420   168   6   60    PSL4(2)   2^3:PSL3(2)   2xS4                PSL4(2)   2      2           4      1       8       true             false            true             false                                                                                     
 # 35  15  455   91    3   13    A15       A14           (S3 x S12) cap A15  S15       2      2           5      1       1       true             true             true             true                 37                     complete                                      
 # 36  15  455   91    3   13    S15       S14           S3 x S12            S15       2      2           6      1       1       true             true             true             true                 38                     complete                                      
 # 37  15  455   364   12  286   A15       A14           (S12 x S3) cap A15  S15       2      2           5      1       1       true             true             true             true                 35                     complete                                      
 # 38  15  455   364   12  286   S15       S14           S12 x S3            S15       2      2           6      1       1       true             true             true             true                 36                     complete                                      
-# 39  15  630   168   4   36    A7        PSL(3,2)      4                   A7        2      2           1      1       5       true             false            true             false                                                                                     
-# 40  15  840   224   4   48    PSL(4,2)  2^3:PSL(3,2)  S4                  PSL(4,2)  2      2           4      1       4       true             false            true             false                                                                                     
+# 39  15  630   168   4   36    A7        PSL3(2)       4                   A7        2      2           1      1       5       true             false            true             false                                                                                     
+# 40  15  840   224   4   48    PSL4(2)   2^3:PSL3(2)   S4                  PSL4(2)   2      2           4      1       4       true             false            true             false                                                                                     
 # 41  15  1365  364   4   78    A15       A14           (S4 x S11) cap A15  S15       2      2           5      1       2       true             true             true             true                 43                     complete                                      
 # 42  15  1365  364   4   78    S15       S14           S4 x S11            S15       2      2           6      1       2       true             true             true             true                 44                     complete                                      
 # 43  15  1365  1001  11  715   A15       A14           (S11 x S4) cap A15  S15       2      2           5      1       2       true             true             true             true                 41                     complete                                      
@@ -133,46 +133,46 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ     G         Gα            GB                  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                      
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   15  15    7     7   3     A7        PSL(3,2)      PSL(3,2)            PSL(4,2)  2      2           1      1       11      true             true             true             true                 3           true       PG(3,2) or Hadamard parameters                
-# 2   15  15    7     7   3     PSL(4,2)  2^3:PSL(3,2)  2^3:PSL(3,2)        PSL(4,2)  2      2           4      1       9       true             true             true             true                 6           true       PG(3,2) or Hadamard parameters                
-# 3   15  15    8     8   4     A7        PSL(3,2)      PSL(3,2)            PSL(4,2)  2      2           1      1       11      true             true             true             true                 1           true       complement of PG(3,2) or Hadamard parameters  
-# 4   15  15    8     8   4     A6        S4            S4                  PSL(4,2)  3      2           2      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
-# 5   15  15    8     8   4     S6        2xS4          2xS4                PSL(4,2)  3      2           3      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
-# 6   15  15    8     8   4     PSL(4,2)  2^3:PSL(3,2)  2^3:PSL(3,2)        PSL(4,2)  2      2           4      1       9       true             true             true             true                 2           true       complement of PG(3,2) or Hadamard parameters  
-# 7   15  35    7     3   1     A7        PSL(3,2)      (3xA4):2            PSL(4,2)  2      2           1      1       1       true             true             true             true                 9                                                                    
-# 8   15  35    7     3   1     PSL(4,2)  2^3:PSL(3,2)  (A4xA4):2:2         PSL(4,2)  2      2           4      1       1       true             true             true             true                 10                                                                   
-# 9   15  35    28    12  22    A7        PSL(3,2)      (3xA4):2            PSL(4,2)  2      2           1      1       1       true             true             true             true                 7                                                                    
-# 10  15  35    28    12  22    PSL(4,2)  2^3:PSL(3,2)  (A4xA4):2:2         PSL(4,2)  2      2           4      1       1       true             true             true             true                 8                                                                    
-# 11  15  42    14    5   4     A7        PSL(3,2)      A5                  A7        2      2           1      1       6       true             false            true             true                 12                                                                   
-# 12  15  42    28    10  18    A7        PSL(3,2)      A5                  A7        2      2           1      1       6       true             false            true             true                 11                                                                   
-# 13  15  70    28    6   10    A7        PSL(3,2)      3^2:4               A7        2      2           1      1       8       true             false            true             true                 14                                                                   
-# 14  15  70    42    9   24    A7        PSL(3,2)      3^2:4               A7        2      2           1      1       8       true             false            true             true                 13                                                                   
-# 15  15  105   28    4   6     A7        PSL(3,2)      S4                  PSL(4,2)  2      2           1      1       3       true             false            true             false                                                                                     
-# 16  15  105   28    4   6     PSL(4,2)  2^3:PSL(3,2)  2^4:2:3:2           PSL(4,2)  2      2           4      1       3       true             false            true             false                                                                                     
-# 17  15  105   42    6   15    A7        PSL(3,2)      S4                  PSL(4,2)  2      2           1      1       9       true             false            true             false                                                                                     
-# 18  15  105   42    6   15    PSL(4,2)  2^3:PSL(3,2)  2^3:2^2:3:2         PSL(4,2)  2      2           4      1       6       true             false            true             false                                                                                     
+# 1   15  15    7     7   3     A7        PSL3(2)       PSL3(2)             PSL4(2)   2      2           1      1       11      true             true             true             true                 3           true       PG(3,2) or Hadamard parameters                
+# 2   15  15    7     7   3     PSL4(2)   2^3:PSL3(2)   2^3:PSL3(2)         PSL4(2)   2      2           4      1       9       true             true             true             true                 6           true       PG(3,2) or Hadamard parameters                
+# 3   15  15    8     8   4     A7        PSL3(2)       PSL3(2)             PSL4(2)   2      2           1      1       11      true             true             true             true                 1           true       complement of PG(3,2) or Hadamard parameters  
+# 4   15  15    8     8   4     A6        S4            S4                  PSL4(2)   3      2           2      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
+# 5   15  15    8     8   4     S6        2xS4          2xS4                PSL4(2)   3      2           3      1       1       true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
+# 6   15  15    8     8   4     PSL4(2)   2^3:PSL3(2)   2^3:PSL3(2)         PSL4(2)   2      2           4      1       9       true             true             true             true                 2           true       complement of PG(3,2) or Hadamard parameters  
+# 7   15  35    7     3   1     A7        PSL3(2)       (3xA4):2            PSL4(2)   2      2           1      1       1       true             true             true             true                 9                                                                    
+# 8   15  35    7     3   1     PSL4(2)   2^3:PSL3(2)   (A4xA4):2:2         PSL4(2)   2      2           4      1       1       true             true             true             true                 10                                                                   
+# 9   15  35    28    12  22    A7        PSL3(2)       (3xA4):2            PSL4(2)   2      2           1      1       1       true             true             true             true                 7                                                                    
+# 10  15  35    28    12  22    PSL4(2)   2^3:PSL3(2)   (A4xA4):2:2         PSL4(2)   2      2           4      1       1       true             true             true             true                 8                                                                    
+# 11  15  42    14    5   4     A7        PSL3(2)       A5                  A7        2      2           1      1       6       true             false            true             true                 12                                                                   
+# 12  15  42    28    10  18    A7        PSL3(2)       A5                  A7        2      2           1      1       6       true             false            true             true                 11                                                                   
+# 13  15  70    28    6   10    A7        PSL3(2)       3^2:4               A7        2      2           1      1       8       true             false            true             true                 14                                                                   
+# 14  15  70    42    9   24    A7        PSL3(2)       3^2:4               A7        2      2           1      1       8       true             false            true             true                 13                                                                   
+# 15  15  105   28    4   6     A7        PSL3(2)       S4                  PSL4(2)   2      2           1      1       3       true             false            true             false                                                                                     
+# 16  15  105   28    4   6     PSL4(2)   2^3:PSL3(2)   2^4:2:3:2           PSL4(2)   2      2           4      1       3       true             false            true             false                                                                                     
+# 17  15  105   42    6   15    A7        PSL3(2)       S4                  PSL4(2)   2      2           1      1       9       true             false            true             false                                                                                     
+# 18  15  105   42    6   15    PSL4(2)   2^3:PSL3(2)   2^3:2^2:3:2         PSL4(2)   2      2           4      1       6       true             false            true             false                                                                                     
 # 19  15  105   91    13  78    A15       A14           (S13 x S2) cap A15  S15       2      2           5      1       6       true             true             true             true                                        complete                                      
 # 20  15  105   91    13  78    S15       S14           S13 x S2            S15       2      2           6      1       6       true             true             true             true                                        complete                                      
-# 21  15  120   56    7   24    A7        PSL(3,2)      7:3                 PSL(4,2)  2      2           1      1       12      true             false            true             false                                                                                     
-# 22  15  120   56    7   24    PSL(4,2)  2^3:PSL(3,2)  PSL(3,2)            PSL(4,2)  2      2           4      1       10      true             false            true             false                                                                                     
-# 23  15  126   42    5   12    A7        PSL(3,2)      5:4                 A7        2      2           1      1       7       true             false            true             true                 24                                                                   
-# 24  15  126   84    10  54    A7        PSL(3,2)      5:4                 A7        2      2           1      1       7       true             false            true             true                 23                                                                   
-# 25  15  168   56    5   16    PSL(4,2)  2^3:PSL(3,2)  S5                  PSL(4,2)  2      2           4      1       5       true             false            true             true                 26                                                                   
-# 26  15  168   112   10  72    PSL(4,2)  2^3:PSL(3,2)  S5                  PSL(4,2)  2      2           4      1       5       true             false            true             true                 25                                                                   
-# 27  15  210   56    4   12    A7        PSL(3,2)      A4                  A7        2      2           1      1       4       true             false            true             false                                                                                     
-# 28  15  210   84    6   30    A7        PSL(3,2)      D12                 A7        2      2           1      1       10      true             false            true             false                                                                                     
-# 29  15  280   112   6   40    PSL(4,2)  2^3:PSL(3,2)  (S3xS3):2           PSL(4,2)  2      2           4      1       7       true             false            true             true                 30                                                                   
-# 30  15  280   168   9   96    PSL(4,2)  2^3:PSL(3,2)  (S3xS3):2           PSL(4,2)  2      2           4      1       7       true             false            true             true                 29                                                                   
-# 31  15  420   84    3   12    A7        PSL(3,2)      S3                  PSL(4,2)  2      2           1      1       2       true             false            true             false                                                                                     
-# 32  15  420   84    3   12    PSL(4,2)  2^3:PSL(3,2)  2xS4                PSL(4,2)  2      2           4      1       2       true             false            true             false                                                                                     
-# 33  15  420   168   6   60    A7        PSL(3,2)      S3                  PSL(4,2)  2      2           1      1       2       true             false            true             false                                                                                     
-# 34  15  420   168   6   60    PSL(4,2)  2^3:PSL(3,2)  2xS4                PSL(4,2)  2      2           4      1       8       true             false            true             false                                                                                     
+# 21  15  120   56    7   24    A7        PSL3(2)       7:3                 PSL4(2)   2      2           1      1       12      true             false            true             false                                                                                     
+# 22  15  120   56    7   24    PSL4(2)   2^3:PSL3(2)   PSL3(2)             PSL4(2)   2      2           4      1       10      true             false            true             false                                                                                     
+# 23  15  126   42    5   12    A7        PSL3(2)       5:4                 A7        2      2           1      1       7       true             false            true             true                 24                                                                   
+# 24  15  126   84    10  54    A7        PSL3(2)       5:4                 A7        2      2           1      1       7       true             false            true             true                 23                                                                   
+# 25  15  168   56    5   16    PSL4(2)   2^3:PSL3(2)   S5                  PSL4(2)   2      2           4      1       5       true             false            true             true                 26                                                                   
+# 26  15  168   112   10  72    PSL4(2)   2^3:PSL3(2)   S5                  PSL4(2)   2      2           4      1       5       true             false            true             true                 25                                                                   
+# 27  15  210   56    4   12    A7        PSL3(2)       A4                  A7        2      2           1      1       4       true             false            true             false                                                                                     
+# 28  15  210   84    6   30    A7        PSL3(2)       D12                 A7        2      2           1      1       10      true             false            true             false                                                                                     
+# 29  15  280   112   6   40    PSL4(2)   2^3:PSL3(2)   (S3xS3):2           PSL4(2)   2      2           4      1       7       true             false            true             true                 30                                                                   
+# 30  15  280   168   9   96    PSL4(2)   2^3:PSL3(2)   (S3xS3):2           PSL4(2)   2      2           4      1       7       true             false            true             true                 29                                                                   
+# 31  15  420   84    3   12    A7        PSL3(2)       S3                  PSL4(2)   2      2           1      1       2       true             false            true             false                                                                                     
+# 32  15  420   84    3   12    PSL4(2)   2^3:PSL3(2)   2xS4                PSL4(2)   2      2           4      1       2       true             false            true             false                                                                                     
+# 33  15  420   168   6   60    A7        PSL3(2)       S3                  PSL4(2)   2      2           1      1       2       true             false            true             false                                                                                     
+# 34  15  420   168   6   60    PSL4(2)   2^3:PSL3(2)   2xS4                PSL4(2)   2      2           4      1       8       true             false            true             false                                                                                     
 # 35  15  455   91    3   13    A15       A14           (S3 x S12) cap A15  S15       2      2           5      1       1       true             true             true             true                 37                     complete                                      
 # 36  15  455   91    3   13    S15       S14           S3 x S12            S15       2      2           6      1       1       true             true             true             true                 38                     complete                                      
 # 37  15  455   364   12  286   A15       A14           (S12 x S3) cap A15  S15       2      2           5      1       1       true             true             true             true                 35                     complete                                      
 # 38  15  455   364   12  286   S15       S14           S12 x S3            S15       2      2           6      1       1       true             true             true             true                 36                     complete                                      
-# 39  15  630   168   4   36    A7        PSL(3,2)      4                   A7        2      2           1      1       5       true             false            true             false                                                                                     
-# 40  15  840   224   4   48    PSL(4,2)  2^3:PSL(3,2)  S4                  PSL(4,2)  2      2           4      1       4       true             false            true             false                                                                                     
+# 39  15  630   168   4   36    A7        PSL3(2)       4                   A7        2      2           1      1       5       true             false            true             false                                                                                     
+# 40  15  840   224   4   48    PSL4(2)   2^3:PSL3(2)   S4                  PSL4(2)   2      2           4      1       4       true             false            true             false                                                                                     
 # 41  15  1365  364   4   78    A15       A14           (S4 x S11) cap A15  S15       2      2           5      1       2       true             true             true             true                 43                     complete                                      
 # 42  15  1365  364   4   78    S15       S14           S4 x S11            S15       2      2           6      1       2       true             true             true             true                 44                     complete                                      
 # 43  15  1365  1001  11  715   A15       A14           (S11 x S4) cap A15  S15       2      2           5      1       2       true             true             true             true                 41                     complete                                      
@@ -201,11 +201,11 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
+# Block-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
 # Point-transitive                     true      true          
@@ -227,11 +227,11 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
+# Block-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
 # Point-transitive                     true      true          
@@ -253,10 +253,10 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     (3xA4):2  (A4xA4):2:2   
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -279,10 +279,10 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     (3xA4):2  (A4xA4):2:2   
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -308,7 +308,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     A5        A5        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -334,7 +334,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     A5        A5        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -360,7 +360,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     3^2:4     3^2:4     
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -386,7 +386,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     3^2:4     3^2:4     
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -409,10 +409,10 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     S4        2^4:2:3:2     
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -435,10 +435,10 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     S4        2^3:2^2:3:2   
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -487,11 +487,11 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
-# Block-stabiliser                     7:3       PSL(3,2)      
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
+# Block-stabiliser                     7:3       PSL3(2)      
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
 # Point-transitive                     true      true          
@@ -516,7 +516,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     5:4       5:4       
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -542,7 +542,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     5:4       5:4       
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -565,10 +565,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PSL(4,2)      PSL(4,2)      
+# Structure                            PSL4(2)       PSL4(2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     2^3:PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     S5            S5            
 # Orbit structure of point-stabiliser                              
 # Orbit structure of block-stabiliser                              
@@ -591,10 +591,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PSL(4,2)      PSL(4,2)      
+# Structure                            PSL4(2)       PSL4(2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     2^3:PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     S5            S5            
 # Orbit structure of point-stabiliser                              
 # Orbit structure of block-stabiliser                              
@@ -620,7 +620,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     A4        A4        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -646,7 +646,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     D12       D12       
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -669,10 +669,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PSL(4,2)      PSL(4,2)      
+# Structure                            PSL4(2)       PSL4(2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     2^3:PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     (S3xS3):2     (S3xS3):2     
 # Orbit structure of point-stabiliser                              
 # Orbit structure of block-stabiliser                              
@@ -695,10 +695,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PSL(4,2)      PSL(4,2)      
+# Structure                            PSL4(2)       PSL4(2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     2^3:PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     (S3xS3):2     (S3xS3):2     
 # Orbit structure of point-stabiliser                              
 # Orbit structure of block-stabiliser                              
@@ -721,10 +721,10 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     S3        2xS4          
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -747,10 +747,10 @@
 # -------------------------------------------------------------
 #                                      G         Aut(D)        
 # -------------------------------------------------------------
-# Structure                            A7        PSL(4,2)      
+# Structure                            A7        PSL4(2)      
 # Rank                                 2         2             
 # 2-Homogeneous                        true      true          
-# Point-stabiliser                     PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     S3        2xS4          
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -828,7 +828,7 @@
 # Structure                            A7        A7        
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Point-stabiliser                     PSL3(2)   PSL3(2)  
 # Block-stabiliser                     4         4         
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -851,10 +851,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PSL(4,2)      PSL(4,2)      
+# Structure                            PSL4(2)       PSL4(2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     2^3:PSL(3,2)  2^3:PSL(3,2)  
+# Point-stabiliser                     2^3:PSL3(2)   2^3:PSL3(2)  
 # Block-stabiliser                     S4            S4            
 # Orbit structure of point-stabiliser                              
 # Orbit structure of block-stabiliser                              

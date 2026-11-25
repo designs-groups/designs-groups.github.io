@@ -6,7 +6,7 @@
 #               lD_19 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -32,10 +32,10 @@
 # Nr  v   b      r      k   λ      G          Gα   GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   19  19     9      9   4      19:9       9    9                   19:9       3      3           5      1       2       true             true             true             false                            true       Hadamard or Paley parameters  
-# 2   19  38     18     9   8      AGL(1,19)  18   9                   AGL(1,19)  2      2           6      1       3       true             false            true             false                                                                     
+# 2   19  38     18     9   8      AGL1(19)   18   9                   AGL1(19)   2      2           6      1       3       true             false            true             false                                                                     
 # 3   19  57     9      3   1      19:9       9    3                   19:9       3      3           5      1       1       true             false            true             false                                                                     
-# 4   19  57     18     6   5      AGL(1,19)  18   6                   AGL(1,19)  2      2           6      1       2       true             false            true             false                                                                     
-# 5   19  114    18     3   2      AGL(1,19)  18   3                   AGL(1,19)  2      2           6      1       1       true             false            true             false                                                                     
+# 4   19  57     18     6   5      AGL1(19)   18   6                   AGL1(19)   2      2           6      1       2       true             false            true             false                                                                     
+# 5   19  114    18     3   2      AGL1(19)   18   3                   AGL1(19)   2      2           6      1       1       true             false            true             false                                                                     
 # 6   19  171    153    17  136    A19        A18  (S17 x S2) cap A19  S19        2      2           7      1       8       true             true             true             true                                        complete                      
 # 7   19  969    153    3   17     A19        A18  (S3 x S16) cap A19  S19        2      2           7      1       1       true             true             true             true                 8                      complete                      
 # 8   19  969    816    16  680    A19        A18  (S16 x S3) cap A19  S19        2      2           7      1       1       true             true             true             true                 7                      complete                      
@@ -58,10 +58,10 @@
 # Nr  v   b      r      k   λ      G          Gα   GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   19  19     9      9   4      19:9       9    9                   19:9       3      3           5      1       2       true             true             true             false                            true       Hadamard or Paley parameters  
-# 2   19  38     18     9   8      AGL(1,19)  18   9                   AGL(1,19)  2      2           6      1       3       true             false            true             false                                                                     
+# 2   19  38     18     9   8      AGL1(19)   18   9                   AGL1(19)   2      2           6      1       3       true             false            true             false                                                                     
 # 3   19  57     9      3   1      19:9       9    3                   19:9       3      3           5      1       1       true             false            true             false                                                                     
-# 4   19  57     18     6   5      AGL(1,19)  18   6                   AGL(1,19)  2      2           6      1       2       true             false            true             false                                                                     
-# 5   19  114    18     3   2      AGL(1,19)  18   3                   AGL(1,19)  2      2           6      1       1       true             false            true             false                                                                     
+# 4   19  57     18     6   5      AGL1(19)   18   6                   AGL1(19)   2      2           6      1       2       true             false            true             false                                                                     
+# 5   19  114    18     3   2      AGL1(19)   18   3                   AGL1(19)   2      2           6      1       1       true             false            true             false                                                                     
 # 6   19  171    153    17  136    A19        A18  (S17 x S2) cap A19  S19        2      2           7      1       8       true             true             true             true                                        complete                      
 # 7   19  171    153    17  136    S19        S18  S17 x S2            S19        2      2           8      1       8       true             true             true             true                                        complete                      
 # 8   19  969    153    3   17     A19        A18  (S3 x S16) cap A19  S19        2      2           7      1       1       true             true             true             true                 10                     complete                      
@@ -100,11 +100,11 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   19  19     9      9   4      19:9       9    9                   19:9       3      3           5      1       2       true             true             true             false                            true       Hadamard or Paley parameters  
 # 2   19  19     9      9   4      19:9       9    9                   19:9       3      3           5      1       2       true             true             true             false                            true       Hadamard or Paley parameters  
-# 3   19  38     18     9   8      AGL(1,19)  18   9                   AGL(1,19)  2      2           6      1       3       true             false            true             false                                                                     
+# 3   19  38     18     9   8      AGL1(19)   18   9                   AGL1(19)   2      2           6      1       3       true             false            true             false                                                                     
 # 4   19  57     9      3   1      19:9       9    3                   19:9       3      3           5      1       1       true             false            true             false                                                                     
 # 5   19  57     9      3   1      19:9       9    3                   19:9       3      3           5      1       1       true             false            true             false                                                                     
-# 6   19  57     18     6   5      AGL(1,19)  18   6                   AGL(1,19)  2      2           6      1       2       true             false            true             false                                                                     
-# 7   19  114    18     3   2      AGL(1,19)  18   3                   AGL(1,19)  2      2           6      1       1       true             false            true             false                                                                     
+# 6   19  57     18     6   5      AGL1(19)   18   6                   AGL1(19)   2      2           6      1       2       true             false            true             false                                                                     
+# 7   19  114    18     3   2      AGL1(19)   18   3                   AGL1(19)   2      2           6      1       1       true             false            true             false                                                                     
 # 8   19  171    153    17  136    A19        A18  (S17 x S2) cap A19  S19        2      2           7      1       8       true             true             true             true                                        complete                      
 # 9   19  171    153    17  136    S19        S18  S17 x S2            S19        2      2           8      1       8       true             true             true             true                                        complete                      
 # 10  19  969    153    3   17     A19        A18  (S3 x S16) cap A19  S19        2      2           7      1       1       true             true             true             true                 12                     complete                      
@@ -173,7 +173,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,19)  AGL(1,19)  
+# Structure                            AGL1(19)   AGL1(19)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     18         18         
@@ -225,7 +225,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,19)  AGL(1,19)  
+# Structure                            AGL1(19)   AGL1(19)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     18         18         
@@ -251,7 +251,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL(1,19)  AGL(1,19)  
+# Structure                            AGL1(19)   AGL1(19)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     18         18         

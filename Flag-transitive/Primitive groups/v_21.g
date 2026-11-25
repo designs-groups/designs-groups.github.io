@@ -6,7 +6,7 @@
 #               lD_21 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
+# 1. Number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,51 +31,51 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b       r       k   λ      G         Gα           GB                   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   21  21      5       5   1      M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 2           true       PG(2,4) parameters                
-# 2   21  21      16      16  12     M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 1           true       complement of PG(2,4) parameters  
-# 3   21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 4                                                        
-# 4   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 3                                                        
+# 1   21  21      5       5   1      M21       2^4:A5       2^4:A5               PΓL3(4)   2      2           4      1       7       true             true             true             true                 2           true       PG(2,4) parameters                
+# 2   21  21      16      16  12     M21       2^4:A5       2^4:A5               PΓL3(4)   2      2           4      1       7       true             true             true             true                 1           true       complement of PG(2,4) parameters  
+# 3   21  56      16      6   4      M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       11      true             true             true             true                 4                                                        
+# 4   21  56      40      15  28     M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       11      true             true             true             true                 3                                                        
 # 5   21  70      30      9   12     A7        S5           3^2:4                S7        3      3           2      1       2       true             false            true             false                                                                         
-# 6   21  105     20      4   3      M21       2^4:A5       2^4:2:2:3            PΓL(3,4)  2      2           4      1       3       true             false            true             false                                                                         
-# 7   21  112     32      6   8      PΣL(3,4)  2^4:S5       A6                   PΣL(3,4)  2      2           5      1       10      true             false            true             true                 8                                                        
-# 8   21  112     80      15  56     PΣL(3,4)  2^4:S5       A6                   PΣL(3,4)  2      2           5      1       10      true             false            true             true                 7                                                        
-# 9   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       18      true             true             true             true                                                                          
-# 10  21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       20      true             true             true             true                                                                          
-# 11  21  168     48      6   12     PGL(3,4)  2^4:GL(2,4)  A6                   PΓL(3,4)  2      2           6      1       7       true             false            true             true                 12                                                       
-# 12  21  168     120     15  84     PGL(3,4)  2^4:GL(2,4)  A6                   PΓL(3,4)  2      2           6      1       7       true             false            true             true                 11                                                       
-# 13  21  210     30      3   3      M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       1       true             false            true             false                                                                         
-# 14  21  210     80      8   28     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
-# 15  21  210     120     12  66     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
+# 6   21  105     20      4   3      M21       2^4:A5       2^4:2:2:3            PΓL3(4)   2      2           4      1       3       true             false            true             false                                                                         
+# 7   21  112     32      6   8      PΣL3(4)   2^4:S5       A6                   PΣL3(4)   2      2           5      1       10      true             false            true             true                 8                                                        
+# 8   21  112     80      15  56     PΣL3(4)   2^4:S5       A6                   PΣL3(4)   2      2           5      1       10      true             false            true             true                 7                                                        
+# 9   21  120     40      7   12     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       18      true             true             true             true                                                                          
+# 10  21  120     80      14  52     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       20      true             true             true             true                                                                          
+# 11  21  168     48      6   12     PGL3(4)   2^4:GL2(4)   A6                   PΓL3(4)   2      2           6      1       7       true             false            true             true                 12                                                       
+# 12  21  168     120     15  84     PGL3(4)   2^4:GL2(4)   A6                   PΓL3(4)   2      2           6      1       7       true             false            true             true                 11                                                       
+# 13  21  210     30      3   3      M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       1       true             false            true             false                                                                         
+# 14  21  210     80      8   28     M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       21      true             false            true             false                                                                         
+# 15  21  210     120     12  66     M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       21      true             false            true             false                                                                         
 # 16  21  210     190     19  171    A21       A20          (S19 x S2) cap A21   S21       2      2           8      1       9       true             true             true             true                                        complete                          
-# 17  21  240     80      7   24     PΣL(3,4)  2^4:S5       PSL(3,2)             PΣL(3,4)  2      2           5      1       15      true             false            true             true                 18                                                       
-# 18  21  240     160     14  104    PΣL(3,4)  2^4:S5       PSL(3,2)             PΣL(3,4)  2      2           5      1       15      true             false            true             true                 17                                                       
+# 17  21  240     80      7   24     PΣL3(4)   2^4:S5       PSL3(2)              PΣL3(4)   2      2           5      1       15      true             false            true             true                 18                                                       
+# 18  21  240     160     14  104    PΣL3(4)   2^4:S5       PSL3(2)              PΣL3(4)   2      2           5      1       15      true             false            true             true                 17                                                       
 # 19  21  252     60      5   12     A7        S5           D10                  S7        3      3           2      1       1       true             false            true             false                                                                         
-# 20  21  280     120     9   48     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 21                                                       
-# 21  21  280     160     12  88     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 20                                                       
-# 22  21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       8       true             false            true             false                                                                         
-# 23  21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       24      true             false            true             false                                                                         
-# 24  21  336     240     15  168    M21       2^4:A5       A5                   PΓL(3,4)  2      2           4      1       27      true             false            true             false                                                                         
-# 25  21  360     120     7   36     PGL(3,4)  2^4:GL(2,4)  PSL(3,2)             PΓL(3,4)  2      2           6      1       10      true             false            true             true                 26                                                       
-# 26  21  360     240     14  156    PGL(3,4)  2^4:GL(2,4)  PSL(3,2)             PΓL(3,4)  2      2           6      1       10      true             false            true             true                 25                                                       
-# 27  21  672     160     5   32     PΣL(3,4)  2^4:S5       A5                   PΣL(3,4)  2      2           5      1       8       true             false            true             false                                                                         
-# 28  21  672     320     10  144    PΣL(3,4)  2^4:S5       A5                   PΣL(3,4)  2      2           5      1       20      true             false            true             false                                                                         
-# 29  21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       4       true             false            true             false                                                                         
-# 30  21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       14      true             false            true             false                                                                         
-# 31  21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       6       true             false            true             false                                                                         
-# 32  21  1008    240     5   48     PGL(3,4)  2^4:GL(2,4)  A5                   PΓL(3,4)  2      2           6      1       6       true             false            true             false                                                                         
-# 33  21  1008    480     10  216    PGL(3,4)  2^4:GL(2,4)  A5                   PΓL(3,4)  2      2           6      1       14      true             false            true             false                                                                         
-# 34  21  1120    160     3   16     M21       2^4:A5       3^2:2                PΓL(3,4)  2      2           4      1       2       true             false            true             false                                                                         
-# 35  21  1120    480     9   192    PGL(3,4)  2^4:GL(2,4)  3^2:6                PΓL(3,4)  2      2           6      1       2       true             false            true             false                                                                         
+# 20  21  280     120     9   48     M21       2^4:A5       3^2:Q8               PΓL3(4)   2      2           4      1       23      true             true             true             true                 21                                                       
+# 21  21  280     160     12  88     M21       2^4:A5       3^2:Q8               PΓL3(4)   2      2           4      1       23      true             true             true             true                 20                                                       
+# 22  21  336     80      5   16     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       8       true             false            true             false                                                                         
+# 23  21  336     160     10  72     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       24      true             false            true             false                                                                         
+# 24  21  336     240     15  168    M21       2^4:A5       A5                   PΓL3(4)   2      2           4      1       27      true             false            true             false                                                                         
+# 25  21  360     120     7   36     PGL3(4)   2^4:GL2(4)   PSL3(2)              PΓL3(4)   2      2           6      1       10      true             false            true             true                 26                                                       
+# 26  21  360     240     14  156    PGL3(4)   2^4:GL2(4)   PSL3(2)              PΓL3(4)   2      2           6      1       10      true             false            true             true                 25                                                       
+# 27  21  672     160     5   32     PΣL3(4)   2^4:S5       A5                   PΣL3(4)   2      2           5      1       8       true             false            true             false                                                                         
+# 28  21  672     320     10  144    PΣL3(4)   2^4:S5       A5                   PΣL3(4)   2      2           5      1       20      true             false            true             false                                                                         
+# 29  21  840     160     4   24     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       4       true             false            true             false                                                                         
+# 30  21  840     240     6   60     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       14      true             false            true             false                                                                         
+# 31  21  840     480     12  264    M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       6       true             false            true             false                                                                         
+# 32  21  1008    240     5   48     PGL3(4)   2^4:GL2(4)   A5                   PΓL3(4)   2      2           6      1       6       true             false            true             false                                                                         
+# 33  21  1008    480     10  216    PGL3(4)   2^4:GL2(4)   A5                   PΓL3(4)   2      2           6      1       14      true             false            true             false                                                                         
+# 34  21  1120    160     3   16     M21       2^4:A5       3^2:2                PΓL3(4)   2      2           4      1       2       true             false            true             false                                                                         
+# 35  21  1120    480     9   192    PGL3(4)   2^4:GL2(4)   3^2:6                PΓL3(4)   2      2           6      1       2       true             false            true             false                                                                         
 # 36  21  1330    190     3   19     A21       A20          (S3 x S18) cap A21   S21       2      2           8      1       1       true             true             true             true                 37                     complete                          
 # 37  21  1330    1140    18  969    A21       A20          (S18 x S3) cap A21   S21       2      2           8      1       1       true             true             true             true                 36                     complete                          
-# 38  21  1680    320     4   48     PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       5       true             false            true             false                                                                         
-# 39  21  1680    480     6   120    PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       12      true             false            true             false                                                                         
-# 40  21  1680    960     12  528    PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       5       true             false            true             false                                                                         
-# 41  21  2520    480     4   72     PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       4       true             false            true             false                                                                         
-# 42  21  2520    720     6   180    PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       8       true             false            true             false                                                                         
-# 43  21  2520    960     8   336    M21       2^4:A5       Q8                   PΓL(3,4)  2      2           4      1       22      true             false            true             false                                                                         
-# 44  21  2520    1440    12  792    PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       4       true             false            true             false                                                                         
-# 45  21  3360    960     6   240    M21       2^4:A5       S3                   PΓL(3,4)  2      2           4      1       17      true             false            true             false                                                                         
+# 38  21  1680    320     4   48     PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       5       true             false            true             false                                                                         
+# 39  21  1680    480     6   120    PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       12      true             false            true             false                                                                         
+# 40  21  1680    960     12  528    PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       5       true             false            true             false                                                                         
+# 41  21  2520    480     4   72     PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       4       true             false            true             false                                                                         
+# 42  21  2520    720     6   180    PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       8       true             false            true             false                                                                         
+# 43  21  2520    960     8   336    M21       2^4:A5       Q8                   PΓL3(4)   2      2           4      1       22      true             false            true             false                                                                         
+# 44  21  2520    1440    12  792    PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       4       true             false            true             false                                                                         
+# 45  21  3360    960     6   240    M21       2^4:A5       S3                   PΓL3(4)   2      2           4      1       17      true             false            true             false                                                                         
 # 46  21  5985    1140    4   171    A21       A20          (S4 x S17) cap A21   S21       2      2           8      1       2       true             true             true             true                 47                     complete                          
 # 47  21  5985    4845    17  3876   A21       A20          (S17 x S4) cap A21   S21       2      2           8      1       2       true             true             true             true                 46                     complete                          
 # 48  21  20349   4845    5   969    A21       A20          (S5 x S16) cap A21   S21       2      2           8      1       3       true             true             true             true                 49                     complete                          
@@ -96,111 +96,111 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr   v   b       r       k   λ      G         Gα           GB                   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1    21  21      5       5   1      M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 5           true       PG(2,4) parameters                
-# 2    21  21      5       5   1      PΣL(3,4)  2^4:S5       2^4:S5               PΓL(3,4)  2      2           5      1       6       true             true             true             true                 6           true       PG(2,4) parameters                
-# 3    21  21      5       5   1      PGL(3,4)  2^4:GL(2,4)  2^4:GL(2,4)          PΓL(3,4)  2      2           6      1       5       true             true             true             true                 7           true       PG(2,4) parameters                
-# 4    21  21      5       5   1      PΓL(3,4)  2^4:A5:S3    2^4:A5:S3            PΓL(3,4)  2      2           7      1       5       true             true             true             true                 8           true       PG(2,4) parameters                
-# 5    21  21      16      16  12     M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 1           true       complement of PG(2,4) parameters  
-# 6    21  21      16      16  12     PΣL(3,4)  2^4:S5       2^4:S5               PΓL(3,4)  2      2           5      1       6       true             true             true             true                 2           true       complement of PG(2,4) parameters  
-# 7    21  21      16      16  12     PGL(3,4)  2^4:GL(2,4)  2^4:GL(2,4)          PΓL(3,4)  2      2           6      1       5       true             true             true             true                 3           true       complement of PG(2,4) parameters  
-# 8    21  21      16      16  12     PΓL(3,4)  2^4:A5:S3    2^4:A5:S3            PΓL(3,4)  2      2           7      1       5       true             true             true             true                 4           true       complement of PG(2,4) parameters  
-# 9    21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 11                                                       
-# 10   21  56      16      6   4      PΣL(3,4)  2^4:S5       S6                   PΣL(3,4)  2      2           5      1       9       true             true             true             true                 12                                                       
-# 11   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 9                                                        
-# 12   21  56      40      15  28     PΣL(3,4)  2^4:S5       S6                   PΣL(3,4)  2      2           5      1       9       true             true             true             true                 10                                                       
+# 1    21  21      5       5   1      M21       2^4:A5       2^4:A5               PΓL3(4)   2      2           4      1       7       true             true             true             true                 5           true       PG(2,4) parameters                
+# 2    21  21      5       5   1      PΣL3(4)   2^4:S5       2^4:S5               PΓL3(4)   2      2           5      1       6       true             true             true             true                 6           true       PG(2,4) parameters                
+# 3    21  21      5       5   1      PGL3(4)   2^4:GL2(4)   2^4:GL2(4)           PΓL3(4)   2      2           6      1       5       true             true             true             true                 7           true       PG(2,4) parameters                
+# 4    21  21      5       5   1      PΓL3(4)   2^4:A5:S3    2^4:A5:S3            PΓL3(4)   2      2           7      1       5       true             true             true             true                 8           true       PG(2,4) parameters                
+# 5    21  21      16      16  12     M21       2^4:A5       2^4:A5               PΓL3(4)   2      2           4      1       7       true             true             true             true                 1           true       complement of PG(2,4) parameters  
+# 6    21  21      16      16  12     PΣL3(4)   2^4:S5       2^4:S5               PΓL3(4)   2      2           5      1       6       true             true             true             true                 2           true       complement of PG(2,4) parameters  
+# 7    21  21      16      16  12     PGL3(4)   2^4:GL2(4)   2^4:GL2(4)           PΓL3(4)   2      2           6      1       5       true             true             true             true                 3           true       complement of PG(2,4) parameters  
+# 8    21  21      16      16  12     PΓL3(4)   2^4:A5:S3    2^4:A5:S3            PΓL3(4)   2      2           7      1       5       true             true             true             true                 4           true       complement of PG(2,4) parameters  
+# 9    21  56      16      6   4      M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       11      true             true             true             true                 11                                                       
+# 10   21  56      16      6   4      PΣL3(4)   2^4:S5       S6                   PΣL3(4)   2      2           5      1       9       true             true             true             true                 12                                                       
+# 11   21  56      40      15  28     M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       11      true             true             true             true                 9                                                        
+# 12   21  56      40      15  28     PΣL3(4)   2^4:S5       S6                   PΣL3(4)   2      2           5      1       9       true             true             true             true                 10                                                       
 # 13   21  70      30      9   12     A7        S5           3^2:4                S7        3      3           2      1       2       true             false            true             false                                                                         
 # 14   21  70      30      9   12     S7        2xS5         (S3xS3):2            S7        3      3           3      1       2       true             false            true             false                                                                         
-# 15   21  105     20      4   3      M21       2^4:A5       2^4:2:2:3            PΓL(3,4)  2      2           4      1       3       true             false            true             false                                                                         
-# 16   21  105     20      4   3      PΣL(3,4)  2^4:S5       2^4:2:2:3:2          PΓL(3,4)  2      2           5      1       3       true             false            true             false                                                                         
-# 17   21  105     20      4   3      PGL(3,4)  2^4:GL(2,4)  2^4:2:2:3^2          PΓL(3,4)  2      2           6      1       3       true             false            true             false                                                                         
-# 18   21  105     20      4   3      PΓL(3,4)  2^4:A5:S3    2^4:2:2:3^2:2        PΓL(3,4)  2      2           7      1       3       true             false            true             false                                                                         
-# 19   21  112     32      6   8      PΣL(3,4)  2^4:S5       A6                   PΣL(3,4)  2      2           5      1       10      true             false            true             true                 20                                                       
-# 20   21  112     80      15  56     PΣL(3,4)  2^4:S5       A6                   PΣL(3,4)  2      2           5      1       10      true             false            true             true                 19                                                       
-# 21   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       18      true             true             true             true                                                                          
-# 22   21  120     40      7   12     PΣL(3,4)  2^4:S5       2xPSL(3,2)           PΣL(3,4)  2      2           5      1       14      true             true             true             true                 24                                                       
-# 23   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       20      true             true             true             true                                                                          
-# 24   21  120     80      14  52     PΣL(3,4)  2^4:S5       2xPSL(3,2)           PΣL(3,4)  2      2           5      1       14      true             true             true             true                 22                                                       
-# 25   21  168     48      6   12     PGL(3,4)  2^4:GL(2,4)  A6                   PΓL(3,4)  2      2           6      1       7       true             false            true             true                 27                                                       
-# 26   21  168     48      6   12     PΓL(3,4)  2^4:A5:S3    S6                   PΓL(3,4)  2      2           7      1       7       true             false            true             true                 28                                                       
-# 27   21  168     120     15  84     PGL(3,4)  2^4:GL(2,4)  A6                   PΓL(3,4)  2      2           6      1       7       true             false            true             true                 25                                                       
-# 28   21  168     120     15  84     PΓL(3,4)  2^4:A5:S3    S6                   PΓL(3,4)  2      2           7      1       7       true             false            true             true                 26                                                       
-# 29   21  210     30      3   3      M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       1       true             false            true             false                                                                         
-# 30   21  210     30      3   3      PΣL(3,4)  2^4:S5       2^4:2:3:2            PΓL(3,4)  2      2           5      1       1       true             false            true             false                                                                         
-# 31   21  210     30      3   3      PGL(3,4)  2^4:GL(2,4)  2^4:3:2:3            PΓL(3,4)  2      2           6      1       1       true             false            true             false                                                                         
-# 32   21  210     30      3   3      PΓL(3,4)  2^4:A5:S3    (A4xA4):2:2          PΓL(3,4)  2      2           7      1       1       true             false            true             false                                                                         
-# 33   21  210     80      8   28     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
-# 34   21  210     80      8   28     PΣL(3,4)  2^4:S5       2^4:3:2:2            PΓL(3,4)  2      2           5      1       16      true             false            true             false                                                                         
-# 35   21  210     80      8   28     PGL(3,4)  2^4:GL(2,4)  2^4:3:2:3            PΓL(3,4)  2      2           6      1       11      true             false            true             false                                                                         
-# 36   21  210     80      8   28     PΓL(3,4)  2^4:A5:S3    (A4xA4):2:2          PΓL(3,4)  2      2           7      1       11      true             false            true             false                                                                         
-# 37   21  210     120     12  66     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
-# 38   21  210     120     12  66     PΣL(3,4)  2^4:S5       2^4:3:2:2            PΓL(3,4)  2      2           5      1       16      true             false            true             false                                                                         
-# 39   21  210     120     12  66     PGL(3,4)  2^4:GL(2,4)  2^4:3:2:3            PΓL(3,4)  2      2           6      1       11      true             false            true             false                                                                         
-# 40   21  210     120     12  66     PΓL(3,4)  2^4:A5:S3    (A4xA4):2:2          PΓL(3,4)  2      2           7      1       11      true             false            true             false                                                                         
+# 15   21  105     20      4   3      M21       2^4:A5       2^4:2:2:3            PΓL3(4)   2      2           4      1       3       true             false            true             false                                                                         
+# 16   21  105     20      4   3      PΣL3(4)   2^4:S5       2^4:2:2:3:2          PΓL3(4)   2      2           5      1       3       true             false            true             false                                                                         
+# 17   21  105     20      4   3      PGL3(4)   2^4:GL2(4)   2^4:2:2:3^2          PΓL3(4)   2      2           6      1       3       true             false            true             false                                                                         
+# 18   21  105     20      4   3      PΓL3(4)   2^4:A5:S3    2^4:2:2:3^2:2        PΓL3(4)   2      2           7      1       3       true             false            true             false                                                                         
+# 19   21  112     32      6   8      PΣL3(4)   2^4:S5       A6                   PΣL3(4)   2      2           5      1       10      true             false            true             true                 20                                                       
+# 20   21  112     80      15  56     PΣL3(4)   2^4:S5       A6                   PΣL3(4)   2      2           5      1       10      true             false            true             true                 19                                                       
+# 21   21  120     40      7   12     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       18      true             true             true             true                                                                          
+# 22   21  120     40      7   12     PΣL3(4)   2^4:S5       2xPSL3(2)            PΣL3(4)   2      2           5      1       14      true             true             true             true                 24                                                       
+# 23   21  120     80      14  52     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       20      true             true             true             true                                                                          
+# 24   21  120     80      14  52     PΣL3(4)   2^4:S5       2xPSL3(2)            PΣL3(4)   2      2           5      1       14      true             true             true             true                 22                                                       
+# 25   21  168     48      6   12     PGL3(4)   2^4:GL2(4)   A6                   PΓL3(4)   2      2           6      1       7       true             false            true             true                 27                                                       
+# 26   21  168     48      6   12     PΓL3(4)   2^4:A5:S3    S6                   PΓL3(4)   2      2           7      1       7       true             false            true             true                 28                                                       
+# 27   21  168     120     15  84     PGL3(4)   2^4:GL2(4)   A6                   PΓL3(4)   2      2           6      1       7       true             false            true             true                 25                                                       
+# 28   21  168     120     15  84     PΓL3(4)   2^4:A5:S3    S6                   PΓL3(4)   2      2           7      1       7       true             false            true             true                 26                                                       
+# 29   21  210     30      3   3      M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       1       true             false            true             false                                                                         
+# 30   21  210     30      3   3      PΣL3(4)   2^4:S5       2^4:2:3:2            PΓL3(4)   2      2           5      1       1       true             false            true             false                                                                         
+# 31   21  210     30      3   3      PGL3(4)   2^4:GL2(4)   2^4:3:2:3            PΓL3(4)   2      2           6      1       1       true             false            true             false                                                                         
+# 32   21  210     30      3   3      PΓL3(4)   2^4:A5:S3    (A4xA4):2:2          PΓL3(4)   2      2           7      1       1       true             false            true             false                                                                         
+# 33   21  210     80      8   28     M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       21      true             false            true             false                                                                         
+# 34   21  210     80      8   28     PΣL3(4)   2^4:S5       2^4:3:2:2            PΓL3(4)   2      2           5      1       16      true             false            true             false                                                                         
+# 35   21  210     80      8   28     PGL3(4)   2^4:GL2(4)   2^4:3:2:3            PΓL3(4)   2      2           6      1       11      true             false            true             false                                                                         
+# 36   21  210     80      8   28     PΓL3(4)   2^4:A5:S3    (A4xA4):2:2          PΓL3(4)   2      2           7      1       11      true             false            true             false                                                                         
+# 37   21  210     120     12  66     M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       21      true             false            true             false                                                                         
+# 38   21  210     120     12  66     PΣL3(4)   2^4:S5       2^4:3:2:2            PΓL3(4)   2      2           5      1       16      true             false            true             false                                                                         
+# 39   21  210     120     12  66     PGL3(4)   2^4:GL2(4)   2^4:3:2:3            PΓL3(4)   2      2           6      1       11      true             false            true             false                                                                         
+# 40   21  210     120     12  66     PΓL3(4)   2^4:A5:S3    (A4xA4):2:2          PΓL3(4)   2      2           7      1       11      true             false            true             false                                                                         
 # 41   21  210     190     19  171    A21       A20          (S19 x S2) cap A21   S21       2      2           8      1       9       true             true             true             true                                        complete                          
 # 42   21  210     190     19  171    S21       S20          S19 x S2             S21       2      2           9      1       9       true             true             true             true                                        complete                          
-# 43   21  240     80      7   24     PΣL(3,4)  2^4:S5       PSL(3,2)             PΣL(3,4)  2      2           5      1       15      true             false            true             true                 44                                                       
-# 44   21  240     160     14  104    PΣL(3,4)  2^4:S5       PSL(3,2)             PΣL(3,4)  2      2           5      1       15      true             false            true             true                 43                                                       
+# 43   21  240     80      7   24     PΣL3(4)   2^4:S5       PSL3(2)              PΣL3(4)   2      2           5      1       15      true             false            true             true                 44                                                       
+# 44   21  240     160     14  104    PΣL3(4)   2^4:S5       PSL3(2)              PΣL3(4)   2      2           5      1       15      true             false            true             true                 43                                                       
 # 45   21  252     60      5   12     A7        S5           D10                  S7        3      3           2      1       1       true             false            true             false                                                                         
 # 46   21  252     60      5   12     S7        2xS5         D20                  S7        3      3           3      1       1       true             false            true             false                                                                         
-# 47   21  280     120     9   48     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 51                                                       
-# 48   21  280     120     9   48     PΣL(3,4)  2^4:S5       3^2:QD16             PΓL(3,4)  2      2           5      1       18      true             true             true             true                 52                                                       
-# 49   21  280     120     9   48     PGL(3,4)  2^4:GL(2,4)  3^2:Q8:3             PΓL(3,4)  2      2           6      1       13      true             true             true             true                 53                                                       
-# 50   21  280     120     9   48     PΓL(3,4)  2^4:A5:S3    3^2:Q8:3:2           PΓL(3,4)  2      2           7      1       13      true             true             true             true                 54                                                       
-# 51   21  280     160     12  88     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 47                                                       
-# 52   21  280     160     12  88     PΣL(3,4)  2^4:S5       3^2:QD16             PΓL(3,4)  2      2           5      1       18      true             true             true             true                 48                                                       
-# 53   21  280     160     12  88     PGL(3,4)  2^4:GL(2,4)  3^2:Q8:3             PΓL(3,4)  2      2           6      1       13      true             true             true             true                 49                                                       
-# 54   21  280     160     12  88     PΓL(3,4)  2^4:A5:S3    3^2:Q8:3:2           PΓL(3,4)  2      2           7      1       13      true             true             true             true                 50                                                       
-# 55   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       8       true             false            true             false                                                                         
-# 56   21  336     80      5   16     PΣL(3,4)  2^4:S5       S5                   PΣL(3,4)  2      2           5      1       7       true             false            true             false                                                                         
-# 57   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       24      true             false            true             false                                                                         
-# 58   21  336     160     10  72     PΣL(3,4)  2^4:S5       S5                   PΣL(3,4)  2      2           5      1       19      true             false            true             false                                                                         
-# 59   21  336     240     15  168    M21       2^4:A5       A5                   PΓL(3,4)  2      2           4      1       27      true             false            true             false                                                                         
-# 60   21  336     240     15  168    PΣL(3,4)  2^4:S5       S5                   PΓL(3,4)  2      2           5      1       21      true             false            true             false                                                                         
-# 61   21  336     240     15  168    PGL(3,4)  2^4:GL(2,4)  GL(2,4)              PΓL(3,4)  2      2           6      1       15      true             false            true             false                                                                         
-# 62   21  336     240     15  168    PΓL(3,4)  2^4:A5:S3    A5:S3                PΓL(3,4)  2      2           7      1       15      true             false            true             false                                                                         
-# 63   21  360     120     7   36     PGL(3,4)  2^4:GL(2,4)  PSL(3,2)             PΓL(3,4)  2      2           6      1       10      true             false            true             true                 65                                                       
-# 64   21  360     120     7   36     PΓL(3,4)  2^4:A5:S3    2xPSL(3,2)           PΓL(3,4)  2      2           7      1       10      true             false            true             true                 66                                                       
-# 65   21  360     240     14  156    PGL(3,4)  2^4:GL(2,4)  PSL(3,2)             PΓL(3,4)  2      2           6      1       10      true             false            true             true                 63                                                       
-# 66   21  360     240     14  156    PΓL(3,4)  2^4:A5:S3    2xPSL(3,2)           PΓL(3,4)  2      2           7      1       10      true             false            true             true                 64                                                       
-# 67   21  672     160     5   32     PΣL(3,4)  2^4:S5       A5                   PΣL(3,4)  2      2           5      1       8       true             false            true             false                                                                         
-# 68   21  672     320     10  144    PΣL(3,4)  2^4:S5       A5                   PΣL(3,4)  2      2           5      1       20      true             false            true             false                                                                         
-# 69   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       4       true             false            true             false                                                                         
-# 70   21  840     160     4   24     PΣL(3,4)  2^4:S5       2xS4                 PΣL(3,4)  2      2           5      1       4       true             false            true             false                                                                         
-# 71   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       14      true             false            true             false                                                                         
-# 72   21  840     240     6   60     PΣL(3,4)  2^4:S5       2xS4                 PΣL(3,4)  2      2           5      1       11      true             false            true             false                                                                         
-# 73   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       6       true             false            true             false                                                                         
-# 74   21  840     480     12  264    PΣL(3,4)  2^4:S5       2xS4                 PΣL(3,4)  2      2           5      1       4       true             false            true             false                                                                         
-# 75   21  1008    240     5   48     PGL(3,4)  2^4:GL(2,4)  A5                   PΓL(3,4)  2      2           6      1       6       true             false            true             false                                                                         
-# 76   21  1008    240     5   48     PΓL(3,4)  2^4:A5:S3    S5                   PΓL(3,4)  2      2           7      1       6       true             false            true             false                                                                         
-# 77   21  1008    480     10  216    PGL(3,4)  2^4:GL(2,4)  A5                   PΓL(3,4)  2      2           6      1       14      true             false            true             false                                                                         
-# 78   21  1008    480     10  216    PΓL(3,4)  2^4:A5:S3    S5                   PΓL(3,4)  2      2           7      1       14      true             false            true             false                                                                         
-# 79   21  1120    160     3   16     M21       2^4:A5       3^2:2                PΓL(3,4)  2      2           4      1       2       true             false            true             false                                                                         
-# 80   21  1120    160     3   16     PΣL(3,4)  2^4:S5       S3xS3                PΓL(3,4)  2      2           5      1       2       true             false            true             false                                                                         
-# 81   21  1120    160     3   16     PGL(3,4)  2^4:GL(2,4)  3^2:6                PΓL(3,4)  2      2           6      1       2       true             false            true             false                                                                         
-# 82   21  1120    160     3   16     PΓL(3,4)  2^4:A5:S3    3^2:3:2^2            PΓL(3,4)  2      2           7      1       2       true             false            true             false                                                                         
-# 83   21  1120    480     9   192    PGL(3,4)  2^4:GL(2,4)  3^2:6                PΓL(3,4)  2      2           6      1       2       true             false            true             false                                                                         
-# 84   21  1120    480     9   192    PΓL(3,4)  2^4:A5:S3    3^2:3:2^2            PΓL(3,4)  2      2           7      1       2       true             false            true             false                                                                         
+# 47   21  280     120     9   48     M21       2^4:A5       3^2:Q8               PΓL3(4)   2      2           4      1       23      true             true             true             true                 51                                                       
+# 48   21  280     120     9   48     PΣL3(4)   2^4:S5       3^2:QD16             PΓL3(4)   2      2           5      1       18      true             true             true             true                 52                                                       
+# 49   21  280     120     9   48     PGL3(4)   2^4:GL2(4)   3^2:Q8:3             PΓL3(4)   2      2           6      1       13      true             true             true             true                 53                                                       
+# 50   21  280     120     9   48     PΓL3(4)   2^4:A5:S3    3^2:Q8:3:2           PΓL3(4)   2      2           7      1       13      true             true             true             true                 54                                                       
+# 51   21  280     160     12  88     M21       2^4:A5       3^2:Q8               PΓL3(4)   2      2           4      1       23      true             true             true             true                 47                                                       
+# 52   21  280     160     12  88     PΣL3(4)   2^4:S5       3^2:QD16             PΓL3(4)   2      2           5      1       18      true             true             true             true                 48                                                       
+# 53   21  280     160     12  88     PGL3(4)   2^4:GL2(4)   3^2:Q8:3             PΓL3(4)   2      2           6      1       13      true             true             true             true                 49                                                       
+# 54   21  280     160     12  88     PΓL3(4)   2^4:A5:S3    3^2:Q8:3:2           PΓL3(4)   2      2           7      1       13      true             true             true             true                 50                                                       
+# 55   21  336     80      5   16     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       8       true             false            true             false                                                                         
+# 56   21  336     80      5   16     PΣL3(4)   2^4:S5       S5                   PΣL3(4)   2      2           5      1       7       true             false            true             false                                                                         
+# 57   21  336     160     10  72     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       24      true             false            true             false                                                                         
+# 58   21  336     160     10  72     PΣL3(4)   2^4:S5       S5                   PΣL3(4)   2      2           5      1       19      true             false            true             false                                                                         
+# 59   21  336     240     15  168    M21       2^4:A5       A5                   PΓL3(4)   2      2           4      1       27      true             false            true             false                                                                         
+# 60   21  336     240     15  168    PΣL3(4)   2^4:S5       S5                   PΓL3(4)   2      2           5      1       21      true             false            true             false                                                                         
+# 61   21  336     240     15  168    PGL3(4)   2^4:GL2(4)   GL2(4)               PΓL3(4)   2      2           6      1       15      true             false            true             false                                                                         
+# 62   21  336     240     15  168    PΓL3(4)   2^4:A5:S3    A5:S3                PΓL3(4)   2      2           7      1       15      true             false            true             false                                                                         
+# 63   21  360     120     7   36     PGL3(4)   2^4:GL2(4)   PSL3(2)              PΓL3(4)   2      2           6      1       10      true             false            true             true                 65                                                       
+# 64   21  360     120     7   36     PΓL3(4)   2^4:A5:S3    2xPSL3(2)            PΓL3(4)   2      2           7      1       10      true             false            true             true                 66                                                       
+# 65   21  360     240     14  156    PGL3(4)   2^4:GL2(4)   PSL3(2)              PΓL3(4)   2      2           6      1       10      true             false            true             true                 63                                                       
+# 66   21  360     240     14  156    PΓL3(4)   2^4:A5:S3    2xPSL3(2)            PΓL3(4)   2      2           7      1       10      true             false            true             true                 64                                                       
+# 67   21  672     160     5   32     PΣL3(4)   2^4:S5       A5                   PΣL3(4)   2      2           5      1       8       true             false            true             false                                                                         
+# 68   21  672     320     10  144    PΣL3(4)   2^4:S5       A5                   PΣL3(4)   2      2           5      1       20      true             false            true             false                                                                         
+# 69   21  840     160     4   24     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       4       true             false            true             false                                                                         
+# 70   21  840     160     4   24     PΣL3(4)   2^4:S5       2xS4                 PΣL3(4)   2      2           5      1       4       true             false            true             false                                                                         
+# 71   21  840     240     6   60     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       14      true             false            true             false                                                                         
+# 72   21  840     240     6   60     PΣL3(4)   2^4:S5       2xS4                 PΣL3(4)   2      2           5      1       11      true             false            true             false                                                                         
+# 73   21  840     480     12  264    M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       6       true             false            true             false                                                                         
+# 74   21  840     480     12  264    PΣL3(4)   2^4:S5       2xS4                 PΣL3(4)   2      2           5      1       4       true             false            true             false                                                                         
+# 75   21  1008    240     5   48     PGL3(4)   2^4:GL2(4)   A5                   PΓL3(4)   2      2           6      1       6       true             false            true             false                                                                         
+# 76   21  1008    240     5   48     PΓL3(4)   2^4:A5:S3    S5                   PΓL3(4)   2      2           7      1       6       true             false            true             false                                                                         
+# 77   21  1008    480     10  216    PGL3(4)   2^4:GL2(4)   A5                   PΓL3(4)   2      2           6      1       14      true             false            true             false                                                                         
+# 78   21  1008    480     10  216    PΓL3(4)   2^4:A5:S3    S5                   PΓL3(4)   2      2           7      1       14      true             false            true             false                                                                         
+# 79   21  1120    160     3   16     M21       2^4:A5       3^2:2                PΓL3(4)   2      2           4      1       2       true             false            true             false                                                                         
+# 80   21  1120    160     3   16     PΣL3(4)   2^4:S5       S3xS3                PΓL3(4)   2      2           5      1       2       true             false            true             false                                                                         
+# 81   21  1120    160     3   16     PGL3(4)   2^4:GL2(4)   3^2:6                PΓL3(4)   2      2           6      1       2       true             false            true             false                                                                         
+# 82   21  1120    160     3   16     PΓL3(4)   2^4:A5:S3    3^2:3:2^2            PΓL3(4)   2      2           7      1       2       true             false            true             false                                                                         
+# 83   21  1120    480     9   192    PGL3(4)   2^4:GL2(4)   3^2:6                PΓL3(4)   2      2           6      1       2       true             false            true             false                                                                         
+# 84   21  1120    480     9   192    PΓL3(4)   2^4:A5:S3    3^2:3:2^2            PΓL3(4)   2      2           7      1       2       true             false            true             false                                                                         
 # 85   21  1330    190     3   19     A21       A20          (S3 x S18) cap A21   S21       2      2           8      1       1       true             true             true             true                 87                     complete                          
 # 86   21  1330    190     3   19     S21       S20          S3 x S18             S21       2      2           9      1       1       true             true             true             true                 88                     complete                          
 # 87   21  1330    1140    18  969    A21       A20          (S18 x S3) cap A21   S21       2      2           8      1       1       true             true             true             true                 85                     complete                          
 # 88   21  1330    1140    18  969    S21       S20          S18 x S3             S21       2      2           9      1       1       true             true             true             true                 86                     complete                          
-# 89   21  1680    320     4   48     PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       5       true             false            true             false                                                                         
-# 90   21  1680    480     6   120    PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       12      true             false            true             false                                                                         
-# 91   21  1680    960     12  528    PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       5       true             false            true             false                                                                         
-# 92   21  2520    480     4   72     PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       4       true             false            true             false                                                                         
-# 93   21  2520    480     4   72     PΓL(3,4)  2^4:A5:S3    2xS4                 PΓL(3,4)  2      2           7      1       4       true             false            true             false                                                                         
-# 94   21  2520    720     6   180    PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       8       true             false            true             false                                                                         
-# 95   21  2520    720     6   180    PΓL(3,4)  2^4:A5:S3    2xS4                 PΓL(3,4)  2      2           7      1       8       true             false            true             false                                                                         
-# 96   21  2520    960     8   336    M21       2^4:A5       Q8                   PΓL(3,4)  2      2           4      1       22      true             false            true             false                                                                         
-# 97   21  2520    960     8   336    PΣL(3,4)  2^4:S5       QD16                 PΓL(3,4)  2      2           5      1       17      true             false            true             false                                                                         
-# 98   21  2520    960     8   336    PGL(3,4)  2^4:GL(2,4)  SL(2,3)              PΓL(3,4)  2      2           6      1       12      true             false            true             false                                                                         
-# 99   21  2520    960     8   336    PΓL(3,4)  2^4:A5:S3    GL(2,3)              PΓL(3,4)  2      2           7      1       12      true             false            true             false                                                                         
-# 100  21  2520    1440    12  792    PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       4       true             false            true             false                                                                         
-# 101  21  2520    1440    12  792    PΓL(3,4)  2^4:A5:S3    2xS4                 PΓL(3,4)  2      2           7      1       4       true             false            true             false                                                                         
-# 102  21  3360    960     6   240    M21       2^4:A5       S3                   PΓL(3,4)  2      2           4      1       17      true             false            true             false                                                                         
-# 103  21  3360    960     6   240    PΣL(3,4)  2^4:S5       D12                  PΓL(3,4)  2      2           5      1       13      true             false            true             false                                                                         
-# 104  21  3360    960     6   240    PGL(3,4)  2^4:GL(2,4)  3xS3                 PΓL(3,4)  2      2           6      1       9       true             false            true             false                                                                         
-# 105  21  3360    960     6   240    PΓL(3,4)  2^4:A5:S3    S3xS3                PΓL(3,4)  2      2           7      1       9       true             false            true             false                                                                         
+# 89   21  1680    320     4   48     PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       5       true             false            true             false                                                                         
+# 90   21  1680    480     6   120    PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       12      true             false            true             false                                                                         
+# 91   21  1680    960     12  528    PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       5       true             false            true             false                                                                         
+# 92   21  2520    480     4   72     PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       4       true             false            true             false                                                                         
+# 93   21  2520    480     4   72     PΓL3(4)   2^4:A5:S3    2xS4                 PΓL3(4)   2      2           7      1       4       true             false            true             false                                                                         
+# 94   21  2520    720     6   180    PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       8       true             false            true             false                                                                         
+# 95   21  2520    720     6   180    PΓL3(4)   2^4:A5:S3    2xS4                 PΓL3(4)   2      2           7      1       8       true             false            true             false                                                                         
+# 96   21  2520    960     8   336    M21       2^4:A5       Q8                   PΓL3(4)   2      2           4      1       22      true             false            true             false                                                                         
+# 97   21  2520    960     8   336    PΣL3(4)   2^4:S5       QD16                 PΓL3(4)   2      2           5      1       17      true             false            true             false                                                                         
+# 98   21  2520    960     8   336    PGL3(4)   2^4:GL2(4)   SL2(3)               PΓL3(4)   2      2           6      1       12      true             false            true             false                                                                         
+# 99   21  2520    960     8   336    PΓL3(4)   2^4:A5:S3    GL2(3)               PΓL3(4)   2      2           7      1       12      true             false            true             false                                                                         
+# 100  21  2520    1440    12  792    PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       4       true             false            true             false                                                                         
+# 101  21  2520    1440    12  792    PΓL3(4)   2^4:A5:S3    2xS4                 PΓL3(4)   2      2           7      1       4       true             false            true             false                                                                         
+# 102  21  3360    960     6   240    M21       2^4:A5       S3                   PΓL3(4)   2      2           4      1       17      true             false            true             false                                                                         
+# 103  21  3360    960     6   240    PΣL3(4)   2^4:S5       D12                  PΓL3(4)   2      2           5      1       13      true             false            true             false                                                                         
+# 104  21  3360    960     6   240    PGL3(4)   2^4:GL2(4)   3xS3                 PΓL3(4)   2      2           6      1       9       true             false            true             false                                                                         
+# 105  21  3360    960     6   240    PΓL3(4)   2^4:A5:S3    S3xS3                PΓL3(4)   2      2           7      1       9       true             false            true             false                                                                         
 # 106  21  5985    1140    4   171    A21       A20          (S4 x S17) cap A21   S21       2      2           8      1       2       true             true             true             true                 108                    complete                          
 # 107  21  5985    1140    4   171    S21       S20          S4 x S17             S21       2      2           9      1       2       true             true             true             true                 109                    complete                          
 # 108  21  5985    4845    17  3876   A21       A20          (S17 x S4) cap A21   S21       2      2           8      1       2       true             true             true             true                 106                    complete                          
@@ -235,129 +235,129 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr   v   b       r       k   λ      G         Gα           GB                   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1    21  21      5       5   1      M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 5           true       PG(2,4) parameters                
-# 2    21  21      5       5   1      PΣL(3,4)  2^4:S5       2^4:S5               PΓL(3,4)  2      2           5      1       6       true             true             true             true                 6           true       PG(2,4) parameters                
-# 3    21  21      5       5   1      PGL(3,4)  2^4:GL(2,4)  2^4:GL(2,4)          PΓL(3,4)  2      2           6      1       5       true             true             true             true                 7           true       PG(2,4) parameters                
-# 4    21  21      5       5   1      PΓL(3,4)  2^4:A5:S3    2^4:A5:S3            PΓL(3,4)  2      2           7      1       5       true             true             true             true                 8           true       PG(2,4) parameters                
-# 5    21  21      16      16  12     M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 1           true       complement of PG(2,4) parameters  
-# 6    21  21      16      16  12     PΣL(3,4)  2^4:S5       2^4:S5               PΓL(3,4)  2      2           5      1       6       true             true             true             true                 2           true       complement of PG(2,4) parameters  
-# 7    21  21      16      16  12     PGL(3,4)  2^4:GL(2,4)  2^4:GL(2,4)          PΓL(3,4)  2      2           6      1       5       true             true             true             true                 3           true       complement of PG(2,4) parameters  
-# 8    21  21      16      16  12     PΓL(3,4)  2^4:A5:S3    2^4:A5:S3            PΓL(3,4)  2      2           7      1       5       true             true             true             true                 4           true       complement of PG(2,4) parameters  
-# 9    21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       13      true             true             true             true                 14                                                       
-# 10   21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 15                                                       
-# 11   21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       12      true             true             true             true                 13                                                       
-# 12   21  56      16      6   4      PΣL(3,4)  2^4:S5       S6                   PΣL(3,4)  2      2           5      1       9       true             true             true             true                 16                                                       
-# 13   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       12      true             true             true             true                 11                                                       
-# 14   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       13      true             true             true             true                 9                                                        
-# 15   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 10                                                       
-# 16   21  56      40      15  28     PΣL(3,4)  2^4:S5       S6                   PΣL(3,4)  2      2           5      1       9       true             true             true             true                 12                                                       
+# 1    21  21      5       5   1      M21       2^4:A5       2^4:A5               PΓL3(4)   2      2           4      1       7       true             true             true             true                 5           true       PG(2,4) parameters                
+# 2    21  21      5       5   1      PΣL3(4)   2^4:S5       2^4:S5               PΓL3(4)   2      2           5      1       6       true             true             true             true                 6           true       PG(2,4) parameters                
+# 3    21  21      5       5   1      PGL3(4)   2^4:GL2(4)   2^4:GL2(4)           PΓL3(4)   2      2           6      1       5       true             true             true             true                 7           true       PG(2,4) parameters                
+# 4    21  21      5       5   1      PΓL3(4)   2^4:A5:S3    2^4:A5:S3            PΓL3(4)   2      2           7      1       5       true             true             true             true                 8           true       PG(2,4) parameters                
+# 5    21  21      16      16  12     M21       2^4:A5       2^4:A5               PΓL3(4)   2      2           4      1       7       true             true             true             true                 1           true       complement of PG(2,4) parameters  
+# 6    21  21      16      16  12     PΣL3(4)   2^4:S5       2^4:S5               PΓL3(4)   2      2           5      1       6       true             true             true             true                 2           true       complement of PG(2,4) parameters  
+# 7    21  21      16      16  12     PGL3(4)   2^4:GL2(4)   2^4:GL2(4)           PΓL3(4)   2      2           6      1       5       true             true             true             true                 3           true       complement of PG(2,4) parameters  
+# 8    21  21      16      16  12     PΓL3(4)   2^4:A5:S3    2^4:A5:S3            PΓL3(4)   2      2           7      1       5       true             true             true             true                 4           true       complement of PG(2,4) parameters  
+# 9    21  56      16      6   4      M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       13      true             true             true             true                 14                                                       
+# 10   21  56      16      6   4      M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       11      true             true             true             true                 15                                                       
+# 11   21  56      16      6   4      M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       12      true             true             true             true                 13                                                       
+# 12   21  56      16      6   4      PΣL3(4)   2^4:S5       S6                   PΣL3(4)   2      2           5      1       9       true             true             true             true                 16                                                       
+# 13   21  56      40      15  28     M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       12      true             true             true             true                 11                                                       
+# 14   21  56      40      15  28     M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       13      true             true             true             true                 9                                                        
+# 15   21  56      40      15  28     M21       2^4:A5       A6                   PΣL3(4)   2      2           4      1       11      true             true             true             true                 10                                                       
+# 16   21  56      40      15  28     PΣL3(4)   2^4:S5       S6                   PΣL3(4)   2      2           5      1       9       true             true             true             true                 12                                                       
 # 17   21  70      30      9   12     A7        S5           3^2:4                S7        3      3           2      1       2       true             false            true             false                                                                         
 # 18   21  70      30      9   12     S7        2xS5         (S3xS3):2            S7        3      3           3      1       2       true             false            true             false                                                                         
-# 19   21  105     20      4   3      M21       2^4:A5       2^4:2:2:3            PΓL(3,4)  2      2           4      1       3       true             false            true             false                                                                         
-# 20   21  105     20      4   3      PΣL(3,4)  2^4:S5       2^4:2:2:3:2          PΓL(3,4)  2      2           5      1       3       true             false            true             false                                                                         
-# 21   21  105     20      4   3      PGL(3,4)  2^4:GL(2,4)  2^4:2:2:3^2          PΓL(3,4)  2      2           6      1       3       true             false            true             false                                                                         
-# 22   21  105     20      4   3      PΓL(3,4)  2^4:A5:S3    2^4:2:2:3^2:2        PΓL(3,4)  2      2           7      1       3       true             false            true             false                                                                         
-# 23   21  112     32      6   8      PΣL(3,4)  2^4:S5       A6                   PΣL(3,4)  2      2           5      1       10      true             false            true             true                 24                                                       
-# 24   21  112     80      15  56     PΣL(3,4)  2^4:S5       A6                   PΣL(3,4)  2      2           5      1       10      true             false            true             true                 23                                                       
-# 25   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       20      true             true             true             true                 29                                                       
-# 26   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       19      true             true             true             true                 30                                                       
-# 27   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       18      true             true             true             true                 31                                                       
-# 28   21  120     40      7   12     PΣL(3,4)  2^4:S5       2xPSL(3,2)           PΣL(3,4)  2      2           5      1       14      true             true             true             true                 32                                                       
-# 29   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       20      true             true             true             true                 25                                                       
-# 30   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       19      true             true             true             true                 26                                                       
-# 31   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       18      true             true             true             true                 27                                                       
-# 32   21  120     80      14  52     PΣL(3,4)  2^4:S5       2xPSL(3,2)           PΣL(3,4)  2      2           5      1       14      true             true             true             true                 28                                                       
-# 33   21  168     48      6   12     PGL(3,4)  2^4:GL(2,4)  A6                   PΓL(3,4)  2      2           6      1       7       true             false            true             true                 35                                                       
-# 34   21  168     48      6   12     PΓL(3,4)  2^4:A5:S3    S6                   PΓL(3,4)  2      2           7      1       7       true             false            true             true                 36                                                       
-# 35   21  168     120     15  84     PGL(3,4)  2^4:GL(2,4)  A6                   PΓL(3,4)  2      2           6      1       7       true             false            true             true                 33                                                       
-# 36   21  168     120     15  84     PΓL(3,4)  2^4:A5:S3    S6                   PΓL(3,4)  2      2           7      1       7       true             false            true             true                 34                                                       
-# 37   21  210     30      3   3      M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       1       true             false            true             false                                                                         
-# 38   21  210     30      3   3      PΣL(3,4)  2^4:S5       2^4:2:3:2            PΓL(3,4)  2      2           5      1       1       true             false            true             false                                                                         
-# 39   21  210     30      3   3      PGL(3,4)  2^4:GL(2,4)  2^4:3:2:3            PΓL(3,4)  2      2           6      1       1       true             false            true             false                                                                         
-# 40   21  210     30      3   3      PΓL(3,4)  2^4:A5:S3    (A4xA4):2:2          PΓL(3,4)  2      2           7      1       1       true             false            true             false                                                                         
-# 41   21  210     80      8   28     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
-# 42   21  210     80      8   28     PΣL(3,4)  2^4:S5       2^4:3:2:2            PΓL(3,4)  2      2           5      1       16      true             false            true             false                                                                         
-# 43   21  210     80      8   28     PGL(3,4)  2^4:GL(2,4)  2^4:3:2:3            PΓL(3,4)  2      2           6      1       11      true             false            true             false                                                                         
-# 44   21  210     80      8   28     PΓL(3,4)  2^4:A5:S3    (A4xA4):2:2          PΓL(3,4)  2      2           7      1       11      true             false            true             false                                                                         
-# 45   21  210     120     12  66     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
-# 46   21  210     120     12  66     PΣL(3,4)  2^4:S5       2^4:3:2:2            PΓL(3,4)  2      2           5      1       16      true             false            true             false                                                                         
-# 47   21  210     120     12  66     PGL(3,4)  2^4:GL(2,4)  2^4:3:2:3            PΓL(3,4)  2      2           6      1       11      true             false            true             false                                                                         
-# 48   21  210     120     12  66     PΓL(3,4)  2^4:A5:S3    (A4xA4):2:2          PΓL(3,4)  2      2           7      1       11      true             false            true             false                                                                         
+# 19   21  105     20      4   3      M21       2^4:A5       2^4:2:2:3            PΓL3(4)   2      2           4      1       3       true             false            true             false                                                                         
+# 20   21  105     20      4   3      PΣL3(4)   2^4:S5       2^4:2:2:3:2          PΓL3(4)   2      2           5      1       3       true             false            true             false                                                                         
+# 21   21  105     20      4   3      PGL3(4)   2^4:GL2(4)   2^4:2:2:3^2          PΓL3(4)   2      2           6      1       3       true             false            true             false                                                                         
+# 22   21  105     20      4   3      PΓL3(4)   2^4:A5:S3    2^4:2:2:3^2:2        PΓL3(4)   2      2           7      1       3       true             false            true             false                                                                         
+# 23   21  112     32      6   8      PΣL3(4)   2^4:S5       A6                   PΣL3(4)   2      2           5      1       10      true             false            true             true                 24                                                       
+# 24   21  112     80      15  56     PΣL3(4)   2^4:S5       A6                   PΣL3(4)   2      2           5      1       10      true             false            true             true                 23                                                       
+# 25   21  120     40      7   12     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       20      true             true             true             true                 29                                                       
+# 26   21  120     40      7   12     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       19      true             true             true             true                 30                                                       
+# 27   21  120     40      7   12     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       18      true             true             true             true                 31                                                       
+# 28   21  120     40      7   12     PΣL3(4)   2^4:S5       2xPSL3(2)            PΣL3(4)   2      2           5      1       14      true             true             true             true                 32                                                       
+# 29   21  120     80      14  52     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       20      true             true             true             true                 25                                                       
+# 30   21  120     80      14  52     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       19      true             true             true             true                 26                                                       
+# 31   21  120     80      14  52     M21       2^4:A5       PSL3(2)              PΣL3(4)   2      2           4      1       18      true             true             true             true                 27                                                       
+# 32   21  120     80      14  52     PΣL3(4)   2^4:S5       2xPSL3(2)            PΣL3(4)   2      2           5      1       14      true             true             true             true                 28                                                       
+# 33   21  168     48      6   12     PGL3(4)   2^4:GL2(4)   A6                   PΓL3(4)   2      2           6      1       7       true             false            true             true                 35                                                       
+# 34   21  168     48      6   12     PΓL3(4)   2^4:A5:S3    S6                   PΓL3(4)   2      2           7      1       7       true             false            true             true                 36                                                       
+# 35   21  168     120     15  84     PGL3(4)   2^4:GL2(4)   A6                   PΓL3(4)   2      2           6      1       7       true             false            true             true                 33                                                       
+# 36   21  168     120     15  84     PΓL3(4)   2^4:A5:S3    S6                   PΓL3(4)   2      2           7      1       7       true             false            true             true                 34                                                       
+# 37   21  210     30      3   3      M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       1       true             false            true             false                                                                         
+# 38   21  210     30      3   3      PΣL3(4)   2^4:S5       2^4:2:3:2            PΓL3(4)   2      2           5      1       1       true             false            true             false                                                                         
+# 39   21  210     30      3   3      PGL3(4)   2^4:GL2(4)   2^4:3:2:3            PΓL3(4)   2      2           6      1       1       true             false            true             false                                                                         
+# 40   21  210     30      3   3      PΓL3(4)   2^4:A5:S3    (A4xA4):2:2          PΓL3(4)   2      2           7      1       1       true             false            true             false                                                                         
+# 41   21  210     80      8   28     M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       21      true             false            true             false                                                                         
+# 42   21  210     80      8   28     PΣL3(4)   2^4:S5       2^4:3:2:2            PΓL3(4)   2      2           5      1       16      true             false            true             false                                                                         
+# 43   21  210     80      8   28     PGL3(4)   2^4:GL2(4)   2^4:3:2:3            PΓL3(4)   2      2           6      1       11      true             false            true             false                                                                         
+# 44   21  210     80      8   28     PΓL3(4)   2^4:A5:S3    (A4xA4):2:2          PΓL3(4)   2      2           7      1       11      true             false            true             false                                                                         
+# 45   21  210     120     12  66     M21       2^4:A5       2^4:3:2              PΓL3(4)   2      2           4      1       21      true             false            true             false                                                                         
+# 46   21  210     120     12  66     PΣL3(4)   2^4:S5       2^4:3:2:2            PΓL3(4)   2      2           5      1       16      true             false            true             false                                                                         
+# 47   21  210     120     12  66     PGL3(4)   2^4:GL2(4)   2^4:3:2:3            PΓL3(4)   2      2           6      1       11      true             false            true             false                                                                         
+# 48   21  210     120     12  66     PΓL3(4)   2^4:A5:S3    (A4xA4):2:2          PΓL3(4)   2      2           7      1       11      true             false            true             false                                                                         
 # 49   21  210     190     19  171    A21       A20          (S19 x S2) cap A21   S21       2      2           8      1       9       true             true             true             true                                        complete                          
 # 50   21  210     190     19  171    S21       S20          S19 x S2             S21       2      2           9      1       9       true             true             true             true                                        complete                          
-# 51   21  240     80      7   24     PΣL(3,4)  2^4:S5       PSL(3,2)             PΣL(3,4)  2      2           5      1       15      true             false            true             true                 52                                                       
-# 52   21  240     160     14  104    PΣL(3,4)  2^4:S5       PSL(3,2)             PΣL(3,4)  2      2           5      1       15      true             false            true             true                 51                                                       
+# 51   21  240     80      7   24     PΣL3(4)   2^4:S5       PSL3(2)              PΣL3(4)   2      2           5      1       15      true             false            true             true                 52                                                       
+# 52   21  240     160     14  104    PΣL3(4)   2^4:S5       PSL3(2)              PΣL3(4)   2      2           5      1       15      true             false            true             true                 51                                                       
 # 53   21  252     60      5   12     A7        S5           D10                  S7        3      3           2      1       1       true             false            true             false                                                                         
 # 54   21  252     60      5   12     S7        2xS5         D20                  S7        3      3           3      1       1       true             false            true             false                                                                         
-# 55   21  280     120     9   48     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 59                                                       
-# 56   21  280     120     9   48     PΣL(3,4)  2^4:S5       3^2:QD16             PΓL(3,4)  2      2           5      1       18      true             true             true             true                 60                                                       
-# 57   21  280     120     9   48     PGL(3,4)  2^4:GL(2,4)  3^2:Q8:3             PΓL(3,4)  2      2           6      1       13      true             true             true             true                 61                                                       
-# 58   21  280     120     9   48     PΓL(3,4)  2^4:A5:S3    3^2:Q8:3:2           PΓL(3,4)  2      2           7      1       13      true             true             true             true                 62                                                       
-# 59   21  280     160     12  88     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 55                                                       
-# 60   21  280     160     12  88     PΣL(3,4)  2^4:S5       3^2:QD16             PΓL(3,4)  2      2           5      1       18      true             true             true             true                 56                                                       
-# 61   21  280     160     12  88     PGL(3,4)  2^4:GL(2,4)  3^2:Q8:3             PΓL(3,4)  2      2           6      1       13      true             true             true             true                 57                                                       
-# 62   21  280     160     12  88     PΓL(3,4)  2^4:A5:S3    3^2:Q8:3:2           PΓL(3,4)  2      2           7      1       13      true             true             true             true                 58                                                       
-# 63   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       10      true             false            true             false                                                                         
-# 64   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       8       true             false            true             false                                                                         
-# 65   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       9       true             false            true             false                                                                         
-# 66   21  336     80      5   16     PΣL(3,4)  2^4:S5       S5                   PΣL(3,4)  2      2           5      1       7       true             false            true             false                                                                         
-# 67   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       25      true             false            true             false                                                                         
-# 68   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       26      true             false            true             false                                                                         
-# 69   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       24      true             false            true             false                                                                         
-# 70   21  336     160     10  72     PΣL(3,4)  2^4:S5       S5                   PΣL(3,4)  2      2           5      1       19      true             false            true             false                                                                         
-# 71   21  336     240     15  168    M21       2^4:A5       A5                   PΓL(3,4)  2      2           4      1       27      true             false            true             false                                                                         
-# 72   21  336     240     15  168    PΣL(3,4)  2^4:S5       S5                   PΓL(3,4)  2      2           5      1       21      true             false            true             false                                                                         
-# 73   21  336     240     15  168    PGL(3,4)  2^4:GL(2,4)  GL(2,4)              PΓL(3,4)  2      2           6      1       15      true             false            true             false                                                                         
-# 74   21  336     240     15  168    PΓL(3,4)  2^4:A5:S3    A5:S3                PΓL(3,4)  2      2           7      1       15      true             false            true             false                                                                         
-# 75   21  360     120     7   36     PGL(3,4)  2^4:GL(2,4)  PSL(3,2)             PΓL(3,4)  2      2           6      1       10      true             false            true             true                 77                                                       
-# 76   21  360     120     7   36     PΓL(3,4)  2^4:A5:S3    2xPSL(3,2)           PΓL(3,4)  2      2           7      1       10      true             false            true             true                 78                                                       
-# 77   21  360     240     14  156    PGL(3,4)  2^4:GL(2,4)  PSL(3,2)             PΓL(3,4)  2      2           6      1       10      true             false            true             true                 75                                                       
-# 78   21  360     240     14  156    PΓL(3,4)  2^4:A5:S3    2xPSL(3,2)           PΓL(3,4)  2      2           7      1       10      true             false            true             true                 76                                                       
-# 79   21  672     160     5   32     PΣL(3,4)  2^4:S5       A5                   PΣL(3,4)  2      2           5      1       8       true             false            true             false                                                                         
-# 80   21  672     320     10  144    PΣL(3,4)  2^4:S5       A5                   PΣL(3,4)  2      2           5      1       20      true             false            true             false                                                                         
-# 81   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       5       true             false            true             false                                                                         
-# 82   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       6       true             false            true             false                                                                         
-# 83   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       4       true             false            true             false                                                                         
-# 84   21  840     160     4   24     PΣL(3,4)  2^4:S5       2xS4                 PΣL(3,4)  2      2           5      1       4       true             false            true             false                                                                         
-# 85   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       16      true             false            true             false                                                                         
-# 86   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       14      true             false            true             false                                                                         
-# 87   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       15      true             false            true             false                                                                         
-# 88   21  840     240     6   60     PΣL(3,4)  2^4:S5       2xS4                 PΣL(3,4)  2      2           5      1       11      true             false            true             false                                                                         
-# 89   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       4       true             false            true             false                                                                         
-# 90   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       5       true             false            true             false                                                                         
-# 91   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       6       true             false            true             false                                                                         
-# 92   21  840     480     12  264    PΣL(3,4)  2^4:S5       2xS4                 PΣL(3,4)  2      2           5      1       4       true             false            true             false                                                                         
-# 93   21  1008    240     5   48     PGL(3,4)  2^4:GL(2,4)  A5                   PΓL(3,4)  2      2           6      1       6       true             false            true             false                                                                         
-# 94   21  1008    240     5   48     PΓL(3,4)  2^4:A5:S3    S5                   PΓL(3,4)  2      2           7      1       6       true             false            true             false                                                                         
-# 95   21  1008    480     10  216    PGL(3,4)  2^4:GL(2,4)  A5                   PΓL(3,4)  2      2           6      1       14      true             false            true             false                                                                         
-# 96   21  1008    480     10  216    PΓL(3,4)  2^4:A5:S3    S5                   PΓL(3,4)  2      2           7      1       14      true             false            true             false                                                                         
-# 97   21  1120    160     3   16     M21       2^4:A5       3^2:2                PΓL(3,4)  2      2           4      1       2       true             false            true             false                                                                         
-# 98   21  1120    160     3   16     PΣL(3,4)  2^4:S5       S3xS3                PΓL(3,4)  2      2           5      1       2       true             false            true             false                                                                         
-# 99   21  1120    160     3   16     PGL(3,4)  2^4:GL(2,4)  3^2:6                PΓL(3,4)  2      2           6      1       2       true             false            true             false                                                                         
-# 100  21  1120    160     3   16     PΓL(3,4)  2^4:A5:S3    3^2:3:2^2            PΓL(3,4)  2      2           7      1       2       true             false            true             false                                                                         
-# 101  21  1120    480     9   192    PGL(3,4)  2^4:GL(2,4)  3^2:6                PΓL(3,4)  2      2           6      1       2       true             false            true             false                                                                         
-# 102  21  1120    480     9   192    PΓL(3,4)  2^4:A5:S3    3^2:3:2^2            PΓL(3,4)  2      2           7      1       2       true             false            true             false                                                                         
+# 55   21  280     120     9   48     M21       2^4:A5       3^2:Q8               PΓL3(4)   2      2           4      1       23      true             true             true             true                 59                                                       
+# 56   21  280     120     9   48     PΣL3(4)   2^4:S5       3^2:QD16             PΓL3(4)   2      2           5      1       18      true             true             true             true                 60                                                       
+# 57   21  280     120     9   48     PGL3(4)   2^4:GL2(4)   3^2:Q8:3             PΓL3(4)   2      2           6      1       13      true             true             true             true                 61                                                       
+# 58   21  280     120     9   48     PΓL3(4)   2^4:A5:S3    3^2:Q8:3:2           PΓL3(4)   2      2           7      1       13      true             true             true             true                 62                                                       
+# 59   21  280     160     12  88     M21       2^4:A5       3^2:Q8               PΓL3(4)   2      2           4      1       23      true             true             true             true                 55                                                       
+# 60   21  280     160     12  88     PΣL3(4)   2^4:S5       3^2:QD16             PΓL3(4)   2      2           5      1       18      true             true             true             true                 56                                                       
+# 61   21  280     160     12  88     PGL3(4)   2^4:GL2(4)   3^2:Q8:3             PΓL3(4)   2      2           6      1       13      true             true             true             true                 57                                                       
+# 62   21  280     160     12  88     PΓL3(4)   2^4:A5:S3    3^2:Q8:3:2           PΓL3(4)   2      2           7      1       13      true             true             true             true                 58                                                       
+# 63   21  336     80      5   16     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       10      true             false            true             false                                                                         
+# 64   21  336     80      5   16     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       8       true             false            true             false                                                                         
+# 65   21  336     80      5   16     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       9       true             false            true             false                                                                         
+# 66   21  336     80      5   16     PΣL3(4)   2^4:S5       S5                   PΣL3(4)   2      2           5      1       7       true             false            true             false                                                                         
+# 67   21  336     160     10  72     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       25      true             false            true             false                                                                         
+# 68   21  336     160     10  72     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       26      true             false            true             false                                                                         
+# 69   21  336     160     10  72     M21       2^4:A5       A5                   PΣL3(4)   2      2           4      1       24      true             false            true             false                                                                         
+# 70   21  336     160     10  72     PΣL3(4)   2^4:S5       S5                   PΣL3(4)   2      2           5      1       19      true             false            true             false                                                                         
+# 71   21  336     240     15  168    M21       2^4:A5       A5                   PΓL3(4)   2      2           4      1       27      true             false            true             false                                                                         
+# 72   21  336     240     15  168    PΣL3(4)   2^4:S5       S5                   PΓL3(4)   2      2           5      1       21      true             false            true             false                                                                         
+# 73   21  336     240     15  168    PGL3(4)   2^4:GL2(4)   GL2(4)               PΓL3(4)   2      2           6      1       15      true             false            true             false                                                                         
+# 74   21  336     240     15  168    PΓL3(4)   2^4:A5:S3    A5:S3                PΓL3(4)   2      2           7      1       15      true             false            true             false                                                                         
+# 75   21  360     120     7   36     PGL3(4)   2^4:GL2(4)   PSL3(2)              PΓL3(4)   2      2           6      1       10      true             false            true             true                 77                                                       
+# 76   21  360     120     7   36     PΓL3(4)   2^4:A5:S3    2xPSL3(2)            PΓL3(4)   2      2           7      1       10      true             false            true             true                 78                                                       
+# 77   21  360     240     14  156    PGL3(4)   2^4:GL2(4)   PSL3(2)              PΓL3(4)   2      2           6      1       10      true             false            true             true                 75                                                       
+# 78   21  360     240     14  156    PΓL3(4)   2^4:A5:S3    2xPSL3(2)            PΓL3(4)   2      2           7      1       10      true             false            true             true                 76                                                       
+# 79   21  672     160     5   32     PΣL3(4)   2^4:S5       A5                   PΣL3(4)   2      2           5      1       8       true             false            true             false                                                                         
+# 80   21  672     320     10  144    PΣL3(4)   2^4:S5       A5                   PΣL3(4)   2      2           5      1       20      true             false            true             false                                                                         
+# 81   21  840     160     4   24     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       5       true             false            true             false                                                                         
+# 82   21  840     160     4   24     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       6       true             false            true             false                                                                         
+# 83   21  840     160     4   24     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       4       true             false            true             false                                                                         
+# 84   21  840     160     4   24     PΣL3(4)   2^4:S5       2xS4                 PΣL3(4)   2      2           5      1       4       true             false            true             false                                                                         
+# 85   21  840     240     6   60     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       16      true             false            true             false                                                                         
+# 86   21  840     240     6   60     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       14      true             false            true             false                                                                         
+# 87   21  840     240     6   60     M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       15      true             false            true             false                                                                         
+# 88   21  840     240     6   60     PΣL3(4)   2^4:S5       2xS4                 PΣL3(4)   2      2           5      1       11      true             false            true             false                                                                         
+# 89   21  840     480     12  264    M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       4       true             false            true             false                                                                         
+# 90   21  840     480     12  264    M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       5       true             false            true             false                                                                         
+# 91   21  840     480     12  264    M21       2^4:A5       S4                   PΣL3(4)   2      2           4      1       6       true             false            true             false                                                                         
+# 92   21  840     480     12  264    PΣL3(4)   2^4:S5       2xS4                 PΣL3(4)   2      2           5      1       4       true             false            true             false                                                                         
+# 93   21  1008    240     5   48     PGL3(4)   2^4:GL2(4)   A5                   PΓL3(4)   2      2           6      1       6       true             false            true             false                                                                         
+# 94   21  1008    240     5   48     PΓL3(4)   2^4:A5:S3    S5                   PΓL3(4)   2      2           7      1       6       true             false            true             false                                                                         
+# 95   21  1008    480     10  216    PGL3(4)   2^4:GL2(4)   A5                   PΓL3(4)   2      2           6      1       14      true             false            true             false                                                                         
+# 96   21  1008    480     10  216    PΓL3(4)   2^4:A5:S3    S5                   PΓL3(4)   2      2           7      1       14      true             false            true             false                                                                         
+# 97   21  1120    160     3   16     M21       2^4:A5       3^2:2                PΓL3(4)   2      2           4      1       2       true             false            true             false                                                                         
+# 98   21  1120    160     3   16     PΣL3(4)   2^4:S5       S3xS3                PΓL3(4)   2      2           5      1       2       true             false            true             false                                                                         
+# 99   21  1120    160     3   16     PGL3(4)   2^4:GL2(4)   3^2:6                PΓL3(4)   2      2           6      1       2       true             false            true             false                                                                         
+# 100  21  1120    160     3   16     PΓL3(4)   2^4:A5:S3    3^2:3:2^2            PΓL3(4)   2      2           7      1       2       true             false            true             false                                                                         
+# 101  21  1120    480     9   192    PGL3(4)   2^4:GL2(4)   3^2:6                PΓL3(4)   2      2           6      1       2       true             false            true             false                                                                         
+# 102  21  1120    480     9   192    PΓL3(4)   2^4:A5:S3    3^2:3:2^2            PΓL3(4)   2      2           7      1       2       true             false            true             false                                                                         
 # 103  21  1330    190     3   19     A21       A20          (S3 x S18) cap A21   S21       2      2           8      1       1       true             true             true             true                 105                    complete                          
 # 104  21  1330    190     3   19     S21       S20          S3 x S18             S21       2      2           9      1       1       true             true             true             true                 106                    complete                          
 # 105  21  1330    1140    18  969    A21       A20          (S18 x S3) cap A21   S21       2      2           8      1       1       true             true             true             true                 103                    complete                          
 # 106  21  1330    1140    18  969    S21       S20          S18 x S3             S21       2      2           9      1       1       true             true             true             true                 104                    complete                          
-# 107  21  1680    320     4   48     PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       5       true             false            true             false                                                                         
-# 108  21  1680    480     6   120    PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       12      true             false            true             false                                                                         
-# 109  21  1680    960     12  528    PΣL(3,4)  2^4:S5       S4                   PΣL(3,4)  2      2           5      1       5       true             false            true             false                                                                         
-# 110  21  2520    480     4   72     PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       4       true             false            true             false                                                                         
-# 111  21  2520    480     4   72     PΓL(3,4)  2^4:A5:S3    2xS4                 PΓL(3,4)  2      2           7      1       4       true             false            true             false                                                                         
-# 112  21  2520    720     6   180    PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       8       true             false            true             false                                                                         
-# 113  21  2520    720     6   180    PΓL(3,4)  2^4:A5:S3    2xS4                 PΓL(3,4)  2      2           7      1       8       true             false            true             false                                                                         
-# 114  21  2520    960     8   336    M21       2^4:A5       Q8                   PΓL(3,4)  2      2           4      1       22      true             false            true             false                                                                         
-# 115  21  2520    960     8   336    PΣL(3,4)  2^4:S5       QD16                 PΓL(3,4)  2      2           5      1       17      true             false            true             false                                                                         
-# 116  21  2520    960     8   336    PGL(3,4)  2^4:GL(2,4)  SL(2,3)              PΓL(3,4)  2      2           6      1       12      true             false            true             false                                                                         
-# 117  21  2520    960     8   336    PΓL(3,4)  2^4:A5:S3    GL(2,3)              PΓL(3,4)  2      2           7      1       12      true             false            true             false                                                                         
-# 118  21  2520    1440    12  792    PGL(3,4)  2^4:GL(2,4)  S4                   PΓL(3,4)  2      2           6      1       4       true             false            true             false                                                                         
-# 119  21  2520    1440    12  792    PΓL(3,4)  2^4:A5:S3    2xS4                 PΓL(3,4)  2      2           7      1       4       true             false            true             false                                                                         
-# 120  21  3360    960     6   240    M21       2^4:A5       S3                   PΓL(3,4)  2      2           4      1       17      true             false            true             false                                                                         
-# 121  21  3360    960     6   240    PΣL(3,4)  2^4:S5       D12                  PΓL(3,4)  2      2           5      1       13      true             false            true             false                                                                         
-# 122  21  3360    960     6   240    PGL(3,4)  2^4:GL(2,4)  3xS3                 PΓL(3,4)  2      2           6      1       9       true             false            true             false                                                                         
-# 123  21  3360    960     6   240    PΓL(3,4)  2^4:A5:S3    S3xS3                PΓL(3,4)  2      2           7      1       9       true             false            true             false                                                                         
+# 107  21  1680    320     4   48     PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       5       true             false            true             false                                                                         
+# 108  21  1680    480     6   120    PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       12      true             false            true             false                                                                         
+# 109  21  1680    960     12  528    PΣL3(4)   2^4:S5       S4                   PΣL3(4)   2      2           5      1       5       true             false            true             false                                                                         
+# 110  21  2520    480     4   72     PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       4       true             false            true             false                                                                         
+# 111  21  2520    480     4   72     PΓL3(4)   2^4:A5:S3    2xS4                 PΓL3(4)   2      2           7      1       4       true             false            true             false                                                                         
+# 112  21  2520    720     6   180    PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       8       true             false            true             false                                                                         
+# 113  21  2520    720     6   180    PΓL3(4)   2^4:A5:S3    2xS4                 PΓL3(4)   2      2           7      1       8       true             false            true             false                                                                         
+# 114  21  2520    960     8   336    M21       2^4:A5       Q8                   PΓL3(4)   2      2           4      1       22      true             false            true             false                                                                         
+# 115  21  2520    960     8   336    PΣL3(4)   2^4:S5       QD16                 PΓL3(4)   2      2           5      1       17      true             false            true             false                                                                         
+# 116  21  2520    960     8   336    PGL3(4)   2^4:GL2(4)   SL2(3)               PΓL3(4)   2      2           6      1       12      true             false            true             false                                                                         
+# 117  21  2520    960     8   336    PΓL3(4)   2^4:A5:S3    GL2(3)               PΓL3(4)   2      2           7      1       12      true             false            true             false                                                                         
+# 118  21  2520    1440    12  792    PGL3(4)   2^4:GL2(4)   S4                   PΓL3(4)   2      2           6      1       4       true             false            true             false                                                                         
+# 119  21  2520    1440    12  792    PΓL3(4)   2^4:A5:S3    2xS4                 PΓL3(4)   2      2           7      1       4       true             false            true             false                                                                         
+# 120  21  3360    960     6   240    M21       2^4:A5       S3                   PΓL3(4)   2      2           4      1       17      true             false            true             false                                                                         
+# 121  21  3360    960     6   240    PΣL3(4)   2^4:S5       D12                  PΓL3(4)   2      2           5      1       13      true             false            true             false                                                                         
+# 122  21  3360    960     6   240    PGL3(4)   2^4:GL2(4)   3xS3                 PΓL3(4)   2      2           6      1       9       true             false            true             false                                                                         
+# 123  21  3360    960     6   240    PΓL3(4)   2^4:A5:S3    S3xS3                PΓL3(4)   2      2           7      1       9       true             false            true             false                                                                         
 # 124  21  5985    1140    4   171    A21       A20          (S4 x S17) cap A21   S21       2      2           8      1       2       true             true             true             true                 126                    complete                          
 # 125  21  5985    1140    4   171    S21       S20          S4 x S17             S21       2      2           9      1       2       true             true             true             true                 127                    complete                          
 # 126  21  5985    4845    17  3876   A21       A20          (S17 x S4) cap A21   S21       2      2           8      1       2       true             true             true             true                 124                    complete                          
@@ -398,7 +398,7 @@
 # --------------------------------------------------------
 #                                      G       Aut(D)     
 # --------------------------------------------------------
-# Structure                            M21     PΓL(3,4)   
+# Structure                            M21     PΓL3(4)   
 # Rank                                 2       2          
 # 2-Homogeneous                        true    true       
 # Point-stabiliser                     2^4:A5  2^4:A5:S3  
@@ -424,7 +424,7 @@
 # --------------------------------------------------------
 #                                      G       Aut(D)     
 # --------------------------------------------------------
-# Structure                            M21     PΓL(3,4)   
+# Structure                            M21     PΓL3(4)   
 # Rank                                 2       2          
 # 2-Homogeneous                        true    true       
 # Point-stabiliser                     2^4:A5  2^4:A5:S3  
@@ -450,7 +450,7 @@
 # -------------------------------------------------------
 #                                      G       Aut(D)    
 # -------------------------------------------------------
-# Structure                            M21     PΣL(3,4)  
+# Structure                            M21     PΣL3(4)  
 # Rank                                 2       2         
 # 2-Homogeneous                        true    true      
 # Point-stabiliser                     2^4:A5  2^4:S5    
@@ -476,7 +476,7 @@
 # -------------------------------------------------------
 #                                      G       Aut(D)    
 # -------------------------------------------------------
-# Structure                            M21     PΣL(3,4)  
+# Structure                            M21     PΣL3(4)  
 # Rank                                 2       2         
 # 2-Homogeneous                        true    true      
 # Point-stabiliser                     2^4:A5  2^4:S5    
@@ -528,7 +528,7 @@
 # ---------------------------------------------------------------
 #                                      G          Aut(D)         
 # ---------------------------------------------------------------
-# Structure                            M21        PΓL(3,4)       
+# Structure                            M21        PΓL3(4)       
 # Rank                                 2          2              
 # 2-Homogeneous                        true       true           
 # Point-stabiliser                     2^4:A5     2^4:A5:S3      
@@ -554,7 +554,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
@@ -580,7 +580,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
@@ -606,11 +606,11 @@
 # -----------------------------------------------------------
 #                                      G         Aut(D)      
 # -----------------------------------------------------------
-# Structure                            M21       PΣL(3,4)    
+# Structure                            M21       PΣL3(4)    
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
 # Point-stabiliser                     2^4:A5    2^4:S5      
-# Block-stabiliser                     PSL(3,2)  2xPSL(3,2)  
+# Block-stabiliser                     PSL3(2)   2xPSL3(2)  
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true      true        
@@ -632,11 +632,11 @@
 # -----------------------------------------------------------
 #                                      G         Aut(D)      
 # -----------------------------------------------------------
-# Structure                            M21       PΣL(3,4)    
+# Structure                            M21       PΣL3(4)    
 # Rank                                 2         2           
 # 2-Homogeneous                        true      true        
 # Point-stabiliser                     2^4:A5    2^4:S5      
-# Block-stabiliser                     PSL(3,2)  2xPSL(3,2)  
+# Block-stabiliser                     PSL3(2)   2xPSL3(2)  
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true      true        
@@ -658,10 +658,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     A6           S6         
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -684,10 +684,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     A6           S6         
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -710,7 +710,7 @@
 # -----------------------------------------------------------
 #                                      G        Aut(D)       
 # -----------------------------------------------------------
-# Structure                            M21      PΓL(3,4)     
+# Structure                            M21      PΓL3(4)     
 # Rank                                 2        2            
 # 2-Homogeneous                        true     true         
 # Point-stabiliser                     2^4:A5   2^4:A5:S3    
@@ -736,7 +736,7 @@
 # -----------------------------------------------------------
 #                                      G        Aut(D)       
 # -----------------------------------------------------------
-# Structure                            M21      PΓL(3,4)     
+# Structure                            M21      PΓL3(4)     
 # Rank                                 2        2            
 # 2-Homogeneous                        true     true         
 # Point-stabiliser                     2^4:A5   2^4:A5:S3    
@@ -762,7 +762,7 @@
 # -----------------------------------------------------------
 #                                      G        Aut(D)       
 # -----------------------------------------------------------
-# Structure                            M21      PΓL(3,4)     
+# Structure                            M21      PΓL3(4)     
 # Rank                                 2        2            
 # 2-Homogeneous                        true     true         
 # Point-stabiliser                     2^4:A5   2^4:A5:S3    
@@ -814,11 +814,11 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
-# Block-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Block-stabiliser                     PSL3(2)   PSL3(2)  
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
 # Point-transitive                     true      true      
@@ -840,11 +840,11 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
-# Block-stabiliser                     PSL(3,2)  PSL(3,2)  
+# Block-stabiliser                     PSL3(2)   PSL3(2)  
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
 # Point-transitive                     true      true      
@@ -892,7 +892,7 @@
 # ---------------------------------------------------------
 #                                      G       Aut(D)      
 # ---------------------------------------------------------
-# Structure                            M21     PΓL(3,4)    
+# Structure                            M21     PΓL3(4)    
 # Rank                                 2       2           
 # 2-Homogeneous                        true    true        
 # Point-stabiliser                     2^4:A5  2^4:A5:S3   
@@ -918,7 +918,7 @@
 # ---------------------------------------------------------
 #                                      G       Aut(D)      
 # ---------------------------------------------------------
-# Structure                            M21     PΓL(3,4)    
+# Structure                            M21     PΓL3(4)    
 # Rank                                 2       2           
 # 2-Homogeneous                        true    true        
 # Point-stabiliser                     2^4:A5  2^4:A5:S3   
@@ -944,7 +944,7 @@
 # -------------------------------------------------------
 #                                      G       Aut(D)    
 # -------------------------------------------------------
-# Structure                            M21     PΣL(3,4)  
+# Structure                            M21     PΣL3(4)  
 # Rank                                 2       2         
 # 2-Homogeneous                        true    true      
 # Point-stabiliser                     2^4:A5  2^4:S5    
@@ -970,7 +970,7 @@
 # -------------------------------------------------------
 #                                      G       Aut(D)    
 # -------------------------------------------------------
-# Structure                            M21     PΣL(3,4)  
+# Structure                            M21     PΣL3(4)  
 # Rank                                 2       2         
 # 2-Homogeneous                        true    true      
 # Point-stabiliser                     2^4:A5  2^4:S5    
@@ -996,7 +996,7 @@
 # --------------------------------------------------------
 #                                      G       Aut(D)     
 # --------------------------------------------------------
-# Structure                            M21     PΓL(3,4)   
+# Structure                            M21     PΓL3(4)   
 # Rank                                 2       2          
 # 2-Homogeneous                        true    true       
 # Point-stabiliser                     2^4:A5  2^4:A5:S3  
@@ -1022,11 +1022,11 @@
 # --------------------------------------------------------------
 #                                      G            Aut(D)      
 # --------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)    
+# Structure                            PGL3(4)      PΓL3(4)    
 # Rank                                 2            2           
 # 2-Homogeneous                        true         true        
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3   
-# Block-stabiliser                     PSL(3,2)     2xPSL(3,2)  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3   
+# Block-stabiliser                     PSL3(2)      2xPSL3(2)  
 # Orbit structure of point-stabiliser                           
 # Orbit structure of block-stabiliser                           
 # Point-transitive                     true         true        
@@ -1048,11 +1048,11 @@
 # --------------------------------------------------------------
 #                                      G            Aut(D)      
 # --------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)    
+# Structure                            PGL3(4)      PΓL3(4)    
 # Rank                                 2            2           
 # 2-Homogeneous                        true         true        
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3   
-# Block-stabiliser                     PSL(3,2)     2xPSL(3,2)  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3   
+# Block-stabiliser                     PSL3(2)      2xPSL3(2)  
 # Orbit structure of point-stabiliser                           
 # Orbit structure of block-stabiliser                           
 # Point-transitive                     true         true        
@@ -1074,7 +1074,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
@@ -1100,7 +1100,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
@@ -1126,7 +1126,7 @@
 # -------------------------------------------------------
 #                                      G       Aut(D)    
 # -------------------------------------------------------
-# Structure                            M21     PΣL(3,4)  
+# Structure                            M21     PΣL3(4)  
 # Rank                                 2       2         
 # 2-Homogeneous                        true    true      
 # Point-stabiliser                     2^4:A5  2^4:S5    
@@ -1152,7 +1152,7 @@
 # -------------------------------------------------------
 #                                      G       Aut(D)    
 # -------------------------------------------------------
-# Structure                            M21     PΣL(3,4)  
+# Structure                            M21     PΣL3(4)  
 # Rank                                 2       2         
 # 2-Homogeneous                        true    true      
 # Point-stabiliser                     2^4:A5  2^4:S5    
@@ -1178,7 +1178,7 @@
 # -------------------------------------------------------
 #                                      G       Aut(D)    
 # -------------------------------------------------------
-# Structure                            M21     PΣL(3,4)  
+# Structure                            M21     PΣL3(4)  
 # Rank                                 2       2         
 # 2-Homogeneous                        true    true      
 # Point-stabiliser                     2^4:A5  2^4:S5    
@@ -1204,10 +1204,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     A5           S5         
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1230,10 +1230,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     A5           S5         
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1256,7 +1256,7 @@
 # --------------------------------------------------------
 #                                      G       Aut(D)     
 # --------------------------------------------------------
-# Structure                            M21     PΓL(3,4)   
+# Structure                            M21     PΓL3(4)   
 # Rank                                 2       2          
 # 2-Homogeneous                        true    true       
 # Point-stabiliser                     2^4:A5  2^4:A5:S3  
@@ -1282,10 +1282,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     3^2:6        3^2:3:2^2  
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1360,7 +1360,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
@@ -1386,7 +1386,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
@@ -1412,7 +1412,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PΣL(3,4)  PΣL(3,4)  
+# Structure                            PΣL3(4)   PΣL3(4)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     2^4:S5    2^4:S5    
@@ -1438,10 +1438,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     S4           2xS4       
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1464,10 +1464,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     S4           2xS4       
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1490,11 +1490,11 @@
 # --------------------------------------------------------
 #                                      G       Aut(D)     
 # --------------------------------------------------------
-# Structure                            M21     PΓL(3,4)   
+# Structure                            M21     PΓL3(4)   
 # Rank                                 2       2          
 # 2-Homogeneous                        true    true       
 # Point-stabiliser                     2^4:A5  2^4:A5:S3  
-# Block-stabiliser                     Q8      GL(2,3)    
+# Block-stabiliser                     Q8      GL2(3)    
 # Orbit structure of point-stabiliser                     
 # Orbit structure of block-stabiliser                     
 # Point-transitive                     true    true       
@@ -1516,10 +1516,10 @@
 # -------------------------------------------------------------
 #                                      G            Aut(D)     
 # -------------------------------------------------------------
-# Structure                            PGL(3,4)     PΓL(3,4)   
+# Structure                            PGL3(4)      PΓL3(4)   
 # Rank                                 2            2          
 # 2-Homogeneous                        true         true       
-# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3  
+# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3  
 # Block-stabiliser                     S4           2xS4       
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
@@ -1542,7 +1542,7 @@
 # --------------------------------------------------------
 #                                      G       Aut(D)     
 # --------------------------------------------------------
-# Structure                            M21     PΓL(3,4)   
+# Structure                            M21     PΓL3(4)   
 # Rank                                 2       2          
 # 2-Homogeneous                        true    true       
 # Point-stabiliser                     2^4:A5  2^4:A5:S3  
