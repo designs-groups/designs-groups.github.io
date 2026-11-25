@@ -2,43 +2,62 @@
 # Flag-transitive 2-designs 
 # Group (autSubgroup): A6.2_2 = PGL2(9) = SO3(9)
 # ####################################################################################################
-# Remark:       all designs 
-#               lD_PGL29 is the list of designs 
-# References:  
+# Remarks:      all designs 
+#               lD_PGL29 is the list of the designs
+# References:    
 
-# 1. number of designs:
+# 1. Group information:
 # ---------------------
 
-# ----------------------------------------------------
-#                      Symmetric  Non-symmetric  Total
-# ----------------------------------------------------
-# Point-primitive      0          6              6
-# Point-imprimitive    0          0              0
-#
-# Block-primitive      0          1              1
-# Block-imprimitive    0          5              5
-#
-# Flag-transitive      0          6              6
-# AntiFlag-transitive  0          4              4
-# ----------------------------------------------------
-# Total                0          6              6
-# ----------------------------------------------------
+# ATLAS name:          A6.2_2
+# GAP name:            A6.2_2
+# Order:               720 = 2^4 * 3^2 * 5
+# No. maximal classes: 4
 
-# 2. Summary: 
+# Maximal subgroups:
+# -------------------------------------------
+# Nr   structure         order         index
+# -------------------------------------------
+# 1                      360           2
+# 2                      72            10
+# 3                      20            36
+# 4                      16            45
+# -------------------------------------------
+#
+
+# 2. number of designs: 
+# ---------------------
+
+# ------------------------------------------------------
+#                      symmetric  non-symmetric  total  
+# ------------------------------------------------------
+# Point-primitive      0          6              6      
+# Point-imprimitive    0          0              0      
+#                                                       
+# Block-primitive      0          1              1      
+# Block-imprimitive    0          5              5      
+#                                                       
+# Flag-transitive      0          6              6      
+# AntiFlag-transitive  0          4              4      
+# ------------------------------------------------------
+# Total                0          6              6      
+# ------------------------------------------------------
+
+# 3. Summary: 
 # -----------
 
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b    r   k  λ  G    Gα     GB  Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   10  30   12  4  4  A6:  (3^2)  S   (A6:2)  2      2                  3       6       true             false            true             true                 2
-# 2   10  30   18  6  1  A6:  (3^2)  S   (A6:2)  2      2                  3       6       true             false            true             true                 1
-# 3   10  45   36  8  2  A6:  (3^2)  D   S10     2      2                  3       9       true             true             true             true                                        complete
-# 4   10  72   36  5  1  A6:  (3^2)  D   (A6:2)  2      2                  3       13      true             false            true             true                 4
-# 5   10  120  36  3  8  A6:  (3^2)  S   S10     2      2                  3       18      true             false            true             false                                       complete
-# 6   10  180  72  4  2  A6:  (3^2)  2   (A6:2)  2      2                  3       22      true             false            true             false
-# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b    r   k  λ   G         Gα        GB   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  avectors  subdegrees  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   10  30   12  4  4   PGL(2,9)  AGL(1,9)  S4   PΓL(2,9)  2      2                  3       6       12^{1}    1^{1}9^{1}  true             false            true             true                 2                                
+# 2   10  30   18  6  10  PGL(2,9)  AGL(1,9)  S4   PΓL(2,9)  2      2                  3       6       30^{1}    1^{1}9^{1}  true             false            true             true                 1                                
+# 3   10  45   36  8  28  PGL(2,9)  AGL(1,9)  D16  S10       2      2                  3       9       56^{1}    1^{1}9^{1}  true             true             true             true                                        complete  
+# 4   10  72   36  5  16  PGL(2,9)  AGL(1,9)  D10  PΓL(2,9)  2      2                  3       11      20^{1}    1^{1}9^{1}  true             false            true             true                 4                                
+# 5   10  120  36  3  8   PGL(2,9)  AGL(1,9)  S3   S10       2      2                  3       18      6^{1}     1^{1}9^{1}  true             false            true             false                                       complete  
+# 6   10  180  72  4  24  PGL(2,9)  AGL(1,9)  2^2  PΓL(2,9)  2      2                  3       20      12^{1}    1^{1}9^{1}  true             false            true             false                                                 
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information: 
+# 4. Further information: 
 # -----------------------
 
 # Design: 1
@@ -48,10 +67,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            A6:2        (A6:2):2    
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     (3^2):8     3^2:QD16    
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     S4          2xS4        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  4^{1}6^{1}  4^{1}6^{1}  
@@ -74,10 +93,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            A6:2        (A6:2):2    
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     (3^2):8     3^2:QD16    
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     S4          2xS4        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  4^{1}6^{1}  4^{1}6^{1}  
@@ -100,10 +119,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            A6:2        S10         
+# Structure                            PGL(2,9)    S10         
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     (3^2):8     S9          
+# Point-stabiliser                     AGL(1,9)    S9          
 # Block-stabiliser                     D16         2xS8        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  2^{1}8^{1}  2^{1}8^{1}  
@@ -126,10 +145,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            A6:2        (A6:2):2    
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     (3^2):8     3^2:QD16    
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     D10         5:4         
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  5^{2}       5^{2}       
@@ -152,10 +171,10 @@
 # ------------------------------------------------------------------
 #                                      G                Aut(D)      
 # ------------------------------------------------------------------
-# Structure                            A6:2             S10         
+# Structure                            PGL(2,9)         S10         
 # Rank                                 2                2           
 # 2-Homogeneous                        true             true        
-# Point-stabiliser                     (3^2):8          S9          
+# Point-stabiliser                     AGL(1,9)         S9          
 # Block-stabiliser                     S3               S7xS3       
 # Orbit structure of point-stabiliser  1^{1}9^{1}       1^{1}9^{1}  
 # Orbit structure of block-stabiliser  1^{1}3^{1}6^{1}  3^{1}7^{1}  
@@ -178,10 +197,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            A6:2        (A6:2):2    
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     (3^2):8     3^2:QD16    
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     2^2         D8          
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  2^{1}4^{2}  2^{1}4^{2}  
@@ -197,99 +216,94 @@
 # Block-primitive type                 0           0           
 # -------------------------------------------------------------
 
-# 4. Designs: 
+# 5. Designs: 
 # -----------
 
 lD_PGL29 :=  [
- rec(
-  autGroup := Group( [ (1,2)(5,6)(8,9), ( 2, 3)( 6,10)( 7, 9), ( 3, 4)( 5, 6)( 7,10)( 8, 9), ( 3, 5, 4, 6)( 7, 9,10, 8), ( 5, 8)( 6, 9)( 7,10) ] ),
-  autSubgroup := Group( [ ( 2, 3, 4)( 5, 7, 9)( 6, 8,10), ( 1, 2)( 3, 5)( 4, 6)( 7, 9)( 8,10) ] ),
+ rec( parameters := [ 10, 30, 12, 4, 4 ],
+  autGroup := Group( [ ( 3, 9,10, 4, 5, 8, 6, 7), ( 1,10, 7, 4, 3, 2)( 5, 6, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 4)( 5, 7)( 6, 8)( 9,10), ( 2, 3, 5)( 4, 6, 8)( 7, 9,10) ] ),
   groupNumbers := [ " ", 3, 6 ],
-  baseBlock := [ 5, 6, 8, 9 ],
+  baseBlock := [ 4, 7, 8, 9 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 10, 30, 12, 4, 4 ],
   r := 12,
   tSubsetStructure := rec(
-      lambdas := [ 4 ],
-      t := 2 ),
-  v := 10 ), 
- rec(
-  autGroup := Group( [ (1,2)(5,6)(8,9), ( 2, 3)( 6,10)( 7, 9), ( 3, 4)( 5, 6)( 7,10)( 8, 9), ( 3, 5, 4, 6)( 7, 9,10, 8), ( 5, 8)( 6, 9)( 7,10) ] ),
-  autSubgroup := Group( [ ( 2, 3, 4)( 5, 7, 9)( 6, 8,10), ( 1, 2)( 3, 5)( 4, 6)( 7, 9)( 8,10) ] ),
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 30, 18, 6, 10 ],
+  autGroup := Group( [ ( 2, 9,10, 3)( 4, 5, 8, 7), ( 1, 3, 9, 7, 8,10)( 4, 6, 5) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 4)( 5, 7)( 6, 8)( 9,10), ( 2, 3, 5)( 4, 6, 8)( 7, 9,10) ] ),
   groupNumbers := [ " ", 3, 6 ],
-  baseBlock := [ 1, 2, 3, 4, 7, 10 ],
+  baseBlock := [ 1, 2, 3, 5, 6, 10 ],
   blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 10, 30, 18, 6, 10 ],
   r := 18,
   tSubsetStructure := rec(
-      lambdas := [ 10 ],
-      t := 2 ),
-  v := 10 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 10 ] ),
-  autSubgroup := Group( [ ( 2, 3, 4)( 5, 7, 9)( 6, 8,10), ( 1, 2)( 3, 5)( 4, 6)( 7, 9)( 8,10) ] ),
+  lambdas := [ 10 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 45, 36, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 4)( 5, 7)( 6, 8)( 9,10), ( 2, 3, 5)( 4, 6, 8)( 7, 9,10) ] ),
   groupNumbers := [ " ", 3, 9 ],
   baseBlock := [ 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 10, 45, 36, 8, 28 ],
   r := 36,
   tSubsetStructure := rec(
-      lambdas := [ 28 ],
-      t := 2 ),
-  v := 10 ), 
- rec(
-  autGroup := Group( [ (1,2)(5,6)(8,9), ( 2, 3)( 6,10)( 7, 9), ( 3, 4)( 5, 6)( 7,10)( 8, 9), ( 3, 5, 4, 6)( 7, 9,10, 8), ( 5, 8)( 6, 9)( 7,10) ] ),
-  autSubgroup := Group( [ ( 2, 3, 4)( 5, 7, 9)( 6, 8,10), ( 1, 2)( 3, 5)( 4, 6)( 7, 9)( 8,10) ] ),
-  groupNumbers := [ " ", 3, 13 ],
-  baseBlock := [ 1, 2, 3, 5, 7 ],
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 72, 36, 5, 16 ],
+  autGroup := Group( [ ( 1, 3)( 4, 6)( 7, 8)( 9,10), (2,3,6,4)(5,9,8,7), ( 1, 6,10, 5, 7, 8)( 2, 3, 4) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 4)( 5, 7)( 6, 8)( 9,10), ( 2, 3, 5)( 4, 6, 8)( 7, 9,10) ] ),
+  groupNumbers := [ " ", 3, 11 ],
+  baseBlock := [ 1, 2, 3, 4, 6 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 10, 72, 36, 5, 16 ],
   r := 36,
   tSubsetStructure := rec(
-      lambdas := [ 16 ],
-      t := 2 ),
-  v := 10 ), 
- rec(
-  autGroup := SymmetricGroup( [ 1 .. 10 ] ),
-  autSubgroup := Group( [ ( 2, 3, 4)( 5, 7, 9)( 6, 8,10), ( 1, 2)( 3, 5)( 4, 6)( 7, 9)( 8,10) ] ),
+  lambdas := [ 16 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters := [ 10, 120, 36, 3, 8 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 4)( 5, 7)( 6, 8)( 9,10), ( 2, 3, 5)( 4, 6, 8)( 7, 9,10) ] ),
   groupNumbers := [ " ", 3, 18 ],
-  baseBlock := [ 3, 5, 8 ],
+  baseBlock := [ 3, 4, 9 ],
   blockSizes := [ 3 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 10, 120, 36, 3, 8 ],
   r := 36,
   tSubsetStructure := rec(
-      lambdas := [ 8 ],
-      t := 2 ),
-  v := 10 ), 
- rec(
-  autGroup := Group( [ (1,2)(5,6)(8,9), ( 2, 3)( 6,10)( 7, 9), ( 3, 4)( 5, 6)( 7,10)( 8, 9), ( 3, 5, 4, 6)( 7, 9,10, 8), ( 5, 8)( 6, 9)( 7,10) ] ),
-  autSubgroup := Group( [ ( 2, 3, 4)( 5, 7, 9)( 6, 8,10), ( 1, 2)( 3, 5)( 4, 6)( 7, 9)( 8,10) ] ),
-  groupNumbers := [ " ", 3, 22 ],
-  baseBlock := [ 3, 4, 8, 9 ],
+  lambdas := [ 8 ],
+  t := 2 ),
+  v:= 10),
+ rec( parameters:= [ 10, 180, 72, 4, 24 ],
+  autGroup := Group( [ ( 2, 3)( 6, 8)( 7,10), ( 1, 3, 4, 2)( 5,10, 9, 7), ( 1, 2, 3, 4, 6)( 5, 9, 7, 8,10) ] ),
+  autSubgroup := Group( [ ( 1, 2)( 3, 4)( 5, 7)( 6, 8)( 9,10), ( 2, 3, 5)( 4, 6, 8)( 7, 9,10) ] ),
+  groupNumbers := [ " ", 3, 20 ],
+  baseBlock := [ 3, 5, 8, 9 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  parameters := [ 10, 180, 72, 4, 24 ],
   r := 72,
   tSubsetStructure := rec(
-      lambdas := [ 24 ],
-      t := 2 ),
-  v := 10 )
+  lambdas := [ 24 ],
+  t := 2 ),
+  v:= 10)
 ]; 
-for D in lD_PGL29 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od;
+for D in lD_PGL29 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
+
