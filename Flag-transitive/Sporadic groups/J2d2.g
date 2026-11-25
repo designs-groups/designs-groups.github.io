@@ -263,8 +263,8 @@ lD_J_2d2 :=  [
   isSimple := true,
   r := 3024,
   tSubsetStructure := rec(
-lambdas := [ 336 ],
-t := 2 ),
+  lambdas := [ 336 ],
+  t := 2 ),
   aVector := [ [ 48, 1 ], [ 84, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 36, 1 ], [ 63, 1 ] ],
   v:= 100),
@@ -279,8 +279,8 @@ t := 2 ),
   isSimple := true,
   r := 3024,
   tSubsetStructure := rec(
-lambdas := [ 336 ],
-t := 2 ),
+  lambdas := [ 336 ],
+  t := 2 ),
   aVector := [ [ 48, 1 ], [ 84, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 36, 1 ], [ 63, 1 ] ],
   v:= 100),
@@ -295,8 +295,8 @@ t := 2 ),
   isSimple := true,
   r := 6048,
   tSubsetStructure := rec(
-lambdas := [ 672 ],
-t := 2 ),
+  lambdas := [ 672 ],
+  t := 2 ),
   aVector := [ [ 48, 1 ], [ 84, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 36, 1 ], [ 63, 1 ] ],
   v:= 100),
@@ -311,8 +311,8 @@ t := 2 ),
   isSimple := true,
   r := 12096,
   tSubsetStructure := rec(
-lambdas := [ 1344 ],
-t := 2 ),
+  lambdas := [ 1344 ],
+  t := 2 ),
   aVector := [ [ 48, 1 ], [ 84, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 36, 1 ], [ 63, 1 ] ],
   v:= 100),
@@ -327,8 +327,8 @@ t := 2 ),
   isSimple := true,
   r := 1440,
   tSubsetStructure := rec(
-lambdas := [ 160 ],
-t := 2 ),
+  lambdas := [ 160 ],
+  t := 2 ),
   aVector := [ [ 128, 1 ], [ 384, 1 ], [ 480, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 36, 1 ], [ 108, 1 ], [ 135, 1 ] ],
   v:= 280),
@@ -343,8 +343,8 @@ t := 2 ),
   isSimple := true,
   r := 2160,
   tSubsetStructure := rec(
-lambdas := [ 240 ],
-t := 2 ),
+  lambdas := [ 240 ],
+  t := 2 ),
   aVector := [ [ 128, 1 ], [ 384, 1 ], [ 480, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 36, 1 ], [ 108, 1 ], [ 135, 1 ] ],
   v:= 280),
@@ -359,18 +359,11 @@ t := 2 ),
   isSimple := true,
   r := 4320,
   tSubsetStructure := rec(
-lambdas := [ 480 ],
-t := 2 ),
+  lambdas := [ 480 ],
+  t := 2 ),
   aVector := [ [ 128, 1 ], [ 384, 1 ], [ 480, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 36, 1 ], [ 108, 1 ], [ 135, 1 ] ],
   v:= 280)
 ]; 
-# Large designs are stored by their base block and constructing group.
-# To expand a selected large design D, use:
-# D.blocks := Set(Orbit(D.autSubgroup, D.baseBlock, OnSets));
-for D in lD_J_2d2 do
-  if D.parameters[2] <= 30000 and D.parameters[2]*D.parameters[4] <= 2500000 then
-    D.blocks := Set(Orbit(D.autSubgroup, D.baseBlock, OnSets));
-  fi;
-od;
+for D in lD_J_2d2 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 

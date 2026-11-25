@@ -162,8 +162,8 @@ lD_Suz :=  [
   isSimple := true,
   r := 20966400,
   tSubsetStructure := rec(
-lambdas := [ 11289600 ],
-t := 2 ),
+  lambdas := [ 11289600 ],
+  t := 2 ),
   aVector := [ [ 215040, 1 ], [ 705600, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 416, 1 ], [ 1365, 1 ] ],
   v:= 1782),
@@ -178,8 +178,8 @@ t := 2 ),
   isSimple := true,
   r := 62899200,
   tSubsetStructure := rec(
-lambdas := [ 33868800 ],
-t := 2 ),
+  lambdas := [ 33868800 ],
+  t := 2 ),
   aVector := [ [ 215040, 1 ], [ 705600, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 416, 1 ], [ 1365, 1 ] ],
   v:= 1782),
@@ -194,18 +194,11 @@ t := 2 ),
   isSimple := true,
   r := 125798400,
   tSubsetStructure := rec(
-lambdas := [ 67737600 ],
-t := 2 ),
+  lambdas := [ 67737600 ],
+  t := 2 ),
   aVector := [ [ 215040, 1 ], [ 705600, 1 ] ],
   Subdegrees := [ [ 1, 1 ], [ 416, 1 ], [ 1365, 1 ] ],
   v:= 1782)
 ]; 
-# Large designs are stored by their base block and constructing group.
-# To expand a selected large design D, use:
-# D.blocks := Set(Orbit(D.autSubgroup, D.baseBlock, OnSets));
-for D in lD_Suz do
-  if D.parameters[2] <= 30000 and D.parameters[2]*D.parameters[4] <= 2500000 then
-    D.blocks := Set(Orbit(D.autSubgroup, D.baseBlock, OnSets));
-  fi;
-od;
+for D in lD_Suz do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
