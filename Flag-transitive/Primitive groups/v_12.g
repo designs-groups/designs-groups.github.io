@@ -6,7 +6,7 @@
 #               lD_12 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
+# 1. number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,28 +31,28 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k   λ    G          Gα         GB                 Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   12  22   11   6   5    M11        PSL2(11)   A6                 M11        2      2           1      1       5       true             false            true             true                 1                                
-# 2   12  66   55   10  45   M11        PSL2(11)   S5                 S12        2      2           1      1       7       true             true             true             true                                        complete  
-# 3   12  110  55   6   25   M11        PSL2(11)   (S3xS3):2          M11        2      2           1      1       6       true             false            true             true                 3                                
-# 4   12  110  55   6   25   PSL2(11)   11:5       6                  PGL2(11)   2      2           3      1       6       true             false            true             true                 4                                
-# 5   12  110  55   6   25   PSL2(11)   11:5       S3                 PSL2(11)   2      2           3      1       4       true             false            true             true                 5                                
-# 6   12  132  55   5   20   M11        PSL2(11)   A5                 M11        2      2           1      1       4       true             false            true             false                                                 
-# 7   12  132  55   5   20   PSL2(11)   11:5       5                  PGL2(11)   2      2           3      1       3       true             false            true             false                                                 
+# 1   12  22   11   6   5    M11        PSL(2,11)  A6                 M11        2      2           1      1       5       true             false            true             true                 1                                
+# 2   12  66   55   10  45   M11        PSL(2,11)  S5                 S12        2      2           1      1       7       true             true             true             true                                        complete  
+# 3   12  110  55   6   25   M11        PSL(2,11)  (S3xS3):2          M11        2      2           1      1       6       true             false            true             true                 3                                
+# 4   12  110  55   6   25   PSL(2,11)  11:5       6                  PGL(2,11)  2      2           3      1       6       true             false            true             true                 4                                
+# 5   12  110  55   6   25   PSL(2,11)  11:5       S3                 PSL(2,11)  2      2           3      1       4       true             false            true             true                 5                                
+# 6   12  132  55   5   20   M11        PSL(2,11)  A5                 M11        2      2           1      1       4       true             false            true             false                                                 
+# 7   12  132  55   5   20   PSL(2,11)  11:5       5                  PGL(2,11)  2      2           3      1       3       true             false            true             false                                                 
 # 8   12  132  66   6   30   M12        M11        S6                 M12        2      2           2      1       4       true             false            true             true                 8                                
-# 9   12  165  55   4   15   M11        PSL2(11)   GL2(3)             M11        2      2           1      1       2       true             true             true             true                 11                               
-# 10  12  165  55   4   15   PSL2(11)   11:5       2^2                PGL2(11)   2      2           3      1       2       true             false            true             false                                                 
-# 11  12  165  110  8   70   M11        PSL2(11)   GL2(3)             M11        2      2           1      1       2       true             true             true             true                 9                                
-# 12  12  165  110  8   70   PGL2(11)   11:10      D8                 PGL2(11)   2      2           4      1       2       true             false            true             true                                                  
-# 13  12  220  55   3   10   M11        PSL2(11)   S3xS3              S12        2      2           1      1       1       true             false            true             false                                       complete  
-# 14  12  220  110  6   50   PGL2(11)   11:10      S3                 PGL2(11)   2      2           4      1       6       true             false            true             true                 14                               
-# 15  12  220  165  9   120  M12        M11        3^2:Q8:3:2         S12        2      2           2      1       1       true             true             true             true                                        complete  
-# 16  12  330  110  4   30   M11        PSL2(11)   S4                 M11        2      2           1      1       3       true             false            true             false                                                 
-# 17  12  330  110  4   30   PGL2(11)   11:10      2^2                PGL2(11)   2      2           4      1       3       true             false            true             false                                                 
+# 9   12  165  55   4   15   M11        PSL(2,11)  GL(2,3)            M11        2      2           1      1       2       true             true             true             true                 11                               
+# 10  12  165  55   4   15   PSL(2,11)  11:5       2^2                PGL(2,11)  2      2           3      1       2       true             false            true             false                12                               
+# 11  12  165  110  8   70   M11        PSL(2,11)  GL(2,3)            M11        2      2           1      1       2       true             true             true             true                 9                                
+# 12  12  165  110  8   70   PGL(2,11)  AGL(1,11)  D8                 PGL(2,11)  2      2           4      1       2       true             false            true             true                 10                               
+# 13  12  220  55   3   10   M11        PSL(2,11)  S3xS3              S12        2      2           1      1       1       true             false            true             false                15                     complete  
+# 14  12  220  110  6   50   PGL(2,11)  AGL(1,11)  S3                 PGL(2,11)  2      2           4      1       6       true             false            true             true                 14                               
+# 15  12  220  165  9   120  M12        M11        3^2:Q8:3:2         S12        2      2           2      1       1       true             true             true             true                 13                     complete  
+# 16  12  330  110  4   30   M11        PSL(2,11)  S4                 M11        2      2           1      1       3       true             false            true             false                                                 
+# 17  12  330  110  4   30   PGL(2,11)  AGL(1,11)  2^2                PGL(2,11)  2      2           4      1       3       true             false            true             false                                                 
 # 18  12  495  165  4   45   M12        M11        2^3:2^2:3:2        S12        2      2           2      1       2       true             true             true             true                 19                     complete  
 # 19  12  495  330  8   210  M12        M11        2^3:2^2:3:2        S12        2      2           2      1       2       true             true             true             true                 18                     complete  
-# 20  12  792  330  5   120  M12        M11        S5                 S12        2      2           2      1       3       true             false            true             false                                       complete  
+# 20  12  792  330  5   120  M12        M11        S5                 S12        2      2           2      1       3       true             false            true             false                22                     complete  
 # 21  12  792  396  6   180  M12        M11        S5                 M12        2      2           2      1       5       true             false            true             true                 21                               
-# 22  12  792  462  7   252  A12        A11        (S7 x S5) cap A12  S12        2      2           5      1       3       true             true             true             true                                        complete  
+# 22  12  792  462  7   252  A12        A11        (S7 x S5) cap A12  S12        2      2           5      1       3       true             true             true             true                 20                     complete  
 # 23  12  924  462  6   210  A12        A11        (S6 x S6) cap A12  S12        2      2           5      1       4       true             false            true             true                 23                     complete  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -60,105 +60,105 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k   λ    G          Gα         GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   12  22   11   6   5    M11        PSL2(11)   A6                  M11        2      2           1      1       5       true             false            true             true                 1                                
-# 2   12  66   55   10  45   M11        PSL2(11)   S5                  S12        2      2           1      1       7       true             true             true             true                                        complete  
+# 1   12  22   11   6   5    M11        PSL(2,11)  A6                  M11        2      2           1      1       5       true             false            true             true                 1                                
+# 2   12  66   55   10  45   M11        PSL(2,11)  S5                  S12        2      2           1      1       7       true             true             true             true                                        complete  
 # 3   12  66   55   10  45   M12        M11        A6:2:2              S12        2      2           2      1       6       true             true             true             true                                        complete  
-# 4   12  66   55   10  45   PSL2(11)   11:5       D10                 S12        2      2           3      1       7       true             false            true             true                                        complete  
-# 5   12  66   55   10  45   PGL2(11)   11:10      D20                 S12        2      2           4      1       7       true             true             true             true                                        complete  
+# 4   12  66   55   10  45   PSL(2,11)  11:5       D10                 S12        2      2           3      1       7       true             false            true             true                                        complete  
+# 5   12  66   55   10  45   PGL(2,11)  AGL(1,11)  D20                 S12        2      2           4      1       7       true             true             true             true                                        complete  
 # 6   12  66   55   10  45   A12        A11        (S10 x S2) cap A12  S12        2      2           5      1       5       true             true             true             true                                        complete  
 # 7   12  66   55   10  45   S12        S11        S10 x S2            S12        2      2           6      1       5       true             true             true             true                                        complete  
-# 8   12  110  55   6   25   M11        PSL2(11)   (S3xS3):2           M11        2      2           1      1       6       true             false            true             true                 8                                
-# 9   12  110  55   6   25   PSL2(11)   11:5       6                   PGL2(11)   2      2           3      1       6       true             false            true             true                 9                                
-# 10  12  110  55   6   25   PSL2(11)   11:5       S3                  PSL2(11)   2      2           3      1       4       true             false            true             true                 10                               
-# 11  12  110  55   6   25   PGL2(11)   11:10      D12                 PGL2(11)   2      2           4      1       5       true             false            true             true                 11                               
-# 12  12  132  55   5   20   M11        PSL2(11)   A5                  M11        2      2           1      1       4       true             false            true             false                                                 
-# 13  12  132  55   5   20   PSL2(11)   11:5       5                   PGL2(11)   2      2           3      1       3       true             false            true             false                                                 
-# 14  12  132  55   5   20   PGL2(11)   11:10      D10                 PGL2(11)   2      2           4      1       4       true             false            true             false                                                 
+# 8   12  110  55   6   25   M11        PSL(2,11)  (S3xS3):2           M11        2      2           1      1       6       true             false            true             true                 8                                
+# 9   12  110  55   6   25   PSL(2,11)  11:5       6                   PGL(2,11)  2      2           3      1       6       true             false            true             true                 9                                
+# 10  12  110  55   6   25   PSL(2,11)  11:5       S3                  PSL(2,11)  2      2           3      1       4       true             false            true             true                 10                               
+# 11  12  110  55   6   25   PGL(2,11)  AGL(1,11)  D12                 PGL(2,11)  2      2           4      1       5       true             false            true             true                 9                                
+# 12  12  132  55   5   20   M11        PSL(2,11)  A5                  M11        2      2           1      1       4       true             false            true             false                                                 
+# 13  12  132  55   5   20   PSL(2,11)  11:5       5                   PGL(2,11)  2      2           3      1       3       true             false            true             false                                                 
+# 14  12  132  55   5   20   PGL(2,11)  AGL(1,11)  D10                 PGL(2,11)  2      2           4      1       4       true             false            true             false                                                 
 # 15  12  132  66   6   30   M12        M11        S6                  M12        2      2           2      1       4       true             false            true             true                 15                               
-# 16  12  165  55   4   15   M11        PSL2(11)   GL2(3)              M11        2      2           1      1       2       true             true             true             true                 19                               
-# 17  12  165  55   4   15   PSL2(11)   11:5       2^2                 PGL2(11)   2      2           3      1       2       true             false            true             false                                                 
-# 18  12  165  55   4   15   PGL2(11)   11:10      D8                  PGL2(11)   2      2           4      1       2       true             false            true             true                 20                               
-# 19  12  165  110  8   70   M11        PSL2(11)   GL2(3)              M11        2      2           1      1       2       true             true             true             true                 16                               
-# 20  12  165  110  8   70   PGL2(11)   11:10      D8                  PGL2(11)   2      2           4      1       2       true             false            true             true                 18                               
-# 21  12  220  55   3   10   M11        PSL2(11)   S3xS3               S12        2      2           1      1       1       true             false            true             false                                       complete  
+# 16  12  165  55   4   15   M11        PSL(2,11)  GL(2,3)             M11        2      2           1      1       2       true             true             true             true                 19                               
+# 17  12  165  55   4   15   PSL(2,11)  11:5       2^2                 PGL(2,11)  2      2           3      1       2       true             false            true             false                20                               
+# 18  12  165  55   4   15   PGL(2,11)  AGL(1,11)  D8                  PGL(2,11)  2      2           4      1       2       true             false            true             true                 20                               
+# 19  12  165  110  8   70   M11        PSL(2,11)  GL(2,3)             M11        2      2           1      1       2       true             true             true             true                 16                               
+# 20  12  165  110  8   70   PGL(2,11)  AGL(1,11)  D8                  PGL(2,11)  2      2           4      1       2       true             false            true             true                 17                               
+# 21  12  220  55   3   10   M11        PSL(2,11)  S3xS3               S12        2      2           1      1       1       true             false            true             false                28                     complete  
 # 22  12  220  55   3   10   M12        M11        3^2:Q8:3:2          S12        2      2           2      1       1       true             true             true             true                 28                     complete  
-# 23  12  220  55   3   10   PSL2(11)   11:5       3                   S12        2      2           3      1       1       true             false            true             false                                       complete  
-# 24  12  220  55   3   10   PGL2(11)   11:10      S3                  S12        2      2           4      1       1       true             false            true             false                                       complete  
-# 25  12  220  55   3   10   A12        A11        (S3 x S9) cap A12   S12        2      2           5      1       1       true             true             true             true                 29                     complete  
-# 26  12  220  55   3   10   S12        S11        S3 x S9             S12        2      2           6      1       1       true             true             true             true                 30                     complete  
-# 27  12  220  110  6   50   PGL2(11)   11:10      S3                  PGL2(11)   2      2           4      1       6       true             false            true             true                 27                               
-# 28  12  220  165  9   120  M12        M11        3^2:Q8:3:2          S12        2      2           2      1       1       true             true             true             true                 22                     complete  
-# 29  12  220  165  9   120  A12        A11        (S9 x S3) cap A12   S12        2      2           5      1       1       true             true             true             true                 25                     complete  
-# 30  12  220  165  9   120  S12        S11        S9 x S3             S12        2      2           6      1       1       true             true             true             true                 26                     complete  
-# 31  12  330  110  4   30   M11        PSL2(11)   S4                  M11        2      2           1      1       3       true             false            true             false                                                 
-# 32  12  330  110  4   30   PGL2(11)   11:10      2^2                 PGL2(11)   2      2           4      1       3       true             false            true             false                                                 
+# 23  12  220  55   3   10   PSL(2,11)  11:5       3                   S12        2      2           3      1       1       true             false            true             false                28                     complete  
+# 24  12  220  55   3   10   PGL(2,11)  AGL(1,11)  S3                  S12        2      2           4      1       1       true             false            true             false                28                     complete  
+# 25  12  220  55   3   10   A12        A11        (S3 x S9) cap A12   S12        2      2           5      1       1       true             true             true             true                 28                     complete  
+# 26  12  220  55   3   10   S12        S11        S3 x S9             S12        2      2           6      1       1       true             true             true             true                 28                     complete  
+# 27  12  220  110  6   50   PGL(2,11)  AGL(1,11)  S3                  PGL(2,11)  2      2           4      1       6       true             false            true             true                 27                               
+# 28  12  220  165  9   120  M12        M11        3^2:Q8:3:2          S12        2      2           2      1       1       true             true             true             true                 21                     complete  
+# 29  12  220  165  9   120  A12        A11        (S9 x S3) cap A12   S12        2      2           5      1       1       true             true             true             true                 21                     complete  
+# 30  12  220  165  9   120  S12        S11        S9 x S3             S12        2      2           6      1       1       true             true             true             true                 21                     complete  
+# 31  12  330  110  4   30   M11        PSL(2,11)  S4                  M11        2      2           1      1       3       true             false            true             false                                                 
+# 32  12  330  110  4   30   PGL(2,11)  AGL(1,11)  2^2                 PGL(2,11)  2      2           4      1       3       true             false            true             false                                                 
 # 33  12  495  165  4   45   M12        M11        2^3:2^2:3:2         S12        2      2           2      1       2       true             true             true             true                 36                     complete  
-# 34  12  495  165  4   45   A12        A11        (S4 x S8) cap A12   S12        2      2           5      1       2       true             true             true             true                 37                     complete  
-# 35  12  495  165  4   45   S12        S11        S4 x S8             S12        2      2           6      1       2       true             true             true             true                 38                     complete  
+# 34  12  495  165  4   45   A12        A11        (S4 x S8) cap A12   S12        2      2           5      1       2       true             true             true             true                 36                     complete  
+# 35  12  495  165  4   45   S12        S11        S4 x S8             S12        2      2           6      1       2       true             true             true             true                 36                     complete  
 # 36  12  495  330  8   210  M12        M11        2^3:2^2:3:2         S12        2      2           2      1       2       true             true             true             true                 33                     complete  
-# 37  12  495  330  8   210  A12        A11        (S8 x S4) cap A12   S12        2      2           5      1       2       true             true             true             true                 34                     complete  
-# 38  12  495  330  8   210  S12        S11        S8 x S4             S12        2      2           6      1       2       true             true             true             true                 35                     complete  
-# 39  12  792  330  5   120  M12        M11        S5                  S12        2      2           2      1       3       true             false            true             false                                       complete  
+# 37  12  495  330  8   210  A12        A11        (S8 x S4) cap A12   S12        2      2           5      1       2       true             true             true             true                 33                     complete  
+# 38  12  495  330  8   210  S12        S11        S8 x S4             S12        2      2           6      1       2       true             true             true             true                 33                     complete  
+# 39  12  792  330  5   120  M12        M11        S5                  S12        2      2           2      1       3       true             false            true             false                43                     complete  
 # 40  12  792  330  5   120  A12        A11        (S5 x S7) cap A12   S12        2      2           5      1       3       true             true             true             true                 43                     complete  
-# 41  12  792  330  5   120  S12        S11        S5 x S7             S12        2      2           6      1       3       true             true             true             true                 44                     complete  
+# 41  12  792  330  5   120  S12        S11        S5 x S7             S12        2      2           6      1       3       true             true             true             true                 43                     complete  
 # 42  12  792  396  6   180  M12        M11        S5                  M12        2      2           2      1       5       true             false            true             true                 42                               
-# 43  12  792  462  7   252  A12        A11        (S7 x S5) cap A12   S12        2      2           5      1       3       true             true             true             true                 40                     complete  
-# 44  12  792  462  7   252  S12        S11        S7 x S5             S12        2      2           6      1       3       true             true             true             true                 41                     complete  
+# 43  12  792  462  7   252  A12        A11        (S7 x S5) cap A12   S12        2      2           5      1       3       true             true             true             true                 39                     complete  
+# 44  12  792  462  7   252  S12        S11        S7 x S5             S12        2      2           6      1       3       true             true             true             true                 39                     complete  
 # 45  12  924  462  6   210  A12        A11        (S6 x S6) cap A12   S12        2      2           5      1       4       true             false            true             true                 45                     complete  
-# 46  12  924  462  6   210  S12        S11        S6 x S6             S12        2      2           6      1       4       true             false            true             true                 46                     complete  
+# 46  12  924  462  6   210  S12        S11        S6 x S6             S12        2      2           6      1       4       true             false            true             true                 45                     complete  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k   λ    G          Gα         GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   12  22   11   6   5    M11        PSL2(11)   A6                  M11        2      2           1      1       5       true             false            true             true                 1                                
-# 2   12  66   55   10  45   M11        PSL2(11)   S5                  S12        2      2           1      1       7       true             true             true             true                                        complete  
+# 1   12  22   11   6   5    M11        PSL(2,11)  A6                  M11        2      2           1      1       5       true             false            true             true                 1                                
+# 2   12  66   55   10  45   M11        PSL(2,11)  S5                  S12        2      2           1      1       7       true             true             true             true                                        complete  
 # 3   12  66   55   10  45   M12        M11        A6:2:2              S12        2      2           2      1       6       true             true             true             true                                        complete  
-# 4   12  66   55   10  45   PSL2(11)   11:5       D10                 S12        2      2           3      1       7       true             false            true             true                                        complete  
-# 5   12  66   55   10  45   PGL2(11)   11:10      D20                 S12        2      2           4      1       7       true             true             true             true                                        complete  
+# 4   12  66   55   10  45   PSL(2,11)  11:5       D10                 S12        2      2           3      1       7       true             false            true             true                                        complete  
+# 5   12  66   55   10  45   PGL(2,11)  AGL(1,11)  D20                 S12        2      2           4      1       7       true             true             true             true                                        complete  
 # 6   12  66   55   10  45   A12        A11        (S10 x S2) cap A12  S12        2      2           5      1       5       true             true             true             true                                        complete  
 # 7   12  66   55   10  45   S12        S11        S10 x S2            S12        2      2           6      1       5       true             true             true             true                                        complete  
-# 8   12  110  55   6   25   M11        PSL2(11)   (S3xS3):2           M11        2      2           1      1       6       true             false            true             true                 8                                
-# 9   12  110  55   6   25   PSL2(11)   11:5       S3                  PSL2(11)   2      2           3      1       4       true             false            true             true                 9                                
-# 10  12  110  55   6   25   PSL2(11)   11:5       S3                  PSL2(11)   2      2           3      1       5       true             false            true             true                 10                               
-# 11  12  110  55   6   25   PSL2(11)   11:5       6                   PGL2(11)   2      2           3      1       6       true             false            true             true                 11                               
-# 12  12  110  55   6   25   PGL2(11)   11:10      D12                 PGL2(11)   2      2           4      1       5       true             false            true             true                 12                               
-# 13  12  132  55   5   20   M11        PSL2(11)   A5                  M11        2      2           1      1       4       true             false            true             false                                                 
-# 14  12  132  55   5   20   PSL2(11)   11:5       5                   PGL2(11)   2      2           3      1       3       true             false            true             false                                                 
-# 15  12  132  55   5   20   PGL2(11)   11:10      D10                 PGL2(11)   2      2           4      1       4       true             false            true             false                                                 
+# 8   12  110  55   6   25   M11        PSL(2,11)  (S3xS3):2           M11        2      2           1      1       6       true             false            true             true                 8                                
+# 9   12  110  55   6   25   PSL(2,11)  11:5       S3                  PSL(2,11)  2      2           3      1       4       true             false            true             true                 9                                
+# 10  12  110  55   6   25   PSL(2,11)  11:5       S3                  PSL(2,11)  2      2           3      1       5       true                              true             true                 9                                
+# 11  12  110  55   6   25   PSL(2,11)  11:5       6                   PGL(2,11)  2      2           3      1       6       true             false            true             true                 11                               
+# 12  12  110  55   6   25   PGL(2,11)  AGL(1,11)  D12                 PGL(2,11)  2      2           4      1       5       true             false            true             true                 11                               
+# 13  12  132  55   5   20   M11        PSL(2,11)  A5                  M11        2      2           1      1       4       true             false            true             false                                                 
+# 14  12  132  55   5   20   PSL(2,11)  11:5       5                   PGL(2,11)  2      2           3      1       3       true             false            true             false                                                 
+# 15  12  132  55   5   20   PGL(2,11)  AGL(1,11)  D10                 PGL(2,11)  2      2           4      1       4       true             false            true             false                                                 
 # 16  12  132  66   6   30   M12        M11        S6                  M12        2      2           2      1       4       true             false            true             true                 16                               
-# 17  12  165  55   4   15   M11        PSL2(11)   GL2(3)              M11        2      2           1      1       2       true             true             true             true                 20                               
-# 18  12  165  55   4   15   PSL2(11)   11:5       2^2                 PGL2(11)   2      2           3      1       2       true             false            true             false                                                 
-# 19  12  165  55   4   15   PGL2(11)   11:10      D8                  PGL2(11)   2      2           4      1       2       true             false            true             true                 21                               
-# 20  12  165  110  8   70   M11        PSL2(11)   GL2(3)              M11        2      2           1      1       2       true             true             true             true                 17                               
-# 21  12  165  110  8   70   PGL2(11)   11:10      D8                  PGL2(11)   2      2           4      1       2       true             false            true             true                 19                               
-# 22  12  220  55   3   10   M11        PSL2(11)   S3xS3               S12        2      2           1      1       1       true             false            true             false                                       complete  
+# 17  12  165  55   4   15   M11        PSL(2,11)  GL(2,3)             M11        2      2           1      1       2       true             true             true             true                 20                               
+# 18  12  165  55   4   15   PSL(2,11)  11:5       2^2                 PGL(2,11)  2      2           3      1       2       true             false            true             false                21                               
+# 19  12  165  55   4   15   PGL(2,11)  AGL(1,11)  D8                  PGL(2,11)  2      2           4      1       2       true             false            true             true                 21                               
+# 20  12  165  110  8   70   M11        PSL(2,11)  GL(2,3)             M11        2      2           1      1       2       true             true             true             true                 17                               
+# 21  12  165  110  8   70   PGL(2,11)  AGL(1,11)  D8                  PGL(2,11)  2      2           4      1       2       true             false            true             true                 18                               
+# 22  12  220  55   3   10   M11        PSL(2,11)  S3xS3               S12        2      2           1      1       1       true             false            true             false                29                     complete  
 # 23  12  220  55   3   10   M12        M11        3^2:Q8:3:2          S12        2      2           2      1       1       true             true             true             true                 29                     complete  
-# 24  12  220  55   3   10   PSL2(11)   11:5       3                   S12        2      2           3      1       1       true             false            true             false                                       complete  
-# 25  12  220  55   3   10   PGL2(11)   11:10      S3                  S12        2      2           4      1       1       true             false            true             false                                       complete  
-# 26  12  220  55   3   10   A12        A11        (S3 x S9) cap A12   S12        2      2           5      1       1       true             true             true             true                 30                     complete  
-# 27  12  220  55   3   10   S12        S11        S3 x S9             S12        2      2           6      1       1       true             true             true             true                 31                     complete  
-# 28  12  220  110  6   50   PGL2(11)   11:10      S3                  PGL2(11)   2      2           4      1       6       true             false            true             true                 28                               
-# 29  12  220  165  9   120  M12        M11        3^2:Q8:3:2          S12        2      2           2      1       1       true             true             true             true                 23                     complete  
-# 30  12  220  165  9   120  A12        A11        (S9 x S3) cap A12   S12        2      2           5      1       1       true             true             true             true                 26                     complete  
-# 31  12  220  165  9   120  S12        S11        S9 x S3             S12        2      2           6      1       1       true             true             true             true                 27                     complete  
-# 32  12  330  110  4   30   M11        PSL2(11)   S4                  M11        2      2           1      1       3       true             false            true             false                                                 
-# 33  12  330  110  4   30   PGL2(11)   11:10      2^2                 PGL2(11)   2      2           4      1       3       true             false            true             false                                                 
+# 24  12  220  55   3   10   PSL(2,11)  11:5       3                   S12        2      2           3      1       1       true             false            true             false                29                     complete  
+# 25  12  220  55   3   10   PGL(2,11)  AGL(1,11)  S3                  S12        2      2           4      1       1       true             false            true             false                29                     complete  
+# 26  12  220  55   3   10   A12        A11        (S3 x S9) cap A12   S12        2      2           5      1       1       true             true             true             true                 29                     complete  
+# 27  12  220  55   3   10   S12        S11        S3 x S9             S12        2      2           6      1       1       true             true             true             true                 29                     complete  
+# 28  12  220  110  6   50   PGL(2,11)  AGL(1,11)  S3                  PGL(2,11)  2      2           4      1       6       true             false            true             true                 28                               
+# 29  12  220  165  9   120  M12        M11        3^2:Q8:3:2          S12        2      2           2      1       1       true             true             true             true                 22                     complete  
+# 30  12  220  165  9   120  A12        A11        (S9 x S3) cap A12   S12        2      2           5      1       1       true             true             true             true                 22                     complete  
+# 31  12  220  165  9   120  S12        S11        S9 x S3             S12        2      2           6      1       1       true             true             true             true                 22                     complete  
+# 32  12  330  110  4   30   M11        PSL(2,11)  S4                  M11        2      2           1      1       3       true             false            true             false                                                 
+# 33  12  330  110  4   30   PGL(2,11)  AGL(1,11)  2^2                 PGL(2,11)  2      2           4      1       3       true             false            true             false                                                 
 # 34  12  495  165  4   45   M12        M11        2^3:2^2:3:2         S12        2      2           2      1       2       true             true             true             true                 37                     complete  
-# 35  12  495  165  4   45   A12        A11        (S4 x S8) cap A12   S12        2      2           5      1       2       true             true             true             true                 38                     complete  
-# 36  12  495  165  4   45   S12        S11        S4 x S8             S12        2      2           6      1       2       true             true             true             true                 39                     complete  
+# 35  12  495  165  4   45   A12        A11        (S4 x S8) cap A12   S12        2      2           5      1       2       true             true             true             true                 37                     complete  
+# 36  12  495  165  4   45   S12        S11        S4 x S8             S12        2      2           6      1       2       true             true             true             true                 37                     complete  
 # 37  12  495  330  8   210  M12        M11        2^3:2^2:3:2         S12        2      2           2      1       2       true             true             true             true                 34                     complete  
-# 38  12  495  330  8   210  A12        A11        (S8 x S4) cap A12   S12        2      2           5      1       2       true             true             true             true                 35                     complete  
-# 39  12  495  330  8   210  S12        S11        S8 x S4             S12        2      2           6      1       2       true             true             true             true                 36                     complete  
-# 40  12  792  330  5   120  M12        M11        S5                  S12        2      2           2      1       3       true             false            true             false                                       complete  
+# 38  12  495  330  8   210  A12        A11        (S8 x S4) cap A12   S12        2      2           5      1       2       true             true             true             true                 34                     complete  
+# 39  12  495  330  8   210  S12        S11        S8 x S4             S12        2      2           6      1       2       true             true             true             true                 34                     complete  
+# 40  12  792  330  5   120  M12        M11        S5                  S12        2      2           2      1       3       true             false            true             false                44                     complete  
 # 41  12  792  330  5   120  A12        A11        (S5 x S7) cap A12   S12        2      2           5      1       3       true             true             true             true                 44                     complete  
-# 42  12  792  330  5   120  S12        S11        S5 x S7             S12        2      2           6      1       3       true             true             true             true                 45                     complete  
+# 42  12  792  330  5   120  S12        S11        S5 x S7             S12        2      2           6      1       3       true             true             true             true                 44                     complete  
 # 43  12  792  396  6   180  M12        M11        S5                  M12        2      2           2      1       5       true             false            true             true                 43                               
-# 44  12  792  462  7   252  A12        A11        (S7 x S5) cap A12   S12        2      2           5      1       3       true             true             true             true                 41                     complete  
-# 45  12  792  462  7   252  S12        S11        S7 x S5             S12        2      2           6      1       3       true             true             true             true                 42                     complete  
+# 44  12  792  462  7   252  A12        A11        (S7 x S5) cap A12   S12        2      2           5      1       3       true             true             true             true                 40                     complete  
+# 45  12  792  462  7   252  S12        S11        S7 x S5             S12        2      2           6      1       3       true             true             true             true                 40                     complete  
 # 46  12  924  462  6   210  A12        A11        (S6 x S6) cap A12   S12        2      2           5      1       4       true             false            true             true                 46                     complete  
-# 47  12  924  462  6   210  S12        S11        S6 x S6             S12        2      2           6      1       4       true             false            true             true                 47                     complete  
+# 47  12  924  462  6   210  S12        S11        S6 x S6             S12        2      2           6      1       4       true             false            true             true                 46                     complete  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
@@ -174,7 +174,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL2(11)   PSL2(11)  
+# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
 # Block-stabiliser                     A6         A6         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -187,34 +187,34 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 2
-# --------------------------------------------------------
+# ---------------------------------------------------------
 # Parameter set: [ 12, 66, 55, 10, 45 ]
 # Complement:    [ 12, 66, 11, 2, 1 ]
-# --------------------------------------------------------
-#                                      G          Aut(D)  
-# --------------------------------------------------------
-# Structure                            M11        S12     
-# Rank                                 2          2       
-# 2-Homogeneous                        true       true    
-# Point-stabiliser                     PSL2(11)   S11     
-# Block-stabiliser                     S5         2xS10   
-# Orbit structure of point-stabiliser                     
-# Orbit structure of block-stabiliser                     
-# Point-transitive                     true       true    
-# Block-transitive                     true       true    
-# Flag-transitive                      true       true    
-# Anti-flag-transitive                 true       true    
-# Flag-semiregular                     false      false   
-# Flag-regular                         false      false   
-# Point-primitive                      true       true    
-# Point-primitive type                 2          2       
-# Block-primitive                      true               
-# Block-primitive type                                    
-# --------------------------------------------------------
+# ---------------------------------------------------------
+#                                      G          Aut(D)   
+# ---------------------------------------------------------
+# Structure                            M11        S12      
+# Rank                                 2          2        
+# 2-Homogeneous                        true       true     
+# Point-stabiliser                     PSL(2,11)  S11      
+# Block-stabiliser                     S5         2xS10    
+# Orbit structure of point-stabiliser                      
+# Orbit structure of block-stabiliser                      
+# Point-transitive                     true       true     
+# Block-transitive                     true       true     
+# Flag-transitive                      true       true     
+# Anti-flag-transitive                 true       true     
+# Flag-semiregular                     false      false    
+# Flag-regular                         false      false    
+# Point-primitive                      true       true     
+# Point-primitive type                 2          2        
+# Block-primitive                      true       true     
+# Block-primitive type                 2                   
+# ---------------------------------------------------------
 
 # Design: 3
 # -----------------------------------------------------------
@@ -226,7 +226,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL2(11)   PSL2(11)  
+# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
 # Block-stabiliser                     (S3xS3):2  (S3xS3):2  
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -239,7 +239,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 4
@@ -249,10 +249,10 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL2(11)   PGL2(11)  
+# Structure                            PSL(2,11)  PGL(2,11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     11:5       11:10      
+# Point-stabiliser                     11:5       AGL(1,11)  
 # Block-stabiliser                     6          D12        
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -265,7 +265,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false                 
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 5
@@ -275,7 +275,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL2(11)   PSL2(11)  
+# Structure                            PSL(2,11)  PSL(2,11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     11:5       11:5       
@@ -291,7 +291,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 6
@@ -304,7 +304,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL2(11)   PSL2(11)  
+# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
 # Block-stabiliser                     A5         A5         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -317,7 +317,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 7
@@ -327,10 +327,10 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL2(11)   PGL2(11)  
+# Structure                            PSL(2,11)  PGL(2,11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     11:5       11:10      
+# Point-stabiliser                     11:5       AGL(1,11)  
 # Block-stabiliser                     5          D10        
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -343,34 +343,34 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false                 
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 8
-# ----------------------------------------------------
+# -------------------------------------------------------
 # Parameter set: [ 12, 132, 66, 6, 30 ]
 # Complement:    [ 12, 132, 66, 6, 30 ]
-# ----------------------------------------------------
-#                                      G      Aut(D)  
-# ----------------------------------------------------
-# Structure                            M12    M12     
-# Rank                                 2      2       
-# 2-Homogeneous                        true   true    
-# Point-stabiliser                     M11    M11     
-# Block-stabiliser                     S6     S6      
-# Orbit structure of point-stabiliser                 
-# Orbit structure of block-stabiliser                 
-# Point-transitive                     true   true    
-# Block-transitive                     true   true    
-# Flag-transitive                      true   true    
-# Anti-flag-transitive                 true   true    
-# Flag-semiregular                     false  false   
-# Flag-regular                         false  false   
-# Point-primitive                      true   true    
-# Point-primitive type                 2      2       
-# Block-primitive                      false  false   
-# Block-primitive type                                
-# ----------------------------------------------------
+# -------------------------------------------------------
+#                                      G        Aut(D)   
+# -------------------------------------------------------
+# Structure                            M12      M12      
+# Rank                                 2        2        
+# 2-Homogeneous                        true     true     
+# Point-stabiliser                     M11      M11      
+# Block-stabiliser                     S6       S6       
+# Orbit structure of point-stabiliser                    
+# Orbit structure of block-stabiliser                    
+# Point-transitive                     true     true     
+# Block-transitive                     true     true     
+# Flag-transitive                      true     true     
+# Anti-flag-transitive                 true     true     
+# Flag-semiregular                     false    false    
+# Flag-regular                         false    false    
+# Point-primitive                      true     true     
+# Point-primitive type                 2        2        
+# Block-primitive                      false    false    
+# Block-primitive type                 0                 
+# -------------------------------------------------------
 
 # Design: 9
 # -----------------------------------------------------------
@@ -382,8 +382,8 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL2(11)   PSL2(11)  
-# Block-stabiliser                     GL2(3)     GL2(3)    
+# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Block-stabiliser                     GL(2,3)    GL(2,3)    
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
@@ -395,7 +395,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      true       true       
-# Block-primitive type                                       
+# Block-primitive type                 2                     
 # -----------------------------------------------------------
 
 # Design: 10
@@ -405,10 +405,10 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PSL2(11)   PGL2(11)  
+# Structure                            PSL(2,11)  PGL(2,11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     11:5       11:10      
+# Point-stabiliser                     11:5       AGL(1,11)  
 # Block-stabiliser                     2^2        D8         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -421,7 +421,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false                 
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 11
@@ -434,8 +434,8 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL2(11)   PSL2(11)  
-# Block-stabiliser                     GL2(3)     GL2(3)    
+# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
+# Block-stabiliser                     GL(2,3)    GL(2,3)    
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
@@ -447,7 +447,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      true       true       
-# Block-primitive type                                       
+# Block-primitive type                 2                     
 # -----------------------------------------------------------
 
 # Design: 12
@@ -457,10 +457,10 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL2(11)   PGL2(11)  
+# Structure                            PGL(2,11)  PGL(2,11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     11:10      11:10      
+# Point-stabiliser                     AGL(1,11)  AGL(1,11)  
 # Block-stabiliser                     D8         D8         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -473,34 +473,34 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 13
-# --------------------------------------------------------
+# ---------------------------------------------------------
 # Parameter set: [ 12, 220, 55, 3, 10 ]
 # Complement:    [ 12, 220, 165, 9, 120 ]
-# --------------------------------------------------------
-#                                      G          Aut(D)  
-# --------------------------------------------------------
-# Structure                            M11        S12     
-# Rank                                 2          2       
-# 2-Homogeneous                        true       true    
-# Point-stabiliser                     PSL2(11)   S11     
-# Block-stabiliser                     S3xS3      S9xS3   
-# Orbit structure of point-stabiliser                     
-# Orbit structure of block-stabiliser                     
-# Point-transitive                     true       true    
-# Block-transitive                     true       true    
-# Flag-transitive                      true       true    
-# Anti-flag-transitive                 false      true    
-# Flag-semiregular                     false      false   
-# Flag-regular                         false      false   
-# Point-primitive                      true       true    
-# Point-primitive type                 2          2       
-# Block-primitive                      false              
-# Block-primitive type                                    
-# --------------------------------------------------------
+# ---------------------------------------------------------
+#                                      G          Aut(D)   
+# ---------------------------------------------------------
+# Structure                            M11        S12      
+# Rank                                 2          2        
+# 2-Homogeneous                        true       true     
+# Point-stabiliser                     PSL(2,11)  S11      
+# Block-stabiliser                     S3xS3      S9xS3    
+# Orbit structure of point-stabiliser                      
+# Orbit structure of block-stabiliser                      
+# Point-transitive                     true       true     
+# Block-transitive                     true       true     
+# Flag-transitive                      true       true     
+# Anti-flag-transitive                 false      true     
+# Flag-semiregular                     false      false    
+# Flag-regular                         false      false    
+# Point-primitive                      true       true     
+# Point-primitive type                 2          2        
+# Block-primitive                      false               
+# Block-primitive type                 0                   
+# ---------------------------------------------------------
 
 # Design: 14
 # -----------------------------------------------------------
@@ -509,10 +509,10 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL2(11)   PGL2(11)  
+# Structure                            PGL(2,11)  PGL(2,11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     11:10      11:10      
+# Point-stabiliser                     AGL(1,11)  AGL(1,11)  
 # Block-stabiliser                     S3         S3         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -525,34 +525,34 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 15
-# ---------------------------------------------------------
+# ----------------------------------------------------------
 # Parameter set: [ 12, 220, 165, 9, 120 ]
 # Complement:    [ 12, 220, 55, 3, 10 ]
-# ---------------------------------------------------------
-#                                      G           Aut(D)  
-# ---------------------------------------------------------
-# Structure                            M12         S12     
-# Rank                                 2           2       
-# 2-Homogeneous                        true        true    
-# Point-stabiliser                     M11         S11     
-# Block-stabiliser                     3^2:Q8:3:2  S3xS9   
-# Orbit structure of point-stabiliser                      
-# Orbit structure of block-stabiliser                      
-# Point-transitive                     true        true    
-# Block-transitive                     true        true    
-# Flag-transitive                      true        true    
-# Anti-flag-transitive                 true        true    
-# Flag-semiregular                     false       false   
-# Flag-regular                         false       false   
-# Point-primitive                      true        true    
-# Point-primitive type                 2           2       
-# Block-primitive                      true                
-# Block-primitive type                                     
-# ---------------------------------------------------------
+# ----------------------------------------------------------
+#                                      G           Aut(D)   
+# ----------------------------------------------------------
+# Structure                            M12         S12      
+# Rank                                 2           2        
+# 2-Homogeneous                        true        true     
+# Point-stabiliser                     M11         S11      
+# Block-stabiliser                     3^2:Q8:3:2  S3xS9    
+# Orbit structure of point-stabiliser                       
+# Orbit structure of block-stabiliser                       
+# Point-transitive                     true        true     
+# Block-transitive                     true        true     
+# Flag-transitive                      true        true     
+# Anti-flag-transitive                 true        true     
+# Flag-semiregular                     false       false    
+# Flag-regular                         false       false    
+# Point-primitive                      true        true     
+# Point-primitive type                 2           2        
+# Block-primitive                      true        true     
+# Block-primitive type                 2                    
+# ----------------------------------------------------------
 
 # Design: 16
 # -----------------------------------------------------------
@@ -564,7 +564,7 @@
 # Structure                            M11        M11        
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     PSL2(11)   PSL2(11)  
+# Point-stabiliser                     PSL(2,11)  PSL(2,11)  
 # Block-stabiliser                     S4         S4         
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -577,7 +577,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 17
@@ -587,10 +587,10 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            PGL2(11)   PGL2(11)  
+# Structure                            PGL(2,11)  PGL(2,11)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
-# Point-stabiliser                     11:10      11:10      
+# Point-stabiliser                     AGL(1,11)  AGL(1,11)  
 # Block-stabiliser                     2^2        2^2        
 # Orbit structure of point-stabiliser                        
 # Orbit structure of block-stabiliser                        
@@ -603,112 +603,112 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 18
-# ----------------------------------------------------------
+# -----------------------------------------------------------
 # Parameter set: [ 12, 495, 165, 4, 45 ]
 # Complement:    [ 12, 495, 330, 8, 210 ]
-# ----------------------------------------------------------
-#                                      G            Aut(D)  
-# ----------------------------------------------------------
-# Structure                            M12          S12     
-# Rank                                 2            2       
-# 2-Homogeneous                        true         true    
-# Point-stabiliser                     M11          S11     
-# Block-stabiliser                     2^3:2^2:3:2  S8xS4   
-# Orbit structure of point-stabiliser                       
-# Orbit structure of block-stabiliser                       
-# Point-transitive                     true         true    
-# Block-transitive                     true         true    
-# Flag-transitive                      true         true    
-# Anti-flag-transitive                 true         true    
-# Flag-semiregular                     false        false   
-# Flag-regular                         false        false   
-# Point-primitive                      true         true    
-# Point-primitive type                 2            2       
-# Block-primitive                      true                 
-# Block-primitive type                                      
-# ----------------------------------------------------------
+# -----------------------------------------------------------
+#                                      G            Aut(D)   
+# -----------------------------------------------------------
+# Structure                            M12          S12      
+# Rank                                 2            2        
+# 2-Homogeneous                        true         true     
+# Point-stabiliser                     M11          S11      
+# Block-stabiliser                     2^3:2^2:3:2  S8xS4    
+# Orbit structure of point-stabiliser                        
+# Orbit structure of block-stabiliser                        
+# Point-transitive                     true         true     
+# Block-transitive                     true         true     
+# Flag-transitive                      true         true     
+# Anti-flag-transitive                 true         true     
+# Flag-semiregular                     false        false    
+# Flag-regular                         false        false    
+# Point-primitive                      true         true     
+# Point-primitive type                 2            2        
+# Block-primitive                      true         true     
+# Block-primitive type                 2                     
+# -----------------------------------------------------------
 
 # Design: 19
-# ----------------------------------------------------------
+# -----------------------------------------------------------
 # Parameter set: [ 12, 495, 330, 8, 210 ]
 # Complement:    [ 12, 495, 165, 4, 45 ]
-# ----------------------------------------------------------
-#                                      G            Aut(D)  
-# ----------------------------------------------------------
-# Structure                            M12          S12     
-# Rank                                 2            2       
-# 2-Homogeneous                        true         true    
-# Point-stabiliser                     M11          S11     
-# Block-stabiliser                     2^3:2^2:3:2  S4xS8   
-# Orbit structure of point-stabiliser                       
-# Orbit structure of block-stabiliser                       
-# Point-transitive                     true         true    
-# Block-transitive                     true         true    
-# Flag-transitive                      true         true    
-# Anti-flag-transitive                 true         true    
-# Flag-semiregular                     false        false   
-# Flag-regular                         false        false   
-# Point-primitive                      true         true    
-# Point-primitive type                 2            2       
-# Block-primitive                      true                 
-# Block-primitive type                                      
-# ----------------------------------------------------------
+# -----------------------------------------------------------
+#                                      G            Aut(D)   
+# -----------------------------------------------------------
+# Structure                            M12          S12      
+# Rank                                 2            2        
+# 2-Homogeneous                        true         true     
+# Point-stabiliser                     M11          S11      
+# Block-stabiliser                     2^3:2^2:3:2  S4xS8    
+# Orbit structure of point-stabiliser                        
+# Orbit structure of block-stabiliser                        
+# Point-transitive                     true         true     
+# Block-transitive                     true         true     
+# Flag-transitive                      true         true     
+# Anti-flag-transitive                 true         true     
+# Flag-semiregular                     false        false    
+# Flag-regular                         false        false    
+# Point-primitive                      true         true     
+# Point-primitive type                 2            2        
+# Block-primitive                      true         true     
+# Block-primitive type                 2                     
+# -----------------------------------------------------------
 
 # Design: 20
-# ----------------------------------------------------
+# -------------------------------------------------------
 # Parameter set: [ 12, 792, 330, 5, 120 ]
 # Complement:    [ 12, 792, 462, 7, 252 ]
-# ----------------------------------------------------
-#                                      G      Aut(D)  
-# ----------------------------------------------------
-# Structure                            M12    S12     
-# Rank                                 2      2       
-# 2-Homogeneous                        true   true    
-# Point-stabiliser                     M11    S11     
-# Block-stabiliser                     S5     S7xS5   
-# Orbit structure of point-stabiliser                 
-# Orbit structure of block-stabiliser                 
-# Point-transitive                     true   true    
-# Block-transitive                     true   true    
-# Flag-transitive                      true   true    
-# Anti-flag-transitive                 false  true    
-# Flag-semiregular                     false  false   
-# Flag-regular                         false  false   
-# Point-primitive                      true   true    
-# Point-primitive type                 2      2       
-# Block-primitive                      false          
-# Block-primitive type                                
-# ----------------------------------------------------
+# -------------------------------------------------------
+#                                      G        Aut(D)   
+# -------------------------------------------------------
+# Structure                            M12      S12      
+# Rank                                 2        2        
+# 2-Homogeneous                        true     true     
+# Point-stabiliser                     M11      S11      
+# Block-stabiliser                     S5       S7xS5    
+# Orbit structure of point-stabiliser                    
+# Orbit structure of block-stabiliser                    
+# Point-transitive                     true     true     
+# Block-transitive                     true     true     
+# Flag-transitive                      true     true     
+# Anti-flag-transitive                 false    true     
+# Flag-semiregular                     false    false    
+# Flag-regular                         false    false    
+# Point-primitive                      true     true     
+# Point-primitive type                 2        2        
+# Block-primitive                      false             
+# Block-primitive type                 0                 
+# -------------------------------------------------------
 
 # Design: 21
-# ----------------------------------------------------
+# -------------------------------------------------------
 # Parameter set: [ 12, 792, 396, 6, 180 ]
 # Complement:    [ 12, 792, 396, 6, 180 ]
-# ----------------------------------------------------
-#                                      G      Aut(D)  
-# ----------------------------------------------------
-# Structure                            M12    M12     
-# Rank                                 2      2       
-# 2-Homogeneous                        true   true    
-# Point-stabiliser                     M11    M11     
-# Block-stabiliser                     S5     S5      
-# Orbit structure of point-stabiliser                 
-# Orbit structure of block-stabiliser                 
-# Point-transitive                     true   true    
-# Block-transitive                     true   true    
-# Flag-transitive                      true   true    
-# Anti-flag-transitive                 true   true    
-# Flag-semiregular                     false  false   
-# Flag-regular                         false  false   
-# Point-primitive                      true   true    
-# Point-primitive type                 2      2       
-# Block-primitive                      false  false   
-# Block-primitive type                                
-# ----------------------------------------------------
+# -------------------------------------------------------
+#                                      G        Aut(D)   
+# -------------------------------------------------------
+# Structure                            M12      M12      
+# Rank                                 2        2        
+# 2-Homogeneous                        true     true     
+# Point-stabiliser                     M11      M11      
+# Block-stabiliser                     S5       S5       
+# Orbit structure of point-stabiliser                    
+# Orbit structure of block-stabiliser                    
+# Point-transitive                     true     true     
+# Block-transitive                     true     true     
+# Flag-transitive                      true     true     
+# Anti-flag-transitive                 true     true     
+# Flag-semiregular                     false    false    
+# Flag-regular                         false    false    
+# Point-primitive                      true     true     
+# Point-primitive type                 2        2        
+# Block-primitive                      false    false    
+# Block-primitive type                 0                 
+# -------------------------------------------------------
 
 # Design: 22
 # -----------------------------------------------------------------
@@ -767,8 +767,8 @@
 
 lD_12 :=  [
  rec( parameters := [ 12, 22, 11, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 9)( 3,11, 8)( 4, 5, 7), ( 1, 8,12, 3, 9)( 4,10, 6, 5,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9)( 3,11, 8)( 4, 5, 7), ( 1, 8,12, 3, 9)( 4,10, 6, 5,11) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 11, 12 ],
   blockSizes := [ 6 ],
@@ -782,7 +782,7 @@ lD_12 :=  [
   v:= 12),
  rec( parameters := [ 12, 66, 55, 10, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8)( 2, 4, 5,11, 3, 9)( 7,10), ( 1,10,12, 2, 3, 4, 9, 5)( 6, 7,11, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 10 ],
@@ -795,8 +795,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 1, 3, 5)( 2,10, 8, 9, 6,11)( 4, 7), ( 1, 5, 3,12,11, 9, 6,10, 4, 8, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5)( 2,10, 8, 9, 6,11)( 4, 7), ( 1, 5, 3,12,11, 9, 6,10, 4, 8, 7) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 10 ],
   blockSizes := [ 6 ],
@@ -809,8 +809,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 7)( 4,11)( 5, 6)( 9,12), ( 1, 6)( 4,10)( 5, 7)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,11,10, 5, 6)( 3, 8, 4,12, 7), ( 1,11, 2, 6, 7,12, 3, 4, 8,10, 9) ] ),
+  autGroup := Group( [ ( 1, 4,11, 8, 5)( 6,10, 9,12, 7), ( 1, 3, 2)( 4,10, 8)( 5,11, 7)( 6, 9,12), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 6)( 2,12)( 3, 9)( 4,11)( 5, 8)( 7,10), ( 1, 3, 6, 2)( 4,12, 7,11)( 5, 8,10, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 6, 10 ],
   blockSizes := [ 6 ],
@@ -823,8 +823,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 1, 4, 3, 6,12)( 7, 8,10,11, 9), ( 1,12, 3, 4,11)( 2, 5, 9, 6,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 3, 6,12)( 7, 8,10,11, 9), ( 1,12, 3, 4,11)( 2, 5, 9, 6,10) ] ),
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 6, 7 ],
   blockSizes := [ 6 ],
@@ -837,8 +837,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 55, 5, 20 ],
-  autGroup := Group( [ ( 2, 9,10)( 3, 8, 4)( 5,11, 7), ( 1,12, 8,10, 4)( 2, 7,11, 9, 6) ] ),
-  autSubgroup := Group( [ ( 2, 9,10)( 3, 8, 4)( 5,11, 7), ( 1,12, 8,10, 4)( 2, 7,11, 9, 6) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 11 ],
   blockSizes := [ 5 ],
@@ -851,8 +851,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 55, 5, 20 ],
-  autGroup := Group( [ ( 1, 4, 3, 5, 9,10,12, 6, 7,11, 2), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 4)( 6, 9)( 7,10)( 8,12) ] ),
-  autSubgroup := Group( [ ( 1, 7, 4,10, 3, 8)( 2,11, 9, 5,12, 6), ( 1,12, 8, 9, 2, 4, 3, 6, 5, 7,11) ] ),
+  autGroup := Group( [ ( 1, 2)( 3, 4)( 6, 9)( 7,10)( 8,12), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 3, 5, 6,10, 8,12, 9, 7,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -865,8 +865,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 66, 6, 30 ],
-  autGroup := Group( [ ( 1, 3, 4, 8, 9,11,12, 2,10, 5, 6), ( 1,12,10, 5, 2, 8, 7,11, 9, 6, 4) ] ),
-  autSubgroup := Group( [ ( 1, 3, 4, 8, 9,11,12, 2,10, 5, 6), ( 1,12,10, 5, 2, 8, 7,11, 9, 6, 4) ] ),
+  autGroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -879,8 +879,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 55, 4, 15 ],
-  autGroup := Group( [ ( 1, 6, 8, 5, 9, 2, 7,11)( 3,10,12, 4), ( 1, 9, 5)( 2,11, 7, 3, 4,10)( 6, 8) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8, 5, 9, 2, 7,11)( 3,10,12, 4), ( 1, 9, 5)( 2,11, 7, 3, 4,10)( 6, 8) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 2 ],
   baseBlock := [ 1, 2, 3, 7 ],
   blockSizes := [ 4 ],
@@ -893,8 +893,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 55, 4, 15 ],
-  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 6)( 4, 9)( 5,11)( 7, 8)(10,12), ( 1, 3)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  autSubgroup := Group( [ ( 1, 4,10, 8, 6)( 2, 3, 7,12, 9), ( 1, 5)( 2,11)( 3, 7)( 4,12)( 6, 8)( 9,10) ] ),
+  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 6)( 4, 9)( 5,11)( 7, 8)(10,12), ( 1, 3, 6,11,10, 7,12, 8, 5, 4, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -907,8 +907,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 110, 8, 70 ],
-  autGroup := Group( [ ( 1, 6, 8, 5)( 2, 3)( 4, 7)( 9,10,12,11), ( 1, 7,11, 8, 4, 6, 2, 5)( 3, 9,12,10) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8, 5)( 2, 3)( 4, 7)( 9,10,12,11), ( 1, 7,11, 8, 4, 6, 2, 5)( 3, 9,12,10) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 11 ],
   blockSizes := [ 8 ],
@@ -936,7 +936,7 @@ lD_12 :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 55, 3, 10 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 3, 8,11)( 4, 6, 7,12, 5,10), ( 1,10, 9,12, 2)( 3, 7, 5, 4, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -964,7 +964,7 @@ lD_12 :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 165, 9, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 3, 4,11,12, 7)( 5, 8, 6,10, 9), ( 1, 9, 6, 8, 3, 4, 7, 5)( 2,10,12,11) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 9 ],
@@ -977,8 +977,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 330, 110, 4, 30 ],
-  autGroup := Group( [ ( 2, 4,12, 5,11,10, 7, 3, 8, 6, 9), ( 1, 6, 3,12, 2, 8,10, 5,11, 7, 9) ] ),
-  autSubgroup := Group( [ ( 2, 4,12, 5,11,10, 7, 3, 8, 6, 9), ( 1, 6, 3,12, 2, 8,10, 5,11, 7, 9) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -1006,7 +1006,7 @@ lD_12 :=  [
   v:= 12),
  rec( parameters := [ 12, 495, 165, 4, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 7, 5, 6, 9,12, 8,10)( 2, 3,11, 4), ( 1, 7, 8, 4, 6, 3,12, 2, 5, 9,11) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -1020,7 +1020,7 @@ lD_12 :=  [
   v:= 12),
  rec( parameters := [ 12, 495, 330, 8, 210 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 8, 3, 4, 7, 9, 2,10)( 5, 6,11,12), ( 1,10,12, 2, 3, 8)( 4, 5, 7, 9,11, 6) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
@@ -1034,7 +1034,7 @@ lD_12 :=  [
   v:= 12),
  rec( parameters := [ 12, 792, 330, 5, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4,11, 9, 5)( 3, 6, 7, 8,10,12), ( 1,11, 4, 3, 7)( 5, 6, 9,12,10) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -1047,8 +1047,8 @@ lD_12 :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 792, 396, 6, 180 ],
-  autGroup := Group( [ ( 1, 3, 9, 8,12,10, 6, 5, 4, 7,11), ( 1, 7, 5, 6,11, 4)( 2, 9,10,12, 3, 8) ] ),
-  autSubgroup := Group( [ ( 1, 3, 9, 8,12,10, 6, 5, 4, 7,11), ( 1, 7, 5, 6,11, 4)( 2, 9,10,12, 3, 8) ] ),
+  autGroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7 ],
   blockSizes := [ 6 ],
@@ -1096,8 +1096,8 @@ for D in lD_12 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_12_reduced :=  [
  rec( parameters := [ 12, 22, 11, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 9)( 3,11, 8)( 4, 5, 7), ( 1, 8,12, 3, 9)( 4,10, 6, 5,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9)( 3,11, 8)( 4, 5, 7), ( 1, 8,12, 3, 9)( 4,10, 6, 5,11) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 11, 12 ],
   blockSizes := [ 6 ],
@@ -1111,7 +1111,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 66, 55, 10, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8)( 2, 4, 5,11, 3, 9)( 7,10), ( 1,10,12, 2, 3, 4, 9, 5)( 6, 7,11, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 10 ],
@@ -1125,7 +1125,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 66, 55, 10, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2,11)( 3, 7,10)( 4, 8, 6)( 5, 9,12), ( 1,10,11, 3,12)( 4, 6, 5, 9, 8) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 10 ],
@@ -1139,7 +1139,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 66, 55, 10, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 2, 5,10, 9, 6,12, 7, 4, 3, 8,11), ( 1,10, 6)( 2, 9, 7)( 3, 5, 4)( 8,11,12) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 10 ],
@@ -1194,8 +1194,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 1, 3, 5)( 2,10, 8, 9, 6,11)( 4, 7), ( 1, 5, 3,12,11, 9, 6,10, 4, 8, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5)( 2,10, 8, 9, 6,11)( 4, 7), ( 1, 5, 3,12,11, 9, 6,10, 4, 8, 7) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 10 ],
   blockSizes := [ 6 ],
@@ -1208,8 +1208,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 7)( 4,11)( 5, 6)( 9,12), ( 1, 6)( 4,10)( 5, 7)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,11,10, 5, 6)( 3, 8, 4,12, 7), ( 1,11, 2, 6, 7,12, 3, 4, 8,10, 9) ] ),
+  autGroup := Group( [ ( 1, 4,11, 8, 5)( 6,10, 9,12, 7), ( 1, 3, 2)( 4,10, 8)( 5,11, 7)( 6, 9,12), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 6)( 2,12)( 3, 9)( 4,11)( 5, 8)( 7,10), ( 1, 3, 6, 2)( 4,12, 7,11)( 5, 8,10, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 6, 10 ],
   blockSizes := [ 6 ],
@@ -1222,8 +1222,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 1, 4, 3, 6,12)( 7, 8,10,11, 9), ( 1,12, 3, 4,11)( 2, 5, 9, 6,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 3, 6,12)( 7, 8,10,11, 9), ( 1,12, 3, 4,11)( 2, 5, 9, 6,10) ] ),
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 6, 7 ],
   blockSizes := [ 6 ],
@@ -1250,8 +1250,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 55, 5, 20 ],
-  autGroup := Group( [ ( 2, 9,10)( 3, 8, 4)( 5,11, 7), ( 1,12, 8,10, 4)( 2, 7,11, 9, 6) ] ),
-  autSubgroup := Group( [ ( 2, 9,10)( 3, 8, 4)( 5,11, 7), ( 1,12, 8,10, 4)( 2, 7,11, 9, 6) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 11 ],
   blockSizes := [ 5 ],
@@ -1264,8 +1264,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 55, 5, 20 ],
-  autGroup := Group( [ ( 1, 4, 3, 5, 9,10,12, 6, 7,11, 2), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 4)( 6, 9)( 7,10)( 8,12) ] ),
-  autSubgroup := Group( [ ( 1, 7, 4,10, 3, 8)( 2,11, 9, 5,12, 6), ( 1,12, 8, 9, 2, 4, 3, 6, 5, 7,11) ] ),
+  autGroup := Group( [ ( 1, 2)( 3, 4)( 6, 9)( 7,10)( 8,12), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 3, 5, 6,10, 8,12, 9, 7,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -1292,8 +1292,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 66, 6, 30 ],
-  autGroup := Group( [ ( 1, 3, 4, 8, 9,11,12, 2,10, 5, 6), ( 1,12,10, 5, 2, 8, 7,11, 9, 6, 4) ] ),
-  autSubgroup := Group( [ ( 1, 3, 4, 8, 9,11,12, 2,10, 5, 6), ( 1,12,10, 5, 2, 8, 7,11, 9, 6, 4) ] ),
+  autGroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -1306,8 +1306,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 55, 4, 15 ],
-  autGroup := Group( [ ( 1, 6, 8, 5, 9, 2, 7,11)( 3,10,12, 4), ( 1, 9, 5)( 2,11, 7, 3, 4,10)( 6, 8) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8, 5, 9, 2, 7,11)( 3,10,12, 4), ( 1, 9, 5)( 2,11, 7, 3, 4,10)( 6, 8) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 2 ],
   baseBlock := [ 1, 2, 3, 7 ],
   blockSizes := [ 4 ],
@@ -1320,8 +1320,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 55, 4, 15 ],
-  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 6)( 4, 9)( 5,11)( 7, 8)(10,12), ( 1, 3)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  autSubgroup := Group( [ ( 1, 4,10, 8, 6)( 2, 3, 7,12, 9), ( 1, 5)( 2,11)( 3, 7)( 4,12)( 6, 8)( 9,10) ] ),
+  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 6)( 4, 9)( 5,11)( 7, 8)(10,12), ( 1, 3, 6,11,10, 7,12, 8, 5, 4, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -1348,8 +1348,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 110, 8, 70 ],
-  autGroup := Group( [ ( 1, 6, 8, 5)( 2, 3)( 4, 7)( 9,10,12,11), ( 1, 7,11, 8, 4, 6, 2, 5)( 3, 9,12,10) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8, 5)( 2, 3)( 4, 7)( 9,10,12,11), ( 1, 7,11, 8, 4, 6, 2, 5)( 3, 9,12,10) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 11 ],
   blockSizes := [ 8 ],
@@ -1377,7 +1377,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 55, 3, 10 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 3, 8,11)( 4, 6, 7,12, 5,10), ( 1,10, 9,12, 2)( 3, 7, 5, 4, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1391,7 +1391,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 55, 3, 10 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 8, 2, 7,11, 9,12, 4, 5, 6, 3), ( 1, 8)( 2, 7, 3,10, 6, 5)( 4, 9,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1405,7 +1405,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 55, 3, 10 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 9,11,10)( 2, 5, 8, 3,12, 7), ( 1, 9,11, 8,12)( 2, 3,10, 6, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1475,7 +1475,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 165, 9, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 3, 4,11,12, 7)( 5, 8, 6,10, 9), ( 1, 9, 6, 8, 3, 4, 7, 5)( 2,10,12,11) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 9 ],
@@ -1516,8 +1516,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 330, 110, 4, 30 ],
-  autGroup := Group( [ ( 2, 4,12, 5,11,10, 7, 3, 8, 6, 9), ( 1, 6, 3,12, 2, 8,10, 5,11, 7, 9) ] ),
-  autSubgroup := Group( [ ( 2, 4,12, 5,11,10, 7, 3, 8, 6, 9), ( 1, 6, 3,12, 2, 8,10, 5,11, 7, 9) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -1545,7 +1545,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 495, 165, 4, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 7, 5, 6, 9,12, 8,10)( 2, 3,11, 4), ( 1, 7, 8, 4, 6, 3,12, 2, 5, 9,11) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -1587,7 +1587,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 495, 330, 8, 210 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 8, 3, 4, 7, 9, 2,10)( 5, 6,11,12), ( 1,10,12, 2, 3, 8)( 4, 5, 7, 9,11, 6) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
@@ -1629,7 +1629,7 @@ lD_12_reduced :=  [
   v:= 12),
  rec( parameters := [ 12, 792, 330, 5, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4,11, 9, 5)( 3, 6, 7, 8,10,12), ( 1,11, 4, 3, 7)( 5, 6, 9,12,10) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -1670,8 +1670,8 @@ lD_12_reduced :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 792, 396, 6, 180 ],
-  autGroup := Group( [ ( 1, 3, 9, 8,12,10, 6, 5, 4, 7,11), ( 1, 7, 5, 6,11, 4)( 2, 9,10,12, 3, 8) ] ),
-  autSubgroup := Group( [ ( 1, 3, 9, 8,12,10, 6, 5, 4, 7,11), ( 1, 7, 5, 6,11, 4)( 2, 9,10,12, 3, 8) ] ),
+  autGroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7 ],
   blockSizes := [ 6 ],
@@ -1747,8 +1747,8 @@ for D in lD_12_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , 
 
 lD_12_all :=  [
  rec( parameters := [ 12, 22, 11, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 9)( 3,11, 8)( 4, 5, 7), ( 1, 8,12, 3, 9)( 4,10, 6, 5,11) ] ),
-  autSubgroup := Group( [ ( 1, 2, 9)( 3,11, 8)( 4, 5, 7), ( 1, 8,12, 3, 9)( 4,10, 6, 5,11) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 11, 12 ],
   blockSizes := [ 6 ],
@@ -1762,7 +1762,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 66, 55, 10, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8)( 2, 4, 5,11, 3, 9)( 7,10), ( 1,10,12, 2, 3, 4, 9, 5)( 6, 7,11, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 10 ],
@@ -1776,7 +1776,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 66, 55, 10, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2,11)( 3, 7,10)( 4, 8, 6)( 5, 9,12), ( 1,10,11, 3,12)( 4, 6, 5, 9, 8) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 10 ],
@@ -1790,7 +1790,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 66, 55, 10, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 2, 5,10, 9, 6,12, 7, 4, 3, 8,11), ( 1,10, 6)( 2, 9, 7)( 3, 5, 4)( 8,11,12) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 7 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ],
   blockSizes := [ 10 ],
@@ -1845,8 +1845,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 1, 3, 5)( 2,10, 8, 9, 6,11)( 4, 7), ( 1, 5, 3,12,11, 9, 6,10, 4, 8, 7) ] ),
-  autSubgroup := Group( [ ( 1, 3, 5)( 2,10, 8, 9, 6,11)( 4, 7), ( 1, 5, 3,12,11, 9, 6,10, 4, 8, 7) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 5, 10 ],
   blockSizes := [ 6 ],
@@ -1859,8 +1859,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 1, 4, 3, 6,12)( 7, 8,10,11, 9), ( 1,12, 3, 4,11)( 2, 5, 9, 6,10) ] ),
-  autSubgroup := Group( [ ( 1, 4, 3, 6,12)( 7, 8,10,11, 9), ( 1,12, 3, 4,11)( 2, 5, 9, 6,10) ] ),
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 6, 7 ],
   blockSizes := [ 6 ],
@@ -1873,8 +1873,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 1, 2,12)( 3,11, 7)( 4, 6, 9)( 5, 8,10), ( 1, 5, 9)( 2, 7, 4)( 3, 8, 6)(10,12,11) ] ),
-  autSubgroup := Group( [ ( 1, 2,12)( 3,11, 7)( 4, 6, 9)( 5, 8,10), ( 1, 5, 9)( 2, 7, 4)( 3, 8, 6)(10,12,11) ] ),
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 6, 8 ],
   blockSizes := [ 6 ],
@@ -1887,8 +1887,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 110, 55, 6, 25 ],
-  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 7)( 4,11)( 5, 6)( 9,12), ( 1, 6)( 4,10)( 5, 7)( 8,12)( 9,11) ] ),
-  autSubgroup := Group( [ ( 1,11,10, 5, 6)( 3, 8, 4,12, 7), ( 1,11, 2, 6, 7,12, 3, 4, 8,10, 9) ] ),
+  autGroup := Group( [ ( 1, 4,11, 8, 5)( 6,10, 9,12, 7), ( 1, 3, 2)( 4,10, 8)( 5,11, 7)( 6, 9,12), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 6)( 2,12)( 3, 9)( 4,11)( 5, 8)( 7,10), ( 1, 3, 6, 2)( 4,12, 7,11)( 5, 8,10, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 6 ],
   baseBlock := [ 1, 2, 3, 4, 6, 10 ],
   blockSizes := [ 6 ],
@@ -1915,8 +1915,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 55, 5, 20 ],
-  autGroup := Group( [ ( 2, 9,10)( 3, 8, 4)( 5,11, 7), ( 1,12, 8,10, 4)( 2, 7,11, 9, 6) ] ),
-  autSubgroup := Group( [ ( 2, 9,10)( 3, 8, 4)( 5,11, 7), ( 1,12, 8,10, 4)( 2, 7,11, 9, 6) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 11 ],
   blockSizes := [ 5 ],
@@ -1929,8 +1929,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 55, 5, 20 ],
-  autGroup := Group( [ ( 1, 4, 3, 5, 9,10,12, 6, 7,11, 2), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 4)( 6, 9)( 7,10)( 8,12) ] ),
-  autSubgroup := Group( [ ( 1, 7, 4,10, 3, 8)( 2,11, 9, 5,12, 6), ( 1,12, 8, 9, 2, 4, 3, 6, 5, 7,11) ] ),
+  autGroup := Group( [ ( 1, 2)( 3, 4)( 6, 9)( 7,10)( 8,12), ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 3, 5, 6,10, 8,12, 9, 7,11) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -1957,8 +1957,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 132, 66, 6, 30 ],
-  autGroup := Group( [ ( 1, 3, 4, 8, 9,11,12, 2,10, 5, 6), ( 1,12,10, 5, 2, 8, 7,11, 9, 6, 4) ] ),
-  autSubgroup := Group( [ ( 1, 3, 4, 8, 9,11,12, 2,10, 5, 6), ( 1,12,10, 5, 2, 8, 7,11, 9, 6, 4) ] ),
+  autGroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -1971,8 +1971,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 55, 4, 15 ],
-  autGroup := Group( [ ( 1, 6, 8, 5, 9, 2, 7,11)( 3,10,12, 4), ( 1, 9, 5)( 2,11, 7, 3, 4,10)( 6, 8) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8, 5, 9, 2, 7,11)( 3,10,12, 4), ( 1, 9, 5)( 2,11, 7, 3, 4,10)( 6, 8) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 2 ],
   baseBlock := [ 1, 2, 3, 7 ],
   blockSizes := [ 4 ],
@@ -1985,8 +1985,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 55, 4, 15 ],
-  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 6)( 4, 9)( 5,11)( 7, 8)(10,12), ( 1, 3)( 4,11)( 5,10)( 6, 9)( 7, 8) ] ),
-  autSubgroup := Group( [ ( 1, 4,10, 8, 6)( 2, 3, 7,12, 9), ( 1, 5)( 2,11)( 3, 7)( 4,12)( 6, 8)( 9,10) ] ),
+  autGroup := Group( [ ( 2, 3)( 4, 5)( 7,10)( 8,11)( 9,12), ( 1, 2)( 3, 6)( 4, 9)( 5,11)( 7, 8)(10,12), ( 1, 3, 6,11,10, 7,12, 8, 5, 4, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -2013,8 +2013,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 165, 110, 8, 70 ],
-  autGroup := Group( [ ( 1, 6, 8, 5)( 2, 3)( 4, 7)( 9,10,12,11), ( 1, 7,11, 8, 4, 6, 2, 5)( 3, 9,12,10) ] ),
-  autSubgroup := Group( [ ( 1, 6, 8, 5)( 2, 3)( 4, 7)( 9,10,12,11), ( 1, 7,11, 8, 4, 6, 2, 5)( 3, 9,12,10) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 11 ],
   blockSizes := [ 8 ],
@@ -2042,7 +2042,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 55, 3, 10 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2)( 3, 8,11)( 4, 6, 7,12, 5,10), ( 1,10, 9,12, 2)( 3, 7, 5, 4, 8) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -2056,7 +2056,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 55, 3, 10 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 8, 2, 7,11, 9,12, 4, 5, 6, 3), ( 1, 8)( 2, 7, 3,10, 6, 5)( 4, 9,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -2070,7 +2070,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 55, 3, 10 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 6, 4, 9,11,10)( 2, 5, 8, 3,12, 7), ( 1, 9,11, 8,12)( 2, 3,10, 6, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11), ( 2, 5, 6,10, 4)( 3, 9,11, 8, 7), ( 1,12)( 2,11)( 3, 6)( 4, 8)( 5, 9)( 7,10) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -2140,7 +2140,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 220, 165, 9, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 3, 4,11,12, 7)( 5, 8, 6,10, 9), ( 1, 9, 6, 8, 3, 4, 7, 5)( 2,10,12,11) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ],
   blockSizes := [ 9 ],
@@ -2181,8 +2181,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 330, 110, 4, 30 ],
-  autGroup := Group( [ ( 2, 4,12, 5,11,10, 7, 3, 8, 6, 9), ( 1, 6, 3,12, 2, 8,10, 5,11, 7, 9) ] ),
-  autSubgroup := Group( [ ( 2, 4,12, 5,11,10, 7, 3, 8, 6, 9), ( 1, 6, 3,12, 2, 8,10, 5,11, 7, 9) ] ),
+  autGroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
+  autSubgroup := Group( [ ( 1, 5, 7)( 2, 9, 4)( 3, 8,10), ( 2, 6)( 3, 5)( 4, 7)( 9,10), ( 1,11)( 2, 7)( 3, 5)( 4, 6), ( 2, 5)( 3, 6)( 4, 7)(11,12) ] ),
   groupNumbers := [ 1, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -2210,7 +2210,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 495, 165, 4, 45 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 7, 5, 6, 9,12, 8,10)( 2, 3,11, 4), ( 1, 7, 8, 4, 6, 3,12, 2, 5, 9,11) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -2252,7 +2252,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 495, 330, 8, 210 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 8, 3, 4, 7, 9, 2,10)( 5, 6,11,12), ( 1,10,12, 2, 3, 8)( 4, 5, 7, 9,11, 6) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8 ],
   blockSizes := [ 8 ],
@@ -2294,7 +2294,7 @@ lD_12_all :=  [
   v:= 12),
  rec( parameters := [ 12, 792, 330, 5, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 4,11, 9, 5)( 3, 6, 7, 8,10,12), ( 1,11, 4, 3, 7)( 5, 6, 9,12,10) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5 ],
   blockSizes := [ 5 ],
@@ -2335,8 +2335,8 @@ lD_12_all :=  [
   t := 2 ),
   v:= 12),
  rec( parameters := [ 12, 792, 396, 6, 180 ],
-  autGroup := Group( [ ( 1, 3, 9, 8,12,10, 6, 5, 4, 7,11), ( 1, 7, 5, 6,11, 4)( 2, 9,10,12, 3, 8) ] ),
-  autSubgroup := Group( [ ( 1, 3, 9, 8,12,10, 6, 5, 4, 7,11), ( 1, 7, 5, 6,11, 4)( 2, 9,10,12, 3, 8) ] ),
+  autGroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
+  autSubgroup := Group( [ (1,2,3)(4,5,6)(7,8,9), (2,4,3,7)(5,6,9,8), (2,9,3,5)(4,6,7,8), ( 1,10)( 4, 7)( 5, 6)( 8, 9), ( 4, 8)( 5, 9)( 6, 7)(10,11), ( 4, 7)( 5, 8)( 6, 9)(11,12) ] ),
   groupNumbers := [ 2, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7 ],
   blockSizes := [ 6 ],

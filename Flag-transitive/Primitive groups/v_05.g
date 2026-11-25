@@ -6,7 +6,7 @@
 #               lD_5 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
+# 1. number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------

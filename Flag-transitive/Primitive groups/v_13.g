@@ -6,7 +6,7 @@
 #               lD_13 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
+# 1. number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,18 +31,18 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G          Gα          GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   13  13    4    4   1    PSL3(3)    3^2:Q8:3:2  3^2:Q8:3:2          PSL3(3)    2      2           7      1       3       true             true             true             true                 2           true       PG(2,3) parameters                
-# 2   13  13    9    9   6    PSL3(3)    3^2:Q8:3:2  3^2:Q8:3:2          PSL3(3)    2      2           7      1       3       true             true             true             true                 1           true       complement of PG(2,3) parameters  
-# 3   13  26    12   6   5    AGL1(13)   12          6                   AGL1(13)   2      2           6      1       3       true             false            true             false                                                                         
-# 4   13  39    12   4   3    AGL1(13)   12          4                   AGL1(13)   2      2           6      1       2       true             false            true             false                                                                         
-# 5   13  52    12   3   2    AGL1(13)   12          3                   AGL1(13)   2      2           6      1       1       true             false            true             false                                                                         
-# 6   13  52    12   3   2    PSL3(3)    3^2:Q8:3:2  3^2:3:2^2           PSL3(3)    2      2           7      1       1       true             false            true             false                                                                         
-# 7   13  78    36   6   15   PSL3(3)    3^2:Q8:3:2  (S3xS3):2           PSL3(3)    2      2           7      1       4       true             false            true             false                                                                         
+# 1   13  13    4    4   1    PSL(3,3)   3^2:Q8:3:2  3^2:Q8:3:2          PSL(3,3)   2      2           7      1       3       true             true             true             true                 2           true       PG(2,3) parameters                
+# 2   13  13    9    9   6    PSL(3,3)   3^2:Q8:3:2  3^2:Q8:3:2          PSL(3,3)   2      2           7      1       3       true             true             true             true                 1           true       complement of PG(2,3) parameters  
+# 3   13  26    12   6   5    AGL(1,13)  12          6                   AGL(1,13)  2      2           6      1       3       true             false            true             false                                                                         
+# 4   13  39    12   4   3    AGL(1,13)  12          4                   AGL(1,13)  2      2           6      1       2       true             false            true             false                                                                         
+# 5   13  52    12   3   2    AGL(1,13)  12          3                   AGL(1,13)  2      2           6      1       1       true             false            true             false                                                                         
+# 6   13  52    12   3   2    PSL(3,3)   3^2:Q8:3:2  3^2:3:2^2           PSL(3,3)   2      2           7      1       1       true             false            true             false                                                                         
+# 7   13  78    36   6   15   PSL(3,3)   3^2:Q8:3:2  (S3xS3):2           PSL(3,3)   2      2           7      1       4       true             false            true             false                                                                         
 # 8   13  78    66   11  55   A13        A12         (S11 x S2) cap A13  S13        2      2           8      1       5       true             true             true             true                                        complete                          
-# 9   13  117   72   8   42   PSL3(3)    3^2:Q8:3:2  GL2(3)              PSL3(3)    2      2           7      1       5       true             false            true             false                                                                         
-# 10  13  234   54   3   9    PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
-# 11  13  234   72   4   18   PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
-# 12  13  234   108  6   45   PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
+# 9   13  117   72   8   42   PSL(3,3)   3^2:Q8:3:2  GL(2,3)             PSL(3,3)   2      2           7      1       5       true             false            true             false                                                                         
+# 10  13  234   54   3   9    PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
+# 11  13  234   72   4   18   PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
+# 12  13  234   108  6   45   PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
 # 13  13  286   66   3   11   A13        A12         (S3 x S10) cap A13  S13        2      2           8      1       1       true             true             true             true                 14                     complete                          
 # 14  13  286   220  10  165  A13        A12         (S10 x S3) cap A13  S13        2      2           8      1       1       true             true             true             true                 13                     complete                          
 # 15  13  715   220  4   55   A13        A12         (S4 x S9) cap A13   S13        2      2           8      1       2       true             true             true             true                 16                     complete                          
@@ -57,70 +57,70 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G          Gα          GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   13  13    4    4   1    PSL3(3)    3^2:Q8:3:2  3^2:Q8:3:2          PSL3(3)    2      2           7      1       3       true             true             true             true                 2           true       PG(2,3) parameters                
-# 2   13  13    9    9   6    PSL3(3)    3^2:Q8:3:2  3^2:Q8:3:2          PSL3(3)    2      2           7      1       3       true             true             true             true                 1           true       complement of PG(2,3) parameters  
-# 3   13  26    12   6   5    AGL1(13)   12          6                   AGL1(13)   2      2           6      1       3       true             false            true             false                                                                         
-# 4   13  39    12   4   3    AGL1(13)   12          4                   AGL1(13)   2      2           6      1       2       true             false            true             false                                                                         
-# 5   13  52    12   3   2    AGL1(13)   12          3                   AGL1(13)   2      2           6      1       1       true             false            true             false                                                                         
-# 6   13  52    12   3   2    PSL3(3)    3^2:Q8:3:2  3^2:3:2^2           PSL3(3)    2      2           7      1       1       true             false            true             false                                                                         
-# 7   13  78    36   6   15   PSL3(3)    3^2:Q8:3:2  (S3xS3):2           PSL3(3)    2      2           7      1       4       true             false            true             false                                                                         
+# 1   13  13    4    4   1    PSL(3,3)   3^2:Q8:3:2  3^2:Q8:3:2          PSL(3,3)   2      2           7      1       3       true             true             true             true                 2           true       PG(2,3) parameters                
+# 2   13  13    9    9   6    PSL(3,3)   3^2:Q8:3:2  3^2:Q8:3:2          PSL(3,3)   2      2           7      1       3       true             true             true             true                 1           true       complement of PG(2,3) parameters  
+# 3   13  26    12   6   5    AGL(1,13)  12          6                   AGL(1,13)  2      2           6      1       3       true             false            true             false                                                                         
+# 4   13  39    12   4   3    AGL(1,13)  12          4                   AGL(1,13)  2      2           6      1       2       true             false            true             false                                                                         
+# 5   13  52    12   3   2    AGL(1,13)  12          3                   AGL(1,13)  2      2           6      1       1       true             false            true             false                                                                         
+# 6   13  52    12   3   2    PSL(3,3)   3^2:Q8:3:2  3^2:3:2^2           PSL(3,3)   2      2           7      1       1       true             false            true             false                                                                         
+# 7   13  78    36   6   15   PSL(3,3)   3^2:Q8:3:2  (S3xS3):2           PSL(3,3)   2      2           7      1       4       true             false            true             false                                                                         
 # 8   13  78    66   11  55   A13        A12         (S11 x S2) cap A13  S13        2      2           8      1       5       true             true             true             true                                        complete                          
 # 9   13  78    66   11  55   S13        S12         S11 x S2            S13        2      2           9      1       5       true             true             true             true                                        complete                          
-# 10  13  117   72   8   42   PSL3(3)    3^2:Q8:3:2  GL2(3)              PSL3(3)    2      2           7      1       5       true             false            true             false                                                                         
-# 11  13  234   54   3   9    PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
-# 12  13  234   72   4   18   PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
-# 13  13  234   108  6   45   PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
+# 10  13  117   72   8   42   PSL(3,3)   3^2:Q8:3:2  GL(2,3)             PSL(3,3)   2      2           7      1       5       true             false            true             false                                                                         
+# 11  13  234   54   3   9    PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
+# 12  13  234   72   4   18   PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
+# 13  13  234   108  6   45   PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
 # 14  13  286   66   3   11   A13        A12         (S3 x S10) cap A13  S13        2      2           8      1       1       true             true             true             true                 16                     complete                          
-# 15  13  286   66   3   11   S13        S12         S3 x S10            S13        2      2           9      1       1       true             true             true             true                 17                     complete                          
+# 15  13  286   66   3   11   S13        S12         S3 x S10            S13        2      2           9      1       1       true             true             true             true                 16                     complete                          
 # 16  13  286   220  10  165  A13        A12         (S10 x S3) cap A13  S13        2      2           8      1       1       true             true             true             true                 14                     complete                          
-# 17  13  286   220  10  165  S13        S12         S10 x S3            S13        2      2           9      1       1       true             true             true             true                 15                     complete                          
+# 17  13  286   220  10  165  S13        S12         S10 x S3            S13        2      2           9      1       1       true             true             true             true                 14                     complete                          
 # 18  13  715   220  4   55   A13        A12         (S4 x S9) cap A13   S13        2      2           8      1       2       true             true             true             true                 20                     complete                          
-# 19  13  715   220  4   55   S13        S12         S4 x S9             S13        2      2           9      1       2       true             true             true             true                 21                     complete                          
+# 19  13  715   220  4   55   S13        S12         S4 x S9             S13        2      2           9      1       2       true             true             true             true                 20                     complete                          
 # 20  13  715   495  9   330  A13        A12         (S9 x S4) cap A13   S13        2      2           8      1       2       true             true             true             true                 18                     complete                          
-# 21  13  715   495  9   330  S13        S12         S9 x S4             S13        2      2           9      1       2       true             true             true             true                 19                     complete                          
+# 21  13  715   495  9   330  S13        S12         S9 x S4             S13        2      2           9      1       2       true             true             true             true                 18                     complete                          
 # 22  13  1287  495  5   165  A13        A12         (S5 x S8) cap A13   S13        2      2           8      1       3       true             true             true             true                 24                     complete                          
-# 23  13  1287  495  5   165  S13        S12         S5 x S8             S13        2      2           9      1       3       true             true             true             true                 25                     complete                          
+# 23  13  1287  495  5   165  S13        S12         S5 x S8             S13        2      2           9      1       3       true             true             true             true                 24                     complete                          
 # 24  13  1287  792  8   462  A13        A12         (S8 x S5) cap A13   S13        2      2           8      1       3       true             true             true             true                 22                     complete                          
-# 25  13  1287  792  8   462  S13        S12         S8 x S5             S13        2      2           9      1       3       true             true             true             true                 23                     complete                          
+# 25  13  1287  792  8   462  S13        S12         S8 x S5             S13        2      2           9      1       3       true             true             true             true                 22                     complete                          
 # 26  13  1716  792  6   330  A13        A12         (S6 x S7) cap A13   S13        2      2           8      1       4       true             true             true             true                 28                     complete                          
-# 27  13  1716  792  6   330  S13        S12         S6 x S7             S13        2      2           9      1       4       true             true             true             true                 29                     complete                          
+# 27  13  1716  792  6   330  S13        S12         S6 x S7             S13        2      2           9      1       4       true             true             true             true                 28                     complete                          
 # 28  13  1716  924  7   462  A13        A12         (S7 x S6) cap A13   S13        2      2           8      1       4       true             true             true             true                 26                     complete                          
-# 29  13  1716  924  7   462  S13        S12         S7 x S6             S13        2      2           9      1       4       true             true             true             true                 27                     complete                          
+# 29  13  1716  924  7   462  S13        S12         S7 x S6             S13        2      2           9      1       4       true             true             true             true                 26                     complete                          
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G          Gα          GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   13  13    4    4   1    PSL3(3)    3^2:Q8:3:2  3^2:Q8:3:2          PSL3(3)    2      2           7      1       3       true             true             true             true                 2           true       PG(2,3) parameters                
-# 2   13  13    9    9   6    PSL3(3)    3^2:Q8:3:2  3^2:Q8:3:2          PSL3(3)    2      2           7      1       3       true             true             true             true                 1           true       complement of PG(2,3) parameters  
-# 3   13  26    12   6   5    AGL1(13)   12          6                   AGL1(13)   2      2           6      1       3       true             false            true             false                                                                         
-# 4   13  39    12   4   3    AGL1(13)   12          4                   AGL1(13)   2      2           6      1       2       true             false            true             false                                                                         
-# 5   13  52    12   3   2    AGL1(13)   12          3                   AGL1(13)   2      2           6      1       1       true             false            true             false                                                                         
-# 6   13  52    12   3   2    PSL3(3)    3^2:Q8:3:2  3^2:3:2^2           PSL3(3)    2      2           7      1       1       true             false            true             false                                                                         
-# 7   13  78    36   6   15   PSL3(3)    3^2:Q8:3:2  (S3xS3):2           PSL3(3)    2      2           7      1       4       true             false            true             false                                                                         
+# 1   13  13    4    4   1    PSL(3,3)   3^2:Q8:3:2  3^2:Q8:3:2          PSL(3,3)   2      2           7      1       3       true             true             true             true                 2           true       PG(2,3) parameters                
+# 2   13  13    9    9   6    PSL(3,3)   3^2:Q8:3:2  3^2:Q8:3:2          PSL(3,3)   2      2           7      1       3       true             true             true             true                 1           true       complement of PG(2,3) parameters  
+# 3   13  26    12   6   5    AGL(1,13)  12          6                   AGL(1,13)  2      2           6      1       3       true             false            true             false                                                                         
+# 4   13  39    12   4   3    AGL(1,13)  12          4                   AGL(1,13)  2      2           6      1       2       true             false            true             false                                                                         
+# 5   13  52    12   3   2    AGL(1,13)  12          3                   AGL(1,13)  2      2           6      1       1       true             false            true             false                                                                         
+# 6   13  52    12   3   2    PSL(3,3)   3^2:Q8:3:2  3^2:3:2^2           PSL(3,3)   2      2           7      1       1       true             false            true             false                                                                         
+# 7   13  78    36   6   15   PSL(3,3)   3^2:Q8:3:2  (S3xS3):2           PSL(3,3)   2      2           7      1       4       true             false            true             false                                                                         
 # 8   13  78    66   11  55   A13        A12         (S11 x S2) cap A13  S13        2      2           8      1       5       true             true             true             true                                        complete                          
 # 9   13  78    66   11  55   S13        S12         S11 x S2            S13        2      2           9      1       5       true             true             true             true                                        complete                          
-# 10  13  117   72   8   42   PSL3(3)    3^2:Q8:3:2  GL2(3)              PSL3(3)    2      2           7      1       5       true             false            true             false                                                                         
-# 11  13  234   54   3   9    PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
-# 12  13  234   72   4   18   PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
-# 13  13  234   108  6   45   PSL3(3)    3^2:Q8:3:2  S4                  PSL3(3)    2      2           7      1       2       true             true             true             false                                                                         
+# 10  13  117   72   8   42   PSL(3,3)   3^2:Q8:3:2  GL(2,3)             PSL(3,3)   2      2           7      1       5       true             false            true             false                                                                         
+# 11  13  234   54   3   9    PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
+# 12  13  234   72   4   18   PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
+# 13  13  234   108  6   45   PSL(3,3)   3^2:Q8:3:2  S4                  PSL(3,3)   2      2           7      1       2       true             true             true             false                                                                         
 # 14  13  286   66   3   11   A13        A12         (S3 x S10) cap A13  S13        2      2           8      1       1       true             true             true             true                 16                     complete                          
-# 15  13  286   66   3   11   S13        S12         S3 x S10            S13        2      2           9      1       1       true             true             true             true                 17                     complete                          
+# 15  13  286   66   3   11   S13        S12         S3 x S10            S13        2      2           9      1       1       true             true             true             true                 16                     complete                          
 # 16  13  286   220  10  165  A13        A12         (S10 x S3) cap A13  S13        2      2           8      1       1       true             true             true             true                 14                     complete                          
-# 17  13  286   220  10  165  S13        S12         S10 x S3            S13        2      2           9      1       1       true             true             true             true                 15                     complete                          
+# 17  13  286   220  10  165  S13        S12         S10 x S3            S13        2      2           9      1       1       true             true             true             true                 14                     complete                          
 # 18  13  715   220  4   55   A13        A12         (S4 x S9) cap A13   S13        2      2           8      1       2       true             true             true             true                 20                     complete                          
-# 19  13  715   220  4   55   S13        S12         S4 x S9             S13        2      2           9      1       2       true             true             true             true                 21                     complete                          
+# 19  13  715   220  4   55   S13        S12         S4 x S9             S13        2      2           9      1       2       true             true             true             true                 20                     complete                          
 # 20  13  715   495  9   330  A13        A12         (S9 x S4) cap A13   S13        2      2           8      1       2       true             true             true             true                 18                     complete                          
-# 21  13  715   495  9   330  S13        S12         S9 x S4             S13        2      2           9      1       2       true             true             true             true                 19                     complete                          
+# 21  13  715   495  9   330  S13        S12         S9 x S4             S13        2      2           9      1       2       true             true             true             true                 18                     complete                          
 # 22  13  1287  495  5   165  A13        A12         (S5 x S8) cap A13   S13        2      2           8      1       3       true             true             true             true                 24                     complete                          
-# 23  13  1287  495  5   165  S13        S12         S5 x S8             S13        2      2           9      1       3       true             true             true             true                 25                     complete                          
+# 23  13  1287  495  5   165  S13        S12         S5 x S8             S13        2      2           9      1       3       true             true             true             true                 24                     complete                          
 # 24  13  1287  792  8   462  A13        A12         (S8 x S5) cap A13   S13        2      2           8      1       3       true             true             true             true                 22                     complete                          
-# 25  13  1287  792  8   462  S13        S12         S8 x S5             S13        2      2           9      1       3       true             true             true             true                 23                     complete                          
+# 25  13  1287  792  8   462  S13        S12         S8 x S5             S13        2      2           9      1       3       true             true             true             true                 22                     complete                          
 # 26  13  1716  792  6   330  A13        A12         (S6 x S7) cap A13   S13        2      2           8      1       4       true             true             true             true                 28                     complete                          
-# 27  13  1716  792  6   330  S13        S12         S6 x S7             S13        2      2           9      1       4       true             true             true             true                 29                     complete                          
+# 27  13  1716  792  6   330  S13        S12         S6 x S7             S13        2      2           9      1       4       true             true             true             true                 28                     complete                          
 # 28  13  1716  924  7   462  A13        A12         (S7 x S6) cap A13   S13        2      2           8      1       4       true             true             true             true                 26                     complete                          
-# 29  13  1716  924  7   462  S13        S12         S7 x S6             S13        2      2           9      1       4       true             true             true             true                 27                     complete                          
+# 29  13  1716  924  7   462  S13        S12         S7 x S6             S13        2      2           9      1       4       true             true             true             true                 26                     complete                          
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
@@ -133,7 +133,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
@@ -149,7 +149,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      true        true        
-# Block-primitive type                                         
+# Block-primitive type                 2                       
 # -------------------------------------------------------------
 
 # Design: 2
@@ -159,7 +159,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
@@ -175,7 +175,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      true        true        
-# Block-primitive type                                         
+# Block-primitive type                 2                       
 # -------------------------------------------------------------
 
 # Design: 3
@@ -185,7 +185,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL1(13)   AGL1(13)  
+# Structure                            AGL(1,13)  AGL(1,13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     12         12         
@@ -201,7 +201,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 1          1          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 4
@@ -211,7 +211,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL1(13)   AGL1(13)  
+# Structure                            AGL(1,13)  AGL(1,13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     12         12         
@@ -227,7 +227,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 1          1          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 5
@@ -237,7 +237,7 @@
 # -----------------------------------------------------------
 #                                      G          Aut(D)     
 # -----------------------------------------------------------
-# Structure                            AGL1(13)   AGL1(13)  
+# Structure                            AGL(1,13)  AGL(1,13)  
 # Rank                                 2          2          
 # 2-Homogeneous                        true       true       
 # Point-stabiliser                     12         12         
@@ -253,7 +253,7 @@
 # Point-primitive                      true       true       
 # Point-primitive type                 1          1          
 # Block-primitive                      false      false      
-# Block-primitive type                                       
+# Block-primitive type                 0                     
 # -----------------------------------------------------------
 
 # Design: 6
@@ -263,7 +263,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
@@ -279,7 +279,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      false       false       
-# Block-primitive type                                         
+# Block-primitive type                 0                       
 # -------------------------------------------------------------
 
 # Design: 7
@@ -289,7 +289,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
@@ -305,7 +305,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      false       false       
-# Block-primitive type                                         
+# Block-primitive type                 0                       
 # -------------------------------------------------------------
 
 # Design: 8
@@ -341,11 +341,11 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
-# Block-stabiliser                     GL2(3)      GL2(3)     
+# Block-stabiliser                     GL(2,3)     GL(2,3)     
 # Orbit structure of point-stabiliser                          
 # Orbit structure of block-stabiliser                          
 # Point-transitive                     true        true        
@@ -357,7 +357,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      false       false       
-# Block-primitive type                                         
+# Block-primitive type                 0                       
 # -------------------------------------------------------------
 
 # Design: 10
@@ -367,7 +367,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
@@ -383,7 +383,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      true        true        
-# Block-primitive type                                         
+# Block-primitive type                 2                       
 # -------------------------------------------------------------
 
 # Design: 11
@@ -393,7 +393,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
@@ -409,7 +409,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      true        true        
-# Block-primitive type                                         
+# Block-primitive type                 2                       
 # -------------------------------------------------------------
 
 # Design: 12
@@ -419,7 +419,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(3)     PSL3(3)    
+# Structure                            PSL(3,3)    PSL(3,3)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:Q8:3:2  3^2:Q8:3:2  
@@ -435,7 +435,7 @@
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
 # Block-primitive                      true        true        
-# Block-primitive type                                         
+# Block-primitive type                 2                       
 # -------------------------------------------------------------
 
 # Design: 13
@@ -651,8 +651,8 @@
 
 lD_13 :=  [
  rec( parameters := [ 13, 13, 4, 4, 1 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 4, 10 ],
   blockSizes := [ 4 ],
@@ -665,8 +665,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7, 8, 9, 12 ],
   blockSizes := [ 9 ],
@@ -679,8 +679,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6, 7, 12 ],
   blockSizes := [ 6 ],
@@ -693,8 +693,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 2 ],
   baseBlock := [ 1, 2, 5, 10 ],
   blockSizes := [ 4 ],
@@ -707,8 +707,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -721,8 +721,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -735,8 +735,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 36, 6, 15 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 7, 8 ],
   blockSizes := [ 6 ],
@@ -763,8 +763,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 117, 72, 8, 42 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7, 8, 9 ],
   blockSizes := [ 8 ],
@@ -777,8 +777,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 54, 3, 9 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -791,8 +791,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 72, 4, 18 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -805,8 +805,8 @@ lD_13 :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 108, 6, 45 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -938,8 +938,8 @@ for D in lD_13 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets )
 
 lD_13_reduced :=  [
  rec( parameters := [ 13, 13, 4, 4, 1 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 4, 10 ],
   blockSizes := [ 4 ],
@@ -952,8 +952,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7, 8, 9, 12 ],
   blockSizes := [ 9 ],
@@ -966,8 +966,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6, 7, 12 ],
   blockSizes := [ 6 ],
@@ -980,8 +980,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 2 ],
   baseBlock := [ 1, 2, 5, 10 ],
   blockSizes := [ 4 ],
@@ -994,8 +994,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -1008,8 +1008,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -1022,8 +1022,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 36, 6, 15 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 7, 8 ],
   blockSizes := [ 6 ],
@@ -1064,8 +1064,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 117, 72, 8, 42 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7, 8, 9 ],
   blockSizes := [ 8 ],
@@ -1078,8 +1078,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 54, 3, 9 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1092,8 +1092,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 72, 4, 18 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -1106,8 +1106,8 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 108, 6, 45 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -1351,8 +1351,8 @@ for D in lD_13_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , 
 
 lD_13_all :=  [
  rec( parameters := [ 13, 13, 4, 4, 1 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 4, 10 ],
   blockSizes := [ 4 ],
@@ -1365,8 +1365,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 3 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7, 8, 9, 12 ],
   blockSizes := [ 9 ],
@@ -1379,8 +1379,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6, 7, 12 ],
   blockSizes := [ 6 ],
@@ -1393,8 +1393,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 2 ],
   baseBlock := [ 1, 2, 5, 10 ],
   blockSizes := [ 4 ],
@@ -1407,8 +1407,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8), ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  autGroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
+  autSubgroup := Group( [ ( 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 3, 6, 4,11, 7,13, 5,10,12, 9, 8) ] ),
   groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -1421,8 +1421,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -1435,8 +1435,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 36, 6, 15 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 7, 8 ],
   blockSizes := [ 6 ],
@@ -1477,8 +1477,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 117, 72, 8, 42 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7, 8, 9 ],
   blockSizes := [ 8 ],
@@ -1491,8 +1491,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 54, 3, 9 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1505,8 +1505,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 72, 4, 18 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -1519,8 +1519,8 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 234, 108, 6, 45 ],
-  autGroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
-  autSubgroup := Group( [ ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11), ( 1,10, 4)( 6, 9, 7)( 8,12,13) ] ),
+  autGroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
+  autSubgroup := Group( [ ( 1,10, 4)( 6, 9, 7)( 8,12,13), ( 1, 3, 2)( 4, 9, 5)( 7, 8,12)(10,13,11) ] ),
   groupNumbers := [ 7, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],

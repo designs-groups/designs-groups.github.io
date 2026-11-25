@@ -6,7 +6,7 @@
 #               lD_8 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
+# 1. number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,13 +31,13 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα        GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   8  14  7   4  3   AGL1(8)   7         2^2               ASL3(2)   2      2           1      1       1       true             false            true             true                 1                                
-# 2   8  28  14  4  6   PGL2(7)   7:6       A4                PGL2(7)   2      2           5      1       2       true             false            true             true                 2                                
-# 3   8  28  21  6  15  AΓL1(8)   7:3       6                 S8        2      2           2      1       3       true             false            true             true                                        complete  
-# 4   8  42  21  4  9   PSL2(7)   7:3       4                 PGL2(7)   2      2           4      1       4       true             false            true             true                 4                                
-# 5   8  56  21  3  6   AΓL1(8)   7:3       3                 S8        2      2           2      1       1       true             false            true             false                                       complete  
-# 6   8  56  28  4  12  ASL3(2)   PSL3(2)   S4                ASL3(2)   2      2           3      1       3       true             false            true             true                 6                                
-# 7   8  56  35  5  20  A8        A7        (S5 x S3) cap A8  S8        2      2           6      1       1       true             true             true             true                                        complete  
+# 1   8  14  7   4  3   AGL(1,8)  C7        2^2               ASL(3,2)  2      2           1      1       1       true             false            true             true                 1                                
+# 2   8  28  14  4  6   PGL(2,7)  AGL(1,7)  A4                PGL(2,7)  2      2           5      1       2       true             false            true             true                 2                                
+# 3   8  28  21  6  15  AΓL(1,8)  7:3       6                 S8        2      2           2      1       3       true             false            true             true                                        complete  
+# 4   8  42  21  4  9   PSL(2,7)  7:3       4                 PGL(2,7)  2      2           4      1       4       true             false            true             true                 4                                
+# 5   8  56  21  3  6   AΓL(1,8)  7:3       3                 S8        2      2           2      1       1       true             false            true             false                7                      complete  
+# 6   8  56  28  4  12  ASL(3,2)  PSL(3,2)  S4                ASL(3,2)  2      2           3      1       3       true             false            true             true                 6                                
+# 7   8  56  35  5  20  A8        A7        (S5 x S3) cap A8  S8        2      2           6      1       1       true             true             true             true                 5                      complete  
 # 8   8  70  35  4  15  A8        A7        (S4 x S4) cap A8  S8        2      2           6      1       2       true             false            true             true                 8                      complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -45,61 +45,61 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα        GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   8  14  7   4  3   AGL1(8)   7         2^2               ASL3(2)   2      2           1      1       1       true             false            true             true                 1                                
-# 2   8  14  7   4  3   AΓL1(8)   7:3       A4                ASL3(2)   2      2           2      1       2       true             false            true             true                 2                                
-# 3   8  14  7   4  3   ASL3(2)   PSL3(2)   2^4:3:2           ASL3(2)   2      2           3      1       2       true             false            true             true                 3                                
-# 4   8  14  7   4  3   PSL2(7)   7:3       A4                ASL3(2)   2      2           4      1       2       true             false            true             true                 4                                
-# 5   8  28  14  4  6   PGL2(7)   7:6       A4                PGL2(7)   2      2           5      1       2       true             false            true             true                 5                                
-# 6   8  28  21  6  15  AΓL1(8)   7:3       6                 S8        2      2           2      1       3       true             false            true             true                                        complete  
-# 7   8  28  21  6  15  ASL3(2)   PSL3(2)   2xS4              S8        2      2           3      1       4       true             false            true             true                                        complete  
-# 8   8  28  21  6  15  PSL2(7)   7:3       S3                S8        2      2           4      1       5       true             false            true             true                                        complete  
-# 9   8  28  21  6  15  PGL2(7)   7:6       D12               S8        2      2           5      1       4       true             true             true             true                                        complete  
+# 1   8  14  7   4  3   AGL(1,8)  C7        2^2               ASL(3,2)  2      2           1      1       1       true             false            true             true                 1                                
+# 2   8  14  7   4  3   AΓL(1,8)  7:3       A4                ASL(3,2)  2      2           2      1       2       true             false            true             true                 1                                
+# 3   8  14  7   4  3   ASL(3,2)  PSL(3,2)  2^4:3:2           ASL(3,2)  2      2           3      1       2       true             false            true             true                 1                                
+# 4   8  14  7   4  3   PSL(2,7)  7:3       A4                ASL(3,2)  2      2           4      1       2       true             false            true             true                 1                                
+# 5   8  28  14  4  6   PGL(2,7)  AGL(1,7)  A4                PGL(2,7)  2      2           5      1       2       true             false            true             true                 5                                
+# 6   8  28  21  6  15  AΓL(1,8)  7:3       6                 S8        2      2           2      1       3       true             false            true             true                                        complete  
+# 7   8  28  21  6  15  ASL(3,2)  PSL(3,2)  2xS4              S8        2      2           3      1       4       true             false            true             true                                        complete  
+# 8   8  28  21  6  15  PSL(2,7)  7:3       S3                S8        2      2           4      1       5       true             false            true             true                                        complete  
+# 9   8  28  21  6  15  PGL(2,7)  AGL(1,7)  D12               S8        2      2           5      1       4       true             true             true             true                                        complete  
 # 10  8  28  21  6  15  A8        A7        (S6 x S2) cap A8  S8        2      2           6      1       3       true             true             true             true                                        complete  
 # 11  8  28  21  6  15  S8        S7        S6 x S2           S8        2      2           7      1       3       true             true             true             true                                        complete  
-# 12  8  42  21  4  9   PSL2(7)   7:3       4                 PGL2(7)   2      2           4      1       4       true             false            true             true                 12                               
-# 13  8  42  21  4  9   PGL2(7)   7:6       D8                PGL2(7)   2      2           5      1       3       true             false            true             true                 13                               
-# 14  8  56  21  3  6   AΓL1(8)   7:3       3                 S8        2      2           2      1       1       true             false            true             false                                       complete  
-# 15  8  56  21  3  6   ASL3(2)   PSL3(2)   S4                S8        2      2           3      1       1       true             false            true             false                                       complete  
-# 16  8  56  21  3  6   PSL2(7)   7:3       3                 S8        2      2           4      1       1       true             false            true             false                                       complete  
-# 17  8  56  21  3  6   PGL2(7)   7:6       S3                S8        2      2           5      1       1       true             false            true             false                                       complete  
+# 12  8  42  21  4  9   PSL(2,7)  7:3       4                 PGL(2,7)  2      2           4      1       4       true             false            true             true                 12                               
+# 13  8  42  21  4  9   PGL(2,7)  AGL(1,7)  D8                PGL(2,7)  2      2           5      1       3       true             false            true             true                 12                               
+# 14  8  56  21  3  6   AΓL(1,8)  7:3       3                 S8        2      2           2      1       1       true             false            true             false                21                     complete  
+# 15  8  56  21  3  6   ASL(3,2)  PSL(3,2)  S4                S8        2      2           3      1       1       true             false            true             false                21                     complete  
+# 16  8  56  21  3  6   PSL(2,7)  7:3       3                 S8        2      2           4      1       1       true             false            true             false                21                     complete  
+# 17  8  56  21  3  6   PGL(2,7)  AGL(1,7)  S3                S8        2      2           5      1       1       true             false            true             false                21                     complete  
 # 18  8  56  21  3  6   A8        A7        (S3 x S5) cap A8  S8        2      2           6      1       1       true             true             true             true                 21                     complete  
-# 19  8  56  21  3  6   S8        S7        S3 x S5           S8        2      2           7      1       1       true             true             true             true                 22                     complete  
-# 20  8  56  28  4  12  ASL3(2)   PSL3(2)   S4                ASL3(2)   2      2           3      1       3       true             false            true             true                 20                               
-# 21  8  56  35  5  20  A8        A7        (S5 x S3) cap A8  S8        2      2           6      1       1       true             true             true             true                 18                     complete  
-# 22  8  56  35  5  20  S8        S7        S5 x S3           S8        2      2           7      1       1       true             true             true             true                 19                     complete  
+# 19  8  56  21  3  6   S8        S7        S3 x S5           S8        2      2           7      1       1       true             true             true             true                 21                     complete  
+# 20  8  56  28  4  12  ASL(3,2)  PSL(3,2)  S4                ASL(3,2)  2      2           3      1       3       true             false            true             true                 20                               
+# 21  8  56  35  5  20  A8        A7        (S5 x S3) cap A8  S8        2      2           6      1       1       true             true             true             true                 14                     complete  
+# 22  8  56  35  5  20  S8        S7        S5 x S3           S8        2      2           7      1       1       true             true             true             true                 14                     complete  
 # 23  8  70  35  4  15  A8        A7        (S4 x S4) cap A8  S8        2      2           6      1       2       true             false            true             true                 23                     complete  
-# 24  8  70  35  4  15  S8        S7        S4 x S4           S8        2      2           7      1       2       true             false            true             true                 24                     complete  
+# 24  8  70  35  4  15  S8        S7        S4 x S4           S8        2      2           7      1       2       true             false            true             true                 23                     complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα        GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   8  14  7   4  3   AGL1(8)   7         2^2               ASL3(2)   2      2           1      1       1       true             false            true             true                 1                                
-# 2   8  14  7   4  3   AΓL1(8)   7:3       A4                ASL3(2)   2      2           2      1       2       true             false            true             true                 2                                
-# 3   8  14  7   4  3   ASL3(2)   PSL3(2)   2^4:3:2           ASL3(2)   2      2           3      1       2       true             false            true             true                 3                                
-# 4   8  14  7   4  3   PSL2(7)   7:3       A4                ASL3(2)   2      2           4      1       2       true             false            true             true                 4                                
-# 5   8  14  7   4  3   PSL2(7)   7:3       A4                ASL3(2)   2      2           4      1       3       true             false            true             true                 5                                
-# 6   8  28  14  4  6   PGL2(7)   7:6       A4                PGL2(7)   2      2           5      1       2       true             false            true             true                 6                                
-# 7   8  28  21  6  15  AΓL1(8)   7:3       6                 S8        2      2           2      1       3       true             false            true             true                                        complete  
-# 8   8  28  21  6  15  ASL3(2)   PSL3(2)   2xS4              S8        2      2           3      1       4       true             false            true             true                                        complete  
-# 9   8  28  21  6  15  PSL2(7)   7:3       S3                S8        2      2           4      1       5       true             false            true             true                                        complete  
-# 10  8  28  21  6  15  PGL2(7)   7:6       D12               S8        2      2           5      1       4       true             true             true             true                                        complete  
+# 1   8  14  7   4  3   AGL(1,8)  C7        2^2               ASL(3,2)  2      2           1      1       1       true             false            true             true                 1                                
+# 2   8  14  7   4  3   AΓL(1,8)  7:3       A4                ASL(3,2)  2      2           2      1       2       true             false            true             true                 1                                
+# 3   8  14  7   4  3   ASL(3,2)  PSL(3,2)  2^4:3:2           ASL(3,2)  2      2           3      1       2       true             false            true             true                 1                                
+# 4   8  14  7   4  3   PSL(2,7)  7:3       A4                ASL(3,2)  2      2           4      1       2       true             false            true             true                 1                                
+# 5   8  14  7   4  3   PSL(2,7)  7:3       A4                ASL(3,2)  2      2           4      1       3       true                              true             true                 1                                
+# 6   8  28  14  4  6   PGL(2,7)  AGL(1,7)  A4                PGL(2,7)  2      2           5      1       2       true             false            true             true                 6                                
+# 7   8  28  21  6  15  AΓL(1,8)  7:3       6                 S8        2      2           2      1       3       true             false            true             true                                        complete  
+# 8   8  28  21  6  15  ASL(3,2)  PSL(3,2)  2xS4              S8        2      2           3      1       4       true             false            true             true                                        complete  
+# 9   8  28  21  6  15  PSL(2,7)  7:3       S3                S8        2      2           4      1       5       true             false            true             true                                        complete  
+# 10  8  28  21  6  15  PGL(2,7)  AGL(1,7)  D12               S8        2      2           5      1       4       true             true             true             true                                        complete  
 # 11  8  28  21  6  15  A8        A7        (S6 x S2) cap A8  S8        2      2           6      1       3       true             true             true             true                                        complete  
 # 12  8  28  21  6  15  S8        S7        S6 x S2           S8        2      2           7      1       3       true             true             true             true                                        complete  
-# 13  8  42  21  4  9   PSL2(7)   7:3       4                 PGL2(7)   2      2           4      1       4       true             false            true             true                 13                               
-# 14  8  42  21  4  9   PGL2(7)   7:6       D8                PGL2(7)   2      2           5      1       3       true             false            true             true                 14                               
-# 15  8  56  21  3  6   AΓL1(8)   7:3       3                 S8        2      2           2      1       1       true             false            true             false                                       complete  
-# 16  8  56  21  3  6   ASL3(2)   PSL3(2)   S4                S8        2      2           3      1       1       true             false            true             false                                       complete  
-# 17  8  56  21  3  6   PSL2(7)   7:3       3                 S8        2      2           4      1       1       true             false            true             false                                       complete  
-# 18  8  56  21  3  6   PGL2(7)   7:6       S3                S8        2      2           5      1       1       true             false            true             false                                       complete  
+# 13  8  42  21  4  9   PSL(2,7)  7:3       4                 PGL(2,7)  2      2           4      1       4       true             false            true             true                 13                               
+# 14  8  42  21  4  9   PGL(2,7)  AGL(1,7)  D8                PGL(2,7)  2      2           5      1       3       true             false            true             true                 13                               
+# 15  8  56  21  3  6   AΓL(1,8)  7:3       3                 S8        2      2           2      1       1       true             false            true             false                22                     complete  
+# 16  8  56  21  3  6   ASL(3,2)  PSL(3,2)  S4                S8        2      2           3      1       1       true             false            true             false                22                     complete  
+# 17  8  56  21  3  6   PSL(2,7)  7:3       3                 S8        2      2           4      1       1       true             false            true             false                22                     complete  
+# 18  8  56  21  3  6   PGL(2,7)  AGL(1,7)  S3                S8        2      2           5      1       1       true             false            true             false                22                     complete  
 # 19  8  56  21  3  6   A8        A7        (S3 x S5) cap A8  S8        2      2           6      1       1       true             true             true             true                 22                     complete  
-# 20  8  56  21  3  6   S8        S7        S3 x S5           S8        2      2           7      1       1       true             true             true             true                 23                     complete  
-# 21  8  56  28  4  12  ASL3(2)   PSL3(2)   S4                ASL3(2)   2      2           3      1       3       true             false            true             true                 21                               
-# 22  8  56  35  5  20  A8        A7        (S5 x S3) cap A8  S8        2      2           6      1       1       true             true             true             true                 19                     complete  
-# 23  8  56  35  5  20  S8        S7        S5 x S3           S8        2      2           7      1       1       true             true             true             true                 20                     complete  
+# 20  8  56  21  3  6   S8        S7        S3 x S5           S8        2      2           7      1       1       true             true             true             true                 22                     complete  
+# 21  8  56  28  4  12  ASL(3,2)  PSL(3,2)  S4                ASL(3,2)  2      2           3      1       3       true             false            true             true                 21                               
+# 22  8  56  35  5  20  A8        A7        (S5 x S3) cap A8  S8        2      2           6      1       1       true             true             true             true                 15                     complete  
+# 23  8  56  35  5  20  S8        S7        S5 x S3           S8        2      2           7      1       1       true             true             true             true                 15                     complete  
 # 24  8  70  35  4  15  A8        A7        (S4 x S4) cap A8  S8        2      2           6      1       2       true             false            true             true                 24                     complete  
-# 25  8  70  35  4  15  S8        S7        S4 x S4           S8        2      2           7      1       2       true             false            true             true                 25                     complete  
+# 25  8  70  35  4  15  S8        S7        S4 x S4           S8        2      2           7      1       2       true             false            true             true                 24                     complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
@@ -112,10 +112,10 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AGL1(8)   ASL3(2)  
+# Structure                            AGL(1,8)  ASL(3,2)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     7         PSL3(2)  
+# Point-stabiliser                     C7        PSL(3,2)  
 # Block-stabiliser                     2^2       2^4:3:2   
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -128,7 +128,7 @@
 # Point-primitive                      true      true      
 # Point-primitive type                 1         1         
 # Block-primitive                      false               
-# Block-primitive type                                     
+# Block-primitive type                 0                   
 # ---------------------------------------------------------
 
 # Design: 2
@@ -138,10 +138,10 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PGL2(7)   PGL2(7)  
+# Structure                            PGL(2,7)  PGL(2,7)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     7:6       7:6       
+# Point-stabiliser                     AGL(1,7)  AGL(1,7)  
 # Block-stabiliser                     A4        A4        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -154,34 +154,34 @@
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
 # Block-primitive                      false     false     
-# Block-primitive type                                     
+# Block-primitive type                 0                   
 # ---------------------------------------------------------
 
 # Design: 3
-# -------------------------------------------------------
+# --------------------------------------------------------
 # Parameter set: [ 8, 28, 21, 6, 15 ]
 # Complement:    [ 8, 28, 7, 2, 1 ]
-# -------------------------------------------------------
-#                                      G         Aut(D)  
-# -------------------------------------------------------
-# Structure                            AΓL1(8)   S8      
-# Rank                                 2         2       
-# 2-Homogeneous                        true      true    
-# Point-stabiliser                     7:3       S7      
-# Block-stabiliser                     6         2xS6    
-# Orbit structure of point-stabiliser                    
-# Orbit structure of block-stabiliser                    
-# Point-transitive                     true      true    
-# Block-transitive                     true      true    
-# Flag-transitive                      true      true    
-# Anti-flag-transitive                 true      true    
-# Flag-semiregular                     true      false   
-# Flag-regular                         true      false   
-# Point-primitive                      true      true    
-# Point-primitive type                 1         2       
-# Block-primitive                      false             
-# Block-primitive type                                   
-# -------------------------------------------------------
+# --------------------------------------------------------
+#                                      G         Aut(D)   
+# --------------------------------------------------------
+# Structure                            AΓL(1,8)  S8       
+# Rank                                 2         2        
+# 2-Homogeneous                        true      true     
+# Point-stabiliser                     7:3       S7       
+# Block-stabiliser                     6         2xS6     
+# Orbit structure of point-stabiliser                     
+# Orbit structure of block-stabiliser                     
+# Point-transitive                     true      true     
+# Block-transitive                     true      true     
+# Flag-transitive                      true      true     
+# Anti-flag-transitive                 true      true     
+# Flag-semiregular                     true      false    
+# Flag-regular                         true      false    
+# Point-primitive                      true      true     
+# Point-primitive type                 1         2        
+# Block-primitive                      false              
+# Block-primitive type                 0                  
+# --------------------------------------------------------
 
 # Design: 4
 # ---------------------------------------------------------
@@ -190,10 +190,10 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL2(7)   PGL2(7)  
+# Structure                            PSL(2,7)  PGL(2,7)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     7:3       7:6       
+# Point-stabiliser                     7:3       AGL(1,7)  
 # Block-stabiliser                     4         D8        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -206,34 +206,34 @@
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
 # Block-primitive                      false               
-# Block-primitive type                                     
+# Block-primitive type                 0                   
 # ---------------------------------------------------------
 
 # Design: 5
-# -------------------------------------------------------
+# --------------------------------------------------------
 # Parameter set: [ 8, 56, 21, 3, 6 ]
 # Complement:    [ 8, 56, 35, 5, 20 ]
-# -------------------------------------------------------
-#                                      G         Aut(D)  
-# -------------------------------------------------------
-# Structure                            AΓL1(8)   S8      
-# Rank                                 2         2       
-# 2-Homogeneous                        true      true    
-# Point-stabiliser                     7:3       S7      
-# Block-stabiliser                     3         S5xS3   
-# Orbit structure of point-stabiliser                    
-# Orbit structure of block-stabiliser                    
-# Point-transitive                     true      true    
-# Block-transitive                     true      true    
-# Flag-transitive                      true      true    
-# Anti-flag-transitive                 false     true    
-# Flag-semiregular                     true      false   
-# Flag-regular                         true      false   
-# Point-primitive                      true      true    
-# Point-primitive type                 1         2       
-# Block-primitive                      false             
-# Block-primitive type                                   
-# -------------------------------------------------------
+# --------------------------------------------------------
+#                                      G         Aut(D)   
+# --------------------------------------------------------
+# Structure                            AΓL(1,8)  S8       
+# Rank                                 2         2        
+# 2-Homogeneous                        true      true     
+# Point-stabiliser                     7:3       S7       
+# Block-stabiliser                     3         S5xS3    
+# Orbit structure of point-stabiliser                     
+# Orbit structure of block-stabiliser                     
+# Point-transitive                     true      true     
+# Block-transitive                     true      true     
+# Flag-transitive                      true      true     
+# Anti-flag-transitive                 false     true     
+# Flag-semiregular                     true      false    
+# Flag-regular                         true      false    
+# Point-primitive                      true      true     
+# Point-primitive type                 1         2        
+# Block-primitive                      false              
+# Block-primitive type                 0                  
+# --------------------------------------------------------
 
 # Design: 6
 # ---------------------------------------------------------
@@ -242,10 +242,10 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            ASL3(2)   ASL3(2)  
+# Structure                            ASL(3,2)  ASL(3,2)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
-# Point-stabiliser                     PSL3(2)   PSL3(2)  
+# Point-stabiliser                     PSL(3,2)  PSL(3,2)  
 # Block-stabiliser                     S4        S4        
 # Orbit structure of point-stabiliser                      
 # Orbit structure of block-stabiliser                      
@@ -258,7 +258,7 @@
 # Point-primitive                      true      true      
 # Point-primitive type                 1         1         
 # Block-primitive                      false     false     
-# Block-primitive type                                     
+# Block-primitive type                 0                   
 # ---------------------------------------------------------
 
 # Design: 7
@@ -318,7 +318,7 @@
 
 lD_8 :=  [
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,4,8,7,5,3,6), (1,4,6,5)(2,8,7,3) ] ),
+  autGroup := Group( [ (1,3,6)(2,4,5), (1,4,6,8,3,7,2) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -360,8 +360,8 @@ lD_8 :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 42, 21, 4, 9 ],
-  autGroup := Group( [ (1,2,5,7,6,3), (1,2,4,5)(3,7,8,6), (1,2)(3,8)(4,5) ] ),
-  autSubgroup := Group( [ (2,5,6,3,4,7,8), (1,2,6,4)(3,5,7,8) ] ),
+  autGroup := Group( [ (1,2)(3,7)(4,6), (1,2,7,3)(4,8,6,5), (2,7,8,6,4,3) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -388,8 +388,8 @@ lD_8 :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 56, 28, 4, 12 ],
-  autGroup := Group( [ (1,5,3,4,8,2)(6,7), (1,6,5,7,3,2,8) ] ),
-  autSubgroup := Group( [ (1,5,3,4,8,2)(6,7), (1,6,5,7,3,2,8) ] ),
+  autGroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 5 ],
   blockSizes := [ 4 ],
@@ -437,7 +437,7 @@ for D in lD_8 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) 
 
 lD_8_reduced :=  [
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,4,8,7,5,3,6), (1,4,6,5)(2,8,7,3) ] ),
+  autGroup := Group( [ (1,3,6)(2,4,5), (1,4,6,8,3,7,2) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -451,7 +451,7 @@ lD_8_reduced :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,2,8,4,7,6,3), (1,8,3,5)(2,7,4,6) ] ),
+  autGroup := Group( [ (3,8,6)(4,7,5), (1,4,6,8,5,3)(2,7) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,4,3)(6,8,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -465,8 +465,8 @@ lD_8_reduced :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (2,5,4,3,7,6,8), (1,2,4,8)(3,6,5,7) ] ),
-  autSubgroup := Group( [ (2,5,4,3,7,6,8), (1,2,4,8)(3,6,5,7) ] ),
+  autGroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -479,8 +479,8 @@ lD_8_reduced :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (2,3,7,5,6,8,4), (1,7,4,5,6,2,3) ] ),
-  autSubgroup := Group( [ (2,5,6,3,4,7,8), (1,5,6,2,8,4,7) ] ),
+  autGroup := Group( [ (1,3,6,4)(2,5,8,7), (1,3,7,8)(2,5,4,6), (1,2,8)(4,5,7) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 2 ],
   baseBlock := [ 1, 2, 3, 5 ],
   blockSizes := [ 4 ],
@@ -522,7 +522,7 @@ lD_8_reduced :=  [
   v:= 8),
  rec( parameters := [ 8, 28, 21, 6, 15 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (2,7,8)(3,5,4), (1,7,6,8)(2,4,5,3) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -536,7 +536,7 @@ lD_8_reduced :=  [
   v:= 8),
  rec( parameters := [ 8, 28, 21, 6, 15 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,4,3)(2,5,8,6), (1,8,4,5,3,2,7) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -591,8 +591,8 @@ lD_8_reduced :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 42, 21, 4, 9 ],
-  autGroup := Group( [ (1,2,5,7,6,3), (1,2,4,5)(3,7,8,6), (1,2)(3,8)(4,5) ] ),
-  autSubgroup := Group( [ (2,5,6,3,4,7,8), (1,2,6,4)(3,5,7,8) ] ),
+  autGroup := Group( [ (1,2)(3,7)(4,6), (1,2,7,3)(4,8,6,5), (2,7,8,6,4,3) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -634,7 +634,7 @@ lD_8_reduced :=  [
   v:= 8),
  rec( parameters := [ 8, 56, 21, 3, 6 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,6,4,2,5,3)(7,8), (1,7,2,6)(3,5,4,8) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -648,7 +648,7 @@ lD_8_reduced :=  [
   v:= 8),
  rec( parameters := [ 8, 56, 21, 3, 6 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,4,6)(2,8,3), (1,6,4,2,7,5,3) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -703,8 +703,8 @@ lD_8_reduced :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 56, 28, 4, 12 ],
-  autGroup := Group( [ (1,5,3,4,8,2)(6,7), (1,6,5,7,3,2,8) ] ),
-  autSubgroup := Group( [ (1,5,3,4,8,2)(6,7), (1,6,5,7,3,2,8) ] ),
+  autGroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 5 ],
   blockSizes := [ 4 ],
@@ -780,7 +780,7 @@ for D in lD_8_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , O
 
 lD_8_all :=  [
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,4,8,7,5,3,6), (1,4,6,5)(2,8,7,3) ] ),
+  autGroup := Group( [ (1,3,6)(2,4,5), (1,4,6,8,3,7,2) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 1, 1, 1 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -794,7 +794,7 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,2,8,4,7,6,3), (1,8,3,5)(2,7,4,6) ] ),
+  autGroup := Group( [ (3,8,6)(4,7,5), (1,4,6,8,5,3)(2,7) ] ),
   autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,4,3)(6,8,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 2, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
@@ -808,8 +808,8 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (2,5,4,3,7,6,8), (1,2,4,8)(3,6,5,7) ] ),
-  autSubgroup := Group( [ (2,5,4,3,7,6,8), (1,2,4,8)(3,6,5,7) ] ),
+  autGroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -822,8 +822,8 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (2,3,7,5,6,8,4), (1,7,4,5,6,2,3) ] ),
-  autSubgroup := Group( [ (2,5,6,3,4,7,8), (1,5,6,2,8,4,7) ] ),
+  autGroup := Group( [ (1,3,6,4)(2,5,8,7), (1,3,7,8)(2,5,4,6), (1,2,8)(4,5,7) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 2 ],
   baseBlock := [ 1, 2, 3, 5 ],
   blockSizes := [ 4 ],
@@ -836,8 +836,8 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 14, 7, 4, 3 ],
-  autGroup := Group( [ (1,2,6,5,8,3,4), (1,7,3,5,4,8,6) ] ),
-  autSubgroup := Group( [ (1,5,6,2,8,4,7), (1,8,3)(2,6,5) ] ),
+  autGroup := Group( [ (1,6,5,4)(2,3,7,8), (2,3,5,6,4,8,7) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 3 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -879,7 +879,7 @@ lD_8_all :=  [
   v:= 8),
  rec( parameters := [ 8, 28, 21, 6, 15 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (2,7,8)(3,5,4), (1,7,6,8)(2,4,5,3) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -893,7 +893,7 @@ lD_8_all :=  [
   v:= 8),
  rec( parameters := [ 8, 28, 21, 6, 15 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,7,4,3)(2,5,8,6), (1,8,4,5,3,2,7) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 5 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6 ],
   blockSizes := [ 6 ],
@@ -948,8 +948,8 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 42, 21, 4, 9 ],
-  autGroup := Group( [ (1,2,5,7,6,3), (1,2,4,5)(3,7,8,6), (1,2)(3,8)(4,5) ] ),
-  autSubgroup := Group( [ (2,5,6,3,4,7,8), (1,2,6,4)(3,5,7,8) ] ),
+  autGroup := Group( [ (1,2)(3,7)(4,6), (1,2,7,3)(4,8,6,5), (2,7,8,6,4,3) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4 ],
   blockSizes := [ 4 ],
@@ -991,7 +991,7 @@ lD_8_all :=  [
   v:= 8),
  rec( parameters := [ 8, 56, 21, 3, 6 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,6,4,2,5,3)(7,8), (1,7,2,6)(3,5,4,8) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1005,7 +1005,7 @@ lD_8_all :=  [
   v:= 8),
  rec( parameters := [ 8, 56, 21, 3, 6 ],
   autGroup := Group( [ (1,2,3,4,5,6,7,8), (1,2) ] ),
-  autSubgroup := Group( [ (1,4,6)(2,8,3), (1,6,4,2,7,5,3) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (2,3,5)(4,7,6), (1,8)(2,7)(3,4)(5,6) ] ),
   groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -1060,8 +1060,8 @@ lD_8_all :=  [
   t := 2 ),
   v:= 8),
  rec( parameters := [ 8, 56, 28, 4, 12 ],
-  autGroup := Group( [ (1,5,3,4,8,2)(6,7), (1,6,5,7,3,2,8) ] ),
-  autSubgroup := Group( [ (1,5,3,4,8,2)(6,7), (1,6,5,7,3,2,8) ] ),
+  autGroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
+  autSubgroup := Group( [ (2,7,4,8,6,5,3), (2,3)(6,7), (1,2)(3,4)(5,6)(7,8) ] ),
   groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1, 2, 3, 5 ],
   blockSizes := [ 4 ],

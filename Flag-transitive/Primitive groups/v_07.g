@@ -6,7 +6,7 @@
 #               lD_7 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
+# 1. number of non-isomorphic designs: 
 # ------------------------------------
 
 # ------------------------------------------------------
@@ -31,11 +31,11 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα  GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   7:3       3   3                 PSL3(2)   3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   4   4  2   PSL3(2)   S4  S4                PSL3(2)   2      2           5      1       1       true             true             true             true                             true       complement of PG(2,2), Hadamard or Paley parameters  
-# 3   7  14  6   3  2   AGL1(7)   6   3                 AGL1(7)   2      2           4      1       1       true             false            true             false                                                                                            
+# 1   7  7   3   3  1   7:3       3   3                 PSL(3,2)  3      2           3      1       1       true             true             true             false                2           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   4   4  2   PSL(3,2)  S4  S4                PSL(3,2)  2      2           5      1       1       true             true             true             true                 1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 3   7  14  6   3  2   AGL(1,7)  6   3                 AGL(1,7)  2      2           4      1       1       true             false            true             false                                                                                            
 # 4   7  21  15  5  10  A7        A6  (S5 x S2) cap A7  S7        2      2           6      1       2       true             true             true             true                                        complete                                             
-# 5   7  28  12  3  4   PSL3(2)   S4  S3                PSL3(2)   2      2           5      1       2       true             false            true             false                                                                                            
+# 5   7  28  12  3  4   PSL(3,2)  S4  S3                PSL(3,2)  2      2           5      1       2       true             false            true             false                                                                                            
 # 6   7  35  15  3  5   A7        A6  (S3 x S4) cap A7  S7        2      2           6      1       1       true             true             true             true                 7                      complete                                             
 # 7   7  35  20  4  10  A7        A6  (S4 x S3) cap A7  S7        2      2           6      1       1       true             true             true             true                 6                      complete                                             
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -44,65 +44,65 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα  GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   7:3       3   3                 PSL3(2)   3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   3   3  1   PSL3(2)   S4  S4                PSL3(2)   2      2           5      1       1       true             true             true             true                 3           true       PG(2,2), Hadamard or Paley parameters                
-# 3   7  7   4   4  2   PSL3(2)   S4  S4                PSL3(2)   2      2           5      1       1       true             true             true             true                 2           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 4   7  14  6   3  2   AGL1(7)   6   3                 AGL1(7)   2      2           4      1       1       true             false            true             false                                                                                            
+# 1   7  7   3   3  1   7:3       3   3                 PSL(3,2)  3      2           3      1       1       true             true             true             false                3           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   3   3  1   PSL(3,2)  S4  S4                PSL(3,2)  2      2           5      1       1       true             true             true             true                 3           true       PG(2,2), Hadamard or Paley parameters                
+# 3   7  7   4   4  2   PSL(3,2)  S4  S4                PSL(3,2)  2      2           5      1       1       true             true             true             true                 1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 4   7  14  6   3  2   AGL(1,7)  6   3                 AGL(1,7)  2      2           4      1       1       true             false            true             false                                                                                            
 # 5   7  21  15  5  10  A7        A6  (S5 x S2) cap A7  S7        2      2           6      1       2       true             true             true             true                                        complete                                             
 # 6   7  21  15  5  10  S7        S6  S5 x S2           S7        2      2           7      1       2       true             true             true             true                                        complete                                             
-# 7   7  28  12  3  4   PSL3(2)   S4  S3                PSL3(2)   2      2           5      1       2       true             false            true             false                                                                                            
+# 7   7  28  12  3  4   PSL(3,2)  S4  S3                PSL(3,2)  2      2           5      1       2       true             false            true             false                                                                                            
 # 8   7  35  15  3  5   A7        A6  (S3 x S4) cap A7  S7        2      2           6      1       1       true             true             true             true                 10                     complete                                             
-# 9   7  35  15  3  5   S7        S6  S3 x S4           S7        2      2           7      1       1       true             true             true             true                 11                     complete                                             
+# 9   7  35  15  3  5   S7        S6  S3 x S4           S7        2      2           7      1       1       true             true             true             true                 10                     complete                                             
 # 10  7  35  20  4  10  A7        A6  (S4 x S3) cap A7  S7        2      2           6      1       1       true             true             true             true                 8                      complete                                             
-# 11  7  35  20  4  10  S7        S6  S4 x S3           S7        2      2           7      1       1       true             true             true             true                 9                      complete                                             
+# 11  7  35  20  4  10  S7        S6  S4 x S3           S7        2      2           7      1       1       true             true             true             true                 8                      complete                                             
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα  GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   7:3       3   3                 PSL3(2)   3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   3   3  1   7:3       3   3                 PSL3(2)   3      2           3      1       1       true             true             true             false                            true       PG(2,2), Hadamard or Paley parameters                
-# 3   7  7   3   3  1   PSL3(2)   S4  S4                PSL3(2)   2      2           5      1       1       true             true             true             true                 4           true       PG(2,2), Hadamard or Paley parameters                
-# 4   7  7   4   4  2   PSL3(2)   S4  S4                PSL3(2)   2      2           5      1       1       true             true             true             true                 3           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 5   7  14  6   3  2   AGL1(7)   6   3                 AGL1(7)   2      2           4      1       1       true             false            true             false                                                                                            
+# 1   7  7   3   3  1   7:3       3   3                 PSL(3,2)  3      2           3      1       1       true             true             true             false                4           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   3   3  1   7:3       3   3                 PSL(3,2)  3      2           3      1       1       true                              true             false                4           true       PG(2,2), Hadamard or Paley parameters                
+# 3   7  7   3   3  1   PSL(3,2)  S4  S4                PSL(3,2)  2      2           5      1       1       true             true             true             true                 4           true       PG(2,2), Hadamard or Paley parameters                
+# 4   7  7   4   4  2   PSL(3,2)  S4  S4                PSL(3,2)  2      2           5      1       1       true             true             true             true                 1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 5   7  14  6   3  2   AGL(1,7)  6   3                 AGL(1,7)  2      2           4      1       1       true             false            true             false                                                                                            
 # 6   7  21  15  5  10  A7        A6  (S5 x S2) cap A7  S7        2      2           6      1       2       true             true             true             true                                        complete                                             
 # 7   7  21  15  5  10  S7        S6  S5 x S2           S7        2      2           7      1       2       true             true             true             true                                        complete                                             
-# 8   7  28  12  3  4   PSL3(2)   S4  S3                PSL3(2)   2      2           5      1       2       true             false            true             false                                                                                            
+# 8   7  28  12  3  4   PSL(3,2)  S4  S3                PSL(3,2)  2      2           5      1       2       true             false            true             false                                                                                            
 # 9   7  35  15  3  5   A7        A6  (S3 x S4) cap A7  S7        2      2           6      1       1       true             true             true             true                 11                     complete                                             
-# 10  7  35  15  3  5   S7        S6  S3 x S4           S7        2      2           7      1       1       true             true             true             true                 12                     complete                                             
+# 10  7  35  15  3  5   S7        S6  S3 x S4           S7        2      2           7      1       1       true             true             true             true                 11                     complete                                             
 # 11  7  35  20  4  10  A7        A6  (S4 x S3) cap A7  S7        2      2           6      1       1       true             true             true             true                 9                      complete                                             
-# 12  7  35  20  4  10  S7        S6  S4 x S3           S7        2      2           7      1       1       true             true             true             true                 10                     complete                                             
+# 12  7  35  20  4  10  S7        S6  S4 x S3           S7        2      2           7      1       1       true             true             true             true                 9                      complete                                             
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 3. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
-# ------------------------------------------------------
+# --------------------------------------------------------
 # Parameter set: [ 7, 7, 3, 3, 1 ]
 # Complement:    [ 7, 7, 4, 4, 2 ]
-# ------------------------------------------------------
-#                                      G      Aut(D)    
-# ------------------------------------------------------
-# Structure                            7:3    PSL3(2)  
-# Rank                                 3      2         
-# 2-Homogeneous                        true   true      
-# Point-stabiliser                     3      S4        
-# Block-stabiliser                     3      S4        
-# Orbit structure of point-stabiliser                   
-# Orbit structure of block-stabiliser                   
-# Point-transitive                     true   true      
-# Block-transitive                     true   true      
-# Flag-transitive                      true   true      
-# Anti-flag-transitive                 false  true      
-# Flag-semiregular                     true   false     
-# Flag-regular                         true   false     
-# Point-primitive                      true   true      
-# Point-primitive type                 1      2         
-# Block-primitive                      true             
-# Block-primitive type                                  
-# ------------------------------------------------------
+# --------------------------------------------------------
+#                                      G        Aut(D)    
+# --------------------------------------------------------
+# Structure                            7:3      PSL(3,2)  
+# Rank                                 3        2         
+# 2-Homogeneous                        true     true      
+# Point-stabiliser                     3        S4        
+# Block-stabiliser                     3        S4        
+# Orbit structure of point-stabiliser                     
+# Orbit structure of block-stabiliser                     
+# Point-transitive                     true     true      
+# Block-transitive                     true     true      
+# Flag-transitive                      true     true      
+# Anti-flag-transitive                 false    true      
+# Flag-semiregular                     true     false     
+# Flag-regular                         true     false     
+# Point-primitive                      true     true      
+# Point-primitive type                 1        2         
+# Block-primitive                      true     true      
+# Block-primitive type                 1        2         
+# --------------------------------------------------------
 
 # Design: 2
 # ---------------------------------------------------------
@@ -111,7 +111,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL3(2)   PSL3(2)  
+# Structure                            PSL(3,2)  PSL(3,2)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     S4        S4        
@@ -127,7 +127,7 @@
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
 # Block-primitive                      true      true      
-# Block-primitive type                                     
+# Block-primitive type                 2                   
 # ---------------------------------------------------------
 
 # Design: 3
@@ -137,7 +137,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            AGL1(7)   AGL1(7)  
+# Structure                            AGL(1,7)  AGL(1,7)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     6         6         
@@ -153,7 +153,7 @@
 # Point-primitive                      true      true      
 # Point-primitive type                 1         1         
 # Block-primitive                      false     false     
-# Block-primitive type                                     
+# Block-primitive type                 0                   
 # ---------------------------------------------------------
 
 # Design: 4
@@ -189,7 +189,7 @@
 # ---------------------------------------------------------
 #                                      G         Aut(D)    
 # ---------------------------------------------------------
-# Structure                            PSL3(2)   PSL3(2)  
+# Structure                            PSL(3,2)  PSL(3,2)  
 # Rank                                 2         2         
 # 2-Homogeneous                        true      true      
 # Point-stabiliser                     S4        S4        
@@ -205,7 +205,7 @@
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
 # Block-primitive                      false     false     
-# Block-primitive type                                     
+# Block-primitive type                 0                   
 # ---------------------------------------------------------
 
 # Design: 6
@@ -265,8 +265,8 @@
 
 lD_7 :=  [
  rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,6,7)(3,4,5), (1,6,5,4,2,7,3) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,4,6)(3,5,7) ] ),
+  autGroup := Group( [ (1,4,7,2)(3,5), (1,7,2,6,5,4,3) ] ),
+  autSubgroup := Group( [ (2,4,6)(3,5,7), (1,2,4,3,6,7,5) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -279,8 +279,8 @@ lD_7 :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 4, 4, 2 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -293,8 +293,8 @@ lD_7 :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
+  autGroup := Group( [ (2,3,4,5,6,7), (1,2,4,3,6,7,5) ] ),
+  autSubgroup := Group( [ (2,3,4,5,6,7), (1,2,4,3,6,7,5) ] ),
   groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -321,8 +321,8 @@ lD_7 :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 28, 12, 3, 4 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 2 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -370,8 +370,8 @@ for D in lD_7 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) 
 
 lD_7_reduced :=  [
  rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,6,7)(3,4,5), (1,6,5,4,2,7,3) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,4,6)(3,5,7) ] ),
+  autGroup := Group( [ (1,4,7,2)(3,5), (1,7,2,6,5,4,3) ] ),
+  autSubgroup := Group( [ (2,4,6)(3,5,7), (1,2,4,3,6,7,5) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -384,8 +384,8 @@ lD_7_reduced :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -398,8 +398,8 @@ lD_7_reduced :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 4, 4, 2 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -412,8 +412,8 @@ lD_7_reduced :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
+  autGroup := Group( [ (2,3,4,5,6,7), (1,2,4,3,6,7,5) ] ),
+  autSubgroup := Group( [ (2,3,4,5,6,7), (1,2,4,3,6,7,5) ] ),
   groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -454,8 +454,8 @@ lD_7_reduced :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 28, 12, 3, 4 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 2 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -531,8 +531,8 @@ for D in lD_7_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , O
 
 lD_7_all :=  [
  rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,6,7)(3,4,5), (1,6,5,4,2,7,3) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,4,6)(3,5,7) ] ),
+  autGroup := Group( [ (1,4,7,2)(3,5), (1,7,2,6,5,4,3) ] ),
+  autSubgroup := Group( [ (2,4,6)(3,5,7), (1,2,4,3,6,7,5) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -545,8 +545,8 @@ lD_7_all :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,3,5,4,7,2,6), (1,4,6,3,7,2,5) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,4,6)(3,5,7) ] ),
+  autGroup := Group( [ (1,5,4,3,7,6,2), (2,3)(4,7), (2,6,4)(3,7,5) ] ),
+  autSubgroup := Group( [ (2,4,6)(3,5,7), (1,2,4,3,6,7,5) ] ),
   groupNumbers := [ 3, 1, 1 ],
   baseBlock := [ 1, 2, 7 ],
   blockSizes := [ 3 ],
@@ -559,8 +559,8 @@ lD_7_all :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 3, 3, 1 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 4 ],
   blockSizes := [ 3 ],
@@ -573,8 +573,8 @@ lD_7_all :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 4, 4, 2 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 1 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
@@ -587,8 +587,8 @@ lD_7_all :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
-  autSubgroup := Group( [ (1,2,4,3,6,7,5), (2,3,4,5,6,7) ] ),
+  autGroup := Group( [ (2,3,4,5,6,7), (1,2,4,3,6,7,5) ] ),
+  autSubgroup := Group( [ (2,3,4,5,6,7), (1,2,4,3,6,7,5) ] ),
   groupNumbers := [ 4, 1, 1 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],
@@ -629,8 +629,8 @@ lD_7_all :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 28, 12, 3, 4 ],
-  autGroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
-  autSubgroup := Group( [ (1,3,2)(4,7,5), (1,4)(6,7) ] ),
+  autGroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
+  autSubgroup := Group( [ (1,4)(6,7), (1,3,2)(4,7,5) ] ),
   groupNumbers := [ 5, 1, 2 ],
   baseBlock := [ 1, 2, 3 ],
   blockSizes := [ 3 ],

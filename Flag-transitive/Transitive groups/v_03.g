@@ -5,11 +5,11 @@
 # Remark:       there exists no 2-design admitting flag-transitive affine automorphism group
 # References:    
 
-# 1. Number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          0              0      
 # Point-imprimitive    0          0              0      
@@ -23,10 +23,17 @@
 # Total                0          0              0      
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v  b  r  k  λ  G  Gα  GB  Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#                                                                                                                                                                                          
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#    Reduced designs (within each group):
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b  r  k  λ  G  Gα  GB  Aut(D)  rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -40,18 +47,24 @@
 #                                                                                                                                                                                          
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_3 := [  ];
-for D in lD_3 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_3 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
-# 5. Designs (all): 
+# 6. Designs (reduced within each group): 
+# ----------------------------------------
+
+lD_3_reduced := [  ];
+for D in lD_3_reduced do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
+
+# 7. Designs (all): 
 # -----------------
 
 lD_3_all := [  ];
-for D in lD_3_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_3_all do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
