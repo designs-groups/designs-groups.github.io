@@ -52,85 +52,85 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b       r      k   λ     G      Gα          GB                             Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                      
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   28   63      27     12  11    S6(2)  O5(3):2     2^5:S6                         PSp6(2)   2      2                  2       5       true             true             true             true                 2                                                                    
-# 2   28   63      36     16  20    S6(2)  O5(3):2     2^5:S6                         PSp6(2)   2      2                  2       5       true             true             true             true                 1                                                                    
-# 3   28   288     72     7   16    S6(2)  O5(3):2     S7                             PSp6(2)   2      2                  2       11      true             false            true             true                 4                                                                    
-# 4   28   288     216    21  160   S6(2)  O5(3):2     S7                             PSp6(2)   2      2                  2       11      true             false            true             true                 3                                                                    
-# 5   28   315     45     4   5     S6(2)  O5(3):2     (2^2x((2^3):(2^2))):3:2:3:2    PSp6(2)   2      2                  2       12      true             true             true             true                 6                                                                    
-# 6   28   315     270    24  230   S6(2)  O5(3):2     (2^2x((2^3):(2^2))):3:2:3:2    PSp6(2)   2      2                  2       12      true             true             true             true                 5                                                                    
-# 7   28   336     120    10  40    S6(2)  O5(3):2     S6xS3                          PSp6(2)   2      2                  2       13      true             true             true             true                 8                                                                    
-# 8   28   336     216    18  136   S6(2)  O5(3):2     S6xS3                          PSp6(2)   2      2                  2       13      true             true             true             true                 7                                                                    
-# 9   28   378     135    10  45    S6(2)  O5(3):2     2x(2^4:S5)                     PSp6(2)   2      2                  2       14      true             false            true             false                                                                                     
-# 10  28   945     270    8   70    S6(2)  O5(3):2     (2^2x((((2^3):(2^2)):3):2)):2  PSp6(2)   2      2                  2       30      true             false            true             false                                                                                     
-# 11  28   1008    216    6   40    S6(2)  O5(3):2     2xS6                           PSp6(2)   2      2                  2       32      true             false            true             false                                                                                     
-# 12  28   1008    540    15  280   S6(2)  O5(3):2     2xS6                           PSp6(2)   2      2                  2       33      true             false            true             false                                                                                     
-# 13  28   1260    135    3   10    S6(2)  O5(3):2     2^3:2^2:3:2:3:2                PSp6(2)   2      2                  2       39      true             false            true             false                                                                                     
-# 14  28   1260    270    6   50    S6(2)  O5(3):2     2xS4xS4                        PSp6(2)   2      2                  2       41      true             false            true             false                                                                                     
-# 15  28   2016    216    3   16    S6(2)  O5(3):2     S5xS3                          PSp6(2)   2      2                  2       65      true             false            true             false                                                                                     
-# 16  28   2016    432    6   80    S6(2)  O5(3):2     S6                             PSp6(2)   2      2                  2       70      true             false            true             false                                                                                     
-# 17  28   2016    1080   15  560   S6(2)  O5(3):2     S5xS3                          PSp6(2)   2      2                  2       65      true             false            true             false                                                                                     
-# 18  28   3360    1080   9   320   S6(2)  O5(3):2     ((S3xS3):2)xS3                 PSp6(2)   2      2                  2       95      true             false            true             false                                                                                     
-# 19  28   3780    1620   12  660   S6(2)  O5(3):2     2^2x(((2^4):3):2)              PSp6(2)   2      2                  2       100     true             false            true             false                                                                                     
-# 20  28   5040    720    4   80    S6(2)  O5(3):2     2xS3xS4                        PSp6(2)   2      2                  2       131     true             false            true             false                                                                                     
-# 21  28   5040    1080   6   200   S6(2)  O5(3):2     2xS3xS4                        PSp6(2)   2      2                  2       132     true             false            true             false                                                                                     
-# 22  28   5040    2160   12  880   S6(2)  O5(3):2     2xS3xS4                        PSp6(2)   2      2                  2       131     true             false            true             false                                                                                     
-# 23  28   6048    1080   5   160   S6(2)  O5(3):2     2xS5                           PSp6(2)   2      2                  2       159     true             false            true             false                                                                                     
-# 24  28   12096   2592   6   480   S6(2)  O5(3):2     2xA5                           PSp6(2)   2      2                  2       308     true             false            true             false                                                                                     
-# 25  28   12096   4320   10  1440  S6(2)  O5(3):2     2xA5                           PSp6(2)   2      2                  2       308     true             false            true             false                                                                                     
-# 26  28   15120   6480   12  2640  S6(2)  O5(3):2     (4xA4):2                       PSp6(2)   2      2                  2       348     true             false            true             false                                                                                     
-# 27  28   22680   6480   8   1680  S6(2)  O5(3):2     (8x2):2:2                      PSp6(2)   2      2                  2       439     true             false            true             false                                                                                     
-# 28  28   24192   4320   5   640   S6(2)  O5(3):2     S3xD10                         PSp6(2)   2      2                  2       565     true             false            true             false                                                                                     
-# 29  28   80640   25920  9   7680  S6(2)  O5(3):2     D18                            PSp6(2)   2      2                  2       977     true             false            true             false                                                                                     
-# 30  28   103680  25920  7   5760  S6(2)  O5(3):2     D14                            PSp6(2)   2      2                  2       1177    true             false            true             false                                                                                     
-# 31  36   63      28     16  12    S6(2)  S8          2^5:S6                         PSp6(2)   2      2                  3       5       true             true             true             true                 32                                                                   
-# 32  36   63      35     20  19    S6(2)  S8          2^5:S6                         PSp6(2)   2      2                  3       5       true             true             true             true                 31                                                                   
-# 33  36   135     30     8   6     S6(2)  S8          2^6:PSL3(2)                    PSp6(2)   2      2                  3       9       true             true             true             true                 34                                                                   
-# 34  36   135     105    28  81    S6(2)  S8          2^6:PSL3(2)                    PSp6(2)   2      2                  3       9       true             true             true             true                 33                                                                   
-# 35  36   315     105    12  33    S6(2)  S8          (2^2x((2^3):(2^2))):3:2:3:2    PSp6(2)   2      2                  3       12      true             true             true             true                 36                                                                   
-# 36  36   315     210    24  138   S6(2)  S8          (2^2x((2^3):(2^2))):3:2:3:2    PSp6(2)   2      2                  3       12      true             true             true             true                 35                                                                   
-# 37  36   336     56     6   8     S6(2)  S8          S6xS3                          PSp6(2)   2      2                  3       13      true             true             true             true                 38                                                                   
-# 38  36   336     280    30  232   S6(2)  S8          S6xS3                          PSp6(2)   2      2                  3       13      true             true             true             true                 37                                                                   
-# 39  36   630     315    18  153   S6(2)  S8          2x((S4xS4):2)                  PSp6(2)   2      2                  3       17      true             false            true             false                                                                                     
-# 40  36   945     105    4   9     S6(2)  S8          (2^2x(((2^4):2):2)):3:2        PSp6(2)   2      2                  3       29      true             false            true             false                                                                                     
-# 41  36   945     210    8   42    S6(2)  S8          (2x(((((2^4):2):2):3):2)):2    PSp6(2)   2      2                  3       30      true             false            true             false                                                                                     
-# 42  36   945     315    12  99    S6(2)  S8          (2x((4x2):2)):2:2:3:2:2        PSp6(2)   2      2                  3       28      true             false            true             false                                                                                     
-# 43  36   1008    280    10  72    S6(2)  S8          2xS6                           PSp6(2)   2      2                  3       32      true             false            true             false                                                                                     
-# 44  36   1008    420    15  168   S6(2)  S8          2xS6                           PSp6(2)   2      2                  3       33      true             false            true             false                                                                                     
-# 45  36   1080    210    7   36    S6(2)  S8          2^3:PSL3(2)                    PSp6(2)   2      2                  3       36      true             false            true             false                                                                                     
-# 46  36   1120    280    9   64    S6(2)  S8          3^3:2^2:3:2:2                  PSp6(2)   2      2                  3       37      true             false            true             true                 47                                                                   
-# 47  36   1120    840    27  624   S6(2)  S8          3^3:2^2:3:2:2                  PSp6(2)   2      2                  3       37      true             false            true             true                 46                                                                   
-# 48  36   2016    280    5   32    S6(2)  S8          S5xS3                          PSp6(2)   2      2                  3       65      true             false            true             false                                                                                     
-# 49  36   3360    280    3   16    S6(2)  S8          ((S3xS3):2)xS3                 PSp6(2)   2      2                  3       95      true             false            true             false                                                                                     
-# 50  36   3780    315    3   18    S6(2)  S8          2^3:2^2:3:2:2                  PSp6(2)   2      2                  3       101     true             false            true             false                                                                                     
-# 51  36   3780    630    6   90    S6(2)  S8          2x((((2^4):3):2):2)            PSp6(2)   2      2                  3       97      true             false            true             false                                                                                     
-# 52  36   3780    630    6   90    S6(2)  S8          2xS4xD8                        PSp6(2)   2      2                  3       99      true             false            true             false                                                                                     
-# 53  36   3780    1260   12  396   S6(2)  S8          2^2x(((2^4):3):2)              PSp6(2)   2      2                  3       100     true             false            true             false                                                                                     
-# 54  36   4320    1680   14  624   S6(2)  S8          PSL3(2):2                      PSp6(2)   2      2                  3       125     true             false            true             false                                                                                     
-# 55  36   4320    2520   21  1440  S6(2)  S8          PSL3(2):2                      PSp6(2)   2      2                  3       125     true             false            true             false                                                                                     
-# 56  36   4536    1260   10  324   S6(2)  S8          2x(((2^4):5):2)                PSp6(2)   2      2                  3       128     true             false            true             false                                                                                     
-# 57  36   5040    560    4   48    S6(2)  S8          2xS4xS3                        PSp6(2)   2      2                  3       131     true             false            true             false                                                                                     
-# 58  36   5040    1680   12  528   S6(2)  S8          2xS4xS3                        PSp6(2)   2      2                  3       131     true             false            true             false                                                                                     
-# 59  36   5040    2520   18  1224  S6(2)  S8          2xS4xS3                        PSp6(2)   2      2                  3       132     true             false            true             false                                                                                     
-# 60  36   6720    3360   18  1632  S6(2)  S8          3^2:3:D8                       PSp6(2)   2      2                  3       163     true             false            true             true                 60                                                                   
-# 61  36   7560    840    4   72    S6(2)  S8          4^2:2:3:2                      PSp6(2)   2      2                  3       191     true             false            true             false                                                                                     
-# 62  36   10080   2520   9   576   S6(2)  S8          2x((S3xS3):2)                  PSp6(2)   2      2                  3       239     true             false            true             false                                                                                     
-# 63  36   12096   2016   6   288   S6(2)  S8          2xA5                           PSp6(2)   2      2                  3       308     true             false            true             false                                                                                     
-# 64  36   12096   3360   10  864   S6(2)  S8          2xA5                           PSp6(2)   2      2                  3       308     true             false            true             false                                                                                     
-# 65  36   12096   3360   10  864   S6(2)  S8          S5                             PSp6(2)   2      2                  3       313     true             false            true             false                                                                                     
-# 66  36   15120   2520   6   360   S6(2)  S8          (4x2):2:3:2                    PSp6(2)   2      2                  3       336     true             false            true             false                                                                                     
-# 67  36   15120   2520   6   360   S6(2)  S8          2^2xS4                         PSp6(2)   2      2                  3       332     true             false            true             false                                                                                     
-# 68  36   15120   5040   12  1584  S6(2)  S8          (4xA4):2                       PSp6(2)   2      2                  3       348     true             false            true             false                                                                                     
-# 69  36   20160   5040   9   1152  S6(2)  S8          2xS3xS3                        PSp6(2)   2      2                  3       415     true             false            true             false                                                                                     
-# 70  36   22680   5040   8   1008  S6(2)  S8          (8x2):2:2                      PSp6(2)   2      2                  3       439     true             false            true             false                                                                                     
-# 71  36   24192   10080  15  4032  S6(2)  S8          S3xD10                         PSp6(2)   2      2                  3       565     true             false            true             false                                                                                     
-# 72  36   30240   5040   6   720   S6(2)  S8          2xS4                           PSp6(2)   2      2                  3       599     true             false            true             false                                                                                     
-# 73  36   72576   10080  5   1152  S6(2)  S8          D20                            PSp6(2)   2      2                  3       973     true             false            true             false                                                                                     
-# 74  36   80640   20160  9   4608  S6(2)  S8          D18                            PSp6(2)   2      2                  3       977     true             false            true             false                                                                                     
-# 75  36   103680  20160  7   3456  S6(2)  S8          D14                            PSp6(2)   2      2                  3       1177    true             false            true             false                                                                                     
-# 76  63   63      32     32  16    S6(2)  2^5:S6      2^5:S6                         PSL6(2)   3      2                  5       5       true             true             true             false                            true       complement of PG(5,2) or Hadamard parameters  
-# 77  120  6720    1008   18  144   S6(2)  PSU3(3):2   3^2:3:D8                       PSp6(2)   3      3                  7       163     true             false            true             false                                                                                     
-# 78  120  40320   6048   18  864   S6(2)  PSU3(3):2   S3xS3                          PSp6(2)   3      3                  7       677     true             false            true             false                                                                                     
-# 79  120  80640   12096  18  1728  S6(2)  PSU3(3):2   D18                            PSp6(2)   3      3                  7       977     true             false            true             false                                                                                     
+# 1   28   63      27     12  11    S6(2)  O5(3):2     2^5:S6                         PSp(6,2)  2      2                  2       5       true             true             true             true                 2                                                                    
+# 2   28   63      36     16  20    S6(2)  O5(3):2     2^5:S6                         PSp(6,2)  2      2                  2       5       true             true             true             true                 1                                                                    
+# 3   28   288     72     7   16    S6(2)  O5(3):2     S7                             PSp(6,2)  2      2                  2       11      true             false            true             true                 4                                                                    
+# 4   28   288     216    21  160   S6(2)  O5(3):2     S7                             PSp(6,2)  2      2                  2       11      true             false            true             true                 3                                                                    
+# 5   28   315     45     4   5     S6(2)  O5(3):2     (2^2x((2^3):(2^2))):3:2:3:2    PSp(6,2)  2      2                  2       12      true             true             true             true                 6                                                                    
+# 6   28   315     270    24  230   S6(2)  O5(3):2     (2^2x((2^3):(2^2))):3:2:3:2    PSp(6,2)  2      2                  2       12      true             true             true             true                 5                                                                    
+# 7   28   336     120    10  40    S6(2)  O5(3):2     S6xS3                          PSp(6,2)  2      2                  2       13      true             true             true             true                 8                                                                    
+# 8   28   336     216    18  136   S6(2)  O5(3):2     S6xS3                          PSp(6,2)  2      2                  2       13      true             true             true             true                 7                                                                    
+# 9   28   378     135    10  45    S6(2)  O5(3):2     2x(2^4:S5)                     PSp(6,2)  2      2                  2       14      true             false            true             false                                                                                     
+# 10  28   945     270    8   70    S6(2)  O5(3):2     (2^2x((((2^3):(2^2)):3):2)):2  PSp(6,2)  2      2                  2       30      true             false            true             false                                                                                     
+# 11  28   1008    216    6   40    S6(2)  O5(3):2     2xS6                           PSp(6,2)  2      2                  2       32      true             false            true             false                                                                                     
+# 12  28   1008    540    15  280   S6(2)  O5(3):2     2xS6                           PSp(6,2)  2      2                  2       33      true             false            true             false                                                                                     
+# 13  28   1260    135    3   10    S6(2)  O5(3):2     2^3:2^2:3:2:3:2                PSp(6,2)  2      2                  2       39      true             false            true             false                                                                                     
+# 14  28   1260    270    6   50    S6(2)  O5(3):2     2xS4xS4                        PSp(6,2)  2      2                  2       41      true             false            true             false                                                                                     
+# 15  28   2016    216    3   16    S6(2)  O5(3):2     S5xS3                          PSp(6,2)  2      2                  2       65      true             false            true             false                                                                                     
+# 16  28   2016    432    6   80    S6(2)  O5(3):2     S6                             PSp(6,2)  2      2                  2       70      true             false            true             false                                                                                     
+# 17  28   2016    1080   15  560   S6(2)  O5(3):2     S5xS3                          PSp(6,2)  2      2                  2       65      true             false            true             false                                                                                     
+# 18  28   3360    1080   9   320   S6(2)  O5(3):2     ((S3xS3):2)xS3                 PSp(6,2)  2      2                  2       95      true             false            true             false                                                                                     
+# 19  28   3780    1620   12  660   S6(2)  O5(3):2     2^2x(((2^4):3):2)              PSp(6,2)  2      2                  2       100     true             false            true             false                                                                                     
+# 20  28   5040    720    4   80    S6(2)  O5(3):2     2xS3xS4                        PSp(6,2)  2      2                  2       131     true             false            true             false                                                                                     
+# 21  28   5040    1080   6   200   S6(2)  O5(3):2     2xS3xS4                        PSp(6,2)  2      2                  2       132     true             false            true             false                                                                                     
+# 22  28   5040    2160   12  880   S6(2)  O5(3):2     2xS3xS4                        PSp(6,2)  2      2                  2       131     true             false            true             false                                                                                     
+# 23  28   6048    1080   5   160   S6(2)  O5(3):2     2xS5                           PSp(6,2)  2      2                  2       159     true             false            true             false                                                                                     
+# 24  28   12096   2592   6   480   S6(2)  O5(3):2     2xA5                           PSp(6,2)  2      2                  2       308     true             false            true             false                                                                                     
+# 25  28   12096   4320   10  1440  S6(2)  O5(3):2     2xA5                           PSp(6,2)  2      2                  2       308     true             false            true             false                                                                                     
+# 26  28   15120   6480   12  2640  S6(2)  O5(3):2     (4xA4):2                       PSp(6,2)  2      2                  2       348     true             false            true             false                                                                                     
+# 27  28   22680   6480   8   1680  S6(2)  O5(3):2     (8x2):2:2                      PSp(6,2)  2      2                  2       439     true             false            true             false                                                                                     
+# 28  28   24192   4320   5   640   S6(2)  O5(3):2     S3xD10                         PSp(6,2)  2      2                  2       565     true             false            true             false                                                                                     
+# 29  28   80640   25920  9   7680  S6(2)  O5(3):2     D18                            PSp(6,2)  2      2                  2       977     true             false            true             false                                                                                     
+# 30  28   103680  25920  7   5760  S6(2)  O5(3):2     D14                            PSp(6,2)  2      2                  2       1177    true             false            true             false                                                                                     
+# 31  36   63      28     16  12    S6(2)  S8          2^5:S6                         PSp(6,2)  2      2                  3       5       true             true             true             true                 32                                                                   
+# 32  36   63      35     20  19    S6(2)  S8          2^5:S6                         PSp(6,2)  2      2                  3       5       true             true             true             true                 31                                                                   
+# 33  36   135     30     8   6     S6(2)  S8          2^6:PSL(3,2)                   PSp(6,2)  2      2                  3       9       true             true             true             true                 34                                                                   
+# 34  36   135     105    28  81    S6(2)  S8          2^6:PSL(3,2)                   PSp(6,2)  2      2                  3       9       true             true             true             true                 33                                                                   
+# 35  36   315     105    12  33    S6(2)  S8          (2^2x((2^3):(2^2))):3:2:3:2    PSp(6,2)  2      2                  3       12      true             true             true             true                 36                                                                   
+# 36  36   315     210    24  138   S6(2)  S8          (2^2x((2^3):(2^2))):3:2:3:2    PSp(6,2)  2      2                  3       12      true             true             true             true                 35                                                                   
+# 37  36   336     56     6   8     S6(2)  S8          S6xS3                          PSp(6,2)  2      2                  3       13      true             true             true             true                 38                                                                   
+# 38  36   336     280    30  232   S6(2)  S8          S6xS3                          PSp(6,2)  2      2                  3       13      true             true             true             true                 37                                                                   
+# 39  36   630     315    18  153   S6(2)  S8          2x((S4xS4):2)                  PSp(6,2)  2      2                  3       17      true             false            true             false                                                                                     
+# 40  36   945     105    4   9     S6(2)  S8          (2^2x(((2^4):2):2)):3:2        PSp(6,2)  2      2                  3       29      true             false            true             false                                                                                     
+# 41  36   945     210    8   42    S6(2)  S8          (2x(((((2^4):2):2):3):2)):2    PSp(6,2)  2      2                  3       30      true             false            true             false                                                                                     
+# 42  36   945     315    12  99    S6(2)  S8          (2x((4x2):2)):2:2:3:2:2        PSp(6,2)  2      2                  3       28      true             false            true             false                                                                                     
+# 43  36   1008    280    10  72    S6(2)  S8          2xS6                           PSp(6,2)  2      2                  3       32      true             false            true             false                                                                                     
+# 44  36   1008    420    15  168   S6(2)  S8          2xS6                           PSp(6,2)  2      2                  3       33      true             false            true             false                                                                                     
+# 45  36   1080    210    7   36    S6(2)  S8          2^3:PSL(3,2)                   PSp(6,2)  2      2                  3       36      true             false            true             false                                                                                     
+# 46  36   1120    280    9   64    S6(2)  S8          3^3:2^2:3:2:2                  PSp(6,2)  2      2                  3       37      true             false            true             true                 47                                                                   
+# 47  36   1120    840    27  624   S6(2)  S8          3^3:2^2:3:2:2                  PSp(6,2)  2      2                  3       37      true             false            true             true                 46                                                                   
+# 48  36   2016    280    5   32    S6(2)  S8          S5xS3                          PSp(6,2)  2      2                  3       65      true             false            true             false                                                                                     
+# 49  36   3360    280    3   16    S6(2)  S8          ((S3xS3):2)xS3                 PSp(6,2)  2      2                  3       95      true             false            true             false                                                                                     
+# 50  36   3780    315    3   18    S6(2)  S8          2^3:2^2:3:2:2                  PSp(6,2)  2      2                  3       101     true             false            true             false                                                                                     
+# 51  36   3780    630    6   90    S6(2)  S8          2x((((2^4):3):2):2)            PSp(6,2)  2      2                  3       97      true             false            true             false                                                                                     
+# 52  36   3780    630    6   90    S6(2)  S8          2xS4xD8                        PSp(6,2)  2      2                  3       99      true             false            true             false                                                                                     
+# 53  36   3780    1260   12  396   S6(2)  S8          2^2x(((2^4):3):2)              PSp(6,2)  2      2                  3       100     true             false            true             false                                                                                     
+# 54  36   4320    1680   14  624   S6(2)  S8          PSL(3,2):2                     PSp(6,2)  2      2                  3       125     true             false            true             false                                                                                     
+# 55  36   4320    2520   21  1440  S6(2)  S8          PSL(3,2):2                     PSp(6,2)  2      2                  3       125     true             false            true             false                                                                                     
+# 56  36   4536    1260   10  324   S6(2)  S8          2x(((2^4):5):2)                PSp(6,2)  2      2                  3       128     true             false            true             false                                                                                     
+# 57  36   5040    560    4   48    S6(2)  S8          2xS4xS3                        PSp(6,2)  2      2                  3       131     true             false            true             false                                                                                     
+# 58  36   5040    1680   12  528   S6(2)  S8          2xS4xS3                        PSp(6,2)  2      2                  3       131     true             false            true             false                                                                                     
+# 59  36   5040    2520   18  1224  S6(2)  S8          2xS4xS3                        PSp(6,2)  2      2                  3       132     true             false            true             false                                                                                     
+# 60  36   6720    3360   18  1632  S6(2)  S8          3^2:3:D8                       PSp(6,2)  2      2                  3       163     true             false            true             true                 60                                                                   
+# 61  36   7560    840    4   72    S6(2)  S8          4^2:2:3:2                      PSp(6,2)  2      2                  3       191     true             false            true             false                                                                                     
+# 62  36   10080   2520   9   576   S6(2)  S8          2x((S3xS3):2)                  PSp(6,2)  2      2                  3       239     true             false            true             false                                                                                     
+# 63  36   12096   2016   6   288   S6(2)  S8          2xA5                           PSp(6,2)  2      2                  3       308     true             false            true             false                                                                                     
+# 64  36   12096   3360   10  864   S6(2)  S8          2xA5                           PSp(6,2)  2      2                  3       308     true             false            true             false                                                                                     
+# 65  36   12096   3360   10  864   S6(2)  S8          S5                             PSp(6,2)  2      2                  3       313     true             false            true             false                                                                                     
+# 66  36   15120   2520   6   360   S6(2)  S8          (4x2):2:3:2                    PSp(6,2)  2      2                  3       336     true             false            true             false                                                                                     
+# 67  36   15120   2520   6   360   S6(2)  S8          2^2xS4                         PSp(6,2)  2      2                  3       332     true             false            true             false                                                                                     
+# 68  36   15120   5040   12  1584  S6(2)  S8          (4xA4):2                       PSp(6,2)  2      2                  3       348     true             false            true             false                                                                                     
+# 69  36   20160   5040   9   1152  S6(2)  S8          2xS3xS3                        PSp(6,2)  2      2                  3       415     true             false            true             false                                                                                     
+# 70  36   22680   5040   8   1008  S6(2)  S8          (8x2):2:2                      PSp(6,2)  2      2                  3       439     true             false            true             false                                                                                     
+# 71  36   24192   10080  15  4032  S6(2)  S8          S3xD10                         PSp(6,2)  2      2                  3       565     true             false            true             false                                                                                     
+# 72  36   30240   5040   6   720   S6(2)  S8          2xS4                           PSp(6,2)  2      2                  3       599     true             false            true             false                                                                                     
+# 73  36   72576   10080  5   1152  S6(2)  S8          D20                            PSp(6,2)  2      2                  3       973     true             false            true             false                                                                                     
+# 74  36   80640   20160  9   4608  S6(2)  S8          D18                            PSp(6,2)  2      2                  3       977     true             false            true             false                                                                                     
+# 75  36   103680  20160  7   3456  S6(2)  S8          D14                            PSp(6,2)  2      2                  3       1177    true             false            true             false                                                                                     
+# 76  63   63      32     32  16    S6(2)  2^5:S6      2^5:S6                         PSL(6,2)  3      2                  5       5       true             true             true             false                            true       complement of PG(5,2) or Hadamard parameters  
+# 77  120  6720    1008   18  144   S6(2)  PSU(3,3):2  3^2:3:D8                       PSp(6,2)  3      3                  7       163     true             false            true             false                                                                                     
+# 78  120  40320   6048   18  864   S6(2)  PSU(3,3):2  S3xS3                          PSp(6,2)  3      3                  7       677     true             false            true             false                                                                                     
+# 79  120  80640   12096  18  1728  S6(2)  PSU(3,3):2  D18                            PSp(6,2)  3      3                  7       977     true             false            true             false                                                                                     
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -143,10 +143,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     O5(3):2       PSp4(3):2    
+# Point-stabiliser                     O5(3):2       PSp(4,3):2    
 # Block-stabiliser                     2^5:S6        2^5:S6        
 # Orbit structure of point-stabiliser  1^{1}27^{1}   1^{1}27^{1}   
 # Orbit structure of block-stabiliser  12^{1}16^{1}  12^{1}16^{1}  
@@ -169,10 +169,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     O5(3):2       PSp4(3):2    
+# Point-stabiliser                     O5(3):2       PSp(4,3):2    
 # Block-stabiliser                     2^5:S6        2^5:S6        
 # Orbit structure of point-stabiliser  1^{1}27^{1}   1^{1}27^{1}   
 # Orbit structure of block-stabiliser  12^{1}16^{1}  12^{1}16^{1}  
@@ -195,10 +195,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     O5(3):2      PSp4(3):2   
+# Point-stabiliser                     O5(3):2      PSp(4,3):2   
 # Block-stabiliser                     S7           S7           
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  7^{1}21^{1}  7^{1}21^{1}  
@@ -221,10 +221,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     O5(3):2      PSp4(3):2   
+# Point-stabiliser                     O5(3):2      PSp(4,3):2   
 # Block-stabiliser                     S7           S7           
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  7^{1}21^{1}  7^{1}21^{1}  
@@ -247,10 +247,10 @@
 # -----------------------------------------------------------------------------------------------
 #                                      G                            Aut(D)                       
 # -----------------------------------------------------------------------------------------------
-# Structure                            S6(2)                        PSp6(2)                     
+# Structure                            S6(2)                        PSp(6,2)                     
 # Rank                                 2                            2                            
 # 2-Homogeneous                        true                         true                         
-# Point-stabiliser                     O5(3):2                      PSp4(3):2                   
+# Point-stabiliser                     O5(3):2                      PSp(4,3):2                   
 # Block-stabiliser                     (2^2x((2^3):(2^2))):3:2:3:2  (2^2x((2^3):(2^2))):3^2:2:2  
 # Orbit structure of point-stabiliser  1^{1}27^{1}                  1^{1}27^{1}                  
 # Orbit structure of block-stabiliser  4^{1}24^{1}                  4^{1}24^{1}                  
@@ -273,10 +273,10 @@
 # -----------------------------------------------------------------------------------------------
 #                                      G                            Aut(D)                       
 # -----------------------------------------------------------------------------------------------
-# Structure                            S6(2)                        PSp6(2)                     
+# Structure                            S6(2)                        PSp(6,2)                     
 # Rank                                 2                            2                            
 # 2-Homogeneous                        true                         true                         
-# Point-stabiliser                     O5(3):2                      PSp4(3):2                   
+# Point-stabiliser                     O5(3):2                      PSp(4,3):2                   
 # Block-stabiliser                     (2^2x((2^3):(2^2))):3:2:3:2  (2^2x((2^3):(2^2))):3^2:2:2  
 # Orbit structure of point-stabiliser  1^{1}27^{1}                  1^{1}27^{1}                  
 # Orbit structure of block-stabiliser  4^{1}24^{1}                  4^{1}24^{1}                  
@@ -299,10 +299,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     O5(3):2       PSp4(3):2    
+# Point-stabiliser                     O5(3):2       PSp(4,3):2    
 # Block-stabiliser                     S6xS3         S6xS3         
 # Orbit structure of point-stabiliser  1^{1}27^{1}   1^{1}27^{1}   
 # Orbit structure of block-stabiliser  10^{1}18^{1}  10^{1}18^{1}  
@@ -325,10 +325,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     O5(3):2       PSp4(3):2    
+# Point-stabiliser                     O5(3):2       PSp(4,3):2    
 # Block-stabiliser                     S6xS3         S6xS3         
 # Orbit structure of point-stabiliser  1^{1}27^{1}   1^{1}27^{1}   
 # Orbit structure of block-stabiliser  10^{1}18^{1}  10^{1}18^{1}  
@@ -351,10 +351,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     2x(2^4:S5)         2x(2^4:S5)         
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  2^{1}10^{1}16^{1}  2^{1}10^{1}16^{1}  
@@ -377,10 +377,10 @@
 # ---------------------------------------------------------------------------------------------------
 #                                      G                              Aut(D)                         
 # ---------------------------------------------------------------------------------------------------
-# Structure                            S6(2)                          PSp6(2)                       
+# Structure                            S6(2)                          PSp(6,2)                       
 # Rank                                 2                              2                              
 # 2-Homogeneous                        true                           true                           
-# Point-stabiliser                     O5(3):2                        PSp4(3):2                     
+# Point-stabiliser                     O5(3):2                        PSp(4,3):2                     
 # Block-stabiliser                     (2^2x((((2^3):(2^2)):3):2)):2  (2^2x((((2^3):(2^2)):3):2)):2  
 # Orbit structure of point-stabiliser  1^{1}27^{1}                    1^{1}27^{1}                    
 # Orbit structure of block-stabiliser  4^{1}8^{1}16^{1}               4^{1}8^{1}16^{1}               
@@ -403,10 +403,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     2xS6               2xS6               
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  6^{1}10^{1}12^{1}  6^{1}10^{1}12^{1}  
@@ -429,10 +429,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     2xS6               2xS6               
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  1^{1}12^{1}15^{1}  1^{1}12^{1}15^{1}  
@@ -455,10 +455,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     O5(3):2           PSp4(3):2        
+# Point-stabiliser                     O5(3):2           PSp(4,3):2        
 # Block-stabiliser                     2^3:2^2:3:2:3:2   2^3:2^2:3^2:2:2   
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}       
 # Orbit structure of block-stabiliser  1^{1}3^{1}24^{1}  1^{1}3^{1}24^{1}  
@@ -481,10 +481,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     O5(3):2      PSp4(3):2   
+# Point-stabiliser                     O5(3):2      PSp(4,3):2   
 # Block-stabiliser                     2xS4xS4      2xS4xS4      
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  6^{2}16^{1}  6^{2}16^{1}  
@@ -507,10 +507,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     S5xS3              S5xS3              
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  3^{1}10^{1}15^{1}  3^{1}10^{1}15^{1}  
@@ -533,10 +533,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     O5(3):2           PSp4(3):2        
+# Point-stabiliser                     O5(3):2           PSp(4,3):2        
 # Block-stabiliser                     S6                S6                
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}       
 # Orbit structure of block-stabiliser  1^{1}6^{2}15^{1}  1^{1}6^{2}15^{1}  
@@ -559,10 +559,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     S5xS3              S5xS3              
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  3^{1}10^{1}15^{1}  3^{1}10^{1}15^{1}  
@@ -585,10 +585,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     O5(3):2           PSp4(3):2        
+# Point-stabiliser                     O5(3):2           PSp(4,3):2        
 # Block-stabiliser                     ((S3xS3):2)xS3    ((S3xS3):2)xS3    
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}       
 # Orbit structure of block-stabiliser  1^{1}9^{1}18^{1}  1^{1}9^{1}18^{1}  
@@ -611,10 +611,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     2^2x(((2^4):3):2)  2^2x(((2^4):3):2)  
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  4^{1}12^{2}        4^{1}12^{2}        
@@ -637,10 +637,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     O5(3):2           PSp4(3):2        
+# Point-stabiliser                     O5(3):2           PSp(4,3):2        
 # Block-stabiliser                     2xS3xS4           2xS4xS3           
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}       
 # Orbit structure of block-stabiliser  4^{1}6^{2}12^{1}  4^{1}6^{2}12^{1}  
@@ -663,10 +663,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     O5(3):2           PSp4(3):2        
+# Point-stabiliser                     O5(3):2           PSp(4,3):2        
 # Block-stabiliser                     2xS3xS4           2xS3xS4           
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}       
 # Orbit structure of block-stabiliser  4^{1}6^{1}18^{1}  4^{1}6^{1}18^{1}  
@@ -689,10 +689,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     O5(3):2           PSp4(3):2        
+# Point-stabiliser                     O5(3):2           PSp(4,3):2        
 # Block-stabiliser                     2xS3xS4           2xS4xS3           
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}       
 # Orbit structure of block-stabiliser  4^{1}6^{2}12^{1}  4^{1}6^{2}12^{1}  
@@ -715,10 +715,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S6(2)                  PSp6(2)               
+# Structure                            S6(2)                  PSp(6,2)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     O5(3):2                PSp4(3):2             
+# Point-stabiliser                     O5(3):2                PSp(4,3):2             
 # Block-stabiliser                     2xS5                   2xS5                   
 # Orbit structure of point-stabiliser  1^{1}27^{1}            1^{1}27^{1}            
 # Orbit structure of block-stabiliser  1^{1}2^{1}5^{1}10^{2}  1^{1}2^{1}5^{1}10^{2}  
@@ -741,10 +741,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     2xA5               2xA5               
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  6^{1}10^{1}12^{1}  6^{1}10^{1}12^{1}  
@@ -767,10 +767,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     O5(3):2            PSp4(3):2         
+# Point-stabiliser                     O5(3):2            PSp(4,3):2         
 # Block-stabiliser                     2xA5               2xA5               
 # Orbit structure of point-stabiliser  1^{1}27^{1}        1^{1}27^{1}        
 # Orbit structure of block-stabiliser  6^{1}10^{1}12^{1}  6^{1}10^{1}12^{1}  
@@ -793,10 +793,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     O5(3):2      PSp4(3):2   
+# Point-stabiliser                     O5(3):2      PSp(4,3):2   
 # Block-stabiliser                     (4xA4):2     (2xS4):2     
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  4^{1}12^{2}  4^{1}12^{2}  
@@ -819,10 +819,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     O5(3):2      PSp4(3):2   
+# Point-stabiliser                     O5(3):2      PSp(4,3):2   
 # Block-stabiliser                     (8x2):2:2    (4x2^2):2:2  
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{3}   4^{1}8^{3}   
@@ -845,10 +845,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     O5(3):2           PSp4(3):2        
+# Point-stabiliser                     O5(3):2           PSp(4,3):2        
 # Block-stabiliser                     S3xD10            S3xD10            
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}       
 # Orbit structure of block-stabiliser  3^{1}5^{2}15^{1}  3^{1}5^{2}15^{1}  
@@ -871,10 +871,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     O5(3):2      PSp4(3):2   
+# Point-stabiliser                     O5(3):2      PSp(4,3):2   
 # Block-stabiliser                     D18          D18          
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  1^{1}9^{3}   1^{1}9^{3}   
@@ -897,10 +897,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     O5(3):2      PSp4(3):2   
+# Point-stabiliser                     O5(3):2      PSp(4,3):2   
 # Block-stabiliser                     D14          D14          
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  7^{4}        7^{4}        
@@ -923,7 +923,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     S8            S8            
@@ -949,7 +949,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     S8            S8            
@@ -975,11 +975,11 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     S8            S8            
-# Block-stabiliser                     2^6:PSL3(2)   2^6:PSL3(2)  
+# Block-stabiliser                     2^6:PSL(3,2)  2^6:PSL(3,2)  
 # Orbit structure of point-stabiliser  1^{1}35^{1}   1^{1}35^{1}   
 # Orbit structure of block-stabiliser  8^{1}28^{1}   8^{1}28^{1}   
 # Point-transitive                     true          true          
@@ -1001,11 +1001,11 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            S6(2)         PSp6(2)      
+# Structure                            S6(2)         PSp(6,2)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     S8            S8            
-# Block-stabiliser                     2^6:PSL3(2)   2^6:PSL3(2)  
+# Block-stabiliser                     2^6:PSL(3,2)  2^6:PSL(3,2)  
 # Orbit structure of point-stabiliser  1^{1}35^{1}   1^{1}35^{1}   
 # Orbit structure of block-stabiliser  8^{1}28^{1}   8^{1}28^{1}   
 # Point-transitive                     true          true          
@@ -1027,7 +1027,7 @@
 # -----------------------------------------------------------------------------------------------
 #                                      G                            Aut(D)                       
 # -----------------------------------------------------------------------------------------------
-# Structure                            S6(2)                        PSp6(2)                     
+# Structure                            S6(2)                        PSp(6,2)                     
 # Rank                                 2                            2                            
 # 2-Homogeneous                        true                         true                         
 # Point-stabiliser                     S8                           S8                           
@@ -1053,7 +1053,7 @@
 # -----------------------------------------------------------------------------------------------
 #                                      G                            Aut(D)                       
 # -----------------------------------------------------------------------------------------------
-# Structure                            S6(2)                        PSp6(2)                     
+# Structure                            S6(2)                        PSp(6,2)                     
 # Rank                                 2                            2                            
 # 2-Homogeneous                        true                         true                         
 # Point-stabiliser                     S8                           S8                           
@@ -1079,7 +1079,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     S8           S8           
@@ -1105,7 +1105,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     S8           S8           
@@ -1131,7 +1131,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1157,7 +1157,7 @@
 # ---------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                   
 # ---------------------------------------------------------------------------------------
-# Structure                            S6(2)                    PSp6(2)                 
+# Structure                            S6(2)                    PSp(6,2)                 
 # Rank                                 2                        2                        
 # 2-Homogeneous                        true                     true                     
 # Point-stabiliser                     S8                       S8                       
@@ -1183,7 +1183,7 @@
 # ---------------------------------------------------------------------------------------------
 #                                      G                            Aut(D)                     
 # ---------------------------------------------------------------------------------------------
-# Structure                            S6(2)                        PSp6(2)                   
+# Structure                            S6(2)                        PSp(6,2)                   
 # Rank                                 2                            2                          
 # 2-Homogeneous                        true                         true                       
 # Point-stabiliser                     S8                           S8                         
@@ -1209,7 +1209,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                 
 # -------------------------------------------------------------------------------------
-# Structure                            S6(2)                    PSp6(2)               
+# Structure                            S6(2)                    PSp(6,2)               
 # Rank                                 2                        2                      
 # 2-Homogeneous                        true                     true                   
 # Point-stabiliser                     S8                       S8                     
@@ -1235,7 +1235,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1261,7 +1261,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1287,11 +1287,11 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     S8                S8                
-# Block-stabiliser                     2^3:PSL3(2)       2^3:PSL3(2)      
+# Block-stabiliser                     2^3:PSL(3,2)      2^3:PSL(3,2)      
 # Orbit structure of point-stabiliser  1^{1}35^{1}       1^{1}35^{1}       
 # Orbit structure of block-stabiliser  1^{1}7^{1}28^{1}  1^{1}7^{1}28^{1}  
 # Point-transitive                     true              true              
@@ -1313,7 +1313,7 @@
 # -------------------------------------------------------------------
 #                                      G              Aut(D)         
 # -------------------------------------------------------------------
-# Structure                            S6(2)          PSp6(2)       
+# Structure                            S6(2)          PSp(6,2)       
 # Rank                                 2              2              
 # 2-Homogeneous                        true           true           
 # Point-stabiliser                     S8             S8             
@@ -1339,7 +1339,7 @@
 # -------------------------------------------------------------------
 #                                      G              Aut(D)         
 # -------------------------------------------------------------------
-# Structure                            S6(2)          PSp6(2)       
+# Structure                            S6(2)          PSp(6,2)       
 # Rank                                 2              2              
 # 2-Homogeneous                        true           true           
 # Point-stabiliser                     S8             S8             
@@ -1365,7 +1365,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     S8                S8                
@@ -1391,7 +1391,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     S8                S8                
@@ -1417,7 +1417,7 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S6(2)                  PSp6(2)               
+# Structure                            S6(2)                  PSp(6,2)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
 # Point-stabiliser                     S8                     S8                     
@@ -1443,7 +1443,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            S6(2)                   PSp6(2)                
+# Structure                            S6(2)                   PSp(6,2)                
 # Rank                                 2                       2                       
 # 2-Homogeneous                        true                    true                    
 # Point-stabiliser                     S8                      S8                      
@@ -1469,7 +1469,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            S6(2)                   PSp6(2)                
+# Structure                            S6(2)                   PSp(6,2)                
 # Rank                                 2                       2                       
 # 2-Homogeneous                        true                    true                    
 # Point-stabiliser                     S8                      S8                      
@@ -1495,7 +1495,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1521,11 +1521,11 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
-# Block-stabiliser                     PSL3(2):2          PSL3(2):2         
+# Block-stabiliser                     PSL(3,2):2         PSL(3,2):2         
 # Orbit structure of point-stabiliser  1^{1}35^{1}        1^{1}35^{1}        
 # Orbit structure of block-stabiliser  1^{1}14^{1}21^{1}  1^{1}14^{1}21^{1}  
 # Point-transitive                     true               true               
@@ -1547,11 +1547,11 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
-# Block-stabiliser                     PSL3(2):2          PSL3(2):2         
+# Block-stabiliser                     PSL(3,2):2         PSL(3,2):2         
 # Orbit structure of point-stabiliser  1^{1}35^{1}        1^{1}35^{1}        
 # Orbit structure of block-stabiliser  1^{1}14^{1}21^{1}  1^{1}14^{1}21^{1}  
 # Point-transitive                     true               true               
@@ -1573,7 +1573,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            S6(2)            PSp6(2)         
+# Structure                            S6(2)            PSp(6,2)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     S8               S8               
@@ -1599,7 +1599,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            S6(2)                   PSp6(2)                
+# Structure                            S6(2)                   PSp(6,2)                
 # Rank                                 2                       2                       
 # 2-Homogeneous                        true                    true                    
 # Point-stabiliser                     S8                      S8                      
@@ -1625,7 +1625,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            S6(2)                   PSp6(2)                
+# Structure                            S6(2)                   PSp(6,2)                
 # Rank                                 2                       2                       
 # 2-Homogeneous                        true                    true                    
 # Point-stabiliser                     S8                      S8                      
@@ -1651,7 +1651,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1677,7 +1677,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     S8           S8           
@@ -1703,7 +1703,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1729,7 +1729,7 @@
 # ---------------------------------------------------------------------------------------------
 #                                      G                           Aut(D)                      
 # ---------------------------------------------------------------------------------------------
-# Structure                            S6(2)                       PSp6(2)                    
+# Structure                            S6(2)                       PSp(6,2)                    
 # Rank                                 2                           2                           
 # 2-Homogeneous                        true                        true                        
 # Point-stabiliser                     S8                          S8                          
@@ -1755,7 +1755,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1781,7 +1781,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1807,7 +1807,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     S8                 S8                 
@@ -1833,7 +1833,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     S8           S8           
@@ -1859,7 +1859,7 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S6(2)                  PSp6(2)               
+# Structure                            S6(2)                  PSp(6,2)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
 # Point-stabiliser                     S8                     S8                     
@@ -1885,7 +1885,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     S8           S8           
@@ -1911,7 +1911,7 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S6(2)                  PSp6(2)               
+# Structure                            S6(2)                  PSp(6,2)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
 # Point-stabiliser                     S8                     S8                     
@@ -1937,7 +1937,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     S8           S8           
@@ -1963,7 +1963,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     S8                S8                
@@ -1989,7 +1989,7 @@
 # ---------------------------------------------------------------------------------------------
 #                                      G                           Aut(D)                      
 # ---------------------------------------------------------------------------------------------
-# Structure                            S6(2)                       PSp6(2)                    
+# Structure                            S6(2)                       PSp(6,2)                    
 # Rank                                 2                           2                           
 # 2-Homogeneous                        true                        true                        
 # Point-stabiliser                     S8                          S8                          
@@ -2015,7 +2015,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     S8                S8                
@@ -2041,7 +2041,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            S6(2)        PSp6(2)     
+# Structure                            S6(2)        PSp(6,2)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     S8           S8           
@@ -2067,7 +2067,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            S6(2)             PSp6(2)          
+# Structure                            S6(2)             PSp(6,2)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     S8                S8                
@@ -2093,11 +2093,11 @@
 # ----------------------------------------------------------------------
 #                                      G                  Aut(D)        
 # ----------------------------------------------------------------------
-# Structure                            S6(2)              PSL6(2)      
+# Structure                            S6(2)              PSL(6,2)      
 # Rank                                 3                  2             
 # 2-Homogeneous                        false              true          
-# Point-stabiliser                     2^5:S6             2^5:PSL5(2)  
-# Block-stabiliser                     2^5:S6             2^5:PSL5(2)  
+# Point-stabiliser                     2^5:S6             2^5:PSL(5,2)  
+# Block-stabiliser                     2^5:S6             2^5:PSL(5,2)  
 # Orbit structure of point-stabiliser  1^{1}30^{1}32^{1}  1^{1}62^{1}   
 # Orbit structure of block-stabiliser  1^{1}30^{1}32^{1}  31^{1}32^{1}  
 # Point-transitive                     true               true          
@@ -2119,10 +2119,10 @@
 # -------------------------------------------------------------------------------------------------
 #                                      G                             Aut(D)                        
 # -------------------------------------------------------------------------------------------------
-# Structure                            S6(2)                         PSp6(2)                      
+# Structure                            S6(2)                         PSp(6,2)                      
 # Rank                                 3                             3                             
 # 2-Homogeneous                        false                         false                         
-# Point-stabiliser                     PSU3(3):2                     PSU3(3):2                    
+# Point-stabiliser                     PSU(3,3):2                    PSU(3,3):2                    
 # Block-stabiliser                     3^2:3:D8                      3^2:3:D8                      
 # Orbit structure of point-stabiliser  1^{1}56^{1}63^{1}             1^{1}56^{1}63^{1}             
 # Orbit structure of block-stabiliser  1^{1}2^{1}18^{2}27^{1}54^{1}  1^{1}2^{1}18^{2}27^{1}54^{1}  
@@ -2145,10 +2145,10 @@
 # -----------------------------------------------------------------------------------------------
 #                                      G                            Aut(D)                       
 # -----------------------------------------------------------------------------------------------
-# Structure                            S6(2)                        PSp6(2)                     
+# Structure                            S6(2)                        PSp(6,2)                     
 # Rank                                 3                            3                            
 # 2-Homogeneous                        false                        false                        
-# Point-stabiliser                     PSU3(3):2                    PSU3(3):2                   
+# Point-stabiliser                     PSU(3,3):2                   PSU(3,3):2                   
 # Block-stabiliser                     S3xS3                        S3xS3                        
 # Orbit structure of point-stabiliser  1^{1}56^{1}63^{1}            1^{1}56^{1}63^{1}            
 # Orbit structure of block-stabiliser  3^{2}6^{1}9^{2}18^{3}36^{1}  3^{2}6^{1}9^{2}18^{3}36^{1}  
@@ -2171,10 +2171,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S6(2)              PSp6(2)           
+# Structure                            S6(2)              PSp(6,2)           
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
-# Point-stabiliser                     PSU3(3):2          PSU3(3):2         
+# Point-stabiliser                     PSU(3,3):2         PSU(3,3):2         
 # Block-stabiliser                     D18                D18                
 # Orbit structure of point-stabiliser  1^{1}56^{1}63^{1}  1^{1}56^{1}63^{1}  
 # Orbit structure of block-stabiliser  3^{1}9^{7}18^{3}   3^{1}9^{7}18^{3}   

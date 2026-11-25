@@ -62,8 +62,8 @@
 # 6   12   495  330  8   210  M12  M11        (((2^3):(2^2)):3):2  S12     2      2                  2       21      true             true             true             true                 5                      complete          
 # 7   12   792  330  5   120  M12  M11        S5                   S12     2      2                  2       26      true             false            true             false                                       complete          
 # 8   12   792  396  6   180  M12  M11        S5                   M12     2      2                  2       29      true             false            true             true                 8                                        
-# 9   144  144  66   66  30   M12  PSL2(11)   PSL2(11)             M12:2   5      4                  13      13      true             true             true             false                            true       Menon parameters  
-# 10  144  144  66   66  30   M12  PSL2(11)   PSL2(11)             M12:2   5      4                  12      12      false            false            true             false                            true       Menon parameters  
+# 9   144  144  66   66  30   M12  PSL(2,11)  PSL(2,11)            M12:2   5      4                  13      13      true             true             true             false                            true       Menon parameters  
+# 10  144  144  66   66  30   M12  PSL(2,11)  PSL(2,11)            M12:2   5      4                  12      12      false            false            true             false                            true       Menon parameters  
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -287,8 +287,8 @@
 # Structure                            M12                      M12:2                    
 # Rank                                 5                        4                        
 # 2-Homogeneous                        false                    false                    
-# Point-stabiliser                     PSL2(11)                 PSL2(11):2              
-# Block-stabiliser                     PSL2(11)                 PSL2(11):2              
+# Point-stabiliser                     PSL(2,11)                PSL(2,11):2              
+# Block-stabiliser                     PSL(2,11)                PSL(2,11):2              
 # Orbit structure of point-stabiliser  1^{1}11^{2}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Orbit structure of block-stabiliser  1^{1}11^{2}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Point-transitive                     true                     true                     
@@ -313,8 +313,8 @@
 # Structure                            M12                      M12:2                    
 # Rank                                 5                        4                        
 # 2-Homogeneous                        false                    false                    
-# Point-stabiliser                     PSL2(11)                 PSL2(11):2              
-# Block-stabiliser                     PSL2(11)                 PSL2(11):2              
+# Point-stabiliser                     PSL(2,11)                PSL(2,11):2              
+# Block-stabiliser                     PSL(2,11)                PSL(2,11):2              
 # Orbit structure of point-stabiliser  1^{1}11^{2}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Orbit structure of block-stabiliser  1^{1}11^{2}55^{1}66^{1}  1^{1}22^{1}55^{1}66^{1}  
 # Point-transitive                     true                     true                     

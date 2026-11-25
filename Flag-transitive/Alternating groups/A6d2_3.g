@@ -49,12 +49,12 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r   k  λ   G    Gα  GB    Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  avectors  subdegrees  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   10  30   12  4  4   M10  M9  S4    PΓL2(9)   2      2                  3       8       12^{1}    1^{1}9^{1}  true             false            true             true                 2                                
-# 2   10  30   18  6  10  M10  M9  S4    PΓL2(9)   2      2                  3       8       30^{1}    1^{1}9^{1}  true             false            true             true                 1                                
+# 1   10  30   12  4  4   M10  M9  S4    PΓL(2,9)  2      2                  3       8       12^{1}    1^{1}9^{1}  true             false            true             true                 2                                
+# 2   10  30   18  6  10  M10  M9  S4    PΓL(2,9)  2      2                  3       8       30^{1}    1^{1}9^{1}  true             false            true             true                 1                                
 # 3   10  36   18  5  8   M10  M9  5:4   M10       2      2                  3       9       20^{1}    1^{1}9^{1}  true             true             true             true                 3                                
 # 4   10  45   36  8  28  M10  M9  QD16  S10       2      2                  3       11      56^{1}    1^{1}9^{1}  true             true             true             true                                        complete  
 # 5   10  120  36  3  8   M10  M9  S3    S10       2      2                  3       18      6^{1}     1^{1}9^{1}  true             false            true             false                                       complete  
-# 6   10  180  72  4  24  M10  M9  4     PΓL2(9)   2      2                  3       20      12^{1}    1^{1}9^{1}  true             false            true             false                                                 
+# 6   10  180  72  4  24  M10  M9  4     PΓL(2,9)  2      2                  3       20      12^{1}    1^{1}9^{1}  true             false            true             false                                                 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -67,10 +67,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            M10         PΓL2(9)    
+# Structure                            M10         PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     M9          AΓL1(9)    
+# Point-stabiliser                     M9          AΓL(1,9)    
 # Block-stabiliser                     S4          2xS4        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  4^{1}6^{1}  4^{1}6^{1}  
@@ -93,10 +93,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            M10         PΓL2(9)    
+# Structure                            M10         PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     M9          AΓL1(9)    
+# Point-stabiliser                     M9          AΓL(1,9)    
 # Block-stabiliser                     S4          2xS4        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  4^{1}6^{1}  4^{1}6^{1}  
@@ -197,10 +197,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            M10         PΓL2(9)    
+# Structure                            M10         PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     M9          AΓL1(9)    
+# Point-stabiliser                     M9          AΓL(1,9)    
 # Block-stabiliser                     4           D8          
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  1^{2}4^{2}  2^{1}4^{2}  

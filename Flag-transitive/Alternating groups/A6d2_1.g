@@ -53,11 +53,11 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   6   15  10  4  6   S6        S5      S4 x S2  S6        2      2                  3       9       12^{1}        1^{1}5^{1}        true             true             true             true                                        complete                                      
 # 2   6   20  10  3  4   S6        S5      S3 x S3  S6        2      2                  3       11      6^{1}         1^{1}5^{1}        true             false            true             true                 2                      complete                                      
-# 3   10  15  6   4  2   PΣL2(9)   3^2:D8  2xS4     PΣL2(9)   2      2                  5       8       12^{1}        1^{1}9^{1}        true             true             true             true                 4                                                                    
-# 4   10  15  9   6  5   PΣL2(9)   3^2:D8  2xS4     PΣL2(9)   2      2                  5       8       30^{1}        1^{1}9^{1}        true             true             true             true                 3                                                                    
-# 5   10  60  18  3  4   PΣL2(9)   3^2:D8  D12      PΣL2(9)   2      2                  5       24      6^{1}         1^{1}9^{1}        true             false            true             false                                                                                     
-# 6   10  72  36  5  16  PΣL2(9)   3^2:D8  D10      PΓL2(9)   2      2                  5       28      20^{1}        1^{1}9^{1}        true             false            true             true                 6                                                                    
-# 7   15  15  8   8  4   S6        2xS4    2xS4     PSL4(2)   3      2                  8       8       24^{1}32^{1}  1^{1}6^{1}8^{1}   true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
+# 3   10  15  6   4  2   PΣL(2,9)  3^2:D8  2xS4     PΣL(2,9)  2      2                  5       8       12^{1}        1^{1}9^{1}        true             true             true             true                 4                                                                    
+# 4   10  15  9   6  5   PΣL(2,9)  3^2:D8  2xS4     PΣL(2,9)  2      2                  5       8       30^{1}        1^{1}9^{1}        true             true             true             true                 3                                                                    
+# 5   10  60  18  3  4   PΣL(2,9)  3^2:D8  D12      PΣL(2,9)  2      2                  5       24      6^{1}         1^{1}9^{1}        true             false            true             false                                                                                     
+# 6   10  72  36  5  16  PΣL(2,9)  3^2:D8  D10      PΓL(2,9)  2      2                  5       28      20^{1}        1^{1}9^{1}        true             false            true             true                 6                                                                    
+# 7   15  15  8   8  4   S6        2xS4    2xS4     PSL(4,2)  3      2                  8       8       24^{1}32^{1}  1^{1}6^{1}8^{1}   true             true             true             false                            true       complement of PG(3,2) or Hadamard parameters  
 # 8   36  90  20  8  4   S6        5:4     D8       S6        5      5                  19      30      8^{3}32^{1}   1^{1}5^{3}20^{1}  false            false            true             false                                                                                     
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -123,7 +123,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΣL2(9)     PΣL2(9)    
+# Structure                            PΣL(2,9)    PΣL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:D8      3^2:D8      
@@ -149,7 +149,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΣL2(9)     PΣL2(9)    
+# Structure                            PΣL(2,9)    PΣL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:D8      3^2:D8      
@@ -175,7 +175,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΣL2(9)          PΣL2(9)         
+# Structure                            PΣL(2,9)         PΣL(2,9)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     3^2:D8           3^2:D8           
@@ -201,10 +201,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΣL2(9)     PΓL2(9)    
+# Structure                            PΣL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     3^2:D8      AΓL1(9)    
+# Point-stabiliser                     3^2:D8      AΓL(1,9)    
 # Block-stabiliser                     D10         5:4         
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  5^{2}       5^{2}       
@@ -227,11 +227,11 @@
 # --------------------------------------------------------------------
 #                                      G                Aut(D)        
 # --------------------------------------------------------------------
-# Structure                            S6               PSL4(2)      
+# Structure                            S6               PSL(4,2)      
 # Rank                                 3                2             
 # 2-Homogeneous                        false            true          
-# Point-stabiliser                     2xS4             2^3:PSL3(2)  
-# Block-stabiliser                     2xS4             2^3:PSL3(2)  
+# Point-stabiliser                     2xS4             2^3:PSL(3,2)  
+# Block-stabiliser                     2xS4             2^3:PSL(3,2)  
 # Orbit structure of point-stabiliser  1^{1}6^{1}8^{1}  1^{1}14^{1}   
 # Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}  7^{1}8^{1}    
 # Point-transitive                     true             true          

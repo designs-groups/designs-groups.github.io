@@ -80,7 +80,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     2xS5         2xS5         
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  6^{1}20^{1}  6^{1}20^{1}  
@@ -106,7 +106,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     2xS5         2xS5         
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  6^{1}20^{1}  6^{1}20^{1}  
@@ -158,7 +158,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     13:4         13:4         
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  13^{2}       13^{2}       
@@ -184,7 +184,7 @@
 # Structure                            L2(25).2^2        L2(25).2^2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:(24:2)        AΓL1(25)         
+# Point-stabiliser                     5^2:(24:2)        AΓL(1,25)         
 # Block-stabiliser                     2xS4              2xS4              
 # Orbit structure of point-stabiliser  1^{1}25^{1}       1^{1}25^{1}       
 # Orbit structure of block-stabiliser  6^{1}8^{1}12^{1}  6^{1}8^{1}12^{1}  
@@ -210,7 +210,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     D8xS3        D8xS3        
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  2^{1}12^{2}  2^{1}12^{2}  
@@ -236,7 +236,7 @@
 # Structure                            L2(25).2^2        L2(25).2^2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:(24:2)        AΓL1(25)         
+# Point-stabiliser                     5^2:(24:2)        AΓL(1,25)         
 # Block-stabiliser                     2xS4              2xS4              
 # Orbit structure of point-stabiliser  1^{1}25^{1}       1^{1}25^{1}       
 # Orbit structure of block-stabiliser  6^{1}8^{1}12^{1}  6^{1}8^{1}12^{1}  
@@ -262,7 +262,7 @@
 # Structure                            L2(25).2^2        L2(25).2^2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:(24:2)        AΓL1(25)         
+# Point-stabiliser                     5^2:(24:2)        AΓL(1,25)         
 # Block-stabiliser                     2x(5:4)           2x(5:4)           
 # Orbit structure of point-stabiliser  1^{1}25^{1}       1^{1}25^{1}       
 # Orbit structure of block-stabiliser  1^{1}5^{1}20^{1}  1^{1}5^{1}20^{1}  
@@ -288,7 +288,7 @@
 # Structure                            L2(25).2^2        L2(25).2^2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:(24:2)        AΓL1(25)         
+# Point-stabiliser                     5^2:(24:2)        AΓL(1,25)         
 # Block-stabiliser                     8:(2^2)           8:2^2             
 # Orbit structure of point-stabiliser  1^{1}25^{1}       1^{1}25^{1}       
 # Orbit structure of block-stabiliser  2^{1}8^{1}16^{1}  2^{1}8^{1}16^{1}  
@@ -314,7 +314,7 @@
 # Structure                            L2(25).2^2        L2(25).2^2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:(24:2)        AΓL1(25)         
+# Point-stabiliser                     5^2:(24:2)        AΓL(1,25)         
 # Block-stabiliser                     8:(2^2)           8:2^2             
 # Orbit structure of point-stabiliser  1^{1}25^{1}       1^{1}25^{1}       
 # Orbit structure of block-stabiliser  2^{1}8^{1}16^{1}  2^{1}8^{1}16^{1}  
@@ -340,7 +340,7 @@
 # Structure                            L2(25).2^2        L2(25).2^2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:(24:2)        AΓL1(25)         
+# Point-stabiliser                     5^2:(24:2)        AΓL(1,25)         
 # Block-stabiliser                     S4                S4                
 # Orbit structure of point-stabiliser  1^{1}25^{1}       1^{1}25^{1}       
 # Orbit structure of block-stabiliser  4^{2}6^{1}12^{1}  4^{2}6^{1}12^{1}  
@@ -366,7 +366,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     D24          D24          
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  2^{1}12^{2}  2^{1}12^{2}  
@@ -392,7 +392,7 @@
 # Structure                            L2(25).2^2        L2(25).2^2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:(24:2)        AΓL1(25)         
+# Point-stabiliser                     5^2:(24:2)        AΓL(1,25)         
 # Block-stabiliser                     D20               D20               
 # Orbit structure of point-stabiliser  1^{1}25^{1}       1^{1}25^{1}       
 # Orbit structure of block-stabiliser  1^{1}5^{1}10^{2}  1^{1}5^{1}10^{2}  
@@ -418,7 +418,7 @@
 # Structure                            L2(25).2^2       L2(25).2^2       
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     5^2:(24:2)       AΓL1(25)        
+# Point-stabiliser                     5^2:(24:2)       AΓL(1,25)        
 # Block-stabiliser                     2xD8             2xD8             
 # Orbit structure of point-stabiliser  1^{1}25^{1}      1^{1}25^{1}      
 # Orbit structure of block-stabiliser  2^{1}4^{2}8^{2}  2^{1}4^{2}8^{2}  
@@ -444,7 +444,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     D16          D16          
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  2^{1}8^{3}   2^{1}8^{3}   
@@ -496,7 +496,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     D12          D12          
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  2^{1}6^{4}   2^{1}6^{4}   
@@ -522,7 +522,7 @@
 # Structure                            L2(25).2^2       L2(25).2^2       
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     5^2:(24:2)       AΓL1(25)        
+# Point-stabiliser                     5^2:(24:2)       AΓL(1,25)        
 # Block-stabiliser                     D8               D8               
 # Orbit structure of point-stabiliser  1^{1}25^{1}      1^{1}25^{1}      
 # Orbit structure of block-stabiliser  2^{1}4^{2}8^{2}  2^{1}4^{2}8^{2}  
@@ -548,7 +548,7 @@
 # Structure                            L2(25).2^2       L2(25).2^2       
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     5^2:(24:2)       AΓL1(25)        
+# Point-stabiliser                     5^2:(24:2)       AΓL(1,25)        
 # Block-stabiliser                     D8               D8               
 # Orbit structure of point-stabiliser  1^{1}25^{1}      1^{1}25^{1}      
 # Orbit structure of block-stabiliser  2^{1}4^{2}8^{2}  2^{1}4^{2}8^{2}  
@@ -574,7 +574,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     4x2          4x2          
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  2^{1}8^{3}   2^{1}8^{3}   
@@ -600,7 +600,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     S3           S3           
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  2^{1}6^{4}   2^{1}6^{4}   
@@ -626,7 +626,7 @@
 # Structure                            L2(25).2^2   L2(25).2^2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:(24:2)   AΓL1(25)    
+# Point-stabiliser                     5^2:(24:2)   AΓL(1,25)    
 # Block-stabiliser                     2^2          2^2          
 # Orbit structure of point-stabiliser  1^{1}25^{1}  1^{1}25^{1}  
 # Orbit structure of block-stabiliser  2^{1}4^{6}   2^{1}4^{6}   

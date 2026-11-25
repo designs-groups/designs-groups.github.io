@@ -51,26 +51,26 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G          Gα     GB   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   32  248   93   12  33   PSL2(31)   31:15  A5   PSL2(31)   2      2                  1       3       true             true             true             true                 2                                
-# 2   32  248   155  20  95   PSL2(31)   31:15  A5   PSL2(31)   2      2                  1       3       true             true             true             true                 1                                
-# 3   32  496   465  30  435  PSL2(31)   31:15  D30  S32        2      2                  1       6       true             true             true             true                                        complete  
-# 4   32  620   155  8   35   PSL2(31)   31:15  S4   PSL2(31)   2      2                  1       7       true             true             true             true                 5                                
-# 5   32  620   465  24  345  PSL2(31)   31:15  S4   PSL2(31)   2      2                  1       7       true             true             true             true                 4                                
-# 6   32  930   465  16  225  PSL2(31)   31:15  D16  PSL2(31)   2      2                  1       9       true             false            true             true                 6                                
-# 7   32  930   465  16  225  PSL2(31)   31:15  16   PGL2(31)   2      2                  1       11      true             false            true             true                 7                                
-# 8   32  992   465  15  210  PSL2(31)   31:15  15   PGL2(31)   2      2                  1       12      true             false            true             false                                                 
-# 9   32  1240  155  4   15   PSL2(31)   31:15  A4   PSL2(31)   2      2                  1       13      true             false            true             false                                                 
-# 10  32  1488  465  10  135  PSL2(31)   31:15  D10  PSL2(31)   2      2                  1       15      true             false            true             false                                                 
-# 11  32  1488  465  10  135  PSL2(31)   31:15  D10  PGL2(31)   2      2                  1       15      true             false            true             false                                                 
-# 12  32  1860  465  8   105  PSL2(31)   31:15  D8   PSL2(31)   2      2                  1       16      true             false            true             false                                                 
-# 13  32  1860  465  8   105  PSL2(31)   31:15  8    PGL2(31)   2      2                  1       18      true             false            true             false                                                 
-# 14  32  2480  465  6   75   PSL2(31)   31:15  S3   PSL2(31)   2      2                  1       19      true             false            true             false                                                 
-# 15  32  2480  465  6   75   PSL2(31)   31:15  S3   PSL2(31)   2      2                  1       19      true             false            true             false                                                 
-# 16  32  2480  465  6   75   PSL2(31)   31:15  S3   PGL2(31)   2      2                  1       19      true             false            true             false                                                 
-# 17  32  2976  465  5   60   PSL2(31)   31:15  5    PGL2(31)   2      2                  1       20      true             false            true             false                                                 
-# 18  32  3720  465  4   45   PSL2(31)   31:15  2^2  PSL2(31)   2      2                  1       21      true             false            true             false                                                 
-# 19  32  3720  465  4   45   PSL2(31)   31:15  4    PGL2(31)   2      2                  1       23      true             false            true             false                                                 
-# 20  32  4960  465  3   30   PSL2(31)   31:15  3    S32        2      2                  1       24      true             false            true             false                                       complete  
+# 1   32  248   93   12  33   PSL(2,31)  31:15  A5   PSL(2,31)  2      2                  1       3       true             true             true             true                 2                                
+# 2   32  248   155  20  95   PSL(2,31)  31:15  A5   PSL(2,31)  2      2                  1       3       true             true             true             true                 1                                
+# 3   32  496   465  30  435  PSL(2,31)  31:15  D30  S32        2      2                  1       6       true             true             true             true                                        complete  
+# 4   32  620   155  8   35   PSL(2,31)  31:15  S4   PSL(2,31)  2      2                  1       7       true             true             true             true                 5                                
+# 5   32  620   465  24  345  PSL(2,31)  31:15  S4   PSL(2,31)  2      2                  1       7       true             true             true             true                 4                                
+# 6   32  930   465  16  225  PSL(2,31)  31:15  D16  PSL(2,31)  2      2                  1       9       true             false            true             true                 6                                
+# 7   32  930   465  16  225  PSL(2,31)  31:15  16   PGL(2,31)  2      2                  1       11      true             false            true             true                 7                                
+# 8   32  992   465  15  210  PSL(2,31)  31:15  15   PGL(2,31)  2      2                  1       12      true             false            true             false                                                 
+# 9   32  1240  155  4   15   PSL(2,31)  31:15  A4   PSL(2,31)  2      2                  1       13      true             false            true             false                                                 
+# 10  32  1488  465  10  135  PSL(2,31)  31:15  D10  PSL(2,31)  2      2                  1       15      true             false            true             false                                                 
+# 11  32  1488  465  10  135  PSL(2,31)  31:15  D10  PGL(2,31)  2      2                  1       15      true             false            true             false                                                 
+# 12  32  1860  465  8   105  PSL(2,31)  31:15  D8   PSL(2,31)  2      2                  1       16      true             false            true             false                                                 
+# 13  32  1860  465  8   105  PSL(2,31)  31:15  8    PGL(2,31)  2      2                  1       18      true             false            true             false                                                 
+# 14  32  2480  465  6   75   PSL(2,31)  31:15  S3   PSL(2,31)  2      2                  1       19      true             false            true             false                                                 
+# 15  32  2480  465  6   75   PSL(2,31)  31:15  S3   PSL(2,31)  2      2                  1       19      true             false            true             false                                                 
+# 16  32  2480  465  6   75   PSL(2,31)  31:15  S3   PGL(2,31)  2      2                  1       19      true             false            true             false                                                 
+# 17  32  2976  465  5   60   PSL(2,31)  31:15  5    PGL(2,31)  2      2                  1       20      true             false            true             false                                                 
+# 18  32  3720  465  4   45   PSL(2,31)  31:15  2^2  PSL(2,31)  2      2                  1       21      true             false            true             false                                                 
+# 19  32  3720  465  4   45   PSL(2,31)  31:15  4    PGL(2,31)  2      2                  1       23      true             false            true             false                                                 
+# 20  32  4960  465  3   30   PSL(2,31)  31:15  3    S32        2      2                  1       24      true             false            true             false                                       complete  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -83,7 +83,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PSL2(31)      PSL2(31)     
+# Structure                            PSL(2,31)     PSL(2,31)     
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     31:15         31:15         
@@ -109,7 +109,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PSL2(31)      PSL2(31)     
+# Structure                            PSL(2,31)     PSL(2,31)     
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     31:15         31:15         
@@ -135,7 +135,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     S32          
+# Structure                            PSL(2,31)    S32          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        S31          
@@ -161,7 +161,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -187,7 +187,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -213,7 +213,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -239,10 +239,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PGL2(31)    
+# Structure                            PSL(2,31)    PGL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     31:15        AGL1(31)    
+# Point-stabiliser                     31:15        AGL(1,31)    
 # Block-stabiliser                     16           D32          
 # Orbit structure of point-stabiliser  1^{1}31^{1}  1^{1}31^{1}  
 # Orbit structure of block-stabiliser  16^{2}       16^{2}       
@@ -265,10 +265,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PGL2(31)    
+# Structure                            PSL(2,31)    PGL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     31:15        AGL1(31)    
+# Point-stabiliser                     31:15        AGL(1,31)    
 # Block-stabiliser                     15           D30          
 # Orbit structure of point-stabiliser  1^{1}31^{1}  1^{1}31^{1}  
 # Orbit structure of block-stabiliser  1^{2}15^{2}  2^{1}15^{2}  
@@ -291,7 +291,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -317,7 +317,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -343,10 +343,10 @@
 # ---------------------------------------------------------------------
 #                                      G            Aut(D)             
 # ---------------------------------------------------------------------
-# Structure                            PSL2(31)     PGL2(31)          
+# Structure                            PSL(2,31)    PGL(2,31)          
 # Rank                                 2            2                  
 # 2-Homogeneous                        true         true               
-# Point-stabiliser                     31:15        AGL1(31)          
+# Point-stabiliser                     31:15        AGL(1,31)          
 # Block-stabiliser                     D10          D20                
 # Orbit structure of point-stabiliser  1^{1}31^{1}  1^{1}31^{1}        
 # Orbit structure of block-stabiliser  2^{1}10^{3}  2^{1}10^{1}20^{1}  
@@ -369,7 +369,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -395,10 +395,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PGL2(31)    
+# Structure                            PSL(2,31)    PGL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     31:15        AGL1(31)    
+# Point-stabiliser                     31:15        AGL(1,31)    
 # Block-stabiliser                     8            D16          
 # Orbit structure of point-stabiliser  1^{1}31^{1}  1^{1}31^{1}  
 # Orbit structure of block-stabiliser  8^{4}        8^{2}16^{1}  
@@ -421,7 +421,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -447,7 +447,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -473,10 +473,10 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            PSL2(31)     PGL2(31)         
+# Structure                            PSL(2,31)    PGL(2,31)         
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     31:15        AGL1(31)         
+# Point-stabiliser                     31:15        AGL(1,31)         
 # Block-stabiliser                     S3           D12               
 # Orbit structure of point-stabiliser  1^{1}31^{1}  1^{1}31^{1}       
 # Orbit structure of block-stabiliser  2^{1}6^{5}   2^{1}6^{1}12^{2}  
@@ -499,10 +499,10 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            PSL2(31)     PGL2(31)         
+# Structure                            PSL(2,31)    PGL(2,31)         
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     31:15        AGL1(31)         
+# Point-stabiliser                     31:15        AGL(1,31)         
 # Block-stabiliser                     5            D10               
 # Orbit structure of point-stabiliser  1^{1}31^{1}  1^{1}31^{1}       
 # Orbit structure of block-stabiliser  1^{2}5^{6}   2^{1}5^{2}10^{2}  
@@ -525,7 +525,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PSL2(31)    
+# Structure                            PSL(2,31)    PSL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        31:15        
@@ -551,10 +551,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     PGL2(31)    
+# Structure                            PSL(2,31)    PGL(2,31)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     31:15        AGL1(31)    
+# Point-stabiliser                     31:15        AGL(1,31)    
 # Block-stabiliser                     4            D8           
 # Orbit structure of point-stabiliser  1^{1}31^{1}  1^{1}31^{1}  
 # Orbit structure of block-stabiliser  4^{8}        4^{2}8^{3}   
@@ -577,7 +577,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(31)     S32          
+# Structure                            PSL(2,31)    S32          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     31:15        S31          

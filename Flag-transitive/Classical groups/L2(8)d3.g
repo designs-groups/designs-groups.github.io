@@ -48,33 +48,33 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r   k   λ   G         Gα        GB    Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   9   36   28  7   21  PΓL2(8)   AΓL1(8)   7:6   S9        2      2                  1       4       true             true             true             true                                        complete  
-# 2   9   84   28  3   7   PΓL2(8)   AΓL1(8)   3xS3  S9        2      2                  1       8       true             false            true             true                 3                      complete  
-# 3   9   84   56  6   35  PΓL2(8)   AΓL1(8)   3xS3  S9        2      2                  1       8       true             false            true             true                 2                      complete  
-# 4   9   126  56  4   21  PΓL2(8)   AΓL1(8)   A4    S9        2      2                  1       10      true             false            true             false                                       complete  
-# 5   28  36   9   7   2   PΓL2(8)   9:6       7:6   PΓL2(8)   2      2                  3       4       true             true             true             true                 6                                
-# 6   28  36   27  21  20  PΓL2(8)   9:6       7:6   PΓL2(8)   2      2                  3       4       true             true             true             true                 5                                
-# 7   28  63   9   4   1   PΓL2(8)   9:6       2xA4  PΓL2(8)   2      2                  3       5       true             false            true             false                                                 
-# 8   28  63   27  12  11  PΓL2(8)   9:6       2xA4  PSp6(2)   2      2                  3       5       true             false            true             false                                                 
-# 9   28  63   27  12  11  PΓL2(8)   9:6       2xA4  PΓL2(8)   2      2                  3       5       true             false            true             false                                                 
-# 10  28  84   27  9   8   PΓL2(8)   9:6       D18   PΓL2(8)   2      2                  3       7       true             false            true             false                                                 
-# 11  28  84   27  9   8   PΓL2(8)   9:6       3xS3  PΓL2(8)   2      2                  3       8       true             false            true             false                                                 
-# 12  28  84   54  18  34  PΓL2(8)   9:6       3xS3  PΓL2(8)   2      2                  3       8       true             false            true             false                                                 
-# 13  28  108  27  7   6   PΓL2(8)   9:6       D14   PΓL2(8)   2      2                  3       9       true             false            true             false                                                 
-# 14  28  126  27  6   5   PΓL2(8)   9:6       A4    PΓL2(8)   2      2                  3       10      true             false            true             false                                                 
-# 15  28  168  54  9   16  PΓL2(8)   9:6       9     PΓL2(8)   2      2                  3       13      true             false            true             false                                                 
-# 16  28  252  27  3   2   PΓL2(8)   9:6       S3    PΓL2(8)   2      2                  3       16      true             false            true             false                                                 
-# 17  28  252  27  3   2   PΓL2(8)   9:6       6     PΓL2(8)   2      2                  3       17      true             false            true             false                                                 
-# 18  28  252  54  6   10  PΓL2(8)   9:6       S3    PΓL2(8)   2      2                  3       16      true             false            true             false                                                 
-# 19  28  252  54  6   10  PΓL2(8)   9:6       6     PΓL2(8)   2      2                  3       17      true             false            true             false                                                 
-# 20  28  252  54  6   10  PΓL2(8)   9:6       6     PΓL2(8)   2      2                  3       17      true             false            true             false                                                 
-# 21  28  252  54  6   10  PΓL2(8)   9:6       6     PΓL2(8)   2      2                  3       17      true             false            true             false                                                 
-# 22  28  252  54  6   10  PΓL2(8)   9:6       6     PΓL2(8)   2      2                  3       17      true             false            true             false                                                 
-# 23  28  504  54  3   4   PΓL2(8)   9:6       3     PΓL2(8)   2      2                  3       20      true             false            true             false                                                 
-# 24  36  84   14  6   2   PΓL2(8)   7:6       3xS3  PΓL2(8)   3      3                  4       8       true             false            true             false                                                 
-# 25  36  252  42  6   6   PΓL2(8)   7:6       6     PΓL2(8)   3      3                  4       17      true             false            true             false                                                 
-# 26  36  252  42  6   6   PΓL2(8)   7:6       6     PΓL2(8)   3      3                  4       17      true             false            true             false                                                 
-# 27  36  252  42  6   6   PΓL2(8)   7:6       6     PΓL2(8)   3      3                  4       17      true             false            true             false                                                 
+# 1   9   36   28  7   21  PΓL(2,8)  AΓL(1,8)  7:6   S9        2      2                  1       4       true             true             true             true                                        complete  
+# 2   9   84   28  3   7   PΓL(2,8)  AΓL(1,8)  3xS3  S9        2      2                  1       8       true             false            true             true                 3                      complete  
+# 3   9   84   56  6   35  PΓL(2,8)  AΓL(1,8)  3xS3  S9        2      2                  1       8       true             false            true             true                 2                      complete  
+# 4   9   126  56  4   21  PΓL(2,8)  AΓL(1,8)  A4    S9        2      2                  1       10      true             false            true             false                                       complete  
+# 5   28  36   9   7   2   PΓL(2,8)  9:6       7:6   PΓL(2,8)  2      2                  3       4       true             true             true             true                 6                                
+# 6   28  36   27  21  20  PΓL(2,8)  9:6       7:6   PΓL(2,8)  2      2                  3       4       true             true             true             true                 5                                
+# 7   28  63   9   4   1   PΓL(2,8)  9:6       2xA4  PΓL(2,8)  2      2                  3       5       true             false            true             false                                                 
+# 8   28  63   27  12  11  PΓL(2,8)  9:6       2xA4  PSp(6,2)  2      2                  3       5       true             false            true             false                                                 
+# 9   28  63   27  12  11  PΓL(2,8)  9:6       2xA4  PΓL(2,8)  2      2                  3       5       true             false            true             false                                                 
+# 10  28  84   27  9   8   PΓL(2,8)  9:6       D18   PΓL(2,8)  2      2                  3       7       true             false            true             false                                                 
+# 11  28  84   27  9   8   PΓL(2,8)  9:6       3xS3  PΓL(2,8)  2      2                  3       8       true             false            true             false                                                 
+# 12  28  84   54  18  34  PΓL(2,8)  9:6       3xS3  PΓL(2,8)  2      2                  3       8       true             false            true             false                                                 
+# 13  28  108  27  7   6   PΓL(2,8)  9:6       D14   PΓL(2,8)  2      2                  3       9       true             false            true             false                                                 
+# 14  28  126  27  6   5   PΓL(2,8)  9:6       A4    PΓL(2,8)  2      2                  3       10      true             false            true             false                                                 
+# 15  28  168  54  9   16  PΓL(2,8)  9:6       9     PΓL(2,8)  2      2                  3       13      true             false            true             false                                                 
+# 16  28  252  27  3   2   PΓL(2,8)  9:6       S3    PΓL(2,8)  2      2                  3       16      true             false            true             false                                                 
+# 17  28  252  27  3   2   PΓL(2,8)  9:6       6     PΓL(2,8)  2      2                  3       17      true             false            true             false                                                 
+# 18  28  252  54  6   10  PΓL(2,8)  9:6       S3    PΓL(2,8)  2      2                  3       16      true             false            true             false                                                 
+# 19  28  252  54  6   10  PΓL(2,8)  9:6       6     PΓL(2,8)  2      2                  3       17      true             false            true             false                                                 
+# 20  28  252  54  6   10  PΓL(2,8)  9:6       6     PΓL(2,8)  2      2                  3       17      true             false            true             false                                                 
+# 21  28  252  54  6   10  PΓL(2,8)  9:6       6     PΓL(2,8)  2      2                  3       17      true             false            true             false                                                 
+# 22  28  252  54  6   10  PΓL(2,8)  9:6       6     PΓL(2,8)  2      2                  3       17      true             false            true             false                                                 
+# 23  28  504  54  3   4   PΓL(2,8)  9:6       3     PΓL(2,8)  2      2                  3       20      true             false            true             false                                                 
+# 24  36  84   14  6   2   PΓL(2,8)  7:6       3xS3  PΓL(2,8)  3      3                  4       8       true             false            true             false                                                 
+# 25  36  252  42  6   6   PΓL(2,8)  7:6       6     PΓL(2,8)  3      3                  4       17      true             false            true             false                                                 
+# 26  36  252  42  6   6   PΓL(2,8)  7:6       6     PΓL(2,8)  3      3                  4       17      true             false            true             false                                                 
+# 27  36  252  42  6   6   PΓL(2,8)  7:6       6     PΓL(2,8)  3      3                  4       17      true             false            true             false                                                 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -87,10 +87,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΓL2(8)     S9          
+# Structure                            PΓL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AΓL1(8)     S8          
+# Point-stabiliser                     AΓL(1,8)    S8          
 # Block-stabiliser                     7:6         2xS7        
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  2^{1}7^{1}  2^{1}7^{1}  
@@ -113,10 +113,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΓL2(8)     S9          
+# Structure                            PΓL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AΓL1(8)     S8          
+# Point-stabiliser                     AΓL(1,8)    S8          
 # Block-stabiliser                     3xS3        S3xS6       
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  3^{1}6^{1}  3^{1}6^{1}  
@@ -139,10 +139,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΓL2(8)     S9          
+# Structure                            PΓL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AΓL1(8)     S8          
+# Point-stabiliser                     AΓL(1,8)    S8          
 # Block-stabiliser                     3xS3        S3xS6       
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  3^{1}6^{1}  3^{1}6^{1}  
@@ -165,10 +165,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PΓL2(8)     S9          
+# Structure                            PΓL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AΓL1(8)     S8          
+# Point-stabiliser                     AΓL(1,8)    S8          
 # Block-stabiliser                     A4          S4xS5       
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  1^{1}4^{2}  4^{1}5^{1}  
@@ -191,7 +191,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -217,7 +217,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -243,7 +243,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -269,10 +269,10 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            PΓL2(8)      PSp6(2)      
+# Structure                            PΓL(2,8)     PSp(6,2)      
 # Rank                                 2            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     9:6          PSp4(3):2    
+# Point-stabiliser                     9:6          PSp(4,3):2    
 # Block-stabiliser                     2xA4         2^5:S6        
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}   
 # Orbit structure of block-stabiliser  4^{1}12^{2}  12^{1}16^{1}  
@@ -295,7 +295,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -321,7 +321,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -347,7 +347,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(8)           PΓL2(8)          
+# Structure                            PΓL(2,8)          PΓL(2,8)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     9:6               9:6               
@@ -373,7 +373,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(8)           PΓL2(8)          
+# Structure                            PΓL(2,8)          PΓL(2,8)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     9:6               9:6               
@@ -399,7 +399,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -425,7 +425,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(8)           PΓL2(8)          
+# Structure                            PΓL(2,8)          PΓL(2,8)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     9:6               9:6               
@@ -451,7 +451,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -477,7 +477,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(8)          PΓL2(8)         
+# Structure                            PΓL(2,8)         PΓL(2,8)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     9:6              9:6              
@@ -503,7 +503,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(8)          PΓL2(8)         
+# Structure                            PΓL(2,8)         PΓL(2,8)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     9:6              9:6              
@@ -529,7 +529,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(8)          PΓL2(8)         
+# Structure                            PΓL(2,8)         PΓL(2,8)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     9:6              9:6              
@@ -555,7 +555,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(8)          PΓL2(8)         
+# Structure                            PΓL(2,8)         PΓL(2,8)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     9:6              9:6              
@@ -581,7 +581,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(8)          PΓL2(8)         
+# Structure                            PΓL(2,8)         PΓL(2,8)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     9:6              9:6              
@@ -607,7 +607,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(8)          PΓL2(8)         
+# Structure                            PΓL(2,8)         PΓL(2,8)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     9:6              9:6              
@@ -633,7 +633,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(8)          PΓL2(8)         
+# Structure                            PΓL(2,8)         PΓL(2,8)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     9:6              9:6              
@@ -659,7 +659,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(8)      PΓL2(8)     
+# Structure                            PΓL(2,8)     PΓL(2,8)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     9:6          9:6          
@@ -685,7 +685,7 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            PΓL2(8)                PΓL2(8)               
+# Structure                            PΓL(2,8)               PΓL(2,8)               
 # Rank                                 3                      3                      
 # 2-Homogeneous                        false                  false                  
 # Point-stabiliser                     7:6                    7:6                    
@@ -711,7 +711,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                     Aut(D)                
 # ---------------------------------------------------------------------------------
-# Structure                            PΓL2(8)               PΓL2(8)              
+# Structure                            PΓL(2,8)              PΓL(2,8)              
 # Rank                                 3                     3                     
 # 2-Homogeneous                        false                 false                 
 # Point-stabiliser                     7:6                   7:6                   
@@ -737,7 +737,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                     Aut(D)                
 # ---------------------------------------------------------------------------------
-# Structure                            PΓL2(8)               PΓL2(8)              
+# Structure                            PΓL(2,8)              PΓL(2,8)              
 # Rank                                 3                     3                     
 # 2-Homogeneous                        false                 false                 
 # Point-stabiliser                     7:6                   7:6                   
@@ -763,7 +763,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                     Aut(D)                
 # ---------------------------------------------------------------------------------
-# Structure                            PΓL2(8)               PΓL2(8)              
+# Structure                            PΓL(2,8)              PΓL(2,8)              
 # Rank                                 3                     3                     
 # 2-Homogeneous                        false                 false                 
 # Point-stabiliser                     7:6                   7:6                   

@@ -55,15 +55,15 @@
 # 9   21  280   120   9   48   L3(4).3.2_2  2^4:A5:S3  3^2:Q8:3:2     L3(4).3.2_2  2      2                  5       22      true             true             true             true                 10                                                       
 # 10  21  280   160   12  88   L3(4).3.2_2  2^4:A5:S3  3^2:Q8:3:2     L3(4).3.2_2  2      2                  5       22      true             true             true             true                 9                                                        
 # 11  21  336   240   15  168  L3(4).3.2_2  2^4:A5:S3  A5:S3          L3(4).3.2_2  2      2                  5       27      true             false            true             false                                                                         
-# 12  21  360   120   7   36   L3(4).3.2_2  2^4:A5:S3  2xPSL3(2)      L3(4).3.2_2  2      2                  5       29      true             false            true             true                 13                                                       
-# 13  21  360   240   14  156  L3(4).3.2_2  2^4:A5:S3  2xPSL3(2)      L3(4).3.2_2  2      2                  5       29      true             false            true             true                 12                                                       
+# 12  21  360   120   7   36   L3(4).3.2_2  2^4:A5:S3  2xPSL(3,2)     L3(4).3.2_2  2      2                  5       29      true             false            true             true                 13                                                       
+# 13  21  360   240   14  156  L3(4).3.2_2  2^4:A5:S3  2xPSL(3,2)     L3(4).3.2_2  2      2                  5       29      true             false            true             true                 12                                                       
 # 14  21  1008  240   5   48   L3(4).3.2_2  2^4:A5:S3  S5             L3(4).3.2_2  2      2                  5       61      true             false            true             false                                                                         
 # 15  21  1008  480   10  216  L3(4).3.2_2  2^4:A5:S3  S5             L3(4).3.2_2  2      2                  5       60      true             false            true             false                                                                         
 # 16  21  1120  160   3   16   L3(4).3.2_2  2^4:A5:S3  3^2:3:2^2      L3(4).3.2_2  2      2                  5       63      true             false            true             false                                                                         
 # 17  21  1120  480   9   192  L3(4).3.2_2  2^4:A5:S3  3^2:3:2^2      L3(4).3.2_2  2      2                  5       63      true             false            true             false                                                                         
 # 18  21  2520  480   4   72   L3(4).3.2_2  2^4:A5:S3  2xS4           L3(4).3.2_2  2      2                  5       113     true             false            true             false                                                                         
 # 19  21  2520  720   6   180  L3(4).3.2_2  2^4:A5:S3  2xS4           L3(4).3.2_2  2      2                  5       114     true             false            true             false                                                                         
-# 20  21  2520  960   8   336  L3(4).3.2_2  2^4:A5:S3  GL2(3)         L3(4).3.2_2  2      2                  5       103     true             false            true             false                                                                         
+# 20  21  2520  960   8   336  L3(4).3.2_2  2^4:A5:S3  GL(2,3)        L3(4).3.2_2  2      2                  5       103     true             false            true             false                                                                         
 # 21  21  2520  1440  12  792  L3(4).3.2_2  2^4:A5:S3  2xS4           L3(4).3.2_2  2      2                  5       113     true             false            true             false                                                                         
 # 22  21  3360  960   6   240  L3(4).3.2_2  2^4:A5:S3  S3xS3          L3(4).3.2_2  2      2                  5       117     true             false            true             false                                                                         
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -368,7 +368,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     2^4:A5:S3    2^4:A5:S3    
-# Block-stabiliser                     2xPSL3(2)    2xPSL3(2)   
+# Block-stabiliser                     2xPSL(3,2)   2xPSL(3,2)   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  7^{1}14^{1}  7^{1}14^{1}  
 # Point-transitive                     true         true         
@@ -394,7 +394,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     2^4:A5:S3    2^4:A5:S3    
-# Block-stabiliser                     2xPSL3(2)    2xPSL3(2)   
+# Block-stabiliser                     2xPSL(3,2)   2xPSL(3,2)   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  7^{1}14^{1}  7^{1}14^{1}  
 # Point-transitive                     true         true         
@@ -576,7 +576,7 @@
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     2^4:A5:S3        2^4:A5:S3        
-# Block-stabiliser                     GL2(3)           GL2(3)          
+# Block-stabiliser                     GL(2,3)          GL(2,3)          
 # Orbit structure of point-stabiliser  1^{1}20^{1}      1^{1}20^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{1}8^{2}  1^{1}4^{1}8^{2}  
 # Point-transitive                     true             true             

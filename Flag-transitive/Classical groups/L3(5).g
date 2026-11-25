@@ -49,28 +49,28 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b      r     k   λ     G      Gα           GB           Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   31  31     6     6   1     L3(5)  5^2:GL2(5)   5^2:GL2(5)   PSL3(5)   2      2                  1       2       true             true             true             true                 2           true       PG(2,5) parameters                
-# 2   31  31     25    25  20    L3(5)  5^2:GL2(5)   5^2:GL2(5)   PSL3(5)   2      2                  1       2       true             true             true             true                 1           true       complement of PG(2,5) parameters  
-# 3   31  186    30    5   4     L3(5)  5^2:GL2(5)   5^2:5:4^2    PSL3(5)   2      2                  1       9       true             false            true             false                                                                         
-# 4   31  465    60    4   6     L3(5)  5^2:GL2(5)   5^2:4^2:2    PSL3(5)   2      2                  1       18      true             false            true             false                                                                         
-# 5   31  465    150   10  45    L3(5)  5^2:GL2(5)   5^2:4^2:2    PSL3(5)   2      2                  1       17      true             false            true             false                                                                         
-# 6   31  465    300   20  190   L3(5)  5^2:GL2(5)   5^2:4^2:2    PSL3(5)   2      2                  1       17      true             false            true             false                                                                         
-# 7   31  620    60    3   4     L3(5)  5^2:GL2(5)   5^2:(4xS3)   PSL3(5)   2      2                  1       26      true             false            true             false                                                                         
-# 8   31  620    300   15  140   L3(5)  5^2:GL2(5)   5^2:(4xS3)   PSL3(5)   2      2                  1       25      true             false            true             false                                                                         
-# 9   31  775    600   24  460   L3(5)  5^2:GL2(5)   GL2(5)       PSL3(5)   2      2                  1       34      true             false            true             false                                                                         
-# 10  31  3100   600   6   100   L3(5)  5^2:GL2(5)   S5           PSL3(5)   2      2                  1       66      true             true             true             false                                                                         
-# 11  31  3100   1000  10  300   L3(5)  5^2:GL2(5)   S5           PSL3(5)   2      2                  1       66      true             true             true             false                                                                         
-# 12  31  3100   1500  15  700   L3(5)  5^2:GL2(5)   S5           PSL3(5)   2      2                  1       66      true             true             true             false                                                                         
-# 13  31  3875   375   3   25    L3(5)  5^2:GL2(5)   4^2:3:2      PSL3(5)   2      2                  1       80      true             true             true             false                                                                         
-# 14  31  3875   1500  12  550   L3(5)  5^2:GL2(5)   4^2:3:2      PSL3(5)   2      2                  1       80      true             true             true             false                                                                         
-# 15  31  3875   2000  16  1000  L3(5)  5^2:GL2(5)   4^2:3:2      PSL3(5)   2      2                  1       80      true             true             true             false                                                                         
-# 16  31  11625  3000  8   700   L3(5)  5^2:GL2(5)   4^2:2        PSL3(5)   2      2                  1       96      true             false            true             false                                                                         
-# 17  31  15500  2000  4   200   L3(5)  5^2:GL2(5)   S4           PSL3(5)   2      2                  1       100     true             false            true             false                                                                         
-# 18  31  15500  3000  6   500   L3(5)  5^2:GL2(5)   S4           PSL3(5)   2      2                  1       100     true             false            true             false                                                                         
-# 19  31  15500  6000  12  2200  L3(5)  5^2:GL2(5)   S4           PSL3(5)   2      2                  1       100     true             false            true             false                                                                         
-# 20  31  15500  6000  12  2200  L3(5)  5^2:GL2(5)   4xS3         PSL3(5)   2      2                  1       104     true             false            true             false                                                                         
-# 21  31  18600  3000  5   400   L3(5)  5^2:GL2(5)   5:4          PSL3(5)   2      2                  1       112     true             false            true             false                                                                         
-# 22  31  18600  6000  10  1800  L3(5)  5^2:GL2(5)   5:4          PSL3(5)   2      2                  1       112     true             false            true             false                                                                         
+# 1   31  31     6     6   1     L3(5)  5^2:GL(2,5)  5^2:GL(2,5)  PSL(3,5)  2      2                  1       2       true             true             true             true                 2           true       PG(2,5) parameters                
+# 2   31  31     25    25  20    L3(5)  5^2:GL(2,5)  5^2:GL(2,5)  PSL(3,5)  2      2                  1       2       true             true             true             true                 1           true       complement of PG(2,5) parameters  
+# 3   31  186    30    5   4     L3(5)  5^2:GL(2,5)  5^2:5:4^2    PSL(3,5)  2      2                  1       9       true             false            true             false                                                                         
+# 4   31  465    60    4   6     L3(5)  5^2:GL(2,5)  5^2:4^2:2    PSL(3,5)  2      2                  1       18      true             false            true             false                                                                         
+# 5   31  465    150   10  45    L3(5)  5^2:GL(2,5)  5^2:4^2:2    PSL(3,5)  2      2                  1       17      true             false            true             false                                                                         
+# 6   31  465    300   20  190   L3(5)  5^2:GL(2,5)  5^2:4^2:2    PSL(3,5)  2      2                  1       17      true             false            true             false                                                                         
+# 7   31  620    60    3   4     L3(5)  5^2:GL(2,5)  5^2:(4xS3)   PSL(3,5)  2      2                  1       26      true             false            true             false                                                                         
+# 8   31  620    300   15  140   L3(5)  5^2:GL(2,5)  5^2:(4xS3)   PSL(3,5)  2      2                  1       25      true             false            true             false                                                                         
+# 9   31  775    600   24  460   L3(5)  5^2:GL(2,5)  GL(2,5)      PSL(3,5)  2      2                  1       34      true             false            true             false                                                                         
+# 10  31  3100   600   6   100   L3(5)  5^2:GL(2,5)  S5           PSL(3,5)  2      2                  1       66      true             true             true             false                                                                         
+# 11  31  3100   1000  10  300   L3(5)  5^2:GL(2,5)  S5           PSL(3,5)  2      2                  1       66      true             true             true             false                                                                         
+# 12  31  3100   1500  15  700   L3(5)  5^2:GL(2,5)  S5           PSL(3,5)  2      2                  1       66      true             true             true             false                                                                         
+# 13  31  3875   375   3   25    L3(5)  5^2:GL(2,5)  4^2:3:2      PSL(3,5)  2      2                  1       80      true             true             true             false                                                                         
+# 14  31  3875   1500  12  550   L3(5)  5^2:GL(2,5)  4^2:3:2      PSL(3,5)  2      2                  1       80      true             true             true             false                                                                         
+# 15  31  3875   2000  16  1000  L3(5)  5^2:GL(2,5)  4^2:3:2      PSL(3,5)  2      2                  1       80      true             true             true             false                                                                         
+# 16  31  11625  3000  8   700   L3(5)  5^2:GL(2,5)  4^2:2        PSL(3,5)  2      2                  1       96      true             false            true             false                                                                         
+# 17  31  15500  2000  4   200   L3(5)  5^2:GL(2,5)  S4           PSL(3,5)  2      2                  1       100     true             false            true             false                                                                         
+# 18  31  15500  3000  6   500   L3(5)  5^2:GL(2,5)  S4           PSL(3,5)  2      2                  1       100     true             false            true             false                                                                         
+# 19  31  15500  6000  12  2200  L3(5)  5^2:GL(2,5)  S4           PSL(3,5)  2      2                  1       100     true             false            true             false                                                                         
+# 20  31  15500  6000  12  2200  L3(5)  5^2:GL(2,5)  4xS3         PSL(3,5)  2      2                  1       104     true             false            true             false                                                                         
+# 21  31  18600  3000  5   400   L3(5)  5^2:GL(2,5)  5:4          PSL(3,5)  2      2                  1       112     true             false            true             false                                                                         
+# 22  31  18600  6000  10  1800  L3(5)  5^2:GL(2,5)  5:4          PSL(3,5)  2      2                  1       112     true             false            true             false                                                                         
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -83,11 +83,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            L3(5)        PSL3(5)     
+# Structure                            L3(5)        PSL(3,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:GL2(5)   5^2:GL2(5)  
-# Block-stabiliser                     5^2:GL2(5)   5^2:GL2(5)  
+# Point-stabiliser                     5^2:GL(2,5)  5^2:GL(2,5)  
+# Block-stabiliser                     5^2:GL(2,5)  5^2:GL(2,5)  
 # Orbit structure of point-stabiliser  1^{1}30^{1}  1^{1}30^{1}  
 # Orbit structure of block-stabiliser  6^{1}25^{1}  6^{1}25^{1}  
 # Point-transitive                     true         true         
@@ -109,11 +109,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            L3(5)        PSL3(5)     
+# Structure                            L3(5)        PSL(3,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:GL2(5)   5^2:GL2(5)  
-# Block-stabiliser                     5^2:GL2(5)   5^2:GL2(5)  
+# Point-stabiliser                     5^2:GL(2,5)  5^2:GL(2,5)  
+# Block-stabiliser                     5^2:GL(2,5)  5^2:GL(2,5)  
 # Orbit structure of point-stabiliser  1^{1}30^{1}  1^{1}30^{1}  
 # Orbit structure of block-stabiliser  6^{1}25^{1}  6^{1}25^{1}  
 # Point-transitive                     true         true         
@@ -135,10 +135,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            L3(5)             PSL3(5)          
+# Structure                            L3(5)             PSL(3,5)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:GL2(5)        5^2:GL2(5)       
+# Point-stabiliser                     5^2:GL(2,5)       5^2:GL(2,5)       
 # Block-stabiliser                     5^2:5:4^2         5^2:5:4^2         
 # Orbit structure of point-stabiliser  1^{1}30^{1}       1^{1}30^{1}       
 # Orbit structure of block-stabiliser  1^{1}5^{1}25^{1}  1^{1}5^{1}25^{1}  
@@ -161,10 +161,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            L3(5)             PSL3(5)          
+# Structure                            L3(5)             PSL(3,5)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:GL2(5)        5^2:GL2(5)       
+# Point-stabiliser                     5^2:GL(2,5)       5^2:GL(2,5)       
 # Block-stabiliser                     5^2:4^2:2         5^2:4^2:2         
 # Orbit structure of point-stabiliser  1^{1}30^{1}       1^{1}30^{1}       
 # Orbit structure of block-stabiliser  2^{1}4^{1}25^{1}  2^{1}4^{1}25^{1}  
@@ -187,10 +187,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     5^2:4^2:2          5^2:4^2:2          
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  1^{1}10^{1}20^{1}  1^{1}10^{1}20^{1}  
@@ -213,10 +213,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     5^2:4^2:2          5^2:4^2:2          
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  1^{1}10^{1}20^{1}  1^{1}10^{1}20^{1}  
@@ -239,10 +239,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            L3(5)        PSL3(5)     
+# Structure                            L3(5)        PSL(3,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:GL2(5)   5^2:GL2(5)  
+# Point-stabiliser                     5^2:GL(2,5)  5^2:GL(2,5)  
 # Block-stabiliser                     5^2:(4xS3)   5^2:(4xS3)   
 # Orbit structure of point-stabiliser  1^{1}30^{1}  1^{1}30^{1}  
 # Orbit structure of block-stabiliser  3^{2}25^{1}  3^{2}25^{1}  
@@ -265,10 +265,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            L3(5)        PSL3(5)     
+# Structure                            L3(5)        PSL(3,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     5^2:GL2(5)   5^2:GL2(5)  
+# Point-stabiliser                     5^2:GL(2,5)  5^2:GL(2,5)  
 # Block-stabiliser                     5^2:(4xS3)   5^2:(4xS3)   
 # Orbit structure of point-stabiliser  1^{1}30^{1}  1^{1}30^{1}  
 # Orbit structure of block-stabiliser  1^{1}15^{2}  1^{1}15^{2}  
@@ -291,11 +291,11 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            L3(5)             PSL3(5)          
+# Structure                            L3(5)             PSL(3,5)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:GL2(5)        5^2:GL2(5)       
-# Block-stabiliser                     GL2(5)            GL2(5)           
+# Point-stabiliser                     5^2:GL(2,5)       5^2:GL(2,5)       
+# Block-stabiliser                     GL(2,5)           GL(2,5)           
 # Orbit structure of point-stabiliser  1^{1}30^{1}       1^{1}30^{1}       
 # Orbit structure of block-stabiliser  1^{1}6^{1}24^{1}  1^{1}6^{1}24^{1}  
 # Point-transitive                     true              true              
@@ -317,10 +317,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     S5                 S5                 
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  6^{1}10^{1}15^{1}  6^{1}10^{1}15^{1}  
@@ -343,10 +343,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     S5                 S5                 
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  6^{1}10^{1}15^{1}  6^{1}10^{1}15^{1}  
@@ -369,10 +369,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     S5                 S5                 
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  6^{1}10^{1}15^{1}  6^{1}10^{1}15^{1}  
@@ -395,10 +395,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     4^2:3:2            4^2:3:2            
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  3^{1}12^{1}16^{1}  3^{1}12^{1}16^{1}  
@@ -421,10 +421,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     4^2:3:2            4^2:3:2            
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  3^{1}12^{1}16^{1}  3^{1}12^{1}16^{1}  
@@ -447,10 +447,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            L3(5)              PSL3(5)           
+# Structure                            L3(5)              PSL(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
-# Point-stabiliser                     5^2:GL2(5)         5^2:GL2(5)        
+# Point-stabiliser                     5^2:GL(2,5)        5^2:GL(2,5)        
 # Block-stabiliser                     4^2:3:2            4^2:3:2            
 # Orbit structure of point-stabiliser  1^{1}30^{1}        1^{1}30^{1}        
 # Orbit structure of block-stabiliser  3^{1}12^{1}16^{1}  3^{1}12^{1}16^{1}  
@@ -473,10 +473,10 @@
 # ---------------------------------------------------------------------------------------------
 #                                      G                           Aut(D)                      
 # ---------------------------------------------------------------------------------------------
-# Structure                            L3(5)                       PSL3(5)                    
+# Structure                            L3(5)                       PSL(3,5)                    
 # Rank                                 2                           2                           
 # 2-Homogeneous                        true                        true                        
-# Point-stabiliser                     5^2:GL2(5)                  5^2:GL2(5)                 
+# Point-stabiliser                     5^2:GL(2,5)                 5^2:GL(2,5)                 
 # Block-stabiliser                     4^2:2                       4^2:2                       
 # Orbit structure of point-stabiliser  1^{1}30^{1}                 1^{1}30^{1}                 
 # Orbit structure of block-stabiliser  1^{1}2^{1}4^{1}8^{1}16^{1}  1^{1}2^{1}4^{1}8^{1}16^{1}  
@@ -499,10 +499,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            L3(5)                  PSL3(5)               
+# Structure                            L3(5)                  PSL(3,5)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     5^2:GL2(5)             5^2:GL2(5)            
+# Point-stabiliser                     5^2:GL(2,5)            5^2:GL(2,5)            
 # Block-stabiliser                     S4                     S4                     
 # Orbit structure of point-stabiliser  1^{1}30^{1}            1^{1}30^{1}            
 # Orbit structure of block-stabiliser  3^{1}4^{1}6^{2}12^{1}  3^{1}4^{1}6^{2}12^{1}  
@@ -525,10 +525,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            L3(5)                  PSL3(5)               
+# Structure                            L3(5)                  PSL(3,5)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     5^2:GL2(5)             5^2:GL2(5)            
+# Point-stabiliser                     5^2:GL(2,5)            5^2:GL(2,5)            
 # Block-stabiliser                     S4                     S4                     
 # Orbit structure of point-stabiliser  1^{1}30^{1}            1^{1}30^{1}            
 # Orbit structure of block-stabiliser  3^{1}4^{1}6^{2}12^{1}  3^{1}4^{1}6^{2}12^{1}  
@@ -551,10 +551,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            L3(5)                  PSL3(5)               
+# Structure                            L3(5)                  PSL(3,5)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     5^2:GL2(5)             5^2:GL2(5)            
+# Point-stabiliser                     5^2:GL(2,5)            5^2:GL(2,5)            
 # Block-stabiliser                     S4                     S4                     
 # Orbit structure of point-stabiliser  1^{1}30^{1}            1^{1}30^{1}            
 # Orbit structure of block-stabiliser  3^{1}4^{1}6^{2}12^{1}  3^{1}4^{1}6^{2}12^{1}  
@@ -577,10 +577,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            L3(5)             PSL3(5)          
+# Structure                            L3(5)             PSL(3,5)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:GL2(5)        5^2:GL2(5)       
+# Point-stabiliser                     5^2:GL(2,5)       5^2:GL(2,5)       
 # Block-stabiliser                     4xS3              4xS3              
 # Orbit structure of point-stabiliser  1^{1}30^{1}       1^{1}30^{1}       
 # Orbit structure of block-stabiliser  1^{1}3^{2}12^{2}  1^{1}3^{2}12^{2}  
@@ -603,10 +603,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            L3(5)             PSL3(5)          
+# Structure                            L3(5)             PSL(3,5)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:GL2(5)        5^2:GL2(5)       
+# Point-stabiliser                     5^2:GL(2,5)       5^2:GL(2,5)       
 # Block-stabiliser                     5:4               5:4               
 # Orbit structure of point-stabiliser  1^{1}30^{1}       1^{1}30^{1}       
 # Orbit structure of block-stabiliser  1^{1}5^{2}10^{2}  1^{1}5^{2}10^{2}  
@@ -629,10 +629,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            L3(5)             PSL3(5)          
+# Structure                            L3(5)             PSL(3,5)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     5^2:GL2(5)        5^2:GL2(5)       
+# Point-stabiliser                     5^2:GL(2,5)       5^2:GL(2,5)       
 # Block-stabiliser                     5:4               5:4               
 # Orbit structure of point-stabiliser  1^{1}30^{1}       1^{1}30^{1}       
 # Orbit structure of block-stabiliser  1^{1}5^{2}10^{2}  1^{1}5^{2}10^{2}  

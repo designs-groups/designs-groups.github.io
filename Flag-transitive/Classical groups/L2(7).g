@@ -47,13 +47,13 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα   GB  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   PSL3(2)   S4   S4  PSL3(2)   2      2                  1       2       true             true             true             true                 2           true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   4   4  2   PSL3(2)   S4   S4  PSL3(2)   2      2                  1       2       true             true             true             true                 1           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 3   7  28  12  3  4   PSL3(2)   S4   S3  PSL3(2)   2      2                  1       7       true             false            true             false                                                                                            
-# 4   8  14  7   4  3   PSL2(7)   7:3  A4  ASL3(2)   2      2                  3       4       true             false            true             true                 4                                                                           
-# 5   8  28  21  6  15  PSL2(7)   7:3  S3  S8        2      2                  3       7       true             false            true             true                                        complete                                             
-# 6   8  42  21  4  9   PSL2(7)   7:3  4   PGL2(7)   2      2                  3       10      true             false            true             true                 6                                                                           
-# 7   8  56  21  3  6   PSL2(7)   7:3  3   S8        2      2                  3       11      true             false            true             false                                       complete                                             
+# 1   7  7   3   3  1   PSL(3,2)  S4   S4  PSL(3,2)  2      2                  1       2       true             true             true             true                 2           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   4   4  2   PSL(3,2)  S4   S4  PSL(3,2)  2      2                  1       2       true             true             true             true                 1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 3   7  28  12  3  4   PSL(3,2)  S4   S3  PSL(3,2)  2      2                  1       7       true             false            true             false                                                                                            
+# 4   8  14  7   4  3   PSL(2,7)  7:3  A4  ASL(3,2)  2      2                  3       4       true             false            true             true                 4                                                                           
+# 5   8  28  21  6  15  PSL(2,7)  7:3  S3  S8        2      2                  3       7       true             false            true             true                                        complete                                             
+# 6   8  42  21  4  9   PSL(2,7)  7:3  4   PGL(2,7)  2      2                  3       10      true             false            true             true                 6                                                                           
+# 7   8  56  21  3  6   PSL(2,7)  7:3  3   S8        2      2                  3       11      true             false            true             false                                       complete                                             
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -66,7 +66,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(2)     PSL3(2)    
+# Structure                            PSL(3,2)    PSL(3,2)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
@@ -92,7 +92,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(2)     PSL3(2)    
+# Structure                            PSL(3,2)    PSL(3,2)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
@@ -118,7 +118,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL3(2)     PSL3(2)    
+# Structure                            PSL(3,2)    PSL(3,2)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     S4          S4          
@@ -144,10 +144,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(7)     ASL3(2)    
+# Structure                            PSL(2,7)    ASL(3,2)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     7:3         PSL3(2)    
+# Point-stabiliser                     7:3         PSL(3,2)    
 # Block-stabiliser                     A4          2^4:3:2     
 # Orbit structure of point-stabiliser  1^{1}7^{1}  1^{1}7^{1}  
 # Orbit structure of block-stabiliser  4^{2}       4^{2}       
@@ -170,7 +170,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(7)     S8          
+# Structure                            PSL(2,7)    S8          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     7:3         S7          
@@ -196,10 +196,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(7)     PGL2(7)    
+# Structure                            PSL(2,7)    PGL(2,7)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     7:3         AGL1(7)    
+# Point-stabiliser                     7:3         AGL(1,7)    
 # Block-stabiliser                     4           D8          
 # Orbit structure of point-stabiliser  1^{1}7^{1}  1^{1}7^{1}  
 # Orbit structure of block-stabiliser  4^{2}       4^{2}       
@@ -222,7 +222,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(7)     S8          
+# Structure                            PSL(2,7)    S8          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     7:3         S7          

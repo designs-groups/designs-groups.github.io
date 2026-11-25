@@ -49,7 +49,7 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   36  36    15   15  6   U4(2)  S6                       S6                       S4(3):2     3      3                  114     114     true             true             true             false                            true       Menon parameters                  
 # 2   36  540   120  8   24  U4(2)  S6                       2xS4                     S4(3):2     3      3                  114     78      true             false            true             false                                                                         
-# 3   40  40    27   27  18  U4(2)  (((3^2):3):Q8):3         (((3^2):3):Q8):3         PSL4(3):2   3      2                  112     112     true             true             true             false                            true       complement of PG(3,3) parameters  
+# 3   40  40    27   27  18  U4(2)  (((3^2):3):Q8):3         (((3^2):3):Q8):3         PSL(4,3):2  3      2                  112     112     true             true             true             false                            true       complement of PG(3,3) parameters  
 # 4   40  40    27   27  18  U4(2)  ((3^3:2^2):3):2          ((3^3:2^2):3):2          S4(3):2     3      3                  113     113     true             true             true             false                            true       complement of PG(3,3) parameters  
 # 5   45  45    12   12  3   U4(2)  ((((2^3):(2^2)):3):2):3  ((((2^3):(2^2)):3):2):3  S4(3):2     3      3                  111     111     true             true             true             false                            true                                         
 # 6   45  120   32   12  8   U4(2)  ((((2^3):(2^2)):3):2):3  3^3:D8                   S4(3):2     3      3                  111     107     true             false            true             false                                                                         
@@ -118,11 +118,11 @@
 # ----------------------------------------------------------------------
 #                                      G                  Aut(D)        
 # ----------------------------------------------------------------------
-# Structure                            U4(2)              PSL4(3):2    
+# Structure                            U4(2)              PSL(4,3):2    
 # Rank                                 3                  2             
 # 2-Homogeneous                        false              true          
-# Point-stabiliser                     (((3^2):3):Q8):3   3^3:GL3(3)   
-# Block-stabiliser                     (((3^2):3):Q8):3   3^3:GL3(3)   
+# Point-stabiliser                     (((3^2):3):Q8):3   3^3:GL(3,3)   
+# Block-stabiliser                     (((3^2):3):Q8):3   3^3:GL(3,3)   
 # Orbit structure of point-stabiliser  1^{1}12^{1}27^{1}  1^{1}39^{1}   
 # Orbit structure of block-stabiliser  1^{1}12^{1}27^{1}  13^{1}27^{1}  
 # Point-transitive                     true               true          

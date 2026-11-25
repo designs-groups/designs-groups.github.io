@@ -49,17 +49,17 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G          Gα     GB   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   30  406   203  15  98   PSL2(29)   29:14  D30  PSL2(29)   2      2                  1       2       true             true             true             true                 1                                
-# 2   30  435   203  14  91   PSL2(29)   29:14  D28  PSL2(29)   2      2                  1       3       true             true             true             false                                                 
-# 3   30  870   203  7   42   PSL2(29)   29:14  D14  PSL2(29)   2      2                  1       6       true             false            true             false                                                 
-# 4   30  1015  203  6   35   PSL2(29)   29:14  A4   PGL2(29)   2      2                  1       8       true             false            true             false                                                 
-# 5   30  1015  406  12  154  PSL2(29)   29:14  A4   PSL2(29)   2      2                  1       8       true             false            true             false                                                 
-# 6   30  1218  203  5   28   PSL2(29)   29:14  D10  PSL2(29)   2      2                  1       9       true             false            true             false                                                 
-# 7   30  1218  406  10  126  PSL2(29)   29:14  D10  PSL2(29)   2      2                  1       9       true             false            true             false                                                 
-# 8   30  2030  203  3   14   PSL2(29)   29:14  S3   PSL2(29)   2      2                  1       11      true             false            true             false                                                 
-# 9   30  2030  406  6   70   PSL2(29)   29:14  S3   PSL2(29)   2      2                  1       11      true             false            true             false                                                 
-# 10  30  2030  406  6   70   PSL2(29)   29:14  S3   PSL2(29)   2      2                  1       11      true             false            true             false                                                 
-# 11  30  3045  406  4   42   PSL2(29)   29:14  2^2  PSL2(29)   2      2                  1       13      true             false            true             false                                                 
+# 1   30  406   203  15  98   PSL(2,29)  29:14  D30  PSL(2,29)  2      2                  1       2       true             true             true             true                 1                                
+# 2   30  435   203  14  91   PSL(2,29)  29:14  D28  PSL(2,29)  2      2                  1       3       true             true             true             false                                                 
+# 3   30  870   203  7   42   PSL(2,29)  29:14  D14  PSL(2,29)  2      2                  1       6       true             false            true             false                                                 
+# 4   30  1015  203  6   35   PSL(2,29)  29:14  A4   PGL(2,29)  2      2                  1       8       true             false            true             false                                                 
+# 5   30  1015  406  12  154  PSL(2,29)  29:14  A4   PSL(2,29)  2      2                  1       8       true             false            true             false                                                 
+# 6   30  1218  203  5   28   PSL(2,29)  29:14  D10  PSL(2,29)  2      2                  1       9       true             false            true             false                                                 
+# 7   30  1218  406  10  126  PSL(2,29)  29:14  D10  PSL(2,29)  2      2                  1       9       true             false            true             false                                                 
+# 8   30  2030  203  3   14   PSL(2,29)  29:14  S3   PSL(2,29)  2      2                  1       11      true             false            true             false                                                 
+# 9   30  2030  406  6   70   PSL(2,29)  29:14  S3   PSL(2,29)  2      2                  1       11      true             false            true             false                                                 
+# 10  30  2030  406  6   70   PSL(2,29)  29:14  S3   PSL(2,29)  2      2                  1       11      true             false            true             false                                                 
+# 11  30  3045  406  4   42   PSL(2,29)  29:14  2^2  PSL(2,29)  2      2                  1       13      true             false            true             false                                                 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -72,7 +72,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -98,7 +98,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -124,7 +124,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PSL2(29)          PSL2(29)         
+# Structure                            PSL(2,29)         PSL(2,29)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     29:14             29:14             
@@ -150,10 +150,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PGL2(29)    
+# Structure                            PSL(2,29)    PGL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     29:14        AGL1(29)    
+# Point-stabiliser                     29:14        AGL(1,29)    
 # Block-stabiliser                     A4           S4           
 # Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}  
 # Orbit structure of block-stabiliser  6^{1}12^{2}  6^{1}24^{1}  
@@ -176,7 +176,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -202,7 +202,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -228,7 +228,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -254,7 +254,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -280,7 +280,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -306,7 +306,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        
@@ -332,7 +332,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(29)     PSL2(29)    
+# Structure                            PSL(2,29)    PSL(2,29)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     29:14        29:14        

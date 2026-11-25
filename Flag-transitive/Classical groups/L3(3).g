@@ -48,16 +48,16 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b    r    k   λ   G         Gα          GB          Aut(D)      rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   13   13   4    4   1   PSL3(3)   3^2:Q8:3:2  3^2:Q8:3:2  PSL3(3)     2      2                  1       2       true             true             true             true                 2           true       PG(2,3) parameters                
-# 2   13   13   9    9   6   PSL3(3)   3^2:Q8:3:2  3^2:Q8:3:2  PSL3(3)     2      2                  1       2       true             true             true             true                 1           true       complement of PG(2,3) parameters  
-# 3   13   52   12   3   2   PSL3(3)   3^2:Q8:3:2  3^2:3:2^2   PSL3(3)     2      2                  1       7       true             false            true             false                                                                         
-# 4   13   78   36   6   15  PSL3(3)   3^2:Q8:3:2  (S3xS3):2   PSL3(3)     2      2                  1       8       true             false            true             false                                                                         
-# 5   13   117  72   8   42  PSL3(3)   3^2:Q8:3:2  GL2(3)      PSL3(3)     2      2                  1       17      true             false            true             false                                                                         
-# 6   13   234  54   3   9   PSL3(3)   3^2:Q8:3:2  S4          PSL3(3)     2      2                  1       25      true             true             true             false                                                                         
-# 7   13   234  72   4   18  PSL3(3)   3^2:Q8:3:2  S4          PSL3(3)     2      2                  1       25      true             true             true             false                                                                         
-# 8   13   234  108  6   45  PSL3(3)   3^2:Q8:3:2  S4          PSL3(3)     2      2                  1       25      true             true             true             false                                                                         
-# 9   52   312  108  18  36  PSL3(3)   3^2:3:2^2   3xS3        PSL3(3).2   6      4                  7       26      false            false            true             false                                                                         
-# 10  144  468  39   12  3   PSL3(3)   13:3        A4          PSL3(3)     8      8                  18      32      true             false            true             false                                                                         
+# 1   13   13   4    4   1   PSL(3,3)  3^2:Q8:3:2  3^2:Q8:3:2  PSL(3,3)    2      2                  1       2       true             true             true             true                 2           true       PG(2,3) parameters                
+# 2   13   13   9    9   6   PSL(3,3)  3^2:Q8:3:2  3^2:Q8:3:2  PSL(3,3)    2      2                  1       2       true             true             true             true                 1           true       complement of PG(2,3) parameters  
+# 3   13   52   12   3   2   PSL(3,3)  3^2:Q8:3:2  3^2:3:2^2   PSL(3,3)    2      2                  1       7       true             false            true             false                                                                         
+# 4   13   78   36   6   15  PSL(3,3)  3^2:Q8:3:2  (S3xS3):2   PSL(3,3)    2      2                  1       8       true             false            true             false                                                                         
+# 5   13   117  72   8   42  PSL(3,3)  3^2:Q8:3:2  GL(2,3)     PSL(3,3)    2      2                  1       17      true             false            true             false                                                                         
+# 6   13   234  54   3   9   PSL(3,3)  3^2:Q8:3:2  S4          PSL(3,3)    2      2                  1       25      true             true             true             false                                                                         
+# 7   13   234  72   4   18  PSL(3,3)  3^2:Q8:3:2  S4          PSL(3,3)    2      2                  1       25      true             true             true             false                                                                         
+# 8   13   234  108  6   45  PSL(3,3)  3^2:Q8:3:2  S4          PSL(3,3)    2      2                  1       25      true             true             true             false                                                                         
+# 9   52   312  108  18  36  PSL(3,3)  3^2:3:2^2   3xS3        PSL(3,3).2  6      4                  7       26      false            false            true             false                                                                         
+# 10  144  468  39   12  3   PSL(3,3)  13:3        A4          PSL(3,3)    8      8                  18      32      true             false            true             false                                                                         
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -70,7 +70,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL3(3)      PSL3(3)     
+# Structure                            PSL(3,3)     PSL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^2:Q8:3:2   3^2:Q8:3:2   
@@ -96,7 +96,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL3(3)      PSL3(3)     
+# Structure                            PSL(3,3)     PSL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^2:Q8:3:2   3^2:Q8:3:2   
@@ -122,7 +122,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL3(3)          PSL3(3)         
+# Structure                            PSL(3,3)         PSL(3,3)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     3^2:Q8:3:2       3^2:Q8:3:2       
@@ -148,7 +148,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL3(3)      PSL3(3)     
+# Structure                            PSL(3,3)     PSL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^2:Q8:3:2   3^2:Q8:3:2   
@@ -174,11 +174,11 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL3(3)          PSL3(3)         
+# Structure                            PSL(3,3)         PSL(3,3)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     3^2:Q8:3:2       3^2:Q8:3:2       
-# Block-stabiliser                     GL2(3)           GL2(3)          
+# Block-stabiliser                     GL(2,3)          GL(2,3)          
 # Orbit structure of point-stabiliser  1^{1}12^{1}      1^{1}12^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{1}8^{1}  1^{1}4^{1}8^{1}  
 # Point-transitive                     true             true             
@@ -200,7 +200,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL3(3)          PSL3(3)         
+# Structure                            PSL(3,3)         PSL(3,3)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     3^2:Q8:3:2       3^2:Q8:3:2       
@@ -226,7 +226,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL3(3)          PSL3(3)         
+# Structure                            PSL(3,3)         PSL(3,3)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     3^2:Q8:3:2       3^2:Q8:3:2       
@@ -252,7 +252,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL3(3)          PSL3(3)         
+# Structure                            PSL(3,3)         PSL(3,3)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     3^2:Q8:3:2       3^2:Q8:3:2       
@@ -278,7 +278,7 @@
 # ------------------------------------------------------------------------------------
 #                                      G                      Aut(D)                  
 # ------------------------------------------------------------------------------------
-# Structure                            PSL3(3)                PSL3(3).2              
+# Structure                            PSL(3,3)               PSL(3,3).2              
 # Rank                                 6                      4                       
 # 2-Homogeneous                        false                  false                   
 # Point-stabiliser                     3^2:3:2^2              3^2:3:D8                
@@ -304,7 +304,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            PSL3(3)            PSL3(3)           
+# Structure                            PSL(3,3)           PSL(3,3)           
 # Rank                                 8                  8                  
 # 2-Homogeneous                        false              false              
 # Point-stabiliser                     13:3               13:3               

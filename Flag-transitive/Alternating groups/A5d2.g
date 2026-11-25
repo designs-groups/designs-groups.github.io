@@ -50,10 +50,10 @@
 # Nr  v   b   r   k  λ  G         Gα        GB       Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  avectors           subdegrees            point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                      
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   5   10  6   3  3  S5        S4        S3 x S2  S5        2      2                  3       6       6^{1}              1^{1}4^{1}            true             true             true             true                                        complete                                      
-# 2   6   15  10  4  6  PGL2(5)   AGL1(5)   D8       S6        2      2                  4       8       12^{1}             1^{1}5^{1}            true             false            true             true                                        complete                                      
-# 3   6   20  10  3  4  PGL2(5)   AGL1(5)   S3       S6        2      2                  4       10      6^{1}              1^{1}5^{1}            true             false            true             true                 3                      complete                                      
-# 4   10  15  6   4  2  S5        D12       D8       PΣL2(9)   3      2                  6       8       4^{1}8^{1}         1^{1}3^{1}6^{1}       true             false            true             false                                                                                     
-# 5   15  15  8   8  4  S5        D8        D8       PSL4(2)   4      2                  8       8       8^{1}16^{1}32^{1}  1^{1}2^{1}4^{1}8^{1}  false            false            true             false                            true       complement of PG(3,2) or Hadamard parameters  
+# 2   6   15  10  4  6  PGL(2,5)  AGL(1,5)  D8       S6        2      2                  4       8       12^{1}             1^{1}5^{1}            true             false            true             true                                        complete                                      
+# 3   6   20  10  3  4  PGL(2,5)  AGL(1,5)  S3       S6        2      2                  4       10      6^{1}              1^{1}5^{1}            true             false            true             true                 3                      complete                                      
+# 4   10  15  6   4  2  S5        D12       D8       PΣL(2,9)  3      2                  6       8       4^{1}8^{1}         1^{1}3^{1}6^{1}       true             false            true             false                                                                                     
+# 5   15  15  8   8  4  S5        D8        D8       PSL(4,2)  4      2                  8       8       8^{1}16^{1}32^{1}  1^{1}2^{1}4^{1}8^{1}  false            false            true             false                            true       complement of PG(3,2) or Hadamard parameters  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -92,10 +92,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PGL2(5)     S6          
+# Structure                            PGL(2,5)    S6          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(5)     S5          
+# Point-stabiliser                     AGL(1,5)    S5          
 # Block-stabiliser                     D8          2xS4        
 # Orbit structure of point-stabiliser  1^{1}5^{1}  1^{1}5^{1}  
 # Orbit structure of block-stabiliser  2^{1}4^{1}  2^{1}4^{1}  
@@ -118,10 +118,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PGL2(5)     S6          
+# Structure                            PGL(2,5)    S6          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(5)     S5          
+# Point-stabiliser                     AGL(1,5)    S5          
 # Block-stabiliser                     S3          S3xS3       
 # Orbit structure of point-stabiliser  1^{1}5^{1}  1^{1}5^{1}  
 # Orbit structure of block-stabiliser  3^{2}       3^{2}       
@@ -144,7 +144,7 @@
 # ------------------------------------------------------------------
 #                                      G                Aut(D)      
 # ------------------------------------------------------------------
-# Structure                            S5               PΣL2(9)    
+# Structure                            S5               PΣL(2,9)    
 # Rank                                 3                2           
 # 2-Homogeneous                        false            true        
 # Point-stabiliser                     D12              3^2:D8      
@@ -170,11 +170,11 @@
 # -------------------------------------------------------------------------
 #                                      G                     Aut(D)        
 # -------------------------------------------------------------------------
-# Structure                            S5                    PSL4(2)      
+# Structure                            S5                    PSL(4,2)      
 # Rank                                 4                     2             
 # 2-Homogeneous                        false                 true          
-# Point-stabiliser                     D8                    2^3:PSL3(2)  
-# Block-stabiliser                     D8                    2^3:PSL3(2)  
+# Point-stabiliser                     D8                    2^3:PSL(3,2)  
+# Block-stabiliser                     D8                    2^3:PSL(3,2)  
 # Orbit structure of point-stabiliser  1^{1}2^{1}4^{1}8^{1}  1^{1}14^{1}   
 # Orbit structure of block-stabiliser  1^{1}2^{1}4^{1}8^{1}  7^{1}8^{1}    
 # Point-transitive                     true                  true          

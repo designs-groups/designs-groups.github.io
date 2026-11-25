@@ -47,13 +47,13 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r   k  λ   G         Gα        GB   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   9   36   28  7  21  PSL2(8)   AGL1(8)   D14  S9        2      2                  1       3       true             true             true             true                                        complete  
-# 2   9   84   28  3  7   PSL2(8)   AGL1(8)   S3   S9        2      2                  1       6       true             false            true             true                 3                      complete  
-# 3   9   84   56  6  35  PSL2(8)   AGL1(8)   S3   S9        2      2                  1       6       true             false            true             true                 2                      complete  
-# 4   9   126  56  4  21  PSL2(8)   AGL1(8)   2^2  S9        2      2                  1       7       true             false            true             false                                       complete  
-# 5   28  36   9   7  2   PSL2(8)   D18       D14  PΓL2(8)   4      2                  2       3       true             true             true             false                                                 
-# 6   28  63   9   4  1   PSL2(8)   D18       2^3  PΓL2(8)   4      2                  2       4       true             false            true             false                                                 
-# 7   36  84   14  6  2   PSL2(8)   D14       S3   PΓL2(8)   5      3                  3       6       true             false            true             false                                                 
+# 1   9   36   28  7  21  PSL(2,8)  AGL(1,8)  D14  S9        2      2                  1       3       true             true             true             true                                        complete  
+# 2   9   84   28  3  7   PSL(2,8)  AGL(1,8)  S3   S9        2      2                  1       6       true             false            true             true                 3                      complete  
+# 3   9   84   56  6  35  PSL(2,8)  AGL(1,8)  S3   S9        2      2                  1       6       true             false            true             true                 2                      complete  
+# 4   9   126  56  4  21  PSL(2,8)  AGL(1,8)  2^2  S9        2      2                  1       7       true             false            true             false                                       complete  
+# 5   28  36   9   7  2   PSL(2,8)  D18       D14  PΓL(2,8)  4      2                  2       3       true             true             true             false                                                 
+# 6   28  63   9   4  1   PSL(2,8)  D18       2^3  PΓL(2,8)  4      2                  2       4       true             false            true             false                                                 
+# 7   36  84   14  6  2   PSL(2,8)  D14       S3   PΓL(2,8)  5      3                  3       6       true             false            true             false                                                 
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -66,10 +66,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(8)     S9          
+# Structure                            PSL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(8)     S8          
+# Point-stabiliser                     AGL(1,8)    S8          
 # Block-stabiliser                     D14         2xS7        
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  2^{1}7^{1}  2^{1}7^{1}  
@@ -92,10 +92,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(8)     S9          
+# Structure                            PSL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(8)     S8          
+# Point-stabiliser                     AGL(1,8)    S8          
 # Block-stabiliser                     S3          S6xS3       
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  3^{1}6^{1}  3^{1}6^{1}  
@@ -118,10 +118,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(8)     S9          
+# Structure                            PSL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(8)     S8          
+# Point-stabiliser                     AGL(1,8)    S8          
 # Block-stabiliser                     S3          S6xS3       
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  3^{1}6^{1}  3^{1}6^{1}  
@@ -144,10 +144,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(8)     S9          
+# Structure                            PSL(2,8)    S9          
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(8)     S8          
+# Point-stabiliser                     AGL(1,8)    S8          
 # Block-stabiliser                     2^2         S4xS5       
 # Orbit structure of point-stabiliser  1^{1}8^{1}  1^{1}8^{1}  
 # Orbit structure of block-stabiliser  1^{1}4^{2}  4^{1}5^{1}  
@@ -170,7 +170,7 @@
 # --------------------------------------------------------------
 #                                      G           Aut(D)       
 # --------------------------------------------------------------
-# Structure                            PSL2(8)     PΓL2(8)     
+# Structure                            PSL(2,8)    PΓL(2,8)     
 # Rank                                 4           2            
 # 2-Homogeneous                        false       true         
 # Point-stabiliser                     D18         9:6          
@@ -196,7 +196,7 @@
 # --------------------------------------------------------------
 #                                      G           Aut(D)       
 # --------------------------------------------------------------
-# Structure                            PSL2(8)     PΓL2(8)     
+# Structure                            PSL(2,8)    PΓL(2,8)     
 # Rank                                 4           2            
 # 2-Homogeneous                        false       true         
 # Point-stabiliser                     D18         9:6          
@@ -222,7 +222,7 @@
 # ------------------------------------------------------------------------------
 #                                      G                 Aut(D)                 
 # ------------------------------------------------------------------------------
-# Structure                            PSL2(8)           PΓL2(8)               
+# Structure                            PSL(2,8)          PΓL(2,8)               
 # Rank                                 5                 3                      
 # 2-Homogeneous                        false             false                  
 # Point-stabiliser                     D14               7:6                    

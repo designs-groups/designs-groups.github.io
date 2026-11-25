@@ -49,20 +49,20 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b     r    k   λ    G            Gα         GB        Aut(D)      rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   17   68    20   5   5    PΓL2(2^4)    AΓL1(16)   A5:4      PΓL2(2^4)   2      2                  1       4       true             true             true             true                 2                                                        
-# 2   17   68    48   12  33   PΓL2(2^4)    AΓL1(16)   A5:4      PΓL2(2^4)   2      2                  1       4       true             true             true             true                 1                                                        
-# 3   17   136   120  15  105  PΓL2(2^4)    AΓL1(16)   (5:4)xS3  S17         2      2                  1       9       true             true             true             true                                        complete                          
-# 4   17   340   80   4   15   PΓL2(2^4)    AΓL1(16)   A4:4      PΓL2(2^4)   2      2                  1       19      true             false            true             false                                                                         
-# 5   17   408   240  10  135  PΓL2(2^4)    AΓL1(16)   2x(5:4)   PΓL2(2^4)   2      2                  1       21      true             false            true             false                                                                         
-# 6   17   510   240  8   105  PΓL2(2^4)    AΓL1(16)   2^3:4     PΓL2(2^4)   2      2                  1       23      true             false            true             false                                                                         
-# 7   17   680   120  3   15   PΓL2(2^4)    AΓL1(16)   4xS3      S17         2      2                  1       29      true             false            true             false                                       complete                          
-# 8   17   1360  480  6   150  PΓL2(2^4)    AΓL1(16)   D12       PΓL2(2^4)   2      2                  1       42      true             false            true             false                                                                         
-# 9   17   2040  480  4   90   PΓL2(2^4)    AΓL1(16)   D8        PΓL2(2^4)   2      2                  1       48      true             false            true             false                                                                         
-# 10  17   2040  960  8   420  PΓL2(2^4)    AΓL1(16)   8         PΓL2(2^4)   2      2                  1       47      true             false            true             false                                                                         
-# 11  85   85    64   64  48   PSL2(16):4   2^4:3:4    2^4:3:4   PΣL4(4)     4      2                  6       6       false            false            true             false                            true       complement of PG(3,4) parameters  
-# 12  120  255   17   8   1    PΣL2(16)     17:8       8:2:2:2   PΣL2(16)    4      4                  8       14      true             false            true             false                                                                         
-# 13  120  1020  68   8   4    PΣL2(16)     17:8       (4x2):2   PΣL2(16)    4      4                  8       34      true             false            true             false                                                                         
-# 14  120  2040  136  8   8    PΣL2(16)     17:8       D8        PΣL2(16)    4      4                  8       48      true             false            true             false                                                                         
+# 1   17   68    20   5   5    PΓL(2,2^4)   AΓL(1,16)  A5:4      PΓL(2,2^4)  2      2                  1       4       true             true             true             true                 2                                                        
+# 2   17   68    48   12  33   PΓL(2,2^4)   AΓL(1,16)  A5:4      PΓL(2,2^4)  2      2                  1       4       true             true             true             true                 1                                                        
+# 3   17   136   120  15  105  PΓL(2,2^4)   AΓL(1,16)  (5:4)xS3  S17         2      2                  1       9       true             true             true             true                                        complete                          
+# 4   17   340   80   4   15   PΓL(2,2^4)   AΓL(1,16)  A4:4      PΓL(2,2^4)  2      2                  1       19      true             false            true             false                                                                         
+# 5   17   408   240  10  135  PΓL(2,2^4)   AΓL(1,16)  2x(5:4)   PΓL(2,2^4)  2      2                  1       21      true             false            true             false                                                                         
+# 6   17   510   240  8   105  PΓL(2,2^4)   AΓL(1,16)  2^3:4     PΓL(2,2^4)  2      2                  1       23      true             false            true             false                                                                         
+# 7   17   680   120  3   15   PΓL(2,2^4)   AΓL(1,16)  4xS3      S17         2      2                  1       29      true             false            true             false                                       complete                          
+# 8   17   1360  480  6   150  PΓL(2,2^4)   AΓL(1,16)  D12       PΓL(2,2^4)  2      2                  1       42      true             false            true             false                                                                         
+# 9   17   2040  480  4   90   PΓL(2,2^4)   AΓL(1,16)  D8        PΓL(2,2^4)  2      2                  1       48      true             false            true             false                                                                         
+# 10  17   2040  960  8   420  PΓL(2,2^4)   AΓL(1,16)  8         PΓL(2,2^4)  2      2                  1       47      true             false            true             false                                                                         
+# 11  85   85    64   64  48   PSL(2,16):4  2^4:3:4    2^4:3:4   PΣL(4,4)    4      2                  6       6       false            false            true             false                            true       complement of PG(3,4) parameters  
+# 12  120  255   17   8   1    PΣL(2,16)    17:8       8:2:2:2   PΣL(2,16)   4      4                  8       14      true             false            true             false                                                                         
+# 13  120  1020  68   8   4    PΣL(2,16)    17:8       (4x2):2   PΣL(2,16)   4      4                  8       34      true             false            true             false                                                                         
+# 14  120  2040  136  8   8    PΣL(2,16)    17:8       D8        PΣL(2,16)   4      4                  8       48      true             false            true             false                                                                         
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -75,10 +75,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(2^4)    PΓL2(2^4)   
+# Structure                            PΓL(2,2^4)   PΓL(2,2^4)   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(16)     AΓL1(16)    
+# Point-stabiliser                     AΓL(1,16)    AΓL(1,16)    
 # Block-stabiliser                     A5:4         A5:4         
 # Orbit structure of point-stabiliser  1^{1}16^{1}  1^{1}16^{1}  
 # Orbit structure of block-stabiliser  5^{1}12^{1}  5^{1}12^{1}  
@@ -101,10 +101,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(2^4)    PΓL2(2^4)   
+# Structure                            PΓL(2,2^4)   PΓL(2,2^4)   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(16)     AΓL1(16)    
+# Point-stabiliser                     AΓL(1,16)    AΓL(1,16)    
 # Block-stabiliser                     A5:4         A5:4         
 # Orbit structure of point-stabiliser  1^{1}16^{1}  1^{1}16^{1}  
 # Orbit structure of block-stabiliser  5^{1}12^{1}  5^{1}12^{1}  
@@ -127,10 +127,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(2^4)    S17          
+# Structure                            PΓL(2,2^4)   S17          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(16)     S16          
+# Point-stabiliser                     AΓL(1,16)    S16          
 # Block-stabiliser                     (5:4)xS3     2xS15        
 # Orbit structure of point-stabiliser  1^{1}16^{1}  1^{1}16^{1}  
 # Orbit structure of block-stabiliser  2^{1}15^{1}  2^{1}15^{1}  
@@ -153,10 +153,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(2^4)         PΓL2(2^4)        
+# Structure                            PΓL(2,2^4)        PΓL(2,2^4)        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     AΓL1(16)          AΓL1(16)         
+# Point-stabiliser                     AΓL(1,16)         AΓL(1,16)         
 # Block-stabiliser                     A4:4              A4:4              
 # Orbit structure of point-stabiliser  1^{1}16^{1}       1^{1}16^{1}       
 # Orbit structure of block-stabiliser  1^{1}4^{1}12^{1}  1^{1}4^{1}12^{1}  
@@ -179,10 +179,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(2^4)         PΓL2(2^4)        
+# Structure                            PΓL(2,2^4)        PΓL(2,2^4)        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     AΓL1(16)          AΓL1(16)         
+# Point-stabiliser                     AΓL(1,16)         AΓL(1,16)         
 # Block-stabiliser                     2x(5:4)           2x(5:4)           
 # Orbit structure of point-stabiliser  1^{1}16^{1}       1^{1}16^{1}       
 # Orbit structure of block-stabiliser  2^{1}5^{1}10^{1}  2^{1}5^{1}10^{1}  
@@ -205,10 +205,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(2^4)    PΓL2(2^4)   
+# Structure                            PΓL(2,2^4)   PΓL(2,2^4)   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(16)     AΓL1(16)    
+# Point-stabiliser                     AΓL(1,16)    AΓL(1,16)    
 # Block-stabiliser                     2^3:4        2^3:4        
 # Orbit structure of point-stabiliser  1^{1}16^{1}  1^{1}16^{1}  
 # Orbit structure of block-stabiliser  1^{1}8^{2}   1^{1}8^{2}   
@@ -231,10 +231,10 @@
 # --------------------------------------------------------------------
 #                                      G                 Aut(D)       
 # --------------------------------------------------------------------
-# Structure                            PΓL2(2^4)         S17          
+# Structure                            PΓL(2,2^4)        S17          
 # Rank                                 2                 2            
 # 2-Homogeneous                        true              true         
-# Point-stabiliser                     AΓL1(16)          S16          
+# Point-stabiliser                     AΓL(1,16)         S16          
 # Block-stabiliser                     4xS3              S3xS14       
 # Orbit structure of point-stabiliser  1^{1}16^{1}       1^{1}16^{1}  
 # Orbit structure of block-stabiliser  2^{1}3^{1}12^{1}  3^{1}14^{1}  
@@ -257,10 +257,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(2^4)        PΓL2(2^4)       
+# Structure                            PΓL(2,2^4)       PΓL(2,2^4)       
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     AΓL1(16)         AΓL1(16)        
+# Point-stabiliser                     AΓL(1,16)        AΓL(1,16)        
 # Block-stabiliser                     D12              D12              
 # Orbit structure of point-stabiliser  1^{1}16^{1}      1^{1}16^{1}      
 # Orbit structure of block-stabiliser  2^{1}3^{1}6^{2}  2^{1}3^{1}6^{2}  
@@ -283,10 +283,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PΓL2(2^4)        PΓL2(2^4)       
+# Structure                            PΓL(2,2^4)       PΓL(2,2^4)       
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     AΓL1(16)         AΓL1(16)        
+# Point-stabiliser                     AΓL(1,16)        AΓL(1,16)        
 # Block-stabiliser                     D8               D8               
 # Orbit structure of point-stabiliser  1^{1}16^{1}      1^{1}16^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{2}8^{1}  1^{1}4^{2}8^{1}  
@@ -309,10 +309,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(2^4)    PΓL2(2^4)   
+# Structure                            PΓL(2,2^4)   PΓL(2,2^4)   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(16)     AΓL1(16)    
+# Point-stabiliser                     AΓL(1,16)    AΓL(1,16)    
 # Block-stabiliser                     8            8            
 # Orbit structure of point-stabiliser  1^{1}16^{1}  1^{1}16^{1}  
 # Orbit structure of block-stabiliser  1^{1}8^{2}   1^{1}8^{2}   
@@ -335,11 +335,11 @@
 # -----------------------------------------------------------------------------
 #                                      G                       Aut(D)          
 # -----------------------------------------------------------------------------
-# Structure                            PSL2(16):4              PΣL4(4)        
+# Structure                            PSL(2,16):4             PΣL(4,4)        
 # Rank                                 4                       2               
 # 2-Homogeneous                        false                   true            
-# Point-stabiliser                     2^4:3:4                 2^6:SL3(4):S3  
-# Block-stabiliser                     2^4:3:4                 2^6:SL3(4):S3  
+# Point-stabiliser                     2^4:3:4                 2^6:SL(3,4):S3  
+# Block-stabiliser                     2^4:3:4                 2^6:SL(3,4):S3  
 # Orbit structure of point-stabiliser  1^{1}4^{1}16^{1}64^{1}  1^{1}84^{1}     
 # Orbit structure of block-stabiliser  1^{1}4^{1}16^{1}64^{1}  21^{1}64^{1}    
 # Point-transitive                     true                    true            
@@ -361,7 +361,7 @@
 # ---------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                   
 # ---------------------------------------------------------------------------------------
-# Structure                            PΣL2(16)                 PΣL2(16)                
+# Structure                            PΣL(2,16)                PΣL(2,16)                
 # Rank                                 4                        4                        
 # 2-Homogeneous                        false                    false                    
 # Point-stabiliser                     17:8                     17:8                     
@@ -387,7 +387,7 @@
 # ---------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                   
 # ---------------------------------------------------------------------------------------
-# Structure                            PΣL2(16)                 PΣL2(16)                
+# Structure                            PΣL(2,16)                PΣL(2,16)                
 # Rank                                 4                        4                        
 # 2-Homogeneous                        false                    false                    
 # Point-stabiliser                     17:8                     17:8                     
@@ -413,7 +413,7 @@
 # ---------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                   
 # ---------------------------------------------------------------------------------------
-# Structure                            PΣL2(16)                 PΣL2(16)                
+# Structure                            PΣL(2,16)                PΣL(2,16)                
 # Rank                                 4                        4                        
 # 2-Homogeneous                        false                    false                    
 # Point-stabiliser                     17:8                     17:8                     

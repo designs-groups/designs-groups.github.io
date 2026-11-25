@@ -47,30 +47,30 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G      Gα           GB           Aut(D)      rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                      
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   28  63    9    4   1    U3(3)  ((3^2):3):8  SL2(3):4     PSU3(3):2   2      2                  35      31      true             true             true             true                 4                                                                    
+# 1   28  63    9    4   1    U3(3)  ((3^2):3):8  SL(2,3):4    PSU(3,3):2  2      2                  35      31      true             true             true             true                 4                                                                    
 # 2   28  63    27   12  11   U3(3)  ((3^2):3):8  ((4^2):3):2  O7(2)       2      2                  35      32      true             true             true             true                 3                                                                    
 # 3   28  63    36   16  20   U3(3)  ((3^2):3):8  ((4^2):3):2  O7(2)       2      2                  35      32      true             true             true             true                 2                                                                    
-# 4   28  63    54   24  46   U3(3)  ((3^2):3):8  SL2(3):4     PSU3(3):2   2      2                  35      31      true             true             true             true                 1                                                                    
-# 5   28  189   54   8   14   U3(3)  ((3^2):3):8  (4^2):2      PSU3(3):2   2      2                  35      27      true             false            true             false                                                                                     
-# 6   28  252   27   3   2    U3(3)  ((3^2):3):8  3:8          PSU3(3):2   2      2                  35      25      true             false            true             false                                                                                     
-# 7   28  252   36   4   4    U3(3)  ((3^2):3):8  S4           PSU3(3):2   2      2                  35      24      true             false            true             false                                                                                     
-# 8   28  252   108  12  44   U3(3)  ((3^2):3):8  S4           PSU3(3):2   2      2                  35      24      true             false            true             false                                                                                     
+# 4   28  63    54   24  46   U3(3)  ((3^2):3):8  SL(2,3):4    PSU(3,3):2  2      2                  35      31      true             true             true             true                 1                                                                    
+# 5   28  189   54   8   14   U3(3)  ((3^2):3):8  (4^2):2      PSU(3,3):2  2      2                  35      27      true             false            true             false                                                                                     
+# 6   28  252   27   3   2    U3(3)  ((3^2):3):8  3:8          PSU(3,3):2  2      2                  35      25      true             false            true             false                                                                                     
+# 7   28  252   36   4   4    U3(3)  ((3^2):3):8  S4           PSU(3,3):2  2      2                  35      24      true             false            true             false                                                                                     
+# 8   28  252   108  12  44   U3(3)  ((3^2):3):8  S4           PSU(3,3):2  2      2                  35      24      true             false            true             false                                                                                     
 # 9   28  288   72   7   16   U3(3)  ((3^2):3):8  7:3          O7(2)       2      2                  35      22      true             false            true             true                 10                                                                   
 # 10  28  288   216  21  160  U3(3)  ((3^2):3):8  7:3          O7(2)       2      2                  35      22      true             false            true             true                 9                                                                    
-# 11  28  336   108  9   32   U3(3)  ((3^2):3):8  3xS3         PSU3(3):2   2      2                  35      21      true             false            true             false                                                                                     
+# 11  28  336   108  9   32   U3(3)  ((3^2):3):8  3xS3         PSU(3,3):2  2      2                  35      21      true             false            true             false                                                                                     
 # 12  28  336   216  18  136  U3(3)  ((3^2):3):8  3xS3         O7(2)       2      2                  35      21      true             false            true             false                                                                                     
-# 13  28  504   108  6   20   U3(3)  ((3^2):3):8  A4           PSU3(3):2   2      2                  35      16      true             false            true             false                                                                                     
-# 14  28  504   216  12  88   U3(3)  ((3^2):3):8  12           PSU3(3):2   2      2                  35      17      true             false            true             false                                                                                     
-# 15  28  756   216  8   56   U3(3)  ((3^2):3):8  8            PSU3(3):2   2      2                  35      14      true             false            true             false                                                                                     
-# 16  28  864   216  7   48   U3(3)  ((3^2):3):8  7            PSU3(3):2   2      2                  35      10      true             false            true             false                                                                                     
-# 17  28  1008  108  3   8    U3(3)  ((3^2):3):8  S3           PSU3(3):2   2      2                  35      9       true             false            true             false                                                                                     
-# 18  28  1008  216  6   40   U3(3)  ((3^2):3):8  6            PSU3(3):2   2      2                  35      8       true             false            true             false                                                                                     
+# 13  28  504   108  6   20   U3(3)  ((3^2):3):8  A4           PSU(3,3):2  2      2                  35      16      true             false            true             false                                                                                     
+# 14  28  504   216  12  88   U3(3)  ((3^2):3):8  12           PSU(3,3):2  2      2                  35      17      true             false            true             false                                                                                     
+# 15  28  756   216  8   56   U3(3)  ((3^2):3):8  8            PSU(3,3):2  2      2                  35      14      true             false            true             false                                                                                     
+# 16  28  864   216  7   48   U3(3)  ((3^2):3):8  7            PSU(3,3):2  2      2                  35      10      true             false            true             false                                                                                     
+# 17  28  1008  108  3   8    U3(3)  ((3^2):3):8  S3           PSU(3,3):2  2      2                  35      9       true             false            true             false                                                                                     
+# 18  28  1008  216  6   40   U3(3)  ((3^2):3):8  6            PSU(3,3):2  2      2                  35      8       true             false            true             false                                                                                     
 # 19  28  1008  216  6   40   U3(3)  ((3^2):3):8  S3           O7(2)       2      2                  35      9       true             false            true             false                                                                                     
 # 20  28  2016  216  3   16   U3(3)  ((3^2):3):8  3            O7(2)       2      2                  35      4       true             false            true             false                                                                                     
-# 21  36  36    21   21  12   U3(3)  PSL3(2)      PSL3(2)      PSU3(3):2   4      3                  34      34      true             true             true             false                            true       complement of Menon parameters                
-# 22  36  63    28   16  12   U3(3)  PSL3(2)      ((4^2):3):2  O7(2)       4      2                  34      32      true             true             true             false                                                                                     
-# 23  36  336   56   6   8    U3(3)  PSL3(2)      3xS3         O7(2)       4      2                  34      21      true             false            true             false                                                                                     
-# 24  63  63    32   32  16   U3(3)  SL2(3):4     SL2(3):4     PSU3(3):2   4      4                  31      31      true             true             true             false                            true       complement of PG(5,2) or Hadamard parameters  
+# 21  36  36    21   21  12   U3(3)  PSL(3,2)     PSL(3,2)     PSU(3,3):2  4      3                  34      34      true             true             true             false                            true       complement of Menon parameters                
+# 22  36  63    28   16  12   U3(3)  PSL(3,2)     ((4^2):3):2  O7(2)       4      2                  34      32      true             true             true             false                                                                                     
+# 23  36  336   56   6   8    U3(3)  PSL(3,2)     3xS3         O7(2)       4      2                  34      21      true             false            true             false                                                                                     
+# 24  63  63    32   32  16   U3(3)  SL(2,3):4    SL(2,3):4    PSU(3,3):2  4      4                  31      31      true             true             true             false                            true       complement of PG(5,2) or Hadamard parameters  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -83,11 +83,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            U3(3)        PSU3(3):2   
+# Structure                            U3(3)        PSU(3,3):2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     ((3^2):3):8  3^2:3:QD16   
-# Block-stabiliser                     SL2(3):4     2^3:2^2:3:2  
+# Block-stabiliser                     SL(2,3):4    2^3:2^2:3:2  
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  4^{1}24^{1}  4^{1}24^{1}  
 # Point-transitive                     true         true         
@@ -109,10 +109,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(3)         O7(2)        
+# Structure                            U3(3)         O7(2)         
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     ((3^2):3):8   PSp4(3):2    
+# Point-stabiliser                     ((3^2):3):8   PSp(4,3):2    
 # Block-stabiliser                     ((4^2):3):2   2^5:S6        
 # Orbit structure of point-stabiliser  1^{1}27^{1}   1^{1}27^{1}   
 # Orbit structure of block-stabiliser  12^{1}16^{1}  12^{1}16^{1}  
@@ -135,10 +135,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(3)         O7(2)        
+# Structure                            U3(3)         O7(2)         
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     ((3^2):3):8   PSp4(3):2    
+# Point-stabiliser                     ((3^2):3):8   PSp(4,3):2    
 # Block-stabiliser                     ((4^2):3):2   2^5:S6        
 # Orbit structure of point-stabiliser  1^{1}27^{1}   1^{1}27^{1}   
 # Orbit structure of block-stabiliser  12^{1}16^{1}  12^{1}16^{1}  
@@ -161,11 +161,11 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            U3(3)        PSU3(3):2   
+# Structure                            U3(3)        PSU(3,3):2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     ((3^2):3):8  3^2:3:QD16   
-# Block-stabiliser                     SL2(3):4     2^3:2^2:3:2  
+# Block-stabiliser                     SL(2,3):4    2^3:2^2:3:2  
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  4^{1}24^{1}  4^{1}24^{1}  
 # Point-transitive                     true         true         
@@ -187,7 +187,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            U3(3)             PSU3(3):2        
+# Structure                            U3(3)             PSU(3,3):2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     ((3^2):3):8       3^2:3:QD16        
@@ -213,7 +213,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            U3(3)             PSU3(3):2        
+# Structure                            U3(3)             PSU(3,3):2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     ((3^2):3):8       3^2:3:QD16        
@@ -239,7 +239,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            U3(3)        PSU3(3):2   
+# Structure                            U3(3)        PSU(3,3):2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     ((3^2):3):8  3^2:3:QD16   
@@ -265,7 +265,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            U3(3)        PSU3(3):2   
+# Structure                            U3(3)        PSU(3,3):2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     ((3^2):3):8  3^2:3:QD16   
@@ -291,10 +291,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            U3(3)        O7(2)       
+# Structure                            U3(3)        O7(2)        
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     ((3^2):3):8  PSp4(3):2   
+# Point-stabiliser                     ((3^2):3):8  PSp(4,3):2   
 # Block-stabiliser                     7:3          S7           
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  7^{1}21^{1}  7^{1}21^{1}  
@@ -317,10 +317,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            U3(3)        O7(2)       
+# Structure                            U3(3)        O7(2)        
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     ((3^2):3):8  PSp4(3):2   
+# Point-stabiliser                     ((3^2):3):8  PSp(4,3):2   
 # Block-stabiliser                     7:3          S7           
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  7^{1}21^{1}  7^{1}21^{1}  
@@ -343,7 +343,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            U3(3)             PSU3(3):2        
+# Structure                            U3(3)             PSU(3,3):2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     ((3^2):3):8       3^2:3:QD16        
@@ -369,10 +369,10 @@
 # ---------------------------------------------------------------------
 #                                      G                 Aut(D)        
 # ---------------------------------------------------------------------
-# Structure                            U3(3)             O7(2)        
+# Structure                            U3(3)             O7(2)         
 # Rank                                 2                 2             
 # 2-Homogeneous                        true              true          
-# Point-stabiliser                     ((3^2):3):8       PSp4(3):2    
+# Point-stabiliser                     ((3^2):3):8       PSp(4,3):2    
 # Block-stabiliser                     3xS3              S6xS3         
 # Orbit structure of point-stabiliser  1^{1}27^{1}       1^{1}27^{1}   
 # Orbit structure of block-stabiliser  1^{1}9^{1}18^{1}  10^{1}18^{1}  
@@ -395,7 +395,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            U3(3)             PSU3(3):2        
+# Structure                            U3(3)             PSU(3,3):2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     ((3^2):3):8       3^2:3:QD16        
@@ -421,7 +421,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            U3(3)             PSU3(3):2        
+# Structure                            U3(3)             PSU(3,3):2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     ((3^2):3):8       3^2:3:QD16        
@@ -447,7 +447,7 @@
 # -------------------------------------------------------------------
 #                                      G                Aut(D)       
 # -------------------------------------------------------------------
-# Structure                            U3(3)            PSU3(3):2   
+# Structure                            U3(3)            PSU(3,3):2   
 # Rank                                 2                2            
 # 2-Homogeneous                        true             true         
 # Point-stabiliser                     ((3^2):3):8      3^2:3:QD16   
@@ -473,7 +473,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            U3(3)        PSU3(3):2   
+# Structure                            U3(3)        PSU(3,3):2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     ((3^2):3):8  3^2:3:QD16   
@@ -499,7 +499,7 @@
 # -----------------------------------------------------------------------------
 #                                      G                Aut(D)                 
 # -----------------------------------------------------------------------------
-# Structure                            U3(3)            PSU3(3):2             
+# Structure                            U3(3)            PSU(3,3):2             
 # Rank                                 2                2                      
 # 2-Homogeneous                        true             true                   
 # Point-stabiliser                     ((3^2):3):8      3^2:3:QD16             
@@ -525,7 +525,7 @@
 # -----------------------------------------------------------------------------
 #                                      G                Aut(D)                 
 # -----------------------------------------------------------------------------
-# Structure                            U3(3)            PSU3(3):2             
+# Structure                            U3(3)            PSU(3,3):2             
 # Rank                                 2                2                      
 # 2-Homogeneous                        true             true                   
 # Point-stabiliser                     ((3^2):3):8      3^2:3:QD16             
@@ -551,10 +551,10 @@
 # -------------------------------------------------------------------------
 #                                      G                Aut(D)             
 # -------------------------------------------------------------------------
-# Structure                            U3(3)            O7(2)             
+# Structure                            U3(3)            O7(2)              
 # Rank                                 2                2                  
 # 2-Homogeneous                        true             true               
-# Point-stabiliser                     ((3^2):3):8      PSp4(3):2         
+# Point-stabiliser                     ((3^2):3):8      PSp(4,3):2         
 # Block-stabiliser                     S3               2xS6               
 # Orbit structure of point-stabiliser  1^{1}27^{1}      1^{1}27^{1}        
 # Orbit structure of block-stabiliser  1^{1}3^{3}6^{3}  6^{1}10^{1}12^{1}  
@@ -577,10 +577,10 @@
 # ---------------------------------------------------------------------
 #                                      G            Aut(D)             
 # ---------------------------------------------------------------------
-# Structure                            U3(3)        O7(2)             
+# Structure                            U3(3)        O7(2)              
 # Rank                                 2            2                  
 # 2-Homogeneous                        true         true               
-# Point-stabiliser                     ((3^2):3):8  PSp4(3):2         
+# Point-stabiliser                     ((3^2):3):8  PSp(4,3):2         
 # Block-stabiliser                     3            S5xS3              
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}        
 # Orbit structure of block-stabiliser  1^{1}3^{9}   3^{1}10^{1}15^{1}  
@@ -603,11 +603,11 @@
 # --------------------------------------------------------------------------
 #                                      G                 Aut(D)             
 # --------------------------------------------------------------------------
-# Structure                            U3(3)             PSU3(3):2         
+# Structure                            U3(3)             PSU(3,3):2         
 # Rank                                 4                 3                  
 # 2-Homogeneous                        false             false              
-# Point-stabiliser                     PSL3(2)           PSL3(2):2         
-# Block-stabiliser                     PSL3(2)           PSL3(2):2         
+# Point-stabiliser                     PSL(3,2)          PSL(3,2):2         
+# Block-stabiliser                     PSL(3,2)          PSL(3,2):2         
 # Orbit structure of point-stabiliser  1^{1}7^{2}21^{1}  1^{1}14^{1}21^{1}  
 # Orbit structure of block-stabiliser  1^{1}7^{2}21^{1}  1^{1}14^{1}21^{1}  
 # Point-transitive                     true              true               
@@ -629,10 +629,10 @@
 # ----------------------------------------------------------------------
 #                                      G                  Aut(D)        
 # ----------------------------------------------------------------------
-# Structure                            U3(3)              O7(2)        
+# Structure                            U3(3)              O7(2)         
 # Rank                                 4                  2             
 # 2-Homogeneous                        false              true          
-# Point-stabiliser                     PSL3(2)            S8            
+# Point-stabiliser                     PSL(3,2)           S8            
 # Block-stabiliser                     ((4^2):3):2        2^5:S6        
 # Orbit structure of point-stabiliser  1^{1}7^{2}21^{1}   1^{1}35^{1}   
 # Orbit structure of block-stabiliser  4^{2}12^{1}16^{1}  16^{1}20^{1}  
@@ -655,10 +655,10 @@
 # --------------------------------------------------------------------
 #                                      G                 Aut(D)       
 # --------------------------------------------------------------------
-# Structure                            U3(3)             O7(2)       
+# Structure                            U3(3)             O7(2)        
 # Rank                                 4                 2            
 # 2-Homogeneous                        false             true         
-# Point-stabiliser                     PSL3(2)           S8           
+# Point-stabiliser                     PSL(3,2)          S8           
 # Block-stabiliser                     3xS3              S3xS6        
 # Orbit structure of point-stabiliser  1^{1}7^{2}21^{1}  1^{1}35^{1}  
 # Orbit structure of block-stabiliser  3^{1}6^{1}9^{3}   6^{1}30^{1}  
@@ -681,11 +681,11 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            U3(3)                   PSU3(3):2              
+# Structure                            U3(3)                   PSU(3,3):2              
 # Rank                                 4                       4                       
 # 2-Homogeneous                        false                   false                   
-# Point-stabiliser                     SL2(3):4                GL2(3):2:2             
-# Block-stabiliser                     SL2(3):4                2^3:2^2:3:2             
+# Point-stabiliser                     SL(2,3):4               GL(2,3):2:2             
+# Block-stabiliser                     SL(2,3):4               2^3:2^2:3:2             
 # Orbit structure of point-stabiliser  1^{1}6^{1}24^{1}32^{1}  1^{1}6^{1}24^{1}32^{1}  
 # Orbit structure of block-stabiliser  1^{1}6^{1}24^{1}32^{1}  1^{1}6^{1}24^{1}32^{1}  
 # Point-transitive                     true                    true                    

@@ -49,14 +49,14 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r    k   λ   G          Gα         GB   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   12  66   55   10  45  PGL2(11)   AGL1(11)   D20  S12        2      2                  1       5       true             true             true             true                                        complete  
-# 2   12  110  55   6   25  PGL2(11)   AGL1(11)   D12  PGL2(11)   2      2                  1       8       true             false            true             true                 2                                
-# 3   12  132  55   5   20  PGL2(11)   AGL1(11)   D10  PGL2(11)   2      2                  1       12      true             false            true             false                                                 
-# 4   12  165  55   4   15  PGL2(11)   AGL1(11)   D8   PGL2(11)   2      2                  1       13      true             false            true             true                 5                                
-# 5   12  165  110  8   70  PGL2(11)   AGL1(11)   D8   PGL2(11)   2      2                  1       13      true             false            true             true                 4                                
-# 6   12  220  55   3   10  PGL2(11)   AGL1(11)   S3   S12        2      2                  1       15      true             false            true             false                                       complete  
-# 7   12  220  110  6   50  PGL2(11)   AGL1(11)   S3   PGL2(11)   2      2                  1       14      true             false            true             true                 7                                
-# 8   12  330  110  4   30  PGL2(11)   AGL1(11)   2^2  PGL2(11)   2      2                  1       18      true             false            true             false                                                 
+# 1   12  66   55   10  45  PGL(2,11)  AGL(1,11)  D20  S12        2      2                  1       5       true             true             true             true                                        complete  
+# 2   12  110  55   6   25  PGL(2,11)  AGL(1,11)  D12  PGL(2,11)  2      2                  1       8       true             false            true             true                 2                                
+# 3   12  132  55   5   20  PGL(2,11)  AGL(1,11)  D10  PGL(2,11)  2      2                  1       12      true             false            true             false                                                 
+# 4   12  165  55   4   15  PGL(2,11)  AGL(1,11)  D8   PGL(2,11)  2      2                  1       13      true             false            true             true                 5                                
+# 5   12  165  110  8   70  PGL(2,11)  AGL(1,11)  D8   PGL(2,11)  2      2                  1       13      true             false            true             true                 4                                
+# 6   12  220  55   3   10  PGL(2,11)  AGL(1,11)  S3   S12        2      2                  1       15      true             false            true             false                                       complete  
+# 7   12  220  110  6   50  PGL(2,11)  AGL(1,11)  S3   PGL(2,11)  2      2                  1       14      true             false            true             true                 7                                
+# 8   12  330  110  4   30  PGL(2,11)  AGL(1,11)  2^2  PGL(2,11)  2      2                  1       18      true             false            true             false                                                 
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -69,10 +69,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     S12          
+# Structure                            PGL(2,11)    S12          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     S11          
+# Point-stabiliser                     AGL(1,11)    S11          
 # Block-stabiliser                     D20          2xS10        
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  2^{1}10^{1}  2^{1}10^{1}  
@@ -95,10 +95,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     PGL2(11)    
+# Structure                            PGL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     AGL1(11)    
+# Point-stabiliser                     AGL(1,11)    AGL(1,11)    
 # Block-stabiliser                     D12          D12          
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  6^{2}        6^{2}        
@@ -121,10 +121,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     PGL2(11)    
+# Structure                            PGL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     AGL1(11)    
+# Point-stabiliser                     AGL(1,11)    AGL(1,11)    
 # Block-stabiliser                     D10          D10          
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  2^{1}5^{2}   2^{1}5^{2}   
@@ -147,10 +147,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     PGL2(11)    
+# Structure                            PGL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     AGL1(11)    
+# Point-stabiliser                     AGL(1,11)    AGL(1,11)    
 # Block-stabiliser                     D8           D8           
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{1}   4^{1}8^{1}   
@@ -173,10 +173,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     PGL2(11)    
+# Structure                            PGL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     AGL1(11)    
+# Point-stabiliser                     AGL(1,11)    AGL(1,11)    
 # Block-stabiliser                     D8           D8           
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{1}   4^{1}8^{1}   
@@ -199,10 +199,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     S12          
+# Structure                            PGL(2,11)    S12          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     S11          
+# Point-stabiliser                     AGL(1,11)    S11          
 # Block-stabiliser                     S3           S9xS3        
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  3^{2}6^{1}   3^{1}9^{1}   
@@ -225,10 +225,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     PGL2(11)    
+# Structure                            PGL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     AGL1(11)    
+# Point-stabiliser                     AGL(1,11)    AGL(1,11)    
 # Block-stabiliser                     S3           S3           
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  6^{2}        6^{2}        
@@ -251,10 +251,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(11)     PGL2(11)    
+# Structure                            PGL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(11)     AGL1(11)    
+# Point-stabiliser                     AGL(1,11)    AGL(1,11)    
 # Block-stabiliser                     2^2          2^2          
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  2^{2}4^{2}   2^{2}4^{2}   

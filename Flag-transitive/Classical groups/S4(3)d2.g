@@ -53,7 +53,7 @@
 # 3   36   540   120  8   24   U4(2).2  xS6                         2^2xS4                       S4(3):2     3      3                  347     276     true             false            true             false                                                                         
 # 4   36   3240  720  8   144  U4(2).2  xS6                         D16                          S4(3):2     3      3                  347     123     true             false            true             false                                                                         
 # 5   40   40    27   27  18   U4(2).2  ((3^3:2^2):3):2):2          (((3^3:2^2):3):2):2          S4(3):2     3      3                  346     346     true             true             true             false                            true       complement of PG(3,3) parameters  
-# 6   40   40    27   27  18   U4(2).2  (((3^2):3):Q8):3):2         ((((3^2):3):Q8):3):2         PSL4(3):2   3      2                  345     345     true             true             true             false                            true       complement of PG(3,3) parameters  
+# 6   40   40    27   27  18   U4(2).2  (((3^2):3):Q8):3):2         ((((3^2):3):Q8):3):2         PSL(4,3):2  3      2                  345     345     true             true             true             false                            true       complement of PG(3,3) parameters  
 # 7   45   45    12   12  3    U4(2).2  ((((2^3):(2^2)):3):2):3):2  (((((2^3):(2^2)):3):2):3):2  S4(3):2     3      3                  344     344     true             true             true             false                            true                                         
 # 8   45   120   32   12  8    U4(2).2  ((((2^3):(2^2)):3):2):3):2  ((S3xS3):2)xS3               S4(3):2     3      3                  344     331     true             false            true             false                                                                         
 # 9   45   1080  288  12  72   U4(2).2  ((((2^3):(2^2)):3):2):3):2  D8xS3                        S4(3):2     3      3                  344     235     true             false            true             false                                                                         
@@ -97,11 +97,11 @@
 # ----------------------------------------------------------------------------
 #                                      G                        Aut(D)        
 # ----------------------------------------------------------------------------
-# Structure                            U4(2).2                  O7(2)        
+# Structure                            U4(2).2                  O7(2)         
 # Rank                                 3                        2             
 # 2-Homogeneous                        false                    true          
 # Point-stabiliser                     xS6                      S8            
-# Block-stabiliser                     ((((2^3):(2^2)):3):2):2  2^6:PSL3(2)  
+# Block-stabiliser                     ((((2^3):(2^2)):3):2):2  2^6:PSL(3,2)  
 # Orbit structure of point-stabiliser  1^{1}15^{1}20^{1}        1^{1}35^{1}   
 # Orbit structure of block-stabiliser  4^{1}8^{1}24^{1}         8^{1}28^{1}   
 # Point-transitive                     true                     true          
@@ -201,11 +201,11 @@
 # -------------------------------------------------------------------------
 #                                      G                     Aut(D)        
 # -------------------------------------------------------------------------
-# Structure                            U4(2).2               PSL4(3):2    
+# Structure                            U4(2).2               PSL(4,3):2    
 # Rank                                 3                     2             
 # 2-Homogeneous                        false                 true          
-# Point-stabiliser                     (((3^2):3):Q8):3):2   3^3:GL3(3)   
-# Block-stabiliser                     ((((3^2):3):Q8):3):2  3^3:GL3(3)   
+# Point-stabiliser                     (((3^2):3):Q8):3):2   3^3:GL(3,3)   
+# Block-stabiliser                     ((((3^2):3):Q8):3):2  3^3:GL(3,3)   
 # Orbit structure of point-stabiliser  1^{1}12^{1}27^{1}     1^{1}39^{1}   
 # Orbit structure of block-stabiliser  1^{1}12^{1}27^{1}     13^{1}27^{1}  
 # Point-transitive                     true                  true          

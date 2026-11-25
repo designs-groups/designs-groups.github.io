@@ -28,212 +28,212 @@
 # -----------
 
 #    Non-isomorphic designs:
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b      r     k   λ     G         Gα        GB                    Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   27  27     13    13  6     3^3:13    13        13                    3^3.13.3  3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 2   27  39     13    9   4     3^3:13    13        3^2                   AGL3(3)   3      2           43     1       2       true             false            true             false                3                                                    
-# 3   27  39     26    18  17    AGL1(27)  26        3^2:2                 AGL3(3)   2      2           69     1       2       true             false            true             true                 2                                                    
-# 4   27  54     26    13  12    AGL1(27)  26        13                    AΓL1(27)  2      2           69     1       3       true             false            true             false                                                                     
-# 5   27  117    13    3   1     3^3:13    13        3                     AGL3(3)   3      2           43     1       3       true             false            true             false                9                                                    
-# 6   27  117    26    6   5     AGL1(27)  26        S3                    AGL1(27)  2      2           69     1       5       true             false            true             false                                                                     
-# 7   27  117    26    6   5     AGL1(27)  26        S3                    AΓL1(27)  2      2           69     1       5       true             false            true             false                                                                     
-# 8   27  117    39    9   12    3^3.13.3  13:3      9                     3^3.13.3  3      3           87     1       9       true             false            true             false                                                                     
-# 9   27  117    104   24  92    ASL3(3)   PSL3(3)   (3x(((3^2):Q8):3)):2  AGL3(3)   2      2           153    1       18      true             false            true             true                 5                                                    
-# 10  27  234    78    9   24    AΓL1(27)  2x(13:3)  9                     AΓL1(27)  2      2           117    1       14      true             false            true             false                                                                     
-# 11  27  351    39    3   3     3^3.13.3  13:3      3                     3^3.13.3  3      3           87     1       11      true             false            true             false                                                                     
-# 12  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                     AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 13  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                     AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 14  27  351    78    6   15    AΓL1(27)  2x(13:3)  S3                    AΓL1(27)  2      2           117    1       16      true             false            true             false                                                                     
-# 15  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                     AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 16  27  351    104   8   28    ASL3(3)   PSL3(3)   3^2:Q8:3:2            AGL3(3)   2      2           153    1       56      true             false            true             false                                                                     
-# 17  27  468    104   6   20    ASL3(3)   PSL3(3)   (3x((3^2):3)):2^2     AGL3(3)   2      2           153    1       67      true             false            true             false                                                                     
-# 18  27  702    78    3   6     AΓL1(27)  2x(13:3)  3                     AΓL1(27)  2      2           117    1       17      true             false            true             false                                                                     
-# 19  27  702    312   12  132   ASL3(3)   PSL3(3)   3^3:D8                AGL3(3)   2      2           153    1       90      true             false            true             false                                                                     
-# 20  27  936    312   9   96    ASL3(3)   PSL3(3)   3^3:3:2               AGL3(3)   2      2           153    1       111     true             false            true             false                                                                     
-# 21  27  2106   312   4   36    ASL3(3)   PSL3(3)   (S3xS3):2             AGL3(3)   2      2           153    1       197     true             false            true             false                                                                     
-# 22  27  2106   702   9   216   ASL3(3)   PSL3(3)   3^2:8                 AGL3(3)   2      2           153    1       200     true             false            true             true                 23                                                   
-# 23  27  2106   1404  18  918   ASL3(3)   PSL3(3)   3^2:8                 AGL3(3)   2      2           153    1       200     true             false            true             true                 22                                                   
-# 24  27  2808   312   3   24    ASL3(3)   PSL3(3)   3^2:6                 AGL3(3)   2      2           153    1       238     true             false            true             false                                                                     
-# 25  27  3159   1872  16  1080  ASL3(3)   PSL3(3)   GL2(3)                AGL3(3)   2      2           153    1       278     true             false            true             false                                                                     
-# 26  27  3888   1872  13  864   ASL3(3)   PSL3(3)   13:3                  ASL3(3)   2      2           153    1       280     true             false            true             false                                                                     
-# 27  27  4212   936   6   180   ASL3(3)   PSL3(3)   S3xS3                 AGL3(3)   2      2           153    1       283     true             false            true             false                                                                     
-# 28  27  4212   1404  9   432   ASL3(3)   PSL3(3)   S3xS3                 AGL3(3)   2      2           153    1       281     true             false            true             true                 30                                                   
-# 29  27  4212   1872  12  792   ASL3(3)   PSL3(3)   S3xS3                 AGL3(3)   2      2           153    1       283     true             false            true             false                                                                     
-# 30  27  4212   2808  18  1836  ASL3(3)   PSL3(3)   S3xS3                 AGL3(3)   2      2           153    1       281     true             false            true             true                 28                                                   
-# 31  27  6318   1404  6   270   ASL3(3)   PSL3(3)   S4                    AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 32  27  6318   1872  8   504   ASL3(3)   PSL3(3)   S4                    AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 33  27  6318   2808  12  1188  ASL3(3)   PSL3(3)   S4                    AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 34  27  7776   3744  13  1728  AGL3(3)   GL3(3)    13:3                  AGL3(3)   2      2           154    1       542     true             false            true             false                                                                     
-# 35  27  12636  1872  4   216   ASL3(3)   PSL3(3)   A4                    AGL3(3)   2      2           153    1       394     true             false            true             false                                                                     
-# 36  27  18954  5616  8   1512  ASL3(3)   PSL3(3)   8                     AGL3(3)   2      2           153    1       419     true             false            true             false                                                                     
-# 37  27  25272  5616  6   1080  ASL3(3)   PSL3(3)   S3                    AGL3(3)   2      2           153    1       426     true             false            true             false                                                                     
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b      r     k   λ     G          Gα        GB                    Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   27  27     13    13  6     3^3:13     13        13                    3^3.13.3   3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
+# 2   27  39     13    9   4     3^3:13     13        3^2                   AGL(3,3)   3      2           43     1       2       true             false            true             false                3                                                    
+# 3   27  39     26    18  17    AGL(1,27)  26        3^2:2                 AGL(3,3)   2      2           69     1       2       true             false            true             true                 2                                                    
+# 4   27  54     26    13  12    AGL(1,27)  26        13                    AΓL(1,27)  2      2           69     1       3       true             false            true             false                                                                     
+# 5   27  117    13    3   1     3^3:13     13        3                     AGL(3,3)   3      2           43     1       3       true             false            true             false                9                                                    
+# 6   27  117    26    6   5     AGL(1,27)  26        S3                    AGL(1,27)  2      2           69     1       5       true             false            true             false                                                                     
+# 7   27  117    26    6   5     AGL(1,27)  26        S3                    AΓL(1,27)  2      2           69     1       5       true             false            true             false                                                                     
+# 8   27  117    39    9   12    3^3.13.3   13:3      9                     3^3.13.3   3      3           87     1       9       true             false            true             false                                                                     
+# 9   27  117    104   24  92    ASL(3,3)   PSL(3,3)  (3x(((3^2):Q8):3)):2  AGL(3,3)   2      2           153    1       18      true             false            true             true                 5                                                    
+# 10  27  234    78    9   24    AΓL(1,27)  2x(13:3)  9                     AΓL(1,27)  2      2           117    1       14      true             false            true             false                                                                     
+# 11  27  351    39    3   3     3^3.13.3   13:3      3                     3^3.13.3   3      3           87     1       11      true             false            true             false                                                                     
+# 12  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                     AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 13  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                     AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 14  27  351    78    6   15    AΓL(1,27)  2x(13:3)  S3                    AΓL(1,27)  2      2           117    1       16      true             false            true             false                                                                     
+# 15  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                     AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 16  27  351    104   8   28    ASL(3,3)   PSL(3,3)  3^2:Q8:3:2            AGL(3,3)   2      2           153    1       56      true             false            true             false                                                                     
+# 17  27  468    104   6   20    ASL(3,3)   PSL(3,3)  (3x((3^2):3)):2^2     AGL(3,3)   2      2           153    1       67      true             false            true             false                                                                     
+# 18  27  702    78    3   6     AΓL(1,27)  2x(13:3)  3                     AΓL(1,27)  2      2           117    1       17      true             false            true             false                                                                     
+# 19  27  702    312   12  132   ASL(3,3)   PSL(3,3)  3^3:D8                AGL(3,3)   2      2           153    1       90      true             false            true             false                                                                     
+# 20  27  936    312   9   96    ASL(3,3)   PSL(3,3)  3^3:3:2               AGL(3,3)   2      2           153    1       111     true             false            true             false                                                                     
+# 21  27  2106   312   4   36    ASL(3,3)   PSL(3,3)  (S3xS3):2             AGL(3,3)   2      2           153    1       197     true             false            true             false                                                                     
+# 22  27  2106   702   9   216   ASL(3,3)   PSL(3,3)  3^2:8                 AGL(3,3)   2      2           153    1       200     true             false            true             true                 23                                                   
+# 23  27  2106   1404  18  918   ASL(3,3)   PSL(3,3)  3^2:8                 AGL(3,3)   2      2           153    1       200     true             false            true             true                 22                                                   
+# 24  27  2808   312   3   24    ASL(3,3)   PSL(3,3)  3^2:6                 AGL(3,3)   2      2           153    1       238     true             false            true             false                                                                     
+# 25  27  3159   1872  16  1080  ASL(3,3)   PSL(3,3)  GL(2,3)               AGL(3,3)   2      2           153    1       278     true             false            true             false                                                                     
+# 26  27  3888   1872  13  864   ASL(3,3)   PSL(3,3)  13:3                  ASL(3,3)   2      2           153    1       280     true             false            true             false                                                                     
+# 27  27  4212   936   6   180   ASL(3,3)   PSL(3,3)  S3xS3                 AGL(3,3)   2      2           153    1       283     true             false            true             false                                                                     
+# 28  27  4212   1404  9   432   ASL(3,3)   PSL(3,3)  S3xS3                 AGL(3,3)   2      2           153    1       281     true             false            true             true                 30                                                   
+# 29  27  4212   1872  12  792   ASL(3,3)   PSL(3,3)  S3xS3                 AGL(3,3)   2      2           153    1       283     true             false            true             false                                                                     
+# 30  27  4212   2808  18  1836  ASL(3,3)   PSL(3,3)  S3xS3                 AGL(3,3)   2      2           153    1       281     true             false            true             true                 28                                                   
+# 31  27  6318   1404  6   270   ASL(3,3)   PSL(3,3)  S4                    AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 32  27  6318   1872  8   504   ASL(3,3)   PSL(3,3)  S4                    AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 33  27  6318   2808  12  1188  ASL(3,3)   PSL(3,3)  S4                    AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 34  27  7776   3744  13  1728  AGL(3,3)   GL(3,3)   13:3                  AGL(3,3)   2      2           154    1       542     true             false            true             false                                                                     
+# 35  27  12636  1872  4   216   ASL(3,3)   PSL(3,3)  A4                    AGL(3,3)   2      2           153    1       394     true             false            true             false                                                                     
+# 36  27  18954  5616  8   1512  ASL(3,3)   PSL(3,3)  8                     AGL(3,3)   2      2           153    1       419     true             false            true             false                                                                     
+# 37  27  25272  5616  6   1080  ASL(3,3)   PSL(3,3)  S3                    AGL(3,3)   2      2           153    1       426     true             false            true             false                                                                     
+# ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    Reduced designs (within each group):
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b      r     k   λ     G         Gα        GB                     Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   27  27     13    13  6     3^3:13    13        13                     3^3.13.3  3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 2   27  39     13    9   4     3^3:13    13        3^2                    AGL3(3)   3      2           43     1       2       true             false            true             false                5                                                    
-# 3   27  117    13    3   1     3^3:13    13        3                      AGL3(3)   3      2           43     1       3       true             false            true             false                29                                                   
-# 4   27  39     13    9   4     AGL1(27)  26        3^2:2                  AGL3(3)   2      2           69     1       2       true             false            true             true                 5                                                    
-# 5   27  39     26    18  17    AGL1(27)  26        3^2:2                  AGL3(3)   2      2           69     1       2       true             false            true             true                 2                                                    
-# 6   27  54     26    13  12    AGL1(27)  26        13                     AΓL1(27)  2      2           69     1       3       true             false            true             false                                                                     
-# 7   27  117    13    3   1     AGL1(27)  26        S3                     AGL3(3)   2      2           69     1       5       true             false            true             false                29                                                   
-# 8   27  117    26    6   5     AGL1(27)  26        S3                     AGL1(27)  2      2           69     1       5       true             false            true             false                                                                     
-# 9   27  117    26    6   5     AGL1(27)  26        S3                     AΓL1(27)  2      2           69     1       5       true             false            true             false                                                                     
-# 10  27  27     13    13  6     3^3.13.3  13:3      13:3                   3^3.13.3  3      3           87     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 11  27  39     13    9   4     3^3.13.3  13:3      3^2:3                  AGL3(3)   3      2           87     1       3       true             false            true             false                5                                                    
-# 12  27  117    13    3   1     3^3.13.3  13:3      3^2                    AGL3(3)   3      2           87     1       8       true             false            true             false                29                                                   
-# 13  27  117    39    9   12    3^3.13.3  13:3      9                      3^3.13.3  3      3           87     1       9       true             false            true             false                                                                     
-# 14  27  351    39    3   3     3^3.13.3  13:3      3                      3^3.13.3  3      3           87     1       11      true             false            true             false                                                                     
-# 15  27  39     13    9   4     AΓL1(27)  2x(13:3)  3^2:6                  AGL3(3)   2      2           117    1       3       true             false            true             true                 5                                                    
-# 16  27  39     26    18  17    AΓL1(27)  2x(13:3)  3^2:6                  AGL3(3)   2      2           117    1       3       true             false            true             true                 2                                                    
-# 17  27  54     26    13  12    AΓL1(27)  2x(13:3)  13:3                   AΓL1(27)  2      2           117    1       4       true             false            true             false                                                                     
-# 18  27  117    13    3   1     AΓL1(27)  2x(13:3)  3xS3                   AGL3(3)   2      2           117    1       10      true             false            true             false                29                                                   
-# 19  27  117    26    6   5     AΓL1(27)  2x(13:3)  3xS3                   AΓL1(27)  2      2           117    1       10      true             false            true             false                                                                     
-# 20  27  234    78    9   24    AΓL1(27)  2x(13:3)  9                      AΓL1(27)  2      2           117    1       14      true             false            true             false                                                                     
-# 21  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                      AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 22  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                      AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 23  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                      AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 24  27  351    78    6   15    AΓL1(27)  2x(13:3)  S3                     AΓL1(27)  2      2           117    1       16      true             false            true             false                                                                     
-# 25  27  702    78    3   6     AΓL1(27)  2x(13:3)  3                      AΓL1(27)  2      2           117    1       17      true             false            true             false                                                                     
-# 26  27  39     13    9   4     ASL3(3)   PSL3(3)   3^4:Q8:3:2             AGL3(3)   2      2           153    1       4       true             false            true             true                 5                                                    
-# 27  27  39     26    18  17    ASL3(3)   PSL3(3)   3^4:Q8:3:2             AGL3(3)   2      2           153    1       4       true             false            true             true                 2                                                    
-# 28  27  117    13    3   1     ASL3(3)   PSL3(3)   (3x(((3^2):Q8):3)):2   AGL3(3)   2      2           153    1       18      true             false            true             true                 29                                                   
-# 29  27  117    104   24  92    ASL3(3)   PSL3(3)   (3x(((3^2):Q8):3)):2   AGL3(3)   2      2           153    1       18      true             false            true             true                 3                                                    
-# 30  27  351    104   8   28    ASL3(3)   PSL3(3)   3^2:Q8:3:2             AGL3(3)   2      2           153    1       56      true             false            true             false                                                                     
-# 31  27  468    104   6   20    ASL3(3)   PSL3(3)   (3x((3^2):3)):2^2      AGL3(3)   2      2           153    1       67      true             false            true             false                                                                     
-# 32  27  702    312   12  132   ASL3(3)   PSL3(3)   3^3:D8                 AGL3(3)   2      2           153    1       90      true             false            true             false                                                                     
-# 33  27  936    312   9   96    ASL3(3)   PSL3(3)   3^3:3:2                AGL3(3)   2      2           153    1       111     true             false            true             false                                                                     
-# 34  27  2106   312   4   36    ASL3(3)   PSL3(3)   (S3xS3):2              AGL3(3)   2      2           153    1       197     true             false            true             false                                                                     
-# 35  27  2106   702   9   216   ASL3(3)   PSL3(3)   3^2:8                  AGL3(3)   2      2           153    1       200     true             false            true             true                 36                                                   
-# 36  27  2106   1404  18  918   ASL3(3)   PSL3(3)   3^2:8                  AGL3(3)   2      2           153    1       200     true             false            true             true                 35                                                   
-# 37  27  2808   312   3   24    ASL3(3)   PSL3(3)   3^2:6                  AGL3(3)   2      2           153    1       238     true             false            true             false                                                                     
-# 38  27  3159   1872  16  1080  ASL3(3)   PSL3(3)   GL2(3)                 AGL3(3)   2      2           153    1       278     true             false            true             false                                                                     
-# 39  27  3888   1872  13  864   ASL3(3)   PSL3(3)   13:3                   ASL3(3)   2      2           153    1       280     true             false            true             false                                                                     
-# 40  27  4212   936   6   180   ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       283     true             false            true             false                                                                     
-# 41  27  4212   1404  9   432   ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       281     true             false            true             true                 43                                                   
-# 42  27  4212   1872  12  792   ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       283     true             false            true             false                                                                     
-# 43  27  4212   2808  18  1836  ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       281     true             false            true             true                 41                                                   
-# 44  27  6318   1404  6   270   ASL3(3)   PSL3(3)   S4                     AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 45  27  6318   1872  8   504   ASL3(3)   PSL3(3)   S4                     AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 46  27  6318   2808  12  1188  ASL3(3)   PSL3(3)   S4                     AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 47  27  12636  1872  4   216   ASL3(3)   PSL3(3)   A4                     AGL3(3)   2      2           153    1       394     true             false            true             false                                                                     
-# 48  27  18954  5616  8   1512  ASL3(3)   PSL3(3)   8                      AGL3(3)   2      2           153    1       419     true             false            true             false                                                                     
-# 49  27  25272  5616  6   1080  ASL3(3)   PSL3(3)   S3                     AGL3(3)   2      2           153    1       426     true             false            true             false                                                                     
-# 50  27  39     13    9   4     AGL3(3)   GL3(3)    3^4:Q8:3:2:2           AGL3(3)   2      2           154    1       2       true             false            true             true                 5                                                    
-# 51  27  39     26    18  17    AGL3(3)   GL3(3)    3^4:Q8:3:2:2           AGL3(3)   2      2           154    1       2       true             false            true             true                 2                                                    
-# 52  27  117    13    3   1     AGL3(3)   GL3(3)    ((((3^2):Q8):3):2)xS3  AGL3(3)   2      2           154    1       24      true             false            true             true                 29                                                   
-# 53  27  117    104   24  92    AGL3(3)   GL3(3)    ((((3^2):Q8):3):2)xS3  AGL3(3)   2      2           154    1       24      true             false            true             true                 3                                                    
-# 54  27  351    104   8   28    AGL3(3)   GL3(3)    2x((((3^2):Q8):3):2)   AGL3(3)   2      2           154    1       87      true             false            true             false                                                                     
-# 55  27  468    104   6   20    AGL3(3)   GL3(3)    (((3^2):3):2^2)xS3     AGL3(3)   2      2           154    1       95      true             false            true             false                                                                     
-# 56  27  702    312   12  132   AGL3(3)   GL3(3)    ((S3xS3):2)xS3         AGL3(3)   2      2           154    1       151     true             false            true             false                                                                     
-# 57  27  936    312   9   96    AGL3(3)   GL3(3)    3^3:3:2^2              AGL3(3)   2      2           154    1       166     true             false            true             false                                                                     
-# 58  27  2106   312   4   36    AGL3(3)   GL3(3)    2x((S3xS3):2)          AGL3(3)   2      2           154    1       317     true             false            true             false                                                                     
-# 59  27  2106   702   9   216   AGL3(3)   GL3(3)    3^2:QD16               AGL3(3)   2      2           154    1       304     true             false            true             true                 36                                                   
-# 60  27  2106   1404  18  918   AGL3(3)   GL3(3)    3^2:QD16               AGL3(3)   2      2           154    1       304     true             false            true             true                 35                                                   
-# 61  27  2808   312   3   24    AGL3(3)   GL3(3)    3^2:3:2^2              AGL3(3)   2      2           154    1       331     true             false            true             false                                                                     
-# 62  27  3159   1872  16  1080  AGL3(3)   GL3(3)    2xGL2(3)               AGL3(3)   2      2           154    1       390     true             false            true             false                                                                     
-# 63  27  4212   936   6   180   AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       421     true             false            true             false                                                                     
-# 64  27  4212   1404  9   432   AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       410     true             false            true             true                 43                                                   
-# 65  27  4212   1872  12  792   AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       421     true             false            true             false                                                                     
-# 66  27  4212   2808  18  1836  AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       410     true             false            true             true                 41                                                   
-# 67  27  6318   1404  6   270   AGL3(3)   GL3(3)    2xS4                   AGL3(3)   2      2           154    1       534     true             false            true             false                                                                     
-# 68  27  6318   1872  8   504   AGL3(3)   GL3(3)    2xS4                   AGL3(3)   2      2           154    1       534     true             false            true             false                                                                     
-# 69  27  6318   2808  12  1188  AGL3(3)   GL3(3)    2xS4                   AGL3(3)   2      2           154    1       534     true             false            true             false                                                                     
-# 70  27  7776   3744  13  1728  AGL3(3)   GL3(3)    13:3                   AGL3(3)   2      2           154    1       542     true             false            true             false                                                                     
-# 71  27  12636  1872  4   216   AGL3(3)   GL3(3)    S4                     AGL3(3)   2      2           154    1       629     true             false            true             false                                                                     
-# 72  27  18954  5616  8   1512  AGL3(3)   GL3(3)    QD16                   AGL3(3)   2      2           154    1       705     true             false            true             false                                                                     
-# 73  27  25272  5616  6   1080  AGL3(3)   GL3(3)    D12                    AGL3(3)   2      2           154    1       713     true             false            true             false                                                                     
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b      r     k   λ     G          Gα        GB                     Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   27  27     13    13  6     3^3:13     13        13                     3^3.13.3   3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
+# 2   27  39     13    9   4     3^3:13     13        3^2                    AGL(3,3)   3      2           43     1       2       true             false            true             false                5                                                    
+# 3   27  117    13    3   1     3^3:13     13        3                      AGL(3,3)   3      2           43     1       3       true             false            true             false                29                                                   
+# 4   27  39     13    9   4     AGL(1,27)  26        3^2:2                  AGL(3,3)   2      2           69     1       2       true             false            true             true                 5                                                    
+# 5   27  39     26    18  17    AGL(1,27)  26        3^2:2                  AGL(3,3)   2      2           69     1       2       true             false            true             true                 2                                                    
+# 6   27  54     26    13  12    AGL(1,27)  26        13                     AΓL(1,27)  2      2           69     1       3       true             false            true             false                                                                     
+# 7   27  117    13    3   1     AGL(1,27)  26        S3                     AGL(3,3)   2      2           69     1       5       true             false            true             false                29                                                   
+# 8   27  117    26    6   5     AGL(1,27)  26        S3                     AGL(1,27)  2      2           69     1       5       true             false            true             false                                                                     
+# 9   27  117    26    6   5     AGL(1,27)  26        S3                     AΓL(1,27)  2      2           69     1       5       true             false            true             false                                                                     
+# 10  27  27     13    13  6     3^3.13.3   13:3      13:3                   3^3.13.3   3      3           87     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
+# 11  27  39     13    9   4     3^3.13.3   13:3      3^2:3                  AGL(3,3)   3      2           87     1       3       true             false            true             false                5                                                    
+# 12  27  117    13    3   1     3^3.13.3   13:3      3^2                    AGL(3,3)   3      2           87     1       8       true             false            true             false                29                                                   
+# 13  27  117    39    9   12    3^3.13.3   13:3      9                      3^3.13.3   3      3           87     1       9       true             false            true             false                                                                     
+# 14  27  351    39    3   3     3^3.13.3   13:3      3                      3^3.13.3   3      3           87     1       11      true             false            true             false                                                                     
+# 15  27  39     13    9   4     AΓL(1,27)  2x(13:3)  3^2:6                  AGL(3,3)   2      2           117    1       3       true             false            true             true                 5                                                    
+# 16  27  39     26    18  17    AΓL(1,27)  2x(13:3)  3^2:6                  AGL(3,3)   2      2           117    1       3       true             false            true             true                 2                                                    
+# 17  27  54     26    13  12    AΓL(1,27)  2x(13:3)  13:3                   AΓL(1,27)  2      2           117    1       4       true             false            true             false                                                                     
+# 18  27  117    13    3   1     AΓL(1,27)  2x(13:3)  3xS3                   AGL(3,3)   2      2           117    1       10      true             false            true             false                29                                                   
+# 19  27  117    26    6   5     AΓL(1,27)  2x(13:3)  3xS3                   AΓL(1,27)  2      2           117    1       10      true             false            true             false                                                                     
+# 20  27  234    78    9   24    AΓL(1,27)  2x(13:3)  9                      AΓL(1,27)  2      2           117    1       14      true             false            true             false                                                                     
+# 21  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                      AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 22  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                      AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 23  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                      AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 24  27  351    78    6   15    AΓL(1,27)  2x(13:3)  S3                     AΓL(1,27)  2      2           117    1       16      true             false            true             false                                                                     
+# 25  27  702    78    3   6     AΓL(1,27)  2x(13:3)  3                      AΓL(1,27)  2      2           117    1       17      true             false            true             false                                                                     
+# 26  27  39     13    9   4     ASL(3,3)   PSL(3,3)  3^4:Q8:3:2             AGL(3,3)   2      2           153    1       4       true             false            true             true                 5                                                    
+# 27  27  39     26    18  17    ASL(3,3)   PSL(3,3)  3^4:Q8:3:2             AGL(3,3)   2      2           153    1       4       true             false            true             true                 2                                                    
+# 28  27  117    13    3   1     ASL(3,3)   PSL(3,3)  (3x(((3^2):Q8):3)):2   AGL(3,3)   2      2           153    1       18      true             false            true             true                 29                                                   
+# 29  27  117    104   24  92    ASL(3,3)   PSL(3,3)  (3x(((3^2):Q8):3)):2   AGL(3,3)   2      2           153    1       18      true             false            true             true                 3                                                    
+# 30  27  351    104   8   28    ASL(3,3)   PSL(3,3)  3^2:Q8:3:2             AGL(3,3)   2      2           153    1       56      true             false            true             false                                                                     
+# 31  27  468    104   6   20    ASL(3,3)   PSL(3,3)  (3x((3^2):3)):2^2      AGL(3,3)   2      2           153    1       67      true             false            true             false                                                                     
+# 32  27  702    312   12  132   ASL(3,3)   PSL(3,3)  3^3:D8                 AGL(3,3)   2      2           153    1       90      true             false            true             false                                                                     
+# 33  27  936    312   9   96    ASL(3,3)   PSL(3,3)  3^3:3:2                AGL(3,3)   2      2           153    1       111     true             false            true             false                                                                     
+# 34  27  2106   312   4   36    ASL(3,3)   PSL(3,3)  (S3xS3):2              AGL(3,3)   2      2           153    1       197     true             false            true             false                                                                     
+# 35  27  2106   702   9   216   ASL(3,3)   PSL(3,3)  3^2:8                  AGL(3,3)   2      2           153    1       200     true             false            true             true                 36                                                   
+# 36  27  2106   1404  18  918   ASL(3,3)   PSL(3,3)  3^2:8                  AGL(3,3)   2      2           153    1       200     true             false            true             true                 35                                                   
+# 37  27  2808   312   3   24    ASL(3,3)   PSL(3,3)  3^2:6                  AGL(3,3)   2      2           153    1       238     true             false            true             false                                                                     
+# 38  27  3159   1872  16  1080  ASL(3,3)   PSL(3,3)  GL(2,3)                AGL(3,3)   2      2           153    1       278     true             false            true             false                                                                     
+# 39  27  3888   1872  13  864   ASL(3,3)   PSL(3,3)  13:3                   ASL(3,3)   2      2           153    1       280     true             false            true             false                                                                     
+# 40  27  4212   936   6   180   ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       283     true             false            true             false                                                                     
+# 41  27  4212   1404  9   432   ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       281     true             false            true             true                 43                                                   
+# 42  27  4212   1872  12  792   ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       283     true             false            true             false                                                                     
+# 43  27  4212   2808  18  1836  ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       281     true             false            true             true                 41                                                   
+# 44  27  6318   1404  6   270   ASL(3,3)   PSL(3,3)  S4                     AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 45  27  6318   1872  8   504   ASL(3,3)   PSL(3,3)  S4                     AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 46  27  6318   2808  12  1188  ASL(3,3)   PSL(3,3)  S4                     AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 47  27  12636  1872  4   216   ASL(3,3)   PSL(3,3)  A4                     AGL(3,3)   2      2           153    1       394     true             false            true             false                                                                     
+# 48  27  18954  5616  8   1512  ASL(3,3)   PSL(3,3)  8                      AGL(3,3)   2      2           153    1       419     true             false            true             false                                                                     
+# 49  27  25272  5616  6   1080  ASL(3,3)   PSL(3,3)  S3                     AGL(3,3)   2      2           153    1       426     true             false            true             false                                                                     
+# 50  27  39     13    9   4     AGL(3,3)   GL(3,3)   3^4:Q8:3:2:2           AGL(3,3)   2      2           154    1       2       true             false            true             true                 5                                                    
+# 51  27  39     26    18  17    AGL(3,3)   GL(3,3)   3^4:Q8:3:2:2           AGL(3,3)   2      2           154    1       2       true             false            true             true                 2                                                    
+# 52  27  117    13    3   1     AGL(3,3)   GL(3,3)   ((((3^2):Q8):3):2)xS3  AGL(3,3)   2      2           154    1       24      true             false            true             true                 29                                                   
+# 53  27  117    104   24  92    AGL(3,3)   GL(3,3)   ((((3^2):Q8):3):2)xS3  AGL(3,3)   2      2           154    1       24      true             false            true             true                 3                                                    
+# 54  27  351    104   8   28    AGL(3,3)   GL(3,3)   2x((((3^2):Q8):3):2)   AGL(3,3)   2      2           154    1       87      true             false            true             false                                                                     
+# 55  27  468    104   6   20    AGL(3,3)   GL(3,3)   (((3^2):3):2^2)xS3     AGL(3,3)   2      2           154    1       95      true             false            true             false                                                                     
+# 56  27  702    312   12  132   AGL(3,3)   GL(3,3)   ((S3xS3):2)xS3         AGL(3,3)   2      2           154    1       151     true             false            true             false                                                                     
+# 57  27  936    312   9   96    AGL(3,3)   GL(3,3)   3^3:3:2^2              AGL(3,3)   2      2           154    1       166     true             false            true             false                                                                     
+# 58  27  2106   312   4   36    AGL(3,3)   GL(3,3)   2x((S3xS3):2)          AGL(3,3)   2      2           154    1       317     true             false            true             false                                                                     
+# 59  27  2106   702   9   216   AGL(3,3)   GL(3,3)   3^2:QD16               AGL(3,3)   2      2           154    1       304     true             false            true             true                 36                                                   
+# 60  27  2106   1404  18  918   AGL(3,3)   GL(3,3)   3^2:QD16               AGL(3,3)   2      2           154    1       304     true             false            true             true                 35                                                   
+# 61  27  2808   312   3   24    AGL(3,3)   GL(3,3)   3^2:3:2^2              AGL(3,3)   2      2           154    1       331     true             false            true             false                                                                     
+# 62  27  3159   1872  16  1080  AGL(3,3)   GL(3,3)   2xGL(2,3)              AGL(3,3)   2      2           154    1       390     true             false            true             false                                                                     
+# 63  27  4212   936   6   180   AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       421     true             false            true             false                                                                     
+# 64  27  4212   1404  9   432   AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       410     true             false            true             true                 43                                                   
+# 65  27  4212   1872  12  792   AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       421     true             false            true             false                                                                     
+# 66  27  4212   2808  18  1836  AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       410     true             false            true             true                 41                                                   
+# 67  27  6318   1404  6   270   AGL(3,3)   GL(3,3)   2xS4                   AGL(3,3)   2      2           154    1       534     true             false            true             false                                                                     
+# 68  27  6318   1872  8   504   AGL(3,3)   GL(3,3)   2xS4                   AGL(3,3)   2      2           154    1       534     true             false            true             false                                                                     
+# 69  27  6318   2808  12  1188  AGL(3,3)   GL(3,3)   2xS4                   AGL(3,3)   2      2           154    1       534     true             false            true             false                                                                     
+# 70  27  7776   3744  13  1728  AGL(3,3)   GL(3,3)   13:3                   AGL(3,3)   2      2           154    1       542     true             false            true             false                                                                     
+# 71  27  12636  1872  4   216   AGL(3,3)   GL(3,3)   S4                     AGL(3,3)   2      2           154    1       629     true             false            true             false                                                                     
+# 72  27  18954  5616  8   1512  AGL(3,3)   GL(3,3)   QD16                   AGL(3,3)   2      2           154    1       705     true             false            true             false                                                                     
+# 73  27  25272  5616  6   1080  AGL(3,3)   GL(3,3)   D12                    AGL(3,3)   2      2           154    1       713     true             false            true             false                                                                     
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b      r     k   λ     G         Gα        GB                     Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   27  27     13    13  6     3^3:13    13        13                     3^3.13.3  3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 2   27  27     13    13  6     3^3:13    43        1                      1         3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 3   27  39     13    9   4     3^3:13    13        3^2                    AGL3(3)   3      2           43     1       2       true             false            true             false                6                                                    
-# 4   27  117    13    3   1     3^3:13    13        3                      AGL3(3)   3      2           43     1       3       true             false            true             false                35                                                   
-# 5   27  39     13    9   4     AGL1(27)  26        3^2:2                  AGL3(3)   2      2           69     1       2       true             false            true             true                 6                                                    
-# 6   27  39     26    18  17    AGL1(27)  26        3^2:2                  AGL3(3)   2      2           69     1       2       true             false            true             true                 3                                                    
-# 7   27  54     26    13  12    AGL1(27)  26        13                     AΓL1(27)  2      2           69     1       3       true             false            true             false                                                                     
-# 8   27  117    13    3   1     AGL1(27)  26        S3                     AGL3(3)   2      2           69     1       5       true             false            true             false                35                                                   
-# 9   27  117    26    6   5     AGL1(27)  69        1                      5         2      2           69     1       5       true             false            true             false                                                                     
-# 10  27  117    26    6   5     AGL1(27)  26        S3                     AGL1(27)  2      2           69     1       5       true             false            true             false                                                                     
-# 11  27  117    26    6   5     AGL1(27)  26        S3                     AΓL1(27)  2      2           69     1       5       true             false            true             false                                                                     
-# 12  27  117    26    6   5     AGL1(27)  69        1                      5         2      2           69     1       5       true             false            true             false                                                                     
-# 13  27  27     13    13  6     3^3.13.3  87        1                      1         3      3           87     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 14  27  27     13    13  6     3^3.13.3  13:3      13:3                   3^3.13.3  3      3           87     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
-# 15  27  39     13    9   4     3^3.13.3  13:3      3^2:3                  AGL3(3)   3      2           87     1       3       true             false            true             false                6                                                    
-# 16  27  117    13    3   1     3^3.13.3  13:3      3^2                    AGL3(3)   3      2           87     1       8       true             false            true             false                35                                                   
-# 17  27  117    39    9   12    3^3.13.3  [         ]                      87        3      3           87     1       10      true             false            true             false                                                                     
-# 18  27  117    39    9   12    3^3.13.3  13:3      9                      3^3.13.3  3      3           87     1       9       true             false            true             false                                                                     
-# 19  27  351    39    3   3     3^3.13.3  87        1                      11        3      3           87     1       11      true             false            true             false                                                                     
-# 20  27  351    39    3   3     3^3.13.3  13:3      3                      3^3.13.3  3      3           87     1       11      true             false            true             false                                                                     
-# 21  27  39     13    9   4     AΓL1(27)  2x(13:3)  3^2:6                  AGL3(3)   2      2           117    1       3       true             false            true             true                 6                                                    
-# 22  27  39     26    18  17    AΓL1(27)  2x(13:3)  3^2:6                  AGL3(3)   2      2           117    1       3       true             false            true             true                 3                                                    
-# 23  27  54     26    13  12    AΓL1(27)  2x(13:3)  13:3                   AΓL1(27)  2      2           117    1       4       true             false            true             false                                                                     
-# 24  27  117    13    3   1     AΓL1(27)  2x(13:3)  3xS3                   AGL3(3)   2      2           117    1       10      true             false            true             false                35                                                   
-# 25  27  117    26    6   5     AΓL1(27)  2x(13:3)  3xS3                   AΓL1(27)  2      2           117    1       10      true             false            true             false                                                                     
-# 26  27  234    78    9   24    AΓL1(27)  2x(13:3)  9                      AΓL1(27)  2      2           117    1       14      true             false            true             false                                                                     
-# 27  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                      AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 28  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                      AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 29  27  351    78    6   15    AΓL1(27)  2x(13:3)  S3                     AΓL1(27)  2      2           117    1       16      true             false            true             false                                                                     
-# 30  27  351    78    6   15    AΓL1(27)  2x(13:3)  6                      AΓL1(27)  2      2           117    1       15      true             false            true             false                                                                     
-# 31  27  702    78    3   6     AΓL1(27)  2x(13:3)  3                      AΓL1(27)  2      2           117    1       17      true             false            true             false                                                                     
-# 32  27  39     13    9   4     ASL3(3)   PSL3(3)   3^4:Q8:3:2             AGL3(3)   2      2           153    1       4       true             false            true             true                 6                                                    
-# 33  27  39     26    18  17    ASL3(3)   PSL3(3)   3^4:Q8:3:2             AGL3(3)   2      2           153    1       4       true             false            true             true                 3                                                    
-# 34  27  117    13    3   1     ASL3(3)   PSL3(3)   (3x(((3^2):Q8):3)):2   AGL3(3)   2      2           153    1       18      true             false            true             true                 35                                                   
-# 35  27  117    104   24  92    ASL3(3)   PSL3(3)   (3x(((3^2):Q8):3)):2   AGL3(3)   2      2           153    1       18      true             false            true             true                 4                                                    
-# 36  27  351    104   8   28    ASL3(3)   PSL3(3)   3^2:Q8:3:2             AGL3(3)   2      2           153    1       56      true             false            true             false                                                                     
-# 37  27  468    104   6   20    ASL3(3)   PSL3(3)   (3x((3^2):3)):2^2      AGL3(3)   2      2           153    1       67      true             false            true             false                                                                     
-# 38  27  702    312   12  132   ASL3(3)   PSL3(3)   3^3:D8                 AGL3(3)   2      2           153    1       90      true             false            true             false                                                                     
-# 39  27  936    312   9   96    ASL3(3)   PSL3(3)   3^3:3:2                AGL3(3)   2      2           153    1       111     true             false            true             false                                                                     
-# 40  27  2106   312   4   36    ASL3(3)   PSL3(3)   (S3xS3):2              AGL3(3)   2      2           153    1       197     true             false            true             false                                                                     
-# 41  27  2106   702   9   216   ASL3(3)   PSL3(3)   3^2:8                  AGL3(3)   2      2           153    1       200     true             false            true             true                 42                                                   
-# 42  27  2106   1404  18  918   ASL3(3)   PSL3(3)   3^2:8                  AGL3(3)   2      2           153    1       200     true             false            true             true                 41                                                   
-# 43  27  2808   312   3   24    ASL3(3)   PSL3(3)   3^2:6                  AGL3(3)   2      2           153    1       238     true             false            true             false                                                                     
-# 44  27  3159   1872  16  1080  ASL3(3)   PSL3(3)   GL2(3)                 AGL3(3)   2      2           153    1       278     true             false            true             false                                                                     
-# 45  27  3888   1872  13  864   ASL3(3)   153       1                      280       2      2           153    1       280     true             false            true             false                                                                     
-# 46  27  3888   1872  13  864   ASL3(3)   PSL3(3)   13:3                   ASL3(3)   2      2           153    1       280     true             false            true             false                                                                     
-# 47  27  4212   936   6   180   ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       283     true             false            true             false                                                                     
-# 48  27  4212   1404  9   432   ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       281     true             false            true             true                 50                                                   
-# 49  27  4212   1872  12  792   ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       283     true             false            true             false                                                                     
-# 50  27  4212   2808  18  1836  ASL3(3)   PSL3(3)   S3xS3                  AGL3(3)   2      2           153    1       281     true             false            true             true                 48                                                   
-# 51  27  6318   1404  6   270   ASL3(3)   PSL3(3)   S4                     AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 52  27  6318   1872  8   504   ASL3(3)   PSL3(3)   S4                     AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 53  27  6318   2808  12  1188  ASL3(3)   PSL3(3)   S4                     AGL3(3)   2      2           153    1       344     true             false            true             false                                                                     
-# 54  27  12636  1872  4   216   ASL3(3)   PSL3(3)   A4                     AGL3(3)   2      2           153    1       394     true             false            true             false                                                                     
-# 55  27  18954  5616  8   1512  ASL3(3)   PSL3(3)   8                      AGL3(3)   2      2           153    1       419     true             false            true             false                                                                     
-# 56  27  25272  5616  6   1080  ASL3(3)   PSL3(3)   S3                     AGL3(3)   2      2           153    1       426     true             false            true             false                                                                     
-# 57  27  39     13    9   4     AGL3(3)   GL3(3)    3^4:Q8:3:2:2           AGL3(3)   2      2           154    1       2       true             false            true             true                 6                                                    
-# 58  27  39     26    18  17    AGL3(3)   GL3(3)    3^4:Q8:3:2:2           AGL3(3)   2      2           154    1       2       true             false            true             true                 3                                                    
-# 59  27  117    13    3   1     AGL3(3)   GL3(3)    ((((3^2):Q8):3):2)xS3  AGL3(3)   2      2           154    1       24      true             false            true             true                 35                                                   
-# 60  27  117    104   24  92    AGL3(3)   GL3(3)    ((((3^2):Q8):3):2)xS3  AGL3(3)   2      2           154    1       24      true             false            true             true                 4                                                    
-# 61  27  351    104   8   28    AGL3(3)   GL3(3)    2x((((3^2):Q8):3):2)   AGL3(3)   2      2           154    1       87      true             false            true             false                                                                     
-# 62  27  468    104   6   20    AGL3(3)   GL3(3)    (((3^2):3):2^2)xS3     AGL3(3)   2      2           154    1       95      true             false            true             false                                                                     
-# 63  27  702    312   12  132   AGL3(3)   GL3(3)    ((S3xS3):2)xS3         AGL3(3)   2      2           154    1       151     true             false            true             false                                                                     
-# 64  27  936    312   9   96    AGL3(3)   GL3(3)    3^3:3:2^2              AGL3(3)   2      2           154    1       166     true             false            true             false                                                                     
-# 65  27  2106   312   4   36    AGL3(3)   GL3(3)    2x((S3xS3):2)          AGL3(3)   2      2           154    1       317     true             false            true             false                                                                     
-# 66  27  2106   702   9   216   AGL3(3)   GL3(3)    3^2:QD16               AGL3(3)   2      2           154    1       304     true             false            true             true                 42                                                   
-# 67  27  2106   1404  18  918   AGL3(3)   GL3(3)    3^2:QD16               AGL3(3)   2      2           154    1       304     true             false            true             true                 41                                                   
-# 68  27  2808   312   3   24    AGL3(3)   GL3(3)    3^2:3:2^2              AGL3(3)   2      2           154    1       331     true             false            true             false                                                                     
-# 69  27  3159   1872  16  1080  AGL3(3)   GL3(3)    2xGL2(3)               AGL3(3)   2      2           154    1       390     true             false            true             false                                                                     
-# 70  27  4212   936   6   180   AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       421     true             false            true             false                                                                     
-# 71  27  4212   1404  9   432   AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       410     true             false            true             true                 50                                                   
-# 72  27  4212   1872  12  792   AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       421     true             false            true             false                                                                     
-# 73  27  4212   2808  18  1836  AGL3(3)   GL3(3)    (S3xS3):2              AGL3(3)   2      2           154    1       410     true             false            true             true                 48                                                   
-# 74  27  6318   1404  6   270   AGL3(3)   GL3(3)    2xS4                   AGL3(3)   2      2           154    1       534     true             false            true             false                                                                     
-# 75  27  6318   1872  8   504   AGL3(3)   GL3(3)    2xS4                   AGL3(3)   2      2           154    1       534     true             false            true             false                                                                     
-# 76  27  6318   2808  12  1188  AGL3(3)   GL3(3)    2xS4                   AGL3(3)   2      2           154    1       534     true             false            true             false                                                                     
-# 77  27  7776   3744  13  1728  AGL3(3)   GL3(3)    13:3                   AGL3(3)   2      2           154    1       542     true             false            true             false                                                                     
-# 78  27  12636  1872  4   216   AGL3(3)   GL3(3)    S4                     AGL3(3)   2      2           154    1       629     true             false            true             false                                                                     
-# 79  27  18954  5616  8   1512  AGL3(3)   GL3(3)    QD16                   AGL3(3)   2      2           154    1       705     true             false            true             false                                                                     
-# 80  27  25272  5616  6   1080  AGL3(3)   GL3(3)    D12                    AGL3(3)   2      2           154    1       713     true             false            true             false                                                                     
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b      r     k   λ     G          Gα        GB                     Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                      
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   27  27     13    13  6     3^3:13     13        13                     3^3.13.3   3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
+# 2   27  27     13    13  6     3^3:13     43        1                      1          3      3           43     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
+# 3   27  39     13    9   4     3^3:13     13        3^2                    AGL(3,3)   3      2           43     1       2       true             false            true             false                6                                                    
+# 4   27  117    13    3   1     3^3:13     13        3                      AGL(3,3)   3      2           43     1       3       true             false            true             false                35                                                   
+# 5   27  39     13    9   4     AGL(1,27)  26        3^2:2                  AGL(3,3)   2      2           69     1       2       true             false            true             true                 6                                                    
+# 6   27  39     26    18  17    AGL(1,27)  26        3^2:2                  AGL(3,3)   2      2           69     1       2       true             false            true             true                 3                                                    
+# 7   27  54     26    13  12    AGL(1,27)  26        13                     AΓL(1,27)  2      2           69     1       3       true             false            true             false                                                                     
+# 8   27  117    13    3   1     AGL(1,27)  26        S3                     AGL(3,3)   2      2           69     1       5       true             false            true             false                35                                                   
+# 9   27  117    26    6   5     AGL(1,27)  69        1                      5          2      2           69     1       5       true             false            true             false                                                                     
+# 10  27  117    26    6   5     AGL(1,27)  26        S3                     AGL(1,27)  2      2           69     1       5       true             false            true             false                                                                     
+# 11  27  117    26    6   5     AGL(1,27)  26        S3                     AΓL(1,27)  2      2           69     1       5       true             false            true             false                                                                     
+# 12  27  117    26    6   5     AGL(1,27)  69        1                      5          2      2           69     1       5       true             false            true             false                                                                     
+# 13  27  27     13    13  6     3^3.13.3   87        1                      1          3      3           87     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
+# 14  27  27     13    13  6     3^3.13.3   13:3      13:3                   3^3.13.3   3      3           87     1       1       true             true             true             false                            true       Hadamard or Paley parameters  
+# 15  27  39     13    9   4     3^3.13.3   13:3      3^2:3                  AGL(3,3)   3      2           87     1       3       true             false            true             false                6                                                    
+# 16  27  117    13    3   1     3^3.13.3   13:3      3^2                    AGL(3,3)   3      2           87     1       8       true             false            true             false                35                                                   
+# 17  27  117    39    9   12    3^3.13.3   [         ]                      87         3      3           87     1       10      true             false            true             false                                                                     
+# 18  27  117    39    9   12    3^3.13.3   13:3      9                      3^3.13.3   3      3           87     1       9       true             false            true             false                                                                     
+# 19  27  351    39    3   3     3^3.13.3   87        1                      11         3      3           87     1       11      true             false            true             false                                                                     
+# 20  27  351    39    3   3     3^3.13.3   13:3      3                      3^3.13.3   3      3           87     1       11      true             false            true             false                                                                     
+# 21  27  39     13    9   4     AΓL(1,27)  2x(13:3)  3^2:6                  AGL(3,3)   2      2           117    1       3       true             false            true             true                 6                                                    
+# 22  27  39     26    18  17    AΓL(1,27)  2x(13:3)  3^2:6                  AGL(3,3)   2      2           117    1       3       true             false            true             true                 3                                                    
+# 23  27  54     26    13  12    AΓL(1,27)  2x(13:3)  13:3                   AΓL(1,27)  2      2           117    1       4       true             false            true             false                                                                     
+# 24  27  117    13    3   1     AΓL(1,27)  2x(13:3)  3xS3                   AGL(3,3)   2      2           117    1       10      true             false            true             false                35                                                   
+# 25  27  117    26    6   5     AΓL(1,27)  2x(13:3)  3xS3                   AΓL(1,27)  2      2           117    1       10      true             false            true             false                                                                     
+# 26  27  234    78    9   24    AΓL(1,27)  2x(13:3)  9                      AΓL(1,27)  2      2           117    1       14      true             false            true             false                                                                     
+# 27  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                      AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 28  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                      AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 29  27  351    78    6   15    AΓL(1,27)  2x(13:3)  S3                     AΓL(1,27)  2      2           117    1       16      true             false            true             false                                                                     
+# 30  27  351    78    6   15    AΓL(1,27)  2x(13:3)  6                      AΓL(1,27)  2      2           117    1       15      true             false            true             false                                                                     
+# 31  27  702    78    3   6     AΓL(1,27)  2x(13:3)  3                      AΓL(1,27)  2      2           117    1       17      true             false            true             false                                                                     
+# 32  27  39     13    9   4     ASL(3,3)   PSL(3,3)  3^4:Q8:3:2             AGL(3,3)   2      2           153    1       4       true             false            true             true                 6                                                    
+# 33  27  39     26    18  17    ASL(3,3)   PSL(3,3)  3^4:Q8:3:2             AGL(3,3)   2      2           153    1       4       true             false            true             true                 3                                                    
+# 34  27  117    13    3   1     ASL(3,3)   PSL(3,3)  (3x(((3^2):Q8):3)):2   AGL(3,3)   2      2           153    1       18      true             false            true             true                 35                                                   
+# 35  27  117    104   24  92    ASL(3,3)   PSL(3,3)  (3x(((3^2):Q8):3)):2   AGL(3,3)   2      2           153    1       18      true             false            true             true                 4                                                    
+# 36  27  351    104   8   28    ASL(3,3)   PSL(3,3)  3^2:Q8:3:2             AGL(3,3)   2      2           153    1       56      true             false            true             false                                                                     
+# 37  27  468    104   6   20    ASL(3,3)   PSL(3,3)  (3x((3^2):3)):2^2      AGL(3,3)   2      2           153    1       67      true             false            true             false                                                                     
+# 38  27  702    312   12  132   ASL(3,3)   PSL(3,3)  3^3:D8                 AGL(3,3)   2      2           153    1       90      true             false            true             false                                                                     
+# 39  27  936    312   9   96    ASL(3,3)   PSL(3,3)  3^3:3:2                AGL(3,3)   2      2           153    1       111     true             false            true             false                                                                     
+# 40  27  2106   312   4   36    ASL(3,3)   PSL(3,3)  (S3xS3):2              AGL(3,3)   2      2           153    1       197     true             false            true             false                                                                     
+# 41  27  2106   702   9   216   ASL(3,3)   PSL(3,3)  3^2:8                  AGL(3,3)   2      2           153    1       200     true             false            true             true                 42                                                   
+# 42  27  2106   1404  18  918   ASL(3,3)   PSL(3,3)  3^2:8                  AGL(3,3)   2      2           153    1       200     true             false            true             true                 41                                                   
+# 43  27  2808   312   3   24    ASL(3,3)   PSL(3,3)  3^2:6                  AGL(3,3)   2      2           153    1       238     true             false            true             false                                                                     
+# 44  27  3159   1872  16  1080  ASL(3,3)   PSL(3,3)  GL(2,3)                AGL(3,3)   2      2           153    1       278     true             false            true             false                                                                     
+# 45  27  3888   1872  13  864   ASL(3,3)   153       1                      280        2      2           153    1       280     true             false            true             false                                                                     
+# 46  27  3888   1872  13  864   ASL(3,3)   PSL(3,3)  13:3                   ASL(3,3)   2      2           153    1       280     true             false            true             false                                                                     
+# 47  27  4212   936   6   180   ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       283     true             false            true             false                                                                     
+# 48  27  4212   1404  9   432   ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       281     true             false            true             true                 50                                                   
+# 49  27  4212   1872  12  792   ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       283     true             false            true             false                                                                     
+# 50  27  4212   2808  18  1836  ASL(3,3)   PSL(3,3)  S3xS3                  AGL(3,3)   2      2           153    1       281     true             false            true             true                 48                                                   
+# 51  27  6318   1404  6   270   ASL(3,3)   PSL(3,3)  S4                     AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 52  27  6318   1872  8   504   ASL(3,3)   PSL(3,3)  S4                     AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 53  27  6318   2808  12  1188  ASL(3,3)   PSL(3,3)  S4                     AGL(3,3)   2      2           153    1       344     true             false            true             false                                                                     
+# 54  27  12636  1872  4   216   ASL(3,3)   PSL(3,3)  A4                     AGL(3,3)   2      2           153    1       394     true             false            true             false                                                                     
+# 55  27  18954  5616  8   1512  ASL(3,3)   PSL(3,3)  8                      AGL(3,3)   2      2           153    1       419     true             false            true             false                                                                     
+# 56  27  25272  5616  6   1080  ASL(3,3)   PSL(3,3)  S3                     AGL(3,3)   2      2           153    1       426     true             false            true             false                                                                     
+# 57  27  39     13    9   4     AGL(3,3)   GL(3,3)   3^4:Q8:3:2:2           AGL(3,3)   2      2           154    1       2       true             false            true             true                 6                                                    
+# 58  27  39     26    18  17    AGL(3,3)   GL(3,3)   3^4:Q8:3:2:2           AGL(3,3)   2      2           154    1       2       true             false            true             true                 3                                                    
+# 59  27  117    13    3   1     AGL(3,3)   GL(3,3)   ((((3^2):Q8):3):2)xS3  AGL(3,3)   2      2           154    1       24      true             false            true             true                 35                                                   
+# 60  27  117    104   24  92    AGL(3,3)   GL(3,3)   ((((3^2):Q8):3):2)xS3  AGL(3,3)   2      2           154    1       24      true             false            true             true                 4                                                    
+# 61  27  351    104   8   28    AGL(3,3)   GL(3,3)   2x((((3^2):Q8):3):2)   AGL(3,3)   2      2           154    1       87      true             false            true             false                                                                     
+# 62  27  468    104   6   20    AGL(3,3)   GL(3,3)   (((3^2):3):2^2)xS3     AGL(3,3)   2      2           154    1       95      true             false            true             false                                                                     
+# 63  27  702    312   12  132   AGL(3,3)   GL(3,3)   ((S3xS3):2)xS3         AGL(3,3)   2      2           154    1       151     true             false            true             false                                                                     
+# 64  27  936    312   9   96    AGL(3,3)   GL(3,3)   3^3:3:2^2              AGL(3,3)   2      2           154    1       166     true             false            true             false                                                                     
+# 65  27  2106   312   4   36    AGL(3,3)   GL(3,3)   2x((S3xS3):2)          AGL(3,3)   2      2           154    1       317     true             false            true             false                                                                     
+# 66  27  2106   702   9   216   AGL(3,3)   GL(3,3)   3^2:QD16               AGL(3,3)   2      2           154    1       304     true             false            true             true                 42                                                   
+# 67  27  2106   1404  18  918   AGL(3,3)   GL(3,3)   3^2:QD16               AGL(3,3)   2      2           154    1       304     true             false            true             true                 41                                                   
+# 68  27  2808   312   3   24    AGL(3,3)   GL(3,3)   3^2:3:2^2              AGL(3,3)   2      2           154    1       331     true             false            true             false                                                                     
+# 69  27  3159   1872  16  1080  AGL(3,3)   GL(3,3)   2xGL(2,3)              AGL(3,3)   2      2           154    1       390     true             false            true             false                                                                     
+# 70  27  4212   936   6   180   AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       421     true             false            true             false                                                                     
+# 71  27  4212   1404  9   432   AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       410     true             false            true             true                 50                                                   
+# 72  27  4212   1872  12  792   AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       421     true             false            true             false                                                                     
+# 73  27  4212   2808  18  1836  AGL(3,3)   GL(3,3)   (S3xS3):2              AGL(3,3)   2      2           154    1       410     true             false            true             true                 48                                                   
+# 74  27  6318   1404  6   270   AGL(3,3)   GL(3,3)   2xS4                   AGL(3,3)   2      2           154    1       534     true             false            true             false                                                                     
+# 75  27  6318   1872  8   504   AGL(3,3)   GL(3,3)   2xS4                   AGL(3,3)   2      2           154    1       534     true             false            true             false                                                                     
+# 76  27  6318   2808  12  1188  AGL(3,3)   GL(3,3)   2xS4                   AGL(3,3)   2      2           154    1       534     true             false            true             false                                                                     
+# 77  27  7776   3744  13  1728  AGL(3,3)   GL(3,3)   13:3                   AGL(3,3)   2      2           154    1       542     true             false            true             false                                                                     
+# 78  27  12636  1872  4   216   AGL(3,3)   GL(3,3)   S4                     AGL(3,3)   2      2           154    1       629     true             false            true             false                                                                     
+# 79  27  18954  5616  8   1512  AGL(3,3)   GL(3,3)   QD16                   AGL(3,3)   2      2           154    1       705     true             false            true             false                                                                     
+# 80  27  25272  5616  6   1080  AGL(3,3)   GL(3,3)   D12                    AGL(3,3)   2      2           154    1       713     true             false            true             false                                                                     
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information (up to isomorphism): 
 # -------------------------------------------
@@ -271,10 +271,10 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            3^3:13       AGL3(3)       
+# Structure                            3^3:13       AGL(3,3)      
 # Rank                                 3            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     13           GL3(3)        
+# Point-stabiliser                     13           GL(3,3)       
 # Block-stabiliser                     3^2          3^4:Q8:3:2:2  
 # Orbit structure of point-stabiliser  1^{1}13^{2}  1^{1}26^{1}   
 # Orbit structure of block-stabiliser  9^{3}        9^{1}18^{1}   
@@ -297,10 +297,10 @@
 # ----------------------------------------------------------------
 #                                      G            Aut(D)        
 # ----------------------------------------------------------------
-# Structure                            AGL1(27)     AGL3(3)       
+# Structure                            AGL(1,27)    AGL(3,3)      
 # Rank                                 2            2             
 # 2-Homogeneous                        true         true          
-# Point-stabiliser                     26           GL3(3)        
+# Point-stabiliser                     26           GL(3,3)       
 # Block-stabiliser                     3^2:2        3^4:Q8:3:2:2  
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}   
 # Orbit structure of block-stabiliser  9^{1}18^{1}  9^{1}18^{1}   
@@ -323,7 +323,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL1(27)     AΓL1(27)     
+# Structure                            AGL(1,27)    AΓL(1,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     26           2x(13:3)     
@@ -349,10 +349,10 @@
 # -------------------------------------------------------------------------
 #                                      G            Aut(D)                 
 # -------------------------------------------------------------------------
-# Structure                            3^3:13       AGL3(3)                
+# Structure                            3^3:13       AGL(3,3)               
 # Rank                                 3            2                      
 # 2-Homogeneous                        true         true                   
-# Point-stabiliser                     13           GL3(3)                 
+# Point-stabiliser                     13           GL(3,3)                
 # Block-stabiliser                     3            ((((3^2):Q8):3):2)xS3  
 # Orbit structure of point-stabiliser  1^{1}13^{2}  1^{1}26^{1}            
 # Orbit structure of block-stabiliser  3^{9}        3^{1}24^{1}            
@@ -375,7 +375,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL1(27)     AGL1(27)     
+# Structure                            AGL(1,27)    AGL(1,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     26           26           
@@ -401,7 +401,7 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            AGL1(27)     AΓL1(27)          
+# Structure                            AGL(1,27)    AΓL(1,27)         
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
 # Point-stabiliser                     26           2x(13:3)          
@@ -453,10 +453,10 @@
 # ----------------------------------------------------------------------------------
 #                                      G                     Aut(D)                 
 # ----------------------------------------------------------------------------------
-# Structure                            ASL3(3)               AGL3(3)                
+# Structure                            ASL(3,3)              AGL(3,3)               
 # Rank                                 2                     2                      
 # 2-Homogeneous                        true                  true                   
-# Point-stabiliser                     PSL3(3)               GL3(3)                 
+# Point-stabiliser                     PSL(3,3)              GL(3,3)                
 # Block-stabiliser                     (3x(((3^2):Q8):3)):2  ((((3^2):Q8):3):2)xS3  
 # Orbit structure of point-stabiliser  1^{1}26^{1}           1^{1}26^{1}            
 # Orbit structure of block-stabiliser  3^{1}24^{1}           3^{1}24^{1}            
@@ -479,7 +479,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AΓL1(27)     AΓL1(27)     
+# Structure                            AΓL(1,27)    AΓL(1,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     2x(13:3)     2x(13:3)     
@@ -531,7 +531,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AΓL1(27)         AΓL1(27)         
+# Structure                            AΓL(1,27)        AΓL(1,27)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     2x(13:3)         2x(13:3)         
@@ -557,7 +557,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AΓL1(27)         AΓL1(27)         
+# Structure                            AΓL(1,27)        AΓL(1,27)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     2x(13:3)         2x(13:3)         
@@ -583,7 +583,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AΓL1(27)     AΓL1(27)     
+# Structure                            AΓL(1,27)    AΓL(1,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     2x(13:3)     2x(13:3)     
@@ -609,7 +609,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AΓL1(27)         AΓL1(27)         
+# Structure                            AΓL(1,27)        AΓL(1,27)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     2x(13:3)         2x(13:3)         
@@ -635,10 +635,10 @@
 # -----------------------------------------------------------------------------
 #                                      G                 Aut(D)                
 # -----------------------------------------------------------------------------
-# Structure                            ASL3(3)           AGL3(3)               
+# Structure                            ASL(3,3)          AGL(3,3)              
 # Rank                                 2                 2                     
 # 2-Homogeneous                        true              true                  
-# Point-stabiliser                     PSL3(3)           GL3(3)                
+# Point-stabiliser                     PSL(3,3)          GL(3,3)               
 # Block-stabiliser                     3^2:Q8:3:2        2x((((3^2):Q8):3):2)  
 # Orbit structure of point-stabiliser  1^{1}26^{1}       1^{1}26^{1}           
 # Orbit structure of block-stabiliser  1^{1}8^{1}18^{1}  1^{1}8^{1}18^{1}      
@@ -661,10 +661,10 @@
 # ----------------------------------------------------------------------------
 #                                      G                  Aut(D)              
 # ----------------------------------------------------------------------------
-# Structure                            ASL3(3)            AGL3(3)             
+# Structure                            ASL(3,3)           AGL(3,3)            
 # Rank                                 2                  2                   
 # 2-Homogeneous                        true               true                
-# Point-stabiliser                     PSL3(3)            GL3(3)              
+# Point-stabiliser                     PSL(3,3)           GL(3,3)             
 # Block-stabiliser                     (3x((3^2):3)):2^2  (((3^2):3):2^2)xS3  
 # Orbit structure of point-stabiliser  1^{1}26^{1}        1^{1}26^{1}         
 # Orbit structure of block-stabiliser  3^{1}6^{1}18^{1}   3^{1}6^{1}18^{1}    
@@ -687,7 +687,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AΓL1(27)     AΓL1(27)     
+# Structure                            AΓL(1,27)    AΓL(1,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     2x(13:3)     2x(13:3)     
@@ -713,10 +713,10 @@
 # ------------------------------------------------------------------
 #                                      G            Aut(D)          
 # ------------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)         
+# Structure                            ASL(3,3)     AGL(3,3)        
 # Rank                                 2            2               
 # 2-Homogeneous                        true         true            
-# Point-stabiliser                     PSL3(3)      GL3(3)          
+# Point-stabiliser                     PSL(3,3)     GL(3,3)         
 # Block-stabiliser                     3^3:D8       ((S3xS3):2)xS3  
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}     
 # Orbit structure of block-stabiliser  3^{1}12^{2}  3^{1}12^{2}     
@@ -739,10 +739,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)      
+# Structure                            ASL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      GL3(3)       
+# Point-stabiliser                     PSL(3,3)     GL(3,3)      
 # Block-stabiliser                     3^3:3:2      3^3:3:2^2    
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  9^{3}        9^{3}        
@@ -765,10 +765,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            ASL3(3)           AGL3(3)           
+# Structure                            ASL(3,3)          AGL(3,3)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     PSL3(3)           GL3(3)            
+# Point-stabiliser                     PSL(3,3)          GL(3,3)           
 # Block-stabiliser                     (S3xS3):2         2x((S3xS3):2)     
 # Orbit structure of point-stabiliser  1^{1}26^{1}       1^{1}26^{1}       
 # Orbit structure of block-stabiliser  1^{1}4^{2}18^{1}  1^{1}4^{2}18^{1}  
@@ -791,10 +791,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)      
+# Structure                            ASL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      GL3(3)       
+# Point-stabiliser                     PSL(3,3)     GL(3,3)      
 # Block-stabiliser                     3^2:8        3^2:QD16     
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  9^{1}18^{1}  9^{1}18^{1}  
@@ -817,10 +817,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)      
+# Structure                            ASL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      GL3(3)       
+# Point-stabiliser                     PSL(3,3)     GL(3,3)      
 # Block-stabiliser                     3^2:8        3^2:QD16     
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  9^{1}18^{1}  9^{1}18^{1}  
@@ -843,10 +843,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)      
+# Structure                            ASL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      GL3(3)       
+# Point-stabiliser                     PSL(3,3)     GL(3,3)      
 # Block-stabiliser                     3^2:6        3^2:3:2^2    
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  3^{3}18^{1}  3^{3}18^{1}  
@@ -869,11 +869,11 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            ASL3(3)                AGL3(3)                
+# Structure                            ASL(3,3)               AGL(3,3)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     PSL3(3)                GL3(3)                 
-# Block-stabiliser                     GL2(3)                 2xGL2(3)               
+# Point-stabiliser                     PSL(3,3)               GL(3,3)                
+# Block-stabiliser                     GL(2,3)                2xGL(2,3)              
 # Orbit structure of point-stabiliser  1^{1}26^{1}            1^{1}26^{1}            
 # Orbit structure of block-stabiliser  1^{1}2^{1}8^{1}16^{1}  1^{1}2^{1}8^{1}16^{1}  
 # Point-transitive                     true                   true                   
@@ -895,10 +895,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      ASL3(3)      
+# Structure                            ASL(3,3)     ASL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      PSL3(3)      
+# Point-stabiliser                     PSL(3,3)     PSL(3,3)     
 # Block-stabiliser                     13:3         13:3         
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  1^{1}13^{2}  1^{1}13^{2}  
@@ -921,10 +921,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            ASL3(3)           AGL3(3)           
+# Structure                            ASL(3,3)          AGL(3,3)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     PSL3(3)           GL3(3)            
+# Point-stabiliser                     PSL(3,3)          GL(3,3)           
 # Block-stabiliser                     S3xS3             (S3xS3):2         
 # Orbit structure of point-stabiliser  1^{1}26^{1}       1^{1}26^{1}       
 # Orbit structure of block-stabiliser  6^{1}9^{1}12^{1}  6^{1}9^{1}12^{1}  
@@ -947,10 +947,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)      
+# Structure                            ASL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      GL3(3)       
+# Point-stabiliser                     PSL(3,3)     GL(3,3)      
 # Block-stabiliser                     S3xS3        (S3xS3):2    
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  9^{1}18^{1}  9^{1}18^{1}  
@@ -973,10 +973,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            ASL3(3)           AGL3(3)           
+# Structure                            ASL(3,3)          AGL(3,3)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     PSL3(3)           GL3(3)            
+# Point-stabiliser                     PSL(3,3)          GL(3,3)           
 # Block-stabiliser                     S3xS3             (S3xS3):2         
 # Orbit structure of point-stabiliser  1^{1}26^{1}       1^{1}26^{1}       
 # Orbit structure of block-stabiliser  6^{1}9^{1}12^{1}  6^{1}9^{1}12^{1}  
@@ -999,10 +999,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)      
+# Structure                            ASL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      GL3(3)       
+# Point-stabiliser                     PSL(3,3)     GL(3,3)      
 # Block-stabiliser                     S3xS3        (S3xS3):2    
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  9^{1}18^{1}  9^{1}18^{1}  
@@ -1025,10 +1025,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            ASL3(3)                AGL3(3)                
+# Structure                            ASL(3,3)               AGL(3,3)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     PSL3(3)                GL3(3)                 
+# Point-stabiliser                     PSL(3,3)               GL(3,3)                
 # Block-stabiliser                     S4                     2xS4                   
 # Orbit structure of point-stabiliser  1^{1}26^{1}            1^{1}26^{1}            
 # Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}12^{1}  1^{1}6^{1}8^{1}12^{1}  
@@ -1051,10 +1051,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            ASL3(3)                AGL3(3)                
+# Structure                            ASL(3,3)               AGL(3,3)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     PSL3(3)                GL3(3)                 
+# Point-stabiliser                     PSL(3,3)               GL(3,3)                
 # Block-stabiliser                     S4                     2xS4                   
 # Orbit structure of point-stabiliser  1^{1}26^{1}            1^{1}26^{1}            
 # Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}12^{1}  1^{1}6^{1}8^{1}12^{1}  
@@ -1077,10 +1077,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            ASL3(3)                AGL3(3)                
+# Structure                            ASL(3,3)               AGL(3,3)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     PSL3(3)                GL3(3)                 
+# Point-stabiliser                     PSL(3,3)               GL(3,3)                
 # Block-stabiliser                     S4                     2xS4                   
 # Orbit structure of point-stabiliser  1^{1}26^{1}            1^{1}26^{1}            
 # Orbit structure of block-stabiliser  1^{1}6^{1}8^{1}12^{1}  1^{1}6^{1}8^{1}12^{1}  
@@ -1103,10 +1103,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL3(3)      AGL3(3)      
+# Structure                            AGL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     GL3(3)       GL3(3)       
+# Point-stabiliser                     GL(3,3)      GL(3,3)      
 # Block-stabiliser                     13:3         13:3         
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  1^{1}13^{2}  1^{1}13^{2}  
@@ -1129,10 +1129,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            ASL3(3)                AGL3(3)                
+# Structure                            ASL(3,3)               AGL(3,3)               
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     PSL3(3)                GL3(3)                 
+# Point-stabiliser                     PSL(3,3)               GL(3,3)                
 # Block-stabiliser                     A4                     S4                     
 # Orbit structure of point-stabiliser  1^{1}26^{1}            1^{1}26^{1}            
 # Orbit structure of block-stabiliser  1^{1}4^{2}6^{1}12^{1}  1^{1}4^{2}6^{1}12^{1}  
@@ -1155,10 +1155,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            ASL3(3)          AGL3(3)          
+# Structure                            ASL(3,3)         AGL(3,3)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL3(3)          GL3(3)           
+# Point-stabiliser                     PSL(3,3)         GL(3,3)          
 # Block-stabiliser                     8                QD16             
 # Orbit structure of point-stabiliser  1^{1}26^{1}      1^{1}26^{1}      
 # Orbit structure of block-stabiliser  1^{1}2^{1}8^{3}  1^{1}2^{1}8^{3}  
@@ -1181,10 +1181,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL3(3)      AGL3(3)      
+# Structure                            ASL(3,3)     AGL(3,3)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL3(3)      GL3(3)       
+# Point-stabiliser                     PSL(3,3)     GL(3,3)      
 # Block-stabiliser                     S3           D12          
 # Orbit structure of point-stabiliser  1^{1}26^{1}  1^{1}26^{1}  
 # Orbit structure of block-stabiliser  3^{3}6^{3}   3^{3}6^{3}   

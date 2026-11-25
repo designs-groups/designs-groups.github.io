@@ -31,277 +31,277 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G               Gα         GB     Aut(D)          rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   25  30    6    5   1    5^2:Q8:3        SL2(3)     5:4    AGL2(5)         2      2           34     1       2       true             false            true             true                 2                                
-# 2   25  30    24   20  19   5^2:Q8:3        SL2(3)     5:4    AGL2(5)         2      2           34     1       2       true             false            true             true                 1                                
-# 3   25  50    24   12  11   5^2:3:8         3:8        12     AΓL1(25)        2      2           36     1       3       true             false            true             false                                                 
-# 4   25  60    24   10  9    5^2:Q8:3        SL2(3)     D10    AGL2(5)         2      2           34     1       3       true             false            true             false                                                 
-# 5   25  75    24   8   7    5^2:Q8:3        SL2(3)     Q8     5^2:((Q8:3)'4)  2      2           34     1       4       true             false            true             false                                                 
-# 6   25  75    24   8   7    5^2:3:8         3:8        8      AΓL1(25)        2      2           36     1       5       true             false            true             false                                                 
-# 7   25  75    48   16  30   AΓL1(25)        24:2       8:2    AΓL1(25)        2      2           42     1       9       true             false            true             false                                                 
-# 8   25  75    48   16  30   5^2:((Q8:3)'4)  SL2(3):4   4^2:2  5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
-# 9   25  100   16   4   2    5^2:O+2(5)      4^2:2      D8     5^2:O+2(5)      3      3           38     1       27      true             false            true             false                                                 
-# 10  25  100   24   6   5    5^2:Q8:3        SL2(3)     6      5^2:Q8:3        2      2           34     1       5       true             false            true             false                                                 
-# 11  25  100   24   6   5    5^2:3:8         3:8        6      AΓL1(25)        2      2           36     1       6       true             false            true             false                                                 
+# 1   25  30    6    5   1    5^2:Q8:3        SL(2,3)    5:4    AGL(2,5)        2      2           34     1       2       true             false            true             true                 2                                
+# 2   25  30    24   20  19   5^2:Q8:3        SL(2,3)    5:4    AGL(2,5)        2      2           34     1       2       true             false            true             true                 1                                
+# 3   25  50    24   12  11   5^2:3:8         3:8        12     AΓL(1,25)       2      2           36     1       3       true             false            true             false                                                 
+# 4   25  60    24   10  9    5^2:Q8:3        SL(2,3)    D10    AGL(2,5)        2      2           34     1       3       true             false            true             false                                                 
+# 5   25  75    24   8   7    5^2:Q8:3        SL(2,3)    Q8     5^2:((Q8:3)'4)  2      2           34     1       4       true             false            true             false                                                 
+# 6   25  75    24   8   7    5^2:3:8         3:8        8      AΓL(1,25)       2      2           36     1       5       true             false            true             false                                                 
+# 7   25  75    48   16  30   AΓL(1,25)       24:2       8:2    AΓL(1,25)       2      2           42     1       9       true             false            true             false                                                 
+# 8   25  75    48   16  30   5^2:((Q8:3)'4)  SL(2,3):4  4^2:2  5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
+# 9   25  100   16   4   2    5^2:O+(2,5)     4^2:2      D8     5^2:O+(2,5)     3      3           38     1       27      true             false            true             false                                                 
+# 10  25  100   24   6   5    5^2:Q8:3        SL(2,3)    6      5^2:Q8:3        2      2           34     1       5       true             false            true             false                                                 
+# 11  25  100   24   6   5    5^2:3:8         3:8        6      AΓL(1,25)       2      2           36     1       6       true             false            true             false                                                 
 # 12  25  100   48   12  22   5^2:((Q8:3)'2)  (4x2):2:3  12     5^2:((Q8:3)'2)  2      2           43     1       8       true             false            true             false                                                 
-# 13  25  150   24   4   3    5^2:Q8:3        SL2(3)     4      5^2:((Q8:3)'2)  2      2           34     1       7       true             false            true             false                                                 
-# 14  25  150   24   4   3    5^2:Q8:3        SL2(3)     4      AGL2(5)         2      2           34     1       7       true             false            true             false                                                 
-# 15  25  150   48   8   14   AΓL1(25)        24:2       8      AΓL1(25)        2      2           42     1       17      true             false            true             false                                                 
-# 16  25  150   48   8   14   AΓL1(25)        24:2       4x2    AΓL1(25)        2      2           42     1       16      true             false            true             false                                                 
-# 17  25  200   24   3   2    5^2:Q8:3        SL2(3)     3      5^2:Q8:3        2      2           34     1       8       true             false            true             false                                                 
-# 18  25  200   24   3   2    5^2:3:8         3:8        3      AΓL1(25)        2      2           36     1       9       true             false            true             false                                                 
-# 19  25  200   32   4   4    5^2:O+2(5)      4^2:2      4      5^2:O+2(5)      3      3           38     1       31      true             false            true             false                                                 
+# 13  25  150   24   4   3    5^2:Q8:3        SL(2,3)    4      5^2:((Q8:3)'2)  2      2           34     1       7       true             false            true             false                                                 
+# 14  25  150   24   4   3    5^2:Q8:3        SL(2,3)    4      AGL(2,5)        2      2           34     1       7       true             false            true             false                                                 
+# 15  25  150   48   8   14   AΓL(1,25)       24:2       8      AΓL(1,25)       2      2           42     1       17      true             false            true             false                                                 
+# 16  25  150   48   8   14   AΓL(1,25)       24:2       4x2    AΓL(1,25)       2      2           42     1       16      true             false            true             false                                                 
+# 17  25  200   24   3   2    5^2:Q8:3        SL(2,3)    3      5^2:Q8:3        2      2           34     1       8       true             false            true             false                                                 
+# 18  25  200   24   3   2    5^2:3:8         3:8        3      AΓL(1,25)       2      2           36     1       9       true             false            true             false                                                 
+# 19  25  200   32   4   4    5^2:O+(2,5)     4^2:2      4      5^2:O+(2,5)     3      3           38     1       31      true             false            true             false                                                 
 # 20  25  200   48   6   10   5^2:((Q8:3)'2)  (4x2):2:3  6      5^2:((Q8:3)'2)  2      2           43     1       15      true             false            true             false                                                 
-# 21  25  200   96   12  44   5^2:((Q8:3)'4)  SL2(3):4   12     5^2:((Q8:3)'4)  2      2           45     1       20      true             false            true             false                                                 
-# 22  25  250   120  12  55   ASL2(5)         SL2(5)     3:4    ASL2(5):2       2      2           46     1       12      true             false            true             false                                                 
-# 23  25  300   48   4   6    AΓL1(25)        24:2       4      AΓL1(25)        2      2           42     1       23      true             false            true             false                                                 
-# 24  25  300   48   4   6    AΓL1(25)        24:2       2^2    AΓL1(25)        2      2           42     1       22      true             false            true             false                                                 
-# 25  25  300   48   4   6    5^2:((Q8:3)'4)  SL2(3):4   D8     5^2:((Q8:3)'4)  2      2           45     1       26      true             false            true             false                                                 
-# 26  25  300   96   8   28   5^2:((Q8:3)'4)  SL2(3):4   8      5^2:((Q8:3)'4)  2      2           45     1       28      true             false            true             false                                                 
-# 27  25  300   96   8   28   5^2:((Q8:3)'4)  SL2(3):4   4x2    5^2:((Q8:3)'4)  2      2           45     1       24      true             false            true             false                                                 
-# 28  25  375   120  8   35   ASL2(5)         SL2(5)     Q8     AGL2(5)         2      2           46     1       15      true             false            true             false                                                 
-# 29  25  375   240  16  150  AGL2(5)         GL2(5)     4^2:2  AGL2(5)         2      2           48     1       52      true             false            true             false                                                 
+# 21  25  200   96   12  44   5^2:((Q8:3)'4)  SL(2,3):4  12     5^2:((Q8:3)'4)  2      2           45     1       20      true             false            true             false                                                 
+# 22  25  250   120  12  55   ASL(2,5)        SL(2,5)    3:4    ASL(2,5):2      2      2           46     1       12      true             false            true             false                                                 
+# 23  25  300   48   4   6    AΓL(1,25)       24:2       4      AΓL(1,25)       2      2           42     1       23      true             false            true             false                                                 
+# 24  25  300   48   4   6    AΓL(1,25)       24:2       2^2    AΓL(1,25)       2      2           42     1       22      true             false            true             false                                                 
+# 25  25  300   48   4   6    5^2:((Q8:3)'4)  SL(2,3):4  D8     5^2:((Q8:3)'4)  2      2           45     1       26      true             false            true             false                                                 
+# 26  25  300   96   8   28   5^2:((Q8:3)'4)  SL(2,3):4  8      5^2:((Q8:3)'4)  2      2           45     1       28      true             false            true             false                                                 
+# 27  25  300   96   8   28   5^2:((Q8:3)'4)  SL(2,3):4  4x2    5^2:((Q8:3)'4)  2      2           45     1       24      true             false            true             false                                                 
+# 28  25  375   120  8   35   ASL(2,5)        SL(2,5)    Q8     AGL(2,5)        2      2           46     1       15      true             false            true             false                                                 
+# 29  25  375   240  16  150  AGL(2,5)        GL(2,5)    4^2:2  AGL(2,5)        2      2           48     1       52      true             false            true             false                                                 
 # 30  25  400   48   3   4    5^2:((Q8:3)'2)  (4x2):2:3  3      5^2:((Q8:3)'2)  2      2           43     1       20      true             false            true             false                                                 
-# 31  25  400   96   6   20   5^2:((Q8:3)'4)  SL2(3):4   6      5^2:((Q8:3)'4)  2      2           45     1       29      true             false            true             false                                                 
-# 32  25  500   120  6   25   ASL2(5)         SL2(5)     6      ASL2(5):2       2      2           46     1       16      true             false            true             false                                                 
-# 33  25  500   240  12  110  AGL2(5)         GL2(5)     4xS3   AGL2(5)         2      2           48     1       59      true             false            true             false                                                 
-# 34  25  600   96   4   12   5^2:((Q8:3)'4)  SL2(3):4   4      5^2:((Q8:3)'4)  2      2           45     1       32      true             false            true             false                                                 
-# 35  25  600   120  5   20   ASL2(5)         SL2(5)     5      AGL2(5)         2      2           46     1       19      true             false            true             false                                                 
-# 36  25  600   240  10  90   AGL2(5)         GL2(5)     5:4    AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 37  25  600   240  10  90   AGL2(5)         GL2(5)     5:4    AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 38  25  750   120  4   15   ASL2(5)         SL2(5)     4      ASL2(5):2       2      2           46     1       20      true             false            true             false                                                 
-# 39  25  800   96   3   8    5^2:((Q8:3)'4)  SL2(3):4   3      5^2:((Q8:3)'4)  2      2           45     1       36      true             false            true             false                                                 
-# 40  25  1000  120  3   10   ASL2(5)         SL2(5)     3      ASL2(5):2       2      2           46     1       21      true             false            true             false                                                 
-# 41  25  1000  240  6   50   AGL2(5)         GL2(5)     D12    AGL2(5)         2      2           48     1       78      true             false            true             false                                                 
-# 42  25  1500  240  4   30   AGL2(5)         GL2(5)     D8     AGL2(5)         2      2           48     1       89      true             false            true             false                                                 
-# 43  25  1500  480  8   140  AGL2(5)         GL2(5)     4x2    AGL2(5)         2      2           48     1       88      true             false            true             false                                                 
-# 44  25  2000  240  3   20   AGL2(5)         GL2(5)     S3     AGL2(5)         2      2           48     1       93      true             false            true             false                                                 
-# 45  25  3000  480  4   60   AGL2(5)         GL2(5)     4      AGL2(5)         2      2           48     1       98      true             false            true             false                                                 
+# 31  25  400   96   6   20   5^2:((Q8:3)'4)  SL(2,3):4  6      5^2:((Q8:3)'4)  2      2           45     1       29      true             false            true             false                                                 
+# 32  25  500   120  6   25   ASL(2,5)        SL(2,5)    6      ASL(2,5):2      2      2           46     1       16      true             false            true             false                                                 
+# 33  25  500   240  12  110  AGL(2,5)        GL(2,5)    4xS3   AGL(2,5)        2      2           48     1       59      true             false            true             false                                                 
+# 34  25  600   96   4   12   5^2:((Q8:3)'4)  SL(2,3):4  4      5^2:((Q8:3)'4)  2      2           45     1       32      true             false            true             false                                                 
+# 35  25  600   120  5   20   ASL(2,5)        SL(2,5)    5      AGL(2,5)        2      2           46     1       19      true             false            true             false                                                 
+# 36  25  600   240  10  90   AGL(2,5)        GL(2,5)    5:4    AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 37  25  600   240  10  90   AGL(2,5)        GL(2,5)    5:4    AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 38  25  750   120  4   15   ASL(2,5)        SL(2,5)    4      ASL(2,5):2      2      2           46     1       20      true             false            true             false                                                 
+# 39  25  800   96   3   8    5^2:((Q8:3)'4)  SL(2,3):4  3      5^2:((Q8:3)'4)  2      2           45     1       36      true             false            true             false                                                 
+# 40  25  1000  120  3   10   ASL(2,5)        SL(2,5)    3      ASL(2,5):2      2      2           46     1       21      true             false            true             false                                                 
+# 41  25  1000  240  6   50   AGL(2,5)        GL(2,5)    D12    AGL(2,5)        2      2           48     1       78      true             false            true             false                                                 
+# 42  25  1500  240  4   30   AGL(2,5)        GL(2,5)    D8     AGL(2,5)        2      2           48     1       89      true             false            true             false                                                 
+# 43  25  1500  480  8   140  AGL(2,5)        GL(2,5)    4x2    AGL(2,5)        2      2           48     1       88      true             false            true             false                                                 
+# 44  25  2000  240  3   20   AGL(2,5)        GL(2,5)    S3     AGL(2,5)        2      2           48     1       93      true             false            true             false                                                 
+# 45  25  3000  480  4   60   AGL(2,5)        GL(2,5)    4      AGL(2,5)        2      2           48     1       98      true             false            true             false                                                 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    Reduced designs (within each group):
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G               Gα         GB           Aut(D)          rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   25  30    6    5   1    5^2:Q8:3        SL2(3)     5:4          AGL2(5)         2      2           34     1       2       true             false            true             true                 2                                
-# 2   25  30    24   20  19   5^2:Q8:3        SL2(3)     5:4          AGL2(5)         2      2           34     1       2       true             false            true             true                 1                                
-# 3   25  60    24   10  9    5^2:Q8:3        SL2(3)     D10          AGL2(5)         2      2           34     1       3       true             false            true             false                                                 
-# 4   25  75    24   8   7    5^2:Q8:3        SL2(3)     Q8           5^2:((Q8:3)'4)  2      2           34     1       4       true             false            true             false                                                 
-# 5   25  100   24   6   5    5^2:Q8:3        SL2(3)     6            5^2:Q8:3        2      2           34     1       5       true             false            true             false                                                 
-# 6   25  150   24   4   3    5^2:Q8:3        SL2(3)     4            5^2:((Q8:3)'2)  2      2           34     1       7       true             false            true             false                                                 
-# 7   25  150   24   4   3    5^2:Q8:3        SL2(3)     4            AGL2(5)         2      2           34     1       7       true             false            true             false                                                 
-# 8   25  200   24   3   2    5^2:Q8:3        SL2(3)     3            5^2:Q8:3        2      2           34     1       8       true             false            true             false                                                 
-# 9   25  30    6    5   1    5^2:3:8         3:8        5:4          AGL2(5)         2      2           36     1       2       true             false            true             true                 2                                
-# 10  25  30    24   20  19   5^2:3:8         3:8        5:4          AGL2(5)         2      2           36     1       2       true             false            true             true                 1                                
-# 11  25  50    24   12  11   5^2:3:8         3:8        12           AΓL1(25)        2      2           36     1       3       true             false            true             false                                                 
-# 12  25  60    24   10  9    5^2:3:8         3:8        D10          AGL2(5)         2      2           36     1       4       true             false            true             false                                                 
+# 1   25  30    6    5   1    5^2:Q8:3        SL(2,3)    5:4          AGL(2,5)        2      2           34     1       2       true             false            true             true                 2                                
+# 2   25  30    24   20  19   5^2:Q8:3        SL(2,3)    5:4          AGL(2,5)        2      2           34     1       2       true             false            true             true                 1                                
+# 3   25  60    24   10  9    5^2:Q8:3        SL(2,3)    D10          AGL(2,5)        2      2           34     1       3       true             false            true             false                                                 
+# 4   25  75    24   8   7    5^2:Q8:3        SL(2,3)    Q8           5^2:((Q8:3)'4)  2      2           34     1       4       true             false            true             false                                                 
+# 5   25  100   24   6   5    5^2:Q8:3        SL(2,3)    6            5^2:Q8:3        2      2           34     1       5       true             false            true             false                                                 
+# 6   25  150   24   4   3    5^2:Q8:3        SL(2,3)    4            5^2:((Q8:3)'2)  2      2           34     1       7       true             false            true             false                                                 
+# 7   25  150   24   4   3    5^2:Q8:3        SL(2,3)    4            AGL(2,5)        2      2           34     1       7       true             false            true             false                                                 
+# 8   25  200   24   3   2    5^2:Q8:3        SL(2,3)    3            5^2:Q8:3        2      2           34     1       8       true             false            true             false                                                 
+# 9   25  30    6    5   1    5^2:3:8         3:8        5:4          AGL(2,5)        2      2           36     1       2       true             false            true             true                 2                                
+# 10  25  30    24   20  19   5^2:3:8         3:8        5:4          AGL(2,5)        2      2           36     1       2       true             false            true             true                 1                                
+# 11  25  50    24   12  11   5^2:3:8         3:8        12           AΓL(1,25)       2      2           36     1       3       true             false            true             false                                                 
+# 12  25  60    24   10  9    5^2:3:8         3:8        D10          AGL(2,5)        2      2           36     1       4       true             false            true             false                                                 
 # 13  25  75    24   8   7    5^2:3:8         3:8        8            5^2:((Q8:3)'4)  2      2           36     1       5       true             false            true             false                                                 
-# 14  25  75    24   8   7    5^2:3:8         3:8        8            AΓL1(25)        2      2           36     1       5       true             false            true             false                                                 
-# 15  25  100   24   6   5    5^2:3:8         3:8        6            AΓL1(25)        2      2           36     1       6       true             false            true             false                                                 
-# 16  25  150   24   4   3    5^2:3:8         3:8        4            AGL2(5)         2      2           36     1       8       true             false            true             false                                                 
-# 17  25  200   24   3   2    5^2:3:8         3:8        3            AΓL1(25)        2      2           36     1       9       true             false            true             false                                                 
-# 18  25  30    6    5   1    AGL1(25)        24         5:4          AGL2(5)         2      2           37     1       2       true             false            true             true                 2                                
-# 19  25  30    24   20  19   AGL1(25)        24         5:4          AGL2(5)         2      2           37     1       2       true             false            true             true                 1                                
-# 20  25  50    24   12  11   AGL1(25)        24         12           AΓL1(25)        2      2           37     1       3       true             false            true             false                                                 
-# 21  25  60    24   10  9    AGL1(25)        24         D10          AGL2(5)         2      2           37     1       4       true             false            true             false                                                 
-# 22  25  75    24   8   7    AGL1(25)        24         8            AΓL1(25)        2      2           37     1       5       true             false            true             false                                                 
-# 23  25  100   24   6   5    AGL1(25)        24         6            AΓL1(25)        2      2           37     1       6       true             false            true             false                                                 
-# 24  25  150   24   4   3    AGL1(25)        24         4            AGL2(5)         2      2           37     1       8       true             false            true             false                                                 
-# 25  25  200   24   3   2    AGL1(25)        24         3            AΓL1(25)        2      2           37     1       9       true             false            true             false                                                 
-# 26  25  100   16   4   2    5^2:O+2(5)      4^2:2      D8           5^2:O+2(5)      3      3           38     1       27      true             false            true             false                                                 
-# 27  25  200   32   4   4    5^2:O+2(5)      4^2:2      4            5^2:O+2(5)      3      3           38     1       31      true             false            true             false                                                 
-# 28  25  30    6    5   1    AΓL1(25)        24:2       2x(5:4)      AGL2(5)         2      2           42     1       2       true             false            true             true                 2                                
-# 29  25  30    24   20  19   AΓL1(25)        24:2       2x(5:4)      AGL2(5)         2      2           42     1       2       true             false            true             true                 1                                
-# 30  25  50    24   12  11   AΓL1(25)        24:2       4xS3         AΓL1(25)        2      2           42     1       3       true             false            true             false                                                 
-# 31  25  60    24   10  9    AΓL1(25)        24:2       D20          AGL2(5)         2      2           42     1       6       true             false            true             false                                                 
-# 32  25  75    24   8   7    AΓL1(25)        24:2       8:2          AΓL1(25)        2      2           42     1       9       true             false            true             false                                                 
-# 33  25  75    48   16  30   AΓL1(25)        24:2       8:2          AΓL1(25)        2      2           42     1       9       true             false            true             false                                                 
-# 34  25  100   24   6   5    AΓL1(25)        24:2       D12          AΓL1(25)        2      2           42     1       10      true             false            true             false                                                 
-# 35  25  150   24   4   3    AΓL1(25)        24:2       4x2          AGL2(5)         2      2           42     1       16      true             false            true             false                                                 
-# 36  25  150   48   8   14   AΓL1(25)        24:2       4x2          AΓL1(25)        2      2           42     1       16      true             false            true             false                                                 
-# 37  25  150   48   8   14   AΓL1(25)        24:2       8            AΓL1(25)        2      2           42     1       17      true             false            true             false                                                 
-# 38  25  200   24   3   2    AΓL1(25)        24:2       S3           AΓL1(25)        2      2           42     1       19      true             false            true             false                                                 
-# 39  25  300   48   4   6    AΓL1(25)        24:2       4            AΓL1(25)        2      2           42     1       23      true             false            true             false                                                 
-# 40  25  300   48   4   6    AΓL1(25)        24:2       2^2          AΓL1(25)        2      2           42     1       22      true             false            true             false                                                 
-# 41  25  30    6    5   1    5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL2(5)         2      2           43     1       2       true             false            true             true                 2                                
-# 42  25  30    24   20  19   5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL2(5)         2      2           43     1       2       true             false            true             true                 1                                
-# 43  25  60    24   10  9    5^2:((Q8:3)'2)  (4x2):2:3  D20          AGL2(5)         2      2           43     1       6       true             false            true             false                                                 
+# 14  25  75    24   8   7    5^2:3:8         3:8        8            AΓL(1,25)       2      2           36     1       5       true             false            true             false                                                 
+# 15  25  100   24   6   5    5^2:3:8         3:8        6            AΓL(1,25)       2      2           36     1       6       true             false            true             false                                                 
+# 16  25  150   24   4   3    5^2:3:8         3:8        4            AGL(2,5)        2      2           36     1       8       true             false            true             false                                                 
+# 17  25  200   24   3   2    5^2:3:8         3:8        3            AΓL(1,25)       2      2           36     1       9       true             false            true             false                                                 
+# 18  25  30    6    5   1    AGL(1,25)       24         5:4          AGL(2,5)        2      2           37     1       2       true             false            true             true                 2                                
+# 19  25  30    24   20  19   AGL(1,25)       24         5:4          AGL(2,5)        2      2           37     1       2       true             false            true             true                 1                                
+# 20  25  50    24   12  11   AGL(1,25)       24         12           AΓL(1,25)       2      2           37     1       3       true             false            true             false                                                 
+# 21  25  60    24   10  9    AGL(1,25)       24         D10          AGL(2,5)        2      2           37     1       4       true             false            true             false                                                 
+# 22  25  75    24   8   7    AGL(1,25)       24         8            AΓL(1,25)       2      2           37     1       5       true             false            true             false                                                 
+# 23  25  100   24   6   5    AGL(1,25)       24         6            AΓL(1,25)       2      2           37     1       6       true             false            true             false                                                 
+# 24  25  150   24   4   3    AGL(1,25)       24         4            AGL(2,5)        2      2           37     1       8       true             false            true             false                                                 
+# 25  25  200   24   3   2    AGL(1,25)       24         3            AΓL(1,25)       2      2           37     1       9       true             false            true             false                                                 
+# 26  25  100   16   4   2    5^2:O+(2,5)     4^2:2      D8           5^2:O+(2,5)     3      3           38     1       27      true             false            true             false                                                 
+# 27  25  200   32   4   4    5^2:O+(2,5)     4^2:2      4            5^2:O+(2,5)     3      3           38     1       31      true             false            true             false                                                 
+# 28  25  30    6    5   1    AΓL(1,25)       24:2       2x(5:4)      AGL(2,5)        2      2           42     1       2       true             false            true             true                 2                                
+# 29  25  30    24   20  19   AΓL(1,25)       24:2       2x(5:4)      AGL(2,5)        2      2           42     1       2       true             false            true             true                 1                                
+# 30  25  50    24   12  11   AΓL(1,25)       24:2       4xS3         AΓL(1,25)       2      2           42     1       3       true             false            true             false                                                 
+# 31  25  60    24   10  9    AΓL(1,25)       24:2       D20          AGL(2,5)        2      2           42     1       6       true             false            true             false                                                 
+# 32  25  75    24   8   7    AΓL(1,25)       24:2       8:2          AΓL(1,25)       2      2           42     1       9       true             false            true             false                                                 
+# 33  25  75    48   16  30   AΓL(1,25)       24:2       8:2          AΓL(1,25)       2      2           42     1       9       true             false            true             false                                                 
+# 34  25  100   24   6   5    AΓL(1,25)       24:2       D12          AΓL(1,25)       2      2           42     1       10      true             false            true             false                                                 
+# 35  25  150   24   4   3    AΓL(1,25)       24:2       4x2          AGL(2,5)        2      2           42     1       16      true             false            true             false                                                 
+# 36  25  150   48   8   14   AΓL(1,25)       24:2       4x2          AΓL(1,25)       2      2           42     1       16      true             false            true             false                                                 
+# 37  25  150   48   8   14   AΓL(1,25)       24:2       8            AΓL(1,25)       2      2           42     1       17      true             false            true             false                                                 
+# 38  25  200   24   3   2    AΓL(1,25)       24:2       S3           AΓL(1,25)       2      2           42     1       19      true             false            true             false                                                 
+# 39  25  300   48   4   6    AΓL(1,25)       24:2       4            AΓL(1,25)       2      2           42     1       23      true             false            true             false                                                 
+# 40  25  300   48   4   6    AΓL(1,25)       24:2       2^2          AΓL(1,25)       2      2           42     1       22      true             false            true             false                                                 
+# 41  25  30    6    5   1    5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL(2,5)        2      2           43     1       2       true             false            true             true                 2                                
+# 42  25  30    24   20  19   5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL(2,5)        2      2           43     1       2       true             false            true             true                 1                                
+# 43  25  60    24   10  9    5^2:((Q8:3)'2)  (4x2):2:3  D20          AGL(2,5)        2      2           43     1       6       true             false            true             false                                                 
 # 44  25  75    24   8   7    5^2:((Q8:3)'2)  (4x2):2:3  (4x2):2      5^2:((Q8:3)'4)  2      2           43     1       7       true             false            true             false                                                 
 # 45  25  100   48   12  22   5^2:((Q8:3)'2)  (4x2):2:3  12           5^2:((Q8:3)'2)  2      2           43     1       8       true             false            true             false                                                 
-# 46  25  150   24   4   3    5^2:((Q8:3)'2)  (4x2):2:3  4x2          AGL2(5)         2      2           43     1       14      true             false            true             false                                                 
+# 46  25  150   24   4   3    5^2:((Q8:3)'2)  (4x2):2:3  4x2          AGL(2,5)        2      2           43     1       14      true             false            true             false                                                 
 # 47  25  150   24   4   3    5^2:((Q8:3)'2)  (4x2):2:3  D8           5^2:((Q8:3)'2)  2      2           43     1       13      true             false            true             false                                                 
 # 48  25  200   48   6   10   5^2:((Q8:3)'2)  (4x2):2:3  6            5^2:((Q8:3)'2)  2      2           43     1       15      true             false            true             false                                                 
 # 49  25  400   48   3   4    5^2:((Q8:3)'2)  (4x2):2:3  3            5^2:((Q8:3)'2)  2      2           43     1       20      true             false            true             false                                                 
-# 50  25  30    6    5   1    5^2:((Q8:3)'4)  SL2(3):4   4x(5:4)      AGL2(5)         2      2           45     1       2       true             false            true             true                 2                                
-# 51  25  30    24   20  19   5^2:((Q8:3)'4)  SL2(3):4   4x(5:4)      AGL2(5)         2      2           45     1       2       true             false            true             true                 1                                
-# 52  25  60    24   10  9    5^2:((Q8:3)'4)  SL2(3):4   2x(5:4)      AGL2(5)         2      2           45     1       4       true             false            true             false                                                 
-# 53  25  75    24   8   7    5^2:((Q8:3)'4)  SL2(3):4   4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
-# 54  25  75    48   16  30   5^2:((Q8:3)'4)  SL2(3):4   4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
-# 55  25  150   24   4   3    5^2:((Q8:3)'4)  SL2(3):4   4^2          AGL2(5)         2      2           45     1       17      true             false            true             false                                                 
-# 56  25  200   96   12  44   5^2:((Q8:3)'4)  SL2(3):4   12           5^2:((Q8:3)'4)  2      2           45     1       20      true             false            true             false                                                 
-# 57  25  300   48   4   6    5^2:((Q8:3)'4)  SL2(3):4   D8           5^2:((Q8:3)'4)  2      2           45     1       26      true             false            true             false                                                 
-# 58  25  300   96   8   28   5^2:((Q8:3)'4)  SL2(3):4   4x2          5^2:((Q8:3)'4)  2      2           45     1       24      true             false            true             false                                                 
-# 59  25  300   96   8   28   5^2:((Q8:3)'4)  SL2(3):4   8            5^2:((Q8:3)'4)  2      2           45     1       28      true             false            true             false                                                 
-# 60  25  400   96   6   20   5^2:((Q8:3)'4)  SL2(3):4   6            5^2:((Q8:3)'4)  2      2           45     1       29      true             false            true             false                                                 
-# 61  25  600   96   4   12   5^2:((Q8:3)'4)  SL2(3):4   4            5^2:((Q8:3)'4)  2      2           45     1       32      true             false            true             false                                                 
-# 62  25  800   96   3   8    5^2:((Q8:3)'4)  SL2(3):4   3            5^2:((Q8:3)'4)  2      2           45     1       36      true             false            true             false                                                 
-# 63  25  30    6    5   1    ASL2(5)         SL2(5)     5^2:4        AGL2(5)         2      2           46     1       3       true             false            true             true                 2                                
-# 64  25  30    24   20  19   ASL2(5)         SL2(5)     5^2:4        AGL2(5)         2      2           46     1       3       true             false            true             true                 1                                
-# 65  25  60    24   10  9    ASL2(5)         SL2(5)     5xD10        AGL2(5)         2      2           46     1       6       true             false            true             false                                                 
-# 66  25  150   24   4   3    ASL2(5)         SL2(5)     5:4          AGL2(5)         2      2           46     1       11      true             false            true             false                                                 
-# 67  25  250   120  12  55   ASL2(5)         SL2(5)     3:4          ASL2(5):2       2      2           46     1       12      true             false            true             false                                                 
-# 68  25  375   120  8   35   ASL2(5)         SL2(5)     Q8           AGL2(5)         2      2           46     1       15      true             false            true             false                                                 
-# 69  25  500   120  6   25   ASL2(5)         SL2(5)     6            ASL2(5):2       2      2           46     1       16      true             false            true             false                                                 
-# 70  25  600   120  5   20   ASL2(5)         SL2(5)     5            AGL2(5)         2      2           46     1       19      true             false            true             false                                                 
-# 71  25  750   120  4   15   ASL2(5)         SL2(5)     4            ASL2(5):2       2      2           46     1       20      true             false            true             false                                                 
-# 72  25  1000  120  3   10   ASL2(5)         SL2(5)     3            ASL2(5):2       2      2           46     1       21      true             false            true             false                                                 
-# 73  25  30    6    5   1    ASL2(5):2       SL2(5):2   (5:4)xD10    AGL2(5)         2      2           47     1       2       true             false            true             true                 2                                
-# 74  25  30    24   20  19   ASL2(5):2       SL2(5):2   (5:4)xD10    AGL2(5)         2      2           47     1       2       true             false            true             true                 1                                
-# 75  25  60    24   10  9    ASL2(5):2       SL2(5):2   D10xD10      AGL2(5)         2      2           47     1       10      true             false            true             false                                                 
-# 76  25  150   24   4   3    ASL2(5):2       SL2(5):2   4xD10        AGL2(5)         2      2           47     1       24      true             false            true             false                                                 
-# 77  25  250   120  12  55   ASL2(5):2       SL2(5):2   4xS3         ASL2(5):2       2      2           47     1       29      true             false            true             false                                                 
-# 78  25  375   120  8   35   ASL2(5):2       SL2(5):2   (4x2):2      AGL2(5)         2      2           47     1       37      true             false            true             false                                                 
-# 79  25  500   120  6   25   ASL2(5):2       SL2(5):2   D12          ASL2(5):2       2      2           47     1       38      true             false            true             false                                                 
-# 80  25  600   120  5   20   ASL2(5):2       SL2(5):2   D10          AGL2(5)         2      2           47     1       41      true             false            true             false                                                 
-# 81  25  750   120  4   15   ASL2(5):2       SL2(5):2   D8           ASL2(5):2       2      2           47     1       48      true             false            true             false                                                 
-# 82  25  1000  120  3   10   ASL2(5):2       SL2(5):2   S3           ASL2(5):2       2      2           47     1       51      true             false            true             false                                                 
-# 83  25  30    6    5   1    AGL2(5)         GL2(5)     (5:4)x(5:4)  AGL2(5)         2      2           48     1       2       true             false            true             true                 2                                
-# 84  25  30    24   20  19   AGL2(5)         GL2(5)     (5:4)x(5:4)  AGL2(5)         2      2           48     1       2       true             false            true             true                 1                                
-# 85  25  60    24   10  9    AGL2(5)         GL2(5)     5^2:(4x2)    AGL2(5)         2      2           48     1       11      true             false            true             false                                                 
-# 86  25  150   24   4   3    AGL2(5)         GL2(5)     4x(5:4)      AGL2(5)         2      2           48     1       35      true             false            true             false                                                 
-# 87  25  375   120  8   35   AGL2(5)         GL2(5)     4^2:2        AGL2(5)         2      2           48     1       52      true             false            true             false                                                 
-# 88  25  375   240  16  150  AGL2(5)         GL2(5)     4^2:2        AGL2(5)         2      2           48     1       52      true             false            true             false                                                 
-# 89  25  500   240  12  110  AGL2(5)         GL2(5)     4xS3         AGL2(5)         2      2           48     1       59      true             false            true             false                                                 
-# 90  25  600   120  5   20   AGL2(5)         GL2(5)     5:4          AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 91  25  600   240  10  90   AGL2(5)         GL2(5)     5:4          AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 92  25  600   240  10  90   AGL2(5)         GL2(5)     5:4          AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 93  25  1000  240  6   50   AGL2(5)         GL2(5)     D12          AGL2(5)         2      2           48     1       78      true             false            true             false                                                 
-# 94  25  1500  240  4   30   AGL2(5)         GL2(5)     D8           AGL2(5)         2      2           48     1       89      true             false            true             false                                                 
-# 95  25  1500  480  8   140  AGL2(5)         GL2(5)     4x2          AGL2(5)         2      2           48     1       88      true             false            true             false                                                 
-# 96  25  2000  240  3   20   AGL2(5)         GL2(5)     S3           AGL2(5)         2      2           48     1       93      true             false            true             false                                                 
-# 97  25  3000  480  4   60   AGL2(5)         GL2(5)     4            AGL2(5)         2      2           48     1       98      true             false            true             false                                                 
+# 50  25  30    6    5   1    5^2:((Q8:3)'4)  SL(2,3):4  4x(5:4)      AGL(2,5)        2      2           45     1       2       true             false            true             true                 2                                
+# 51  25  30    24   20  19   5^2:((Q8:3)'4)  SL(2,3):4  4x(5:4)      AGL(2,5)        2      2           45     1       2       true             false            true             true                 1                                
+# 52  25  60    24   10  9    5^2:((Q8:3)'4)  SL(2,3):4  2x(5:4)      AGL(2,5)        2      2           45     1       4       true             false            true             false                                                 
+# 53  25  75    24   8   7    5^2:((Q8:3)'4)  SL(2,3):4  4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
+# 54  25  75    48   16  30   5^2:((Q8:3)'4)  SL(2,3):4  4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
+# 55  25  150   24   4   3    5^2:((Q8:3)'4)  SL(2,3):4  4^2          AGL(2,5)        2      2           45     1       17      true             false            true             false                                                 
+# 56  25  200   96   12  44   5^2:((Q8:3)'4)  SL(2,3):4  12           5^2:((Q8:3)'4)  2      2           45     1       20      true             false            true             false                                                 
+# 57  25  300   48   4   6    5^2:((Q8:3)'4)  SL(2,3):4  D8           5^2:((Q8:3)'4)  2      2           45     1       26      true             false            true             false                                                 
+# 58  25  300   96   8   28   5^2:((Q8:3)'4)  SL(2,3):4  4x2          5^2:((Q8:3)'4)  2      2           45     1       24      true             false            true             false                                                 
+# 59  25  300   96   8   28   5^2:((Q8:3)'4)  SL(2,3):4  8            5^2:((Q8:3)'4)  2      2           45     1       28      true             false            true             false                                                 
+# 60  25  400   96   6   20   5^2:((Q8:3)'4)  SL(2,3):4  6            5^2:((Q8:3)'4)  2      2           45     1       29      true             false            true             false                                                 
+# 61  25  600   96   4   12   5^2:((Q8:3)'4)  SL(2,3):4  4            5^2:((Q8:3)'4)  2      2           45     1       32      true             false            true             false                                                 
+# 62  25  800   96   3   8    5^2:((Q8:3)'4)  SL(2,3):4  3            5^2:((Q8:3)'4)  2      2           45     1       36      true             false            true             false                                                 
+# 63  25  30    6    5   1    ASL(2,5)        SL(2,5)    5^2:4        AGL(2,5)        2      2           46     1       3       true             false            true             true                 2                                
+# 64  25  30    24   20  19   ASL(2,5)        SL(2,5)    5^2:4        AGL(2,5)        2      2           46     1       3       true             false            true             true                 1                                
+# 65  25  60    24   10  9    ASL(2,5)        SL(2,5)    5xD10        AGL(2,5)        2      2           46     1       6       true             false            true             false                                                 
+# 66  25  150   24   4   3    ASL(2,5)        SL(2,5)    5:4          AGL(2,5)        2      2           46     1       11      true             false            true             false                                                 
+# 67  25  250   120  12  55   ASL(2,5)        SL(2,5)    3:4          ASL(2,5):2      2      2           46     1       12      true             false            true             false                                                 
+# 68  25  375   120  8   35   ASL(2,5)        SL(2,5)    Q8           AGL(2,5)        2      2           46     1       15      true             false            true             false                                                 
+# 69  25  500   120  6   25   ASL(2,5)        SL(2,5)    6            ASL(2,5):2      2      2           46     1       16      true             false            true             false                                                 
+# 70  25  600   120  5   20   ASL(2,5)        SL(2,5)    5            AGL(2,5)        2      2           46     1       19      true             false            true             false                                                 
+# 71  25  750   120  4   15   ASL(2,5)        SL(2,5)    4            ASL(2,5):2      2      2           46     1       20      true             false            true             false                                                 
+# 72  25  1000  120  3   10   ASL(2,5)        SL(2,5)    3            ASL(2,5):2      2      2           46     1       21      true             false            true             false                                                 
+# 73  25  30    6    5   1    ASL(2,5):2      SL(2,5):2  (5:4)xD10    AGL(2,5)        2      2           47     1       2       true             false            true             true                 2                                
+# 74  25  30    24   20  19   ASL(2,5):2      SL(2,5):2  (5:4)xD10    AGL(2,5)        2      2           47     1       2       true             false            true             true                 1                                
+# 75  25  60    24   10  9    ASL(2,5):2      SL(2,5):2  D10xD10      AGL(2,5)        2      2           47     1       10      true             false            true             false                                                 
+# 76  25  150   24   4   3    ASL(2,5):2      SL(2,5):2  4xD10        AGL(2,5)        2      2           47     1       24      true             false            true             false                                                 
+# 77  25  250   120  12  55   ASL(2,5):2      SL(2,5):2  4xS3         ASL(2,5):2      2      2           47     1       29      true             false            true             false                                                 
+# 78  25  375   120  8   35   ASL(2,5):2      SL(2,5):2  (4x2):2      AGL(2,5)        2      2           47     1       37      true             false            true             false                                                 
+# 79  25  500   120  6   25   ASL(2,5):2      SL(2,5):2  D12          ASL(2,5):2      2      2           47     1       38      true             false            true             false                                                 
+# 80  25  600   120  5   20   ASL(2,5):2      SL(2,5):2  D10          AGL(2,5)        2      2           47     1       41      true             false            true             false                                                 
+# 81  25  750   120  4   15   ASL(2,5):2      SL(2,5):2  D8           ASL(2,5):2      2      2           47     1       48      true             false            true             false                                                 
+# 82  25  1000  120  3   10   ASL(2,5):2      SL(2,5):2  S3           ASL(2,5):2      2      2           47     1       51      true             false            true             false                                                 
+# 83  25  30    6    5   1    AGL(2,5)        GL(2,5)    (5:4)x(5:4)  AGL(2,5)        2      2           48     1       2       true             false            true             true                 2                                
+# 84  25  30    24   20  19   AGL(2,5)        GL(2,5)    (5:4)x(5:4)  AGL(2,5)        2      2           48     1       2       true             false            true             true                 1                                
+# 85  25  60    24   10  9    AGL(2,5)        GL(2,5)    5^2:(4x2)    AGL(2,5)        2      2           48     1       11      true             false            true             false                                                 
+# 86  25  150   24   4   3    AGL(2,5)        GL(2,5)    4x(5:4)      AGL(2,5)        2      2           48     1       35      true             false            true             false                                                 
+# 87  25  375   120  8   35   AGL(2,5)        GL(2,5)    4^2:2        AGL(2,5)        2      2           48     1       52      true             false            true             false                                                 
+# 88  25  375   240  16  150  AGL(2,5)        GL(2,5)    4^2:2        AGL(2,5)        2      2           48     1       52      true             false            true             false                                                 
+# 89  25  500   240  12  110  AGL(2,5)        GL(2,5)    4xS3         AGL(2,5)        2      2           48     1       59      true             false            true             false                                                 
+# 90  25  600   120  5   20   AGL(2,5)        GL(2,5)    5:4          AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 91  25  600   240  10  90   AGL(2,5)        GL(2,5)    5:4          AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 92  25  600   240  10  90   AGL(2,5)        GL(2,5)    5:4          AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 93  25  1000  240  6   50   AGL(2,5)        GL(2,5)    D12          AGL(2,5)        2      2           48     1       78      true             false            true             false                                                 
+# 94  25  1500  240  4   30   AGL(2,5)        GL(2,5)    D8           AGL(2,5)        2      2           48     1       89      true             false            true             false                                                 
+# 95  25  1500  480  8   140  AGL(2,5)        GL(2,5)    4x2          AGL(2,5)        2      2           48     1       88      true             false            true             false                                                 
+# 96  25  2000  240  3   20   AGL(2,5)        GL(2,5)    S3           AGL(2,5)        2      2           48     1       93      true             false            true             false                                                 
+# 97  25  3000  480  4   60   AGL(2,5)        GL(2,5)    4            AGL(2,5)        2      2           48     1       98      true             false            true             false                                                 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr   v   b     r    k   λ    G               Gα         GB           Aut(D)          rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1    25  30    6    5   1    5^2:Q8:3        SL2(3)     5:4          AGL2(5)         2      2           34     1       2       true             false            true             true                 2                                
-# 2    25  30    24   20  19   5^2:Q8:3        SL2(3)     5:4          AGL2(5)         2      2           34     1       2       true             false            true             true                 1                                
-# 3    25  60    24   10  9    5^2:Q8:3        SL2(3)     D10          AGL2(5)         2      2           34     1       3       true             false            true             false                                                 
-# 4    25  75    24   8   7    5^2:Q8:3        SL2(3)     Q8           5^2:((Q8:3)'4)  2      2           34     1       4       true             false            true             false                                                 
-# 5    25  100   24   6   5    5^2:Q8:3        SL2(3)     6            5^2:Q8:3        2      2           34     1       5       true             false            true             false                                                 
+# 1    25  30    6    5   1    5^2:Q8:3        SL(2,3)    5:4          AGL(2,5)        2      2           34     1       2       true             false            true             true                 2                                
+# 2    25  30    24   20  19   5^2:Q8:3        SL(2,3)    5:4          AGL(2,5)        2      2           34     1       2       true             false            true             true                 1                                
+# 3    25  60    24   10  9    5^2:Q8:3        SL(2,3)    D10          AGL(2,5)        2      2           34     1       3       true             false            true             false                                                 
+# 4    25  75    24   8   7    5^2:Q8:3        SL(2,3)    Q8           5^2:((Q8:3)'4)  2      2           34     1       4       true             false            true             false                                                 
+# 5    25  100   24   6   5    5^2:Q8:3        SL(2,3)    6            5^2:Q8:3        2      2           34     1       5       true             false            true             false                                                 
 # 6    25  100   24   6   5    5^2:Q8:3        34         1            5               2      2           34     1       5       true             false            true             false                                                 
 # 7    25  100   24   6   5    5^2:Q8:3        34         1            5               2      2           34     1       5       true             false            true             false                                                 
 # 8    25  100   24   6   5    5^2:Q8:3        34         1            5               2      2           34     1       5       true             false            true             false                                                 
-# 9    25  150   24   4   3    5^2:Q8:3        SL2(3)     4            AGL2(5)         2      2           34     1       7       true             false            true             false                                                 
-# 10   25  150   24   4   3    5^2:Q8:3        SL2(3)     4            5^2:((Q8:3)'2)  2      2           34     1       7       true             false            true             false                                                 
+# 9    25  150   24   4   3    5^2:Q8:3        SL(2,3)    4            AGL(2,5)        2      2           34     1       7       true             false            true             false                                                 
+# 10   25  150   24   4   3    5^2:Q8:3        SL(2,3)    4            5^2:((Q8:3)'2)  2      2           34     1       7       true             false            true             false                                                 
 # 11   25  150   24   4   3    5^2:Q8:3        34         1            7               2      2           34     1       7       true             false            true             false                                                 
 # 12   25  200   24   3   2    5^2:Q8:3        34         1            8               2      2           34     1       8       true             false            true             false                                                 
 # 13   25  200   24   3   2    5^2:Q8:3        34         1            8               2      2           34     1       8       true             false            true             false                                                 
 # 14   25  200   24   3   2    5^2:Q8:3        34         1            8               2      2           34     1       8       true             false            true             false                                                 
-# 15   25  200   24   3   2    5^2:Q8:3        SL2(3)     3            5^2:Q8:3        2      2           34     1       8       true             false            true             false                                                 
-# 16   25  30    6    5   1    5^2:3:8         3:8        5:4          AGL2(5)         2      2           36     1       2       true             false            true             true                 2                                
-# 17   25  30    24   20  19   5^2:3:8         3:8        5:4          AGL2(5)         2      2           36     1       2       true             false            true             true                 1                                
-# 18   25  50    24   12  11   5^2:3:8         3:8        12           AΓL1(25)        2      2           36     1       3       true             false            true             false                                                 
-# 19   25  60    24   10  9    5^2:3:8         3:8        D10          AGL2(5)         2      2           36     1       4       true             false            true             false                                                 
+# 15   25  200   24   3   2    5^2:Q8:3        SL(2,3)    3            5^2:Q8:3        2      2           34     1       8       true             false            true             false                                                 
+# 16   25  30    6    5   1    5^2:3:8         3:8        5:4          AGL(2,5)        2      2           36     1       2       true             false            true             true                 2                                
+# 17   25  30    24   20  19   5^2:3:8         3:8        5:4          AGL(2,5)        2      2           36     1       2       true             false            true             true                 1                                
+# 18   25  50    24   12  11   5^2:3:8         3:8        12           AΓL(1,25)       2      2           36     1       3       true             false            true             false                                                 
+# 19   25  60    24   10  9    5^2:3:8         3:8        D10          AGL(2,5)        2      2           36     1       4       true             false            true             false                                                 
 # 20   25  75    24   8   7    5^2:3:8         36         1            5               2      2           36     1       5       true             false            true             false                                                 
 # 21   25  75    24   8   7    5^2:3:8         3:8        8            5^2:((Q8:3)'4)  2      2           36     1       5       true             false            true             false                                                 
-# 22   25  75    24   8   7    5^2:3:8         3:8        8            AΓL1(25)        2      2           36     1       5       true             false            true             false                                                 
-# 23   25  100   24   6   5    5^2:3:8         3:8        6            AΓL1(25)        2      2           36     1       6       true             false            true             false                                                 
-# 24   25  150   24   4   3    5^2:3:8         3:8        4            AGL2(5)         2      2           36     1       8       true             false            true             false                                                 
-# 25   25  200   24   3   2    5^2:3:8         3:8        3            AΓL1(25)        2      2           36     1       9       true             false            true             false                                                 
-# 26   25  30    6    5   1    AGL1(25)        24         5:4          AGL2(5)         2      2           37     1       2       true             false            true             true                 2                                
-# 27   25  30    24   20  19   AGL1(25)        24         5:4          AGL2(5)         2      2           37     1       2       true             false            true             true                 1                                
-# 28   25  50    24   12  11   AGL1(25)        24         12           AΓL1(25)        2      2           37     1       3       true             false            true             false                                                 
-# 29   25  60    24   10  9    AGL1(25)        24         D10          AGL2(5)         2      2           37     1       4       true             false            true             false                                                 
-# 30   25  75    24   8   7    AGL1(25)        24         8            AΓL1(25)        2      2           37     1       5       true             false            true             false                                                 
-# 31   25  100   24   6   5    AGL1(25)        24         6            AΓL1(25)        2      2           37     1       6       true             false            true             false                                                 
-# 32   25  150   24   4   3    AGL1(25)        24         4            AGL2(5)         2      2           37     1       8       true             false            true             false                                                 
-# 33   25  200   24   3   2    AGL1(25)        24         3            AΓL1(25)        2      2           37     1       9       true             false            true             false                                                 
-# 34   25  100   16   4   2    5^2:O+2(5)      4^2:2      D8           5^2:O+2(5)      3      3           38     1       27      true             false            true             false                                                 
-# 35   25  200   32   4   4    5^2:O+2(5)      4^2:2      4            5^2:O+2(5)      3      3           38     1       31      true             false            true             false                                                 
-# 36   25  30    6    5   1    AΓL1(25)        24:2       2x(5:4)      AGL2(5)         2      2           42     1       2       true             false            true             true                 2                                
-# 37   25  30    24   20  19   AΓL1(25)        24:2       2x(5:4)      AGL2(5)         2      2           42     1       2       true             false            true             true                 1                                
-# 38   25  50    24   12  11   AΓL1(25)        24:2       4xS3         AΓL1(25)        2      2           42     1       3       true             false            true             false                                                 
-# 39   25  60    24   10  9    AΓL1(25)        24:2       D20          AGL2(5)         2      2           42     1       6       true             false            true             false                                                 
-# 40   25  75    24   8   7    AΓL1(25)        24:2       8:2          AΓL1(25)        2      2           42     1       9       true             false            true             false                                                 
-# 41   25  75    48   16  30   AΓL1(25)        24:2       8:2          AΓL1(25)        2      2           42     1       9       true             false            true             false                                                 
-# 42   25  100   24   6   5    AΓL1(25)        24:2       D12          AΓL1(25)        2      2           42     1       10      true             false            true             false                                                 
-# 43   25  150   24   4   3    AΓL1(25)        24:2       4x2          AGL2(5)         2      2           42     1       16      true             false            true             false                                                 
-# 44   25  150   48   8   14   AΓL1(25)        24:2       4x2          AΓL1(25)        2      2           42     1       16      true             false            true             false                                                 
-# 45   25  150   48   8   14   AΓL1(25)        24:2       8            AΓL1(25)        2      2           42     1       17      true             false            true             false                                                 
-# 46   25  200   24   3   2    AΓL1(25)        24:2       S3           AΓL1(25)        2      2           42     1       19      true             false            true             false                                                 
-# 47   25  300   48   4   6    AΓL1(25)        24:2       2^2          AΓL1(25)        2      2           42     1       22      true             false            true             false                                                 
-# 48   25  300   48   4   6    AΓL1(25)        24:2       4            AΓL1(25)        2      2           42     1       23      true             false            true             false                                                 
-# 49   25  30    6    5   1    5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL2(5)         2      2           43     1       2       true             false            true             true                 2                                
-# 50   25  30    24   20  19   5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL2(5)         2      2           43     1       2       true             false            true             true                 1                                
-# 51   25  60    24   10  9    5^2:((Q8:3)'2)  (4x2):2:3  D20          AGL2(5)         2      2           43     1       6       true             false            true             false                                                 
+# 22   25  75    24   8   7    5^2:3:8         3:8        8            AΓL(1,25)       2      2           36     1       5       true             false            true             false                                                 
+# 23   25  100   24   6   5    5^2:3:8         3:8        6            AΓL(1,25)       2      2           36     1       6       true             false            true             false                                                 
+# 24   25  150   24   4   3    5^2:3:8         3:8        4            AGL(2,5)        2      2           36     1       8       true             false            true             false                                                 
+# 25   25  200   24   3   2    5^2:3:8         3:8        3            AΓL(1,25)       2      2           36     1       9       true             false            true             false                                                 
+# 26   25  30    6    5   1    AGL(1,25)       24         5:4          AGL(2,5)        2      2           37     1       2       true             false            true             true                 2                                
+# 27   25  30    24   20  19   AGL(1,25)       24         5:4          AGL(2,5)        2      2           37     1       2       true             false            true             true                 1                                
+# 28   25  50    24   12  11   AGL(1,25)       24         12           AΓL(1,25)       2      2           37     1       3       true             false            true             false                                                 
+# 29   25  60    24   10  9    AGL(1,25)       24         D10          AGL(2,5)        2      2           37     1       4       true             false            true             false                                                 
+# 30   25  75    24   8   7    AGL(1,25)       24         8            AΓL(1,25)       2      2           37     1       5       true             false            true             false                                                 
+# 31   25  100   24   6   5    AGL(1,25)       24         6            AΓL(1,25)       2      2           37     1       6       true             false            true             false                                                 
+# 32   25  150   24   4   3    AGL(1,25)       24         4            AGL(2,5)        2      2           37     1       8       true             false            true             false                                                 
+# 33   25  200   24   3   2    AGL(1,25)       24         3            AΓL(1,25)       2      2           37     1       9       true             false            true             false                                                 
+# 34   25  100   16   4   2    5^2:O+(2,5)     4^2:2      D8           5^2:O+(2,5)     3      3           38     1       27      true             false            true             false                                                 
+# 35   25  200   32   4   4    5^2:O+(2,5)     4^2:2      4            5^2:O+(2,5)     3      3           38     1       31      true             false            true             false                                                 
+# 36   25  30    6    5   1    AΓL(1,25)       24:2       2x(5:4)      AGL(2,5)        2      2           42     1       2       true             false            true             true                 2                                
+# 37   25  30    24   20  19   AΓL(1,25)       24:2       2x(5:4)      AGL(2,5)        2      2           42     1       2       true             false            true             true                 1                                
+# 38   25  50    24   12  11   AΓL(1,25)       24:2       4xS3         AΓL(1,25)       2      2           42     1       3       true             false            true             false                                                 
+# 39   25  60    24   10  9    AΓL(1,25)       24:2       D20          AGL(2,5)        2      2           42     1       6       true             false            true             false                                                 
+# 40   25  75    24   8   7    AΓL(1,25)       24:2       8:2          AΓL(1,25)       2      2           42     1       9       true             false            true             false                                                 
+# 41   25  75    48   16  30   AΓL(1,25)       24:2       8:2          AΓL(1,25)       2      2           42     1       9       true             false            true             false                                                 
+# 42   25  100   24   6   5    AΓL(1,25)       24:2       D12          AΓL(1,25)       2      2           42     1       10      true             false            true             false                                                 
+# 43   25  150   24   4   3    AΓL(1,25)       24:2       4x2          AGL(2,5)        2      2           42     1       16      true             false            true             false                                                 
+# 44   25  150   48   8   14   AΓL(1,25)       24:2       4x2          AΓL(1,25)       2      2           42     1       16      true             false            true             false                                                 
+# 45   25  150   48   8   14   AΓL(1,25)       24:2       8            AΓL(1,25)       2      2           42     1       17      true             false            true             false                                                 
+# 46   25  200   24   3   2    AΓL(1,25)       24:2       S3           AΓL(1,25)       2      2           42     1       19      true             false            true             false                                                 
+# 47   25  300   48   4   6    AΓL(1,25)       24:2       2^2          AΓL(1,25)       2      2           42     1       22      true             false            true             false                                                 
+# 48   25  300   48   4   6    AΓL(1,25)       24:2       4            AΓL(1,25)       2      2           42     1       23      true             false            true             false                                                 
+# 49   25  30    6    5   1    5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL(2,5)        2      2           43     1       2       true             false            true             true                 2                                
+# 50   25  30    24   20  19   5^2:((Q8:3)'2)  (4x2):2:3  2x(5:4)      AGL(2,5)        2      2           43     1       2       true             false            true             true                 1                                
+# 51   25  60    24   10  9    5^2:((Q8:3)'2)  (4x2):2:3  D20          AGL(2,5)        2      2           43     1       6       true             false            true             false                                                 
 # 52   25  75    24   8   7    5^2:((Q8:3)'2)  (4x2):2:3  (4x2):2      5^2:((Q8:3)'4)  2      2           43     1       7       true             false            true             false                                                 
 # 53   25  100   48   12  22   5^2:((Q8:3)'2)  (4x2):2:3  12           5^2:((Q8:3)'2)  2      2           43     1       8       true             false            true             false                                                 
 # 54   25  100   48   12  22   5^2:((Q8:3)'2)  43         1            8               2      2           43     1       8       true             false            true             false                                                 
 # 55   25  150   24   4   3    5^2:((Q8:3)'2)  (4x2):2:3  D8           5^2:((Q8:3)'2)  2      2           43     1       13      true             false            true             false                                                 
 # 56   25  150   24   4   3    5^2:((Q8:3)'2)  43         1            13              2      2           43     1       13      true             false            true             false                                                 
-# 57   25  150   24   4   3    5^2:((Q8:3)'2)  (4x2):2:3  4x2          AGL2(5)         2      2           43     1       14      true             false            true             false                                                 
+# 57   25  150   24   4   3    5^2:((Q8:3)'2)  (4x2):2:3  4x2          AGL(2,5)        2      2           43     1       14      true             false            true             false                                                 
 # 58   25  200   48   6   10   5^2:((Q8:3)'2)  43         1            15              2      2           43     1       15      true             false            true             false                                                 
 # 59   25  200   48   6   10   5^2:((Q8:3)'2)  (4x2):2:3  6            5^2:((Q8:3)'2)  2      2           43     1       15      true             false            true             false                                                 
 # 60   25  400   48   3   4    5^2:((Q8:3)'2)  43         1            20              2      2           43     1       20      true             false            true             false                                                 
 # 61   25  400   48   3   4    5^2:((Q8:3)'2)  (4x2):2:3  3            5^2:((Q8:3)'2)  2      2           43     1       20      true             false            true             false                                                 
-# 62   25  30    6    5   1    5^2:((Q8:3)'4)  SL2(3):4   4x(5:4)      AGL2(5)         2      2           45     1       2       true             false            true             true                 2                                
-# 63   25  30    24   20  19   5^2:((Q8:3)'4)  SL2(3):4   4x(5:4)      AGL2(5)         2      2           45     1       2       true             false            true             true                 1                                
-# 64   25  60    24   10  9    5^2:((Q8:3)'4)  SL2(3):4   2x(5:4)      AGL2(5)         2      2           45     1       4       true             false            true             false                                                 
-# 65   25  75    24   8   7    5^2:((Q8:3)'4)  SL2(3):4   4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
-# 66   25  75    48   16  30   5^2:((Q8:3)'4)  SL2(3):4   4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
-# 67   25  150   24   4   3    5^2:((Q8:3)'4)  SL2(3):4   4^2          AGL2(5)         2      2           45     1       17      true             false            true             false                                                 
-# 68   25  200   96   12  44   5^2:((Q8:3)'4)  SL2(3):4   12           5^2:((Q8:3)'4)  2      2           45     1       20      true             false            true             false                                                 
-# 69   25  300   48   4   6    5^2:((Q8:3)'4)  SL2(3):4   D8           5^2:((Q8:3)'4)  2      2           45     1       26      true             false            true             false                                                 
-# 70   25  300   96   8   28   5^2:((Q8:3)'4)  SL2(3):4   4x2          5^2:((Q8:3)'4)  2      2           45     1       24      true             false            true             false                                                 
-# 71   25  300   96   8   28   5^2:((Q8:3)'4)  SL2(3):4   8            5^2:((Q8:3)'4)  2      2           45     1       28      true             false            true             false                                                 
-# 72   25  400   96   6   20   5^2:((Q8:3)'4)  SL2(3):4   6            5^2:((Q8:3)'4)  2      2           45     1       29      true             false            true             false                                                 
-# 73   25  600   96   4   12   5^2:((Q8:3)'4)  SL2(3):4   4            5^2:((Q8:3)'4)  2      2           45     1       32      true             false            true             false                                                 
-# 74   25  800   96   3   8    5^2:((Q8:3)'4)  SL2(3):4   3            5^2:((Q8:3)'4)  2      2           45     1       36      true             false            true             false                                                 
-# 75   25  30    6    5   1    ASL2(5)         SL2(5)     5^2:4        AGL2(5)         2      2           46     1       3       true             false            true             true                 2                                
-# 76   25  30    24   20  19   ASL2(5)         SL2(5)     5^2:4        AGL2(5)         2      2           46     1       3       true             false            true             true                 1                                
-# 77   25  60    24   10  9    ASL2(5)         SL2(5)     5xD10        AGL2(5)         2      2           46     1       6       true             false            true             false                                                 
-# 78   25  150   24   4   3    ASL2(5)         SL2(5)     5:4          AGL2(5)         2      2           46     1       11      true             false            true             false                                                 
-# 79   25  250   120  12  55   ASL2(5)         SL2(5)     3:4          ASL2(5):2       2      2           46     1       12      true             false            true             false                                                 
-# 80   25  250   120  12  55   ASL2(5)         46         1            12              2      2           46     1       12      true             false            true             false                                                 
-# 81   25  375   120  8   35   ASL2(5)         SL2(5)     Q8           AGL2(5)         2      2           46     1       15      true             false            true             false                                                 
-# 82   25  500   120  6   25   ASL2(5)         46         1            16              2      2           46     1       16      true             false            true             false                                                 
-# 83   25  500   120  6   25   ASL2(5)         SL2(5)     6            ASL2(5):2       2      2           46     1       16      true             false            true             false                                                 
-# 84   25  600   120  5   20   ASL2(5)         SL2(5)     5            AGL2(5)         2      2           46     1       19      true             false            true             false                                                 
-# 85   25  750   120  4   15   ASL2(5)         46         1            20              2      2           46     1       20      true             false            true             false                                                 
-# 86   25  750   120  4   15   ASL2(5)         SL2(5)     4            ASL2(5):2       2      2           46     1       20      true             false            true             false                                                 
-# 87   25  1000  120  3   10   ASL2(5)         46         1            21              2      2           46     1       21      true             false            true             false                                                 
-# 88   25  1000  120  3   10   ASL2(5)         SL2(5)     3            ASL2(5):2       2      2           46     1       21      true             false            true             false                                                 
-# 89   25  30    6    5   1    ASL2(5):2       SL2(5):2   (5:4)xD10    AGL2(5)         2      2           47     1       2       true             false            true             true                 2                                
-# 90   25  30    24   20  19   ASL2(5):2       SL2(5):2   (5:4)xD10    AGL2(5)         2      2           47     1       2       true             false            true             true                 1                                
-# 91   25  60    24   10  9    ASL2(5):2       SL2(5):2   D10xD10      AGL2(5)         2      2           47     1       10      true             false            true             false                                                 
-# 92   25  150   24   4   3    ASL2(5):2       SL2(5):2   4xD10        AGL2(5)         2      2           47     1       24      true             false            true             false                                                 
-# 93   25  250   120  12  55   ASL2(5):2       47         1            29              2      2           47     1       29      true             false            true             false                                                 
-# 94   25  250   120  12  55   ASL2(5):2       SL2(5):2   4xS3         ASL2(5):2       2      2           47     1       29      true             false            true             false                                                 
-# 95   25  375   120  8   35   ASL2(5):2       SL2(5):2   (4x2):2      AGL2(5)         2      2           47     1       37      true             false            true             false                                                 
-# 96   25  500   120  6   25   ASL2(5):2       47         1            38              2      2           47     1       38      true             false            true             false                                                 
-# 97   25  500   120  6   25   ASL2(5):2       SL2(5):2   D12          ASL2(5):2       2      2           47     1       38      true             false            true             false                                                 
-# 98   25  600   120  5   20   ASL2(5):2       SL2(5):2   D10          AGL2(5)         2      2           47     1       41      true             false            true             false                                                 
-# 99   25  750   120  4   15   ASL2(5):2       SL2(5):2   D8           ASL2(5):2       2      2           47     1       48      true             false            true             false                                                 
-# 100  25  750   120  4   15   ASL2(5):2       47         1            48              2      2           47     1       48      true             false            true             false                                                 
-# 101  25  1000  120  3   10   ASL2(5):2       [          ]            47              2      2           47     1       52      true             false            true             false                                                 
-# 102  25  1000  120  3   10   ASL2(5):2       SL2(5):2   S3           ASL2(5):2       2      2           47     1       51      true             false            true             false                                                 
-# 103  25  30    6    5   1    AGL2(5)         GL2(5)     (5:4)x(5:4)  AGL2(5)         2      2           48     1       2       true             false            true             true                 2                                
-# 104  25  30    24   20  19   AGL2(5)         GL2(5)     (5:4)x(5:4)  AGL2(5)         2      2           48     1       2       true             false            true             true                 1                                
-# 105  25  60    24   10  9    AGL2(5)         GL2(5)     5^2:(4x2)    AGL2(5)         2      2           48     1       11      true             false            true             false                                                 
-# 106  25  150   24   4   3    AGL2(5)         GL2(5)     4x(5:4)      AGL2(5)         2      2           48     1       35      true             false            true             false                                                 
-# 107  25  375   120  8   35   AGL2(5)         GL2(5)     4^2:2        AGL2(5)         2      2           48     1       52      true             false            true             false                                                 
-# 108  25  375   240  16  150  AGL2(5)         GL2(5)     4^2:2        AGL2(5)         2      2           48     1       52      true             false            true             false                                                 
-# 109  25  500   240  12  110  AGL2(5)         GL2(5)     4xS3         AGL2(5)         2      2           48     1       59      true             false            true             false                                                 
-# 110  25  600   120  5   20   AGL2(5)         GL2(5)     5:4          AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 111  25  600   240  10  90   AGL2(5)         GL2(5)     5:4          AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 112  25  600   240  10  90   AGL2(5)         GL2(5)     5:4          AGL2(5)         2      2           48     1       60      true             false            true             false                                                 
-# 113  25  1000  240  6   50   AGL2(5)         GL2(5)     D12          AGL2(5)         2      2           48     1       78      true             false            true             false                                                 
-# 114  25  1500  240  4   30   AGL2(5)         GL2(5)     D8           AGL2(5)         2      2           48     1       89      true             false            true             false                                                 
-# 115  25  1500  480  8   140  AGL2(5)         GL2(5)     4x2          AGL2(5)         2      2           48     1       88      true             false            true             false                                                 
-# 116  25  2000  240  3   20   AGL2(5)         GL2(5)     S3           AGL2(5)         2      2           48     1       93      true             false            true             false                                                 
-# 117  25  3000  480  4   60   AGL2(5)         GL2(5)     4            AGL2(5)         2      2           48     1       98      true             false            true             false                                                 
+# 62   25  30    6    5   1    5^2:((Q8:3)'4)  SL(2,3):4  4x(5:4)      AGL(2,5)        2      2           45     1       2       true             false            true             true                 2                                
+# 63   25  30    24   20  19   5^2:((Q8:3)'4)  SL(2,3):4  4x(5:4)      AGL(2,5)        2      2           45     1       2       true             false            true             true                 1                                
+# 64   25  60    24   10  9    5^2:((Q8:3)'4)  SL(2,3):4  2x(5:4)      AGL(2,5)        2      2           45     1       4       true             false            true             false                                                 
+# 65   25  75    24   8   7    5^2:((Q8:3)'4)  SL(2,3):4  4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
+# 66   25  75    48   16  30   5^2:((Q8:3)'4)  SL(2,3):4  4^2:2        5^2:((Q8:3)'4)  2      2           45     1       7       true             false            true             false                                                 
+# 67   25  150   24   4   3    5^2:((Q8:3)'4)  SL(2,3):4  4^2          AGL(2,5)        2      2           45     1       17      true             false            true             false                                                 
+# 68   25  200   96   12  44   5^2:((Q8:3)'4)  SL(2,3):4  12           5^2:((Q8:3)'4)  2      2           45     1       20      true             false            true             false                                                 
+# 69   25  300   48   4   6    5^2:((Q8:3)'4)  SL(2,3):4  D8           5^2:((Q8:3)'4)  2      2           45     1       26      true             false            true             false                                                 
+# 70   25  300   96   8   28   5^2:((Q8:3)'4)  SL(2,3):4  4x2          5^2:((Q8:3)'4)  2      2           45     1       24      true             false            true             false                                                 
+# 71   25  300   96   8   28   5^2:((Q8:3)'4)  SL(2,3):4  8            5^2:((Q8:3)'4)  2      2           45     1       28      true             false            true             false                                                 
+# 72   25  400   96   6   20   5^2:((Q8:3)'4)  SL(2,3):4  6            5^2:((Q8:3)'4)  2      2           45     1       29      true             false            true             false                                                 
+# 73   25  600   96   4   12   5^2:((Q8:3)'4)  SL(2,3):4  4            5^2:((Q8:3)'4)  2      2           45     1       32      true             false            true             false                                                 
+# 74   25  800   96   3   8    5^2:((Q8:3)'4)  SL(2,3):4  3            5^2:((Q8:3)'4)  2      2           45     1       36      true             false            true             false                                                 
+# 75   25  30    6    5   1    ASL(2,5)        SL(2,5)    5^2:4        AGL(2,5)        2      2           46     1       3       true             false            true             true                 2                                
+# 76   25  30    24   20  19   ASL(2,5)        SL(2,5)    5^2:4        AGL(2,5)        2      2           46     1       3       true             false            true             true                 1                                
+# 77   25  60    24   10  9    ASL(2,5)        SL(2,5)    5xD10        AGL(2,5)        2      2           46     1       6       true             false            true             false                                                 
+# 78   25  150   24   4   3    ASL(2,5)        SL(2,5)    5:4          AGL(2,5)        2      2           46     1       11      true             false            true             false                                                 
+# 79   25  250   120  12  55   ASL(2,5)        SL(2,5)    3:4          ASL(2,5):2      2      2           46     1       12      true             false            true             false                                                 
+# 80   25  250   120  12  55   ASL(2,5)        46         1            12              2      2           46     1       12      true             false            true             false                                                 
+# 81   25  375   120  8   35   ASL(2,5)        SL(2,5)    Q8           AGL(2,5)        2      2           46     1       15      true             false            true             false                                                 
+# 82   25  500   120  6   25   ASL(2,5)        46         1            16              2      2           46     1       16      true             false            true             false                                                 
+# 83   25  500   120  6   25   ASL(2,5)        SL(2,5)    6            ASL(2,5):2      2      2           46     1       16      true             false            true             false                                                 
+# 84   25  600   120  5   20   ASL(2,5)        SL(2,5)    5            AGL(2,5)        2      2           46     1       19      true             false            true             false                                                 
+# 85   25  750   120  4   15   ASL(2,5)        46         1            20              2      2           46     1       20      true             false            true             false                                                 
+# 86   25  750   120  4   15   ASL(2,5)        SL(2,5)    4            ASL(2,5):2      2      2           46     1       20      true             false            true             false                                                 
+# 87   25  1000  120  3   10   ASL(2,5)        46         1            21              2      2           46     1       21      true             false            true             false                                                 
+# 88   25  1000  120  3   10   ASL(2,5)        SL(2,5)    3            ASL(2,5):2      2      2           46     1       21      true             false            true             false                                                 
+# 89   25  30    6    5   1    ASL(2,5):2      SL(2,5):2  (5:4)xD10    AGL(2,5)        2      2           47     1       2       true             false            true             true                 2                                
+# 90   25  30    24   20  19   ASL(2,5):2      SL(2,5):2  (5:4)xD10    AGL(2,5)        2      2           47     1       2       true             false            true             true                 1                                
+# 91   25  60    24   10  9    ASL(2,5):2      SL(2,5):2  D10xD10      AGL(2,5)        2      2           47     1       10      true             false            true             false                                                 
+# 92   25  150   24   4   3    ASL(2,5):2      SL(2,5):2  4xD10        AGL(2,5)        2      2           47     1       24      true             false            true             false                                                 
+# 93   25  250   120  12  55   ASL(2,5):2      47         1            29              2      2           47     1       29      true             false            true             false                                                 
+# 94   25  250   120  12  55   ASL(2,5):2      SL(2,5):2  4xS3         ASL(2,5):2      2      2           47     1       29      true             false            true             false                                                 
+# 95   25  375   120  8   35   ASL(2,5):2      SL(2,5):2  (4x2):2      AGL(2,5)        2      2           47     1       37      true             false            true             false                                                 
+# 96   25  500   120  6   25   ASL(2,5):2      47         1            38              2      2           47     1       38      true             false            true             false                                                 
+# 97   25  500   120  6   25   ASL(2,5):2      SL(2,5):2  D12          ASL(2,5):2      2      2           47     1       38      true             false            true             false                                                 
+# 98   25  600   120  5   20   ASL(2,5):2      SL(2,5):2  D10          AGL(2,5)        2      2           47     1       41      true             false            true             false                                                 
+# 99   25  750   120  4   15   ASL(2,5):2      SL(2,5):2  D8           ASL(2,5):2      2      2           47     1       48      true             false            true             false                                                 
+# 100  25  750   120  4   15   ASL(2,5):2      47         1            48              2      2           47     1       48      true             false            true             false                                                 
+# 101  25  1000  120  3   10   ASL(2,5):2      [          ]            47              2      2           47     1       52      true             false            true             false                                                 
+# 102  25  1000  120  3   10   ASL(2,5):2      SL(2,5):2  S3           ASL(2,5):2      2      2           47     1       51      true             false            true             false                                                 
+# 103  25  30    6    5   1    AGL(2,5)        GL(2,5)    (5:4)x(5:4)  AGL(2,5)        2      2           48     1       2       true             false            true             true                 2                                
+# 104  25  30    24   20  19   AGL(2,5)        GL(2,5)    (5:4)x(5:4)  AGL(2,5)        2      2           48     1       2       true             false            true             true                 1                                
+# 105  25  60    24   10  9    AGL(2,5)        GL(2,5)    5^2:(4x2)    AGL(2,5)        2      2           48     1       11      true             false            true             false                                                 
+# 106  25  150   24   4   3    AGL(2,5)        GL(2,5)    4x(5:4)      AGL(2,5)        2      2           48     1       35      true             false            true             false                                                 
+# 107  25  375   120  8   35   AGL(2,5)        GL(2,5)    4^2:2        AGL(2,5)        2      2           48     1       52      true             false            true             false                                                 
+# 108  25  375   240  16  150  AGL(2,5)        GL(2,5)    4^2:2        AGL(2,5)        2      2           48     1       52      true             false            true             false                                                 
+# 109  25  500   240  12  110  AGL(2,5)        GL(2,5)    4xS3         AGL(2,5)        2      2           48     1       59      true             false            true             false                                                 
+# 110  25  600   120  5   20   AGL(2,5)        GL(2,5)    5:4          AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 111  25  600   240  10  90   AGL(2,5)        GL(2,5)    5:4          AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 112  25  600   240  10  90   AGL(2,5)        GL(2,5)    5:4          AGL(2,5)        2      2           48     1       60      true             false            true             false                                                 
+# 113  25  1000  240  6   50   AGL(2,5)        GL(2,5)    D12          AGL(2,5)        2      2           48     1       78      true             false            true             false                                                 
+# 114  25  1500  240  4   30   AGL(2,5)        GL(2,5)    D8           AGL(2,5)        2      2           48     1       89      true             false            true             false                                                 
+# 115  25  1500  480  8   140  AGL(2,5)        GL(2,5)    4x2          AGL(2,5)        2      2           48     1       88      true             false            true             false                                                 
+# 116  25  2000  240  3   20   AGL(2,5)        GL(2,5)    S3           AGL(2,5)        2      2           48     1       93      true             false            true             false                                                 
+# 117  25  3000  480  4   60   AGL(2,5)        GL(2,5)    4            AGL(2,5)        2      2           48     1       98      true             false            true             false                                                 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information (up to isomorphism): 
@@ -314,10 +314,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            5^2:Q8:3     AGL2(5)      
+# Structure                            5^2:Q8:3     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(3)       GL2(5)       
+# Point-stabiliser                     SL(2,3)      GL(2,5)      
 # Block-stabiliser                     5:4          (5:4)x(5:4)  
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  5^{1}20^{1}  5^{1}20^{1}  
@@ -340,10 +340,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            5^2:Q8:3     AGL2(5)      
+# Structure                            5^2:Q8:3     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(3)       GL2(5)       
+# Point-stabiliser                     SL(2,3)      GL(2,5)      
 # Block-stabiliser                     5:4          (5:4)x(5:4)  
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  5^{1}20^{1}  5^{1}20^{1}  
@@ -366,7 +366,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            5^2:3:8      AΓL1(25)     
+# Structure                            5^2:3:8      AΓL(1,25)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3:8          24:2         
@@ -392,10 +392,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            5^2:Q8:3     AGL2(5)      
+# Structure                            5^2:Q8:3     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(3)       GL2(5)       
+# Point-stabiliser                     SL(2,3)      GL(2,5)      
 # Block-stabiliser                     D10          5^2:(4x2)    
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  5^{1}10^{2}  5^{1}10^{2}  
@@ -421,7 +421,7 @@
 # Structure                            5^2:Q8:3     5^2:((Q8:3)'4)    
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     SL2(3)       SL2(3):4          
+# Point-stabiliser                     SL(2,3)      SL(2,3):4         
 # Block-stabiliser                     Q8           4^2:2             
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}       
 # Orbit structure of block-stabiliser  1^{1}8^{3}   1^{1}8^{1}16^{1}  
@@ -444,7 +444,7 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            5^2:3:8      AΓL1(25)          
+# Structure                            5^2:3:8      AΓL(1,25)         
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
 # Point-stabiliser                     3:8          24:2              
@@ -470,7 +470,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            AΓL1(25)          AΓL1(25)          
+# Structure                            AΓL(1,25)         AΓL(1,25)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     24:2              24:2              
@@ -499,7 +499,7 @@
 # Structure                            5^2:((Q8:3)'4)    5^2:((Q8:3)'4)    
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     SL2(3):4          SL2(3):4          
+# Point-stabiliser                     SL(2,3):4         SL(2,3):4         
 # Block-stabiliser                     4^2:2             4^2:2             
 # Orbit structure of point-stabiliser  1^{1}24^{1}       1^{1}24^{1}       
 # Orbit structure of block-stabiliser  1^{1}8^{1}16^{1}  1^{1}8^{1}16^{1}  
@@ -522,7 +522,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            5^2:O+2(5)        5^2:O+2(5)        
+# Structure                            5^2:O+(2,5)       5^2:O+(2,5)       
 # Rank                                 3                 3                 
 # 2-Homogeneous                        false             false             
 # Point-stabiliser                     4^2:2             4^2:2             
@@ -551,7 +551,7 @@
 # Structure                            5^2:Q8:3     5^2:Q8:3     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(3)       SL2(3)       
+# Point-stabiliser                     SL(2,3)      SL(2,3)      
 # Block-stabiliser                     6            6            
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  1^{1}6^{4}   1^{1}6^{4}   
@@ -574,7 +574,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            5^2:3:8      AΓL1(25)     
+# Structure                            5^2:3:8      AΓL(1,25)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3:8          24:2         
@@ -629,7 +629,7 @@
 # Structure                            5^2:Q8:3     5^2:((Q8:3)'2)   
 # Rank                                 2            2                
 # 2-Homogeneous                        true         true             
-# Point-stabiliser                     SL2(3)       (4x2):2:3        
+# Point-stabiliser                     SL(2,3)      (4x2):2:3        
 # Block-stabiliser                     4            D8               
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{6}   1^{1}4^{4}8^{1}  
@@ -652,10 +652,10 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            5^2:Q8:3     AGL2(5)           
+# Structure                            5^2:Q8:3     AGL(2,5)          
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     SL2(3)       GL2(5)            
+# Point-stabiliser                     SL(2,3)      GL(2,5)           
 # Block-stabiliser                     4            4x(5:4)           
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}       
 # Orbit structure of block-stabiliser  1^{1}4^{6}   1^{1}4^{1}20^{1}  
@@ -678,7 +678,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AΓL1(25)     AΓL1(25)     
+# Structure                            AΓL(1,25)    AΓL(1,25)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     24:2         24:2         
@@ -704,7 +704,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AΓL1(25)         AΓL1(25)         
+# Structure                            AΓL(1,25)        AΓL(1,25)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     24:2             24:2             
@@ -733,7 +733,7 @@
 # Structure                            5^2:Q8:3     5^2:Q8:3     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(3)       SL2(3)       
+# Point-stabiliser                     SL(2,3)      SL(2,3)      
 # Block-stabiliser                     3            3            
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  1^{1}3^{8}   1^{1}3^{8}   
@@ -756,7 +756,7 @@
 # -------------------------------------------------------------------
 #                                      G            Aut(D)           
 # -------------------------------------------------------------------
-# Structure                            5^2:3:8      AΓL1(25)         
+# Structure                            5^2:3:8      AΓL(1,25)        
 # Rank                                 2            2                
 # 2-Homogeneous                        true         true             
 # Point-stabiliser                     3:8          24:2             
@@ -782,7 +782,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            5^2:O+2(5)        5^2:O+2(5)        
+# Structure                            5^2:O+(2,5)       5^2:O+(2,5)       
 # Rank                                 3                 3                 
 # 2-Homogeneous                        false             false             
 # Point-stabiliser                     4^2:2             4^2:2             
@@ -837,7 +837,7 @@
 # Structure                            5^2:((Q8:3)'4)  5^2:((Q8:3)'4)  
 # Rank                                 2               2               
 # 2-Homogeneous                        true            true            
-# Point-stabiliser                     SL2(3):4        SL2(3):4        
+# Point-stabiliser                     SL(2,3):4       SL(2,3):4       
 # Block-stabiliser                     12              12              
 # Orbit structure of point-stabiliser  1^{1}24^{1}     1^{1}24^{1}     
 # Orbit structure of block-stabiliser  1^{1}12^{2}     1^{1}12^{2}     
@@ -860,10 +860,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL2(5)      ASL2(5):2    
+# Structure                            ASL(2,5)     ASL(2,5):2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(5)       SL2(5):2     
+# Point-stabiliser                     SL(2,5)      SL(2,5):2    
 # Block-stabiliser                     3:4          4xS3         
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  1^{1}12^{2}  1^{1}12^{2}  
@@ -886,7 +886,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AΓL1(25)     AΓL1(25)     
+# Structure                            AΓL(1,25)    AΓL(1,25)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     24:2         24:2         
@@ -912,7 +912,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AΓL1(25)         AΓL1(25)         
+# Structure                            AΓL(1,25)        AΓL(1,25)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     24:2             24:2             
@@ -941,7 +941,7 @@
 # Structure                            5^2:((Q8:3)'4)   5^2:((Q8:3)'4)   
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     SL2(3):4         SL2(3):4         
+# Point-stabiliser                     SL(2,3):4        SL(2,3):4        
 # Block-stabiliser                     D8               D8               
 # Orbit structure of point-stabiliser  1^{1}24^{1}      1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{4}8^{1}  1^{1}4^{4}8^{1}  
@@ -967,7 +967,7 @@
 # Structure                            5^2:((Q8:3)'4)  5^2:((Q8:3)'4)  
 # Rank                                 2               2               
 # 2-Homogeneous                        true            true            
-# Point-stabiliser                     SL2(3):4        SL2(3):4        
+# Point-stabiliser                     SL(2,3):4       SL(2,3):4       
 # Block-stabiliser                     8               8               
 # Orbit structure of point-stabiliser  1^{1}24^{1}     1^{1}24^{1}     
 # Orbit structure of block-stabiliser  1^{1}8^{3}      1^{1}8^{3}      
@@ -993,7 +993,7 @@
 # Structure                            5^2:((Q8:3)'4)        5^2:((Q8:3)'4)        
 # Rank                                 2                     2                     
 # 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     SL2(3):4              SL2(3):4              
+# Point-stabiliser                     SL(2,3):4             SL(2,3):4             
 # Block-stabiliser                     4x2                   4x2                   
 # Orbit structure of point-stabiliser  1^{1}24^{1}           1^{1}24^{1}           
 # Orbit structure of block-stabiliser  1^{1}2^{2}4^{1}8^{2}  1^{1}2^{2}4^{1}8^{2}  
@@ -1016,10 +1016,10 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            ASL2(5)      AGL2(5)           
+# Structure                            ASL(2,5)     AGL(2,5)          
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     SL2(5)       GL2(5)            
+# Point-stabiliser                     SL(2,5)      GL(2,5)           
 # Block-stabiliser                     Q8           4^2:2             
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}       
 # Orbit structure of block-stabiliser  1^{1}8^{3}   1^{1}8^{1}16^{1}  
@@ -1042,10 +1042,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            AGL2(5)           AGL2(5)           
+# Structure                            AGL(2,5)          AGL(2,5)          
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     GL2(5)            GL2(5)            
+# Point-stabiliser                     GL(2,5)           GL(2,5)           
 # Block-stabiliser                     4^2:2             4^2:2             
 # Orbit structure of point-stabiliser  1^{1}24^{1}       1^{1}24^{1}       
 # Orbit structure of block-stabiliser  1^{1}8^{1}16^{1}  1^{1}8^{1}16^{1}  
@@ -1097,7 +1097,7 @@
 # Structure                            5^2:((Q8:3)'4)  5^2:((Q8:3)'4)  
 # Rank                                 2               2               
 # 2-Homogeneous                        true            true            
-# Point-stabiliser                     SL2(3):4        SL2(3):4        
+# Point-stabiliser                     SL(2,3):4       SL(2,3):4       
 # Block-stabiliser                     6               6               
 # Orbit structure of point-stabiliser  1^{1}24^{1}     1^{1}24^{1}     
 # Orbit structure of block-stabiliser  1^{1}6^{4}      1^{1}6^{4}      
@@ -1120,10 +1120,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL2(5)      ASL2(5):2    
+# Structure                            ASL(2,5)     ASL(2,5):2   
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(5)       SL2(5):2     
+# Point-stabiliser                     SL(2,5)      SL(2,5):2    
 # Block-stabiliser                     6            D12          
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  1^{1}6^{4}   1^{1}6^{4}   
@@ -1146,10 +1146,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL2(5)      AGL2(5)      
+# Structure                            AGL(2,5)     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     GL2(5)       GL2(5)       
+# Point-stabiliser                     GL(2,5)      GL(2,5)      
 # Block-stabiliser                     4xS3         4xS3         
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  1^{1}12^{2}  1^{1}12^{2}  
@@ -1175,7 +1175,7 @@
 # Structure                            5^2:((Q8:3)'4)   5^2:((Q8:3)'4)   
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     SL2(3):4         SL2(3):4         
+# Point-stabiliser                     SL(2,3):4        SL(2,3):4        
 # Block-stabiliser                     4                4                
 # Orbit structure of point-stabiliser  1^{1}24^{1}      1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}2^{2}4^{5}  1^{1}2^{2}4^{5}  
@@ -1198,10 +1198,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            ASL2(5)      AGL2(5)      
+# Structure                            ASL(2,5)     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     SL2(5)       GL2(5)       
+# Point-stabiliser                     SL(2,5)      GL(2,5)      
 # Block-stabiliser                     5            5:4          
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  5^{5}        5^{1}10^{2}  
@@ -1224,10 +1224,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL2(5)      AGL2(5)      
+# Structure                            AGL(2,5)     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     GL2(5)       GL2(5)       
+# Point-stabiliser                     GL(2,5)      GL(2,5)      
 # Block-stabiliser                     5:4          5:4          
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  5^{1}10^{2}  5^{1}10^{2}  
@@ -1250,10 +1250,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL2(5)      AGL2(5)      
+# Structure                            AGL(2,5)     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     GL2(5)       GL2(5)       
+# Point-stabiliser                     GL(2,5)      GL(2,5)      
 # Block-stabiliser                     5:4          5:4          
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  5^{1}10^{2}  5^{1}10^{2}  
@@ -1276,10 +1276,10 @@
 # -------------------------------------------------------------------
 #                                      G            Aut(D)           
 # -------------------------------------------------------------------
-# Structure                            ASL2(5)      ASL2(5):2        
+# Structure                            ASL(2,5)     ASL(2,5):2       
 # Rank                                 2            2                
 # 2-Homogeneous                        true         true             
-# Point-stabiliser                     SL2(5)       SL2(5):2         
+# Point-stabiliser                     SL(2,5)      SL(2,5):2        
 # Block-stabiliser                     4            D8               
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{6}   1^{1}4^{4}8^{1}  
@@ -1305,7 +1305,7 @@
 # Structure                            5^2:((Q8:3)'4)  5^2:((Q8:3)'4)  
 # Rank                                 2               2               
 # 2-Homogeneous                        true            true            
-# Point-stabiliser                     SL2(3):4        SL2(3):4        
+# Point-stabiliser                     SL(2,3):4       SL(2,3):4       
 # Block-stabiliser                     3               3               
 # Orbit structure of point-stabiliser  1^{1}24^{1}     1^{1}24^{1}     
 # Orbit structure of block-stabiliser  1^{1}3^{8}      1^{1}3^{8}      
@@ -1328,10 +1328,10 @@
 # -------------------------------------------------------------------
 #                                      G            Aut(D)           
 # -------------------------------------------------------------------
-# Structure                            ASL2(5)      ASL2(5):2        
+# Structure                            ASL(2,5)     ASL(2,5):2       
 # Rank                                 2            2                
 # 2-Homogeneous                        true         true             
-# Point-stabiliser                     SL2(5)       SL2(5):2         
+# Point-stabiliser                     SL(2,5)      SL(2,5):2        
 # Block-stabiliser                     3            S3               
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}3^{8}   1^{1}3^{4}6^{2}  
@@ -1354,10 +1354,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            AGL2(5)      AGL2(5)      
+# Structure                            AGL(2,5)     AGL(2,5)     
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     GL2(5)       GL2(5)       
+# Point-stabiliser                     GL(2,5)      GL(2,5)      
 # Block-stabiliser                     D12          D12          
 # Orbit structure of point-stabiliser  1^{1}24^{1}  1^{1}24^{1}  
 # Orbit structure of block-stabiliser  1^{1}6^{4}   1^{1}6^{4}   
@@ -1380,10 +1380,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AGL2(5)          AGL2(5)          
+# Structure                            AGL(2,5)         AGL(2,5)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     GL2(5)           GL2(5)           
+# Point-stabiliser                     GL(2,5)          GL(2,5)          
 # Block-stabiliser                     D8               D8               
 # Orbit structure of point-stabiliser  1^{1}24^{1}      1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{4}8^{1}  1^{1}4^{4}8^{1}  
@@ -1406,10 +1406,10 @@
 # ---------------------------------------------------------------------------------
 #                                      G                     Aut(D)                
 # ---------------------------------------------------------------------------------
-# Structure                            AGL2(5)               AGL2(5)               
+# Structure                            AGL(2,5)              AGL(2,5)              
 # Rank                                 2                     2                     
 # 2-Homogeneous                        true                  true                  
-# Point-stabiliser                     GL2(5)                GL2(5)                
+# Point-stabiliser                     GL(2,5)               GL(2,5)               
 # Block-stabiliser                     4x2                   4x2                   
 # Orbit structure of point-stabiliser  1^{1}24^{1}           1^{1}24^{1}           
 # Orbit structure of block-stabiliser  1^{1}2^{2}4^{1}8^{2}  1^{1}2^{2}4^{1}8^{2}  
@@ -1432,10 +1432,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AGL2(5)          AGL2(5)          
+# Structure                            AGL(2,5)         AGL(2,5)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     GL2(5)           GL2(5)           
+# Point-stabiliser                     GL(2,5)          GL(2,5)          
 # Block-stabiliser                     S3               S3               
 # Orbit structure of point-stabiliser  1^{1}24^{1}      1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}3^{4}6^{2}  1^{1}3^{4}6^{2}  
@@ -1458,10 +1458,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            AGL2(5)          AGL2(5)          
+# Structure                            AGL(2,5)         AGL(2,5)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     GL2(5)           GL2(5)           
+# Point-stabiliser                     GL(2,5)          GL(2,5)          
 # Block-stabiliser                     4                4                
 # Orbit structure of point-stabiliser  1^{1}24^{1}      1^{1}24^{1}      
 # Orbit structure of block-stabiliser  1^{1}2^{2}4^{5}  1^{1}2^{2}4^{5}  

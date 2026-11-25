@@ -49,19 +49,19 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G          Gα     GB   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   24  276   253  22  231  PSL2(23)   23:11  D22  S24        2      2                  1       5       true             true             true             true                                        complete  
-# 2   24  506   253  12  121  PSL2(23)   23:11  A4   PSL2(23)   2      2                  1       6       true             false            true             true                 2                                
-# 3   24  506   253  12  121  PSL2(23)   23:11  D12  PSL2(23)   2      2                  1       8       true             false            true             true                 3                                
-# 4   24  506   253  12  121  PSL2(23)   23:11  12   PGL2(23)   2      2                  1       10      true             false            true             true                 4                                
-# 5   24  552   253  11  110  PSL2(23)   23:11  11   PGL2(23)   2      2                  1       11      true             false            true             false                                                 
-# 6   24  759   253  8   77   PSL2(23)   23:11  D8   M24        2      2                  1       12      true             false            true             false                                                 
-# 7   24  759   253  8   77   PSL2(23)   23:11  D8   PGL2(23)   2      2                  1       12      true             false            true             false                                                 
-# 8   24  1012  253  6   55   PSL2(23)   23:11  S3   PSL2(23)   2      2                  1       13      true             false            true             false                                                 
-# 9   24  1012  253  6   55   PSL2(23)   23:11  S3   PSL2(23)   2      2                  1       13      true             false            true             false                                                 
-# 10  24  1012  253  6   55   PSL2(23)   23:11  6    PGL2(23)   2      2                  1       15      true             false            true             false                                                 
-# 11  24  1518  253  4   33   PSL2(23)   23:11  2^2  PSL2(23)   2      2                  1       16      true             false            true             false                                                 
-# 12  24  1518  253  4   33   PSL2(23)   23:11  4    PGL2(23)   2      2                  1       18      true             false            true             false                                                 
-# 13  24  2024  253  3   22   PSL2(23)   23:11  3    S24        2      2                  1       19      true             false            true             false                                       complete  
+# 1   24  276   253  22  231  PSL(2,23)  23:11  D22  S24        2      2                  1       5       true             true             true             true                                        complete  
+# 2   24  506   253  12  121  PSL(2,23)  23:11  A4   PSL(2,23)  2      2                  1       6       true             false            true             true                 2                                
+# 3   24  506   253  12  121  PSL(2,23)  23:11  D12  PSL(2,23)  2      2                  1       8       true             false            true             true                 3                                
+# 4   24  506   253  12  121  PSL(2,23)  23:11  12   PGL(2,23)  2      2                  1       10      true             false            true             true                 4                                
+# 5   24  552   253  11  110  PSL(2,23)  23:11  11   PGL(2,23)  2      2                  1       11      true             false            true             false                                                 
+# 6   24  759   253  8   77   PSL(2,23)  23:11  D8   M24        2      2                  1       12      true             false            true             false                                                 
+# 7   24  759   253  8   77   PSL(2,23)  23:11  D8   PGL(2,23)  2      2                  1       12      true             false            true             false                                                 
+# 8   24  1012  253  6   55   PSL(2,23)  23:11  S3   PSL(2,23)  2      2                  1       13      true             false            true             false                                                 
+# 9   24  1012  253  6   55   PSL(2,23)  23:11  S3   PSL(2,23)  2      2                  1       13      true             false            true             false                                                 
+# 10  24  1012  253  6   55   PSL(2,23)  23:11  6    PGL(2,23)  2      2                  1       15      true             false            true             false                                                 
+# 11  24  1518  253  4   33   PSL(2,23)  23:11  2^2  PSL(2,23)  2      2                  1       16      true             false            true             false                                                 
+# 12  24  1518  253  4   33   PSL(2,23)  23:11  4    PGL(2,23)  2      2                  1       18      true             false            true             false                                                 
+# 13  24  2024  253  3   22   PSL(2,23)  23:11  3    S24        2      2                  1       19      true             false            true             false                                       complete  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -74,7 +74,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     S24          
+# Structure                            PSL(2,23)    S24          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        S23          
@@ -100,7 +100,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PSL2(23)    
+# Structure                            PSL(2,23)    PSL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        23:11        
@@ -126,7 +126,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PSL2(23)    
+# Structure                            PSL(2,23)    PSL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        23:11        
@@ -152,10 +152,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PGL2(23)    
+# Structure                            PSL(2,23)    PGL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     23:11        AGL1(23)    
+# Point-stabiliser                     23:11        AGL(1,23)    
 # Block-stabiliser                     12           D24          
 # Orbit structure of point-stabiliser  1^{1}23^{1}  1^{1}23^{1}  
 # Orbit structure of block-stabiliser  12^{2}       12^{2}       
@@ -178,10 +178,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PGL2(23)    
+# Structure                            PSL(2,23)    PGL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     23:11        AGL1(23)    
+# Point-stabiliser                     23:11        AGL(1,23)    
 # Block-stabiliser                     11           D22          
 # Orbit structure of point-stabiliser  1^{1}23^{1}  1^{1}23^{1}  
 # Orbit structure of block-stabiliser  1^{2}11^{2}  2^{1}11^{2}  
@@ -204,7 +204,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     M24          
+# Structure                            PSL(2,23)    M24          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        M23          
@@ -230,10 +230,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PGL2(23)    
+# Structure                            PSL(2,23)    PGL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     23:11        AGL1(23)    
+# Point-stabiliser                     23:11        AGL(1,23)    
 # Block-stabiliser                     D8           D16          
 # Orbit structure of point-stabiliser  1^{1}23^{1}  1^{1}23^{1}  
 # Orbit structure of block-stabiliser  8^{3}        8^{1}16^{1}  
@@ -256,7 +256,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PSL2(23)    
+# Structure                            PSL(2,23)    PSL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        23:11        
@@ -282,7 +282,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PSL2(23)    
+# Structure                            PSL(2,23)    PSL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        23:11        
@@ -308,10 +308,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PGL2(23)    
+# Structure                            PSL(2,23)    PGL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     23:11        AGL1(23)    
+# Point-stabiliser                     23:11        AGL(1,23)    
 # Block-stabiliser                     6            D12          
 # Orbit structure of point-stabiliser  1^{1}23^{1}  1^{1}23^{1}  
 # Orbit structure of block-stabiliser  6^{4}        6^{2}12^{1}  
@@ -334,7 +334,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PSL2(23)    
+# Structure                            PSL(2,23)    PSL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        23:11        
@@ -360,10 +360,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     PGL2(23)    
+# Structure                            PSL(2,23)    PGL(2,23)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     23:11        AGL1(23)    
+# Point-stabiliser                     23:11        AGL(1,23)    
 # Block-stabiliser                     4            D8           
 # Orbit structure of point-stabiliser  1^{1}23^{1}  1^{1}23^{1}  
 # Orbit structure of block-stabiliser  4^{6}        4^{2}8^{2}   
@@ -386,7 +386,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(23)     S24          
+# Structure                            PSL(2,23)    S24          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     23:11        S23          

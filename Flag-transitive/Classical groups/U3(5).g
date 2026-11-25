@@ -51,73 +51,73 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b      r     k    λ    G      Gα         GB         Aut(D)       rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   50   175    126   36   90   U3(5)  A7         A6.2       PSU3(5):2    3      3                  2       6       true             true             true             false                                                 
-# 2   126  175    50    36   14   U3(5)  (5^2:5):8  A6.2       PSU3(5):2    2      2                  5       6       true             true             true             true                 3                                
-# 3   126  175    125   90   89   U3(5)  (5^2:5):8  A6.2       PSU3(5):2    2      2                  5       6       true             true             true             true                 2                                
-# 4   126  525    25    6    1    U3(5)  (5^2:5):8  SL2(5):2   PSU3(5):S3   2      2                  5       14      true             true             true             true                 5                                
-# 5   126  525    500   120  476  U3(5)  (5^2:5):8  SL2(5):2   PSU3(5):S3   2      2                  5       14      true             true             true             true                 4                                
-# 6   126  750    250   42   82   U3(5)  (5^2:5):8  PSL3(2)    PSU3(5):2    2      2                  5       15      true             false            true             true                 7                                
-# 7   126  750    500   84   332  U3(5)  (5^2:5):8  PSL3(2)    PSU3(5):2    2      2                  5       15      true             false            true             true                 6                                
-# 8   126  1050   50    6    2    U3(5)  (5^2:5):8  S5         PSU3(5):2    2      2                  5       19      true             false            true             false                                                 
-# 9   126  1050   500   60   236  U3(5)  (5^2:5):8  S5         PSU3(5):2    2      2                  5       19      true             false            true             false                                                 
-# 10  126  1050   500   60   236  U3(5)  (5^2:5):8  S5         PSU3(5):2    2      2                  5       19      true             false            true             false                                                 
-# 11  126  1260   250   25   48   U3(5)  (5^2:5):8  (5^2):4    PSU3(5):2    2      2                  5       24      true             false            true             false                                                 
-# 12  126  1260   1000  100  792  U3(5)  (5^2:5):8  (5^2):4    PSU3(5):2    2      2                  5       24      true             false            true             false                                                 
-# 13  126  1750   250   18   34   U3(5)  (5^2:5):8  (3^2):Q8   PSU3(5):2    2      2                  5       26      true             false            true             false                                                 
-# 14  126  1750   250   18   34   U3(5)  (5^2:5):8  (3xA4):2   PSU3(5):S3   2      2                  5       27      true             false            true             false                                                 
-# 15  126  1750   500   36   140  U3(5)  (5^2:5):8  (3xA4):2   PSU3(5):2    2      2                  5       27      true             false            true             false                                                 
-# 16  126  1750   1000  72   568  U3(5)  (5^2:5):8  (3^2):Q8   PSU3(5):S3   2      2                  5       26      true             false            true             false                                                 
-# 17  126  2100   500   30   116  U3(5)  (5^2:5):8  A5         PSU3(5):2    2      2                  5       30      true             false            true             false                                                 
-# 18  126  2520   1000  50   392  U3(5)  (5^2:5):8  5xD10      PSU3(5):2    2      2                  5       31      true             false            true             false                                                 
-# 19  126  2625   500   24   92   U3(5)  (5^2:5):8  GL2(3)     PSU3(5):2    2      2                  5       34      true             false            true             false                                                 
-# 20  126  2625   1000  48   376  U3(5)  (5^2:5):8  GL2(3)     PSU3(5):S3   2      2                  5       34      true             false            true             false                                                 
-# 21  126  3150   125   5    4    U3(5)  (5^2:5):8  5:8        PSU3(5):S3   2      2                  5       35      true             false            true             false                                                 
-# 22  126  3150   1000  40   312  U3(5)  (5^2:5):8  5:8        PSU3(5):2    2      2                  5       35      true             false            true             false                                                 
-# 23  126  3500   250   9    16   U3(5)  (5^2:5):8  (3^2):4    PSU3(5):2    2      2                  5       39      true             false            true             false                                                 
-# 24  126  3500   1000  36   280  U3(5)  (5^2:5):8  (3^2):4    PSU3(5):2    2      2                  5       39      true             false            true             false                                                 
-# 25  126  5250   500   12   44   U3(5)  (5^2:5):8  S4         PSU3(5):2    2      2                  5       44      true             false            true             false                                                 
-# 26  126  5250   500   12   44   U3(5)  (5^2:5):8  (6x2):2    PSU3(5):2    2      2                  5       43      true             false            true             false                                                 
-# 27  126  5250   500   12   44   U3(5)  (5^2:5):8  S4         PSU3(5):2    2      2                  5       44      true             false            true             false                                                 
-# 28  126  5250   500   12   44   U3(5)  (5^2:5):8  (6x2):2    PSU3(5):S3   2      2                  5       43      true             false            true             false                                                 
-# 29  126  5250   500   12   44   U3(5)  (5^2:5):8  S4         PSU3(5)      2      2                  5       44      true             false            true             false                                                 
-# 30  126  5250   1000  24   184  U3(5)  (5^2:5):8  (6x2):2    PSU3(5):2    2      2                  5       43      true             false            true             false                                                 
-# 31  126  5250   1000  24   184  U3(5)  (5^2:5):8  S4         PSU3(5):2    2      2                  5       44      true             false            true             false                                                 
-# 32  126  5250   1000  24   184  U3(5)  (5^2:5):8  SL2(3)     PSU3(5):S3   2      2                  5       47      true             false            true             false                                                 
-# 33  126  5250   1000  24   184  U3(5)  (5^2:5):8  S4         PSU3(5)      2      2                  5       44      true             false            true             false                                                 
-# 34  126  6000   1000  21   160  U3(5)  (5^2:5):8  7:3        PSU3(5):2    2      2                  5       48      true             false            true             false                                                 
-# 35  126  6000   1000  21   160  U3(5)  (5^2:5):8  7:3        PSU3(5):2    2      2                  5       48      true             false            true             false                                                 
-# 36  126  6300   250   5    8    U3(5)  (5^2:5):8  5:4        PSU3(5):2    2      2                  5       49      true             false            true             false                                                 
-# 37  126  6300   500   10   36   U3(5)  (5^2:5):8  5:4        PSU3(5):2    2      2                  5       49      true             false            true             false                                                 
-# 38  126  6300   500   10   36   U3(5)  (5^2:5):8  5:4        PSU3(5):2    2      2                  5       49      true             false            true             false                                                 
-# 39  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU3(5)      2      2                  5       49      true             false            true             false                                                 
-# 40  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU3(5)      2      2                  5       49      true             false            true             false                                                 
-# 41  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU3(5):2    2      2                  5       52      true             false            true             false                                                 
-# 42  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU3(5):2    2      2                  5       49      true             false            true             false                                                 
-# 43  126  7875   250   4    6    U3(5)  (5^2:5):8  QD16       PSU3(5):S3   2      2                  5       54      true             false            true             false                                                 
-# 44  126  7875   500   8    28   U3(5)  (5^2:5):8  QD16       PSU3(5):2    2      2                  5       54      true             false            true             false                                                 
-# 45  126  7875   1000  16   120  U3(5)  (5^2:5):8  QD16       PSU3(5):2    2      2                  5       54      true             false            true             false                                                 
-# 46  126  7875   1000  16   120  U3(5)  (5^2:5):8  QD16       PSU3(5):2    2      2                  5       54      true             false            true             false                                                 
-# 47  126  10500  250   3    4    U3(5)  (5^2:5):8  3:4        PSU3(5):S3   2      2                  5       56      true             false            true             false                                                 
-# 48  126  10500  1000  12   88   U3(5)  (5^2:5):8  D12        PSU3(5):2    2      2                  5       55      true             false            true             false                                                 
-# 49  126  10500  1000  12   88   U3(5)  (5^2:5):8  3:4        PSU3(5):2    2      2                  5       56      true             false            true             false                                                 
-# 50  126  12600  1000  10   72   U3(5)  (5^2:5):8  D10        PSU3(5):2    2      2                  5       62      true             false            true             false                                                 
-# 51  126  12600  1000  10   72   U3(5)  (5^2:5):8  10         PSU3(5):2    2      2                  5       61      true             false            true             false                                                 
-# 52  126  14000  1000  9    64   U3(5)  (5^2:5):8  3^2        PSU3(5):S3   2      2                  5       65      true             false            true             false                                                 
-# 53  126  15750  500   4    12   U3(5)  (5^2:5):8  D8         PSU3(5):2    2      2                  5       66      true             false            true             false                                                 
-# 54  126  15750  1000  8    56   U3(5)  (5^2:5):8  D8         PSU3(5):2    2      2                  5       66      true             false            true             false                                                 
-# 55  126  15750  1000  8    56   U3(5)  (5^2:5):8  8          PSU3(5):2    2      2                  5       67      true             false            true             false                                                 
-# 56  126  15750  1000  8    56   U3(5)  (5^2:5):8  8          PSU3(5):2    2      2                  5       67      true             false            true             false                                                 
-# 57  126  15750  1000  8    56   U3(5)  (5^2:5):8  Q8         PSU3(5):S3   2      2                  5       68      true             false            true             false                                                 
-# 58  126  15750  1000  8    56   U3(5)  (5^2:5):8  D8         PSU3(5):2    2      2                  5       66      true             false            true             false                                                 
-# 59  126  18000  1000  7    48   U3(5)  (5^2:5):8  7          PSU3(5):2    2      2                  5       69      true             false            true             false                                                 
-# 60  126  18000  1000  7    48   U3(5)  (5^2:5):8  7          PSU3(5):2    2      2                  5       69      true             false            true             false                                                 
-# 61  126  21000  500   3    8    U3(5)  (5^2:5):8  S3         PSU3(5):2    2      2                  5       70      true             false            true             false                                                 
-# 62  126  21000  1000  6    40   U3(5)  (5^2:5):8  S3         PSU3(5):S3   2      2                  5       70      true             false            true             false                                                 
-# 63  126  21000  1000  6    40   U3(5)  (5^2:5):8  6          PSU3(5):2    2      2                  5       71      true             false            true             false                                                 
-# 64  126  21000  1000  6    40   U3(5)  (5^2:5):8  S3         PSU3(5)      2      2                  5       70      true             false            true             false                                                 
-# 65  126  25200  1000  5    32   U3(5)  (5^2:5):8  5          PSU3(5):2    2      2                  5       74      true             false            true             false                                                 
-# 66  126  31500  1000  4    24   U3(5)  (5^2:5):8  4          PSU3(5):2    2      2                  5       76      true             false            true             false                                                 
-# 67  126  31500  1000  4    24   U3(5)  (5^2:5):8  4          PSU3(5):2    2      2                  5       76      true             false            true             false                                                 
+# 1   50   175    126   36   90   U3(5)  A7         A6.2       PSU(3,5):2   3      3                  2       6       true             true             true             false                                                 
+# 2   126  175    50    36   14   U3(5)  (5^2:5):8  A6.2       PSU(3,5):2   2      2                  5       6       true             true             true             true                 3                                
+# 3   126  175    125   90   89   U3(5)  (5^2:5):8  A6.2       PSU(3,5):2   2      2                  5       6       true             true             true             true                 2                                
+# 4   126  525    25    6    1    U3(5)  (5^2:5):8  SL(2,5):2  PSU(3,5):S3  2      2                  5       14      true             true             true             true                 5                                
+# 5   126  525    500   120  476  U3(5)  (5^2:5):8  SL(2,5):2  PSU(3,5):S3  2      2                  5       14      true             true             true             true                 4                                
+# 6   126  750    250   42   82   U3(5)  (5^2:5):8  PSL(3,2)   PSU(3,5):2   2      2                  5       15      true             false            true             true                 7                                
+# 7   126  750    500   84   332  U3(5)  (5^2:5):8  PSL(3,2)   PSU(3,5):2   2      2                  5       15      true             false            true             true                 6                                
+# 8   126  1050   50    6    2    U3(5)  (5^2:5):8  S5         PSU(3,5):2   2      2                  5       19      true             false            true             false                                                 
+# 9   126  1050   500   60   236  U3(5)  (5^2:5):8  S5         PSU(3,5):2   2      2                  5       19      true             false            true             false                                                 
+# 10  126  1050   500   60   236  U3(5)  (5^2:5):8  S5         PSU(3,5):2   2      2                  5       19      true             false            true             false                                                 
+# 11  126  1260   250   25   48   U3(5)  (5^2:5):8  (5^2):4    PSU(3,5):2   2      2                  5       24      true             false            true             false                                                 
+# 12  126  1260   1000  100  792  U3(5)  (5^2:5):8  (5^2):4    PSU(3,5):2   2      2                  5       24      true             false            true             false                                                 
+# 13  126  1750   250   18   34   U3(5)  (5^2:5):8  (3^2):Q8   PSU(3,5):2   2      2                  5       26      true             false            true             false                                                 
+# 14  126  1750   250   18   34   U3(5)  (5^2:5):8  (3xA4):2   PSU(3,5):S3  2      2                  5       27      true             false            true             false                                                 
+# 15  126  1750   500   36   140  U3(5)  (5^2:5):8  (3xA4):2   PSU(3,5):2   2      2                  5       27      true             false            true             false                                                 
+# 16  126  1750   1000  72   568  U3(5)  (5^2:5):8  (3^2):Q8   PSU(3,5):S3  2      2                  5       26      true             false            true             false                                                 
+# 17  126  2100   500   30   116  U3(5)  (5^2:5):8  A5         PSU(3,5):2   2      2                  5       30      true             false            true             false                                                 
+# 18  126  2520   1000  50   392  U3(5)  (5^2:5):8  5xD10      PSU(3,5):2   2      2                  5       31      true             false            true             false                                                 
+# 19  126  2625   500   24   92   U3(5)  (5^2:5):8  GL(2,3)    PSU(3,5):2   2      2                  5       34      true             false            true             false                                                 
+# 20  126  2625   1000  48   376  U3(5)  (5^2:5):8  GL(2,3)    PSU(3,5):S3  2      2                  5       34      true             false            true             false                                                 
+# 21  126  3150   125   5    4    U3(5)  (5^2:5):8  5:8        PSU(3,5):S3  2      2                  5       35      true             false            true             false                                                 
+# 22  126  3150   1000  40   312  U3(5)  (5^2:5):8  5:8        PSU(3,5):2   2      2                  5       35      true             false            true             false                                                 
+# 23  126  3500   250   9    16   U3(5)  (5^2:5):8  (3^2):4    PSU(3,5):2   2      2                  5       39      true             false            true             false                                                 
+# 24  126  3500   1000  36   280  U3(5)  (5^2:5):8  (3^2):4    PSU(3,5):2   2      2                  5       39      true             false            true             false                                                 
+# 25  126  5250   500   12   44   U3(5)  (5^2:5):8  S4         PSU(3,5):2   2      2                  5       44      true             false            true             false                                                 
+# 26  126  5250   500   12   44   U3(5)  (5^2:5):8  (6x2):2    PSU(3,5):2   2      2                  5       43      true             false            true             false                                                 
+# 27  126  5250   500   12   44   U3(5)  (5^2:5):8  S4         PSU(3,5):2   2      2                  5       44      true             false            true             false                                                 
+# 28  126  5250   500   12   44   U3(5)  (5^2:5):8  (6x2):2    PSU(3,5):S3  2      2                  5       43      true             false            true             false                                                 
+# 29  126  5250   500   12   44   U3(5)  (5^2:5):8  S4         PSU(3,5)     2      2                  5       44      true             false            true             false                                                 
+# 30  126  5250   1000  24   184  U3(5)  (5^2:5):8  (6x2):2    PSU(3,5):2   2      2                  5       43      true             false            true             false                                                 
+# 31  126  5250   1000  24   184  U3(5)  (5^2:5):8  S4         PSU(3,5):2   2      2                  5       44      true             false            true             false                                                 
+# 32  126  5250   1000  24   184  U3(5)  (5^2:5):8  SL(2,3)    PSU(3,5):S3  2      2                  5       47      true             false            true             false                                                 
+# 33  126  5250   1000  24   184  U3(5)  (5^2:5):8  S4         PSU(3,5)     2      2                  5       44      true             false            true             false                                                 
+# 34  126  6000   1000  21   160  U3(5)  (5^2:5):8  7:3        PSU(3,5):2   2      2                  5       48      true             false            true             false                                                 
+# 35  126  6000   1000  21   160  U3(5)  (5^2:5):8  7:3        PSU(3,5):2   2      2                  5       48      true             false            true             false                                                 
+# 36  126  6300   250   5    8    U3(5)  (5^2:5):8  5:4        PSU(3,5):2   2      2                  5       49      true             false            true             false                                                 
+# 37  126  6300   500   10   36   U3(5)  (5^2:5):8  5:4        PSU(3,5):2   2      2                  5       49      true             false            true             false                                                 
+# 38  126  6300   500   10   36   U3(5)  (5^2:5):8  5:4        PSU(3,5):2   2      2                  5       49      true             false            true             false                                                 
+# 39  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU(3,5)     2      2                  5       49      true             false            true             false                                                 
+# 40  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU(3,5)     2      2                  5       49      true             false            true             false                                                 
+# 41  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU(3,5):2   2      2                  5       52      true             false            true             false                                                 
+# 42  126  6300   1000  20   152  U3(5)  (5^2:5):8  5:4        PSU(3,5):2   2      2                  5       49      true             false            true             false                                                 
+# 43  126  7875   250   4    6    U3(5)  (5^2:5):8  QD16       PSU(3,5):S3  2      2                  5       54      true             false            true             false                                                 
+# 44  126  7875   500   8    28   U3(5)  (5^2:5):8  QD16       PSU(3,5):2   2      2                  5       54      true             false            true             false                                                 
+# 45  126  7875   1000  16   120  U3(5)  (5^2:5):8  QD16       PSU(3,5):2   2      2                  5       54      true             false            true             false                                                 
+# 46  126  7875   1000  16   120  U3(5)  (5^2:5):8  QD16       PSU(3,5):2   2      2                  5       54      true             false            true             false                                                 
+# 47  126  10500  250   3    4    U3(5)  (5^2:5):8  3:4        PSU(3,5):S3  2      2                  5       56      true             false            true             false                                                 
+# 48  126  10500  1000  12   88   U3(5)  (5^2:5):8  D12        PSU(3,5):2   2      2                  5       55      true             false            true             false                                                 
+# 49  126  10500  1000  12   88   U3(5)  (5^2:5):8  3:4        PSU(3,5):2   2      2                  5       56      true             false            true             false                                                 
+# 50  126  12600  1000  10   72   U3(5)  (5^2:5):8  D10        PSU(3,5):2   2      2                  5       62      true             false            true             false                                                 
+# 51  126  12600  1000  10   72   U3(5)  (5^2:5):8  10         PSU(3,5):2   2      2                  5       61      true             false            true             false                                                 
+# 52  126  14000  1000  9    64   U3(5)  (5^2:5):8  3^2        PSU(3,5):S3  2      2                  5       65      true             false            true             false                                                 
+# 53  126  15750  500   4    12   U3(5)  (5^2:5):8  D8         PSU(3,5):2   2      2                  5       66      true             false            true             false                                                 
+# 54  126  15750  1000  8    56   U3(5)  (5^2:5):8  D8         PSU(3,5):2   2      2                  5       66      true             false            true             false                                                 
+# 55  126  15750  1000  8    56   U3(5)  (5^2:5):8  8          PSU(3,5):2   2      2                  5       67      true             false            true             false                                                 
+# 56  126  15750  1000  8    56   U3(5)  (5^2:5):8  8          PSU(3,5):2   2      2                  5       67      true             false            true             false                                                 
+# 57  126  15750  1000  8    56   U3(5)  (5^2:5):8  Q8         PSU(3,5):S3  2      2                  5       68      true             false            true             false                                                 
+# 58  126  15750  1000  8    56   U3(5)  (5^2:5):8  D8         PSU(3,5):2   2      2                  5       66      true             false            true             false                                                 
+# 59  126  18000  1000  7    48   U3(5)  (5^2:5):8  7          PSU(3,5):2   2      2                  5       69      true             false            true             false                                                 
+# 60  126  18000  1000  7    48   U3(5)  (5^2:5):8  7          PSU(3,5):2   2      2                  5       69      true             false            true             false                                                 
+# 61  126  21000  500   3    8    U3(5)  (5^2:5):8  S3         PSU(3,5):2   2      2                  5       70      true             false            true             false                                                 
+# 62  126  21000  1000  6    40   U3(5)  (5^2:5):8  S3         PSU(3,5):S3  2      2                  5       70      true             false            true             false                                                 
+# 63  126  21000  1000  6    40   U3(5)  (5^2:5):8  6          PSU(3,5):2   2      2                  5       71      true             false            true             false                                                 
+# 64  126  21000  1000  6    40   U3(5)  (5^2:5):8  S3         PSU(3,5)     2      2                  5       70      true             false            true             false                                                 
+# 65  126  25200  1000  5    32   U3(5)  (5^2:5):8  5          PSU(3,5):2   2      2                  5       74      true             false            true             false                                                 
+# 66  126  31500  1000  4    24   U3(5)  (5^2:5):8  4          PSU(3,5):2   2      2                  5       76      true             false            true             false                                                 
+# 67  126  31500  1000  4    24   U3(5)  (5^2:5):8  4          PSU(3,5):2   2      2                  5       76      true             false            true             false                                                 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -130,7 +130,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2         
+# Structure                            U3(5)              PSU(3,5):2         
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
 # Point-stabiliser                     A7                 S7                 
@@ -156,7 +156,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -182,7 +182,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -208,11 +208,11 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3   
+# Structure                            U3(5)         PSU(3,5):S3   
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2    
-# Block-stabiliser                     SL2(5):2      SL2(5):D12   
+# Block-stabiliser                     SL(2,5):2     SL(2,5):D12   
 # Orbit structure of point-stabiliser  1^{1}125^{1}  1^{1}125^{1}  
 # Orbit structure of block-stabiliser  6^{1}120^{1}  6^{1}120^{1}  
 # Point-transitive                     true          true          
@@ -234,11 +234,11 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3   
+# Structure                            U3(5)         PSU(3,5):S3   
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2    
-# Block-stabiliser                     SL2(5):2      SL2(5):D12   
+# Block-stabiliser                     SL(2,5):2     SL(2,5):D12   
 # Orbit structure of point-stabiliser  1^{1}125^{1}  1^{1}125^{1}  
 # Orbit structure of block-stabiliser  6^{1}120^{1}  6^{1}120^{1}  
 # Point-transitive                     true          true          
@@ -260,11 +260,11 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
-# Block-stabiliser                     PSL3(2)       PSL3(2):2    
+# Block-stabiliser                     PSL(3,2)      PSL(3,2):2    
 # Orbit structure of point-stabiliser  1^{1}125^{1}  1^{1}125^{1}  
 # Orbit structure of block-stabiliser  42^{1}84^{1}  42^{1}84^{1}  
 # Point-transitive                     true          true          
@@ -286,11 +286,11 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
-# Block-stabiliser                     PSL3(2)       PSL3(2):2    
+# Block-stabiliser                     PSL(3,2)      PSL(3,2):2    
 # Orbit structure of point-stabiliser  1^{1}125^{1}  1^{1}125^{1}  
 # Orbit structure of block-stabiliser  42^{1}84^{1}  42^{1}84^{1}  
 # Point-transitive                     true          true          
@@ -312,7 +312,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -338,7 +338,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -364,7 +364,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -390,7 +390,7 @@
 # -----------------------------------------------------------------------------
 #                                      G                   Aut(D)              
 # -----------------------------------------------------------------------------
-# Structure                            U3(5)               PSU3(5):2          
+# Structure                            U3(5)               PSU(3,5):2          
 # Rank                                 2                   2                   
 # 2-Homogeneous                        true                true                
 # Point-stabiliser                     (5^2:5):8           5^2:5:8:2           
@@ -416,7 +416,7 @@
 # -----------------------------------------------------------------------------
 #                                      G                   Aut(D)              
 # -----------------------------------------------------------------------------
-# Structure                            U3(5)               PSU3(5):2          
+# Structure                            U3(5)               PSU(3,5):2          
 # Rank                                 2                   2                   
 # 2-Homogeneous                        true                true                
 # Point-stabiliser                     (5^2:5):8           5^2:5:8:2           
@@ -442,7 +442,7 @@
 # -----------------------------------------------------------------------
 #                                      G             Aut(D)              
 # -----------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2          
+# Structure                            U3(5)         PSU(3,5):2          
 # Rank                                 2             2                   
 # 2-Homogeneous                        true          true                
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2           
@@ -468,7 +468,7 @@
 # ------------------------------------------------------------------
 #                                      G             Aut(D)         
 # ------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3    
+# Structure                            U3(5)         PSU(3,5):S3    
 # Rank                                 2             2              
 # 2-Homogeneous                        true          true           
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2     
@@ -494,7 +494,7 @@
 # -----------------------------------------------------------------------
 #                                      G             Aut(D)              
 # -----------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2          
+# Structure                            U3(5)         PSU(3,5):2          
 # Rank                                 2             2                   
 # 2-Homogeneous                        true          true                
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2           
@@ -520,7 +520,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3   
+# Structure                            U3(5)         PSU(3,5):S3   
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2    
@@ -546,7 +546,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2         
+# Structure                            U3(5)              PSU(3,5):2         
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2          
@@ -572,7 +572,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2         
+# Structure                            U3(5)              PSU(3,5):2         
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2          
@@ -598,11 +598,11 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2         
+# Structure                            U3(5)              PSU(3,5):2         
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2          
-# Block-stabiliser                     GL2(3)             (4x2):2:3:2        
+# Block-stabiliser                     GL(2,3)            (4x2):2:3:2        
 # Orbit structure of point-stabiliser  1^{1}125^{1}       1^{1}125^{1}       
 # Orbit structure of block-stabiliser  6^{1}24^{3}48^{1}  6^{1}24^{1}48^{2}  
 # Point-transitive                     true               true               
@@ -624,11 +624,11 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):S3        
+# Structure                            U3(5)              PSU(3,5):S3        
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     (5^2:5):8          5^2:5:24:2         
-# Block-stabiliser                     GL2(3)             (3xSL2(3)):2:2    
+# Block-stabiliser                     GL(2,3)            (3xSL(2,3)):2:2    
 # Orbit structure of point-stabiliser  1^{1}125^{1}       1^{1}125^{1}       
 # Orbit structure of block-stabiliser  6^{1}24^{3}48^{1}  6^{1}48^{1}72^{1}  
 # Point-transitive                     true               true               
@@ -650,7 +650,7 @@
 # --------------------------------------------------------------------------
 #                                      G                 Aut(D)             
 # --------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):S3        
+# Structure                            U3(5)             PSU(3,5):S3        
 # Rank                                 2                 2                  
 # 2-Homogeneous                        true              true               
 # Point-stabiliser                     (5^2:5):8         5^2:5:24:2         
@@ -676,7 +676,7 @@
 # -------------------------------------------------------------------------------
 #                                      G                 Aut(D)                  
 # -------------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2              
+# Structure                            U3(5)             PSU(3,5):2              
 # Rank                                 2                 2                       
 # 2-Homogeneous                        true              true                    
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2               
@@ -702,7 +702,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2         
+# Structure                            U3(5)              PSU(3,5):2         
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2          
@@ -728,7 +728,7 @@
 # ----------------------------------------------------------------------
 #                                      G                  Aut(D)        
 # ----------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2    
+# Structure                            U3(5)              PSU(3,5):2    
 # Rank                                 2                  2             
 # 2-Homogeneous                        true               true          
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2     
@@ -754,7 +754,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                  Aut(D)                   
 # ---------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2               
+# Structure                            U3(5)              PSU(3,5):2               
 # Rank                                 2                  2                        
 # 2-Homogeneous                        true               true                     
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2                
@@ -780,7 +780,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                  Aut(D)                   
 # ---------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2               
+# Structure                            U3(5)              PSU(3,5):2               
 # Rank                                 2                  2                        
 # 2-Homogeneous                        true               true                     
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2                
@@ -806,7 +806,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                  Aut(D)                   
 # ---------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2               
+# Structure                            U3(5)              PSU(3,5):2               
 # Rank                                 2                  2                        
 # 2-Homogeneous                        true               true                     
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2                
@@ -832,7 +832,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                  Aut(D)                   
 # ---------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):S3              
+# Structure                            U3(5)              PSU(3,5):S3              
 # Rank                                 2                  2                        
 # 2-Homogeneous                        true               true                     
 # Point-stabiliser                     (5^2:5):8          5^2:5:24:2               
@@ -858,7 +858,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5)           
+# Structure                            U3(5)              PSU(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     (5^2:5):8          5^2:5:8            
@@ -884,7 +884,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                  Aut(D)                   
 # ---------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2               
+# Structure                            U3(5)              PSU(3,5):2               
 # Rank                                 2                  2                        
 # 2-Homogeneous                        true               true                     
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2                
@@ -910,7 +910,7 @@
 # ---------------------------------------------------------------------------------
 #                                      G                  Aut(D)                   
 # ---------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2               
+# Structure                            U3(5)              PSU(3,5):2               
 # Rank                                 2                  2                        
 # 2-Homogeneous                        true               true                     
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2                
@@ -936,11 +936,11 @@
 # ----------------------------------------------------------------------
 #                                      G             Aut(D)             
 # ----------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3        
+# Structure                            U3(5)         PSU(3,5):S3        
 # Rank                                 2             2                  
 # 2-Homogeneous                        true          true               
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2         
-# Block-stabiliser                     SL2(3)        (3xSL2(3)):2      
+# Block-stabiliser                     SL(2,3)       (3xSL(2,3)):2      
 # Orbit structure of point-stabiliser  1^{1}125^{1}  1^{1}125^{1}       
 # Orbit structure of block-stabiliser  6^{1}24^{5}   6^{1}24^{2}72^{1}  
 # Point-transitive                     true          true               
@@ -962,7 +962,7 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5)           
+# Structure                            U3(5)              PSU(3,5)           
 # Rank                                 2                  2                  
 # 2-Homogeneous                        true               true               
 # Point-stabiliser                     (5^2:5):8          5^2:5:8            
@@ -988,7 +988,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -1014,7 +1014,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -1040,7 +1040,7 @@
 # -------------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                        
 # -------------------------------------------------------------------------------------------
-# Structure                            U3(5)                   PSU3(5):2                    
+# Structure                            U3(5)                   PSU(3,5):2                    
 # Rank                                 2                       2                             
 # 2-Homogeneous                        true                    true                          
 # Point-stabiliser                     (5^2:5):8               5^2:5:8:2                     
@@ -1066,7 +1066,7 @@
 # -------------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                        
 # -------------------------------------------------------------------------------------------
-# Structure                            U3(5)                   PSU3(5):2                    
+# Structure                            U3(5)                   PSU(3,5):2                    
 # Rank                                 2                       2                             
 # 2-Homogeneous                        true                    true                          
 # Point-stabiliser                     (5^2:5):8               5^2:5:8:2                     
@@ -1092,7 +1092,7 @@
 # -------------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                        
 # -------------------------------------------------------------------------------------------
-# Structure                            U3(5)                   PSU3(5):2                    
+# Structure                            U3(5)                   PSU(3,5):2                    
 # Rank                                 2                       2                             
 # 2-Homogeneous                        true                    true                          
 # Point-stabiliser                     (5^2:5):8               5^2:5:8:2                     
@@ -1118,7 +1118,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            U3(5)                   PSU3(5)                
+# Structure                            U3(5)                   PSU(3,5)                
 # Rank                                 2                       2                       
 # 2-Homogeneous                        true                    true                    
 # Point-stabiliser                     (5^2:5):8               5^2:5:8                 
@@ -1144,7 +1144,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            U3(5)                   PSU3(5)                
+# Structure                            U3(5)                   PSU(3,5)                
 # Rank                                 2                       2                       
 # 2-Homogeneous                        true                    true                    
 # Point-stabiliser                     (5^2:5):8               5^2:5:8                 
@@ -1170,7 +1170,7 @@
 # -------------------------------------------------------------------------------
 #                                      G                 Aut(D)                  
 # -------------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2              
+# Structure                            U3(5)             PSU(3,5):2              
 # Rank                                 2                 2                       
 # 2-Homogeneous                        true              true                    
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2               
@@ -1196,7 +1196,7 @@
 # -------------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                        
 # -------------------------------------------------------------------------------------------
-# Structure                            U3(5)                   PSU3(5):2                    
+# Structure                            U3(5)                   PSU(3,5):2                    
 # Rank                                 2                       2                             
 # 2-Homogeneous                        true                    true                          
 # Point-stabiliser                     (5^2:5):8               5^2:5:8:2                     
@@ -1222,7 +1222,7 @@
 # ------------------------------------------------------------------------------------
 #                                      G                      Aut(D)                  
 # ------------------------------------------------------------------------------------
-# Structure                            U3(5)                  PSU3(5):S3             
+# Structure                            U3(5)                  PSU(3,5):S3             
 # Rank                                 2                      2                       
 # 2-Homogeneous                        true                   true                    
 # Point-stabiliser                     (5^2:5):8              5^2:5:24:2              
@@ -1248,7 +1248,7 @@
 # -----------------------------------------------------------------------------------------
 #                                      G                      Aut(D)                       
 # -----------------------------------------------------------------------------------------
-# Structure                            U3(5)                  PSU3(5):2                   
+# Structure                            U3(5)                  PSU(3,5):2                   
 # Rank                                 2                      2                            
 # 2-Homogeneous                        true                   true                         
 # Point-stabiliser                     (5^2:5):8              5^2:5:8:2                    
@@ -1274,7 +1274,7 @@
 # -----------------------------------------------------------------------------------------
 #                                      G                      Aut(D)                       
 # -----------------------------------------------------------------------------------------
-# Structure                            U3(5)                  PSU3(5):2                   
+# Structure                            U3(5)                  PSU(3,5):2                   
 # Rank                                 2                      2                            
 # 2-Homogeneous                        true                   true                         
 # Point-stabiliser                     (5^2:5):8              5^2:5:8:2                    
@@ -1300,7 +1300,7 @@
 # -----------------------------------------------------------------------------------------
 #                                      G                      Aut(D)                       
 # -----------------------------------------------------------------------------------------
-# Structure                            U3(5)                  PSU3(5):2                   
+# Structure                            U3(5)                  PSU(3,5):2                   
 # Rank                                 2                      2                            
 # 2-Homogeneous                        true                   true                         
 # Point-stabiliser                     (5^2:5):8              5^2:5:8:2                    
@@ -1326,7 +1326,7 @@
 # ----------------------------------------------------------------------------
 #                                      G             Aut(D)                   
 # ----------------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3              
+# Structure                            U3(5)         PSU(3,5):S3              
 # Rank                                 2             2                        
 # 2-Homogeneous                        true          true                     
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2               
@@ -1352,7 +1352,7 @@
 # ----------------------------------------------------------------------
 #                                      G             Aut(D)             
 # ----------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2         
+# Structure                            U3(5)         PSU(3,5):2         
 # Rank                                 2             2                  
 # 2-Homogeneous                        true          true               
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2          
@@ -1378,7 +1378,7 @@
 # ----------------------------------------------------------------------
 #                                      G             Aut(D)             
 # ----------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2         
+# Structure                            U3(5)         PSU(3,5):2         
 # Rank                                 2             2                  
 # 2-Homogeneous                        true          true               
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2          
@@ -1404,7 +1404,7 @@
 # --------------------------------------------------------------------------------
 #                                      G                  Aut(D)                  
 # --------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2              
+# Structure                            U3(5)              PSU(3,5):2              
 # Rank                                 2                  2                       
 # 2-Homogeneous                        true               true                    
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2               
@@ -1430,7 +1430,7 @@
 # --------------------------------------------------------------------------------
 #                                      G                  Aut(D)                  
 # --------------------------------------------------------------------------------
-# Structure                            U3(5)              PSU3(5):2              
+# Structure                            U3(5)              PSU(3,5):2              
 # Rank                                 2                  2                       
 # 2-Homogeneous                        true               true                    
 # Point-stabiliser                     (5^2:5):8          5^2:5:8:2               
@@ -1456,7 +1456,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3   
+# Structure                            U3(5)         PSU(3,5):S3   
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2    
@@ -1482,7 +1482,7 @@
 # ------------------------------------------------------------------------------
 #                                      G                 Aut(D)                 
 # ------------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2             
+# Structure                            U3(5)             PSU(3,5):2             
 # Rank                                 2                 2                      
 # 2-Homogeneous                        true              true                   
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2              
@@ -1508,7 +1508,7 @@
 # ------------------------------------------------------------------------------
 #                                      G                 Aut(D)                 
 # ------------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2             
+# Structure                            U3(5)             PSU(3,5):2             
 # Rank                                 2                 2                      
 # 2-Homogeneous                        true              true                   
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2              
@@ -1534,7 +1534,7 @@
 # ------------------------------------------------------------------------------
 #                                      G                 Aut(D)                 
 # ------------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2             
+# Structure                            U3(5)             PSU(3,5):2             
 # Rank                                 2                 2                      
 # 2-Homogeneous                        true              true                   
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2              
@@ -1560,7 +1560,7 @@
 # ------------------------------------------------------------------------------
 #                                      G                 Aut(D)                 
 # ------------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2             
+# Structure                            U3(5)             PSU(3,5):2             
 # Rank                                 2                 2                      
 # 2-Homogeneous                        true              true                   
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2              
@@ -1586,11 +1586,11 @@
 # ---------------------------------------------------------------------------------
 #                                      G             Aut(D)                        
 # ---------------------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3                   
+# Structure                            U3(5)         PSU(3,5):S3                   
 # Rank                                 2             2                             
 # 2-Homogeneous                        true          true                          
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2                    
-# Block-stabiliser                     Q8            GL2(3)                       
+# Block-stabiliser                     Q8            GL(2,3)                       
 # Orbit structure of point-stabiliser  1^{1}125^{1}  1^{1}125^{1}                  
 # Orbit structure of block-stabiliser  2^{3}8^{15}   6^{1}8^{1}16^{1}24^{2}48^{1}  
 # Point-transitive                     true          true                          
@@ -1612,7 +1612,7 @@
 # ------------------------------------------------------------------------------
 #                                      G                 Aut(D)                 
 # ------------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2             
+# Structure                            U3(5)             PSU(3,5):2             
 # Rank                                 2                 2                      
 # 2-Homogeneous                        true              true                   
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2              
@@ -1638,7 +1638,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -1664,7 +1664,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -1690,7 +1690,7 @@
 # ---------------------------------------------------------------------
 #                                      G             Aut(D)            
 # ---------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2        
+# Structure                            U3(5)         PSU(3,5):2        
 # Rank                                 2             2                 
 # 2-Homogeneous                        true          true              
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2         
@@ -1716,7 +1716,7 @@
 # ----------------------------------------------------------------------
 #                                      G             Aut(D)             
 # ----------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):S3        
+# Structure                            U3(5)         PSU(3,5):S3        
 # Rank                                 2             2                  
 # 2-Homogeneous                        true          true               
 # Point-stabiliser                     (5^2:5):8     5^2:5:24:2         
@@ -1742,7 +1742,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2    
+# Structure                            U3(5)         PSU(3,5):2    
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2     
@@ -1768,7 +1768,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5)      
+# Structure                            U3(5)         PSU(3,5)      
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
 # Point-stabiliser                     (5^2:5):8     5^2:5:8       
@@ -1794,7 +1794,7 @@
 # ----------------------------------------------------------------------
 #                                      G             Aut(D)             
 # ----------------------------------------------------------------------
-# Structure                            U3(5)         PSU3(5):2         
+# Structure                            U3(5)         PSU(3,5):2         
 # Rank                                 2             2                  
 # 2-Homogeneous                        true          true               
 # Point-stabiliser                     (5^2:5):8     5^2:5:8:2          
@@ -1820,7 +1820,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2        
+# Structure                            U3(5)             PSU(3,5):2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2         
@@ -1846,7 +1846,7 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            U3(5)             PSU3(5):2        
+# Structure                            U3(5)             PSU(3,5):2        
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
 # Point-stabiliser                     (5^2:5):8         5^2:5:8:2         

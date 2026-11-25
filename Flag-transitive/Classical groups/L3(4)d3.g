@@ -43,28 +43,28 @@
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ    G        Gα           GB           Aut(D)       rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   21  21    5     5   1    L3(4).3  2^4:GL2(4)   2^4:GL2(4)   L3(4).3.2_2  2      2                  3       4       true             true             true             true                 2           true       PG(2,4) parameters                
-# 2   21  21    16    16  12   L3(4).3  2^4:GL2(4)   2^4:GL2(4)   L3(4).3.2_2  2      2                  3       4       true             true             true             true                 1           true       complement of PG(2,4) parameters  
-# 3   21  105   20    4   3    L3(4).3  2^4:GL2(4)   2^4:2:2:3^2  L3(4).3.2_2  2      2                  3       7       true             false            true             false                                                                         
-# 4   21  168   48    6   12   L3(4).3  2^4:GL2(4)   A6           L3(4).3.2_2  2      2                  3       10      true             false            true             true                 5                                                        
-# 5   21  168   120   15  84   L3(4).3  2^4:GL2(4)   A6           L3(4).3.2_2  2      2                  3       10      true             false            true             true                 4                                                        
-# 6   21  210   30    3   3    L3(4).3  2^4:GL2(4)   2^4:3:2:3    L3(4).3.2_2  2      2                  3       11      true             false            true             false                                                                         
-# 7   21  210   80    8   28   L3(4).3  2^4:GL2(4)   2^4:3:2:3    L3(4).3.2_2  2      2                  3       12      true             false            true             false                                                                         
-# 8   21  210   120   12  66   L3(4).3  2^4:GL2(4)   2^4:3:2:3    L3(4).3.2_2  2      2                  3       12      true             false            true             false                                                                         
-# 9   21  280   120   9   48   L3(4).3  2^4:GL2(4)   3^2:Q8:3     L3(4).3.2_2  2      2                  3       15      true             true             true             true                 10                                                       
-# 10  21  280   160   12  88   L3(4).3  2^4:GL2(4)   3^2:Q8:3     L3(4).3.2_2  2      2                  3       15      true             true             true             true                 9                                                        
-# 11  21  336   240   15  168  L3(4).3  2^4:GL2(4)   GL2(4)       L3(4).3.2_2  2      2                  3       20      true             false            true             false                                                                         
-# 12  21  360   120   7   36   L3(4).3  2^4:GL2(4)   PSL3(2)      L3(4).3.2_2  2      2                  3       21      true             false            true             true                 13                                                       
-# 13  21  360   240   14  156  L3(4).3  2^4:GL2(4)   PSL3(2)      L3(4).3.2_2  2      2                  3       21      true             false            true             true                 12                                                       
-# 14  21  1008  240   5   48   L3(4).3  2^4:GL2(4)   A5           L3(4).3.2_2  2      2                  3       37      true             false            true             false                                                                         
-# 15  21  1008  480   10  216  L3(4).3  2^4:GL2(4)   A5           L3(4).3.2_2  2      2                  3       35      true             false            true             false                                                                         
-# 16  21  1120  160   3   16   L3(4).3  2^4:GL2(4)   3^2:6        L3(4).3.2_2  2      2                  3       38      true             false            true             false                                                                         
-# 17  21  1120  480   9   192  L3(4).3  2^4:GL2(4)   3^2:6        L3(4).3.2_2  2      2                  3       38      true             false            true             false                                                                         
-# 18  21  2520  480   4   72   L3(4).3  2^4:GL2(4)   S4           L3(4).3.2_2  2      2                  3       57      true             false            true             false                                                                         
-# 19  21  2520  720   6   180  L3(4).3  2^4:GL2(4)   S4           L3(4).3.2_2  2      2                  3       58      true             false            true             false                                                                         
-# 20  21  2520  960   8   336  L3(4).3  2^4:GL2(4)   SL2(3)       L3(4).3.2_2  2      2                  3       56      true             false            true             false                                                                         
-# 21  21  2520  1440  12  792  L3(4).3  2^4:GL2(4)   S4           L3(4).3.2_2  2      2                  3       57      true             false            true             false                                                                         
-# 22  21  3360  960   6   240  L3(4).3  2^4:GL2(4)   3xS3         L3(4).3.2_2  2      2                  3       64      true             false            true             false                                                                         
+# 1   21  21    5     5   1    L3(4).3  2^4:GL(2,4)  2^4:GL(2,4)  L3(4).3.2_2  2      2                  3       4       true             true             true             true                 2           true       PG(2,4) parameters                
+# 2   21  21    16    16  12   L3(4).3  2^4:GL(2,4)  2^4:GL(2,4)  L3(4).3.2_2  2      2                  3       4       true             true             true             true                 1           true       complement of PG(2,4) parameters  
+# 3   21  105   20    4   3    L3(4).3  2^4:GL(2,4)  2^4:2:2:3^2  L3(4).3.2_2  2      2                  3       7       true             false            true             false                                                                         
+# 4   21  168   48    6   12   L3(4).3  2^4:GL(2,4)  A6           L3(4).3.2_2  2      2                  3       10      true             false            true             true                 5                                                        
+# 5   21  168   120   15  84   L3(4).3  2^4:GL(2,4)  A6           L3(4).3.2_2  2      2                  3       10      true             false            true             true                 4                                                        
+# 6   21  210   30    3   3    L3(4).3  2^4:GL(2,4)  2^4:3:2:3    L3(4).3.2_2  2      2                  3       11      true             false            true             false                                                                         
+# 7   21  210   80    8   28   L3(4).3  2^4:GL(2,4)  2^4:3:2:3    L3(4).3.2_2  2      2                  3       12      true             false            true             false                                                                         
+# 8   21  210   120   12  66   L3(4).3  2^4:GL(2,4)  2^4:3:2:3    L3(4).3.2_2  2      2                  3       12      true             false            true             false                                                                         
+# 9   21  280   120   9   48   L3(4).3  2^4:GL(2,4)  3^2:Q8:3     L3(4).3.2_2  2      2                  3       15      true             true             true             true                 10                                                       
+# 10  21  280   160   12  88   L3(4).3  2^4:GL(2,4)  3^2:Q8:3     L3(4).3.2_2  2      2                  3       15      true             true             true             true                 9                                                        
+# 11  21  336   240   15  168  L3(4).3  2^4:GL(2,4)  GL(2,4)      L3(4).3.2_2  2      2                  3       20      true             false            true             false                                                                         
+# 12  21  360   120   7   36   L3(4).3  2^4:GL(2,4)  PSL(3,2)     L3(4).3.2_2  2      2                  3       21      true             false            true             true                 13                                                       
+# 13  21  360   240   14  156  L3(4).3  2^4:GL(2,4)  PSL(3,2)     L3(4).3.2_2  2      2                  3       21      true             false            true             true                 12                                                       
+# 14  21  1008  240   5   48   L3(4).3  2^4:GL(2,4)  A5           L3(4).3.2_2  2      2                  3       37      true             false            true             false                                                                         
+# 15  21  1008  480   10  216  L3(4).3  2^4:GL(2,4)  A5           L3(4).3.2_2  2      2                  3       35      true             false            true             false                                                                         
+# 16  21  1120  160   3   16   L3(4).3  2^4:GL(2,4)  3^2:6        L3(4).3.2_2  2      2                  3       38      true             false            true             false                                                                         
+# 17  21  1120  480   9   192  L3(4).3  2^4:GL(2,4)  3^2:6        L3(4).3.2_2  2      2                  3       38      true             false            true             false                                                                         
+# 18  21  2520  480   4   72   L3(4).3  2^4:GL(2,4)  S4           L3(4).3.2_2  2      2                  3       57      true             false            true             false                                                                         
+# 19  21  2520  720   6   180  L3(4).3  2^4:GL(2,4)  S4           L3(4).3.2_2  2      2                  3       58      true             false            true             false                                                                         
+# 20  21  2520  960   8   336  L3(4).3  2^4:GL(2,4)  SL(2,3)      L3(4).3.2_2  2      2                  3       56      true             false            true             false                                                                         
+# 21  21  2520  1440  12  792  L3(4).3  2^4:GL(2,4)  S4           L3(4).3.2_2  2      2                  3       57      true             false            true             false                                                                         
+# 22  21  3360  960   6   240  L3(4).3  2^4:GL(2,4)  3xS3         L3(4).3.2_2  2      2                  3       64      true             false            true             false                                                                         
 # --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -80,8 +80,8 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
-# Block-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
+# Block-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  5^{1}16^{1}  5^{1}16^{1}  
 # Point-transitive                     true         true         
@@ -106,8 +106,8 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
-# Block-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
+# Block-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  5^{1}16^{1}  5^{1}16^{1}  
 # Point-transitive                     true         true         
@@ -132,7 +132,7 @@
 # Structure                            L3(4).3           L3(4).3.2_2       
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     2^4:GL2(4)        2^4:A5:S3         
+# Point-stabiliser                     2^4:GL(2,4)       2^4:A5:S3         
 # Block-stabiliser                     2^4:2:2:3^2       2^4:2:2:3^2:2     
 # Orbit structure of point-stabiliser  1^{1}20^{1}       1^{1}20^{1}       
 # Orbit structure of block-stabiliser  1^{1}4^{1}16^{1}  1^{1}4^{1}16^{1}  
@@ -158,7 +158,7 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Block-stabiliser                     A6           S6           
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  6^{1}15^{1}  6^{1}15^{1}  
@@ -184,7 +184,7 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Block-stabiliser                     A6           S6           
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  6^{1}15^{1}  6^{1}15^{1}  
@@ -210,7 +210,7 @@
 # Structure                            L3(4).3           L3(4).3.2_2       
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     2^4:GL2(4)        2^4:A5:S3         
+# Point-stabiliser                     2^4:GL(2,4)       2^4:A5:S3         
 # Block-stabiliser                     2^4:3:2:3         (A4xA4):2:2       
 # Orbit structure of point-stabiliser  1^{1}20^{1}       1^{1}20^{1}       
 # Orbit structure of block-stabiliser  2^{1}3^{1}16^{1}  2^{1}3^{1}16^{1}  
@@ -236,7 +236,7 @@
 # Structure                            L3(4).3           L3(4).3.2_2       
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     2^4:GL2(4)        2^4:A5:S3         
+# Point-stabiliser                     2^4:GL(2,4)       2^4:A5:S3         
 # Block-stabiliser                     2^4:3:2:3         (A4xA4):2:2       
 # Orbit structure of point-stabiliser  1^{1}20^{1}       1^{1}20^{1}       
 # Orbit structure of block-stabiliser  1^{1}8^{1}12^{1}  1^{1}8^{1}12^{1}  
@@ -262,7 +262,7 @@
 # Structure                            L3(4).3           L3(4).3.2_2       
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     2^4:GL2(4)        2^4:A5:S3         
+# Point-stabiliser                     2^4:GL(2,4)       2^4:A5:S3         
 # Block-stabiliser                     2^4:3:2:3         (A4xA4):2:2       
 # Orbit structure of point-stabiliser  1^{1}20^{1}       1^{1}20^{1}       
 # Orbit structure of block-stabiliser  1^{1}8^{1}12^{1}  1^{1}8^{1}12^{1}  
@@ -288,7 +288,7 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Block-stabiliser                     3^2:Q8:3     3^2:Q8:3:2   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  9^{1}12^{1}  9^{1}12^{1}  
@@ -314,7 +314,7 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Block-stabiliser                     3^2:Q8:3     3^2:Q8:3:2   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  9^{1}12^{1}  9^{1}12^{1}  
@@ -340,8 +340,8 @@
 # Structure                            L3(4).3           L3(4).3.2_2       
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     2^4:GL2(4)        2^4:A5:S3         
-# Block-stabiliser                     GL2(4)            A5:S3             
+# Point-stabiliser                     2^4:GL(2,4)       2^4:A5:S3         
+# Block-stabiliser                     GL(2,4)           A5:S3             
 # Orbit structure of point-stabiliser  1^{1}20^{1}       1^{1}20^{1}       
 # Orbit structure of block-stabiliser  1^{1}5^{1}15^{1}  1^{1}5^{1}15^{1}  
 # Point-transitive                     true              true              
@@ -366,8 +366,8 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
-# Block-stabiliser                     PSL3(2)      2xPSL3(2)   
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
+# Block-stabiliser                     PSL(3,2)     2xPSL(3,2)   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  7^{1}14^{1}  7^{1}14^{1}  
 # Point-transitive                     true         true         
@@ -392,8 +392,8 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
-# Block-stabiliser                     PSL3(2)      2xPSL3(2)   
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
+# Block-stabiliser                     PSL(3,2)     2xPSL(3,2)   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  7^{1}14^{1}  7^{1}14^{1}  
 # Point-transitive                     true         true         
@@ -418,7 +418,7 @@
 # Structure                            L3(4).3           L3(4).3.2_2       
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     2^4:GL2(4)        2^4:A5:S3         
+# Point-stabiliser                     2^4:GL(2,4)       2^4:A5:S3         
 # Block-stabiliser                     A5                S5                
 # Orbit structure of point-stabiliser  1^{1}20^{1}       1^{1}20^{1}       
 # Orbit structure of block-stabiliser  1^{1}5^{1}15^{1}  1^{1}5^{1}15^{1}  
@@ -444,7 +444,7 @@
 # Structure                            L3(4).3           L3(4).3.2_2       
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     2^4:GL2(4)        2^4:A5:S3         
+# Point-stabiliser                     2^4:GL(2,4)       2^4:A5:S3         
 # Block-stabiliser                     A5                S5                
 # Orbit structure of point-stabiliser  1^{1}20^{1}       1^{1}20^{1}       
 # Orbit structure of block-stabiliser  5^{1}6^{1}10^{1}  5^{1}6^{1}10^{1}  
@@ -470,7 +470,7 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Block-stabiliser                     3^2:6        3^2:3:2^2    
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  3^{1}9^{2}   3^{1}9^{2}   
@@ -496,7 +496,7 @@
 # Structure                            L3(4).3      L3(4).3.2_2  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     2^4:GL2(4)   2^4:A5:S3    
+# Point-stabiliser                     2^4:GL(2,4)  2^4:A5:S3    
 # Block-stabiliser                     3^2:6        3^2:3:2^2    
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  3^{1}9^{2}   3^{1}9^{2}   
@@ -522,7 +522,7 @@
 # Structure                            L3(4).3                L3(4).3.2_2            
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     2^4:GL2(4)             2^4:A5:S3              
+# Point-stabiliser                     2^4:GL(2,4)            2^4:A5:S3              
 # Block-stabiliser                     S4                     2xS4                   
 # Orbit structure of point-stabiliser  1^{1}20^{1}            1^{1}20^{1}            
 # Orbit structure of block-stabiliser  2^{1}3^{1}4^{1}12^{1}  2^{1}3^{1}4^{1}12^{1}  
@@ -548,7 +548,7 @@
 # Structure                            L3(4).3          L3(4).3.2_2      
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^4:GL2(4)       2^4:A5:S3        
+# Point-stabiliser                     2^4:GL(2,4)      2^4:A5:S3        
 # Block-stabiliser                     S4               2xS4             
 # Orbit structure of point-stabiliser  1^{1}20^{1}      1^{1}20^{1}      
 # Orbit structure of block-stabiliser  1^{1}6^{2}8^{1}  1^{1}6^{2}8^{1}  
@@ -574,8 +574,8 @@
 # Structure                            L3(4).3          L3(4).3.2_2      
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     2^4:GL2(4)       2^4:A5:S3        
-# Block-stabiliser                     SL2(3)           GL2(3)          
+# Point-stabiliser                     2^4:GL(2,4)      2^4:A5:S3        
+# Block-stabiliser                     SL(2,3)          GL(2,3)          
 # Orbit structure of point-stabiliser  1^{1}20^{1}      1^{1}20^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{1}8^{2}  1^{1}4^{1}8^{2}  
 # Point-transitive                     true             true             
@@ -600,7 +600,7 @@
 # Structure                            L3(4).3                L3(4).3.2_2            
 # Rank                                 2                      2                      
 # 2-Homogeneous                        true                   true                   
-# Point-stabiliser                     2^4:GL2(4)             2^4:A5:S3              
+# Point-stabiliser                     2^4:GL(2,4)            2^4:A5:S3              
 # Block-stabiliser                     S4                     2xS4                   
 # Orbit structure of point-stabiliser  1^{1}20^{1}            1^{1}20^{1}            
 # Orbit structure of block-stabiliser  2^{1}3^{1}4^{1}12^{1}  2^{1}3^{1}4^{1}12^{1}  
@@ -626,7 +626,7 @@
 # Structure                            L3(4).3                    L3(4).3.2_2                
 # Rank                                 2                          2                          
 # 2-Homogeneous                        true                       true                       
-# Point-stabiliser                     2^4:GL2(4)                 2^4:A5:S3                  
+# Point-stabiliser                     2^4:GL(2,4)                2^4:A5:S3                  
 # Block-stabiliser                     3xS3                       S3xS3                      
 # Orbit structure of point-stabiliser  1^{1}20^{1}                1^{1}20^{1}                
 # Orbit structure of block-stabiliser  1^{1}2^{1}3^{1}6^{1}9^{1}  1^{1}2^{1}3^{1}6^{1}9^{1}  

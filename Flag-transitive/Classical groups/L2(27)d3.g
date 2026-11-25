@@ -49,18 +49,18 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r     k   λ    G            Gα        GB       Aut(D)       rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   28  378   351   26  325  PSL2(27):3   3^3.13.3  13:6     S28          2      2                  1       4       true             true             true             true                                        complete  
-# 2   28  702   351   14  169  PSL2(27):3   3^3.13.3  2x(7:3)  PΓL2(27)     2      2                  1       5       true             false            true             true                 2                                
-# 3   28  702   351   14  169  PSL2(27):3   3^3.13.3  7:6      PSL2(27):3   2      2                  1       6       true             false            true             true                 3                                
-# 4   28  756   351   13  156  PSL2(27):3   3^3.13.3  13:3     PΓL2(27)     2      2                  1       8       true             false            true             false                                                 
-# 5   28  819   117   4   13   PSL2(27):3   3^3.13.3  3xA4     PΓL2(27)     2      2                  1       9       true             true             true             false                                                 
-# 6   28  819   351   12  143  PSL2(27):3   3^3.13.3  3xA4     PSL2(27):3   2      2                  1       9       true             true             true             false                                                 
-# 7   28  1092  351   9   104  PSL2(27):3   3^3.13.3  3^2:3    PΓL2(27)     2      2                  1       14      true             false            true             false                                                 
-# 8   28  1404  351   7   78   PSL2(27):3   3^3.13.3  7:3      PΓL2(27)     2      2                  1       16      true             false            true             false                                                 
-# 9   28  2457  351   4   39   PSL2(27):3   3^3.13.3  A4       PSL2(27):3   2      2                  1       21      true             false            true             false                                                 
-# 10  28  3276  351   3   26   PSL2(27):3   3^3.13.3  3^2      S28          2      2                  1       27      true             false            true             false                                       complete  
-# 11  28  3276  1053  9   312  PSL2(27):3   3^3.13.3  9        PSL2(27):3   2      2                  1       25      true             false            true             false                                                 
-# 12  28  4914  1053  6   195  PSL2(27):3   3^3.13.3  6        PSL2(27):3   2      2                  1       30      true             false            true             false                                                 
+# 1   28  378   351   26  325  PSL(2,27):3  3^3.13.3  13:6     S28          2      2                  1       4       true             true             true             true                                        complete  
+# 2   28  702   351   14  169  PSL(2,27):3  3^3.13.3  2x(7:3)  PΓL(2,27)    2      2                  1       5       true             false            true             true                 2                                
+# 3   28  702   351   14  169  PSL(2,27):3  3^3.13.3  7:6      PSL(2,27):3  2      2                  1       6       true             false            true             true                 3                                
+# 4   28  756   351   13  156  PSL(2,27):3  3^3.13.3  13:3     PΓL(2,27)    2      2                  1       8       true             false            true             false                                                 
+# 5   28  819   117   4   13   PSL(2,27):3  3^3.13.3  3xA4     PΓL(2,27)    2      2                  1       9       true             true             true             false                                                 
+# 6   28  819   351   12  143  PSL(2,27):3  3^3.13.3  3xA4     PSL(2,27):3  2      2                  1       9       true             true             true             false                                                 
+# 7   28  1092  351   9   104  PSL(2,27):3  3^3.13.3  3^2:3    PΓL(2,27)    2      2                  1       14      true             false            true             false                                                 
+# 8   28  1404  351   7   78   PSL(2,27):3  3^3.13.3  7:3      PΓL(2,27)    2      2                  1       16      true             false            true             false                                                 
+# 9   28  2457  351   4   39   PSL(2,27):3  3^3.13.3  A4       PSL(2,27):3  2      2                  1       21      true             false            true             false                                                 
+# 10  28  3276  351   3   26   PSL(2,27):3  3^3.13.3  3^2      S28          2      2                  1       27      true             false            true             false                                       complete  
+# 11  28  3276  1053  9   312  PSL(2,27):3  3^3.13.3  9        PSL(2,27):3  2      2                  1       25      true             false            true             false                                                 
+# 12  28  4914  1053  6   195  PSL(2,27):3  3^3.13.3  6        PSL(2,27):3  2      2                  1       30      true             false            true             false                                                 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -73,7 +73,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   S28          
+# Structure                            PSL(2,27):3  S28          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^3.13.3     S27          
@@ -99,10 +99,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PΓL2(27)    
+# Structure                            PSL(2,27):3  PΓL(2,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     3^3.13.3     AΓL1(27)    
+# Point-stabiliser                     3^3.13.3     AΓL(1,27)    
 # Block-stabiliser                     2x(7:3)      2x(7:6)      
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  14^{2}       14^{2}       
@@ -125,7 +125,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PSL2(27):3  
+# Structure                            PSL(2,27):3  PSL(2,27):3  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^3.13.3     3^3.13.3     
@@ -151,10 +151,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PΓL2(27)    
+# Structure                            PSL(2,27):3  PΓL(2,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     3^3.13.3     AΓL1(27)    
+# Point-stabiliser                     3^3.13.3     AΓL(1,27)    
 # Block-stabiliser                     13:3         13:6         
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  1^{2}13^{2}  2^{1}13^{2}  
@@ -177,10 +177,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PΓL2(27)    
+# Structure                            PSL(2,27):3  PΓL(2,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     3^3.13.3     AΓL1(27)    
+# Point-stabiliser                     3^3.13.3     AΓL(1,27)    
 # Block-stabiliser                     3xA4         3xS4         
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  4^{1}12^{2}  4^{1}24^{1}  
@@ -203,7 +203,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PSL2(27):3  
+# Structure                            PSL(2,27):3  PSL(2,27):3  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^3.13.3     3^3.13.3     
@@ -229,10 +229,10 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            PSL2(27):3   PΓL2(27)         
+# Structure                            PSL(2,27):3  PΓL(2,27)         
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     3^3.13.3     AΓL1(27)         
+# Point-stabiliser                     3^3.13.3     AΓL(1,27)         
 # Block-stabiliser                     3^2:3        3^2:6             
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}       
 # Orbit structure of block-stabiliser  1^{1}9^{3}   1^{1}9^{1}18^{1}  
@@ -255,10 +255,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PΓL2(27)    
+# Structure                            PSL(2,27):3  PΓL(2,27)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     3^3.13.3     AΓL1(27)    
+# Point-stabiliser                     3^3.13.3     AΓL(1,27)    
 # Block-stabiliser                     7:3          7:6          
 # Orbit structure of point-stabiliser  1^{1}27^{1}  1^{1}27^{1}  
 # Orbit structure of block-stabiliser  7^{4}        7^{2}14^{1}  
@@ -281,7 +281,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PSL2(27):3  
+# Structure                            PSL(2,27):3  PSL(2,27):3  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^3.13.3     3^3.13.3     
@@ -307,7 +307,7 @@
 # -------------------------------------------------------------------
 #                                      G                Aut(D)       
 # -------------------------------------------------------------------
-# Structure                            PSL2(27):3       S28          
+# Structure                            PSL(2,27):3      S28          
 # Rank                                 2                2            
 # 2-Homogeneous                        true             true         
 # Point-stabiliser                     3^3.13.3         S27          
@@ -333,7 +333,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PSL2(27):3  
+# Structure                            PSL(2,27):3  PSL(2,27):3  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^3.13.3     3^3.13.3     
@@ -359,7 +359,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(27):3   PSL2(27):3  
+# Structure                            PSL(2,27):3  PSL(2,27):3  
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     3^3.13.3     3^3.13.3     

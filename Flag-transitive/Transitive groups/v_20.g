@@ -28,179 +28,179 @@
 # -----------
 
 #    Non-isomorphic designs:
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b       r      k   λ      G         Gα        GB                   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   20  190     171    18  153    PSL2(19)  19:9      D18                  S20       2      2           272    1       2       true             true             true             true                                        complete  
-# 2   20  285     57     4   9      PSL2(19)  19:9      A4                   PSL2(19)  2      2           272    1       3       true             false            true             false                                                 
-# 3   20  285     114    8   42     PGL2(19)  AGL1(19)  S4                   PGL2(19)  2      2           362    1       4       true             true             true             true                 4                                
-# 4   20  285     171    12  99     PSL2(19)  19:9      A4                   PGL2(19)  2      2           272    1       3       true             false            true             false                3                                
-# 5   20  342     171    10  81     PSL2(19)  19:9      10                   PGL2(19)  2      2           272    1       6       true             false            true             true                 5                                
-# 6   20  342     171    10  81     PSL2(19)  19:9      D10                  PSL2(19)  2      2           272    1       4       true             false            true             true                 6                                
-# 7   20  380     171    9   72     PSL2(19)  19:9      9                    PGL2(19)  2      2           272    1       7       true             false            true             false                                                 
-# 8   20  570     114    4   18     PGL2(19)  AGL1(19)  A4                   PGL2(19)  2      2           362    1       11      true             false            true             false                                                 
-# 9   20  570     171    6   45     PSL2(19)  19:9      S3                   PSL2(19)  2      2           272    1       8       true             false            true             false                                                 
-# 10  20  570     171    6   45     PSL2(19)  19:9      S3                   PGL2(19)  2      2           272    1       8       true             false            true             false                                                 
-# 11  20  570     342    12  198    PGL2(19)  AGL1(19)  D12                  PGL2(19)  2      2           362    1       12      true             false            true             false                                                 
-# 12  20  684     171    5   36     PSL2(19)  19:9      5                    PGL2(19)  2      2           272    1       9       true             false            true             false                                                 
-# 13  20  684     342    10  162    PGL2(19)  AGL1(19)  D10                  PGL2(19)  2      2           362    1       13      true             false            true             true                 13                               
-# 14  20  855     171    4   27     PSL2(19)  19:9      2^2                  PGL2(19)  2      2           272    1       10      true             false            true             false                                                 
-# 15  20  855     342    8   126    PGL2(19)  AGL1(19)  D8                   PGL2(19)  2      2           362    1       17      true             false            true             false                                                 
-# 16  20  1140    171    3   18     PSL2(19)  19:9      3                    S20       2      2           272    1       11      true             false            true             false                19                     complete  
-# 17  20  1140    342    6   90     PGL2(19)  AGL1(19)  S3                   PGL2(19)  2      2           362    1       18      true             false            true             false                                                 
-# 18  20  1140    342    6   90     PGL2(19)  AGL1(19)  S3                   PGL2(19)  2      2           362    1       20      true             false            true             false                                                 
-# 19  20  1140    969    17  816    A20       A19       (S17 x S3) cap A20   S20       2      2           1116                   true             true             true             true                 16                     complete  
-# 20  20  1710    342    4   54     PGL2(19)  AGL1(19)  2^2                  PGL2(19)  2      2           362    1       23      true             false            true             false                                                 
-# 21  20  1710    342    4   54     PGL2(19)  AGL1(19)  2^2                  PGL2(19)  2      2           362    1       23      true             false            true             false                                                 
-# 22  20  4845    969    4   153    A20       A19       (S4 x S16) cap A20   S20       2      2           1116                   true             true             true             true                 23                     complete  
-# 23  20  4845    3876   16  3060   A20       A19       (S16 x S4) cap A20   S20       2      2           1116                   true             true             true             true                 22                     complete  
-# 24  20  15504   3876   5   816    A20       A19       (S5 x S15) cap A20   S20       2      2           1116                   true             true             true             true                 25                     complete  
-# 25  20  15504   11628  15  8568   A20       A19       (S15 x S5) cap A20   S20       2      2           1116                   true             true             true             true                 24                     complete  
-# 26  20  38760   11628  6   3060   A20       A19       (S6 x S14) cap A20   S20       2      2           1116                   true             true             true             true                 27                     complete  
-# 27  20  38760   27132  14  18564  A20       A19       (S14 x S6) cap A20   S20       2      2           1116                   true             true             true             true                 26                     complete  
-# 28  20  77520   27132  7   8568   A20       A19       (S7 x S13) cap A20   S20       2      2           1116                   true             true             true             true                 29                     complete  
-# 29  20  77520   50388  13  31824  A20       A19       (S13 x S7) cap A20   S20       2      2           1116                   true             true             true             true                 28                     complete  
-# 30  20  125970  50388  8   18564  A20       A19       (S8 x S12) cap A20   S20       2      2           1116                   true             true             true             true                 31                     complete  
-# 31  20  125970  75582  12  43758  A20       A19       (S12 x S8) cap A20   S20       2      2           1116                   true             true             true             true                 30                     complete  
-# 32  20  167960  75582  9   31824  A20       A19       (S9 x S11) cap A20   S20       2      2           1116                   true             true             true             true                 33                     complete  
-# 33  20  167960  92378  11  48620  A20       A19       (S11 x S9) cap A20   S20       2      2           1116                   true             true             true             true                 32                     complete  
-# 34  20  184756  92378  10  43758  A20       A19       (S10 x S10) cap A20  S20       2      2           1116                   true             false            true             true                 34                     complete  
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b       r      k   λ      G          Gα         GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   20  190     171    18  153    PSL(2,19)  19:9       D18                  S20        2      2           272    1       2       true             true             true             true                                        complete  
+# 2   20  285     57     4   9      PSL(2,19)  19:9       A4                   PSL(2,19)  2      2           272    1       3       true             false            true             false                                                 
+# 3   20  285     114    8   42     PGL(2,19)  AGL(1,19)  S4                   PGL(2,19)  2      2           362    1       4       true             true             true             true                 4                                
+# 4   20  285     171    12  99     PSL(2,19)  19:9       A4                   PGL(2,19)  2      2           272    1       3       true             false            true             false                3                                
+# 5   20  342     171    10  81     PSL(2,19)  19:9       10                   PGL(2,19)  2      2           272    1       6       true             false            true             true                 5                                
+# 6   20  342     171    10  81     PSL(2,19)  19:9       D10                  PSL(2,19)  2      2           272    1       4       true             false            true             true                 6                                
+# 7   20  380     171    9   72     PSL(2,19)  19:9       9                    PGL(2,19)  2      2           272    1       7       true             false            true             false                                                 
+# 8   20  570     114    4   18     PGL(2,19)  AGL(1,19)  A4                   PGL(2,19)  2      2           362    1       11      true             false            true             false                                                 
+# 9   20  570     171    6   45     PSL(2,19)  19:9       S3                   PSL(2,19)  2      2           272    1       8       true             false            true             false                                                 
+# 10  20  570     171    6   45     PSL(2,19)  19:9       S3                   PGL(2,19)  2      2           272    1       8       true             false            true             false                                                 
+# 11  20  570     342    12  198    PGL(2,19)  AGL(1,19)  D12                  PGL(2,19)  2      2           362    1       12      true             false            true             false                                                 
+# 12  20  684     171    5   36     PSL(2,19)  19:9       5                    PGL(2,19)  2      2           272    1       9       true             false            true             false                                                 
+# 13  20  684     342    10  162    PGL(2,19)  AGL(1,19)  D10                  PGL(2,19)  2      2           362    1       13      true             false            true             true                 13                               
+# 14  20  855     171    4   27     PSL(2,19)  19:9       2^2                  PGL(2,19)  2      2           272    1       10      true             false            true             false                                                 
+# 15  20  855     342    8   126    PGL(2,19)  AGL(1,19)  D8                   PGL(2,19)  2      2           362    1       17      true             false            true             false                                                 
+# 16  20  1140    171    3   18     PSL(2,19)  19:9       3                    S20        2      2           272    1       11      true             false            true             false                19                     complete  
+# 17  20  1140    342    6   90     PGL(2,19)  AGL(1,19)  S3                   PGL(2,19)  2      2           362    1       18      true             false            true             false                                                 
+# 18  20  1140    342    6   90     PGL(2,19)  AGL(1,19)  S3                   PGL(2,19)  2      2           362    1       20      true             false            true             false                                                 
+# 19  20  1140    969    17  816    A20        A19        (S17 x S3) cap A20   S20        2      2           1116                   true             true             true             true                 16                     complete  
+# 20  20  1710    342    4   54     PGL(2,19)  AGL(1,19)  2^2                  PGL(2,19)  2      2           362    1       23      true             false            true             false                                                 
+# 21  20  1710    342    4   54     PGL(2,19)  AGL(1,19)  2^2                  PGL(2,19)  2      2           362    1       23      true             false            true             false                                                 
+# 22  20  4845    969    4   153    A20        A19        (S4 x S16) cap A20   S20        2      2           1116                   true             true             true             true                 23                     complete  
+# 23  20  4845    3876   16  3060   A20        A19        (S16 x S4) cap A20   S20        2      2           1116                   true             true             true             true                 22                     complete  
+# 24  20  15504   3876   5   816    A20        A19        (S5 x S15) cap A20   S20        2      2           1116                   true             true             true             true                 25                     complete  
+# 25  20  15504   11628  15  8568   A20        A19        (S15 x S5) cap A20   S20        2      2           1116                   true             true             true             true                 24                     complete  
+# 26  20  38760   11628  6   3060   A20        A19        (S6 x S14) cap A20   S20        2      2           1116                   true             true             true             true                 27                     complete  
+# 27  20  38760   27132  14  18564  A20        A19        (S14 x S6) cap A20   S20        2      2           1116                   true             true             true             true                 26                     complete  
+# 28  20  77520   27132  7   8568   A20        A19        (S7 x S13) cap A20   S20        2      2           1116                   true             true             true             true                 29                     complete  
+# 29  20  77520   50388  13  31824  A20        A19        (S13 x S7) cap A20   S20        2      2           1116                   true             true             true             true                 28                     complete  
+# 30  20  125970  50388  8   18564  A20        A19        (S8 x S12) cap A20   S20        2      2           1116                   true             true             true             true                 31                     complete  
+# 31  20  125970  75582  12  43758  A20        A19        (S12 x S8) cap A20   S20        2      2           1116                   true             true             true             true                 30                     complete  
+# 32  20  167960  75582  9   31824  A20        A19        (S9 x S11) cap A20   S20        2      2           1116                   true             true             true             true                 33                     complete  
+# 33  20  167960  92378  11  48620  A20        A19        (S11 x S9) cap A20   S20        2      2           1116                   true             true             true             true                 32                     complete  
+# 34  20  184756  92378  10  43758  A20        A19        (S10 x S10) cap A20  S20        2      2           1116                   true             false            true             true                 34                     complete  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    Reduced designs (within each group):
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b       r      k   λ      G         Gα        GB                   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   20  190     171    18  153    PSL2(19)  19:9      D18                  S20       2      2           272    1       2       true             true             true             true                                        complete  
-# 2   20  285     57     4   9      PSL2(19)  19:9      A4                   PSL2(19)  2      2           272    1       3       true             false            true             false                                                 
-# 3   20  285     171    12  99     PSL2(19)  19:9      A4                   PGL2(19)  2      2           272    1       3       true             false            true             false                13                               
-# 4   20  342     171    10  81     PSL2(19)  19:9      10                   PGL2(19)  2      2           272    1       6       true             false            true             true                 4                                
-# 5   20  342     171    10  81     PSL2(19)  19:9      D10                  PSL2(19)  2      2           272    1       4       true             false            true             true                 5                                
-# 6   20  380     171    9   72     PSL2(19)  19:9      9                    PGL2(19)  2      2           272    1       7       true             false            true             false                                                 
-# 7   20  570     171    6   45     PSL2(19)  19:9      S3                   PSL2(19)  2      2           272    1       8       true             false            true             false                                                 
-# 8   20  570     171    6   45     PSL2(19)  19:9      S3                   PGL2(19)  2      2           272    1       8       true             false            true             false                                                 
-# 9   20  684     171    5   36     PSL2(19)  19:9      5                    PGL2(19)  2      2           272    1       9       true             false            true             false                                                 
-# 10  20  855     171    4   27     PSL2(19)  19:9      2^2                  PGL2(19)  2      2           272    1       10      true             false            true             false                                                 
-# 11  20  1140    171    3   18     PSL2(19)  19:9      3                    S20       2      2           272    1       11      true             false            true             false                31                     complete  
-# 12  20  190     171    18  153    PGL2(19)  AGL1(19)  D36                  S20       2      2           362    1       3       true             true             true             true                                        complete  
-# 13  20  285     114    8   42     PGL2(19)  AGL1(19)  S4                   PGL2(19)  2      2           362    1       4       true             true             true             true                 3                                
-# 14  20  285     171    12  99     PGL2(19)  AGL1(19)  S4                   PGL2(19)  2      2           362    1       4       true             true             true             true                 13                               
-# 15  20  342     171    10  81     PGL2(19)  AGL1(19)  D20                  PGL2(19)  2      2           362    1       6       true             false            true             true                 4                                
-# 16  20  380     171    9   72     PGL2(19)  AGL1(19)  D18                  PGL2(19)  2      2           362    1       10      true             false            true             false                                                 
-# 17  20  570     114    4   18     PGL2(19)  AGL1(19)  A4                   PGL2(19)  2      2           362    1       11      true             false            true             false                                                 
-# 18  20  570     171    6   45     PGL2(19)  AGL1(19)  D12                  PGL2(19)  2      2           362    1       12      true             false            true             false                                                 
-# 19  20  570     342    12  198    PGL2(19)  AGL1(19)  D12                  PGL2(19)  2      2           362    1       12      true             false            true             false                                                 
-# 20  20  684     171    5   36     PGL2(19)  AGL1(19)  D10                  PGL2(19)  2      2           362    1       15      true             false            true             false                                                 
-# 21  20  684     342    10  162    PGL2(19)  AGL1(19)  D10                  PGL2(19)  2      2           362    1       13      true             false            true             true                 21                               
-# 22  20  855     171    4   27     PGL2(19)  AGL1(19)  D8                   PGL2(19)  2      2           362    1       17      true             false            true             false                                                 
-# 23  20  855     342    8   126    PGL2(19)  AGL1(19)  D8                   PGL2(19)  2      2           362    1       17      true             false            true             false                                                 
-# 24  20  1140    171    3   18     PGL2(19)  AGL1(19)  S3                   S20       2      2           362    1       20      true             false            true             false                31                     complete  
-# 25  20  1140    342    6   90     PGL2(19)  AGL1(19)  S3                   PGL2(19)  2      2           362    1       20      true             false            true             false                                                 
-# 26  20  1140    342    6   90     PGL2(19)  AGL1(19)  S3                   PGL2(19)  2      2           362    1       18      true             false            true             false                                                 
-# 27  20  1710    342    4   54     PGL2(19)  AGL1(19)  2^2                  PGL2(19)  2      2           362    1       23      true             false            true             false                                                 
-# 28  20  1710    342    4   54     PGL2(19)  AGL1(19)  2^2                  PGL2(19)  2      2           362    1       23      true             false            true             false                                                 
-# 29  20  190     171    18  153    A20       A19       (S18 x S2) cap A20   S20       2      2           1116                   true             true             true             true                                        complete  
-# 30  20  1140    171    3   18     A20       A19       (S3 x S17) cap A20   S20       2      2           1116                   true             true             true             true                 31                     complete  
-# 31  20  1140    969    17  816    A20       A19       (S17 x S3) cap A20   S20       2      2           1116                   true             true             true             true                 11                     complete  
-# 32  20  4845    969    4   153    A20       A19       (S4 x S16) cap A20   S20       2      2           1116                   true             true             true             true                 33                     complete  
-# 33  20  4845    3876   16  3060   A20       A19       (S16 x S4) cap A20   S20       2      2           1116                   true             true             true             true                 32                     complete  
-# 34  20  15504   3876   5   816    A20       A19       (S5 x S15) cap A20   S20       2      2           1116                   true             true             true             true                 35                     complete  
-# 35  20  15504   11628  15  8568   A20       A19       (S15 x S5) cap A20   S20       2      2           1116                   true             true             true             true                 34                     complete  
-# 36  20  38760   11628  6   3060   A20       A19       (S6 x S14) cap A20   S20       2      2           1116                   true             true             true             true                 37                     complete  
-# 37  20  38760   27132  14  18564  A20       A19       (S14 x S6) cap A20   S20       2      2           1116                   true             true             true             true                 36                     complete  
-# 38  20  77520   27132  7   8568   A20       A19       (S7 x S13) cap A20   S20       2      2           1116                   true             true             true             true                 39                     complete  
-# 39  20  77520   50388  13  31824  A20       A19       (S13 x S7) cap A20   S20       2      2           1116                   true             true             true             true                 38                     complete  
-# 40  20  125970  50388  8   18564  A20       A19       (S8 x S12) cap A20   S20       2      2           1116                   true             true             true             true                 41                     complete  
-# 41  20  125970  75582  12  43758  A20       A19       (S12 x S8) cap A20   S20       2      2           1116                   true             true             true             true                 40                     complete  
-# 42  20  167960  75582  9   31824  A20       A19       (S9 x S11) cap A20   S20       2      2           1116                   true             true             true             true                 43                     complete  
-# 43  20  167960  92378  11  48620  A20       A19       (S11 x S9) cap A20   S20       2      2           1116                   true             true             true             true                 42                     complete  
-# 44  20  184756  92378  10  43758  A20       A19       (S10 x S10) cap A20  S20       2      2           1116                   true             false            true             true                 44                     complete  
-# 45  20  190     171    18  153    S20       S19       S18 x S2             S20       2      2           1117                   true             true             true             true                                        complete  
-# 46  20  1140    171    3   18     S20       S19       S3 x S17             S20       2      2           1117                   true             true             true             true                 31                     complete  
-# 47  20  1140    969    17  816    S20       S19       S17 x S3             S20       2      2           1117                   true             true             true             true                 11                     complete  
-# 48  20  4845    969    4   153    S20       S19       S4 x S16             S20       2      2           1117                   true             true             true             true                 33                     complete  
-# 49  20  4845    3876   16  3060   S20       S19       S16 x S4             S20       2      2           1117                   true             true             true             true                 32                     complete  
-# 50  20  15504   3876   5   816    S20       S19       S5 x S15             S20       2      2           1117                   true             true             true             true                 35                     complete  
-# 51  20  15504   11628  15  8568   S20       S19       S15 x S5             S20       2      2           1117                   true             true             true             true                 34                     complete  
-# 52  20  38760   11628  6   3060   S20       S19       S6 x S14             S20       2      2           1117                   true             true             true             true                 37                     complete  
-# 53  20  38760   27132  14  18564  S20       S19       S14 x S6             S20       2      2           1117                   true             true             true             true                 36                     complete  
-# 54  20  77520   27132  7   8568   S20       S19       S7 x S13             S20       2      2           1117                   true             true             true             true                 39                     complete  
-# 55  20  77520   50388  13  31824  S20       S19       S13 x S7             S20       2      2           1117                   true             true             true             true                 38                     complete  
-# 56  20  125970  50388  8   18564  S20       S19       S8 x S12             S20       2      2           1117                   true             true             true             true                 41                     complete  
-# 57  20  125970  75582  12  43758  S20       S19       S12 x S8             S20       2      2           1117                   true             true             true             true                 40                     complete  
-# 58  20  167960  75582  9   31824  S20       S19       S9 x S11             S20       2      2           1117                   true             true             true             true                 43                     complete  
-# 59  20  167960  92378  11  48620  S20       S19       S11 x S9             S20       2      2           1117                   true             true             true             true                 42                     complete  
-# 60  20  184756  92378  10  43758  S20       S19       S10 x S10            S20       2      2           1117                   true             false            true             true                 44                     complete  
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b       r      k   λ      G          Gα         GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   20  190     171    18  153    PSL(2,19)  19:9       D18                  S20        2      2           272    1       2       true             true             true             true                                        complete  
+# 2   20  285     57     4   9      PSL(2,19)  19:9       A4                   PSL(2,19)  2      2           272    1       3       true             false            true             false                                                 
+# 3   20  285     171    12  99     PSL(2,19)  19:9       A4                   PGL(2,19)  2      2           272    1       3       true             false            true             false                13                               
+# 4   20  342     171    10  81     PSL(2,19)  19:9       10                   PGL(2,19)  2      2           272    1       6       true             false            true             true                 4                                
+# 5   20  342     171    10  81     PSL(2,19)  19:9       D10                  PSL(2,19)  2      2           272    1       4       true             false            true             true                 5                                
+# 6   20  380     171    9   72     PSL(2,19)  19:9       9                    PGL(2,19)  2      2           272    1       7       true             false            true             false                                                 
+# 7   20  570     171    6   45     PSL(2,19)  19:9       S3                   PSL(2,19)  2      2           272    1       8       true             false            true             false                                                 
+# 8   20  570     171    6   45     PSL(2,19)  19:9       S3                   PGL(2,19)  2      2           272    1       8       true             false            true             false                                                 
+# 9   20  684     171    5   36     PSL(2,19)  19:9       5                    PGL(2,19)  2      2           272    1       9       true             false            true             false                                                 
+# 10  20  855     171    4   27     PSL(2,19)  19:9       2^2                  PGL(2,19)  2      2           272    1       10      true             false            true             false                                                 
+# 11  20  1140    171    3   18     PSL(2,19)  19:9       3                    S20        2      2           272    1       11      true             false            true             false                31                     complete  
+# 12  20  190     171    18  153    PGL(2,19)  AGL(1,19)  D36                  S20        2      2           362    1       3       true             true             true             true                                        complete  
+# 13  20  285     114    8   42     PGL(2,19)  AGL(1,19)  S4                   PGL(2,19)  2      2           362    1       4       true             true             true             true                 3                                
+# 14  20  285     171    12  99     PGL(2,19)  AGL(1,19)  S4                   PGL(2,19)  2      2           362    1       4       true             true             true             true                 13                               
+# 15  20  342     171    10  81     PGL(2,19)  AGL(1,19)  D20                  PGL(2,19)  2      2           362    1       6       true             false            true             true                 4                                
+# 16  20  380     171    9   72     PGL(2,19)  AGL(1,19)  D18                  PGL(2,19)  2      2           362    1       10      true             false            true             false                                                 
+# 17  20  570     114    4   18     PGL(2,19)  AGL(1,19)  A4                   PGL(2,19)  2      2           362    1       11      true             false            true             false                                                 
+# 18  20  570     171    6   45     PGL(2,19)  AGL(1,19)  D12                  PGL(2,19)  2      2           362    1       12      true             false            true             false                                                 
+# 19  20  570     342    12  198    PGL(2,19)  AGL(1,19)  D12                  PGL(2,19)  2      2           362    1       12      true             false            true             false                                                 
+# 20  20  684     171    5   36     PGL(2,19)  AGL(1,19)  D10                  PGL(2,19)  2      2           362    1       15      true             false            true             false                                                 
+# 21  20  684     342    10  162    PGL(2,19)  AGL(1,19)  D10                  PGL(2,19)  2      2           362    1       13      true             false            true             true                 21                               
+# 22  20  855     171    4   27     PGL(2,19)  AGL(1,19)  D8                   PGL(2,19)  2      2           362    1       17      true             false            true             false                                                 
+# 23  20  855     342    8   126    PGL(2,19)  AGL(1,19)  D8                   PGL(2,19)  2      2           362    1       17      true             false            true             false                                                 
+# 24  20  1140    171    3   18     PGL(2,19)  AGL(1,19)  S3                   S20        2      2           362    1       20      true             false            true             false                31                     complete  
+# 25  20  1140    342    6   90     PGL(2,19)  AGL(1,19)  S3                   PGL(2,19)  2      2           362    1       20      true             false            true             false                                                 
+# 26  20  1140    342    6   90     PGL(2,19)  AGL(1,19)  S3                   PGL(2,19)  2      2           362    1       18      true             false            true             false                                                 
+# 27  20  1710    342    4   54     PGL(2,19)  AGL(1,19)  2^2                  PGL(2,19)  2      2           362    1       23      true             false            true             false                                                 
+# 28  20  1710    342    4   54     PGL(2,19)  AGL(1,19)  2^2                  PGL(2,19)  2      2           362    1       23      true             false            true             false                                                 
+# 29  20  190     171    18  153    A20        A19        (S18 x S2) cap A20   S20        2      2           1116                   true             true             true             true                                        complete  
+# 30  20  1140    171    3   18     A20        A19        (S3 x S17) cap A20   S20        2      2           1116                   true             true             true             true                 31                     complete  
+# 31  20  1140    969    17  816    A20        A19        (S17 x S3) cap A20   S20        2      2           1116                   true             true             true             true                 11                     complete  
+# 32  20  4845    969    4   153    A20        A19        (S4 x S16) cap A20   S20        2      2           1116                   true             true             true             true                 33                     complete  
+# 33  20  4845    3876   16  3060   A20        A19        (S16 x S4) cap A20   S20        2      2           1116                   true             true             true             true                 32                     complete  
+# 34  20  15504   3876   5   816    A20        A19        (S5 x S15) cap A20   S20        2      2           1116                   true             true             true             true                 35                     complete  
+# 35  20  15504   11628  15  8568   A20        A19        (S15 x S5) cap A20   S20        2      2           1116                   true             true             true             true                 34                     complete  
+# 36  20  38760   11628  6   3060   A20        A19        (S6 x S14) cap A20   S20        2      2           1116                   true             true             true             true                 37                     complete  
+# 37  20  38760   27132  14  18564  A20        A19        (S14 x S6) cap A20   S20        2      2           1116                   true             true             true             true                 36                     complete  
+# 38  20  77520   27132  7   8568   A20        A19        (S7 x S13) cap A20   S20        2      2           1116                   true             true             true             true                 39                     complete  
+# 39  20  77520   50388  13  31824  A20        A19        (S13 x S7) cap A20   S20        2      2           1116                   true             true             true             true                 38                     complete  
+# 40  20  125970  50388  8   18564  A20        A19        (S8 x S12) cap A20   S20        2      2           1116                   true             true             true             true                 41                     complete  
+# 41  20  125970  75582  12  43758  A20        A19        (S12 x S8) cap A20   S20        2      2           1116                   true             true             true             true                 40                     complete  
+# 42  20  167960  75582  9   31824  A20        A19        (S9 x S11) cap A20   S20        2      2           1116                   true             true             true             true                 43                     complete  
+# 43  20  167960  92378  11  48620  A20        A19        (S11 x S9) cap A20   S20        2      2           1116                   true             true             true             true                 42                     complete  
+# 44  20  184756  92378  10  43758  A20        A19        (S10 x S10) cap A20  S20        2      2           1116                   true             false            true             true                 44                     complete  
+# 45  20  190     171    18  153    S20        S19        S18 x S2             S20        2      2           1117                   true             true             true             true                                        complete  
+# 46  20  1140    171    3   18     S20        S19        S3 x S17             S20        2      2           1117                   true             true             true             true                 31                     complete  
+# 47  20  1140    969    17  816    S20        S19        S17 x S3             S20        2      2           1117                   true             true             true             true                 11                     complete  
+# 48  20  4845    969    4   153    S20        S19        S4 x S16             S20        2      2           1117                   true             true             true             true                 33                     complete  
+# 49  20  4845    3876   16  3060   S20        S19        S16 x S4             S20        2      2           1117                   true             true             true             true                 32                     complete  
+# 50  20  15504   3876   5   816    S20        S19        S5 x S15             S20        2      2           1117                   true             true             true             true                 35                     complete  
+# 51  20  15504   11628  15  8568   S20        S19        S15 x S5             S20        2      2           1117                   true             true             true             true                 34                     complete  
+# 52  20  38760   11628  6   3060   S20        S19        S6 x S14             S20        2      2           1117                   true             true             true             true                 37                     complete  
+# 53  20  38760   27132  14  18564  S20        S19        S14 x S6             S20        2      2           1117                   true             true             true             true                 36                     complete  
+# 54  20  77520   27132  7   8568   S20        S19        S7 x S13             S20        2      2           1117                   true             true             true             true                 39                     complete  
+# 55  20  77520   50388  13  31824  S20        S19        S13 x S7             S20        2      2           1117                   true             true             true             true                 38                     complete  
+# 56  20  125970  50388  8   18564  S20        S19        S8 x S12             S20        2      2           1117                   true             true             true             true                 41                     complete  
+# 57  20  125970  75582  12  43758  S20        S19        S12 x S8             S20        2      2           1117                   true             true             true             true                 40                     complete  
+# 58  20  167960  75582  9   31824  S20        S19        S9 x S11             S20        2      2           1117                   true             true             true             true                 43                     complete  
+# 59  20  167960  92378  11  48620  S20        S19        S11 x S9             S20        2      2           1117                   true             true             true             true                 42                     complete  
+# 60  20  184756  92378  10  43758  S20        S19        S10 x S10            S20        2      2           1117                   true             false            true             true                 44                     complete  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b       r      k   λ      G         Gα        GB                   Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   20  190     171    18  153    PSL2(19)  19:9      D18                  S20       2      2           272    1       2       true             true             true             true                                        complete  
-# 2   20  285     57     4   9      PSL2(19)  19:9      A4                   272       2      2           272    1       3       true             false            true             false                                                 
-# 3   20  285     57     4   9      PSL2(19)  19:9      A4                   PSL2(19)  2      2           272    1       3       true             false            true             false                                                 
-# 4   20  285     171    12  99     PSL2(19)  19:9      A4                   PGL2(19)  2      2           272    1       3       true             false            true             false                16                               
-# 5   20  342     171    10  81     PSL2(19)  19:9      10                   PGL2(19)  2      2           272    1       6       true             false            true             true                 5                                
-# 6   20  342     171    10  81     PSL2(19)  19:9      D10                  PSL2(19)  2      2           272    1       4       true             false            true             true                 6                                
-# 7   20  342     171    10  81     PSL2(19)  19:9      D10                  272       2      2           272    1       5       true             false            true             true                 6                                
-# 8   20  380     171    9   72     PSL2(19)  19:9      9                    PGL2(19)  2      2           272    1       7       true             false            true             false                                                 
-# 9   20  570     171    6   45     PSL2(19)  19:9      S3                   272       2      2           272    1       8       true             false            true             false                                                 
-# 10  20  570     171    6   45     PSL2(19)  19:9      S3                   PGL2(19)  2      2           272    1       8       true             false            true             false                                                 
-# 11  20  570     171    6   45     PSL2(19)  19:9      S3                   PSL2(19)  2      2           272    1       8       true             false            true             false                                                 
-# 12  20  684     171    5   36     PSL2(19)  19:9      5                    PGL2(19)  2      2           272    1       9       true             false            true             false                                                 
-# 13  20  855     171    4   27     PSL2(19)  19:9      2^2                  PGL2(19)  2      2           272    1       10      true             false            true             false                                                 
-# 14  20  1140    171    3   18     PSL2(19)  19:9      3                    S20       2      2           272    1       11      true             false            true             false                34                     complete  
-# 15  20  190     171    18  153    PGL2(19)  AGL1(19)  D36                  S20       2      2           362    1       3       true             true             true             true                                        complete  
-# 16  20  285     114    8   42     PGL2(19)  AGL1(19)  S4                   PGL2(19)  2      2           362    1       4       true             true             true             true                 4                                
-# 17  20  285     171    12  99     PGL2(19)  AGL1(19)  S4                   PGL2(19)  2      2           362    1       4       true             true             true             true                 16                               
-# 18  20  342     171    10  81     PGL2(19)  AGL1(19)  D20                  PGL2(19)  2      2           362    1       6       true             false            true             true                 5                                
-# 19  20  380     171    9   72     PGL2(19)  AGL1(19)  D18                  PGL2(19)  2      2           362    1       10      true             false            true             false                                                 
-# 20  20  570     114    4   18     PGL2(19)  AGL1(19)  A4                   PGL2(19)  2      2           362    1       11      true             false            true             false                                                 
-# 21  20  570     171    6   45     PGL2(19)  AGL1(19)  D12                  PGL2(19)  2      2           362    1       12      true             false            true             false                                                 
-# 22  20  570     342    12  198    PGL2(19)  AGL1(19)  D12                  PGL2(19)  2      2           362    1       12      true             false            true             false                                                 
-# 23  20  684     171    5   36     PGL2(19)  AGL1(19)  D10                  PGL2(19)  2      2           362    1       15      true             false            true             false                                                 
-# 24  20  684     342    10  162    PGL2(19)  AGL1(19)  D10                  PGL2(19)  2      2           362    1       13      true             false            true             true                 24                               
-# 25  20  855     171    4   27     PGL2(19)  AGL1(19)  D8                   PGL2(19)  2      2           362    1       17      true             false            true             false                                                 
-# 26  20  855     342    8   126    PGL2(19)  AGL1(19)  D8                   PGL2(19)  2      2           362    1       17      true             false            true             false                                                 
-# 27  20  1140    171    3   18     PGL2(19)  AGL1(19)  S3                   S20       2      2           362    1       20      true             false            true             false                34                     complete  
-# 28  20  1140    342    6   90     PGL2(19)  AGL1(19)  S3                   PGL2(19)  2      2           362    1       18      true             false            true             false                                                 
-# 29  20  1140    342    6   90     PGL2(19)  AGL1(19)  S3                   PGL2(19)  2      2           362    1       20      true             false            true             false                                                 
-# 30  20  1710    342    4   54     PGL2(19)  AGL1(19)  2^2                  PGL2(19)  2      2           362    1       23      true             false            true             false                                                 
-# 31  20  1710    342    4   54     PGL2(19)  AGL1(19)  2^2                  PGL2(19)  2      2           362    1       23      true             false            true             false                                                 
-# 32  20  190     171    18  153    A20       A19       (S18 x S2) cap A20   S20       2      2           1116                   true             true             true             true                                        complete  
-# 33  20  1140    171    3   18     A20       A19       (S3 x S17) cap A20   S20       2      2           1116                   true             true             true             true                 34                     complete  
-# 34  20  1140    969    17  816    A20       A19       (S17 x S3) cap A20   S20       2      2           1116                   true             true             true             true                 14                     complete  
-# 35  20  4845    969    4   153    A20       A19       (S4 x S16) cap A20   S20       2      2           1116                   true             true             true             true                 36                     complete  
-# 36  20  4845    3876   16  3060   A20       A19       (S16 x S4) cap A20   S20       2      2           1116                   true             true             true             true                 35                     complete  
-# 37  20  15504   3876   5   816    A20       A19       (S5 x S15) cap A20   S20       2      2           1116                   true             true             true             true                 38                     complete  
-# 38  20  15504   11628  15  8568   A20       A19       (S15 x S5) cap A20   S20       2      2           1116                   true             true             true             true                 37                     complete  
-# 39  20  38760   11628  6   3060   A20       A19       (S6 x S14) cap A20   S20       2      2           1116                   true             true             true             true                 40                     complete  
-# 40  20  38760   27132  14  18564  A20       A19       (S14 x S6) cap A20   S20       2      2           1116                   true             true             true             true                 39                     complete  
-# 41  20  77520   27132  7   8568   A20       A19       (S7 x S13) cap A20   S20       2      2           1116                   true             true             true             true                 42                     complete  
-# 42  20  77520   50388  13  31824  A20       A19       (S13 x S7) cap A20   S20       2      2           1116                   true             true             true             true                 41                     complete  
-# 43  20  125970  50388  8   18564  A20       A19       (S8 x S12) cap A20   S20       2      2           1116                   true             true             true             true                 44                     complete  
-# 44  20  125970  75582  12  43758  A20       A19       (S12 x S8) cap A20   S20       2      2           1116                   true             true             true             true                 43                     complete  
-# 45  20  167960  75582  9   31824  A20       A19       (S9 x S11) cap A20   S20       2      2           1116                   true             true             true             true                 46                     complete  
-# 46  20  167960  92378  11  48620  A20       A19       (S11 x S9) cap A20   S20       2      2           1116                   true             true             true             true                 45                     complete  
-# 47  20  184756  92378  10  43758  A20       A19       (S10 x S10) cap A20  S20       2      2           1116                   true             false            true             true                 47                     complete  
-# 48  20  190     171    18  153    S20       S19       S18 x S2             S20       2      2           1117                   true             true             true             true                                        complete  
-# 49  20  1140    171    3   18     S20       S19       S3 x S17             S20       2      2           1117                   true             true             true             true                 34                     complete  
-# 50  20  1140    969    17  816    S20       S19       S17 x S3             S20       2      2           1117                   true             true             true             true                 14                     complete  
-# 51  20  4845    969    4   153    S20       S19       S4 x S16             S20       2      2           1117                   true             true             true             true                 36                     complete  
-# 52  20  4845    3876   16  3060   S20       S19       S16 x S4             S20       2      2           1117                   true             true             true             true                 35                     complete  
-# 53  20  15504   3876   5   816    S20       S19       S5 x S15             S20       2      2           1117                   true             true             true             true                 38                     complete  
-# 54  20  15504   11628  15  8568   S20       S19       S15 x S5             S20       2      2           1117                   true             true             true             true                 37                     complete  
-# 55  20  38760   11628  6   3060   S20       S19       S6 x S14             S20       2      2           1117                   true             true             true             true                 40                     complete  
-# 56  20  38760   27132  14  18564  S20       S19       S14 x S6             S20       2      2           1117                   true             true             true             true                 39                     complete  
-# 57  20  77520   27132  7   8568   S20       S19       S7 x S13             S20       2      2           1117                   true             true             true             true                 42                     complete  
-# 58  20  77520   50388  13  31824  S20       S19       S13 x S7             S20       2      2           1117                   true             true             true             true                 41                     complete  
-# 59  20  125970  50388  8   18564  S20       S19       S8 x S12             S20       2      2           1117                   true             true             true             true                 44                     complete  
-# 60  20  125970  75582  12  43758  S20       S19       S12 x S8             S20       2      2           1117                   true             true             true             true                 43                     complete  
-# 61  20  167960  75582  9   31824  S20       S19       S9 x S11             S20       2      2           1117                   true             true             true             true                 46                     complete  
-# 62  20  167960  92378  11  48620  S20       S19       S11 x S9             S20       2      2           1117                   true             true             true             true                 45                     complete  
-# 63  20  184756  92378  10  43758  S20       S19       S10 x S10            S20       2      2           1117                   true             false            true             true                 47                     complete  
-# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b       r      k   λ      G          Gα         GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   20  190     171    18  153    PSL(2,19)  19:9       D18                  S20        2      2           272    1       2       true             true             true             true                                        complete  
+# 2   20  285     57     4   9      PSL(2,19)  19:9       A4                   272        2      2           272    1       3       true             false            true             false                                                 
+# 3   20  285     57     4   9      PSL(2,19)  19:9       A4                   PSL(2,19)  2      2           272    1       3       true             false            true             false                                                 
+# 4   20  285     171    12  99     PSL(2,19)  19:9       A4                   PGL(2,19)  2      2           272    1       3       true             false            true             false                16                               
+# 5   20  342     171    10  81     PSL(2,19)  19:9       10                   PGL(2,19)  2      2           272    1       6       true             false            true             true                 5                                
+# 6   20  342     171    10  81     PSL(2,19)  19:9       D10                  PSL(2,19)  2      2           272    1       4       true             false            true             true                 6                                
+# 7   20  342     171    10  81     PSL(2,19)  19:9       D10                  272        2      2           272    1       5       true             false            true             true                 6                                
+# 8   20  380     171    9   72     PSL(2,19)  19:9       9                    PGL(2,19)  2      2           272    1       7       true             false            true             false                                                 
+# 9   20  570     171    6   45     PSL(2,19)  19:9       S3                   272        2      2           272    1       8       true             false            true             false                                                 
+# 10  20  570     171    6   45     PSL(2,19)  19:9       S3                   PGL(2,19)  2      2           272    1       8       true             false            true             false                                                 
+# 11  20  570     171    6   45     PSL(2,19)  19:9       S3                   PSL(2,19)  2      2           272    1       8       true             false            true             false                                                 
+# 12  20  684     171    5   36     PSL(2,19)  19:9       5                    PGL(2,19)  2      2           272    1       9       true             false            true             false                                                 
+# 13  20  855     171    4   27     PSL(2,19)  19:9       2^2                  PGL(2,19)  2      2           272    1       10      true             false            true             false                                                 
+# 14  20  1140    171    3   18     PSL(2,19)  19:9       3                    S20        2      2           272    1       11      true             false            true             false                34                     complete  
+# 15  20  190     171    18  153    PGL(2,19)  AGL(1,19)  D36                  S20        2      2           362    1       3       true             true             true             true                                        complete  
+# 16  20  285     114    8   42     PGL(2,19)  AGL(1,19)  S4                   PGL(2,19)  2      2           362    1       4       true             true             true             true                 4                                
+# 17  20  285     171    12  99     PGL(2,19)  AGL(1,19)  S4                   PGL(2,19)  2      2           362    1       4       true             true             true             true                 16                               
+# 18  20  342     171    10  81     PGL(2,19)  AGL(1,19)  D20                  PGL(2,19)  2      2           362    1       6       true             false            true             true                 5                                
+# 19  20  380     171    9   72     PGL(2,19)  AGL(1,19)  D18                  PGL(2,19)  2      2           362    1       10      true             false            true             false                                                 
+# 20  20  570     114    4   18     PGL(2,19)  AGL(1,19)  A4                   PGL(2,19)  2      2           362    1       11      true             false            true             false                                                 
+# 21  20  570     171    6   45     PGL(2,19)  AGL(1,19)  D12                  PGL(2,19)  2      2           362    1       12      true             false            true             false                                                 
+# 22  20  570     342    12  198    PGL(2,19)  AGL(1,19)  D12                  PGL(2,19)  2      2           362    1       12      true             false            true             false                                                 
+# 23  20  684     171    5   36     PGL(2,19)  AGL(1,19)  D10                  PGL(2,19)  2      2           362    1       15      true             false            true             false                                                 
+# 24  20  684     342    10  162    PGL(2,19)  AGL(1,19)  D10                  PGL(2,19)  2      2           362    1       13      true             false            true             true                 24                               
+# 25  20  855     171    4   27     PGL(2,19)  AGL(1,19)  D8                   PGL(2,19)  2      2           362    1       17      true             false            true             false                                                 
+# 26  20  855     342    8   126    PGL(2,19)  AGL(1,19)  D8                   PGL(2,19)  2      2           362    1       17      true             false            true             false                                                 
+# 27  20  1140    171    3   18     PGL(2,19)  AGL(1,19)  S3                   S20        2      2           362    1       20      true             false            true             false                34                     complete  
+# 28  20  1140    342    6   90     PGL(2,19)  AGL(1,19)  S3                   PGL(2,19)  2      2           362    1       18      true             false            true             false                                                 
+# 29  20  1140    342    6   90     PGL(2,19)  AGL(1,19)  S3                   PGL(2,19)  2      2           362    1       20      true             false            true             false                                                 
+# 30  20  1710    342    4   54     PGL(2,19)  AGL(1,19)  2^2                  PGL(2,19)  2      2           362    1       23      true             false            true             false                                                 
+# 31  20  1710    342    4   54     PGL(2,19)  AGL(1,19)  2^2                  PGL(2,19)  2      2           362    1       23      true             false            true             false                                                 
+# 32  20  190     171    18  153    A20        A19        (S18 x S2) cap A20   S20        2      2           1116                   true             true             true             true                                        complete  
+# 33  20  1140    171    3   18     A20        A19        (S3 x S17) cap A20   S20        2      2           1116                   true             true             true             true                 34                     complete  
+# 34  20  1140    969    17  816    A20        A19        (S17 x S3) cap A20   S20        2      2           1116                   true             true             true             true                 14                     complete  
+# 35  20  4845    969    4   153    A20        A19        (S4 x S16) cap A20   S20        2      2           1116                   true             true             true             true                 36                     complete  
+# 36  20  4845    3876   16  3060   A20        A19        (S16 x S4) cap A20   S20        2      2           1116                   true             true             true             true                 35                     complete  
+# 37  20  15504   3876   5   816    A20        A19        (S5 x S15) cap A20   S20        2      2           1116                   true             true             true             true                 38                     complete  
+# 38  20  15504   11628  15  8568   A20        A19        (S15 x S5) cap A20   S20        2      2           1116                   true             true             true             true                 37                     complete  
+# 39  20  38760   11628  6   3060   A20        A19        (S6 x S14) cap A20   S20        2      2           1116                   true             true             true             true                 40                     complete  
+# 40  20  38760   27132  14  18564  A20        A19        (S14 x S6) cap A20   S20        2      2           1116                   true             true             true             true                 39                     complete  
+# 41  20  77520   27132  7   8568   A20        A19        (S7 x S13) cap A20   S20        2      2           1116                   true             true             true             true                 42                     complete  
+# 42  20  77520   50388  13  31824  A20        A19        (S13 x S7) cap A20   S20        2      2           1116                   true             true             true             true                 41                     complete  
+# 43  20  125970  50388  8   18564  A20        A19        (S8 x S12) cap A20   S20        2      2           1116                   true             true             true             true                 44                     complete  
+# 44  20  125970  75582  12  43758  A20        A19        (S12 x S8) cap A20   S20        2      2           1116                   true             true             true             true                 43                     complete  
+# 45  20  167960  75582  9   31824  A20        A19        (S9 x S11) cap A20   S20        2      2           1116                   true             true             true             true                 46                     complete  
+# 46  20  167960  92378  11  48620  A20        A19        (S11 x S9) cap A20   S20        2      2           1116                   true             true             true             true                 45                     complete  
+# 47  20  184756  92378  10  43758  A20        A19        (S10 x S10) cap A20  S20        2      2           1116                   true             false            true             true                 47                     complete  
+# 48  20  190     171    18  153    S20        S19        S18 x S2             S20        2      2           1117                   true             true             true             true                                        complete  
+# 49  20  1140    171    3   18     S20        S19        S3 x S17             S20        2      2           1117                   true             true             true             true                 34                     complete  
+# 50  20  1140    969    17  816    S20        S19        S17 x S3             S20        2      2           1117                   true             true             true             true                 14                     complete  
+# 51  20  4845    969    4   153    S20        S19        S4 x S16             S20        2      2           1117                   true             true             true             true                 36                     complete  
+# 52  20  4845    3876   16  3060   S20        S19        S16 x S4             S20        2      2           1117                   true             true             true             true                 35                     complete  
+# 53  20  15504   3876   5   816    S20        S19        S5 x S15             S20        2      2           1117                   true             true             true             true                 38                     complete  
+# 54  20  15504   11628  15  8568   S20        S19        S15 x S5             S20        2      2           1117                   true             true             true             true                 37                     complete  
+# 55  20  38760   11628  6   3060   S20        S19        S6 x S14             S20        2      2           1117                   true             true             true             true                 40                     complete  
+# 56  20  38760   27132  14  18564  S20        S19        S14 x S6             S20        2      2           1117                   true             true             true             true                 39                     complete  
+# 57  20  77520   27132  7   8568   S20        S19        S7 x S13             S20        2      2           1117                   true             true             true             true                 42                     complete  
+# 58  20  77520   50388  13  31824  S20        S19        S13 x S7             S20        2      2           1117                   true             true             true             true                 41                     complete  
+# 59  20  125970  50388  8   18564  S20        S19        S8 x S12             S20        2      2           1117                   true             true             true             true                 44                     complete  
+# 60  20  125970  75582  12  43758  S20        S19        S12 x S8             S20        2      2           1117                   true             true             true             true                 43                     complete  
+# 61  20  167960  75582  9   31824  S20        S19        S9 x S11             S20        2      2           1117                   true             true             true             true                 46                     complete  
+# 62  20  167960  92378  11  48620  S20        S19        S11 x S9             S20        2      2           1117                   true             true             true             true                 45                     complete  
+# 63  20  184756  92378  10  43758  S20        S19        S10 x S10            S20        2      2           1117                   true             false            true             true                 47                     complete  
+# -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information (up to isomorphism): 
 # -------------------------------------------
@@ -212,7 +212,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     S20          
+# Structure                            PSL(2,19)    S20          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         S19          
@@ -238,7 +238,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PSL2(19)     
+# Structure                            PSL(2,19)    PSL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         19:9         
@@ -264,10 +264,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(19)     PGL2(19)     
+# Structure                            PGL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(19)     AGL1(19)     
+# Point-stabiliser                     AGL(1,19)    AGL(1,19)    
 # Block-stabiliser                     S4           S4           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  8^{1}12^{1}  8^{1}12^{1}  
@@ -290,10 +290,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)     
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)     
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     A4           S4           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{2}12^{1}  8^{1}12^{1}  
@@ -316,10 +316,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)     
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)     
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     10           D20          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  10^{2}       10^{2}       
@@ -342,7 +342,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PSL2(19)     
+# Structure                            PSL(2,19)    PSL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         19:9         
@@ -368,10 +368,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)     
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)     
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     9            D18          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  1^{2}9^{2}   2^{1}9^{2}   
@@ -394,10 +394,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(19)     PGL2(19)     
+# Structure                            PGL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(19)     AGL1(19)     
+# Point-stabiliser                     AGL(1,19)    AGL(1,19)    
 # Block-stabiliser                     A4           A4           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{2}12^{1}  4^{2}12^{1}  
@@ -420,7 +420,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PSL2(19)     
+# Structure                            PSL(2,19)    PSL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         19:9         
@@ -446,10 +446,10 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)          
+# Structure                            PSL(2,19)    PGL(2,19)         
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     19:9         AGL1(19)          
+# Point-stabiliser                     19:9         AGL(1,19)         
 # Block-stabiliser                     S3           D12               
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}       
 # Orbit structure of block-stabiliser  2^{1}6^{3}   2^{1}6^{1}12^{1}  
@@ -472,10 +472,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PGL2(19)          PGL2(19)          
+# Structure                            PGL(2,19)         PGL(2,19)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     AGL1(19)          AGL1(19)          
+# Point-stabiliser                     AGL(1,19)         AGL(1,19)         
 # Block-stabiliser                     D12               D12               
 # Orbit structure of point-stabiliser  1^{1}19^{1}       1^{1}19^{1}       
 # Orbit structure of block-stabiliser  2^{1}6^{1}12^{1}  2^{1}6^{1}12^{1}  
@@ -498,10 +498,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)     
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)     
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     5            D10          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  5^{4}        5^{2}10^{1}  
@@ -524,10 +524,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(19)     PGL2(19)     
+# Structure                            PGL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(19)     AGL1(19)     
+# Point-stabiliser                     AGL(1,19)    AGL(1,19)    
 # Block-stabiliser                     D10          D10          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  10^{2}       10^{2}       
@@ -550,10 +550,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)     
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)     
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     2^2          D8           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{5}        4^{1}8^{2}   
@@ -576,10 +576,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(19)     PGL2(19)     
+# Structure                            PGL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(19)     AGL1(19)     
+# Point-stabiliser                     AGL(1,19)    AGL(1,19)    
 # Block-stabiliser                     D8           D8           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{2}   4^{1}8^{2}   
@@ -602,7 +602,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     S20          
+# Structure                            PSL(2,19)    S20          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         S19          
@@ -628,10 +628,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(19)     PGL2(19)     
+# Structure                            PGL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(19)     AGL1(19)     
+# Point-stabiliser                     AGL(1,19)    AGL(1,19)    
 # Block-stabiliser                     S3           S3           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{1}6^{3}   2^{1}6^{3}   
@@ -654,10 +654,10 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PGL2(19)         PGL2(19)         
+# Structure                            PGL(2,19)        PGL(2,19)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     AGL1(19)         AGL1(19)         
+# Point-stabiliser                     AGL(1,19)        AGL(1,19)        
 # Block-stabiliser                     S3               S3               
 # Orbit structure of point-stabiliser  1^{1}19^{1}      1^{1}19^{1}      
 # Orbit structure of block-stabiliser  2^{1}3^{2}6^{2}  2^{1}3^{2}6^{2}  
@@ -706,10 +706,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(19)     PGL2(19)     
+# Structure                            PGL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(19)     AGL1(19)     
+# Point-stabiliser                     AGL(1,19)    AGL(1,19)    
 # Block-stabiliser                     2^2          2^2          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{2}4^{4}   2^{2}4^{4}   
@@ -732,10 +732,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PGL2(19)     PGL2(19)     
+# Structure                            PGL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AGL1(19)     AGL1(19)     
+# Point-stabiliser                     AGL(1,19)    AGL(1,19)    
 # Block-stabiliser                     2^2          2^2          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  2^{2}4^{4}   2^{2}4^{4}   

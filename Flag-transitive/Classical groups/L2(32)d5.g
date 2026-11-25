@@ -48,23 +48,23 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b      r     k   λ     G           Gα         GB           Aut(D)      rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   33   528    496   31  465   PΓL2(32)    AΓL1(32)   31:10        S33         2      2                  2       5       true             true             true             true                                        complete  
-# 2   33   1488   496   11  155   PΓL2(32)    AΓL1(32)   11:10        PΓL2(32)    2      2                  2       9       true             false            true             true                 3                                
-# 3   33   1488   992   22  651   PΓL2(32)    AΓL1(32)   11:10        PΓL2(32)    2      2                  2       9       true             false            true             true                 2                                
-# 4   33   2046   992   16  465   PΓL2(32)    AΓL1(32)   2^4:5        PΓL2(32)    2      2                  2       10      true             false            true             false                                                 
-# 5   33   5456   496   3   31    PΓL2(32)    AΓL1(32)   5xS3         S33         2      2                  2       16      true             false            true             true                 6                      complete  
-# 6   33   5456   4960  30  4495  PΓL2(32)    AΓL1(32)   5xS3         S33         2      2                  2       16      true             false            true             true                 5                      complete  
-# 7   33   10912  4960  15  2170  PΓL2(32)    AΓL1(32)   15           PΓL2(32)    2      2                  2       19      true             false            true             false                                                 
-# 8   33   16368  4960  10  1395  PΓL2(32)    AΓL1(32)   10           PΓL2(32)    2      2                  2       21      true             false            true             false                                                 
-# 9   33   16368  4960  10  1395  PΓL2(32)    AΓL1(32)   10           PΓL2(32)    2      2                  2       21      true             false            true             false                                                 
-# 10  33   16368  4960  10  1395  PΓL2(32)    AΓL1(32)   10           PΓL2(32)    2      2                  2       21      true             false            true             false                                                 
-# 11  33   20460  4960  8   1085  PΓL2(32)    AΓL1(32)   2^3          PΓL2(32)    2      2                  2       22      true             false            true             false                                                 
-# 12  33   27280  4960  6   775   PΓL2(32)    AΓL1(32)   S3           PΓL2(32)    2      2                  2       23      true             false            true             false                                                 
-# 13  33   32736  4960  5   620   PΓL2(32)    AΓL1(32)   5            PΓL2(32)    2      2                  2       24      true             false            true             false                                                 
-# 14  33   40920  4960  4   465   PΓL2(32)    AΓL1(32)   2^2          S33         2      2                  2       25      true             false            true             false                                       complete  
-# 15  496  1023   33    16  1     PΓL2(2^5)   3:11:10    2x((2^4):5)  PΓL2(2^5)   4      4                  4       7       true             false            true             false                                                 
-# 16  496  7440   330   22  14    PΓL2(2^5)   3:11:10    D22          PΓL2(2^5)   4      4                  4       17      true             false            true             false                                                 
-# 17  496  20460  165   4   1     PΓL2(2^5)   3:11:10    2^3          PΓL2(2^5)   4      4                  4       22      true             false            true             false                                                 
+# 1   33   528    496   31  465   PΓL(2,32)   AΓL(1,32)  31:10        S33         2      2                  2       5       true             true             true             true                                        complete  
+# 2   33   1488   496   11  155   PΓL(2,32)   AΓL(1,32)  11:10        PΓL(2,32)   2      2                  2       9       true             false            true             true                 3                                
+# 3   33   1488   992   22  651   PΓL(2,32)   AΓL(1,32)  11:10        PΓL(2,32)   2      2                  2       9       true             false            true             true                 2                                
+# 4   33   2046   992   16  465   PΓL(2,32)   AΓL(1,32)  2^4:5        PΓL(2,32)   2      2                  2       10      true             false            true             false                                                 
+# 5   33   5456   496   3   31    PΓL(2,32)   AΓL(1,32)  5xS3         S33         2      2                  2       16      true             false            true             true                 6                      complete  
+# 6   33   5456   4960  30  4495  PΓL(2,32)   AΓL(1,32)  5xS3         S33         2      2                  2       16      true             false            true             true                 5                      complete  
+# 7   33   10912  4960  15  2170  PΓL(2,32)   AΓL(1,32)  15           PΓL(2,32)   2      2                  2       19      true             false            true             false                                                 
+# 8   33   16368  4960  10  1395  PΓL(2,32)   AΓL(1,32)  10           PΓL(2,32)   2      2                  2       21      true             false            true             false                                                 
+# 9   33   16368  4960  10  1395  PΓL(2,32)   AΓL(1,32)  10           PΓL(2,32)   2      2                  2       21      true             false            true             false                                                 
+# 10  33   16368  4960  10  1395  PΓL(2,32)   AΓL(1,32)  10           PΓL(2,32)   2      2                  2       21      true             false            true             false                                                 
+# 11  33   20460  4960  8   1085  PΓL(2,32)   AΓL(1,32)  2^3          PΓL(2,32)   2      2                  2       22      true             false            true             false                                                 
+# 12  33   27280  4960  6   775   PΓL(2,32)   AΓL(1,32)  S3           PΓL(2,32)   2      2                  2       23      true             false            true             false                                                 
+# 13  33   32736  4960  5   620   PΓL(2,32)   AΓL(1,32)  5            PΓL(2,32)   2      2                  2       24      true             false            true             false                                                 
+# 14  33   40920  4960  4   465   PΓL(2,32)   AΓL(1,32)  2^2          S33         2      2                  2       25      true             false            true             false                                       complete  
+# 15  496  1023   33    16  1     PΓL(2,2^5)  3:11:10    2x((2^4):5)  PΓL(2,2^5)  4      4                  4       7       true             false            true             false                                                 
+# 16  496  7440   330   22  14    PΓL(2,2^5)  3:11:10    D22          PΓL(2,2^5)  4      4                  4       17      true             false            true             false                                                 
+# 17  496  20460  165   4   1     PΓL(2,2^5)  3:11:10    2^3          PΓL(2,2^5)  4      4                  4       22      true             false            true             false                                                 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -77,10 +77,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     S33          
+# Structure                            PΓL(2,32)    S33          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     S32          
+# Point-stabiliser                     AΓL(1,32)    S32          
 # Block-stabiliser                     31:10        2xS31        
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  2^{1}31^{1}  2^{1}31^{1}  
@@ -103,10 +103,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PΓL2(32)      PΓL2(32)     
+# Structure                            PΓL(2,32)     PΓL(2,32)     
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     AΓL1(32)      AΓL1(32)     
+# Point-stabiliser                     AΓL(1,32)     AΓL(1,32)     
 # Block-stabiliser                     11:10         11:10         
 # Orbit structure of point-stabiliser  1^{1}32^{1}   1^{1}32^{1}   
 # Orbit structure of block-stabiliser  11^{1}22^{1}  11^{1}22^{1}  
@@ -129,10 +129,10 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PΓL2(32)      PΓL2(32)     
+# Structure                            PΓL(2,32)     PΓL(2,32)     
 # Rank                                 2             2             
 # 2-Homogeneous                        true          true          
-# Point-stabiliser                     AΓL1(32)      AΓL1(32)     
+# Point-stabiliser                     AΓL(1,32)     AΓL(1,32)     
 # Block-stabiliser                     11:10         11:10         
 # Orbit structure of point-stabiliser  1^{1}32^{1}   1^{1}32^{1}   
 # Orbit structure of block-stabiliser  11^{1}22^{1}  11^{1}22^{1}  
@@ -155,10 +155,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     PΓL2(32)    
+# Structure                            PΓL(2,32)    PΓL(2,32)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     AΓL1(32)    
+# Point-stabiliser                     AΓL(1,32)    AΓL(1,32)    
 # Block-stabiliser                     2^4:5        2^4:5        
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  1^{1}16^{2}  1^{1}16^{2}  
@@ -181,10 +181,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     S33          
+# Structure                            PΓL(2,32)    S33          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     S32          
+# Point-stabiliser                     AΓL(1,32)    S32          
 # Block-stabiliser                     5xS3         S30xS3       
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  3^{1}30^{1}  3^{1}30^{1}  
@@ -207,10 +207,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     S33          
+# Structure                            PΓL(2,32)    S33          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     S32          
+# Point-stabiliser                     AΓL(1,32)    S32          
 # Block-stabiliser                     5xS3         S30xS3       
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  3^{1}30^{1}  3^{1}30^{1}  
@@ -233,10 +233,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     PΓL2(32)    
+# Structure                            PΓL(2,32)    PΓL(2,32)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     AΓL1(32)    
+# Point-stabiliser                     AΓL(1,32)    AΓL(1,32)    
 # Block-stabiliser                     15           15           
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  3^{1}15^{2}  3^{1}15^{2}  
@@ -259,10 +259,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(32)          PΓL2(32)         
+# Structure                            PΓL(2,32)         PΓL(2,32)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     AΓL1(32)          AΓL1(32)         
+# Point-stabiliser                     AΓL(1,32)         AΓL(1,32)         
 # Block-stabiliser                     10                10                
 # Orbit structure of point-stabiliser  1^{1}32^{1}       1^{1}32^{1}       
 # Orbit structure of block-stabiliser  1^{1}2^{1}10^{3}  1^{1}2^{1}10^{3}  
@@ -285,10 +285,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(32)          PΓL2(32)         
+# Structure                            PΓL(2,32)         PΓL(2,32)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     AΓL1(32)          AΓL1(32)         
+# Point-stabiliser                     AΓL(1,32)         AΓL(1,32)         
 # Block-stabiliser                     10                10                
 # Orbit structure of point-stabiliser  1^{1}32^{1}       1^{1}32^{1}       
 # Orbit structure of block-stabiliser  1^{1}2^{1}10^{3}  1^{1}2^{1}10^{3}  
@@ -311,10 +311,10 @@
 # -------------------------------------------------------------------------
 #                                      G                 Aut(D)            
 # -------------------------------------------------------------------------
-# Structure                            PΓL2(32)          PΓL2(32)         
+# Structure                            PΓL(2,32)         PΓL(2,32)         
 # Rank                                 2                 2                 
 # 2-Homogeneous                        true              true              
-# Point-stabiliser                     AΓL1(32)          AΓL1(32)         
+# Point-stabiliser                     AΓL(1,32)         AΓL(1,32)         
 # Block-stabiliser                     10                10                
 # Orbit structure of point-stabiliser  1^{1}32^{1}       1^{1}32^{1}       
 # Orbit structure of block-stabiliser  1^{1}2^{1}10^{3}  1^{1}2^{1}10^{3}  
@@ -337,10 +337,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     PΓL2(32)    
+# Structure                            PΓL(2,32)    PΓL(2,32)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     AΓL1(32)    
+# Point-stabiliser                     AΓL(1,32)    AΓL(1,32)    
 # Block-stabiliser                     2^3          2^3          
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  1^{1}8^{4}   1^{1}8^{4}   
@@ -363,10 +363,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     PΓL2(32)    
+# Structure                            PΓL(2,32)    PΓL(2,32)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     AΓL1(32)    
+# Point-stabiliser                     AΓL(1,32)    AΓL(1,32)    
 # Block-stabiliser                     S3           S3           
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  3^{1}6^{5}   3^{1}6^{5}   
@@ -389,10 +389,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     PΓL2(32)    
+# Structure                            PΓL(2,32)    PΓL(2,32)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     AΓL1(32)    
+# Point-stabiliser                     AΓL(1,32)    AΓL(1,32)    
 # Block-stabiliser                     5            5            
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  1^{3}5^{6}   1^{3}5^{6}   
@@ -415,10 +415,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PΓL2(32)     S33          
+# Structure                            PΓL(2,32)    S33          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     AΓL1(32)     S32          
+# Point-stabiliser                     AΓL(1,32)    S32          
 # Block-stabiliser                     2^2          S29xS4       
 # Orbit structure of point-stabiliser  1^{1}32^{1}  1^{1}32^{1}  
 # Orbit structure of block-stabiliser  1^{1}4^{8}   4^{1}29^{1}  
@@ -441,7 +441,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PΓL2(2^5)     PΓL2(2^5)    
+# Structure                            PΓL(2,2^5)    PΓL(2,2^5)    
 # Rank                                 4             4             
 # 2-Homogeneous                        false         false         
 # Point-stabiliser                     3:11:10       3:11:10       
@@ -467,7 +467,7 @@
 # -------------------------------------------------------------------------------
 #                                      G                    Aut(D)               
 # -------------------------------------------------------------------------------
-# Structure                            PΓL2(2^5)            PΓL2(2^5)           
+# Structure                            PΓL(2,2^5)           PΓL(2,2^5)           
 # Rank                                 4                    4                    
 # 2-Homogeneous                        false                false                
 # Point-stabiliser                     3:11:10              3:11:10              
@@ -493,7 +493,7 @@
 # -----------------------------------------------------------------
 #                                      G             Aut(D)        
 # -----------------------------------------------------------------
-# Structure                            PΓL2(2^5)     PΓL2(2^5)    
+# Structure                            PΓL(2,2^5)    PΓL(2,2^5)    
 # Rank                                 4             4             
 # 2-Homogeneous                        false         false         
 # Point-stabiliser                     3:11:10       3:11:10       

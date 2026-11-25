@@ -28,122 +28,122 @@
 # -----------
 
 #    Non-isomorphic designs:
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b    r    k  λ   G        Gα       GB                 Aut(D)   rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   10  15   6    4  2   S5       D12      D8                 PΣL2(9)  3      2           13     1       1       true             false            true             false                2                                
-# 2   10  15   9    6  5   PSL2(9)  3^2:4    S4                 PΣL2(9)  2      2           26     1       3       true             true             true             true                 1                                
-# 3   10  30   12   4  4   PGL2(9)  AGL1(9)  S4                 PΓL2(9)  2      2           30     1       2       true             false            true             true                 4                                
-# 4   10  30   18   6  10  PGL2(9)  AGL1(9)  S4                 PΓL2(9)  2      2           30     1       2       true             false            true             true                 3                                
-# 5   10  36   18   5  8   PSL2(9)  3^2:4    D10                M10      2      2           26     1       5       true             false            true             true                 5                                
-# 6   10  45   36   8  28  PGL2(9)  AGL1(9)  D16                S10      2      2           30     1       5       true             true             true             true                                        complete  
-# 7   10  60   18   3  4   PSL2(9)  3^2:4    S3                 PΣL2(9)  2      2           26     1       1       true             false            true             false                                                 
-# 8   10  72   36   5  16  PGL2(9)  AGL1(9)  D10                PΓL2(9)  2      2           30     1       4       true             false            true             true                 8                                
-# 9   10  120  36   3  8   PGL2(9)  AGL1(9)  S3                 S10      2      2           30     1       1       true             false            true             false                10                     complete  
-# 10  10  120  84   7  56  A10      A9       (S7 x S3) cap A10  S10      2      2           44     1       1       true             true             true             true                 9                      complete  
-# 11  10  180  72   4  24  PGL2(9)  AGL1(9)  2^2                PΓL2(9)  2      2           30     1       3       true             false            true             false                                                 
-# 12  10  210  84   4  28  A10      A9       (S4 x S6) cap A10  S10      2      2           44     1       2       true             true             true             true                 13                     complete  
-# 13  10  210  126  6  70  A10      A9       (S6 x S4) cap A10  S10      2      2           44     1       2       true             true             true             true                 12                     complete  
-# 14  10  252  126  5  56  A10      A9       (S5 x S5) cap A10  S10      2      2           44     1       3       true             false            true             true                 14                     complete  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b    r    k  λ   G         Gα        GB                 Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   10  15   6    4  2   S5        D12       D8                 PΣL(2,9)  3      2           13     1       1       true             false            true             false                2                                
+# 2   10  15   9    6  5   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           26     1       3       true             true             true             true                 1                                
+# 3   10  30   12   4  4   PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           30     1       2       true             false            true             true                 4                                
+# 4   10  30   18   6  10  PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           30     1       2       true             false            true             true                 3                                
+# 5   10  36   18   5  8   PSL(2,9)  3^2:4     D10                M10       2      2           26     1       5       true             false            true             true                 5                                
+# 6   10  45   36   8  28  PGL(2,9)  AGL(1,9)  D16                S10       2      2           30     1       5       true             true             true             true                                        complete  
+# 7   10  60   18   3  4   PSL(2,9)  3^2:4     S3                 PΣL(2,9)  2      2           26     1       1       true             false            true             false                                                 
+# 8   10  72   36   5  16  PGL(2,9)  AGL(1,9)  D10                PΓL(2,9)  2      2           30     1       4       true             false            true             true                 8                                
+# 9   10  120  36   3  8   PGL(2,9)  AGL(1,9)  S3                 S10       2      2           30     1       1       true             false            true             false                10                     complete  
+# 10  10  120  84   7  56  A10       A9        (S7 x S3) cap A10  S10       2      2           44     1       1       true             true             true             true                 9                      complete  
+# 11  10  180  72   4  24  PGL(2,9)  AGL(1,9)  2^2                PΓL(2,9)  2      2           30     1       3       true             false            true             false                                                 
+# 12  10  210  84   4  28  A10       A9        (S4 x S6) cap A10  S10       2      2           44     1       2       true             true             true             true                 13                     complete  
+# 13  10  210  126  6  70  A10       A9        (S6 x S4) cap A10  S10       2      2           44     1       2       true             true             true             true                 12                     complete  
+# 14  10  252  126  5  56  A10       A9        (S5 x S5) cap A10  S10       2      2           44     1       3       true             false            true             true                 14                     complete  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    Reduced designs (within each group):
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b    r    k  λ   G        Gα       GB                 Aut(D)   rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   10  15   6    4  2   S5       D12      D8                 PΣL2(9)  3      2           13     1       1       true             false            true             false                3                                
-# 2   10  15   6    4  2   PSL2(9)  3^2:4    S4                 PΣL2(9)  2      2           26     1       3       true             true             true             true                 3                                
-# 3   10  15   9    6  5   PSL2(9)  3^2:4    S4                 PΣL2(9)  2      2           26     1       3       true             true             true             true                 1                                
-# 4   10  36   18   5  8   PSL2(9)  3^2:4    D10                M10      2      2           26     1       5       true             false            true             true                 4                                
-# 5   10  60   18   3  4   PSL2(9)  3^2:4    S3                 PΣL2(9)  2      2           26     1       1       true             false            true             false                                                 
-# 6   10  30   12   4  4   PGL2(9)  AGL1(9)  S4                 PΓL2(9)  2      2           30     1       2       true             false            true             true                 7                                
-# 7   10  30   18   6  10  PGL2(9)  AGL1(9)  S4                 PΓL2(9)  2      2           30     1       2       true             false            true             true                 6                                
-# 8   10  45   36   8  28  PGL2(9)  AGL1(9)  D16                S10      2      2           30     1       5       true             true             true             true                                        complete  
-# 9   10  72   36   5  16  PGL2(9)  AGL1(9)  D10                PΓL2(9)  2      2           30     1       4       true             false            true             true                 9                                
-# 10  10  120  36   3  8   PGL2(9)  AGL1(9)  S3                 S10      2      2           30     1       1       true             false            true             false                30                     complete  
-# 11  10  180  72   4  24  PGL2(9)  AGL1(9)  2^2                PΓL2(9)  2      2           30     1       3       true             false            true             false                                                 
-# 12  10  30   12   4  4   M10      M9       S4                 PΓL2(9)  2      2           31     1       2       true             false            true             true                 7                                
-# 13  10  30   18   6  10  M10      M9       S4                 PΓL2(9)  2      2           31     1       2       true             false            true             true                 6                                
-# 14  10  36   18   5  8   M10      M9       5:4                M10      2      2           31     1       4       true             true             true             true                 4                                
-# 15  10  45   36   8  28  M10      M9       QD16               S10      2      2           31     1       5       true             true             true             true                                        complete  
-# 16  10  120  36   3  8   M10      M9       S3                 S10      2      2           31     1       1       true             false            true             false                30                     complete  
-# 17  10  180  72   4  24  M10      M9       4                  PΓL2(9)  2      2           31     1       3       true             false            true             false                                                 
-# 18  10  15   6    4  2   PΣL2(9)  3^2:D8   2xS4               PΣL2(9)  2      2           32     1       3       true             true             true             true                 3                                
-# 19  10  15   9    6  5   PΣL2(9)  3^2:D8   2xS4               PΣL2(9)  2      2           32     1       3       true             true             true             true                 1                                
-# 20  10  60   18   3  4   PΣL2(9)  3^2:D8   D12                PΣL2(9)  2      2           32     1       1       true             false            true             false                                                 
-# 21  10  72   36   5  16  PΣL2(9)  3^2:D8   D10                PΓL2(9)  2      2           32     1       5       true             false            true             true                 9                                
-# 22  10  30   12   4  4   PΓL2(9)  AΓL1(9)  2xS4               PΓL2(9)  2      2           35     1       2       true             false            true             true                 7                                
-# 23  10  30   18   6  10  PΓL2(9)  AΓL1(9)  2xS4               PΓL2(9)  2      2           35     1       2       true             false            true             true                 6                                
-# 24  10  45   36   8  28  PΓL2(9)  AΓL1(9)  8:2^2              S10      2      2           35     1       5       true             true             true             true                                        complete  
-# 25  10  72   36   5  16  PΓL2(9)  AΓL1(9)  5:4                PΓL2(9)  2      2           35     1       4       true             false            true             true                 9                                
-# 26  10  120  36   3  8   PΓL2(9)  AΓL1(9)  D12                S10      2      2           35     1       1       true             false            true             false                30                     complete  
-# 27  10  180  72   4  24  PΓL2(9)  AΓL1(9)  D8                 PΓL2(9)  2      2           35     1       3       true             false            true             false                                                 
-# 28  10  45   36   8  28  A10      A9       (S8 x S2) cap A10  S10      2      2           44     1       4       true             true             true             true                                        complete  
-# 29  10  120  36   3  8   A10      A9       (S3 x S7) cap A10  S10      2      2           44     1       1       true             true             true             true                 30                     complete  
-# 30  10  120  84   7  56  A10      A9       (S7 x S3) cap A10  S10      2      2           44     1       1       true             true             true             true                 10                     complete  
-# 31  10  210  84   4  28  A10      A9       (S4 x S6) cap A10  S10      2      2           44     1       2       true             true             true             true                 32                     complete  
-# 32  10  210  126  6  70  A10      A9       (S6 x S4) cap A10  S10      2      2           44     1       2       true             true             true             true                 31                     complete  
-# 33  10  252  126  5  56  A10      A9       (S5 x S5) cap A10  S10      2      2           44     1       3       true             false            true             true                 33                     complete  
-# 34  10  45   36   8  28  S10      S9       S8 x S2            S10      2      2           45     1       4       true             true             true             true                                        complete  
-# 35  10  120  36   3  8   S10      S9       S3 x S7            S10      2      2           45     1       1       true             true             true             true                 30                     complete  
-# 36  10  120  84   7  56  S10      S9       S7 x S3            S10      2      2           45     1       1       true             true             true             true                 10                     complete  
-# 37  10  210  84   4  28  S10      S9       S4 x S6            S10      2      2           45     1       2       true             true             true             true                 32                     complete  
-# 38  10  210  126  6  70  S10      S9       S6 x S4            S10      2      2           45     1       2       true             true             true             true                 31                     complete  
-# 39  10  252  126  5  56  S10      S9       S5 x S5            S10      2      2           45     1       3       true             false            true             true                 33                     complete  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b    r    k  λ   G         Gα        GB                 Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   10  15   6    4  2   S5        D12       D8                 PΣL(2,9)  3      2           13     1       1       true             false            true             false                3                                
+# 2   10  15   6    4  2   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           26     1       3       true             true             true             true                 3                                
+# 3   10  15   9    6  5   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           26     1       3       true             true             true             true                 1                                
+# 4   10  36   18   5  8   PSL(2,9)  3^2:4     D10                M10       2      2           26     1       5       true             false            true             true                 4                                
+# 5   10  60   18   3  4   PSL(2,9)  3^2:4     S3                 PΣL(2,9)  2      2           26     1       1       true             false            true             false                                                 
+# 6   10  30   12   4  4   PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           30     1       2       true             false            true             true                 7                                
+# 7   10  30   18   6  10  PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           30     1       2       true             false            true             true                 6                                
+# 8   10  45   36   8  28  PGL(2,9)  AGL(1,9)  D16                S10       2      2           30     1       5       true             true             true             true                                        complete  
+# 9   10  72   36   5  16  PGL(2,9)  AGL(1,9)  D10                PΓL(2,9)  2      2           30     1       4       true             false            true             true                 9                                
+# 10  10  120  36   3  8   PGL(2,9)  AGL(1,9)  S3                 S10       2      2           30     1       1       true             false            true             false                30                     complete  
+# 11  10  180  72   4  24  PGL(2,9)  AGL(1,9)  2^2                PΓL(2,9)  2      2           30     1       3       true             false            true             false                                                 
+# 12  10  30   12   4  4   M10       M9        S4                 PΓL(2,9)  2      2           31     1       2       true             false            true             true                 7                                
+# 13  10  30   18   6  10  M10       M9        S4                 PΓL(2,9)  2      2           31     1       2       true             false            true             true                 6                                
+# 14  10  36   18   5  8   M10       M9        5:4                M10       2      2           31     1       4       true             true             true             true                 4                                
+# 15  10  45   36   8  28  M10       M9        QD16               S10       2      2           31     1       5       true             true             true             true                                        complete  
+# 16  10  120  36   3  8   M10       M9        S3                 S10       2      2           31     1       1       true             false            true             false                30                     complete  
+# 17  10  180  72   4  24  M10       M9        4                  PΓL(2,9)  2      2           31     1       3       true             false            true             false                                                 
+# 18  10  15   6    4  2   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           32     1       3       true             true             true             true                 3                                
+# 19  10  15   9    6  5   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           32     1       3       true             true             true             true                 1                                
+# 20  10  60   18   3  4   PΣL(2,9)  3^2:D8    D12                PΣL(2,9)  2      2           32     1       1       true             false            true             false                                                 
+# 21  10  72   36   5  16  PΣL(2,9)  3^2:D8    D10                PΓL(2,9)  2      2           32     1       5       true             false            true             true                 9                                
+# 22  10  30   12   4  4   PΓL(2,9)  AΓL(1,9)  2xS4               PΓL(2,9)  2      2           35     1       2       true             false            true             true                 7                                
+# 23  10  30   18   6  10  PΓL(2,9)  AΓL(1,9)  2xS4               PΓL(2,9)  2      2           35     1       2       true             false            true             true                 6                                
+# 24  10  45   36   8  28  PΓL(2,9)  AΓL(1,9)  8:2^2              S10       2      2           35     1       5       true             true             true             true                                        complete  
+# 25  10  72   36   5  16  PΓL(2,9)  AΓL(1,9)  5:4                PΓL(2,9)  2      2           35     1       4       true             false            true             true                 9                                
+# 26  10  120  36   3  8   PΓL(2,9)  AΓL(1,9)  D12                S10       2      2           35     1       1       true             false            true             false                30                     complete  
+# 27  10  180  72   4  24  PΓL(2,9)  AΓL(1,9)  D8                 PΓL(2,9)  2      2           35     1       3       true             false            true             false                                                 
+# 28  10  45   36   8  28  A10       A9        (S8 x S2) cap A10  S10       2      2           44     1       4       true             true             true             true                                        complete  
+# 29  10  120  36   3  8   A10       A9        (S3 x S7) cap A10  S10       2      2           44     1       1       true             true             true             true                 30                     complete  
+# 30  10  120  84   7  56  A10       A9        (S7 x S3) cap A10  S10       2      2           44     1       1       true             true             true             true                 10                     complete  
+# 31  10  210  84   4  28  A10       A9        (S4 x S6) cap A10  S10       2      2           44     1       2       true             true             true             true                 32                     complete  
+# 32  10  210  126  6  70  A10       A9        (S6 x S4) cap A10  S10       2      2           44     1       2       true             true             true             true                 31                     complete  
+# 33  10  252  126  5  56  A10       A9        (S5 x S5) cap A10  S10       2      2           44     1       3       true             false            true             true                 33                     complete  
+# 34  10  45   36   8  28  S10       S9        S8 x S2            S10       2      2           45     1       4       true             true             true             true                                        complete  
+# 35  10  120  36   3  8   S10       S9        S3 x S7            S10       2      2           45     1       1       true             true             true             true                 30                     complete  
+# 36  10  120  84   7  56  S10       S9        S7 x S3            S10       2      2           45     1       1       true             true             true             true                 10                     complete  
+# 37  10  210  84   4  28  S10       S9        S4 x S6            S10       2      2           45     1       2       true             true             true             true                 32                     complete  
+# 38  10  210  126  6  70  S10       S9        S6 x S4            S10       2      2           45     1       2       true             true             true             true                 31                     complete  
+# 39  10  252  126  5  56  S10       S9        S5 x S5            S10       2      2           45     1       3       true             false            true             true                 33                     complete  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Nr  v   b    r    k  λ   G        Gα       GB                 Aut(D)   rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   10  15   6    4  2   S5       D12      D8                 PΣL2(9)  3      2           13     1       1       true             false            true             false                4                                
-# 2   10  15   6    4  2   PSL2(9)  3^2:4    S4                 PΣL2(9)  2      2           26     1       3       true             true             true             true                 4                                
-# 3   10  15   6    4  2   PSL2(9)  3^2:4    S4                 PΣL2(9)  2      2           26     1       4       true             true             true             true                 4                                
-# 4   10  15   9    6  5   PSL2(9)  3^2:4    S4                 PΣL2(9)  2      2           26     1       3       true             true             true             true                 1                                
-# 5   10  15   9    6  5   PSL2(9)  3^2:4    S4                 PΣL2(9)  2      2           26     1       4       true             true             true             true                 1                                
-# 6   10  36   18   5  8   PSL2(9)  3^2:4    D10                M10      2      2           26     1       5       true             false            true             true                 6                                
-# 7   10  36   18   5  8   PSL2(9)  3^2:4    D10                M10      2      2           26     1       5       true             false            true             true                 6                                
-# 8   10  60   18   3  4   PSL2(9)  3^2:4    S3                 PΣL2(9)  2      2           26     1       2       true             false            true             false                                                 
-# 9   10  60   18   3  4   PSL2(9)  3^2:4    S3                 PΣL2(9)  2      2           26     1       1       true             false            true             false                                                 
-# 10  10  30   12   4  4   PGL2(9)  AGL1(9)  S4                 PΓL2(9)  2      2           30     1       2       true             false            true             true                 11                               
-# 11  10  30   18   6  10  PGL2(9)  AGL1(9)  S4                 PΓL2(9)  2      2           30     1       2       true             false            true             true                 10                               
-# 12  10  45   36   8  28  PGL2(9)  AGL1(9)  D16                S10      2      2           30     1       5       true             true             true             true                                        complete  
-# 13  10  72   36   5  16  PGL2(9)  AGL1(9)  D10                PΓL2(9)  2      2           30     1       4       true             false            true             true                 13                               
-# 14  10  120  36   3  8   PGL2(9)  AGL1(9)  S3                 S10      2      2           30     1       1       true             false            true             false                38                     complete  
-# 15  10  180  72   4  24  PGL2(9)  AGL1(9)  2^2                PΓL2(9)  2      2           30     1       3       true             false            true             false                                                 
-# 16  10  30   12   4  4   M10      M9       S4                 PΓL2(9)  2      2           31     1       2       true             false            true             true                 11                               
-# 17  10  30   18   6  10  M10      M9       S4                 PΓL2(9)  2      2           31     1       2       true             false            true             true                 10                               
-# 18  10  36   18   5  8   M10      M9       5:4                M10      2      2           31     1       4       true             true             true             true                 6                                
-# 19  10  36   18   5  8   M10      M9       5:4                M10      2      2           31     1       4       true             true             true             true                 6                                
-# 20  10  45   36   8  28  M10      M9       QD16               S10      2      2           31     1       5       true             true             true             true                                        complete  
-# 21  10  120  36   3  8   M10      M9       S3                 S10      2      2           31     1       1       true             false            true             false                38                     complete  
-# 22  10  180  72   4  24  M10      M9       4                  PΓL2(9)  2      2           31     1       3       true             false            true             false                                                 
-# 23  10  15   6    4  2   PΣL2(9)  3^2:D8   2xS4               PΣL2(9)  2      2           32     1       4       true             true             true             true                 4                                
-# 24  10  15   6    4  2   PΣL2(9)  3^2:D8   2xS4               PΣL2(9)  2      2           32     1       3       true             true             true             true                 4                                
-# 25  10  15   9    6  5   PΣL2(9)  3^2:D8   2xS4               PΣL2(9)  2      2           32     1       4       true             true             true             true                 1                                
-# 26  10  15   9    6  5   PΣL2(9)  3^2:D8   2xS4               PΣL2(9)  2      2           32     1       3       true             true             true             true                 1                                
-# 27  10  60   18   3  4   PΣL2(9)  3^2:D8   D12                PΣL2(9)  2      2           32     1       1       true             false            true             false                                                 
-# 28  10  60   18   3  4   PΣL2(9)  3^2:D8   D12                PΣL2(9)  2      2           32     1       2       true             false            true             false                                                 
-# 29  10  72   36   5  16  PΣL2(9)  3^2:D8   D10                PΓL2(9)  2      2           32     1       5       true             false            true             true                 13                               
-# 30  10  30   12   4  4   PΓL2(9)  AΓL1(9)  2xS4               PΓL2(9)  2      2           35     1       2       true             false            true             true                 11                               
-# 31  10  30   18   6  10  PΓL2(9)  AΓL1(9)  2xS4               PΓL2(9)  2      2           35     1       2       true             false            true             true                 10                               
-# 32  10  45   36   8  28  PΓL2(9)  AΓL1(9)  8:2^2              S10      2      2           35     1       5       true             true             true             true                                        complete  
-# 33  10  72   36   5  16  PΓL2(9)  AΓL1(9)  5:4                PΓL2(9)  2      2           35     1       4       true             false            true             true                 13                               
-# 34  10  120  36   3  8   PΓL2(9)  AΓL1(9)  D12                S10      2      2           35     1       1       true             false            true             false                38                     complete  
-# 35  10  180  72   4  24  PΓL2(9)  AΓL1(9)  D8                 PΓL2(9)  2      2           35     1       3       true             false            true             false                                                 
-# 36  10  45   36   8  28  A10      A9       (S8 x S2) cap A10  S10      2      2           44     1       4       true             true             true             true                                        complete  
-# 37  10  120  36   3  8   A10      A9       (S3 x S7) cap A10  S10      2      2           44     1       1       true             true             true             true                 38                     complete  
-# 38  10  120  84   7  56  A10      A9       (S7 x S3) cap A10  S10      2      2           44     1       1       true             true             true             true                 14                     complete  
-# 39  10  210  84   4  28  A10      A9       (S4 x S6) cap A10  S10      2      2           44     1       2       true             true             true             true                 40                     complete  
-# 40  10  210  126  6  70  A10      A9       (S6 x S4) cap A10  S10      2      2           44     1       2       true             true             true             true                 39                     complete  
-# 41  10  252  126  5  56  A10      A9       (S5 x S5) cap A10  S10      2      2           44     1       3       true             false            true             true                 41                     complete  
-# 42  10  45   36   8  28  S10      S9       S8 x S2            S10      2      2           45     1       4       true             true             true             true                                        complete  
-# 43  10  120  36   3  8   S10      S9       S3 x S7            S10      2      2           45     1       1       true             true             true             true                 38                     complete  
-# 44  10  120  84   7  56  S10      S9       S7 x S3            S10      2      2           45     1       1       true             true             true             true                 14                     complete  
-# 45  10  210  84   4  28  S10      S9       S4 x S6            S10      2      2           45     1       2       true             true             true             true                 40                     complete  
-# 46  10  210  126  6  70  S10      S9       S6 x S4            S10      2      2           45     1       2       true             true             true             true                 39                     complete  
-# 47  10  252  126  5  56  S10      S9       S5 x S5            S10      2      2           45     1       3       true             false            true             true                 41                     complete  
-# --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# Nr  v   b    r    k  λ   G         Gα        GB                 Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 1   10  15   6    4  2   S5        D12       D8                 PΣL(2,9)  3      2           13     1       1       true             false            true             false                4                                
+# 2   10  15   6    4  2   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           26     1       3       true             true             true             true                 4                                
+# 3   10  15   6    4  2   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           26     1       4       true             true             true             true                 4                                
+# 4   10  15   9    6  5   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           26     1       3       true             true             true             true                 1                                
+# 5   10  15   9    6  5   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           26     1       4       true             true             true             true                 1                                
+# 6   10  36   18   5  8   PSL(2,9)  3^2:4     D10                M10       2      2           26     1       5       true             false            true             true                 6                                
+# 7   10  36   18   5  8   PSL(2,9)  3^2:4     D10                M10       2      2           26     1       5       true             false            true             true                 6                                
+# 8   10  60   18   3  4   PSL(2,9)  3^2:4     S3                 PΣL(2,9)  2      2           26     1       2       true             false            true             false                                                 
+# 9   10  60   18   3  4   PSL(2,9)  3^2:4     S3                 PΣL(2,9)  2      2           26     1       1       true             false            true             false                                                 
+# 10  10  30   12   4  4   PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           30     1       2       true             false            true             true                 11                               
+# 11  10  30   18   6  10  PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           30     1       2       true             false            true             true                 10                               
+# 12  10  45   36   8  28  PGL(2,9)  AGL(1,9)  D16                S10       2      2           30     1       5       true             true             true             true                                        complete  
+# 13  10  72   36   5  16  PGL(2,9)  AGL(1,9)  D10                PΓL(2,9)  2      2           30     1       4       true             false            true             true                 13                               
+# 14  10  120  36   3  8   PGL(2,9)  AGL(1,9)  S3                 S10       2      2           30     1       1       true             false            true             false                38                     complete  
+# 15  10  180  72   4  24  PGL(2,9)  AGL(1,9)  2^2                PΓL(2,9)  2      2           30     1       3       true             false            true             false                                                 
+# 16  10  30   12   4  4   M10       M9        S4                 PΓL(2,9)  2      2           31     1       2       true             false            true             true                 11                               
+# 17  10  30   18   6  10  M10       M9        S4                 PΓL(2,9)  2      2           31     1       2       true             false            true             true                 10                               
+# 18  10  36   18   5  8   M10       M9        5:4                M10       2      2           31     1       4       true             true             true             true                 6                                
+# 19  10  36   18   5  8   M10       M9        5:4                M10       2      2           31     1       4       true             true             true             true                 6                                
+# 20  10  45   36   8  28  M10       M9        QD16               S10       2      2           31     1       5       true             true             true             true                                        complete  
+# 21  10  120  36   3  8   M10       M9        S3                 S10       2      2           31     1       1       true             false            true             false                38                     complete  
+# 22  10  180  72   4  24  M10       M9        4                  PΓL(2,9)  2      2           31     1       3       true             false            true             false                                                 
+# 23  10  15   6    4  2   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           32     1       4       true             true             true             true                 4                                
+# 24  10  15   6    4  2   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           32     1       3       true             true             true             true                 4                                
+# 25  10  15   9    6  5   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           32     1       4       true             true             true             true                 1                                
+# 26  10  15   9    6  5   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           32     1       3       true             true             true             true                 1                                
+# 27  10  60   18   3  4   PΣL(2,9)  3^2:D8    D12                PΣL(2,9)  2      2           32     1       1       true             false            true             false                                                 
+# 28  10  60   18   3  4   PΣL(2,9)  3^2:D8    D12                PΣL(2,9)  2      2           32     1       2       true             false            true             false                                                 
+# 29  10  72   36   5  16  PΣL(2,9)  3^2:D8    D10                PΓL(2,9)  2      2           32     1       5       true             false            true             true                 13                               
+# 30  10  30   12   4  4   PΓL(2,9)  AΓL(1,9)  2xS4               PΓL(2,9)  2      2           35     1       2       true             false            true             true                 11                               
+# 31  10  30   18   6  10  PΓL(2,9)  AΓL(1,9)  2xS4               PΓL(2,9)  2      2           35     1       2       true             false            true             true                 10                               
+# 32  10  45   36   8  28  PΓL(2,9)  AΓL(1,9)  8:2^2              S10       2      2           35     1       5       true             true             true             true                                        complete  
+# 33  10  72   36   5  16  PΓL(2,9)  AΓL(1,9)  5:4                PΓL(2,9)  2      2           35     1       4       true             false            true             true                 13                               
+# 34  10  120  36   3  8   PΓL(2,9)  AΓL(1,9)  D12                S10       2      2           35     1       1       true             false            true             false                38                     complete  
+# 35  10  180  72   4  24  PΓL(2,9)  AΓL(1,9)  D8                 PΓL(2,9)  2      2           35     1       3       true             false            true             false                                                 
+# 36  10  45   36   8  28  A10       A9        (S8 x S2) cap A10  S10       2      2           44     1       4       true             true             true             true                                        complete  
+# 37  10  120  36   3  8   A10       A9        (S3 x S7) cap A10  S10       2      2           44     1       1       true             true             true             true                 38                     complete  
+# 38  10  120  84   7  56  A10       A9        (S7 x S3) cap A10  S10       2      2           44     1       1       true             true             true             true                 14                     complete  
+# 39  10  210  84   4  28  A10       A9        (S4 x S6) cap A10  S10       2      2           44     1       2       true             true             true             true                 40                     complete  
+# 40  10  210  126  6  70  A10       A9        (S6 x S4) cap A10  S10       2      2           44     1       2       true             true             true             true                 39                     complete  
+# 41  10  252  126  5  56  A10       A9        (S5 x S5) cap A10  S10       2      2           44     1       3       true             false            true             true                 41                     complete  
+# 42  10  45   36   8  28  S10       S9        S8 x S2            S10       2      2           45     1       4       true             true             true             true                                        complete  
+# 43  10  120  36   3  8   S10       S9        S3 x S7            S10       2      2           45     1       1       true             true             true             true                 38                     complete  
+# 44  10  120  84   7  56  S10       S9        S7 x S3            S10       2      2           45     1       1       true             true             true             true                 14                     complete  
+# 45  10  210  84   4  28  S10       S9        S4 x S6            S10       2      2           45     1       2       true             true             true             true                 40                     complete  
+# 46  10  210  126  6  70  S10       S9        S6 x S4            S10       2      2           45     1       2       true             true             true             true                 39                     complete  
+# 47  10  252  126  5  56  S10       S9        S5 x S5            S10       2      2           45     1       3       true             false            true             true                 41                     complete  
+# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information (up to isomorphism): 
 # -------------------------------------------
@@ -155,7 +155,7 @@
 # ------------------------------------------------------------------
 #                                      G                Aut(D)      
 # ------------------------------------------------------------------
-# Structure                            S5               PΣL2(9)     
+# Structure                            S5               PΣL(2,9)    
 # Rank                                 3                2           
 # 2-Homogeneous                        false            true        
 # Point-stabiliser                     D12              3^2:D8      
@@ -181,7 +181,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(9)     PΣL2(9)     
+# Structure                            PSL(2,9)    PΣL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:4       3^2:D8      
@@ -207,10 +207,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PGL2(9)     PΓL2(9)     
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(9)     AΓL1(9)     
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     S4          2xS4        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  4^{1}6^{1}  4^{1}6^{1}  
@@ -233,10 +233,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PGL2(9)     PΓL2(9)     
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(9)     AΓL1(9)     
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     S4          2xS4        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  4^{1}6^{1}  4^{1}6^{1}  
@@ -259,7 +259,7 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PSL2(9)     M10         
+# Structure                            PSL(2,9)    M10         
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
 # Point-stabiliser                     3^2:4       M9          
@@ -285,10 +285,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PGL2(9)     S10         
+# Structure                            PGL(2,9)    S10         
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(9)     S9          
+# Point-stabiliser                     AGL(1,9)    S9          
 # Block-stabiliser                     D16         2xS8        
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  2^{1}8^{1}  2^{1}8^{1}  
@@ -311,7 +311,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL2(9)          PΣL2(9)          
+# Structure                            PSL(2,9)         PΣL(2,9)         
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     3^2:4            3^2:D8           
@@ -337,10 +337,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PGL2(9)     PΓL2(9)     
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(9)     AΓL1(9)     
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     D10         5:4         
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  5^{2}       5^{2}       
@@ -363,10 +363,10 @@
 # ------------------------------------------------------------------
 #                                      G                Aut(D)      
 # ------------------------------------------------------------------
-# Structure                            PGL2(9)          S10         
+# Structure                            PGL(2,9)         S10         
 # Rank                                 2                2           
 # 2-Homogeneous                        true             true        
-# Point-stabiliser                     AGL1(9)          S9          
+# Point-stabiliser                     AGL(1,9)         S9          
 # Block-stabiliser                     S3               S7xS3       
 # Orbit structure of point-stabiliser  1^{1}9^{1}       1^{1}9^{1}  
 # Orbit structure of block-stabiliser  1^{1}3^{1}6^{1}  3^{1}7^{1}  
@@ -415,10 +415,10 @@
 # -------------------------------------------------------------
 #                                      G           Aut(D)      
 # -------------------------------------------------------------
-# Structure                            PGL2(9)     PΓL2(9)     
+# Structure                            PGL(2,9)    PΓL(2,9)    
 # Rank                                 2           2           
 # 2-Homogeneous                        true        true        
-# Point-stabiliser                     AGL1(9)     AΓL1(9)     
+# Point-stabiliser                     AGL(1,9)    AΓL(1,9)    
 # Block-stabiliser                     2^2         D8          
 # Orbit structure of point-stabiliser  1^{1}9^{1}  1^{1}9^{1}  
 # Orbit structure of block-stabiliser  2^{1}4^{2}  2^{1}4^{2}  

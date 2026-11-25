@@ -57,8 +57,8 @@
 # 3   21  56    16   6   4    L3(4)  2^4:A5  A6         L3(4).2_2    2      2                  2       4       true             true             true             true                 4                                                        
 # 4   21  56    40   15  28   L3(4)  2^4:A5  A6         L3(4).2_2    2      2                  2       4       true             true             true             true                 3                                                        
 # 5   21  105   20   4   3    L3(4)  2^4:A5  2^4:2:2:3  L3(4).3.2_2  2      2                  2       7       true             false            true             false                                                                         
-# 6   21  120   40   7   12   L3(4)  2^4:A5  PSL3(2)    L3(4).2_2    2      2                  2       8       true             true             true             true                 7                                                        
-# 7   21  120   80   14  52   L3(4)  2^4:A5  PSL3(2)    L3(4).2_2    2      2                  2       8       true             true             true             true                 6                                                        
+# 6   21  120   40   7   12   L3(4)  2^4:A5  PSL(3,2)   L3(4).2_2    2      2                  2       8       true             true             true             true                 7                                                        
+# 7   21  120   80   14  52   L3(4)  2^4:A5  PSL(3,2)   L3(4).2_2    2      2                  2       8       true             true             true             true                 6                                                        
 # 8   21  210   30   3   3    L3(4)  2^4:A5  2^4:3:2    L3(4).3.2_2  2      2                  2       14      true             false            true             false                                                                         
 # 9   21  210   80   8   28   L3(4)  2^4:A5  2^4:3:2    L3(4).3.2_2  2      2                  2       13      true             false            true             false                                                                         
 # 10  21  210   120  12  66   L3(4)  2^4:A5  2^4:3:2    L3(4).3.2_2  2      2                  2       13      true             false            true             false                                                                         
@@ -222,7 +222,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     2^4:A5       2^4:S5       
-# Block-stabiliser                     PSL3(2)      2xPSL3(2)   
+# Block-stabiliser                     PSL(3,2)     2xPSL(3,2)   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  7^{1}14^{1}  7^{1}14^{1}  
 # Point-transitive                     true         true         
@@ -248,7 +248,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     2^4:A5       2^4:S5       
-# Block-stabiliser                     PSL3(2)      2xPSL3(2)   
+# Block-stabiliser                     PSL(3,2)     2xPSL(3,2)   
 # Orbit structure of point-stabiliser  1^{1}20^{1}  1^{1}20^{1}  
 # Orbit structure of block-stabiliser  7^{1}14^{1}  7^{1}14^{1}  
 # Point-transitive                     true         true         
@@ -586,7 +586,7 @@
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     2^4:A5           2^4:A5:S3        
-# Block-stabiliser                     Q8               GL2(3)          
+# Block-stabiliser                     Q8               GL(2,3)          
 # Orbit structure of point-stabiliser  1^{1}20^{1}      1^{1}20^{1}      
 # Orbit structure of block-stabiliser  1^{1}4^{1}8^{2}  1^{1}4^{1}8^{2}  
 # Point-transitive                     true             true             

@@ -49,17 +49,17 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b     r    k   λ    G          Gα    GB   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   20  190   171  18  153  PSL2(19)   19:9  D18  S20        2      2                  1       5       true             true             true             true                                        complete  
-# 2   20  285   57   4   9    PSL2(19)   19:9  A4   PSL2(19)   2      2                  1       6       true             false            true             false                                                 
-# 3   20  285   171  12  99   PSL2(19)   19:9  A4   PGL2(19)   2      2                  1       6       true             false            true             false                                                 
-# 4   20  342   171  10  81   PSL2(19)   19:9  D10  PSL2(19)   2      2                  1       7       true             false            true             true                 4                                
-# 5   20  342   171  10  81   PSL2(19)   19:9  10   PGL2(19)   2      2                  1       9       true             false            true             true                 5                                
-# 6   20  380   171  9   72   PSL2(19)   19:9  9    PGL2(19)   2      2                  1       10      true             false            true             false                                                 
-# 7   20  570   171  6   45   PSL2(19)   19:9  S3   PSL2(19)   2      2                  1       11      true             false            true             false                                                 
-# 8   20  570   171  6   45   PSL2(19)   19:9  S3   PGL2(19)   2      2                  1       11      true             false            true             false                                                 
-# 9   20  684   171  5   36   PSL2(19)   19:9  5    PGL2(19)   2      2                  1       12      true             false            true             false                                                 
-# 10  20  855   171  4   27   PSL2(19)   19:9  2^2  PGL2(19)   2      2                  1       13      true             false            true             false                                                 
-# 11  20  1140  171  3   18   PSL2(19)   19:9  3    S20        2      2                  1       14      true             false            true             false                                       complete  
+# 1   20  190   171  18  153  PSL(2,19)  19:9  D18  S20        2      2                  1       5       true             true             true             true                                        complete  
+# 2   20  285   57   4   9    PSL(2,19)  19:9  A4   PSL(2,19)  2      2                  1       6       true             false            true             false                                                 
+# 3   20  285   171  12  99   PSL(2,19)  19:9  A4   PGL(2,19)  2      2                  1       6       true             false            true             false                                                 
+# 4   20  342   171  10  81   PSL(2,19)  19:9  D10  PSL(2,19)  2      2                  1       7       true             false            true             true                 4                                
+# 5   20  342   171  10  81   PSL(2,19)  19:9  10   PGL(2,19)  2      2                  1       9       true             false            true             true                 5                                
+# 6   20  380   171  9   72   PSL(2,19)  19:9  9    PGL(2,19)  2      2                  1       10      true             false            true             false                                                 
+# 7   20  570   171  6   45   PSL(2,19)  19:9  S3   PSL(2,19)  2      2                  1       11      true             false            true             false                                                 
+# 8   20  570   171  6   45   PSL(2,19)  19:9  S3   PGL(2,19)  2      2                  1       11      true             false            true             false                                                 
+# 9   20  684   171  5   36   PSL(2,19)  19:9  5    PGL(2,19)  2      2                  1       12      true             false            true             false                                                 
+# 10  20  855   171  4   27   PSL(2,19)  19:9  2^2  PGL(2,19)  2      2                  1       13      true             false            true             false                                                 
+# 11  20  1140  171  3   18   PSL(2,19)  19:9  3    S20        2      2                  1       14      true             false            true             false                                       complete  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -72,7 +72,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     S20          
+# Structure                            PSL(2,19)    S20          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         S19          
@@ -98,7 +98,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PSL2(19)    
+# Structure                            PSL(2,19)    PSL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         19:9         
@@ -124,10 +124,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)    
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)    
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     A4           S4           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{2}12^{1}  8^{1}12^{1}  
@@ -150,7 +150,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PSL2(19)    
+# Structure                            PSL(2,19)    PSL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         19:9         
@@ -176,10 +176,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)    
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)    
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     10           D20          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  10^{2}       10^{2}       
@@ -202,10 +202,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)    
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)    
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     9            D18          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  1^{2}9^{2}   2^{1}9^{2}   
@@ -228,7 +228,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PSL2(19)    
+# Structure                            PSL(2,19)    PSL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         19:9         
@@ -254,10 +254,10 @@
 # --------------------------------------------------------------------
 #                                      G            Aut(D)            
 # --------------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)         
+# Structure                            PSL(2,19)    PGL(2,19)         
 # Rank                                 2            2                 
 # 2-Homogeneous                        true         true              
-# Point-stabiliser                     19:9         AGL1(19)         
+# Point-stabiliser                     19:9         AGL(1,19)         
 # Block-stabiliser                     S3           D12               
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}       
 # Orbit structure of block-stabiliser  2^{1}6^{3}   2^{1}6^{1}12^{1}  
@@ -280,10 +280,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)    
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)    
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     5            D10          
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  5^{4}        5^{2}10^{1}  
@@ -306,10 +306,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     PGL2(19)    
+# Structure                            PSL(2,19)    PGL(2,19)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     19:9         AGL1(19)    
+# Point-stabiliser                     19:9         AGL(1,19)    
 # Block-stabiliser                     2^2          D8           
 # Orbit structure of point-stabiliser  1^{1}19^{1}  1^{1}19^{1}  
 # Orbit structure of block-stabiliser  4^{5}        4^{1}8^{2}   
@@ -332,7 +332,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(19)     S20          
+# Structure                            PSL(2,19)    S20          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     19:9         S19          

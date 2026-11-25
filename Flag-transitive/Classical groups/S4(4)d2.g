@@ -52,27 +52,27 @@
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v    b       r     k    λ     G        Gα           GB                     Aut(D)      rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                      
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   85   85      64    64   48    S4(4).2  2^6:A5:S3    2^6:A5:S3              PΣL4(4)     3      2                  3       3       true             true             true             false                            true       complement of PG(3,4) parameters              
-# 2   120  255     136   64   72    S4(4).2  PSL2(16):4   2^6:S5                 PSp8(2)     3      2                  5       14      true             false            true             false                                                                                     
-# 3   120  1275    85    8    5     S4(4).2  PSL2(16):4   (2^2x((2^4):2)):3:2:2  PSp4(4).2   3      3                  5       35      true             false            true             false                                                                                     
-# 4   120  8160    1020  15   120   S4(4).2  PSL2(16):4   A5:4                   PSp4(4).2   3      3                  5       156     true             false            true             false                                                                                     
-# 5   120  10200   680   8    40    S4(4).2  PSL2(16):4   S4xD8                  PSp4(4).2   3      3                  5       174     true             false            true             false                                                                                     
-# 6   120  20400   1360  8    80    S4(4).2  PSL2(16):4   2^2xS4                 PSp4(4).2   3      3                  5       293     true             false            true             false                                                                                     
-# 7   120  27200   8160  36   2400  S4(4).2  PSL2(16):4   A4xS3                  PSp4(4).2   3      3                  5       335     true             false            true             false                                                                                     
-# 8   120  27200   8160  36   2400  S4(4).2  PSL2(16):4   (S3xS3):2              PSp4(4).2   3      3                  5       327     true             false            true             false                                                                                     
-# 9   120  32640   4080  15   480   S4(4).2  PSL2(16):4   S3xD10                 PSp4(4).2   3      3                  5       417     true             false            true             false                                                                                     
-# 10  120  32640   4080  15   480   S4(4).2  PSL2(16):4   S3xD10                 PSp4(4).2   3      3                  5       417     true             false            true             false                                                                                     
-# 11  120  61200   4080  8    240   S4(4).2  PSL2(16):4   2^4:2                  PSp4(4).2   3      3                  5       559     true             false            true             false                                                                                     
-# 12  120  61200   4080  8    240   S4(4).2  PSL2(16):4   2^4:2                  PSp4(4).2   3      3                  5       504     true             false            true             false                                                                                     
-# 13  120  61200   4080  8    240   S4(4).2  PSL2(16):4   2^2xD8                 PSp4(4).2   3      3                  5       573     true             false            true             false                                                                                     
-# 14  120  122400  8160  8    480   S4(4).2  PSL2(16):4   8x2                    PSp4(4).2   3      3                  5       713     true             false            true             false                                                                                     
-# 15  136  255     120   64   56    S4(4).2  (A5xA5):2^2  2^6:S5                 PSp8(2)     3      2                  7       14      true             false            true             false                                                                                     
-# 16  136  4896    360   10   24    S4(4).2  (A5xA5):2^2  5^2:(4x2):2            PSp4(4).2   3      3                  7       92      true             false            true             false                                                                                     
-# 17  136  8160    600   10   40    S4(4).2  (A5xA5):2^2  2xS5                   PSp4(4).2   3      3                  7       150     true             false            true             false                                                                                     
-# 18  136  48960   3600  10   240   S4(4).2  (A5xA5):2^2  2x(5:4)                PSp4(4).2   3      3                  7       484     true             false            true             false                                                                                     
-# 19  136  97920   7200  10   480   S4(4).2  (A5xA5):2^2  D20                    PSp4(4).2   3      3                  7       693     true             false            true             false                                                                                     
-# 20  136  97920   7200  10   480   S4(4).2  (A5xA5):2^2  D20                    PSp4(4).2   3      3                  7       686     true             false            true             false                                                                                     
-# 21  255  255     128   128  64    S4(4).2  2^6:S5       2^6:S5                 PSL8(2)     5      2                  13      13      false            false            true             false                            true       complement of PG(7,2) or Hadamard parameters  
+# 1   85   85      64    64   48    S4(4).2  2^6:A5:S3    2^6:A5:S3              PΣL(4,4)    3      2                  3       3       true             true             true             false                            true       complement of PG(3,4) parameters              
+# 2   120  255     136   64   72    S4(4).2  PSL(2,16):4  2^6:S5                 PSp(8,2)    3      2                  5       14      true             false            true             false                                                                                     
+# 3   120  1275    85    8    5     S4(4).2  PSL(2,16):4  (2^2x((2^4):2)):3:2:2  PSp(4,4).2  3      3                  5       35      true             false            true             false                                                                                     
+# 4   120  8160    1020  15   120   S4(4).2  PSL(2,16):4  A5:4                   PSp(4,4).2  3      3                  5       156     true             false            true             false                                                                                     
+# 5   120  10200   680   8    40    S4(4).2  PSL(2,16):4  S4xD8                  PSp(4,4).2  3      3                  5       174     true             false            true             false                                                                                     
+# 6   120  20400   1360  8    80    S4(4).2  PSL(2,16):4  2^2xS4                 PSp(4,4).2  3      3                  5       293     true             false            true             false                                                                                     
+# 7   120  27200   8160  36   2400  S4(4).2  PSL(2,16):4  A4xS3                  PSp(4,4).2  3      3                  5       335     true             false            true             false                                                                                     
+# 8   120  27200   8160  36   2400  S4(4).2  PSL(2,16):4  (S3xS3):2              PSp(4,4).2  3      3                  5       327     true             false            true             false                                                                                     
+# 9   120  32640   4080  15   480   S4(4).2  PSL(2,16):4  S3xD10                 PSp(4,4).2  3      3                  5       417     true             false            true             false                                                                                     
+# 10  120  32640   4080  15   480   S4(4).2  PSL(2,16):4  S3xD10                 PSp(4,4).2  3      3                  5       417     true             false            true             false                                                                                     
+# 11  120  61200   4080  8    240   S4(4).2  PSL(2,16):4  2^4:2                  PSp(4,4).2  3      3                  5       559     true             false            true             false                                                                                     
+# 12  120  61200   4080  8    240   S4(4).2  PSL(2,16):4  2^4:2                  PSp(4,4).2  3      3                  5       504     true             false            true             false                                                                                     
+# 13  120  61200   4080  8    240   S4(4).2  PSL(2,16):4  2^2xD8                 PSp(4,4).2  3      3                  5       573     true             false            true             false                                                                                     
+# 14  120  122400  8160  8    480   S4(4).2  PSL(2,16):4  8x2                    PSp(4,4).2  3      3                  5       713     true             false            true             false                                                                                     
+# 15  136  255     120   64   56    S4(4).2  (A5xA5):2^2  2^6:S5                 PSp(8,2)    3      2                  7       14      true             false            true             false                                                                                     
+# 16  136  4896    360   10   24    S4(4).2  (A5xA5):2^2  5^2:(4x2):2            PSp(4,4).2  3      3                  7       92      true             false            true             false                                                                                     
+# 17  136  8160    600   10   40    S4(4).2  (A5xA5):2^2  2xS5                   PSp(4,4).2  3      3                  7       150     true             false            true             false                                                                                     
+# 18  136  48960   3600  10   240   S4(4).2  (A5xA5):2^2  2x(5:4)                PSp(4,4).2  3      3                  7       484     true             false            true             false                                                                                     
+# 19  136  97920   7200  10   480   S4(4).2  (A5xA5):2^2  D20                    PSp(4,4).2  3      3                  7       693     true             false            true             false                                                                                     
+# 20  136  97920   7200  10   480   S4(4).2  (A5xA5):2^2  D20                    PSp(4,4).2  3      3                  7       686     true             false            true             false                                                                                     
+# 21  255  255     128   128  64    S4(4).2  2^6:S5       2^6:S5                 PSL(8,2)    5      2                  13      13      false            false            true             false                            true       complement of PG(7,2) or Hadamard parameters  
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -85,11 +85,11 @@
 # ------------------------------------------------------------------------
 #                                      G                  Aut(D)          
 # ------------------------------------------------------------------------
-# Structure                            S4(4).2            PΣL4(4)        
+# Structure                            S4(4).2            PΣL(4,4)        
 # Rank                                 3                  2               
 # 2-Homogeneous                        false              true            
-# Point-stabiliser                     2^6:A5:S3          2^6:SL3(4):S3  
-# Block-stabiliser                     2^6:A5:S3          2^6:SL3(4):S3  
+# Point-stabiliser                     2^6:A5:S3          2^6:SL(3,4):S3  
+# Block-stabiliser                     2^6:A5:S3          2^6:SL(3,4):S3  
 # Orbit structure of point-stabiliser  1^{1}20^{1}64^{1}  1^{1}84^{1}     
 # Orbit structure of block-stabiliser  1^{1}20^{1}64^{1}  21^{1}64^{1}    
 # Point-transitive                     true               true            
@@ -111,11 +111,11 @@
 # -----------------------------------------------------------------------
 #                                      G                   Aut(D)        
 # -----------------------------------------------------------------------
-# Structure                            S4(4).2             PSp8(2)      
+# Structure                            S4(4).2             PSp(8,2)      
 # Rank                                 3                   2             
 # 2-Homogeneous                        false               true          
-# Point-stabiliser                     PSL2(16):4          PSO-8(2)     
-# Block-stabiliser                     2^6:S5              2^7:O7(2)    
+# Point-stabiliser                     PSL(2,16):4         PSO-(8,2)     
+# Block-stabiliser                     2^6:S5              2^7:O7(2)     
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}   1^{1}119^{1}  
 # Orbit structure of block-stabiliser  24^{1}32^{1}64^{1}  56^{1}64^{1}  
 # Point-transitive                     true                true          
@@ -137,10 +137,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S4(4).2                PSp4(4).2             
+# Structure                            S4(4).2                PSp(4,4).2             
 # Rank                                 3                      3                      
 # 2-Homogeneous                        false                  false                  
-# Point-stabiliser                     PSL2(16):4             PSL2(16):4            
+# Point-stabiliser                     PSL(2,16):4            PSL(2,16):4            
 # Block-stabiliser                     (2^2x((2^4):2)):3:2:2  (2^2x((2^4):2)):3:2:2  
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}      1^{1}51^{1}68^{1}      
 # Orbit structure of block-stabiliser  8^{1}16^{1}96^{1}      8^{1}16^{1}96^{1}      
@@ -163,10 +163,10 @@
 # ---------------------------------------------------------------------------------------------------
 #                                      G                              Aut(D)                         
 # ---------------------------------------------------------------------------------------------------
-# Structure                            S4(4).2                        PSp4(4).2                     
+# Structure                            S4(4).2                        PSp(4,4).2                     
 # Rank                                 3                              3                              
 # 2-Homogeneous                        false                          false                          
-# Point-stabiliser                     PSL2(16):4                     PSL2(16):4                    
+# Point-stabiliser                     PSL(2,16):4                    PSL(2,16):4                    
 # Block-stabiliser                     A5:4                           A5:4                           
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}              1^{1}51^{1}68^{1}              
 # Orbit structure of block-stabiliser  1^{2}12^{2}15^{2}24^{1}40^{1}  1^{2}12^{2}15^{2}24^{1}40^{1}  
@@ -189,10 +189,10 @@
 # ---------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                   
 # ---------------------------------------------------------------------------------------
-# Structure                            S4(4).2                  PSp4(4).2               
+# Structure                            S4(4).2                  PSp(4,4).2               
 # Rank                                 3                        3                        
 # 2-Homogeneous                        false                    false                    
-# Point-stabiliser                     PSL2(16):4               PSL2(16):4              
+# Point-stabiliser                     PSL(2,16):4              PSL(2,16):4              
 # Block-stabiliser                     S4xD8                    S4xD8                    
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}        1^{1}51^{1}68^{1}        
 # Orbit structure of block-stabiliser  8^{1}16^{1}24^{2}48^{1}  8^{1}16^{1}24^{2}48^{1}  
@@ -215,10 +215,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S4(4).2            PSp4(4).2         
+# Structure                            S4(4).2            PSp(4,4).2         
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
-# Point-stabiliser                     PSL2(16):4         PSL2(16):4        
+# Point-stabiliser                     PSL(2,16):4        PSL(2,16):4        
 # Block-stabiliser                     2^2xS4             2^2xS4             
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}  1^{1}51^{1}68^{1}  
 # Orbit structure of block-stabiliser  8^{3}12^{2}24^{3}  8^{3}12^{2}24^{3}  
@@ -241,10 +241,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S4(4).2            PSp4(4).2         
+# Structure                            S4(4).2            PSp(4,4).2         
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
-# Point-stabiliser                     PSL2(16):4         PSL2(16):4        
+# Point-stabiliser                     PSL(2,16):4        PSL(2,16):4        
 # Block-stabiliser                     A4xS3              A4xS3              
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}  1^{1}51^{1}68^{1}  
 # Orbit structure of block-stabiliser  24^{2}36^{2}       24^{2}36^{2}       
@@ -267,10 +267,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S4(4).2            PSp4(4).2         
+# Structure                            S4(4).2            PSp(4,4).2         
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
-# Point-stabiliser                     PSL2(16):4         PSL2(16):4        
+# Point-stabiliser                     PSL(2,16):4        PSL(2,16):4        
 # Block-stabiliser                     (S3xS3):2          (S3xS3):2          
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}  1^{1}51^{1}68^{1}  
 # Orbit structure of block-stabiliser  6^{2}18^{2}36^{2}  6^{2}18^{2}36^{2}  
@@ -293,10 +293,10 @@
 # ---------------------------------------------------------------------------------------------------------
 #                                      G                                 Aut(D)                            
 # ---------------------------------------------------------------------------------------------------------
-# Structure                            S4(4).2                           PSp4(4).2                        
+# Structure                            S4(4).2                           PSp(4,4).2                        
 # Rank                                 3                                 3                                 
 # 2-Homogeneous                        false                             false                             
-# Point-stabiliser                     PSL2(16):4                        PSL2(16):4                       
+# Point-stabiliser                     PSL(2,16):4                       PSL(2,16):4                       
 # Block-stabiliser                     S3xD10                            S3xD10                            
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}                 1^{1}51^{1}68^{1}                 
 # Orbit structure of block-stabiliser  1^{1}3^{1}5^{1}6^{1}15^{5}30^{1}  1^{1}3^{1}5^{1}6^{1}15^{5}30^{1}  
@@ -319,10 +319,10 @@
 # ---------------------------------------------------------------------------------------------------------
 #                                      G                                 Aut(D)                            
 # ---------------------------------------------------------------------------------------------------------
-# Structure                            S4(4).2                           PSp4(4).2                        
+# Structure                            S4(4).2                           PSp(4,4).2                        
 # Rank                                 3                                 3                                 
 # 2-Homogeneous                        false                             false                             
-# Point-stabiliser                     PSL2(16):4                        PSL2(16):4                       
+# Point-stabiliser                     PSL(2,16):4                       PSL(2,16):4                       
 # Block-stabiliser                     S3xD10                            S3xD10                            
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}                 1^{1}51^{1}68^{1}                 
 # Orbit structure of block-stabiliser  1^{1}3^{1}5^{1}6^{1}15^{5}30^{1}  1^{1}3^{1}5^{1}6^{1}15^{5}30^{1}  
@@ -345,10 +345,10 @@
 # ---------------------------------------------------------------------------
 #                                      G                  Aut(D)             
 # ---------------------------------------------------------------------------
-# Structure                            S4(4).2            PSp4(4).2         
+# Structure                            S4(4).2            PSp(4,4).2         
 # Rank                                 3                  3                  
 # 2-Homogeneous                        false              false              
-# Point-stabiliser                     PSL2(16):4         PSL2(16):4        
+# Point-stabiliser                     PSL(2,16):4        PSL(2,16):4        
 # Block-stabiliser                     2^4:2              2^4:2              
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}  1^{1}51^{1}68^{1}  
 # Orbit structure of block-stabiliser  4^{2}8^{10}16^{2}  4^{2}8^{10}16^{2}  
@@ -371,10 +371,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S4(4).2                PSp4(4).2             
+# Structure                            S4(4).2                PSp(4,4).2             
 # Rank                                 3                      3                      
 # 2-Homogeneous                        false                  false                  
-# Point-stabiliser                     PSL2(16):4             PSL2(16):4            
+# Point-stabiliser                     PSL(2,16):4            PSL(2,16):4            
 # Block-stabiliser                     2^4:2                  2^4:2                  
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}      1^{1}51^{1}68^{1}      
 # Orbit structure of block-stabiliser  2^{2}4^{1}8^{8}16^{3}  2^{2}4^{1}8^{8}16^{3}  
@@ -397,10 +397,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S4(4).2                PSp4(4).2             
+# Structure                            S4(4).2                PSp(4,4).2             
 # Rank                                 3                      3                      
 # 2-Homogeneous                        false                  false                  
-# Point-stabiliser                     PSL2(16):4             PSL2(16):4            
+# Point-stabiliser                     PSL(2,16):4            PSL(2,16):4            
 # Block-stabiliser                     2^2xD8                 2^2xD8                 
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}      1^{1}51^{1}68^{1}      
 # Orbit structure of block-stabiliser  2^{2}4^{1}8^{6}16^{4}  2^{2}4^{1}8^{6}16^{4}  
@@ -423,10 +423,10 @@
 # -----------------------------------------------------------------------------------
 #                                      G                      Aut(D)                 
 # -----------------------------------------------------------------------------------
-# Structure                            S4(4).2                PSp4(4).2             
+# Structure                            S4(4).2                PSp(4,4).2             
 # Rank                                 3                      3                      
 # 2-Homogeneous                        false                  false                  
-# Point-stabiliser                     PSL2(16):4             PSL2(16):4            
+# Point-stabiliser                     PSL(2,16):4            PSL(2,16):4            
 # Block-stabiliser                     8x2                    8x2                    
 # Orbit structure of point-stabiliser  1^{1}51^{1}68^{1}      1^{1}51^{1}68^{1}      
 # Orbit structure of block-stabiliser  2^{2}4^{1}8^{4}16^{5}  2^{2}4^{1}8^{4}16^{5}  
@@ -449,11 +449,11 @@
 # -----------------------------------------------------------------------
 #                                      G                   Aut(D)        
 # -----------------------------------------------------------------------
-# Structure                            S4(4).2             PSp8(2)      
+# Structure                            S4(4).2             PSp(8,2)      
 # Rank                                 3                   2             
 # 2-Homogeneous                        false               true          
-# Point-stabiliser                     (A5xA5):2^2         PSO+8(2)     
-# Block-stabiliser                     2^6:S5              2^7:O7(2)    
+# Point-stabiliser                     (A5xA5):2^2         PSO+(8,2)     
+# Block-stabiliser                     2^6:S5              2^7:O7(2)     
 # Orbit structure of point-stabiliser  1^{1}60^{1}75^{1}   1^{1}135^{1}  
 # Orbit structure of block-stabiliser  32^{1}40^{1}64^{1}  64^{1}72^{1}  
 # Point-transitive                     true                true          
@@ -475,7 +475,7 @@
 # ---------------------------------------------------------------------------------------
 #                                      G                        Aut(D)                   
 # ---------------------------------------------------------------------------------------
-# Structure                            S4(4).2                  PSp4(4).2               
+# Structure                            S4(4).2                  PSp(4,4).2               
 # Rank                                 3                        3                        
 # 2-Homogeneous                        false                    false                    
 # Point-stabiliser                     (A5xA5):2^2              (A5xA5):2^2              
@@ -501,7 +501,7 @@
 # -------------------------------------------------------------------------------------------------------------
 #                                      G                                   Aut(D)                              
 # -------------------------------------------------------------------------------------------------------------
-# Structure                            S4(4).2                             PSp4(4).2                          
+# Structure                            S4(4).2                             PSp(4,4).2                          
 # Rank                                 3                                   3                                   
 # 2-Homogeneous                        false                               false                               
 # Point-stabiliser                     (A5xA5):2^2                         (A5xA5):2^2                         
@@ -527,7 +527,7 @@
 # -------------------------------------------------------------------------------------------------
 #                                      G                             Aut(D)                        
 # -------------------------------------------------------------------------------------------------
-# Structure                            S4(4).2                       PSp4(4).2                    
+# Structure                            S4(4).2                       PSp(4,4).2                    
 # Rank                                 3                             3                             
 # 2-Homogeneous                        false                         false                         
 # Point-stabiliser                     (A5xA5):2^2                   (A5xA5):2^2                   
@@ -553,7 +553,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            S4(4).2                 PSp4(4).2              
+# Structure                            S4(4).2                 PSp(4,4).2              
 # Rank                                 3                       3                       
 # 2-Homogeneous                        false                   false                   
 # Point-stabiliser                     (A5xA5):2^2             (A5xA5):2^2             
@@ -579,7 +579,7 @@
 # -------------------------------------------------------------------------------------
 #                                      G                       Aut(D)                  
 # -------------------------------------------------------------------------------------
-# Structure                            S4(4).2                 PSp4(4).2              
+# Structure                            S4(4).2                 PSp(4,4).2              
 # Rank                                 3                       3                       
 # 2-Homogeneous                        false                   false                   
 # Point-stabiliser                     (A5xA5):2^2             (A5xA5):2^2             
@@ -605,11 +605,11 @@
 # ------------------------------------------------------------------------------------
 #                                      G                              Aut(D)          
 # ------------------------------------------------------------------------------------
-# Structure                            S4(4).2                        PSL8(2)        
+# Structure                            S4(4).2                        PSL(8,2)        
 # Rank                                 5                              2               
 # 2-Homogeneous                        false                          true            
-# Point-stabiliser                     2^6:S5                         2^7:PSL7(2)    
-# Block-stabiliser                     2^6:S5                         2^7:PSL7(2)    
+# Point-stabiliser                     2^6:S5                         2^7:PSL(7,2)    
+# Block-stabiliser                     2^6:S5                         2^7:PSL(7,2)    
 # Orbit structure of point-stabiliser  1^{1}2^{1}60^{1}64^{1}128^{1}  1^{1}254^{1}    
 # Orbit structure of block-stabiliser  1^{1}2^{1}60^{1}64^{1}128^{1}  127^{1}128^{1}  
 # Point-transitive                     true                           true            

@@ -48,19 +48,19 @@
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v   b    r   k   λ   G          Gα    GB   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                            
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   11  11   5   5   2   PSL2(11)   A5    A5   PSL2(11)   2      2                  1       2       true             true             true             true                 2           true       Hadamard, Kantor or Paley parameters                
-# 2   11  11   6   6   3   PSL2(11)   A5    A5   PSL2(11)   2      2                  1       2       true             true             true             true                 1           true       complement of Hadamard, Kantor or Paley parameters  
-# 3   11  55   15  3   3   PSL2(11)   A5    D12  PSL2(11)   2      2                  1       4       true             true             true             false                                                                                           
-# 4   11  55   20  4   6   PSL2(11)   A5    A4   PSL2(11)   2      2                  1       5       true             false            true             false                                                                                           
-# 5   11  55   30  6   15  PSL2(11)   A5    D12  PSL2(11)   2      2                  1       4       true             true             true             false                                                                                           
-# 6   11  66   30  5   12  PSL2(11)   A5    D10  PSL2(11)   2      2                  1       6       true             false            true             false                                                                                           
-# 7   11  110  30  3   6   PSL2(11)   A5    S3   PSL2(11)   2      2                  1       8       true             false            true             false                                                                                           
-# 8   12  66   55  10  45  PSL2(11)   11:5  D10  S12        2      2                  3       6       true             false            true             true                                        complete                                            
-# 9   12  110  55  6   25  PSL2(11)   11:5  S3   PSL2(11)   2      2                  3       7       true             false            true             true                 9                                                                          
-# 10  12  110  55  6   25  PSL2(11)   11:5  6    PGL2(11)   2      2                  3       9       true             false            true             true                 10                                                                         
-# 11  12  132  55  5   20  PSL2(11)   11:5  5    PGL2(11)   2      2                  3       10      true             false            true             false                                                                                           
-# 12  12  165  55  4   15  PSL2(11)   11:5  2^2  PGL2(11)   2      2                  3       11      true             false            true             false                                                                                           
-# 13  12  220  55  3   10  PSL2(11)   11:5  3    S12        2      2                  3       12      true             false            true             false                                       complete                                            
+# 1   11  11   5   5   2   PSL(2,11)  A5    A5   PSL(2,11)  2      2                  1       2       true             true             true             true                 2           true       Hadamard, Kantor or Paley parameters                
+# 2   11  11   6   6   3   PSL(2,11)  A5    A5   PSL(2,11)  2      2                  1       2       true             true             true             true                 1           true       complement of Hadamard, Kantor or Paley parameters  
+# 3   11  55   15  3   3   PSL(2,11)  A5    D12  PSL(2,11)  2      2                  1       4       true             true             true             false                                                                                           
+# 4   11  55   20  4   6   PSL(2,11)  A5    A4   PSL(2,11)  2      2                  1       5       true             false            true             false                                                                                           
+# 5   11  55   30  6   15  PSL(2,11)  A5    D12  PSL(2,11)  2      2                  1       4       true             true             true             false                                                                                           
+# 6   11  66   30  5   12  PSL(2,11)  A5    D10  PSL(2,11)  2      2                  1       6       true             false            true             false                                                                                           
+# 7   11  110  30  3   6   PSL(2,11)  A5    S3   PSL(2,11)  2      2                  1       8       true             false            true             false                                                                                           
+# 8   12  66   55  10  45  PSL(2,11)  11:5  D10  S12        2      2                  3       6       true             false            true             true                                        complete                                            
+# 9   12  110  55  6   25  PSL(2,11)  11:5  S3   PSL(2,11)  2      2                  3       7       true             false            true             true                 9                                                                          
+# 10  12  110  55  6   25  PSL(2,11)  11:5  6    PGL(2,11)  2      2                  3       9       true             false            true             true                 10                                                                         
+# 11  12  132  55  5   20  PSL(2,11)  11:5  5    PGL(2,11)  2      2                  3       10      true             false            true             false                                                                                           
+# 12  12  165  55  4   15  PSL(2,11)  11:5  2^2  PGL(2,11)  2      2                  3       11      true             false            true             false                                                                                           
+# 13  12  220  55  3   10  PSL(2,11)  11:5  3    S12        2      2                  3       12      true             false            true             false                                       complete                                            
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # 4. Further information: 
@@ -73,7 +73,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PSL2(11)    
+# Structure                            PSL(2,11)    PSL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     A5           A5           
@@ -99,7 +99,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PSL2(11)    
+# Structure                            PSL(2,11)    PSL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     A5           A5           
@@ -125,7 +125,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL2(11)         PSL2(11)        
+# Structure                            PSL(2,11)        PSL(2,11)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     A5               A5               
@@ -151,7 +151,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL2(11)         PSL2(11)        
+# Structure                            PSL(2,11)        PSL(2,11)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     A5               A5               
@@ -177,7 +177,7 @@
 # -----------------------------------------------------------------------
 #                                      G                Aut(D)           
 # -----------------------------------------------------------------------
-# Structure                            PSL2(11)         PSL2(11)        
+# Structure                            PSL(2,11)        PSL(2,11)        
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
 # Point-stabiliser                     A5               A5               
@@ -203,7 +203,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PSL2(11)    
+# Structure                            PSL(2,11)    PSL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     A5           A5           
@@ -229,7 +229,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PSL2(11)    
+# Structure                            PSL(2,11)    PSL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     A5           A5           
@@ -255,7 +255,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     S12          
+# Structure                            PSL(2,11)    S12          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     11:5         S11          
@@ -281,7 +281,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PSL2(11)    
+# Structure                            PSL(2,11)    PSL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     11:5         11:5         
@@ -307,10 +307,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PGL2(11)    
+# Structure                            PSL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     11:5         AGL1(11)    
+# Point-stabiliser                     11:5         AGL(1,11)    
 # Block-stabiliser                     6            D12          
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  6^{2}        6^{2}        
@@ -333,10 +333,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PGL2(11)    
+# Structure                            PSL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     11:5         AGL1(11)    
+# Point-stabiliser                     11:5         AGL(1,11)    
 # Block-stabiliser                     5            D10          
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  1^{2}5^{2}   2^{1}5^{2}   
@@ -359,10 +359,10 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     PGL2(11)    
+# Structure                            PSL(2,11)    PGL(2,11)    
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     11:5         AGL1(11)    
+# Point-stabiliser                     11:5         AGL(1,11)    
 # Block-stabiliser                     2^2          D8           
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  4^{3}        4^{1}8^{1}   
@@ -385,7 +385,7 @@
 # ---------------------------------------------------------------
 #                                      G            Aut(D)       
 # ---------------------------------------------------------------
-# Structure                            PSL2(11)     S12          
+# Structure                            PSL(2,11)    S12          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     11:5         S11          

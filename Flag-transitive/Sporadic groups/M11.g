@@ -51,18 +51,18 @@
 # 1   11  55    45   9   36  M11  A6.2       3^2:QD16   S11     2      2                  2       5       true             true             true             true                                        complete  
 # 2   11  66    30   5   12  M11  A6.2       S5         M11     2      2                  2       6       true             true             true             true                 3                                
 # 3   11  66    36   6   18  M11  A6.2       S5         M11     2      2                  2       6       true             true             true             true                 2                                
-# 4   11  165   45   3   9   M11  A6.2       GL2(3)     S11     2      2                  2       13      true             true             true             true                 5                      complete  
-# 5   11  165   120  8   84  M11  A6.2       GL2(3)     S11     2      2                  2       13      true             true             true             true                 4                      complete  
+# 4   11  165   45   3   9   M11  A6.2       GL(2,3)    S11     2      2                  2       13      true             true             true             true                 5                      complete  
+# 5   11  165   120  8   84  M11  A6.2       GL(2,3)    S11     2      2                  2       13      true             true             true             true                 4                      complete  
 # 6   11  330   120  4   36  M11  A6.2       S4         S11     2      2                  2       17      true             false            true             false                                       complete  
 # 7   11  396   180  5   72  M11  A6.2       5:4        M11     2      2                  2       19      true             false            true             false                                                 
-# 8   12  22    11   6   5   M11  PSL2(11)   A6         M11     2      2                  3       4       true             false            true             true                 8                                
-# 9   12  66    55   10  45  M11  PSL2(11)   S5         S12     2      2                  3       6       true             true             true             true                                        complete  
-# 10  12  110   55   6   25  M11  PSL2(11)   (S3xS3):2  M11     2      2                  3       8       true             false            true             true                 10                               
-# 11  12  132   55   5   20  M11  PSL2(11)   A5         M11     2      2                  3       10      true             false            true             false                                                 
-# 12  12  165   55   4   15  M11  PSL2(11)   GL2(3)     M11     2      2                  3       13      true             true             true             true                 13                               
-# 13  12  165   110  8   70  M11  PSL2(11)   GL2(3)     M11     2      2                  3       13      true             true             true             true                 12                               
-# 14  12  220   55   3   10  M11  PSL2(11)   S3xS3      S12     2      2                  3       14      true             false            true             false                                       complete  
-# 15  12  330   110  4   30  M11  PSL2(11)   S4         M11     2      2                  3       17      true             false            true             false                                                 
+# 8   12  22    11   6   5   M11  PSL(2,11)  A6         M11     2      2                  3       4       true             false            true             true                 8                                
+# 9   12  66    55   10  45  M11  PSL(2,11)  S5         S12     2      2                  3       6       true             true             true             true                                        complete  
+# 10  12  110   55   6   25  M11  PSL(2,11)  (S3xS3):2  M11     2      2                  3       8       true             false            true             true                 10                               
+# 11  12  132   55   5   20  M11  PSL(2,11)  A5         M11     2      2                  3       10      true             false            true             false                                                 
+# 12  12  165   55   4   15  M11  PSL(2,11)  GL(2,3)    M11     2      2                  3       13      true             true             true             true                 13                               
+# 13  12  165   110  8   70  M11  PSL(2,11)  GL(2,3)    M11     2      2                  3       13      true             true             true             true                 12                               
+# 14  12  220   55   3   10  M11  PSL(2,11)  S3xS3      S12     2      2                  3       14      true             false            true             false                                       complete  
+# 15  12  330   110  4   30  M11  PSL(2,11)  S4         M11     2      2                  3       17      true             false            true             false                                                 
 # 16  55  1980  144  4   8   M11  3^2:QD16   2^2        M11     3      3                  5       36      true             false            true             false                                                 
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -158,7 +158,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     A6.2         S10          
-# Block-stabiliser                     GL2(3)       S8xS3        
+# Block-stabiliser                     GL(2,3)      S8xS3        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  3^{1}8^{1}   3^{1}8^{1}   
 # Point-transitive                     true         true         
@@ -184,7 +184,7 @@
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
 # Point-stabiliser                     A6.2         S10          
-# Block-stabiliser                     GL2(3)       S8xS3        
+# Block-stabiliser                     GL(2,3)      S8xS3        
 # Orbit structure of point-stabiliser  1^{1}10^{1}  1^{1}10^{1}  
 # Orbit structure of block-stabiliser  3^{1}8^{1}   3^{1}8^{1}   
 # Point-transitive                     true         true         
@@ -261,7 +261,7 @@
 # Structure                            M11          M11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL2(11)     PSL2(11)    
+# Point-stabiliser                     PSL(2,11)    PSL(2,11)    
 # Block-stabiliser                     A6           A6           
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  6^{2}        6^{2}        
@@ -287,7 +287,7 @@
 # Structure                            M11          S12          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL2(11)     S11          
+# Point-stabiliser                     PSL(2,11)    S11          
 # Block-stabiliser                     S5           2xS10        
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  2^{1}10^{1}  2^{1}10^{1}  
@@ -313,7 +313,7 @@
 # Structure                            M11          M11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL2(11)     PSL2(11)    
+# Point-stabiliser                     PSL(2,11)    PSL(2,11)    
 # Block-stabiliser                     (S3xS3):2    (S3xS3):2    
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  6^{2}        6^{2}        
@@ -339,7 +339,7 @@
 # Structure                            M11              M11              
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL2(11)         PSL2(11)        
+# Point-stabiliser                     PSL(2,11)        PSL(2,11)        
 # Block-stabiliser                     A5               A5               
 # Orbit structure of point-stabiliser  1^{1}11^{1}      1^{1}11^{1}      
 # Orbit structure of block-stabiliser  1^{1}5^{1}6^{1}  1^{1}5^{1}6^{1}  
@@ -365,8 +365,8 @@
 # Structure                            M11          M11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL2(11)     PSL2(11)    
-# Block-stabiliser                     GL2(3)       GL2(3)      
+# Point-stabiliser                     PSL(2,11)    PSL(2,11)    
+# Block-stabiliser                     GL(2,3)      GL(2,3)      
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{1}   4^{1}8^{1}   
 # Point-transitive                     true         true         
@@ -391,8 +391,8 @@
 # Structure                            M11          M11          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL2(11)     PSL2(11)    
-# Block-stabiliser                     GL2(3)       GL2(3)      
+# Point-stabiliser                     PSL(2,11)    PSL(2,11)    
+# Block-stabiliser                     GL(2,3)      GL(2,3)      
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  4^{1}8^{1}   4^{1}8^{1}   
 # Point-transitive                     true         true         
@@ -417,7 +417,7 @@
 # Structure                            M11          S12          
 # Rank                                 2            2            
 # 2-Homogeneous                        true         true         
-# Point-stabiliser                     PSL2(11)     S11          
+# Point-stabiliser                     PSL(2,11)    S11          
 # Block-stabiliser                     S3xS3        S9xS3        
 # Orbit structure of point-stabiliser  1^{1}11^{1}  1^{1}11^{1}  
 # Orbit structure of block-stabiliser  3^{2}6^{1}   3^{1}9^{1}   
@@ -443,7 +443,7 @@
 # Structure                            M11              M11              
 # Rank                                 2                2                
 # 2-Homogeneous                        true             true             
-# Point-stabiliser                     PSL2(11)         PSL2(11)        
+# Point-stabiliser                     PSL(2,11)        PSL(2,11)        
 # Block-stabiliser                     S4               S4               
 # Orbit structure of point-stabiliser  1^{1}11^{1}      1^{1}11^{1}      
 # Orbit structure of block-stabiliser  2^{1}4^{1}6^{1}  2^{1}4^{1}6^{1}  
