@@ -183,8 +183,8 @@
 # 1   22  77      21      6   5       M22    M21       2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 2                                
 # 2   22  77      56      16  40      M22    M21       2^4:A6               M22:2   2      2           1      1       7       true             true             true             true                 1                                
 # 3   22  176     56      7   16      M22    M21       A7                   M22     2      2           1      1       11      true             true             true             true                 5                                
-# 4   22  176     56      7   16      M22    M21       A7                   M22     2      2           1      1       12      true                              true             true                 5                                
-# 5   22  176     120     15  80      M22    M21       A7                   M22     2      2           1      1       12      true                              true             true                 3                                
+# 4   22  176     56      7   16      M22    M21       A7                   M22     2      2           1      1       12      true             true             true             true                 5                                
+# 5   22  176     120     15  80      M22    M21       A7                   M22     2      2           1      1       12      true             true             true             true                 3                                
 # 6   22  176     120     15  80      M22    M21       A7                   M22     2      2           1      1       11      true             true             true             true                 3                                
 # 7   22  231     210     20  190     M22    M21       2^4:S5               S22     2      2           1      1       26      true             true             true             true                                        complete  
 # 8   22  330     120     8   40      M22    M21       2^3:PSL(3,2)         M22:2   2      2           1      1       14      true             true             true             true                 9                                
@@ -192,23 +192,23 @@
 # 10  22  462     105     5   20      M22    M21       2^4:A5               M22:2   2      2           1      1       4       true             false            true             false                                                 
 # 11  22  616     280     10  120     M22    M21       A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 12                               
 # 12  22  616     336     12  176     M22    M21       A6.2                 M22:2   2      2           1      1       17      true             true             true             true                 11                               
-# 13  22  672     336     11  160     M22    M21       PSL(2,11)            M22     2      2           1      1       21      true                              true             true                 13                               
+# 13  22  672     336     11  160     M22    M21       PSL(2,11)            M22     2      2           1      1       21      true             true             true             true                 13                               
 # 14  22  672     336     11  160     M22    M21       PSL(2,11)            M22     2      2           1      1       21      true             true             true             true                 13                               
 # 15  22  1155    210     4   30      M22    M21       2^4:2:2:3:2          M22:2   2      2           1      1       2       true             false            true             false                                                 
 # 16  22  1232    336     6   80      M22    M21       A6                   M22     2      2           1      1       8       true             false            true             false                                                 
-# 17  22  1232    336     6   80      M22    M21       A6                   M22     2      2           1      1       9       true                              true             false                                                 
+# 17  22  1232    336     6   80      M22    M21       A6                   M22     2      2           1      1       9       true             false            true             false                                                 
 # 18  22  1232    840     15  560     M22    M21       A6                   M22:2   2      2           1      1       25      true             false            true             false                                                 
 # 19  22  1540    210     3   20      M22    M21       (A4xA4):2            S22     2      2           1      1       1       true             false            true             false                62                     complete  
 # 20  22  2310    1260    12  660     M22    M21       2^4:2:3:2            M22:2   2      2           1      1       22      true             false            true             false                                                 
 # 21  22  2640    840     7   240     M22    M21       PSL(3,2)             M22:2   2      2           1      1       13      true             false            true             false                                                 
-# 22  22  2640    1680    14  1040    M22    M21       PSL(3,2)             M22     2      2           1      1       24      true                              true             false                                                 
+# 22  22  2640    1680    14  1040    M22    M21       PSL(3,2)             M22     2      2           1      1       24      true             false            true             false                                                 
 # 23  22  2640    1680    14  1040    M22    M21       PSL(3,2)             M22     2      2           1      1       23      true             false            true             false                                                 
 # 24  22  3696    840     5   160     M22    M21       S5                   M22     2      2           1      1       5       true             false            true             false                                                 
-# 25  22  3696    840     5   160     M22    M21       S5                   M22     2      2           1      1       6       true                              true             false                                                 
+# 25  22  3696    840     5   160     M22    M21       S5                   M22     2      2           1      1       6       true             false            true             false                                                 
 # 26  22  6160    1120    4   160     M22    M21       (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
 # 27  22  6160    2520    9   960     M22    M21       3^2:Q8               M22:2   2      2           1      1       16      true             false            true             false                                                 
 # 28  22  6160    3360    12  1760    M22    M21       (3xA4):2             M22:2   2      2           1      1       3       true             false            true             false                                                 
-# 29  22  7392    3360    10  1440    M22    M21       A5                   M22     2      2           1      1       19      true                              true             false                                                 
+# 29  22  7392    3360    10  1440    M22    M21       A5                   M22     2      2           1      1       19      true             false            true             false                                                 
 # 30  22  7392    3360    10  1440    M22    M21       A5                   M22     2      2           1      1       18      true             false            true             false                                                 
 # 31  22  9240    2520    6   600     M22    M21       2xS4                 M22:2   2      2           1      1       10      true             false            true             false                                                 
 # 32  22  22176   10080   10  4320    M22    M21       5:4                  M22:2   2      2           1      1       20      true             false            true             false                                                 
@@ -536,7 +536,7 @@
 # Flag-regular                         false   false     
 # Point-primitive                      true    true      
 # Point-primitive type                 2       2         
-# Block-primitive                      false             
+# Block-primitive                      false   false     
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -640,7 +640,7 @@
 # Flag-regular                         false        false                
 # Point-primitive                      true         true                 
 # Point-primitive type                 2            2                    
-# Block-primitive                      false                             
+# Block-primitive                      false        false                
 # Block-primitive type                 0                                 
 # -----------------------------------------------------------------------
 
@@ -692,7 +692,7 @@
 # Flag-regular                         false  false     
 # Point-primitive                      true   true      
 # Point-primitive type                 2      2         
-# Block-primitive                      false            
+# Block-primitive                      false  false     
 # Block-primitive type                 0                
 # ------------------------------------------------------
 
@@ -796,7 +796,7 @@
 # Flag-regular                         false      false                
 # Point-primitive                      true       true                 
 # Point-primitive type                 2          2                    
-# Block-primitive                      false                           
+# Block-primitive                      false      false                
 # Block-primitive type                 0                               
 # ---------------------------------------------------------------------
 
@@ -848,7 +848,7 @@
 # Flag-regular                         false     false       
 # Point-primitive                      true      true        
 # Point-primitive type                 2         2           
-# Block-primitive                      false                 
+# Block-primitive                      false     false       
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -978,7 +978,7 @@
 # Flag-regular                         false   false     
 # Point-primitive                      true    true      
 # Point-primitive type                 2       2         
-# Block-primitive                      false             
+# Block-primitive                      false   false     
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -1004,7 +1004,7 @@
 # Flag-regular                         false     false     
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 

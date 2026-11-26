@@ -54,7 +54,7 @@
 # Nr  v  b   r   k  λ  G         Gα        GB                Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   6  10  5   3  2  PSL(2,5)  D10       S3                PSL(2,5)  2      2           1      1       1       true             true             true             true                 1                                
-# 2   6  10  5   3  2  PSL(2,5)  D10       S3                PSL(2,5)  2      2           1      1       1       true                              true             true                 1                                
+# 2   6  10  5   3  2  PSL(2,5)  D10       S3                PSL(2,5)  2      2           1      1       1       true             true             true             true                 1                                
 # 3   6  15  10  4  6  PGL(2,5)  AGL(1,5)  D8                S6        2      2           2      1       2       true             false            true             true                                        complete  
 # 4   6  20  10  3  4  PGL(2,5)  AGL(1,5)  S3                S6        2      2           2      1       1       true             false            true             true                 4                      complete  
 # 5   6  15  10  4  6  A6        A5        (S4 x S2) cap A6  S6        2      2           3      1       2       true             true             true             true                                        complete  
@@ -114,7 +114,7 @@
 # Flag-regular                         false     false   
 # Point-primitive                      true      true    
 # Point-primitive type                 2         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -140,7 +140,7 @@
 # Flag-regular                         false     false   
 # Point-primitive                      true      true    
 # Point-primitive type                 2         2       
-# Block-primitive                      false             
+# Block-primitive                      false     false   
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 

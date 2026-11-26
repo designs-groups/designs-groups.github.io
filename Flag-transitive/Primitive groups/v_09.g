@@ -93,8 +93,8 @@
 # 1   9  12   4   3  1   M9          Q8        S3                AGL(2,3)  2      2           3      1       1       true             false            true             true                 2                                
 # 2   9  12   8   6  5   M9          Q8        S3                AGL(2,3)  2      2           3      1       1       true             false            true             true                 1                                
 # 3   9  18   8   4  3   M9          Q8        4                 AΓL(1,9)  2      2           3      1       2       true             false            true             false                                                 
-# 4   9  18   8   4  3   M9          Q8        4                 AΓL(1,9)  2      2           3      1       3       true                              true             false                                                 
-# 5   9  18   8   4  3   M9          Q8        4                 AΓL(1,9)  2      2           3      1       4       true                              true             false                                                 
+# 4   9  18   8   4  3   M9          Q8        4                 AΓL(1,9)  2      2           3      1       3       true             false            true             false                                                 
+# 5   9  18   8   4  3   M9          Q8        4                 AΓL(1,9)  2      2           3      1       4       true             false            true             false                                                 
 # 6   9  12   4   3  1   AGL(1,9)    8         S3                AGL(2,3)  2      2           4      1       1       true             false            true             true                 2                                
 # 7   9  12   8   6  5   AGL(1,9)    8         S3                AGL(2,3)  2      2           4      1       1       true             false            true             true                 1                                
 # 8   9  18   8   4  3   AGL(1,9)    8         4                 AΓL(1,9)  2      2           4      1       2       true             false            true             false                                                 
@@ -155,7 +155,7 @@
 # Flag-regular                         false  false     
 # Point-primitive                      true   true      
 # Point-primitive type                 1      1         
-# Block-primitive                      false            
+# Block-primitive                      false  false     
 # Block-primitive type                 0                
 # ------------------------------------------------------
 
@@ -181,7 +181,7 @@
 # Flag-regular                         true   false     
 # Point-primitive                      true   true      
 # Point-primitive type                 1      1         
-# Block-primitive                      false            
+# Block-primitive                      false  false     
 # Block-primitive type                 0                
 # ------------------------------------------------------
 
@@ -207,7 +207,7 @@
 # Flag-regular                         true   false     
 # Point-primitive                      true   true      
 # Point-primitive type                 1      1         
-# Block-primitive                      false            
+# Block-primitive                      false  false     
 # Block-primitive type                 0                
 # ------------------------------------------------------
 
@@ -285,7 +285,7 @@
 # Flag-regular                         true        false     
 # Point-primitive                      true        true      
 # Point-primitive type                 1           1         
-# Block-primitive                      false                 
+# Block-primitive                      false       false     
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -311,7 +311,7 @@
 # Flag-regular                         true        false     
 # Point-primitive                      true        true      
 # Point-primitive type                 1           1         
-# Block-primitive                      false                 
+# Block-primitive                      false       false     
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -337,7 +337,7 @@
 # Flag-regular                         false     false   
 # Point-primitive                      true      true    
 # Point-primitive type                 2         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -363,7 +363,7 @@
 # Flag-regular                         true      false   
 # Point-primitive                      true      true    
 # Point-primitive type                 2         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -389,7 +389,7 @@
 # Flag-regular                         true      false   
 # Point-primitive                      true      true    
 # Point-primitive type                 2         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 

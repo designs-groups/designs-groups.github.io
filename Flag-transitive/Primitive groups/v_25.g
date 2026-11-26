@@ -262,7 +262,7 @@
 # 2    25  30       24       20  19       5^2:3:8         3:8            5:4                  AGL(2,5)        2      2           12     1       2       true             false            true             true                 1                                
 # 3    25  50       24       12  11       5^2:3:8         3:8            12                   AΓL(1,25)       2      2           12     1       3       true             false            true             false                                                 
 # 4    25  60       24       10  9        5^2:3:8         3:8            D10                  AGL(2,5)        2      2           12     1       4       true             false            true             false                                                 
-# 5    25  75       24       8   7        5^2:3:8         3:8            8                                                       12     1       5       true             false            true             false                                                 
+# 5    25  75       24       8   7        5^2:3:8         3:8            8                    5^2:((Q8:3)'4)  2      2           12     1       5       true             false            true             false                                                 
 # 6    25  75       24       8   7        5^2:3:8         3:8            8                    AΓL(1,25)       2      2           12     1       5       true             false            true             false                                                 
 # 7    25  75       24       8   7        5^2:3:8         3:8            8                    5^2:((Q8:3)'4)  2      2           12     1       5       true             false            true             false                                                 
 # 8    25  100      24       6   5        5^2:3:8         3:8            6                    AΓL(1,25)       2      2           12     1       6       true             false            true             false                                                 
@@ -281,16 +281,16 @@
 # 21   25  60       24       10  9        5^2:Q8:3        SL(2,3)        D10                  AGL(2,5)        2      2           15     1       3       true             false            true             false                                                 
 # 22   25  75       24       8   7        5^2:Q8:3        SL(2,3)        Q8                   5^2:((Q8:3)'4)  2      2           15     1       4       true             false            true             false                                                 
 # 23   25  100      24       6   5        5^2:Q8:3        SL(2,3)        6                    5^2:Q8:3        2      2           15     1       5       true             false            true             false                                                 
-# 24   25  100      24       6   5        5^2:Q8:3        SL(2,3)        6                                                       15     1       5       true             false            true             false                                                 
-# 25   25  100      24       6   5        5^2:Q8:3        SL(2,3)        6                                                       15     1       5       true             false            true             false                                                 
-# 26   25  100      24       6   5        5^2:Q8:3        SL(2,3)        6                                                       15     1       5       true             false            true             false                                                 
+# 24   25  100      24       6   5        5^2:Q8:3        SL(2,3)        6                    5^2:Q8:3        2      2           15     1       5       true             false            true             false                                                 
+# 25   25  100      24       6   5        5^2:Q8:3        SL(2,3)        6                    5^2:Q8:3        2      2           15     1       5       true             false            true             false                                                 
+# 26   25  100      24       6   5        5^2:Q8:3        SL(2,3)        6                    5^2:Q8:3        2      2           15     1       5       true             false            true             false                                                 
 # 27   25  150      24       4   3        5^2:Q8:3        SL(2,3)        4                    5^2:((Q8:3)'2)  2      2           15     1       7       true             false            true             false                                                 
-# 28   25  150      24       4   3        5^2:Q8:3        SL(2,3)        4                                                       15     1       7       true             false            true             false                                                 
+# 28   25  150      24       4   3        5^2:Q8:3        SL(2,3)        4                    5^2:((Q8:3)'2)  2      2           15     1       7       true             false            true             false                                                 
 # 29   25  150      24       4   3        5^2:Q8:3        SL(2,3)        4                    AGL(2,5)        2      2           15     1       7       true             false            true             false                                                 
 # 30   25  200      24       3   2        5^2:Q8:3        SL(2,3)        3                    5^2:Q8:3        2      2           15     1       8       true             false            true             false                                                 
-# 31   25  200      24       3   2        5^2:Q8:3        SL(2,3)        3                                                       15     1       8       true             false            true             false                                                 
-# 32   25  200      24       3   2        5^2:Q8:3        SL(2,3)        3                                                       15     1       8       true             false            true             false                                                 
-# 33   25  200      24       3   2        5^2:Q8:3        SL(2,3)        3                                                       15     1       8       true             false            true             false                                                 
+# 31   25  200      24       3   2        5^2:Q8:3        SL(2,3)        3                    5^2:Q8:3        2      2           15     1       8       true             false            true             false                                                 
+# 32   25  200      24       3   2        5^2:Q8:3        SL(2,3)        3                    5^2:Q8:3        2      2           15     1       8       true             false            true             false                                                 
+# 33   25  200      24       3   2        5^2:Q8:3        SL(2,3)        3                    5^2:Q8:3        2      2           15     1       8       true             false            true             false                                                 
 # 34   25  100      16       4   2        5^2:O+(2,5)     4^2:2          D8                   5^2:O+(2,5)     3      3           16     1       26      true             false            true             false                                                 
 # 35   25  200      32       4   4        5^2:O+(2,5)     4^2:2          4                    5^2:O+(2,5)     3      3           16     1       33      true             false            true             false                                                 
 # 36   25  30       6        5   1        AΓL(1,25)       24:2           2x(5:4)              AGL(2,5)        2      2           17     1       2       true             false            true             true                 2                                
@@ -311,13 +311,13 @@
 # 51   25  60       24       10  9        5^2:((Q8:3)'2)  (4x2):2:3      D20                  AGL(2,5)        2      2           18     1       6       true             false            true             false                                                 
 # 52   25  75       24       8   7        5^2:((Q8:3)'2)  (4x2):2:3      (4x2):2              5^2:((Q8:3)'4)  2      2           18     1       7       true             false            true             false                                                 
 # 53   25  100      48       12  22       5^2:((Q8:3)'2)  (4x2):2:3      12                   5^2:((Q8:3)'2)  2      2           18     1       8       true             false            true             false                                                 
-# 54   25  100      48       12  22       5^2:((Q8:3)'2)  (4x2):2:3      12                                                      18     1       8       true             false            true             false                                                 
+# 54   25  100      48       12  22       5^2:((Q8:3)'2)  (4x2):2:3      12                   5^2:((Q8:3)'2)  2      2           18     1       8       true             false            true             false                                                 
 # 55   25  150      24       4   3        5^2:((Q8:3)'2)  (4x2):2:3      D8                   5^2:((Q8:3)'2)  2      2           18     1       13      true             false            true             false                                                 
-# 56   25  150      24       4   3        5^2:((Q8:3)'2)  (4x2):2:3      D8                                                      18     1       13      true             false            true             false                                                 
+# 56   25  150      24       4   3        5^2:((Q8:3)'2)  (4x2):2:3      D8                   5^2:((Q8:3)'2)  2      2           18     1       13      true             false            true             false                                                 
 # 57   25  150      24       4   3        5^2:((Q8:3)'2)  (4x2):2:3      4x2                  AGL(2,5)        2      2           18     1       14      true             false            true             false                                                 
-# 58   25  200      48       6   10       5^2:((Q8:3)'2)  (4x2):2:3      6                                                       18     1       15      true             false            true             false                                                 
+# 58   25  200      48       6   10       5^2:((Q8:3)'2)  (4x2):2:3      6                    5^2:((Q8:3)'2)  2      2           18     1       15      true             false            true             false                                                 
 # 59   25  200      48       6   10       5^2:((Q8:3)'2)  (4x2):2:3      6                    5^2:((Q8:3)'2)  2      2           18     1       15      true             false            true             false                                                 
-# 60   25  400      48       3   4        5^2:((Q8:3)'2)  (4x2):2:3      3                                                       18     1       20      true             false            true             false                                                 
+# 60   25  400      48       3   4        5^2:((Q8:3)'2)  (4x2):2:3      3                    5^2:((Q8:3)'2)  2      2           18     1       20      true             false            true             false                                                 
 # 61   25  400      48       3   4        5^2:((Q8:3)'2)  (4x2):2:3      3                    5^2:((Q8:3)'2)  2      2           18     1       20      true             false            true             false                                                 
 # 62   25  30       6        5   1        5^2:((Q8:3)'4)  SL(2,3):4      4x(5:4)              AGL(2,5)        2      2           19     1       2       true             false            true             true                 2                                
 # 63   25  30       24       20  19       5^2:((Q8:3)'4)  SL(2,3):4      4x(5:4)              AGL(2,5)        2      2           19     1       2       true             false            true             true                 1                                
@@ -337,28 +337,28 @@
 # 77   25  60       24       10  9        ASL(2,5)        SL(2,5)        5xD10                AGL(2,5)        2      2           20     1       6       true             false            true             false                                                 
 # 78   25  150      24       4   3        ASL(2,5)        SL(2,5)        5:4                  AGL(2,5)        2      2           20     1       11      true             false            true             false                                                 
 # 79   25  250      120      12  55       ASL(2,5)        SL(2,5)        3:4                  ASL(2,5):2      2      2           20     1       12      true             false            true             false                                                 
-# 80   25  250      120      12  55       ASL(2,5)        SL(2,5)        3:4                                                     20     1       12      true             false            true             false                                                 
+# 80   25  250      120      12  55       ASL(2,5)        SL(2,5)        3:4                  ASL(2,5):2      2      2           20     1       12      true             false            true             false                                                 
 # 81   25  375      120      8   35       ASL(2,5)        SL(2,5)        Q8                   AGL(2,5)        2      2           20     1       15      true             false            true             false                                                 
-# 82   25  500      120      6   25       ASL(2,5)        SL(2,5)        6                                                       20     1       16      true             false            true             false                                                 
+# 82   25  500      120      6   25       ASL(2,5)        SL(2,5)        6                    ASL(2,5):2      2      2           20     1       16      true             false            true             false                                                 
 # 83   25  500      120      6   25       ASL(2,5)        SL(2,5)        6                    ASL(2,5):2      2      2           20     1       16      true             false            true             false                                                 
 # 84   25  600      120      5   20       ASL(2,5)        SL(2,5)        5                    AGL(2,5)        2      2           20     1       19      true             false            true             false                                                 
 # 85   25  750      120      4   15       ASL(2,5)        SL(2,5)        4                    ASL(2,5):2      2      2           20     1       20      true             false            true             false                                                 
-# 86   25  750      120      4   15       ASL(2,5)        SL(2,5)        4                                                       20     1       20      true             false            true             false                                                 
-# 87   25  1000     120      3   10       ASL(2,5)        SL(2,5)        3                                                       20     1       21      true             false            true             false                                                 
+# 86   25  750      120      4   15       ASL(2,5)        SL(2,5)        4                    ASL(2,5):2      2      2           20     1       20      true             false            true             false                                                 
+# 87   25  1000     120      3   10       ASL(2,5)        SL(2,5)        3                    ASL(2,5):2      2      2           20     1       21      true             false            true             false                                                 
 # 88   25  1000     120      3   10       ASL(2,5)        SL(2,5)        3                    ASL(2,5):2      2      2           20     1       21      true             false            true             false                                                 
 # 89   25  30       6        5   1        ASL(2,5):2      SL(2,5):2      D10x(5:4)            AGL(2,5)        2      2           21     1       2       true             false            true             true                 2                                
 # 90   25  30       24       20  19       ASL(2,5):2      SL(2,5):2      D10x(5:4)            AGL(2,5)        2      2           21     1       2       true             false            true             true                 1                                
 # 91   25  60       24       10  9        ASL(2,5):2      SL(2,5):2      D10xD10              AGL(2,5)        2      2           21     1       10      true             false            true             false                                                 
 # 92   25  150      24       4   3        ASL(2,5):2      SL(2,5):2      4xD10                AGL(2,5)        2      2           21     1       24      true             false            true             false                                                 
-# 93   25  250      120      12  55       ASL(2,5):2      SL(2,5):2      4xS3                                                    21     1       29      true             false            true             false                                                 
+# 93   25  250      120      12  55       ASL(2,5):2      SL(2,5):2      4xS3                 ASL(2,5):2      2      2           21     1       29      true             false            true             false                                                 
 # 94   25  250      120      12  55       ASL(2,5):2      SL(2,5):2      4xS3                 ASL(2,5):2      2      2           21     1       29      true             false            true             false                                                 
 # 95   25  375      120      8   35       ASL(2,5):2      SL(2,5):2      (4x2):2              AGL(2,5)        2      2           21     1       37      true             false            true             false                                                 
 # 96   25  500      120      6   25       ASL(2,5):2      SL(2,5):2      D12                  ASL(2,5):2      2      2           21     1       38      true             false            true             false                                                 
-# 97   25  500      120      6   25       ASL(2,5):2      SL(2,5):2      D12                                                     21     1       38      true             false            true             false                                                 
+# 97   25  500      120      6   25       ASL(2,5):2      SL(2,5):2      D12                  ASL(2,5):2      2      2           21     1       38      true             false            true             false                                                 
 # 98   25  600      120      5   20       ASL(2,5):2      SL(2,5):2      D10                  AGL(2,5)        2      2           21     1       42      true             false            true             false                                                 
-# 99   25  750      120      4   15       ASL(2,5):2      SL(2,5):2      D8                                                      21     1       48      true             false            true             false                                                 
+# 99   25  750      120      4   15       ASL(2,5):2      SL(2,5):2      D8                   ASL(2,5):2      2      2           21     1       48      true             false            true             false                                                 
 # 100  25  750      120      4   15       ASL(2,5):2      SL(2,5):2      D8                   ASL(2,5):2      2      2           21     1       48      true             false            true             false                                                 
-# 101  25  1000     120      3   10       ASL(2,5):2      SL(2,5):2      S3                                                      21     1       52      true             false            true             false                                                 
+# 101  25  1000     120      3   10       ASL(2,5):2      SL(2,5):2      S3                   ASL(2,5):2      2      2           21     1       52      true             false            true             false                                                 
 # 102  25  1000     120      3   10       ASL(2,5):2      SL(2,5):2      S3                   ASL(2,5):2      2      2           21     1       51      true             false            true             false                                                 
 # 103  25  30       6        5   1        AGL(2,5)        GL(2,5)        (5:4)x(5:4)          AGL(2,5)        2      2           22     1       2       true             false            true             true                 2                                
 # 104  25  30       24       20  19       AGL(2,5)        GL(2,5)        (5:4)x(5:4)          AGL(2,5)        2      2           22     1       2       true             false            true             true                 1                                
@@ -452,7 +452,7 @@
 # Flag-regular                         false    false                            
 # Point-primitive                      true     true                             
 # Point-primitive type                 1        1                                
-# Block-primitive                      false                                     
+# Block-primitive                      false    false                            
 # Block-primitive type                 0                                         
 # -------------------------------------------------------------------------------
 
@@ -478,7 +478,7 @@
 # Flag-regular                         true     false                            
 # Point-primitive                      true     true                             
 # Point-primitive type                 1        1                                
-# Block-primitive                      false                                     
+# Block-primitive                      false    false                            
 # Block-primitive type                 0                                         
 # -------------------------------------------------------------------------------
 
@@ -504,7 +504,7 @@
 # Flag-regular                         true     false                           
 # Point-primitive                      true     true                            
 # Point-primitive type                 1        1                               
-# Block-primitive                      false                                    
+# Block-primitive                      false    false                           
 # Block-primitive type                 0                                        
 # ------------------------------------------------------------------------------
 
@@ -530,7 +530,7 @@
 # Flag-regular                         true     false                            
 # Point-primitive                      true     true                             
 # Point-primitive type                 1        1                                
-# Block-primitive                      false                                     
+# Block-primitive                      false    false                            
 # Block-primitive type                 0                                         
 # -------------------------------------------------------------------------------
 
@@ -556,7 +556,7 @@
 # Flag-regular                         true     false                           
 # Point-primitive                      true     true                            
 # Point-primitive type                 1        1                               
-# Block-primitive                      false                                    
+# Block-primitive                      false    false                           
 # Block-primitive type                 0                                        
 # ------------------------------------------------------------------------------
 
@@ -582,7 +582,7 @@
 # Flag-regular                         true     false                           
 # Point-primitive                      true     true                            
 # Point-primitive type                 1        1                               
-# Block-primitive                      false                                    
+# Block-primitive                      false    false                           
 # Block-primitive type                 0                                        
 # ------------------------------------------------------------------------------
 
@@ -686,7 +686,7 @@
 # Flag-regular                         true     false                           
 # Point-primitive                      true     true                            
 # Point-primitive type                 1        1                               
-# Block-primitive                      false                                    
+# Block-primitive                      false    false                           
 # Block-primitive type                 0                                        
 # ------------------------------------------------------------------------------
 
@@ -764,7 +764,7 @@
 # Flag-regular                         true     false                            
 # Point-primitive                      true     true                             
 # Point-primitive type                 1        1                                
-# Block-primitive                      false                                     
+# Block-primitive                      false    false                            
 # Block-primitive type                 0                                         
 # -------------------------------------------------------------------------------
 
@@ -790,7 +790,7 @@
 # Flag-regular                         true      false                           
 # Point-primitive                      true      true                            
 # Point-primitive type                 1         1                               
-# Block-primitive                      false                                     
+# Block-primitive                      false     false                           
 # Block-primitive type                 0                                         
 # -------------------------------------------------------------------------------
 
@@ -868,7 +868,7 @@
 # Flag-regular                         true     false                           
 # Point-primitive                      true     true                            
 # Point-primitive type                 1        1                               
-# Block-primitive                      false                                    
+# Block-primitive                      false    false                           
 # Block-primitive type                 0                                        
 # ------------------------------------------------------------------------------
 
@@ -998,7 +998,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 1         1                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1180,7 +1180,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 1         1                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1284,7 +1284,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 1         1                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1362,7 +1362,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 4c         4c                                
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -1388,7 +1388,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 1         1                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1466,7 +1466,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 1         1                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1518,7 +1518,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 4c         4c                                
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -1544,7 +1544,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 1         1                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 

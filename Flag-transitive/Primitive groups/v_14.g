@@ -99,14 +99,14 @@
 # Nr  v   b     r     k   λ    G          Gα         GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   14  78    39    7   18   PSL(2,13)  13:6       D14                 PSL(2,13)  2      2           1      1       5       true             true             true             true                 1                                
-# 2   14  78    39    7   18   PSL(2,13)  13:6       D14                 PSL(2,13)  2      2           1      1       5       true                              true             true                 1                                
+# 2   14  78    39    7   18   PSL(2,13)  13:6       D14                 PSL(2,13)  2      2           1      1       5       true             true             true             true                 1                                
 # 3   14  91    26    4   6    PSL(2,13)  13:6       A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                                                 
-# 4   14  91    26    4   6    PSL(2,13)  13:6       A4                  PSL(2,13)  2      2           1      1       3       true                              true             false                                                 
+# 4   14  91    26    4   6    PSL(2,13)  13:6       A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                                                 
 # 5   14  91    39    6   15   PSL(2,13)  13:6       D12                 PSL(2,13)  2      2           1      1       4       true             true             true             false                                                 
-# 6   14  91    39    6   15   PSL(2,13)  13:6       D12                 PSL(2,13)  2      2           1      1       4       true                              true             false                                                 
+# 6   14  91    39    6   15   PSL(2,13)  13:6       D12                 PSL(2,13)  2      2           1      1       4       true             true             true             false                                                 
 # 7   14  91    39    6   15   PSL(2,13)  13:6       A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                11                               
 # 8   14  182   39    3   6    PSL(2,13)  13:6       S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                                                 
-# 9   14  182   39    3   6    PSL(2,13)  13:6       S3                  PSL(2,13)  2      2           1      1       2       true                              true             false                                                 
+# 9   14  182   39    3   6    PSL(2,13)  13:6       S3                  PSL(2,13)  2      2           1      1       2       true             false            true             false                                                 
 # 10  14  91    39    6   15   PGL(2,13)  AGL(1,13)  S4                  PGL(2,13)  2      2           2      1       5       true             true             true             true                 11                               
 # 11  14  91    52    8   28   PGL(2,13)  AGL(1,13)  S4                  PGL(2,13)  2      2           2      1       5       true             true             true             true                 7                                
 # 12  14  91    78    12  66   PGL(2,13)  AGL(1,13)  D24                 S14        2      2           2      1       8       true             true             true             true                                        complete  
@@ -449,7 +449,7 @@
 # Flag-regular                         false      false   
 # Point-primitive                      true       true    
 # Point-primitive type                 2          2       
-# Block-primitive                      false              
+# Block-primitive                      false      true    
 # Block-primitive type                 0                  
 # --------------------------------------------------------
 

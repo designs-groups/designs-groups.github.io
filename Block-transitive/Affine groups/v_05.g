@@ -73,7 +73,7 @@
 # Flag-regular                         false     false   
 # Point-primitive                      true      true    
 # Point-primitive type                 1         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                                   
 # -------------------------------------------------------
 

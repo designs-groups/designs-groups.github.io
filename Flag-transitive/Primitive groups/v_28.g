@@ -459,17 +459,17 @@
 # 95   28  80640     25920     9   7680      PSp(6,2)     PSp(4,3):2  D18                            PSp(6,2)     2      2           6      1       975     true             false            true             false                                                 
 # 96   28  103680    25920     7   5760      PSp(6,2)     PSp(4,3):2  D14                            PSp(6,2)     2      2           6      1       1159    true             false            true             false                                                 
 # 97   28  378       351       26  325       PSL(2,27)    3^3:13      D26                            S28          2      2           9      1       2       true             true             true             true                                        complete  
-# 98   28  702       351       14  169       PSL(2,27)    3^3:13      D14                                                            9      1       4       true             false            true             true                 98                               
+# 98   28  702       351       14  169       PSL(2,27)    3^3:13      D14                            PSL(2,27):3  2      2           9      1       4       true             false            true             true                 98                               
 # 99   28  702       351       14  169       PSL(2,27)    3^3:13      D14                            PSL(2,27):3  2      2           9      1       3       true             false            true             true                 98                               
 # 100  28  702       351       14  169       PSL(2,27)    3^3:13      14                             PΓL(2,27)    2      2           9      1       5       true             false            true             true                 100                              
 # 101  28  756       351       13  156       PSL(2,27)    3^3:13      13                             PΓL(2,27)    2      2           9      1       6       true             false            true             false                                                 
 # 102  28  819       117       4   13        PSL(2,27)    3^3:13      A4                             PΓL(2,27)    2      2           9      1       7       true             true             true             false                114                              
-# 103  28  819       351       12  143       PSL(2,27)    3^3:13      A4                                                             9      1       7       true             true             true             false                                                 
+# 103  28  819       351       12  143       PSL(2,27)    3^3:13      A4                             PSL(2,27):3  2      2           9      1       7       true             true             true             false                                                 
 # 104  28  819       351       12  143       PSL(2,27)    3^3:13      A4                             PSL(2,27):3  2      2           9      1       7       true             true             true             false                                                 
 # 105  28  1092      351       9   104       PSL(2,27)    3^3:13      3^2                            PΓL(2,27)    2      2           9      1       8       true             false            true             false                                                 
 # 106  28  1404      351       7   78        PSL(2,27)    3^3:13      7                              PΓL(2,27)    2      2           9      1       9       true             false            true             false                                                 
 # 107  28  2457      351       4   39        PSL(2,27)    3^3:13      2^2                            PSL(2,27):3  2      2           9      1       10      true             false            true             false                                                 
-# 108  28  2457      351       4   39        PSL(2,27)    3^3:13      2^2                                                            9      1       10      true             false            true             false                                                 
+# 108  28  2457      351       4   39        PSL(2,27)    3^3:13      2^2                            PSL(2,27):3  2      2           9      1       10      true             false            true             false                                                 
 # 109  28  3276      351       3   26        PSL(2,27)    3^3:13      3                              S28          2      2           9      1       11      true             false            true             false                172                    complete  
 # 110  28  378       351       26  325       PGL(2,27)    AGL(1,27)   D52                            S28          2      2           10     1       2       true             true             true             true                                        complete  
 # 111  28  702       351       14  169       PGL(2,27)    AGL(1,27)   D28                            PΓL(2,27)    2      2           10     1       4       true             false            true             true                 100                              
@@ -481,34 +481,34 @@
 # 117  28  1404      351       7   78        PGL(2,27)    AGL(1,27)   D14                            PΓL(2,27)    2      2           10     1       13      true             false            true             false                                                 
 # 118  28  1404      702       14  338       PGL(2,27)    AGL(1,27)   D14                            PΓL(2,27)    2      2           10     1       11      true             false            true             true                 118                              
 # 119  28  1638      702       12  286       PGL(2,27)    AGL(1,27)   A4                             PΓL(2,27)    2      2           10     1       15      true             false            true             false                                                 
-# 120  28  2457      702       8   182       PGL(2,27)    AGL(1,27)   D8                                                             10     1       17      true             false            true             false                                                 
-# 121  28  2457      702       8   182       PGL(2,27)    AGL(1,27)   D8                                                             10     1       17      true             false            true             false                                                 
+# 120  28  2457      702       8   182       PGL(2,27)    AGL(1,27)   D8                             PGL(2,27)    2      2           10     1       17      true             false            true             false                                                 
+# 121  28  2457      702       8   182       PGL(2,27)    AGL(1,27)   D8                             PGL(2,27)    2      2           10     1       17      true             false            true             false                                                 
 # 122  28  2457      702       8   182       PGL(2,27)    AGL(1,27)   D8                             PGL(2,27)    2      2           10     1       17      true             false            true             false                                                 
 # 123  28  3276      351       3   26        PGL(2,27)    AGL(1,27)   S3                             S28          2      2           10     1       19      true             false            true             false                172                    complete  
-# 124  28  3276      702       6   130       PGL(2,27)    AGL(1,27)   S3                                                             10     1       19      true             false            true             false                                                 
+# 124  28  3276      702       6   130       PGL(2,27)    AGL(1,27)   S3                             PGL(2,27)    2      2           10     1       19      true             false            true             false                                                 
 # 125  28  3276      702       6   130       PGL(2,27)    AGL(1,27)   S3                             PΓL(2,27)    2      2           10     1       19      true             false            true             false                                                 
-# 126  28  3276      702       6   130       PGL(2,27)    AGL(1,27)   S3                                                             10     1       19      true             false            true             false                                                 
+# 126  28  3276      702       6   130       PGL(2,27)    AGL(1,27)   S3                             PGL(2,27)    2      2           10     1       19      true             false            true             false                                                 
 # 127  28  3276      702       6   130       PGL(2,27)    AGL(1,27)   S3                             PGL(2,27)    2      2           10     1       19      true             false            true             false                                                 
-# 128  28  4914      702       4   78        PGL(2,27)    AGL(1,27)   2^2                                                            10     1       21      true             false            true             false                                                 
+# 128  28  4914      702       4   78        PGL(2,27)    AGL(1,27)   2^2                            PGL(2,27)    2      2           10     1       21      true             false            true             false                                                 
 # 129  28  4914      702       4   78        PGL(2,27)    AGL(1,27)   2^2                            PΓL(2,27)    2      2           10     1       20      true             false            true             false                                                 
 # 130  28  4914      702       4   78        PGL(2,27)    AGL(1,27)   2^2                            PGL(2,27)    2      2           10     1       21      true             false            true             false                                                 
-# 131  28  4914      702       4   78        PGL(2,27)    AGL(1,27)   2^2                                                            10     1       21      true             false            true             false                                                 
+# 131  28  4914      702       4   78        PGL(2,27)    AGL(1,27)   2^2                            PGL(2,27)    2      2           10     1       21      true             false            true             false                                                 
 # 132  28  378       351       26  325       PSL(2,27):3  3^3.13.3    13:6                           S28          2      2           11     1       3       true             true             true             true                                        complete  
 # 133  28  702       351       14  169       PSL(2,27):3  3^3.13.3    2x(7:3)                        PΓL(2,27)    2      2           11     1       4       true             false            true             true                 100                              
 # 134  28  702       351       14  169       PSL(2,27):3  3^3.13.3    7:6                            PSL(2,27):3  2      2           11     1       5       true             false            true             true                 98                               
-# 135  28  702       351       14  169       PSL(2,27):3  3^3.13.3    7:6                                                            11     1       6       true             false            true             true                 98                               
+# 135  28  702       351       14  169       PSL(2,27):3  3^3.13.3    7:6                            PSL(2,27):3  2      2           11     1       6       true             false            true             true                 98                               
 # 136  28  756       351       13  156       PSL(2,27):3  3^3.13.3    13:3                           PΓL(2,27)    2      2           11     1       7       true             false            true             false                                                 
 # 137  28  819       117       4   13        PSL(2,27):3  3^3.13.3    3xA4                           PΓL(2,27)    2      2           11     1       8       true             true             true             false                114                              
-# 138  28  819       351       12  143       PSL(2,27):3  3^3.13.3    3xA4                                                           11     1       8       true             true             true             false                                                 
+# 138  28  819       351       12  143       PSL(2,27):3  3^3.13.3    3xA4                           PSL(2,27):3  2      2           11     1       8       true             true             true             false                                                 
 # 139  28  819       351       12  143       PSL(2,27):3  3^3.13.3    3xA4                           PSL(2,27):3  2      2           11     1       8       true             true             true             false                                                 
 # 140  28  1092      351       9   104       PSL(2,27):3  3^3.13.3    3^2:3                          PΓL(2,27)    2      2           11     1       11      true             false            true             false                                                 
 # 141  28  1404      351       7   78        PSL(2,27):3  3^3.13.3    7:3                            PΓL(2,27)    2      2           11     1       13      true             false            true             false                                                 
 # 142  28  2457      351       4   39        PSL(2,27):3  3^3.13.3    A4                             PSL(2,27):3  2      2           11     1       18      true             false            true             false                                                 
-# 143  28  2457      351       4   39        PSL(2,27):3  3^3.13.3    A4                                                             11     1       19      true             false            true             false                                                 
+# 143  28  2457      351       4   39        PSL(2,27):3  3^3.13.3    A4                             PSL(2,27):3  2      2           11     1       19      true             false            true             false                                                 
 # 144  28  3276      351       3   26        PSL(2,27):3  3^3.13.3    3^2                            S28          2      2           11     1       24      true             false            true             false                172                    complete  
 # 145  28  3276      1053      9   312       PSL(2,27):3  3^3.13.3    9                              PSL(2,27):3  2      2           11     1       22      true             false            true             false                                                 
-# 146  28  3276      1053      9   312       PSL(2,27):3  3^3.13.3    9                                                              11     1       23      true             false            true             false                                                 
-# 147  28  4914      1053      6   195       PSL(2,27):3  3^3.13.3    6                                                              11     1       27      true             false            true             false                                                 
+# 146  28  3276      1053      9   312       PSL(2,27):3  3^3.13.3    9                              PSL(2,27):3  2      2           11     1       23      true             false            true             false                                                 
+# 147  28  4914      1053      6   195       PSL(2,27):3  3^3.13.3    6                              PSL(2,27):3  2      2           11     1       27      true             false            true             false                                                 
 # 148  28  4914      1053      6   195       PSL(2,27):3  3^3.13.3    6                              PSL(2,27):3  2      2           11     1       27      true             false            true             false                                                 
 # 149  28  378       351       26  325       PΓL(2,27)    AΓL(1,27)   2x(13:6)                       S28          2      2           12     1       4       true             true             true             true                                        complete  
 # 150  28  702       351       14  169       PΓL(2,27)    AΓL(1,27)   2x(7:6)                        PΓL(2,27)    2      2           12     1       6       true             false            true             true                 100                              
@@ -658,7 +658,7 @@
 # Flag-regular                         false     false                           
 # Point-primitive                      true      true                            
 # Point-primitive type                 2         2                               
-# Block-primitive                      false                                     
+# Block-primitive                      false     false                           
 # Block-primitive type                 0                                         
 # -------------------------------------------------------------------------------
 
@@ -710,7 +710,7 @@
 # Flag-regular                         false     false                              
 # Point-primitive                      true      true                               
 # Point-primitive type                 2         2                                  
-# Block-primitive                      false                                        
+# Block-primitive                      false     true                               
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -970,7 +970,7 @@
 # Flag-regular                         false     false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1048,7 +1048,7 @@
 # Flag-regular                         false     false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1074,7 +1074,7 @@
 # Flag-regular                         false     false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1230,7 +1230,7 @@
 # Flag-regular                         false     false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1256,7 +1256,7 @@
 # Flag-regular                         false     false                              
 # Point-primitive                      true      true                               
 # Point-primitive type                 2         2                                  
-# Block-primitive                      false                                        
+# Block-primitive                      false     false                              
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -1282,7 +1282,7 @@
 # Flag-regular                         true      false                              
 # Point-primitive                      true      true                               
 # Point-primitive type                 2         2                                  
-# Block-primitive                      false                                        
+# Block-primitive                      false     false                              
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -1360,7 +1360,7 @@
 # Flag-regular                         false     false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1412,7 +1412,7 @@
 # Flag-regular                         true      false                              
 # Point-primitive                      true      true                               
 # Point-primitive type                 2         2                                  
-# Block-primitive                      false                                        
+# Block-primitive                      false     true                               
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -1516,7 +1516,7 @@
 # Flag-regular                         false     false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1542,7 +1542,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1828,7 +1828,7 @@
 # Flag-regular                         false     false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -1854,7 +1854,7 @@
 # Flag-regular                         true      false                            
 # Point-primitive                      true      true                             
 # Point-primitive type                 2         2                                
-# Block-primitive                      false                                      
+# Block-primitive                      false     false                            
 # Block-primitive type                 0                                          
 # --------------------------------------------------------------------------------
 
@@ -2010,7 +2010,7 @@
 # Flag-regular                         true       false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -2114,7 +2114,7 @@
 # Flag-regular                         true       false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -2140,7 +2140,7 @@
 # Flag-regular                         true       false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -2166,7 +2166,7 @@
 # Flag-regular                         true      false                              
 # Point-primitive                      true      true                               
 # Point-primitive type                 2         2                                  
-# Block-primitive                      false                                        
+# Block-primitive                      false     false                              
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -2192,7 +2192,7 @@
 # Flag-regular                         true        false                              
 # Point-primitive                      true        true                               
 # Point-primitive type                 2           2                                  
-# Block-primitive                      false                                          
+# Block-primitive                      false       false                              
 # Block-primitive type                 0                                              
 # ------------------------------------------------------------------------------------
 
@@ -2530,7 +2530,7 @@
 # Flag-regular                         true       false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 

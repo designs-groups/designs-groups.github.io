@@ -92,7 +92,7 @@
 # Nr  v   b    r    k  λ    G          Gα   GB                 Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                            
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   11  11   5    5  2    11:5       5    5                  PSL(2,11)  3      2           3      1       1       true             true             true             false                5           true       Hadamard, Kantor or Paley parameters                
-# 2   11  11   5    5  2    11:5       5    5                  PSL(2,11)  3      2           3      1       1       true                              true             false                5           true       Hadamard, Kantor or Paley parameters                
+# 2   11  11   5    5  2    11:5       5    5                  PSL(2,11)  3      2           3      1       1       true             true             true             false                5           true       Hadamard, Kantor or Paley parameters                
 # 3   11  22   10   5  4    AGL(1,11)  10   5                  AGL(1,11)  2      2           4      1       1       true             false            true             false                                                                                           
 # 4   11  11   5    5  2    PSL(2,11)  A5   A5                 PSL(2,11)  2      2           5      1       4       true             true             true             true                 5           true       Hadamard, Kantor or Paley parameters                
 # 5   11  11   6    6  3    PSL(2,11)  A5   A5                 PSL(2,11)  2      2           5      1       4       true             true             true             true                 1           true       complement of Hadamard, Kantor or Paley parameters  
@@ -487,7 +487,7 @@
 # Flag-regular                         false  false   
 # Point-primitive                      true   true    
 # Point-primitive type                 2      2       
-# Block-primitive                      false          
+# Block-primitive                      false  true    
 # Block-primitive type                 0              
 # ----------------------------------------------------
 

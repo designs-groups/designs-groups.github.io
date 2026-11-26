@@ -98,29 +98,29 @@
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   10  15   6    4  2   S5        D12       D8                 PΣL(2,9)  3      2           2      1       1       true             false            true             false                4                                
 # 2   10  15   6    4  2   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           3      1       3       true             true             true             true                 4                                
-# 3   10  15   6    4  2   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           3      1       4       true                              true             true                 4                                
+# 3   10  15   6    4  2   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           3      1       4       true             true             true             true                 4                                
 # 4   10  15   9    6  5   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           3      1       3       true             true             true             true                 1                                
-# 5   10  15   9    6  5   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           3      1       4       true                              true             true                 1                                
-# 6   10  36   18   5  8   PSL(2,9)  3^2:4     D10                M10       2      2           3      1       5       true                              true             true                 6                                
+# 5   10  15   9    6  5   PSL(2,9)  3^2:4     S4                 PΣL(2,9)  2      2           3      1       4       true             true             true             true                 1                                
+# 6   10  36   18   5  8   PSL(2,9)  3^2:4     D10                M10       2      2           3      1       5       true             false            true             true                 6                                
 # 7   10  36   18   5  8   PSL(2,9)  3^2:4     D10                M10       2      2           3      1       5       true             false            true             true                 6                                
 # 8   10  60   18   3  4   PSL(2,9)  3^2:4     S3                 PΣL(2,9)  2      2           3      1       1       true             false            true             false                                                 
-# 9   10  60   18   3  4   PSL(2,9)  3^2:4     S3                 PΣL(2,9)  2      2           3      1       2       true                              true             false                                                 
+# 9   10  60   18   3  4   PSL(2,9)  3^2:4     S3                 PΣL(2,9)  2      2           3      1       2       true             false            true             false                                                 
 # 10  10  30   12   4  4   PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           4      1       2       true             false            true             true                 11                               
 # 11  10  30   18   6  10  PGL(2,9)  AGL(1,9)  S4                 PΓL(2,9)  2      2           4      1       2       true             false            true             true                 10                               
 # 12  10  45   36   8  28  PGL(2,9)  AGL(1,9)  D16                S10       2      2           4      1       5       true             true             true             true                                        complete  
 # 13  10  72   36   5  16  PGL(2,9)  AGL(1,9)  D10                PΓL(2,9)  2      2           4      1       4       true             false            true             true                 13                               
 # 14  10  120  36   3  8   PGL(2,9)  AGL(1,9)  S3                 S10       2      2           4      1       1       true             false            true             false                38                     complete  
 # 15  10  180  72   4  24  PGL(2,9)  AGL(1,9)  2^2                PΓL(2,9)  2      2           4      1       3       true             false            true             false                                                 
-# 16  10  15   6    4  2   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           5      1       4       true                              true             true                 4                                
+# 16  10  15   6    4  2   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           5      1       4       true             true             true             true                 4                                
 # 17  10  15   6    4  2   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           5      1       3       true             true             true             true                 4                                
-# 18  10  15   9    6  5   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           5      1       4       true                              true             true                 1                                
+# 18  10  15   9    6  5   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           5      1       4       true             true             true             true                 1                                
 # 19  10  15   9    6  5   PΣL(2,9)  3^2:D8    2xS4               PΣL(2,9)  2      2           5      1       3       true             true             true             true                 1                                
-# 20  10  60   18   3  4   PΣL(2,9)  3^2:D8    D12                PΣL(2,9)  2      2           5      1       2       true                              true             false                                                 
+# 20  10  60   18   3  4   PΣL(2,9)  3^2:D8    D12                PΣL(2,9)  2      2           5      1       2       true             false            true             false                                                 
 # 21  10  60   18   3  4   PΣL(2,9)  3^2:D8    D12                PΣL(2,9)  2      2           5      1       1       true             false            true             false                                                 
 # 22  10  72   36   5  16  PΣL(2,9)  3^2:D8    D10                PΓL(2,9)  2      2           5      1       5       true             false            true             true                 13                               
 # 23  10  30   12   4  4   M10       M9        S4                 PΓL(2,9)  2      2           6      1       2       true             false            true             true                 11                               
 # 24  10  30   18   6  10  M10       M9        S4                 PΓL(2,9)  2      2           6      1       2       true             false            true             true                 10                               
-# 25  10  36   18   5  8   M10       M9        5:4                M10       2      2           6      1       4       true                              true             true                 6                                
+# 25  10  36   18   5  8   M10       M9        5:4                M10       2      2           6      1       4       true             true             true             true                 6                                
 # 26  10  36   18   5  8   M10       M9        5:4                M10       2      2           6      1       4       true             true             true             true                 6                                
 # 27  10  45   36   8  28  M10       M9        QD16               S10       2      2           6      1       5       true             true             true             true                                        complete  
 # 28  10  120  36   3  8   M10       M9        S3                 S10       2      2           6      1       1       true             false            true             false                38                     complete  
@@ -170,7 +170,7 @@
 # Flag-regular                         false  false     
 # Point-primitive                      true   true      
 # Point-primitive type                 2      2         
-# Block-primitive                      false            
+# Block-primitive                      false  true      
 # Block-primitive type                 0                
 # ------------------------------------------------------
 
@@ -222,7 +222,7 @@
 # Flag-regular                         false     false     
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -248,7 +248,7 @@
 # Flag-regular                         false     false     
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -274,7 +274,7 @@
 # Flag-regular                         false     false   
 # Point-primitive                      true      true    
 # Point-primitive type                 2         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -326,7 +326,7 @@
 # Flag-regular                         false     false     
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -352,7 +352,7 @@
 # Flag-regular                         false     false     
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -378,7 +378,7 @@
 # Flag-regular                         false     false   
 # Point-primitive                      true      true    
 # Point-primitive type                 2         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -430,7 +430,7 @@
 # Flag-regular                         true      false     
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 

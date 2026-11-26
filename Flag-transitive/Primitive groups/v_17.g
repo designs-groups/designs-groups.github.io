@@ -133,10 +133,10 @@
 # 7   17  408    240    10  135   PSL(2,2^4)    AGL(1,16)    D10                 PΓL(2,2^4)    2      2           6      1       7       true             false            true             false                                                 
 # 8   17  510    240    8   105   PSL(2,2^4)    AGL(1,16)    2^3                 PΓL(2,2^4)    2      2           6      1       6       true             false            true             false                                                 
 # 9   17  680    120    3   15    PSL(2,2^4)    AGL(1,16)    S3                  S17           2      2           6      1       1       true             false            true             false                37                     complete  
-# 10  17  680    240    6   75    PSL(2,2^4)    AGL(1,16)    S3                  PSL(2,2^4):2  2      2           6      1       1       true                              true             false                                                 
+# 10  17  680    240    6   75    PSL(2,2^4)    AGL(1,16)    S3                  PSL(2,2^4):2  2      2           6      1       1       true             false            true             false                                                 
 # 11  17  680    240    6   75    PSL(2,2^4)    AGL(1,16)    S3                  PSL(2,2^4):2  2      2           6      1       1       true             false            true             false                                                 
 # 12  17  1020   240    4   45    PSL(2,2^4)    AGL(1,16)    2^2                 PSL(2,2^4):2  2      2           6      1       3       true             false            true             false                                                 
-# 13  17  1020   240    4   45    PSL(2,2^4)    AGL(1,16)    2^2                 PSL(2,2^4):2  2      2           6      1       4       true                              true             false                                                 
+# 13  17  1020   240    4   45    PSL(2,2^4)    AGL(1,16)    2^2                 PSL(2,2^4):2  2      2           6      1       4       true             false            true             false                                                 
 # 14  17  68     20     5   5     PSL(2,2^4):2  AGL(1,16):2  2xA5                PΓL(2,2^4)    2      2           7      1       5       true             true             true             true                 4                                
 # 15  17  68     48     12  33    PSL(2,2^4):2  AGL(1,16):2  2xA5                PΓL(2,2^4)    2      2           7      1       5       true             true             true             true                 3                                
 # 16  17  136    120    15  105   PSL(2,2^4):2  AGL(1,16):2  S3xD10              S17           2      2           7      1       8       true             true             true             true                                        complete  
@@ -145,8 +145,8 @@
 # 19  17  510    240    8   105   PSL(2,2^4):2  AGL(1,16):2  2xD8                PΓL(2,2^4)    2      2           7      1       6       true             false            true             false                                                 
 # 20  17  680    120    3   15    PSL(2,2^4):2  AGL(1,16):2  D12                 S17           2      2           7      1       1       true             false            true             false                37                     complete  
 # 21  17  680    240    6   75    PSL(2,2^4):2  AGL(1,16):2  D12                 PSL(2,2^4):2  2      2           7      1       1       true             false            true             false                                                 
-# 22  17  680    240    6   75    PSL(2,2^4):2  AGL(1,16):2  D12                 PSL(2,2^4):2  2      2           7      1       1       true                              true             false                                                 
-# 23  17  1020   240    4   45    PSL(2,2^4):2  AGL(1,16):2  D8                  PSL(2,2^4):2  2      2           7      1       4       true                              true             false                                                 
+# 22  17  680    240    6   75    PSL(2,2^4):2  AGL(1,16):2  D12                 PSL(2,2^4):2  2      2           7      1       1       true             false            true             false                                                 
+# 23  17  1020   240    4   45    PSL(2,2^4):2  AGL(1,16):2  D8                  PSL(2,2^4):2  2      2           7      1       4       true             false            true             false                                                 
 # 24  17  1020   240    4   45    PSL(2,2^4):2  AGL(1,16):2  D8                  PSL(2,2^4):2  2      2           7      1       3       true             false            true             false                                                 
 # 25  17  68     20     5   5     PΓL(2,2^4)    AΓL(1,16)    A5:4                PΓL(2,2^4)    2      2           8      1       4       true             true             true             true                 4                                
 # 26  17  68     48     12  33    PΓL(2,2^4)    AΓL(1,16)    A5:4                PΓL(2,2^4)    2      2           8      1       4       true             true             true             true                 3                                
@@ -341,7 +341,7 @@
 # Flag-regular                         false       false       
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
-# Block-primitive                      false                   
+# Block-primitive                      false       false       
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -367,7 +367,7 @@
 # Flag-regular                         true        false       
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
-# Block-primitive                      false                   
+# Block-primitive                      false       false       
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -393,7 +393,7 @@
 # Flag-regular                         true        false       
 # Point-primitive                      true        true        
 # Point-primitive type                 2           2           
-# Block-primitive                      false                   
+# Block-primitive                      false       false       
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 

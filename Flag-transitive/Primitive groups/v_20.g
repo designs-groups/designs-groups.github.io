@@ -138,15 +138,15 @@
 # Nr  v   b       r      k   λ      G          Gα         GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   20  190     171    18  153    PSL(2,19)  19:9       D18                  S20        2      2           1      1       10      true             true             true             true                                        complete  
-# 2   20  285     57     4   9      PSL(2,19)  19:9       A4                   PSL(2,19)  2      2           1      1       2       true                              true             false                                                 
+# 2   20  285     57     4   9      PSL(2,19)  19:9       A4                   PSL(2,19)  2      2           1      1       2       true             false            true             false                                                 
 # 3   20  285     57     4   9      PSL(2,19)  19:9       A4                   PSL(2,19)  2      2           1      1       2       true             false            true             false                                                 
 # 4   20  285     171    12  99     PSL(2,19)  19:9       A4                   PGL(2,19)  2      2           1      1       2       true             false            true             false                16                               
-# 5   20  342     171    10  81     PSL(2,19)  19:9       D10                  PSL(2,19)  2      2           1      1       9       true                              true             true                 5                                
+# 5   20  342     171    10  81     PSL(2,19)  19:9       D10                  PSL(2,19)  2      2           1      1       9       true             false            true             true                 5                                
 # 6   20  342     171    10  81     PSL(2,19)  19:9       10                   PGL(2,19)  2      2           1      1       7       true             false            true             true                 6                                
 # 7   20  342     171    10  81     PSL(2,19)  19:9       D10                  PSL(2,19)  2      2           1      1       8       true             false            true             true                 5                                
 # 8   20  380     171    9   72     PSL(2,19)  19:9       9                    PGL(2,19)  2      2           1      1       6       true             false            true             false                                                 
 # 9   20  570     171    6   45     PSL(2,19)  19:9       S3                   PSL(2,19)  2      2           1      1       5       true             false            true             false                                                 
-# 10  20  570     171    6   45     PSL(2,19)  19:9       S3                   PSL(2,19)  2      2           1      1       5       true                              true             false                                                 
+# 10  20  570     171    6   45     PSL(2,19)  19:9       S3                   PSL(2,19)  2      2           1      1       5       true             false            true             false                                                 
 # 11  20  570     171    6   45     PSL(2,19)  19:9       S3                   PGL(2,19)  2      2           1      1       5       true             false            true             false                                                 
 # 12  20  684     171    5   36     PSL(2,19)  19:9       5                    PGL(2,19)  2      2           1      1       4       true             false            true             false                                                 
 # 13  20  855     171    4   27     PSL(2,19)  19:9       2^2                  PGL(2,19)  2      2           1      1       3       true             false            true             false                                                 
@@ -305,7 +305,7 @@
 # Flag-regular                         true       false      
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
-# Block-primitive                      false                 
+# Block-primitive                      false      true       
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -331,7 +331,7 @@
 # Flag-regular                         true       false      
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
-# Block-primitive                      false                 
+# Block-primitive                      false      false      
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -383,7 +383,7 @@
 # Flag-regular                         true       false      
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
-# Block-primitive                      false                 
+# Block-primitive                      false      false      
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -461,7 +461,7 @@
 # Flag-regular                         true       false      
 # Point-primitive                      true       true       
 # Point-primitive type                 2          2          
-# Block-primitive                      false                 
+# Block-primitive                      false      false      
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 

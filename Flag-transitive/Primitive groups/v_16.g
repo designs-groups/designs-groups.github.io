@@ -321,7 +321,7 @@
 # 4    16  20     15    12  11    AGL(1,16)     15         A4                       AΓL(2,4)      2      2           3      1       2       true             false            true             true                 1                                                                
 # 5    16  30     15    8   7     AGL(1,16)     15         2^3                      2^4.PSL(4,2)  2      2           3      1       6       true             false            true             true                 5                                                                
 # 6    16  48     15    5   4     AGL(1,16)     15         5                        AΓL(1,16)     2      2           3      1       5       true             false            true             false                                                                                 
-# 7    16  60     15    4   3     AGL(1,16)     15         2^2                      AGL(1,16):2   2      2           3      1       4       true                              true             false                                                                                 
+# 7    16  60     15    4   3     AGL(1,16)     15         2^2                      AGL(1,16):2   2      2           3      1       4       true             false            true             false                                                                                 
 # 8    16  60     15    4   3     AGL(1,16)     15         2^2                      AGL(1,16):2   2      2           3      1       3       true             false            true             false                                                                                 
 # 9    16  80     15    3   2     AGL(1,16)     15         3                        AΓL(2,4)      2      2           3      1       1       true             false            true             false                                                                                 
 # 10   16  16     6     6   2     (A4xA4):2     3xS3       3xS3                     2^4.S6        3      2           4      1       1       true             true             true             false                12          true       Menon or Kantor parameters                
@@ -333,14 +333,14 @@
 # 16   16  20     15    12  11    AGL(1,16):2   3xD10      2xA4                     AΓL(2,4)      2      2           6      1       2       true             false            true             true                 1                                                                
 # 17   16  30     15    8   7     AGL(1,16):2   3xD10      2xD8                     2^4.PSL(4,2)  2      2           6      1       6       true             false            true             true                 5                                                                
 # 18   16  48     15    5   4     AGL(1,16):2   3xD10      D10                      AΓL(1,16)     2      2           6      1       5       true             false            true             false                                                                                 
-# 19   16  60     15    4   3     AGL(1,16):2   3xD10      D8                       AGL(1,16):2   2      2           6      1       4       true                              true             false                                                                                 
+# 19   16  60     15    4   3     AGL(1,16):2   3xD10      D8                       AGL(1,16):2   2      2           6      1       4       true             false            true             false                                                                                 
 # 20   16  60     15    4   3     AGL(1,16):2   3xD10      D8                       AGL(1,16):2   2      2           6      1       3       true             false            true             false                                                                                 
 # 21   16  80     15    3   2     AGL(1,16):2   3xD10      6                        AΓL(2,4)      2      2           6      1       1       true             false            true             false                                                                                 
 # 22   16  80     30    6   10    AGL(1,16):2   3xD10      6                        AGL(1,16):2   2      2           6      1       1       true             false            true             false                                                                                 
-# 23   16  80     30    6   10    AGL(1,16):2   3xD10      6                        AGL(1,16):2   2      2           6      1       1       true                              true             false                                                                                 
+# 23   16  80     30    6   10    AGL(1,16):2   3xD10      6                        AGL(1,16):2   2      2           6      1       1       true             false            true             false                                                                                 
 # 24   16  16     6     6   2     2^4.S3xS3     S3xS3      S3xS3                    2^4.S6        3      2           7      1       1       true             true             true             false                12          true       Menon or Kantor parameters                
 # 25   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL(2,4)      3      2           7      1       2       true             false            true             false                33                                                               
-# 26   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL(2,4)      3      2           7      1       3       true                              true             false                33                                                               
+# 26   16  48     18    6   6     2^4.S3xS3     S3xS3      D12                      AΓL(2,4)      3      2           7      1       3       true             false            true             false                33                                                               
 # 27   16  16     6     6   2     2^4.3^2:4     3^2:4      3^2:4                    2^4.S6        3      2           8      1       1       true             true             true             false                12          true       Menon or Kantor parameters                
 # 28   16  96     36    6   12    2^4.3^2:4     3^2:4      S3                       (S4xS4):2     3      3           8      1       2       true             false            true             false                                                                                 
 # 29   16  20     5     4   1     AΓL(1,16)     15:4       A4:4                     AΓL(2,4)      2      2           9      1       2       true             false            true             true                 4                                                                
@@ -421,30 +421,30 @@
 # 104  16  480    90    3   12    AGL(2,4)      GL(2,4)    S3                       AΓL(2,4)      2      2           14     1       2       true             false            true             false                                                                                 
 # 105  16  480    180   6   60    AGL(2,4)      GL(2,4)    6                        AΓL(2,4)      2      2           14     1       9       true             false            true             false                                                                                 
 # 106  16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                 12          true       Menon or Kantor parameters                
-# 107  16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       10      true                              true             true                 12          true       Menon or Kantor parameters                
-# 108  16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       9       true                              true             true                 12          true       Menon or Kantor parameters                
+# 107  16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                 12          true       Menon or Kantor parameters                
+# 108  16  16     6     6   2     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       9       true             true             true             true                 12          true       Menon or Kantor parameters                
 # 109  16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       10      true             true             true             true                 10          true       complement of Menon or Kantor parameters  
-# 110  16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       9       true                              true             true                 10          true       complement of Menon or Kantor parameters  
-# 111  16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       8       true                              true             true                 10          true       complement of Menon or Kantor parameters  
+# 110  16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       9       true             true             true             true                 10          true       complement of Menon or Kantor parameters  
+# 111  16  16     10    10  6     ASL(2,4)      A5         A5                       2^4.S6        2      2           15     1       8       true             true             true             true                 10          true       complement of Menon or Kantor parameters  
 # 112  16  20     5     4   1     ASL(2,4)      A5         2^4:3                    AΓL(2,4)      2      2           15     1       3       true             false            true             true                 4                                                                
 # 113  16  20     15    12  11    ASL(2,4)      A5         2^4:3                    AΓL(2,4)      2      2           15     1       3       true             false            true             true                 1                                                                
 # 114  16  30     15    8   7     ASL(2,4)      A5         2^4:2                    2^4.PSL(4,2)  2      2           15     1       14      true             false            true             true                 5                                                                
 # 115  16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       4       true             false            true             true                 78                                                               
-# 116  16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       5       true                              true             true                 78                                                               
-# 117  16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       6       true                              true             true                 78                                                               
+# 116  16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       5       true             false            true             true                 78                                                               
+# 117  16  40     10    4   2     ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       6       true             false            true             true                 78                                                               
 # 118  16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       4       true             false            true             true                 14                                                               
-# 119  16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       6       true                              true             true                 14                                                               
-# 120  16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       5       true                              true             true                 14                                                               
+# 119  16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       6       true             false            true             true                 14                                                               
+# 120  16  40     30    12  22    ASL(2,4)      A5         S4                       ASL(2,4):2    2      2           15     1       5       true             false            true             true                 14                                                               
 # 121  16  80     15    3   2     ASL(2,4)      A5         A4                       AΓL(2,4)      2      2           15     1       1       true             false            true             false                                                                                 
 # 122  16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       11      true             false            true             false                                                                                 
-# 123  16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       13      true                              true             false                                                                                 
-# 124  16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       12      true                              true             false                                                                                 
-# 125  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true                              true             false                                                                                 
-# 126  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true                              true             false                                                                                 
+# 123  16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       13      true             false            true             false                                                                                 
+# 124  16  80     30    6   10    ASL(2,4)      A5         A4                       ASL(2,4):2    2      2           15     1       12      true             false            true             false                                                                                 
+# 125  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
+# 126  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
 # 127  16  96     30    5   8     ASL(2,4)      A5         D10                      2^4.S6        2      2           15     1       7       true             false            true             false                                                                                 
 # 128  16  120    60    8   28    ASL(2,4)      A5         Q8                       AΓL(2,4)      2      2           15     1       15      true             false            true             true                 36                                                               
-# 129  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true                              true             false                                                                                 
-# 130  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true                              true             false                                                                                 
+# 129  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true             false            true             false                                                                                 
+# 130  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true             false            true             false                                                                                 
 # 131  16  160    30    3   4     ASL(2,4)      A5         S3                       ASL(2,4):2    2      2           15     1       2       true             false            true             false                                                                                 
 # 132  16  160    60    6   20    ASL(2,4)      A5         S3                       AΓL(2,4)      2      2           15     1       2       true             false            true             false                                                                                 
 # 133  16  16     6     6   2     2^4.S6        S6         S6                       2^4.S6        2      2           16     1       8       true             true             true             true                 12          true       Menon or Kantor parameters                
@@ -474,9 +474,9 @@
 # 157  16  80     60    12  44    2^4.A6        A6         (3xA4):2                 2^4.S6        2      2           17     1       4       true             false            true             true                 80                                                               
 # 158  16  96     30    5   8     2^4.A6        A6         A5                       2^4.S6        2      2           17     1       6       true             false            true             false                                                                                 
 # 159  16  96     36    6   12    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       9       true             false            true             true                 161                                                              
-# 160  16  96     36    6   12    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       10      true                              true             true                 161                                                              
+# 160  16  96     36    6   12    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       10      true             false            true             true                 161                                                              
 # 161  16  96     60    10  36    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       9       true             false            true             true                 159                                                              
-# 162  16  96     60    10  36    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       10      true                              true             true                 159                                                              
+# 162  16  96     60    10  36    2^4.A6        A6         A5                       2^4.A6        2      2           17     1       10      true             false            true             true                 159                                                              
 # 163  16  120    45    6   15    2^4.A6        A6         2xS4                     2^4.S6        2      2           17     1       11      true             false            true             false                                                                                 
 # 164  16  160    90    9   48    2^4.A6        A6         3^2:4                    2^4.S6        2      2           17     1       15      true             false            true             false                                                                                 
 # 165  16  240    45    3   6     2^4.A6        A6         S4                       2^4.S6        2      2           17     1       1       true             false            true             false                                                                                 
@@ -484,7 +484,7 @@
 # 167  16  240    90    6   30    2^4.A6        A6         S4                       2^4.S6        2      2           17     1       12      true             false            true             false                                                                                 
 # 168  16  320    60    3   8     2^4.A6        A6         3^2:2                    2^4.S6        2      2           17     1       2       true             false            true             false                                                                                 
 # 169  16  360    180   8   84    2^4.A6        A6         QD16                     2^4.S6        2      2           17     1       14      true             false            true             true                 149                                                              
-# 170  16  576    180   5   48    2^4.A6        A6         D10                      2^4.A6        2      2           17     1       7       true                              true             false                                                                                 
+# 170  16  576    180   5   48    2^4.A6        A6         D10                      2^4.A6        2      2           17     1       7       true             false            true             false                                                                                 
 # 171  16  576    180   5   48    2^4.A6        A6         D10                      2^4.A6        2      2           17     1       7       true             false            true             false                                                                                 
 # 172  16  16     10    10  6     2^4:S5        S5         S5                       2^4.S6        3      2           18     1       2       true             true             true             false                10          true       complement of Menon or Kantor parameters  
 # 173  16  60     15    4   3     2^4:S5        S5         2^4:2                    2^4.S6        3      2           18     1       1       true             false            true             false                137                                                              
@@ -609,7 +609,7 @@
 # Flag-regular                         true   false      
 # Point-primitive                      true   true       
 # Point-primitive type                 1      1          
-# Block-primitive                      false             
+# Block-primitive                      false  false      
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -635,7 +635,7 @@
 # Flag-regular                         true       false      
 # Point-primitive                      true       true       
 # Point-primitive type                 1          1          
-# Block-primitive                      false                 
+# Block-primitive                      false      false      
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -661,7 +661,7 @@
 # Flag-regular                         true       false             
 # Point-primitive                      true       true              
 # Point-primitive type                 1          1                 
-# Block-primitive                      false                        
+# Block-primitive                      false      false             
 # Block-primitive type                 0                            
 # ------------------------------------------------------------------
 
@@ -739,7 +739,7 @@
 # Flag-regular                         false      false       
 # Point-primitive                      true       true        
 # Point-primitive type                 1          1           
-# Block-primitive                      false                  
+# Block-primitive                      false      false       
 # Block-primitive type                 0                      
 # ------------------------------------------------------------
 
@@ -791,7 +791,7 @@
 # Flag-regular                         true       false      
 # Point-primitive                      true       true       
 # Point-primitive type                 1          1          
-# Block-primitive                      false                 
+# Block-primitive                      false      false      
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -817,7 +817,7 @@
 # Flag-regular                         true       false     
 # Point-primitive                      true       true      
 # Point-primitive type                 1          1         
-# Block-primitive                      false                
+# Block-primitive                      false      false     
 # Block-primitive type                 0                    
 # ----------------------------------------------------------
 
@@ -843,7 +843,7 @@
 # Flag-regular                         false      false     
 # Point-primitive                      true       true      
 # Point-primitive type                 1          1         
-# Block-primitive                      false                
+# Block-primitive                      false      false     
 # Block-primitive type                 0                    
 # ----------------------------------------------------------
 
@@ -869,7 +869,7 @@
 # Flag-regular                         true       false        
 # Point-primitive                      true       true         
 # Point-primitive type                 1          1            
-# Block-primitive                      false                   
+# Block-primitive                      false      false        
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -947,7 +947,7 @@
 # Flag-regular                         true       false     
 # Point-primitive                      true       true      
 # Point-primitive type                 1          1         
-# Block-primitive                      false                
+# Block-primitive                      false      false     
 # Block-primitive type                 0                    
 # ----------------------------------------------------------
 
@@ -973,7 +973,7 @@
 # Flag-regular                         false       false   
 # Point-primitive                      true        true    
 # Point-primitive type                 1           1       
-# Block-primitive                      false               
+# Block-primitive                      false       false   
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -1051,7 +1051,7 @@
 # Flag-regular                         false       false   
 # Point-primitive                      true        true    
 # Point-primitive type                 1           1       
-# Block-primitive                      false               
+# Block-primitive                      false       false   
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -1077,7 +1077,7 @@
 # Flag-regular                         false       false   
 # Point-primitive                      true        true    
 # Point-primitive type                 1           1       
-# Block-primitive                      false               
+# Block-primitive                      false       false   
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -1103,7 +1103,7 @@
 # Flag-regular                         true       false      
 # Point-primitive                      true       true       
 # Point-primitive type                 1          1          
-# Block-primitive                      false                 
+# Block-primitive                      false      false      
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -1233,7 +1233,7 @@
 # Flag-regular                         false      false     
 # Point-primitive                      true       true      
 # Point-primitive type                 1          1         
-# Block-primitive                      false                
+# Block-primitive                      false      false     
 # Block-primitive type                 0                    
 # ----------------------------------------------------------
 
@@ -1285,7 +1285,7 @@
 # Flag-regular                         true       false     
 # Point-primitive                      true       true      
 # Point-primitive type                 1          1         
-# Block-primitive                      false                
+# Block-primitive                      false      false     
 # Block-primitive type                 0                    
 # ----------------------------------------------------------
 
@@ -1337,7 +1337,7 @@
 # Flag-regular                         false             false   
 # Point-primitive                      true              true    
 # Point-primitive type                 1                 2       
-# Block-primitive                      false                     
+# Block-primitive                      false             true    
 # Block-primitive type                 0                         
 # ---------------------------------------------------------------
 
@@ -1441,7 +1441,7 @@
 # Flag-regular                         true       false     
 # Point-primitive                      true       true      
 # Point-primitive type                 1          1         
-# Block-primitive                      false                
+# Block-primitive                      false      false     
 # Block-primitive type                 0                    
 # ----------------------------------------------------------
 
@@ -1675,7 +1675,7 @@
 # Flag-regular                         false       false   
 # Point-primitive                      true        true    
 # Point-primitive type                 1           1       
-# Block-primitive                      false               
+# Block-primitive                      false       false   
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -1805,7 +1805,7 @@
 # Flag-regular                         false       false   
 # Point-primitive                      true        true    
 # Point-primitive type                 1           1       
-# Block-primitive                      false               
+# Block-primitive                      false       false   
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -2013,7 +2013,7 @@
 # Flag-regular                         false         false   
 # Point-primitive                      true          true    
 # Point-primitive type                 1             2       
-# Block-primitive                      false                 
+# Block-primitive                      false         true    
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 

@@ -84,7 +84,7 @@
 # 7   8  56  21  3  6   ASL(3,2)  PSL(3,2)  S4                S8        2      2           3      1       1       true             false            true             false                20                     complete  
 # 8   8  56  28  4  12  ASL(3,2)  PSL(3,2)  S4                ASL(3,2)  2      2           3      1       3       true             false            true             true                 8                                
 # 9   8  14  7   4  3   PSL(2,7)  7:3       A4                ASL(3,2)  2      2           4      1       2       true             false            true             true                 1                                
-# 10  8  14  7   4  3   PSL(2,7)  7:3       A4                ASL(3,2)  2      2           4      1       3       true                              true             true                 1                                
+# 10  8  14  7   4  3   PSL(2,7)  7:3       A4                ASL(3,2)  2      2           4      1       3       true             false            true             true                 1                                
 # 11  8  28  21  6  15  PSL(2,7)  7:3       S3                S8        2      2           4      1       5       true             false            true             true                                        complete  
 # 12  8  42  21  4  9   PSL(2,7)  7:3       4                 PGL(2,7)  2      2           4      1       4       true             false            true             true                 12                               
 # 13  8  56  21  3  6   PSL(2,7)  7:3       3                 S8        2      2           4      1       1       true             false            true             false                20                     complete  
@@ -127,7 +127,7 @@
 # Flag-regular                         true      false     
 # Point-primitive                      true      true      
 # Point-primitive type                 1         1         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -179,7 +179,7 @@
 # Flag-regular                         true      false   
 # Point-primitive                      true      true    
 # Point-primitive type                 1         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -205,7 +205,7 @@
 # Flag-regular                         true      false     
 # Point-primitive                      true      true      
 # Point-primitive type                 2         2         
-# Block-primitive                      false               
+# Block-primitive                      false     false     
 # Block-primitive type                 0                   
 # ---------------------------------------------------------
 
@@ -231,7 +231,7 @@
 # Flag-regular                         true      false   
 # Point-primitive                      true      true    
 # Point-primitive type                 1         2       
-# Block-primitive                      false             
+# Block-primitive                      false     true    
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 

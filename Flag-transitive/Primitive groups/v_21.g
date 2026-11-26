@@ -241,39 +241,39 @@
 # 4    21  252     60      5   12     S7        2xS5         D20                  S7        3      3           3      1       1       true             false            true             false                                                                         
 # 5    21  21      5       5   1      M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 6           true       PG(2,4) parameters                
 # 6    21  21      16      16  12     M21       2^4:A5       2^4:A5               PΓL(3,4)  2      2           4      1       7       true             true             true             true                 5           true       complement of PG(2,4) parameters  
-# 7    21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       13      true                              true             true                 10                                                       
+# 7    21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       13      true             true             true             true                 10                                                       
 # 8    21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 10                                                       
-# 9    21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       12      true                              true             true                 10                                                       
-# 10   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       12      true                              true             true                 7                                                        
-# 11   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       13      true                              true             true                 7                                                        
+# 9    21  56      16      6   4      M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       12      true             true             true             true                 10                                                       
+# 10   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       12      true             true             true             true                 7                                                        
+# 11   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       13      true             true             true             true                 7                                                        
 # 12   21  56      40      15  28     M21       2^4:A5       A6                   PΣL(3,4)  2      2           4      1       11      true             true             true             true                 7                                                        
 # 13   21  105     20      4   3      M21       2^4:A5       2^4:2:2:3            PΓL(3,4)  2      2           4      1       3       true             false            true             false                                                                         
-# 14   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       20      true                              true             true                 17                                                       
-# 15   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       19      true                              true             true                 17                                                       
+# 14   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       20      true             true             true             true                 17                                                       
+# 15   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       19      true             true             true             true                 17                                                       
 # 16   21  120     40      7   12     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       18      true             true             true             true                 17                                                       
 # 17   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       20      true             true             true             true                 14                                                       
-# 18   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       19      true                              true             true                 14                                                       
-# 19   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       18      true                              true             true                 14                                                       
+# 18   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       19      true             true             true             true                 14                                                       
+# 19   21  120     80      14  52     M21       2^4:A5       PSL(3,2)             PΣL(3,4)  2      2           4      1       18      true             true             true             true                 14                                                       
 # 20   21  210     30      3   3      M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       1       true             false            true             false                                                                         
 # 21   21  210     80      8   28     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
 # 22   21  210     120     12  66     M21       2^4:A5       2^4:3:2              PΓL(3,4)  2      2           4      1       21      true             false            true             false                                                                         
 # 23   21  280     120     9   48     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 24                                                       
 # 24   21  280     160     12  88     M21       2^4:A5       3^2:Q8               PΓL(3,4)  2      2           4      1       23      true             true             true             true                 23                                                       
-# 25   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       10      true                              true             false                                                                         
+# 25   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       10      true             false            true             false                                                                         
 # 26   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       8       true             false            true             false                                                                         
-# 27   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       9       true                              true             false                                                                         
-# 28   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       25      true                              true             false                                                                         
-# 29   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       26      true                              true             false                                                                         
+# 27   21  336     80      5   16     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       9       true             false            true             false                                                                         
+# 28   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       25      true             false            true             false                                                                         
+# 29   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       26      true             false            true             false                                                                         
 # 30   21  336     160     10  72     M21       2^4:A5       A5                   PΣL(3,4)  2      2           4      1       24      true             false            true             false                                                                         
 # 31   21  336     240     15  168    M21       2^4:A5       A5                   PΓL(3,4)  2      2           4      1       27      true             false            true             false                                                                         
-# 32   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       5       true                              true             false                                                                         
-# 33   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       6       true                              true             false                                                                         
+# 32   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       5       true             false            true             false                                                                         
+# 33   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       6       true             false            true             false                                                                         
 # 34   21  840     160     4   24     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       4       true             false            true             false                                                                         
-# 35   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       16      true                              true             false                                                                         
+# 35   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       16      true             false            true             false                                                                         
 # 36   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       14      true             false            true             false                                                                         
-# 37   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       15      true                              true             false                                                                         
-# 38   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       4       true                              true             false                                                                         
-# 39   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       5       true                              true             false                                                                         
+# 37   21  840     240     6   60     M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       15      true             false            true             false                                                                         
+# 38   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       4       true             false            true             false                                                                         
+# 39   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       5       true             false            true             false                                                                         
 # 40   21  840     480     12  264    M21       2^4:A5       S4                   PΣL(3,4)  2      2           4      1       6       true             false            true             false                                                                         
 # 41   21  1120    160     3   16     M21       2^4:A5       3^2:2                PΓL(3,4)  2      2           4      1       2       true             false            true             false                                                                         
 # 42   21  2520    960     8   336    M21       2^4:A5       Q8                   PΓL(3,4)  2      2           4      1       22      true             false            true             false                                                                         
@@ -517,7 +517,7 @@
 # Flag-regular                         false  false      
 # Point-primitive                      true   true       
 # Point-primitive type                 2      2          
-# Block-primitive                      false             
+# Block-primitive                      false  false      
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -543,7 +543,7 @@
 # Flag-regular                         false      false          
 # Point-primitive                      true       true           
 # Point-primitive type                 2          2              
-# Block-primitive                      false                     
+# Block-primitive                      false      false          
 # Block-primitive type                 0                         
 # ---------------------------------------------------------------
 
@@ -673,7 +673,7 @@
 # Flag-regular                         false        false      
 # Point-primitive                      true         true       
 # Point-primitive type                 2            2          
-# Block-primitive                      false                   
+# Block-primitive                      false        false      
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -699,7 +699,7 @@
 # Flag-regular                         false        false      
 # Point-primitive                      true         true       
 # Point-primitive type                 2            2          
-# Block-primitive                      false                   
+# Block-primitive                      false        false      
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -725,7 +725,7 @@
 # Flag-regular                         false    false        
 # Point-primitive                      true     true         
 # Point-primitive type                 2        2            
-# Block-primitive                      false                 
+# Block-primitive                      false    false        
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -751,7 +751,7 @@
 # Flag-regular                         false    false        
 # Point-primitive                      true     true         
 # Point-primitive type                 2        2            
-# Block-primitive                      false                 
+# Block-primitive                      false    false        
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -777,7 +777,7 @@
 # Flag-regular                         false    false        
 # Point-primitive                      true     true         
 # Point-primitive type                 2        2            
-# Block-primitive                      false                 
+# Block-primitive                      false    false        
 # Block-primitive type                 0                     
 # -----------------------------------------------------------
 
@@ -881,7 +881,7 @@
 # Flag-regular                         false  false   
 # Point-primitive                      true   true    
 # Point-primitive type                 2      2       
-# Block-primitive                      false          
+# Block-primitive                      false  false   
 # Block-primitive type                 0              
 # ----------------------------------------------------
 
@@ -959,7 +959,7 @@
 # Flag-regular                         false   false     
 # Point-primitive                      true    true      
 # Point-primitive type                 2       2         
-# Block-primitive                      false             
+# Block-primitive                      false   false     
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -985,7 +985,7 @@
 # Flag-regular                         false   false     
 # Point-primitive                      true    true      
 # Point-primitive type                 2       2         
-# Block-primitive                      false             
+# Block-primitive                      false   false     
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -1011,7 +1011,7 @@
 # Flag-regular                         false   false      
 # Point-primitive                      true    true       
 # Point-primitive type                 2       2          
-# Block-primitive                      false              
+# Block-primitive                      false   false      
 # Block-primitive type                 0                  
 # --------------------------------------------------------
 
@@ -1037,7 +1037,7 @@
 # Flag-regular                         false        false       
 # Point-primitive                      true         true        
 # Point-primitive type                 2            2           
-# Block-primitive                      false                    
+# Block-primitive                      false        false       
 # Block-primitive type                 0                        
 # --------------------------------------------------------------
 
@@ -1063,7 +1063,7 @@
 # Flag-regular                         false        false       
 # Point-primitive                      true         true        
 # Point-primitive type                 2            2           
-# Block-primitive                      false                    
+# Block-primitive                      false        false       
 # Block-primitive type                 0                        
 # --------------------------------------------------------------
 
@@ -1193,7 +1193,7 @@
 # Flag-regular                         false   false     
 # Point-primitive                      true    true      
 # Point-primitive type                 2       2         
-# Block-primitive                      false             
+# Block-primitive                      false   false     
 # Block-primitive type                 0                 
 # -------------------------------------------------------
 
@@ -1219,7 +1219,7 @@
 # Flag-regular                         false        false      
 # Point-primitive                      true         true       
 # Point-primitive type                 2            2          
-# Block-primitive                      false                   
+# Block-primitive                      false        false      
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -1245,7 +1245,7 @@
 # Flag-regular                         false        false      
 # Point-primitive                      true         true       
 # Point-primitive type                 2            2          
-# Block-primitive                      false                   
+# Block-primitive                      false        false      
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -1453,7 +1453,7 @@
 # Flag-regular                         false        false      
 # Point-primitive                      true         true       
 # Point-primitive type                 2            2          
-# Block-primitive                      false                   
+# Block-primitive                      false        false      
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -1479,7 +1479,7 @@
 # Flag-regular                         false        false      
 # Point-primitive                      true         true       
 # Point-primitive type                 2            2          
-# Block-primitive                      false                   
+# Block-primitive                      false        false      
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -1505,7 +1505,7 @@
 # Flag-regular                         true    false      
 # Point-primitive                      true    true       
 # Point-primitive type                 2       2          
-# Block-primitive                      false              
+# Block-primitive                      false   false      
 # Block-primitive type                 0                  
 # --------------------------------------------------------
 
@@ -1531,7 +1531,7 @@
 # Flag-regular                         false        false      
 # Point-primitive                      true         true       
 # Point-primitive type                 2            2          
-# Block-primitive                      false                   
+# Block-primitive                      false        false      
 # Block-primitive type                 0                       
 # -------------------------------------------------------------
 
@@ -1557,7 +1557,7 @@
 # Flag-regular                         true    false      
 # Point-primitive                      true    true       
 # Point-primitive type                 2       2          
-# Block-primitive                      false              
+# Block-primitive                      false   false      
 # Block-primitive type                 0                  
 # --------------------------------------------------------
 

@@ -228,29 +228,29 @@
 # Nr   v   b         r        k   λ        G              Gα         GB                   Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1    26  65        15       6   3        PSL(2,25)      5^2:12     S5                   PΣL(2,25)  2      2           1      1       2       true             true             true             true                 3                                
-# 2    26  65        15       6   3        PSL(2,25)      5^2:12     S5                                                 1      1       3       true             true             true             true                 3                                
+# 2    26  65        15       6   3        PSL(2,25)      5^2:12     S5                   PΣL(2,25)  2      2           1      1       3       true             true             true             true                 3                                
 # 3    26  65        50       20  38       PSL(2,25)      5^2:12     S5                   PΣL(2,25)  2      2           1      1       2       true             true             true             true                 1                                
-# 4    26  65        50       20  38       PSL(2,25)      5^2:12     S5                                                 1      1       3       true             true             true             true                 1                                
-# 5    26  300       150      13  72       PSL(2,25)      5^2:12     D26                                                1      1       6       true             true             true             true                 5                                
+# 4    26  65        50       20  38       PSL(2,25)      5^2:12     S5                   PΣL(2,25)  2      2           1      1       3       true             true             true             true                 1                                
+# 5    26  300       150      13  72       PSL(2,25)      5^2:12     D26                  PΣL(2,25)  2      2           1      1       6       true             true             true             true                 5                                
 # 6    26  300       150      13  72       PSL(2,25)      5^2:12     D26                  PΣL(2,25)  2      2           1      1       6       true             true             true             true                 5                                
-# 7    26  325       100      8   28       PSL(2,25)      5^2:12     S4                                                 1      1       8       true             false            true             false                                                 
+# 7    26  325       100      8   28       PSL(2,25)      5^2:12     S4                   PΣL(2,25)  2      2           1      1       8       true             false            true             false                                                 
 # 8    26  325       100      8   28       PSL(2,25)      5^2:12     S4                   PΣL(2,25)  2      2           1      1       7       true             false            true             false                                                 
-# 9    26  325       150      12  66       PSL(2,25)      5^2:12     D24                                                1      1       9       true             true             true             false                                                 
+# 9    26  325       150      12  66       PSL(2,25)      5^2:12     D24                  PΣL(2,25)  2      2           1      1       9       true             true             true             false                                                 
 # 10   26  325       150      12  66       PSL(2,25)      5^2:12     D24                  PΣL(2,25)  2      2           1      1       9       true             true             true             false                                                 
-# 11   26  325       150      12  66       PSL(2,25)      5^2:12     S4                                                 1      1       8       true             false            true             false                                                 
+# 11   26  325       150      12  66       PSL(2,25)      5^2:12     S4                   PΣL(2,25)  2      2           1      1       8       true             false            true             false                                                 
 # 12   26  325       150      12  66       PSL(2,25)      5^2:12     S4                   PΣL(2,25)  2      2           1      1       7       true             false            true             false                                                 
 # 13   26  390       75       5   12       PSL(2,25)      5^2:12     5:4                  PΣL(2,25)  2      2           1      1       10      true             false            true             false                                                 
-# 14   26  390       75       5   12       PSL(2,25)      5^2:12     5:4                                                1      1       11      true             false            true             false                                                 
+# 14   26  390       75       5   12       PSL(2,25)      5^2:12     5:4                  PΣL(2,25)  2      2           1      1       11      true             false            true             false                                                 
 # 15   26  650       100      4   12       PSL(2,25)      5^2:12     A4                   PΣL(2,25)  2      2           1      1       16      true             false            true             false                                                 
-# 16   26  650       100      4   12       PSL(2,25)      5^2:12     A4                                                 1      1       17      true             false            true             false                                                 
-# 17   26  780       300      10  108      PSL(2,25)      5^2:12     D10                                                1      1       19      true             false            true             false                                                 
+# 16   26  650       100      4   12       PSL(2,25)      5^2:12     A4                   PΣL(2,25)  2      2           1      1       17      true             false            true             false                                                 
+# 17   26  780       300      10  108      PSL(2,25)      5^2:12     D10                  PΣL(2,25)  2      2           1      1       19      true             false            true             false                                                 
 # 18   26  780       300      10  108      PSL(2,25)      5^2:12     D10                  PΣL(2,25)  2      2           1      1       18      true             false            true             false                                                 
-# 19   26  975       150      4   18       PSL(2,25)      5^2:12     D8                                                 1      1       20      true             false            true             false                                                 
+# 19   26  975       150      4   18       PSL(2,25)      5^2:12     D8                   PΣL(2,25)  2      2           1      1       20      true             false            true             false                                                 
 # 20   26  975       150      4   18       PSL(2,25)      5^2:12     D8                   PΣL(2,25)  2      2           1      1       20      true             false            true             false                                                 
-# 21   26  1300      150      3   12       PSL(2,25)      5^2:12     S3                                                 1      1       22      true             false            true             false                                                 
+# 21   26  1300      150      3   12       PSL(2,25)      5^2:12     S3                   PΣL(2,25)  2      2           1      1       22      true             false            true             false                                                 
 # 22   26  1300      150      3   12       PSL(2,25)      5^2:12     S3                   PΣL(2,25)  2      2           1      1       21      true             false            true             false                                                 
 # 23   26  1300      300      6   60       PSL(2,25)      5^2:12     S3                   PΣL(2,25)  2      2           1      1       21      true             false            true             false                                                 
-# 24   26  1300      300      6   60       PSL(2,25)      5^2:12     S3                                                 1      1       22      true             false            true             false                                                 
+# 24   26  1300      300      6   60       PSL(2,25)      5^2:12     S3                   PΣL(2,25)  2      2           1      1       22      true             false            true             false                                                 
 # 25   26  130       30       6   6        PGL(2,25)      AGL(1,25)  S5                   PΓL(2,25)  2      2           2      1       2       true             false            true             true                 26                               
 # 26   26  130       100      20  76       PGL(2,25)      AGL(1,25)  S5                   PΓL(2,25)  2      2           2      1       2       true             false            true             true                 25                               
 # 27   26  325       300      24  276      PGL(2,25)      AGL(1,25)  D48                  S26        2      2           2      1       5       true             true             true             true                                        complete  
@@ -268,35 +268,35 @@
 # 39   26  1950      600      8   168      PGL(2,25)      AGL(1,25)  D8                   PΓL(2,25)  2      2           2      1       21      true             false            true             false                                                 
 # 40   26  2600      300      3   24       PGL(2,25)      AGL(1,25)  S3                   S26        2      2           2      1       25      true             false            true             false                113                    complete  
 # 41   26  2600      600      6   120      PGL(2,25)      AGL(1,25)  S3                   PΓL(2,25)  2      2           2      1       25      true             false            true             false                                                 
-# 42   26  2600      600      6   120      PGL(2,25)      AGL(1,25)  S3                                                 2      1       24      true             false            true             false                                                 
+# 42   26  2600      600      6   120      PGL(2,25)      AGL(1,25)  S3                   PGL(2,25)  2      2           2      1       24      true             false            true             false                                                 
 # 43   26  2600      600      6   120      PGL(2,25)      AGL(1,25)  S3                   PGL(2,25)  2      2           2      1       24      true             false            true             false                                                 
-# 44   26  3900      600      4   72       PGL(2,25)      AGL(1,25)  2^2                                                2      1       28      true             false            true             false                                                 
+# 44   26  3900      600      4   72       PGL(2,25)      AGL(1,25)  2^2                  PGL(2,25)  2      2           2      1       28      true             false            true             false                                                 
 # 45   26  3900      600      4   72       PGL(2,25)      AGL(1,25)  2^2                  PΓL(2,25)  2      2           2      1       28      true             false            true             false                                                 
 # 46   26  3900      600      4   72       PGL(2,25)      AGL(1,25)  2^2                  PGL(2,25)  2      2           2      1       28      true             false            true             false                                                 
-# 47   26  65        15       6   3        PΣL(2,25)      5^2:4xD6   2xS5                                               3      1       3       true             true             true             true                 3                                
+# 47   26  65        15       6   3        PΣL(2,25)      5^2:4xD6   2xS5                 PΣL(2,25)  2      2           3      1       3       true             true             true             true                 3                                
 # 48   26  65        15       6   3        PΣL(2,25)      5^2:4xD6   2xS5                 PΣL(2,25)  2      2           3      1       2       true             true             true             true                 3                                
 # 49   26  65        50       20  38       PΣL(2,25)      5^2:4xD6   2xS5                 PΣL(2,25)  2      2           3      1       2       true             true             true             true                 1                                
-# 50   26  65        50       20  38       PΣL(2,25)      5^2:4xD6   2xS5                                               3      1       3       true             true             true             true                 1                                
-# 51   26  300       150      13  72       PΣL(2,25)      5^2:4xD6   13:4                                               3      1       12      true             true             true             true                 5                                
+# 50   26  65        50       20  38       PΣL(2,25)      5^2:4xD6   2xS5                 PΣL(2,25)  2      2           3      1       3       true             true             true             true                 1                                
+# 51   26  300       150      13  72       PΣL(2,25)      5^2:4xD6   13:4                 PΣL(2,25)  2      2           3      1       12      true             true             true             true                 5                                
 # 52   26  300       150      13  72       PΣL(2,25)      5^2:4xD6   13:4                 PΣL(2,25)  2      2           3      1       12      true             true             true             true                 5                                
-# 53   26  325       100      8   28       PΣL(2,25)      5^2:4xD6   2xS4                                               3      1       14      true             false            true             false                                                 
+# 53   26  325       100      8   28       PΣL(2,25)      5^2:4xD6   2xS4                 PΣL(2,25)  2      2           3      1       14      true             false            true             false                                                 
 # 54   26  325       100      8   28       PΣL(2,25)      5^2:4xD6   2xS4                 PΣL(2,25)  2      2           3      1       13      true             false            true             false                                                 
-# 55   26  325       150      12  66       PΣL(2,25)      5^2:4xD6   D8xS3                                              3      1       15      true             true             true             false                                                 
+# 55   26  325       150      12  66       PΣL(2,25)      5^2:4xD6   D8xS3                PΣL(2,25)  2      2           3      1       15      true             true             true             false                                                 
 # 56   26  325       150      12  66       PΣL(2,25)      5^2:4xD6   D8xS3                PΣL(2,25)  2      2           3      1       15      true             true             true             false                                                 
-# 57   26  325       150      12  66       PΣL(2,25)      5^2:4xD6   2xS4                                               3      1       14      true             false            true             false                                                 
+# 57   26  325       150      12  66       PΣL(2,25)      5^2:4xD6   2xS4                 PΣL(2,25)  2      2           3      1       14      true             false            true             false                                                 
 # 58   26  325       150      12  66       PΣL(2,25)      5^2:4xD6   2xS4                 PΣL(2,25)  2      2           3      1       13      true             false            true             false                                                 
-# 59   26  390       75       5   12       PΣL(2,25)      5^2:4xD6   2x(5:4)                                            3      1       17      true             false            true             false                                                 
+# 59   26  390       75       5   12       PΣL(2,25)      5^2:4xD6   2x(5:4)              PΣL(2,25)  2      2           3      1       17      true             false            true             false                                                 
 # 60   26  390       75       5   12       PΣL(2,25)      5^2:4xD6   2x(5:4)              PΣL(2,25)  2      2           3      1       16      true             false            true             false                                                 
-# 61   26  650       100      4   12       PΣL(2,25)      5^2:4xD6   S4                                                 3      1       25      true             false            true             false                                                 
+# 61   26  650       100      4   12       PΣL(2,25)      5^2:4xD6   S4                   PΣL(2,25)  2      2           3      1       25      true             false            true             false                                                 
 # 62   26  650       100      4   12       PΣL(2,25)      5^2:4xD6   S4                   PΣL(2,25)  2      2           3      1       23      true             false            true             false                                                 
 # 63   26  780       300      10  108      PΣL(2,25)      5^2:4xD6   D20                  PΣL(2,25)  2      2           3      1       35      true             false            true             false                                                 
-# 64   26  780       300      10  108      PΣL(2,25)      5^2:4xD6   D20                                                3      1       37      true             false            true             false                                                 
+# 64   26  780       300      10  108      PΣL(2,25)      5^2:4xD6   D20                  PΣL(2,25)  2      2           3      1       37      true             false            true             false                                                 
 # 65   26  975       150      4   18       PΣL(2,25)      5^2:4xD6   2xD8                 PΣL(2,25)  2      2           3      1       38      true             false            true             false                                                 
-# 66   26  975       150      4   18       PΣL(2,25)      5^2:4xD6   2xD8                                               3      1       38      true             false            true             false                                                 
+# 66   26  975       150      4   18       PΣL(2,25)      5^2:4xD6   2xD8                 PΣL(2,25)  2      2           3      1       38      true             false            true             false                                                 
 # 67   26  1300      150      3   12       PΣL(2,25)      5^2:4xD6   D12                  PΣL(2,25)  2      2           3      1       47      true             false            true             false                                                 
-# 68   26  1300      150      3   12       PΣL(2,25)      5^2:4xD6   D12                                                3      1       49      true             false            true             false                                                 
+# 68   26  1300      150      3   12       PΣL(2,25)      5^2:4xD6   D12                  PΣL(2,25)  2      2           3      1       49      true             false            true             false                                                 
 # 69   26  1300      300      6   60       PΣL(2,25)      5^2:4xD6   D12                  PΣL(2,25)  2      2           3      1       46      true             false            true             false                                                 
-# 70   26  1300      300      6   60       PΣL(2,25)      5^2:4xD6   D12                                                3      1       48      true             false            true             false                                                 
+# 70   26  1300      300      6   60       PΣL(2,25)      5^2:4xD6   D12                  PΣL(2,25)  2      2           3      1       48      true             false            true             false                                                 
 # 71   26  130       30       6   6        PSL(2,25).2_3  5^2:3:8    S5                   PΓL(2,25)  2      2           4      1       2       true             false            true             true                 26                               
 # 72   26  130       100      20  76       PSL(2,25).2_3  5^2:3:8    S5                   PΓL(2,25)  2      2           4      1       2       true             false            true             true                 25                               
 # 73   26  325       300      24  276      PSL(2,25).2_3  5^2:3:8    (3xQ8):2             S26        2      2           4      1       5       true             true             true             true                                        complete  
@@ -460,7 +460,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -486,7 +486,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -538,7 +538,7 @@
 # Flag-regular                         false      false                            
 # Point-primitive                      true       true                             
 # Point-primitive type                 2          2                                
-# Block-primitive                      false                                       
+# Block-primitive                      false      false                            
 # Block-primitive type                 0                                           
 # ---------------------------------------------------------------------------------
 
@@ -590,7 +590,7 @@
 # Flag-regular                         false      false                            
 # Point-primitive                      true       true                             
 # Point-primitive type                 2          2                                
-# Block-primitive                      false                                       
+# Block-primitive                      false      false                            
 # Block-primitive type                 0                                           
 # ---------------------------------------------------------------------------------
 
@@ -642,7 +642,7 @@
 # Flag-regular                         false      false                            
 # Point-primitive                      true       true                             
 # Point-primitive type                 2          2                                
-# Block-primitive                      false                                       
+# Block-primitive                      false      false                            
 # Block-primitive type                 0                                           
 # ---------------------------------------------------------------------------------
 
@@ -668,7 +668,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -720,7 +720,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -746,7 +746,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -772,7 +772,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -798,7 +798,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -850,7 +850,7 @@
 # Flag-regular                         false      false                            
 # Point-primitive                      true       true                             
 # Point-primitive type                 2          2                                
-# Block-primitive                      false                                       
+# Block-primitive                      false      false                            
 # Block-primitive type                 0                                           
 # ---------------------------------------------------------------------------------
 
@@ -928,7 +928,7 @@
 # Flag-regular                         false      false                            
 # Point-primitive                      true       true                             
 # Point-primitive type                 2          2                                
-# Block-primitive                      false                                       
+# Block-primitive                      false      false                            
 # Block-primitive type                 0                                           
 # ---------------------------------------------------------------------------------
 
@@ -954,7 +954,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -980,7 +980,7 @@
 # Flag-regular                         true       false                            
 # Point-primitive                      true       true                             
 # Point-primitive type                 2          2                                
-# Block-primitive                      false                                       
+# Block-primitive                      false      false                            
 # Block-primitive type                 0                                           
 # ---------------------------------------------------------------------------------
 
@@ -1032,7 +1032,7 @@
 # Flag-regular                         true       false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -1058,7 +1058,7 @@
 # Flag-regular                         false      false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
@@ -1136,7 +1136,7 @@
 # Flag-regular                         true       false                             
 # Point-primitive                      true       true                              
 # Point-primitive type                 2          2                                 
-# Block-primitive                      false                                        
+# Block-primitive                      false      false                             
 # Block-primitive type                 0                                            
 # ----------------------------------------------------------------------------------
 
