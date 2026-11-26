@@ -2,7 +2,7 @@
 # Flag-transitive 2-designs 
 # Transitive groups on 3 points 
 # ####################################################################################################
-# Remark:       there exists no 2-design admitting flag-transitive affine automorphism group
+# Remark:       there exists no 2-design admitting flag-transitive automorphism group
 # References:    
 
 # 2. Number of designs:

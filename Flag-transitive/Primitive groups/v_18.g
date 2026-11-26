@@ -6,11 +6,11 @@
 #               lD_18 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          31             31     
 # Point-imprimitive    0          0              0      
@@ -24,7 +24,7 @@
 # Total                0          31             31     
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -72,49 +72,49 @@
 # 2   18  102    68     12  44     PSL(2,17)  17:8       S4                  PSL(2,17)  2      2           1      1       4       true             true             true             true                 1                                
 # 3   18  136    68     9   32     PSL(2,17)  17:8       D18                 PSL(2,17)  2      2           1      1       7       true             true             true             true                 3                                
 # 4   18  153    68     8   28     PSL(2,17)  17:8       D16                 PSL(2,17)  2      2           1      1       6       true             true             true             false                                                 
-# 5   18  153    136    16  120    PGL(2,17)  AGL(1,17)  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
-# 6   18  153    136    16  120    A18        A17        (S16 x S2) cap A18  S18        2      2           3      1       8       true             true             true             true                                        complete  
-# 7   18  153    136    16  120    S18        S17        S16 x S2            S18        2      2           4      1       8       true             true             true             true                                        complete  
+# 5   18  306    68     4   12     PSL(2,17)  17:8       D8                  PSL(2,17)  2      2           1      1       2       true             false            true             false                                                 
+# 6   18  408    68     3   8      PSL(2,17)  17:8       S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
+# 7   18  153    136    16  120    PGL(2,17)  AGL(1,17)  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
 # 8   18  204    68     6   20     PGL(2,17)  AGL(1,17)  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 9                                
 # 9   18  204    136    12  88     PGL(2,17)  AGL(1,17)  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 8                                
 # 10  18  272    136    9   64     PGL(2,17)  AGL(1,17)  D18                 PGL(2,17)  2      2           2      1       9       true             false            true             true                 10                               
-# 11  18  306    68     4   12     PSL(2,17)  17:8       D8                  PSL(2,17)  2      2           1      1       2       true             false            true             false                                                 
-# 12  18  306    136    8   56     PGL(2,17)  AGL(1,17)  D16                 PGL(2,17)  2      2           2      1       7       true             false            true             false                                                 
-# 13  18  408    68     3   8      PSL(2,17)  17:8       S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
-# 14  18  408    136    6   40     PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 15                               
-# 15  18  408    272    12  176    PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 14                               
-# 16  18  612    136    4   24     PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       2       true             false            true             false                                                 
-# 17  18  612    272    8   112    PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       8       true             false            true             false                                                 
-# 18  18  816    136    3   16     PGL(2,17)  AGL(1,17)  S3                  S18        2      2           2      1       1       true             false            true             false                22                     complete  
-# 19  18  816    136    3   16     A18        A17        (S3 x S15) cap A18  S18        2      2           3      1       1       true             true             true             true                 22                     complete  
-# 20  18  816    136    3   16     S18        S17        S3 x S15            S18        2      2           4      1       1       true             true             true             true                 22                     complete  
-# 21  18  816    272    6   80     PGL(2,17)  AGL(1,17)  S3                  PGL(2,17)  2      2           2      1       6       true             false            true             false                                                 
-# 22  18  816    680    15  560    A18        A17        (S15 x S3) cap A18  S18        2      2           3      1       1       true             true             true             true                 18                     complete  
-# 23  18  816    680    15  560    S18        S17        S15 x S3            S18        2      2           4      1       1       true             true             true             true                 18                     complete  
-# 24  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
-# 25  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
-# 26  18  3060   680    4   120    A18        A17        (S4 x S14) cap A18  S18        2      2           3      1       2       true             true             true             true                 28                     complete  
-# 27  18  3060   680    4   120    S18        S17        S4 x S14            S18        2      2           4      1       2       true             true             true             true                 28                     complete  
-# 28  18  3060   2380   14  1820   A18        A17        (S14 x S4) cap A18  S18        2      2           3      1       2       true             true             true             true                 26                     complete  
-# 29  18  3060   2380   14  1820   S18        S17        S14 x S4            S18        2      2           4      1       2       true             true             true             true                 26                     complete  
-# 30  18  8568   2380   5   560    A18        A17        (S5 x S13) cap A18  S18        2      2           3      1       3       true             true             true             true                 32                     complete  
-# 31  18  8568   2380   5   560    S18        S17        S5 x S13            S18        2      2           4      1       3       true             true             true             true                 32                     complete  
-# 32  18  8568   6188   13  4368   A18        A17        (S13 x S5) cap A18  S18        2      2           3      1       3       true             true             true             true                 30                     complete  
-# 33  18  8568   6188   13  4368   S18        S17        S13 x S5            S18        2      2           4      1       3       true             true             true             true                 30                     complete  
-# 34  18  18564  6188   6   1820   A18        A17        (S6 x S12) cap A18  S18        2      2           3      1       4       true             true             true             true                 36                     complete  
-# 35  18  18564  6188   6   1820   S18        S17        S6 x S12            S18        2      2           4      1       4       true             true             true             true                 36                     complete  
-# 36  18  18564  12376  12  8008   A18        A17        (S12 x S6) cap A18  S18        2      2           3      1       4       true             true             true             true                 34                     complete  
-# 37  18  18564  12376  12  8008   S18        S17        S12 x S6            S18        2      2           4      1       4       true             true             true             true                 34                     complete  
-# 38  18  31824  12376  7   4368   A18        A17        (S7 x S11) cap A18  S18        2      2           3      1       5       true             true             true             true                 40                     complete  
-# 39  18  31824  12376  7   4368   S18        S17        S7 x S11            S18        2      2           4      1       5       true             true             true             true                 40                     complete  
-# 40  18  31824  19448  11  11440  A18        A17        (S11 x S7) cap A18  S18        2      2           3      1       5       true             true             true             true                 38                     complete  
-# 41  18  31824  19448  11  11440  S18        S17        S11 x S7            S18        2      2           4      1       5       true             true             true             true                 38                     complete  
-# 42  18  43758  19448  8   8008   A18        A17        (S8 x S10) cap A18  S18        2      2           3      1       6       true             true             true             true                 44                     complete  
-# 43  18  43758  19448  8   8008   S18        S17        S8 x S10            S18        2      2           4      1       6       true             true             true             true                 44                     complete  
-# 44  18  43758  24310  10  12870  A18        A17        (S10 x S8) cap A18  S18        2      2           3      1       6       true             true             true             true                 42                     complete  
-# 45  18  43758  24310  10  12870  S18        S17        S10 x S8            S18        2      2           4      1       6       true             true             true             true                 42                     complete  
-# 46  18  48620  24310  9   11440  A18        A17        (S9 x S9) cap A18   S18        2      2           3      1       7       true             false            true             true                 46                     complete  
-# 47  18  48620  24310  9   11440  S18        S17        S9 x S9             S18        2      2           4      1       7       true             false            true             true                 46                     complete  
+# 11  18  306    136    8   56     PGL(2,17)  AGL(1,17)  D16                 PGL(2,17)  2      2           2      1       7       true             false            true             false                                                 
+# 12  18  408    136    6   40     PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 13                               
+# 13  18  408    272    12  176    PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 12                               
+# 14  18  612    136    4   24     PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       2       true             false            true             false                                                 
+# 15  18  612    272    8   112    PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       8       true             false            true             false                                                 
+# 16  18  816    136    3   16     PGL(2,17)  AGL(1,17)  S3                  S18        2      2           2      1       1       true             false            true             false                22                     complete  
+# 17  18  816    272    6   80     PGL(2,17)  AGL(1,17)  S3                  PGL(2,17)  2      2           2      1       6       true             false            true             false                                                 
+# 18  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
+# 19  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
+# 20  18  153    136    16  120    A18        A17        (S16 x S2) cap A18  S18        2      2           3      1       8       true             true             true             true                                        complete  
+# 21  18  816    136    3   16     A18        A17        (S3 x S15) cap A18  S18        2      2           3      1       1       true             true             true             true                 22                     complete  
+# 22  18  816    680    15  560    A18        A17        (S15 x S3) cap A18  S18        2      2           3      1       1       true             true             true             true                 16                     complete  
+# 23  18  3060   680    4   120    A18        A17        (S4 x S14) cap A18  S18        2      2           3      1       2       true             true             true             true                 24                     complete  
+# 24  18  3060   2380   14  1820   A18        A17        (S14 x S4) cap A18  S18        2      2           3      1       2       true             true             true             true                 23                     complete  
+# 25  18  8568   2380   5   560    A18        A17        (S5 x S13) cap A18  S18        2      2           3      1       3       true             true             true             true                 26                     complete  
+# 26  18  8568   6188   13  4368   A18        A17        (S13 x S5) cap A18  S18        2      2           3      1       3       true             true             true             true                 25                     complete  
+# 27  18  18564  6188   6   1820   A18        A17        (S6 x S12) cap A18  S18        2      2           3      1       4       true             true             true             true                 28                     complete  
+# 28  18  18564  12376  12  8008   A18        A17        (S12 x S6) cap A18  S18        2      2           3      1       4       true             true             true             true                 27                     complete  
+# 29  18  31824  12376  7   4368   A18        A17        (S7 x S11) cap A18  S18        2      2           3      1       5       true             true             true             true                 30                     complete  
+# 30  18  31824  19448  11  11440  A18        A17        (S11 x S7) cap A18  S18        2      2           3      1       5       true             true             true             true                 29                     complete  
+# 31  18  43758  19448  8   8008   A18        A17        (S8 x S10) cap A18  S18        2      2           3      1       6       true             true             true             true                 32                     complete  
+# 32  18  43758  24310  10  12870  A18        A17        (S10 x S8) cap A18  S18        2      2           3      1       6       true             true             true             true                 31                     complete  
+# 33  18  48620  24310  9   11440  A18        A17        (S9 x S9) cap A18   S18        2      2           3      1       7       true             false            true             true                 33                     complete  
+# 34  18  153    136    16  120    S18        S17        S16 x S2            S18        2      2           4      1       8       true             true             true             true                                        complete  
+# 35  18  816    136    3   16     S18        S17        S3 x S15            S18        2      2           4      1       1       true             true             true             true                 22                     complete  
+# 36  18  816    680    15  560    S18        S17        S15 x S3            S18        2      2           4      1       1       true             true             true             true                 16                     complete  
+# 37  18  3060   680    4   120    S18        S17        S4 x S14            S18        2      2           4      1       2       true             true             true             true                 24                     complete  
+# 38  18  3060   2380   14  1820   S18        S17        S14 x S4            S18        2      2           4      1       2       true             true             true             true                 23                     complete  
+# 39  18  8568   2380   5   560    S18        S17        S5 x S13            S18        2      2           4      1       3       true             true             true             true                 26                     complete  
+# 40  18  8568   6188   13  4368   S18        S17        S13 x S5            S18        2      2           4      1       3       true             true             true             true                 25                     complete  
+# 41  18  18564  6188   6   1820   S18        S17        S6 x S12            S18        2      2           4      1       4       true             true             true             true                 28                     complete  
+# 42  18  18564  12376  12  8008   S18        S17        S12 x S6            S18        2      2           4      1       4       true             true             true             true                 27                     complete  
+# 43  18  31824  12376  7   4368   S18        S17        S7 x S11            S18        2      2           4      1       5       true             true             true             true                 30                     complete  
+# 44  18  31824  19448  11  11440  S18        S17        S11 x S7            S18        2      2           4      1       5       true             true             true             true                 29                     complete  
+# 45  18  43758  19448  8   8008   S18        S17        S8 x S10            S18        2      2           4      1       6       true             true             true             true                 32                     complete  
+# 46  18  43758  24310  10  12870  S18        S17        S10 x S8            S18        2      2           4      1       6       true             true             true             true                 31                     complete  
+# 47  18  48620  24310  9   11440  S18        S17        S9 x S9             S18        2      2           4      1       7       true             false            true             true                 33                     complete  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
@@ -129,54 +129,54 @@
 # 6   18  136    68     9   32     PSL(2,17)  17:8       D18                 PSL(2,17)  2      2           1      1       7       true                              true             true                 5                                
 # 7   18  153    68     8   28     PSL(2,17)  17:8       D16                 PSL(2,17)  2      2           1      1       6       true             true             true             false                                                 
 # 8   18  153    68     8   28     PSL(2,17)  17:8       D16                 PSL(2,17)  2      2           1      1       6       true                              true             false                                                 
-# 9   18  153    136    16  120    PGL(2,17)  AGL(1,17)  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
-# 10  18  153    136    16  120    A18        A17        (S16 x S2) cap A18  S18        2      2           3      1       8       true             true             true             true                                        complete  
-# 11  18  153    136    16  120    S18        S17        S16 x S2            S18        2      2           4      1       8       true             true             true             true                                        complete  
-# 12  18  204    68     6   20     PGL(2,17)  AGL(1,17)  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 13                               
-# 13  18  204    136    12  88     PGL(2,17)  AGL(1,17)  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 12                               
-# 14  18  272    136    9   64     PGL(2,17)  AGL(1,17)  D18                 PGL(2,17)  2      2           2      1       9       true             false            true             true                 14                               
-# 15  18  306    68     4   12     PSL(2,17)  17:8       D8                  PSL(2,17)  2      2           1      1       2       true             false            true             false                                                 
-# 16  18  306    68     4   12     PSL(2,17)  17:8       D8                  PSL(2,17)  2      2           1      1       3       true                              true             false                                                 
+# 9   18  306    68     4   12     PSL(2,17)  17:8       D8                  PSL(2,17)  2      2           1      1       2       true             false            true             false                                                 
+# 10  18  306    68     4   12     PSL(2,17)  17:8       D8                  PSL(2,17)  2      2           1      1       3       true                              true             false                                                 
+# 11  18  408    68     3   8      PSL(2,17)  17:8       S3                  PSL(2,17)  2      2           1      1       1       true                              true             false                                                 
+# 12  18  408    68     3   8      PSL(2,17)  17:8       S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
+# 13  18  153    136    16  120    PGL(2,17)  AGL(1,17)  D32                 S18        2      2           2      1       10      true             true             true             true                                        complete  
+# 14  18  204    68     6   20     PGL(2,17)  AGL(1,17)  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 15                               
+# 15  18  204    136    12  88     PGL(2,17)  AGL(1,17)  S4                  PGL(2,17)  2      2           2      1       4       true             false            true             true                 14                               
+# 16  18  272    136    9   64     PGL(2,17)  AGL(1,17)  D18                 PGL(2,17)  2      2           2      1       9       true             false            true             true                 16                               
 # 17  18  306    136    8   56     PGL(2,17)  AGL(1,17)  D16                 PGL(2,17)  2      2           2      1       7       true             false            true             false                                                 
-# 18  18  408    68     3   8      PSL(2,17)  17:8       S3                  PSL(2,17)  2      2           1      1       1       true                              true             false                                                 
-# 19  18  408    68     3   8      PSL(2,17)  17:8       S3                  PSL(2,17)  2      2           1      1       1       true             false            true             false                                                 
-# 20  18  408    136    6   40     PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 21                               
-# 21  18  408    272    12  176    PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 20                               
-# 22  18  612    136    4   24     PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       2       true             false            true             false                                                 
-# 23  18  612    272    8   112    PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       8       true             false            true             false                                                 
-# 24  18  816    136    3   16     PGL(2,17)  AGL(1,17)  S3                  S18        2      2           2      1       1       true             false            true             false                28                     complete  
-# 25  18  816    136    3   16     A18        A17        (S3 x S15) cap A18  S18        2      2           3      1       1       true             true             true             true                 28                     complete  
-# 26  18  816    136    3   16     S18        S17        S3 x S15            S18        2      2           4      1       1       true             true             true             true                 28                     complete  
-# 27  18  816    272    6   80     PGL(2,17)  AGL(1,17)  S3                  PGL(2,17)  2      2           2      1       6       true             false            true             false                                                 
-# 28  18  816    680    15  560    A18        A17        (S15 x S3) cap A18  S18        2      2           3      1       1       true             true             true             true                 24                     complete  
-# 29  18  816    680    15  560    S18        S17        S15 x S3            S18        2      2           4      1       1       true             true             true             true                 24                     complete  
-# 30  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
-# 31  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
-# 32  18  3060   680    4   120    A18        A17        (S4 x S14) cap A18  S18        2      2           3      1       2       true             true             true             true                 34                     complete  
-# 33  18  3060   680    4   120    S18        S17        S4 x S14            S18        2      2           4      1       2       true             true             true             true                 34                     complete  
-# 34  18  3060   2380   14  1820   A18        A17        (S14 x S4) cap A18  S18        2      2           3      1       2       true             true             true             true                 32                     complete  
-# 35  18  3060   2380   14  1820   S18        S17        S14 x S4            S18        2      2           4      1       2       true             true             true             true                 32                     complete  
-# 36  18  8568   2380   5   560    A18        A17        (S5 x S13) cap A18  S18        2      2           3      1       3       true             true             true             true                 38                     complete  
-# 37  18  8568   2380   5   560    S18        S17        S5 x S13            S18        2      2           4      1       3       true             true             true             true                 38                     complete  
-# 38  18  8568   6188   13  4368   A18        A17        (S13 x S5) cap A18  S18        2      2           3      1       3       true             true             true             true                 36                     complete  
-# 39  18  8568   6188   13  4368   S18        S17        S13 x S5            S18        2      2           4      1       3       true             true             true             true                 36                     complete  
-# 40  18  18564  6188   6   1820   A18        A17        (S6 x S12) cap A18  S18        2      2           3      1       4       true             true             true             true                 42                     complete  
-# 41  18  18564  6188   6   1820   S18        S17        S6 x S12            S18        2      2           4      1       4       true             true             true             true                 42                     complete  
-# 42  18  18564  12376  12  8008   A18        A17        (S12 x S6) cap A18  S18        2      2           3      1       4       true             true             true             true                 40                     complete  
-# 43  18  18564  12376  12  8008   S18        S17        S12 x S6            S18        2      2           4      1       4       true             true             true             true                 40                     complete  
-# 44  18  31824  12376  7   4368   A18        A17        (S7 x S11) cap A18  S18        2      2           3      1       5       true             true             true             true                 46                     complete  
-# 45  18  31824  12376  7   4368   S18        S17        S7 x S11            S18        2      2           4      1       5       true             true             true             true                 46                     complete  
-# 46  18  31824  19448  11  11440  A18        A17        (S11 x S7) cap A18  S18        2      2           3      1       5       true             true             true             true                 44                     complete  
-# 47  18  31824  19448  11  11440  S18        S17        S11 x S7            S18        2      2           4      1       5       true             true             true             true                 44                     complete  
-# 48  18  43758  19448  8   8008   A18        A17        (S8 x S10) cap A18  S18        2      2           3      1       6       true             true             true             true                 50                     complete  
-# 49  18  43758  19448  8   8008   S18        S17        S8 x S10            S18        2      2           4      1       6       true             true             true             true                 50                     complete  
-# 50  18  43758  24310  10  12870  A18        A17        (S10 x S8) cap A18  S18        2      2           3      1       6       true             true             true             true                 48                     complete  
-# 51  18  43758  24310  10  12870  S18        S17        S10 x S8            S18        2      2           4      1       6       true             true             true             true                 48                     complete  
-# 52  18  48620  24310  9   11440  A18        A17        (S9 x S9) cap A18   S18        2      2           3      1       7       true             false            true             true                 52                     complete  
-# 53  18  48620  24310  9   11440  S18        S17        S9 x S9             S18        2      2           4      1       7       true             false            true             true                 52                     complete  
+# 18  18  408    136    6   40     PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 19                               
+# 19  18  408    272    12  176    PGL(2,17)  AGL(1,17)  D12                 PGL(2,17)  2      2           2      1       5       true             false            true             true                 18                               
+# 20  18  612    136    4   24     PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       2       true             false            true             false                                                 
+# 21  18  612    272    8   112    PGL(2,17)  AGL(1,17)  D8                  PGL(2,17)  2      2           2      1       8       true             false            true             false                                                 
+# 22  18  816    136    3   16     PGL(2,17)  AGL(1,17)  S3                  S18        2      2           2      1       1       true             false            true             false                28                     complete  
+# 23  18  816    272    6   80     PGL(2,17)  AGL(1,17)  S3                  PGL(2,17)  2      2           2      1       6       true             false            true             false                                                 
+# 24  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
+# 25  18  1224   272    4   48     PGL(2,17)  AGL(1,17)  2^2                 PGL(2,17)  2      2           2      1       3       true             false            true             false                                                 
+# 26  18  153    136    16  120    A18        A17        (S16 x S2) cap A18  S18        2      2           3      1       8       true             true             true             true                                        complete  
+# 27  18  816    136    3   16     A18        A17        (S3 x S15) cap A18  S18        2      2           3      1       1       true             true             true             true                 28                     complete  
+# 28  18  816    680    15  560    A18        A17        (S15 x S3) cap A18  S18        2      2           3      1       1       true             true             true             true                 22                     complete  
+# 29  18  3060   680    4   120    A18        A17        (S4 x S14) cap A18  S18        2      2           3      1       2       true             true             true             true                 30                     complete  
+# 30  18  3060   2380   14  1820   A18        A17        (S14 x S4) cap A18  S18        2      2           3      1       2       true             true             true             true                 29                     complete  
+# 31  18  8568   2380   5   560    A18        A17        (S5 x S13) cap A18  S18        2      2           3      1       3       true             true             true             true                 32                     complete  
+# 32  18  8568   6188   13  4368   A18        A17        (S13 x S5) cap A18  S18        2      2           3      1       3       true             true             true             true                 31                     complete  
+# 33  18  18564  6188   6   1820   A18        A17        (S6 x S12) cap A18  S18        2      2           3      1       4       true             true             true             true                 34                     complete  
+# 34  18  18564  12376  12  8008   A18        A17        (S12 x S6) cap A18  S18        2      2           3      1       4       true             true             true             true                 33                     complete  
+# 35  18  31824  12376  7   4368   A18        A17        (S7 x S11) cap A18  S18        2      2           3      1       5       true             true             true             true                 36                     complete  
+# 36  18  31824  19448  11  11440  A18        A17        (S11 x S7) cap A18  S18        2      2           3      1       5       true             true             true             true                 35                     complete  
+# 37  18  43758  19448  8   8008   A18        A17        (S8 x S10) cap A18  S18        2      2           3      1       6       true             true             true             true                 38                     complete  
+# 38  18  43758  24310  10  12870  A18        A17        (S10 x S8) cap A18  S18        2      2           3      1       6       true             true             true             true                 37                     complete  
+# 39  18  48620  24310  9   11440  A18        A17        (S9 x S9) cap A18   S18        2      2           3      1       7       true             false            true             true                 39                     complete  
+# 40  18  153    136    16  120    S18        S17        S16 x S2            S18        2      2           4      1       8       true             true             true             true                                        complete  
+# 41  18  816    136    3   16     S18        S17        S3 x S15            S18        2      2           4      1       1       true             true             true             true                 28                     complete  
+# 42  18  816    680    15  560    S18        S17        S15 x S3            S18        2      2           4      1       1       true             true             true             true                 22                     complete  
+# 43  18  3060   680    4   120    S18        S17        S4 x S14            S18        2      2           4      1       2       true             true             true             true                 30                     complete  
+# 44  18  3060   2380   14  1820   S18        S17        S14 x S4            S18        2      2           4      1       2       true             true             true             true                 29                     complete  
+# 45  18  8568   2380   5   560    S18        S17        S5 x S13            S18        2      2           4      1       3       true             true             true             true                 32                     complete  
+# 46  18  8568   6188   13  4368   S18        S17        S13 x S5            S18        2      2           4      1       3       true             true             true             true                 31                     complete  
+# 47  18  18564  6188   6   1820   S18        S17        S6 x S12            S18        2      2           4      1       4       true             true             true             true                 34                     complete  
+# 48  18  18564  12376  12  8008   S18        S17        S12 x S6            S18        2      2           4      1       4       true             true             true             true                 33                     complete  
+# 49  18  31824  12376  7   4368   S18        S17        S7 x S11            S18        2      2           4      1       5       true             true             true             true                 36                     complete  
+# 50  18  31824  19448  11  11440  S18        S17        S11 x S7            S18        2      2           4      1       5       true             true             true             true                 35                     complete  
+# 51  18  43758  19448  8   8008   S18        S17        S8 x S10            S18        2      2           4      1       6       true             true             true             true                 38                     complete  
+# 52  18  43758  24310  10  12870  S18        S17        S10 x S8            S18        2      2           4      1       6       true             true             true             true                 37                     complete  
+# 53  18  48620  24310  9   11440  S18        S17        S9 x S9             S18        2      2           4      1       7       true             false            true             true                 39                     complete  
 # -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -284,30 +284,30 @@
 # -----------------------------------------------------------
 
 # Design: 5
-# ---------------------------------------------------------
+# --------------------------------------------------------
 # Parameter set: [ 18, 153, 136, 16, 120 ]
 # Complement:    [ 18, 153, 17, 2, 1 ]
-# ---------------------------------------------------------
-#                                      G          Aut(D)   
-# ---------------------------------------------------------
-# Structure                            PGL(2,17)  S18      
-# Rank                                 2          2        
-# 2-Homogeneous                        true       true     
-# Point-stabiliser                     AGL(1,17)  S17      
-# Block-stabiliser                     D32        2xS16    
-# Orbit structure of point-stabiliser                      
-# Orbit structure of block-stabiliser                      
-# Point-transitive                     true       true     
-# Block-transitive                     true       true     
-# Flag-transitive                      true       true     
-# Anti-flag-transitive                 true       true     
-# Flag-semiregular                     false      false    
-# Flag-regular                         false      false    
-# Point-primitive                      true       true     
-# Point-primitive type                 2          2        
-# Block-primitive                      true       true     
-# Block-primitive type                 2                   
-# ---------------------------------------------------------
+# --------------------------------------------------------
+#                                      G          Aut(D)  
+# --------------------------------------------------------
+# Structure                            PGL(2,17)  S18     
+# Rank                                 2          2       
+# 2-Homogeneous                        true       true    
+# Point-stabiliser                     AGL(1,17)  S17     
+# Block-stabiliser                     D32        2xS16   
+# Orbit structure of point-stabiliser                     
+# Orbit structure of block-stabiliser                     
+# Point-transitive                     true       true    
+# Block-transitive                     true       true    
+# Flag-transitive                      true       true    
+# Anti-flag-transitive                 true       true    
+# Flag-semiregular                     false      false   
+# Flag-regular                         false      false   
+# Point-primitive                      true       true    
+# Point-primitive type                 2          2       
+# Block-primitive                      true       true    
+# Block-primitive type                 2                  
+# --------------------------------------------------------
 
 # Design: 6
 # -----------------------------------------------------------
@@ -570,30 +570,30 @@
 # -----------------------------------------------------------
 
 # Design: 16
-# ---------------------------------------------------------
+# --------------------------------------------------------
 # Parameter set: [ 18, 816, 136, 3, 16 ]
 # Complement:    [ 18, 816, 680, 15, 560 ]
-# ---------------------------------------------------------
-#                                      G          Aut(D)   
-# ---------------------------------------------------------
-# Structure                            PGL(2,17)  S18      
-# Rank                                 2          2        
-# 2-Homogeneous                        true       true     
-# Point-stabiliser                     AGL(1,17)  S17      
-# Block-stabiliser                     S3         S15xS3   
-# Orbit structure of point-stabiliser                      
-# Orbit structure of block-stabiliser                      
-# Point-transitive                     true       true     
-# Block-transitive                     true       true     
-# Flag-transitive                      true       true     
-# Anti-flag-transitive                 false      true     
-# Flag-semiregular                     false      false    
-# Flag-regular                         false      false    
-# Point-primitive                      true       true     
-# Point-primitive type                 2          2        
-# Block-primitive                      false               
-# Block-primitive type                 0                   
-# ---------------------------------------------------------
+# --------------------------------------------------------
+#                                      G          Aut(D)  
+# --------------------------------------------------------
+# Structure                            PGL(2,17)  S18     
+# Rank                                 2          2       
+# 2-Homogeneous                        true       true    
+# Point-stabiliser                     AGL(1,17)  S17     
+# Block-stabiliser                     S3         S15xS3  
+# Orbit structure of point-stabiliser                     
+# Orbit structure of block-stabiliser                     
+# Point-transitive                     true       true    
+# Block-transitive                     true       true    
+# Flag-transitive                      true       true    
+# Anti-flag-transitive                 false      true    
+# Flag-semiregular                     false      false   
+# Flag-regular                         false      false   
+# Point-primitive                      true       true    
+# Point-primitive type                 2          2       
+# Block-primitive                      false              
+# Block-primitive type                 0                  
+# --------------------------------------------------------
 
 # Design: 17
 # -----------------------------------------------------------
@@ -985,7 +985,7 @@
 # Block-primitive type                                             
 # -----------------------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_18 :=  [
@@ -1424,9 +1424,9 @@ lD_18 :=  [
   t := 2 ),
   v:= 18)
 ]; 
-for D in lD_18 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_18 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
-# 5. Designs (reduced within each group): 
+# 6. Designs (reduced within each group): 
 # ----------------------------------------
 
 lD_18_reduced :=  [
@@ -1486,39 +1486,39 @@ lD_18_reduced :=  [
   lambdas := [ 28 ],
   t := 2 ),
   v:= 18),
+ rec( parameters := [ 18, 306, 68, 4, 12 ],
+  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  groupNumbers := [ 1, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 5 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 68,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 408, 68, 3, 8 ],
+  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 68,
+  tSubsetStructure := rec(
+  lambdas := [ 8 ],
+  t := 2 ),
+  v:= 18),
  rec( parameters := [ 18, 153, 136, 16, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
   autSubgroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
   groupNumbers := [ 2, 1, 10 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
-  blockSizes := [ 16 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 153, 136, 16, 120 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 8 ],
-  baseBlock := [ 1 .. 16 ],
-  blockSizes := [ 16 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 153, 136, 16, 120 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 8 ],
-  baseBlock := [ 1 .. 16 ],
   blockSizes := [ 16 ],
   isBinary := true,
   isBlockDesign := true,
@@ -1570,20 +1570,6 @@ lD_18_reduced :=  [
   lambdas := [ 64 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 306, 68, 4, 12 ],
-  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  groupNumbers := [ 1, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 5 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 68,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 306, 136, 8, 56 ],
   autGroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
   autSubgroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
@@ -1596,20 +1582,6 @@ lD_18_reduced :=  [
   r := 136,
   tSubsetStructure := rec(
   lambdas := [ 56 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 408, 68, 3, 8 ],
-  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 68,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
   t := 2 ),
   v:= 18),
  rec( parameters := [ 18, 408, 136, 6, 40 ],
@@ -1682,34 +1654,6 @@ lD_18_reduced :=  [
   lambdas := [ 16 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 816, 136, 3, 16 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 816, 136, 3, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 816, 272, 6, 80 ],
   autGroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
   autSubgroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
@@ -1722,34 +1666,6 @@ lD_18_reduced :=  [
   r := 272,
   tSubsetStructure := rec(
   lambdas := [ 80 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 816, 680, 15, 560 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 15 ],
-  blockSizes := [ 15 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 680,
-  tSubsetStructure := rec(
-  lambdas := [ 560 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 816, 680, 15, 560 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 15 ],
-  blockSizes := [ 15 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 680,
-  tSubsetStructure := rec(
-  lambdas := [ 560 ],
   t := 2 ),
   v:= 18),
  rec( parameters := [ 18, 1224, 272, 4, 48 ],
@@ -1780,24 +1696,52 @@ lD_18_reduced :=  [
   lambdas := [ 48 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 3060, 680, 4, 120 ],
+ rec( parameters := [ 18, 153, 136, 16, 120 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
+  groupNumbers := [ 3, 1, 8 ],
+  baseBlock := [ 1 .. 16 ],
+  blockSizes := [ 16 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 120 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 136, 3, 16 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 16 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 680, 15, 560 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 15 ],
+  blockSizes := [ 15 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
   r := 680,
   tSubsetStructure := rec(
-  lambdas := [ 120 ],
+  lambdas := [ 560 ],
   t := 2 ),
   v:= 18),
  rec( parameters := [ 18, 3060, 680, 4, 120 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
+  groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1 .. 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1822,38 +1766,10 @@ lD_18_reduced :=  [
   lambdas := [ 1820 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 3060, 2380, 14, 1820 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1 .. 14 ],
-  blockSizes := [ 14 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2380,
-  tSubsetStructure := rec(
-  lambdas := [ 1820 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 8568, 2380, 5, 560 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 3 ],
-  baseBlock := [ 1 .. 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2380,
-  tSubsetStructure := rec(
-  lambdas := [ 560 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 8568, 2380, 5, 560 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
   baseBlock := [ 1 .. 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1878,38 +1794,10 @@ lD_18_reduced :=  [
   lambdas := [ 4368 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 8568, 6188, 13, 4368 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
-  baseBlock := [ 1 .. 13 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6188,
-  tSubsetStructure := rec(
-  lambdas := [ 4368 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 18564, 6188, 6, 1820 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 4 ],
-  baseBlock := [ 1 .. 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6188,
-  tSubsetStructure := rec(
-  lambdas := [ 1820 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 18564, 6188, 6, 1820 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
   baseBlock := [ 1 .. 6 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1934,38 +1822,10 @@ lD_18_reduced :=  [
   lambdas := [ 8008 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 18564, 12376, 12, 8008 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12376,
-  tSubsetStructure := rec(
-  lambdas := [ 8008 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 31824, 12376, 7, 4368 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 5 ],
-  baseBlock := [ 1 .. 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12376,
-  tSubsetStructure := rec(
-  lambdas := [ 4368 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 31824, 12376, 7, 4368 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 5 ],
   baseBlock := [ 1 .. 7 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1990,20 +1850,6 @@ lD_18_reduced :=  [
   lambdas := [ 11440 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 31824, 19448, 11, 11440 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 5 ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 19448,
-  tSubsetStructure := rec(
-  lambdas := [ 11440 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 43758, 19448, 8, 8008 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
@@ -2018,38 +1864,10 @@ lD_18_reduced :=  [
   lambdas := [ 8008 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 43758, 19448, 8, 8008 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 6 ],
-  baseBlock := [ 1 .. 8 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 19448,
-  tSubsetStructure := rec(
-  lambdas := [ 8008 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 43758, 24310, 10, 12870 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 6 ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24310,
-  tSubsetStructure := rec(
-  lambdas := [ 12870 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 43758, 24310, 10, 12870 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 6 ],
   baseBlock := [ 1 .. 10 ],
   blockSizes := [ 10 ],
   isBinary := true,
@@ -2074,6 +1892,188 @@ lD_18_reduced :=  [
   lambdas := [ 11440 ],
   t := 2 ),
   v:= 18),
+ rec( parameters := [ 18, 153, 136, 16, 120 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 8 ],
+  baseBlock := [ 1 .. 16 ],
+  blockSizes := [ 16 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 120 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 136, 3, 16 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 16 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 680, 15, 560 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 15 ],
+  blockSizes := [ 15 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 680,
+  tSubsetStructure := rec(
+  lambdas := [ 560 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 3060, 680, 4, 120 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 680,
+  tSubsetStructure := rec(
+  lambdas := [ 120 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 3060, 2380, 14, 1820 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 14 ],
+  blockSizes := [ 14 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 2380,
+  tSubsetStructure := rec(
+  lambdas := [ 1820 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 8568, 2380, 5, 560 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 2380,
+  tSubsetStructure := rec(
+  lambdas := [ 560 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 8568, 6188, 13, 4368 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 13 ],
+  blockSizes := [ 13 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6188,
+  tSubsetStructure := rec(
+  lambdas := [ 4368 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 18564, 6188, 6, 1820 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6188,
+  tSubsetStructure := rec(
+  lambdas := [ 1820 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 18564, 12376, 12, 8008 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12376,
+  tSubsetStructure := rec(
+  lambdas := [ 8008 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 31824, 12376, 7, 4368 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 5 ],
+  baseBlock := [ 1 .. 7 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12376,
+  tSubsetStructure := rec(
+  lambdas := [ 4368 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 31824, 19448, 11, 11440 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 5 ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 19448,
+  tSubsetStructure := rec(
+  lambdas := [ 11440 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 43758, 19448, 8, 8008 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 6 ],
+  baseBlock := [ 1 .. 8 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 19448,
+  tSubsetStructure := rec(
+  lambdas := [ 8008 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 43758, 24310, 10, 12870 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 6 ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24310,
+  tSubsetStructure := rec(
+  lambdas := [ 12870 ],
+  t := 2 ),
+  v:= 18),
  rec( parameters:= [ 18, 48620, 24310, 9, 11440 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
@@ -2089,9 +2089,9 @@ lD_18_reduced :=  [
   t := 2 ),
   v:= 18)
 ]; 
-for D in lD_18_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_18_reduced do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
-# 6. Designs (all): 
+# 7. Designs (all): 
 # -----------------
 
 lD_18_all :=  [
@@ -2207,39 +2207,67 @@ lD_18_all :=  [
   lambdas := [ 28 ],
   t := 2 ),
   v:= 18),
+ rec( parameters := [ 18, 306, 68, 4, 12 ],
+  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  groupNumbers := [ 1, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 5 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 68,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 306, 68, 4, 12 ],
+  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  groupNumbers := [ 1, 1, 3 ],
+  baseBlock := [ 1, 2, 4, 6 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 68,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 408, 68, 3, 8 ],
+  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 1, 2, 4 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 68,
+  tSubsetStructure := rec(
+  lambdas := [ 8 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 408, 68, 3, 8 ],
+  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 68,
+  tSubsetStructure := rec(
+  lambdas := [ 8 ],
+  t := 2 ),
+  v:= 18),
  rec( parameters := [ 18, 153, 136, 16, 120 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
   autSubgroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
   groupNumbers := [ 2, 1, 10 ],
   baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ],
-  blockSizes := [ 16 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 153, 136, 16, 120 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 8 ],
-  baseBlock := [ 1 .. 16 ],
-  blockSizes := [ 16 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 120 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 153, 136, 16, 120 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 8 ],
-  baseBlock := [ 1 .. 16 ],
   blockSizes := [ 16 ],
   isBinary := true,
   isBlockDesign := true,
@@ -2291,34 +2319,6 @@ lD_18_all :=  [
   lambdas := [ 64 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 306, 68, 4, 12 ],
-  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  groupNumbers := [ 1, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 5 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 68,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 306, 68, 4, 12 ],
-  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  groupNumbers := [ 1, 1, 3 ],
-  baseBlock := [ 1, 2, 4, 6 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 68,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 306, 136, 8, 56 ],
   autGroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
   autSubgroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
@@ -2331,34 +2331,6 @@ lD_18_all :=  [
   r := 136,
   tSubsetStructure := rec(
   lambdas := [ 56 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 408, 68, 3, 8 ],
-  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 1, 2, 4 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 68,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 408, 68, 3, 8 ],
-  autGroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  autSubgroup := Group( [ ( 3,17,15,13,11, 9, 7, 5)( 4,18,16,14,12,10, 8, 6), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 68,
-  tSubsetStructure := rec(
-  lambdas := [ 8 ],
   t := 2 ),
   v:= 18),
  rec( parameters := [ 18, 408, 136, 6, 40 ],
@@ -2431,34 +2403,6 @@ lD_18_all :=  [
   lambdas := [ 16 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 816, 136, 3, 16 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 816, 136, 3, 16 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 136,
-  tSubsetStructure := rec(
-  lambdas := [ 16 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 816, 272, 6, 80 ],
   autGroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
   autSubgroup := Group( [ ( 3,18,17,16,15,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2,11)( 3,13, 9)( 4,15, 6)( 5, 8,12)( 7,18,16)(10,14,17) ] ),
@@ -2471,34 +2415,6 @@ lD_18_all :=  [
   r := 272,
   tSubsetStructure := rec(
   lambdas := [ 80 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 816, 680, 15, 560 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 15 ],
-  blockSizes := [ 15 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 680,
-  tSubsetStructure := rec(
-  lambdas := [ 560 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 816, 680, 15, 560 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 15 ],
-  blockSizes := [ 15 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 680,
-  tSubsetStructure := rec(
-  lambdas := [ 560 ],
   t := 2 ),
   v:= 18),
  rec( parameters := [ 18, 1224, 272, 4, 48 ],
@@ -2529,24 +2445,52 @@ lD_18_all :=  [
   lambdas := [ 48 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 3060, 680, 4, 120 ],
+ rec( parameters := [ 18, 153, 136, 16, 120 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
-  groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
+  groupNumbers := [ 3, 1, 8 ],
+  baseBlock := [ 1 .. 16 ],
+  blockSizes := [ 16 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 120 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 136, 3, 16 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 16 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 680, 15, 560 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 15 ],
+  blockSizes := [ 15 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
   r := 680,
   tSubsetStructure := rec(
-  lambdas := [ 120 ],
+  lambdas := [ 560 ],
   t := 2 ),
   v:= 18),
  rec( parameters := [ 18, 3060, 680, 4, 120 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
+  groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1 .. 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -2571,38 +2515,10 @@ lD_18_all :=  [
   lambdas := [ 1820 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 3060, 2380, 14, 1820 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1 .. 14 ],
-  blockSizes := [ 14 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2380,
-  tSubsetStructure := rec(
-  lambdas := [ 1820 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 8568, 2380, 5, 560 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 3 ],
-  baseBlock := [ 1 .. 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 2380,
-  tSubsetStructure := rec(
-  lambdas := [ 560 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 8568, 2380, 5, 560 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
   baseBlock := [ 1 .. 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -2627,38 +2543,10 @@ lD_18_all :=  [
   lambdas := [ 4368 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 8568, 6188, 13, 4368 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
-  baseBlock := [ 1 .. 13 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6188,
-  tSubsetStructure := rec(
-  lambdas := [ 4368 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 18564, 6188, 6, 1820 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 4 ],
-  baseBlock := [ 1 .. 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6188,
-  tSubsetStructure := rec(
-  lambdas := [ 1820 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 18564, 6188, 6, 1820 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
   baseBlock := [ 1 .. 6 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -2683,38 +2571,10 @@ lD_18_all :=  [
   lambdas := [ 8008 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 18564, 12376, 12, 8008 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12376,
-  tSubsetStructure := rec(
-  lambdas := [ 8008 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 31824, 12376, 7, 4368 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 5 ],
-  baseBlock := [ 1 .. 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12376,
-  tSubsetStructure := rec(
-  lambdas := [ 4368 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 31824, 12376, 7, 4368 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 5 ],
   baseBlock := [ 1 .. 7 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -2739,20 +2599,6 @@ lD_18_all :=  [
   lambdas := [ 11440 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 31824, 19448, 11, 11440 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 5 ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 19448,
-  tSubsetStructure := rec(
-  lambdas := [ 11440 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 43758, 19448, 8, 8008 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
@@ -2767,38 +2613,10 @@ lD_18_all :=  [
   lambdas := [ 8008 ],
   t := 2 ),
   v:= 18),
- rec( parameters := [ 18, 43758, 19448, 8, 8008 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 6 ],
-  baseBlock := [ 1 .. 8 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 19448,
-  tSubsetStructure := rec(
-  lambdas := [ 8008 ],
-  t := 2 ),
-  v:= 18),
  rec( parameters := [ 18, 43758, 24310, 10, 12870 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17), (16,17,18) ] ),
   groupNumbers := [ 3, 1, 6 ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24310,
-  tSubsetStructure := rec(
-  lambdas := [ 12870 ],
-  t := 2 ),
-  v:= 18),
- rec( parameters := [ 18, 43758, 24310, 10, 12870 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
-  groupNumbers := [ 4, 1, 6 ],
   baseBlock := [ 1 .. 10 ],
   blockSizes := [ 10 ],
   isBinary := true,
@@ -2823,6 +2641,188 @@ lD_18_all :=  [
   lambdas := [ 11440 ],
   t := 2 ),
   v:= 18),
+ rec( parameters := [ 18, 153, 136, 16, 120 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 8 ],
+  baseBlock := [ 1 .. 16 ],
+  blockSizes := [ 16 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 120 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 136, 3, 16 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 136,
+  tSubsetStructure := rec(
+  lambdas := [ 16 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 816, 680, 15, 560 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 15 ],
+  blockSizes := [ 15 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 680,
+  tSubsetStructure := rec(
+  lambdas := [ 560 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 3060, 680, 4, 120 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 680,
+  tSubsetStructure := rec(
+  lambdas := [ 120 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 3060, 2380, 14, 1820 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 14 ],
+  blockSizes := [ 14 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 2380,
+  tSubsetStructure := rec(
+  lambdas := [ 1820 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 8568, 2380, 5, 560 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 2380,
+  tSubsetStructure := rec(
+  lambdas := [ 560 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 8568, 6188, 13, 4368 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 13 ],
+  blockSizes := [ 13 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6188,
+  tSubsetStructure := rec(
+  lambdas := [ 4368 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 18564, 6188, 6, 1820 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6188,
+  tSubsetStructure := rec(
+  lambdas := [ 1820 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 18564, 12376, 12, 8008 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12376,
+  tSubsetStructure := rec(
+  lambdas := [ 8008 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 31824, 12376, 7, 4368 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 5 ],
+  baseBlock := [ 1 .. 7 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12376,
+  tSubsetStructure := rec(
+  lambdas := [ 4368 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 31824, 19448, 11, 11440 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 5 ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 19448,
+  tSubsetStructure := rec(
+  lambdas := [ 11440 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 43758, 19448, 8, 8008 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 6 ],
+  baseBlock := [ 1 .. 8 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 19448,
+  tSubsetStructure := rec(
+  lambdas := [ 8008 ],
+  t := 2 ),
+  v:= 18),
+ rec( parameters := [ 18, 43758, 24310, 10, 12870 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
+  groupNumbers := [ 4, 1, 6 ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24310,
+  tSubsetStructure := rec(
+  lambdas := [ 12870 ],
+  t := 2 ),
+  v:= 18),
  rec( parameters:= [ 18, 48620, 24310, 9, 11440 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18), (1,2) ] ),
@@ -2838,5 +2838,5 @@ lD_18_all :=  [
   t := 2 ),
   v:= 18)
 ]; 
-for D in lD_18_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_18_all do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 

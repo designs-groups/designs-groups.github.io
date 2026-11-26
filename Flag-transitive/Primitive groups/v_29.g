@@ -6,11 +6,11 @@
 #               lD_29 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          28             28     
 # Point-imprimitive    0          0              0      
@@ -24,7 +24,7 @@
 # Total                0          28             28     
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -69,55 +69,55 @@
 # 2   29  116       28        7   6         AGL(1,29)  28   7                    AGL(1,29)  2      2           6      1       3       true             false            true             false                                                 
 # 3   29  203       28        4   3         AGL(1,29)  28   4                    AGL(1,29)  2      2           6      1       4       true             false            true             false                                                 
 # 4   29  406       378       27  351       A29        A28  (S27 x S2) cap A29   S29        2      2           7                      true             true             true             true                                        complete  
-# 5   29  406       378       27  351       S29        S28  S27 x S2             S29        2      2           8                      true             true             true             true                                        complete  
-# 6   29  3654      378       3   27        A29        A28  (S3 x S26) cap A29   S29        2      2           7                      true             true             true             true                 8                      complete  
-# 7   29  3654      378       3   27        S29        S28  S3 x S26             S29        2      2           8                      true             true             true             true                 8                      complete  
-# 8   29  3654      3276      26  2925      A29        A28  (S26 x S3) cap A29   S29        2      2           7                      true             true             true             true                 6                      complete  
-# 9   29  3654      3276      26  2925      S29        S28  S26 x S3             S29        2      2           8                      true             true             true             true                 6                      complete  
-# 10  29  23751     3276      4   351       A29        A28  (S4 x S25) cap A29   S29        2      2           7                      true             true             true             true                 12                     complete  
-# 11  29  23751     3276      4   351       S29        S28  S4 x S25             S29        2      2           8                      true             true             true             true                 12                     complete  
-# 12  29  23751     20475     25  17550     A29        A28  (S25 x S4) cap A29   S29        2      2           7                      true             true             true             true                 10                     complete  
-# 13  29  23751     20475     25  17550     S29        S28  S25 x S4             S29        2      2           8                      true             true             true             true                 10                     complete  
-# 14  29  118755    20475     5   2925      A29        A28  (S5 x S24) cap A29   S29        2      2           7                      true             true             true             true                 16                     complete  
-# 15  29  118755    20475     5   2925      S29        S28  S5 x S24             S29        2      2           8                      true             true             true             true                 16                     complete  
-# 16  29  118755    98280     24  80730     A29        A28  (S24 x S5) cap A29   S29        2      2           7                      true             true             true             true                 14                     complete  
-# 17  29  118755    98280     24  80730     S29        S28  S24 x S5             S29        2      2           8                      true             true             true             true                 14                     complete  
-# 18  29  475020    98280     6   17550     A29        A28  (S6 x S23) cap A29   S29        2      2           7                      true             true             true             true                 20                     complete  
-# 19  29  475020    98280     6   17550     S29        S28  S6 x S23             S29        2      2           8                      true             true             true             true                 20                     complete  
-# 20  29  475020    376740    23  296010    A29        A28  (S23 x S6) cap A29   S29        2      2           7                      true             true             true             true                 18                     complete  
-# 21  29  475020    376740    23  296010    S29        S28  S23 x S6             S29        2      2           8                      true             true             true             true                 18                     complete  
-# 22  29  1560780   376740    7   80730     A29        A28  (S7 x S22) cap A29   S29        2      2           7                      true             true             true             true                 24                     complete  
-# 23  29  1560780   376740    7   80730     S29        S28  S7 x S22             S29        2      2           8                      true             true             true             true                 24                     complete  
-# 24  29  1560780   1184040   22  888030    A29        A28  (S22 x S7) cap A29   S29        2      2           7                      true             true             true             true                 22                     complete  
-# 25  29  1560780   1184040   22  888030    S29        S28  S22 x S7             S29        2      2           8                      true             true             true             true                 22                     complete  
-# 26  29  4292145   1184040   8   296010    A29        A28  (S8 x S21) cap A29   S29        2      2           7                      true             true             true             true                 28                     complete  
-# 27  29  4292145   1184040   8   296010    S29        S28  S8 x S21             S29        2      2           8                      true             true             true             true                 28                     complete  
-# 28  29  4292145   3108105   21  2220075   A29        A28  (S21 x S8) cap A29   S29        2      2           7                      true             true             true             true                 26                     complete  
-# 29  29  4292145   3108105   21  2220075   S29        S28  S21 x S8             S29        2      2           8                      true             true             true             true                 26                     complete  
-# 30  29  10015005  3108105   9   888030    A29        A28  (S9 x S20) cap A29   S29        2      2           7                      true             true             true             true                 32                     complete  
-# 31  29  10015005  3108105   9   888030    S29        S28  S9 x S20             S29        2      2           8                      true             true             true             true                 32                     complete  
-# 32  29  10015005  6906900   20  4686825   A29        A28  (S20 x S9) cap A29   S29        2      2           7                      true             true             true             true                 30                     complete  
-# 33  29  10015005  6906900   20  4686825   S29        S28  S20 x S9             S29        2      2           8                      true             true             true             true                 30                     complete  
-# 34  29  20030010  6906900   10  2220075   A29        A28  (S10 x S19) cap A29  S29        2      2           7                      true             true             true             true                 36                     complete  
-# 35  29  20030010  6906900   10  2220075   S29        S28  S10 x S19            S29        2      2           8                      true             true             true             true                 36                     complete  
-# 36  29  20030010  13123110  19  8436285   A29        A28  (S19 x S10) cap A29  S29        2      2           7                      true             true             true             true                 34                     complete  
-# 37  29  20030010  13123110  19  8436285   S29        S28  S19 x S10            S29        2      2           8                      true             true             true             true                 34                     complete  
-# 38  29  34597290  13123110  11  4686825   A29        A28  (S11 x S18) cap A29  S29        2      2           7                      true             true             true             true                 40                     complete  
-# 39  29  34597290  13123110  11  4686825   S29        S28  S11 x S18            S29        2      2           8                      true             true             true             true                 40                     complete  
-# 40  29  34597290  21474180  18  13037895  A29        A28  (S18 x S11) cap A29  S29        2      2           7                      true             true             true             true                 38                     complete  
-# 41  29  34597290  21474180  18  13037895  S29        S28  S18 x S11            S29        2      2           8                      true             true             true             true                 38                     complete  
-# 42  29  51895935  21474180  12  8436285   A29        A28  (S12 x S17) cap A29  S29        2      2           7                      true             true             true             true                 44                     complete  
-# 43  29  51895935  21474180  12  8436285   S29        S28  S12 x S17            S29        2      2           8                      true             true             true             true                 44                     complete  
-# 44  29  51895935  30421755  17  17383860  A29        A28  (S17 x S12) cap A29  S29        2      2           7                      true             true             true             true                 42                     complete  
-# 45  29  51895935  30421755  17  17383860  S29        S28  S17 x S12            S29        2      2           8                      true             true             true             true                 42                     complete  
-# 46  29  67863915  30421755  13  13037895  A29        A28  (S13 x S16) cap A29  S29        2      2           7                      true             true             true             true                 48                     complete  
-# 47  29  67863915  30421755  13  13037895  S29        S28  S13 x S16            S29        2      2           8                      true             true             true             true                 48                     complete  
-# 48  29  67863915  37442160  16  20058300  A29        A28  (S16 x S13) cap A29  S29        2      2           7                      true             true             true             true                 46                     complete  
-# 49  29  67863915  37442160  16  20058300  S29        S28  S16 x S13            S29        2      2           8                      true             true             true             true                 46                     complete  
-# 50  29  77558760  37442160  14  17383860  A29        A28  (S14 x S15) cap A29  S29        2      2           7                      true             true             true             true                 52                     complete  
-# 51  29  77558760  37442160  14  17383860  S29        S28  S14 x S15            S29        2      2           8                      true             true             true             true                 52                     complete  
-# 52  29  77558760  40116600  15  20058300  A29        A28  (S15 x S14) cap A29  S29        2      2           7                      true             true             true             true                 50                     complete  
-# 53  29  77558760  40116600  15  20058300  S29        S28  S15 x S14            S29        2      2           8                      true             true             true             true                 50                     complete  
+# 5   29  3654      378       3   27        A29        A28  (S3 x S26) cap A29   S29        2      2           7                      true             true             true             true                 6                      complete  
+# 6   29  3654      3276      26  2925      A29        A28  (S26 x S3) cap A29   S29        2      2           7                      true             true             true             true                 5                      complete  
+# 7   29  23751     3276      4   351       A29        A28  (S4 x S25) cap A29   S29        2      2           7                      true             true             true             true                 8                      complete  
+# 8   29  23751     20475     25  17550     A29        A28  (S25 x S4) cap A29   S29        2      2           7                      true             true             true             true                 7                      complete  
+# 9   29  118755    20475     5   2925      A29        A28  (S5 x S24) cap A29   S29        2      2           7                      true             true             true             true                 10                     complete  
+# 10  29  118755    98280     24  80730     A29        A28  (S24 x S5) cap A29   S29        2      2           7                      true             true             true             true                 9                      complete  
+# 11  29  475020    98280     6   17550     A29        A28  (S6 x S23) cap A29   S29        2      2           7                      true             true             true             true                 12                     complete  
+# 12  29  475020    376740    23  296010    A29        A28  (S23 x S6) cap A29   S29        2      2           7                      true             true             true             true                 11                     complete  
+# 13  29  1560780   376740    7   80730     A29        A28  (S7 x S22) cap A29   S29        2      2           7                      true             true             true             true                 14                     complete  
+# 14  29  1560780   1184040   22  888030    A29        A28  (S22 x S7) cap A29   S29        2      2           7                      true             true             true             true                 13                     complete  
+# 15  29  4292145   1184040   8   296010    A29        A28  (S8 x S21) cap A29   S29        2      2           7                      true             true             true             true                 16                     complete  
+# 16  29  4292145   3108105   21  2220075   A29        A28  (S21 x S8) cap A29   S29        2      2           7                      true             true             true             true                 15                     complete  
+# 17  29  10015005  3108105   9   888030    A29        A28  (S9 x S20) cap A29   S29        2      2           7                      true             true             true             true                 18                     complete  
+# 18  29  10015005  6906900   20  4686825   A29        A28  (S20 x S9) cap A29   S29        2      2           7                      true             true             true             true                 17                     complete  
+# 19  29  20030010  6906900   10  2220075   A29        A28  (S10 x S19) cap A29  S29        2      2           7                      true             true             true             true                 20                     complete  
+# 20  29  20030010  13123110  19  8436285   A29        A28  (S19 x S10) cap A29  S29        2      2           7                      true             true             true             true                 19                     complete  
+# 21  29  34597290  13123110  11  4686825   A29        A28  (S11 x S18) cap A29  S29        2      2           7                      true             true             true             true                 22                     complete  
+# 22  29  34597290  21474180  18  13037895  A29        A28  (S18 x S11) cap A29  S29        2      2           7                      true             true             true             true                 21                     complete  
+# 23  29  51895935  21474180  12  8436285   A29        A28  (S12 x S17) cap A29  S29        2      2           7                      true             true             true             true                 24                     complete  
+# 24  29  51895935  30421755  17  17383860  A29        A28  (S17 x S12) cap A29  S29        2      2           7                      true             true             true             true                 23                     complete  
+# 25  29  67863915  30421755  13  13037895  A29        A28  (S13 x S16) cap A29  S29        2      2           7                      true             true             true             true                 26                     complete  
+# 26  29  67863915  37442160  16  20058300  A29        A28  (S16 x S13) cap A29  S29        2      2           7                      true             true             true             true                 25                     complete  
+# 27  29  77558760  37442160  14  17383860  A29        A28  (S14 x S15) cap A29  S29        2      2           7                      true             true             true             true                 28                     complete  
+# 28  29  77558760  40116600  15  20058300  A29        A28  (S15 x S14) cap A29  S29        2      2           7                      true             true             true             true                 27                     complete  
+# 29  29  406       378       27  351       S29        S28  S27 x S2             S29        2      2           8                      true             true             true             true                                        complete  
+# 30  29  3654      378       3   27        S29        S28  S3 x S26             S29        2      2           8                      true             true             true             true                 6                      complete  
+# 31  29  3654      3276      26  2925      S29        S28  S26 x S3             S29        2      2           8                      true             true             true             true                 5                      complete  
+# 32  29  23751     3276      4   351       S29        S28  S4 x S25             S29        2      2           8                      true             true             true             true                 8                      complete  
+# 33  29  23751     20475     25  17550     S29        S28  S25 x S4             S29        2      2           8                      true             true             true             true                 7                      complete  
+# 34  29  118755    20475     5   2925      S29        S28  S5 x S24             S29        2      2           8                      true             true             true             true                 10                     complete  
+# 35  29  118755    98280     24  80730     S29        S28  S24 x S5             S29        2      2           8                      true             true             true             true                 9                      complete  
+# 36  29  475020    98280     6   17550     S29        S28  S6 x S23             S29        2      2           8                      true             true             true             true                 12                     complete  
+# 37  29  475020    376740    23  296010    S29        S28  S23 x S6             S29        2      2           8                      true             true             true             true                 11                     complete  
+# 38  29  1560780   376740    7   80730     S29        S28  S7 x S22             S29        2      2           8                      true             true             true             true                 14                     complete  
+# 39  29  1560780   1184040   22  888030    S29        S28  S22 x S7             S29        2      2           8                      true             true             true             true                 13                     complete  
+# 40  29  4292145   1184040   8   296010    S29        S28  S8 x S21             S29        2      2           8                      true             true             true             true                 16                     complete  
+# 41  29  4292145   3108105   21  2220075   S29        S28  S21 x S8             S29        2      2           8                      true             true             true             true                 15                     complete  
+# 42  29  10015005  3108105   9   888030    S29        S28  S9 x S20             S29        2      2           8                      true             true             true             true                 18                     complete  
+# 43  29  10015005  6906900   20  4686825   S29        S28  S20 x S9             S29        2      2           8                      true             true             true             true                 17                     complete  
+# 44  29  20030010  6906900   10  2220075   S29        S28  S10 x S19            S29        2      2           8                      true             true             true             true                 20                     complete  
+# 45  29  20030010  13123110  19  8436285   S29        S28  S19 x S10            S29        2      2           8                      true             true             true             true                 19                     complete  
+# 46  29  34597290  13123110  11  4686825   S29        S28  S11 x S18            S29        2      2           8                      true             true             true             true                 22                     complete  
+# 47  29  34597290  21474180  18  13037895  S29        S28  S18 x S11            S29        2      2           8                      true             true             true             true                 21                     complete  
+# 48  29  51895935  21474180  12  8436285   S29        S28  S12 x S17            S29        2      2           8                      true             true             true             true                 24                     complete  
+# 49  29  51895935  30421755  17  17383860  S29        S28  S17 x S12            S29        2      2           8                      true             true             true             true                 23                     complete  
+# 50  29  67863915  30421755  13  13037895  S29        S28  S13 x S16            S29        2      2           8                      true             true             true             true                 26                     complete  
+# 51  29  67863915  37442160  16  20058300  S29        S28  S16 x S13            S29        2      2           8                      true             true             true             true                 25                     complete  
+# 52  29  77558760  37442160  14  17383860  S29        S28  S14 x S15            S29        2      2           8                      true             true             true             true                 28                     complete  
+# 53  29  77558760  40116600  15  20058300  S29        S28  S15 x S14            S29        2      2           8                      true             true             true             true                 27                     complete  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #    All designs:
@@ -128,58 +128,58 @@
 # 2   29  116       28        7   6         AGL(1,29)  28   7                    AGL(1,29)  2      2           6      1       3       true             false            true             false                                                 
 # 3   29  203       28        4   3         AGL(1,29)  28   4                    AGL(1,29)  2      2           6      1       4       true             false            true             false                                                 
 # 4   29  406       378       27  351       A29        A28  (S27 x S2) cap A29   S29        2      2           7                      true             true             true             true                                        complete  
-# 5   29  406       378       27  351       S29        S28  S27 x S2             S29        2      2           8                      true             true             true             true                                        complete  
-# 6   29  3654      378       3   27        A29        A28  (S3 x S26) cap A29   S29        2      2           7                      true             true             true             true                 8                      complete  
-# 7   29  3654      378       3   27        S29        S28  S3 x S26             S29        2      2           8                      true             true             true             true                 8                      complete  
-# 8   29  3654      3276      26  2925      A29        A28  (S26 x S3) cap A29   S29        2      2           7                      true             true             true             true                 6                      complete  
-# 9   29  3654      3276      26  2925      S29        S28  S26 x S3             S29        2      2           8                      true             true             true             true                 6                      complete  
-# 10  29  23751     3276      4   351       A29        A28  (S4 x S25) cap A29   S29        2      2           7                      true             true             true             true                 12                     complete  
-# 11  29  23751     3276      4   351       S29        S28  S4 x S25             S29        2      2           8                      true             true             true             true                 12                     complete  
-# 12  29  23751     20475     25  17550     A29        A28  (S25 x S4) cap A29   S29        2      2           7                      true             true             true             true                 10                     complete  
-# 13  29  23751     20475     25  17550     S29        S28  S25 x S4             S29        2      2           8                      true             true             true             true                 10                     complete  
-# 14  29  118755    20475     5   2925      A29        A28  (S5 x S24) cap A29   S29        2      2           7                      true             true             true             true                 16                     complete  
-# 15  29  118755    20475     5   2925      S29        S28  S5 x S24             S29        2      2           8                      true             true             true             true                 16                     complete  
-# 16  29  118755    98280     24  80730     A29        A28  (S24 x S5) cap A29   S29        2      2           7                      true             true             true             true                 14                     complete  
-# 17  29  118755    98280     24  80730     S29        S28  S24 x S5             S29        2      2           8                      true             true             true             true                 14                     complete  
-# 18  29  475020    98280     6   17550     A29        A28  (S6 x S23) cap A29   S29        2      2           7                      true             true             true             true                 20                     complete  
-# 19  29  475020    98280     6   17550     S29        S28  S6 x S23             S29        2      2           8                      true             true             true             true                 20                     complete  
-# 20  29  475020    376740    23  296010    A29        A28  (S23 x S6) cap A29   S29        2      2           7                      true             true             true             true                 18                     complete  
-# 21  29  475020    376740    23  296010    S29        S28  S23 x S6             S29        2      2           8                      true             true             true             true                 18                     complete  
-# 22  29  1560780   376740    7   80730     A29        A28  (S7 x S22) cap A29   S29        2      2           7                      true             true             true             true                 24                     complete  
-# 23  29  1560780   376740    7   80730     S29        S28  S7 x S22             S29        2      2           8                      true             true             true             true                 24                     complete  
-# 24  29  1560780   1184040   22  888030    A29        A28  (S22 x S7) cap A29   S29        2      2           7                      true             true             true             true                 22                     complete  
-# 25  29  1560780   1184040   22  888030    S29        S28  S22 x S7             S29        2      2           8                      true             true             true             true                 22                     complete  
-# 26  29  4292145   1184040   8   296010    A29        A28  (S8 x S21) cap A29   S29        2      2           7                      true             true             true             true                 28                     complete  
-# 27  29  4292145   1184040   8   296010    S29        S28  S8 x S21             S29        2      2           8                      true             true             true             true                 28                     complete  
-# 28  29  4292145   3108105   21  2220075   A29        A28  (S21 x S8) cap A29   S29        2      2           7                      true             true             true             true                 26                     complete  
-# 29  29  4292145   3108105   21  2220075   S29        S28  S21 x S8             S29        2      2           8                      true             true             true             true                 26                     complete  
-# 30  29  10015005  3108105   9   888030    A29        A28  (S9 x S20) cap A29   S29        2      2           7                      true             true             true             true                 32                     complete  
-# 31  29  10015005  3108105   9   888030    S29        S28  S9 x S20             S29        2      2           8                      true             true             true             true                 32                     complete  
-# 32  29  10015005  6906900   20  4686825   A29        A28  (S20 x S9) cap A29   S29        2      2           7                      true             true             true             true                 30                     complete  
-# 33  29  10015005  6906900   20  4686825   S29        S28  S20 x S9             S29        2      2           8                      true             true             true             true                 30                     complete  
-# 34  29  20030010  6906900   10  2220075   A29        A28  (S10 x S19) cap A29  S29        2      2           7                      true             true             true             true                 36                     complete  
-# 35  29  20030010  6906900   10  2220075   S29        S28  S10 x S19            S29        2      2           8                      true             true             true             true                 36                     complete  
-# 36  29  20030010  13123110  19  8436285   A29        A28  (S19 x S10) cap A29  S29        2      2           7                      true             true             true             true                 34                     complete  
-# 37  29  20030010  13123110  19  8436285   S29        S28  S19 x S10            S29        2      2           8                      true             true             true             true                 34                     complete  
-# 38  29  34597290  13123110  11  4686825   A29        A28  (S11 x S18) cap A29  S29        2      2           7                      true             true             true             true                 40                     complete  
-# 39  29  34597290  13123110  11  4686825   S29        S28  S11 x S18            S29        2      2           8                      true             true             true             true                 40                     complete  
-# 40  29  34597290  21474180  18  13037895  A29        A28  (S18 x S11) cap A29  S29        2      2           7                      true             true             true             true                 38                     complete  
-# 41  29  34597290  21474180  18  13037895  S29        S28  S18 x S11            S29        2      2           8                      true             true             true             true                 38                     complete  
-# 42  29  51895935  21474180  12  8436285   A29        A28  (S12 x S17) cap A29  S29        2      2           7                      true             true             true             true                 44                     complete  
-# 43  29  51895935  21474180  12  8436285   S29        S28  S12 x S17            S29        2      2           8                      true             true             true             true                 44                     complete  
-# 44  29  51895935  30421755  17  17383860  A29        A28  (S17 x S12) cap A29  S29        2      2           7                      true             true             true             true                 42                     complete  
-# 45  29  51895935  30421755  17  17383860  S29        S28  S17 x S12            S29        2      2           8                      true             true             true             true                 42                     complete  
-# 46  29  67863915  30421755  13  13037895  A29        A28  (S13 x S16) cap A29  S29        2      2           7                      true             true             true             true                 48                     complete  
-# 47  29  67863915  30421755  13  13037895  S29        S28  S13 x S16            S29        2      2           8                      true             true             true             true                 48                     complete  
-# 48  29  67863915  37442160  16  20058300  A29        A28  (S16 x S13) cap A29  S29        2      2           7                      true             true             true             true                 46                     complete  
-# 49  29  67863915  37442160  16  20058300  S29        S28  S16 x S13            S29        2      2           8                      true             true             true             true                 46                     complete  
-# 50  29  77558760  37442160  14  17383860  A29        A28  (S14 x S15) cap A29  S29        2      2           7                      true             true             true             true                 52                     complete  
-# 51  29  77558760  37442160  14  17383860  S29        S28  S14 x S15            S29        2      2           8                      true             true             true             true                 52                     complete  
-# 52  29  77558760  40116600  15  20058300  A29        A28  (S15 x S14) cap A29  S29        2      2           7                      true             true             true             true                 50                     complete  
-# 53  29  77558760  40116600  15  20058300  S29        S28  S15 x S14            S29        2      2           8                      true             true             true             true                 50                     complete  
+# 5   29  3654      378       3   27        A29        A28  (S3 x S26) cap A29   S29        2      2           7                      true             true             true             true                 6                      complete  
+# 6   29  3654      3276      26  2925      A29        A28  (S26 x S3) cap A29   S29        2      2           7                      true             true             true             true                 5                      complete  
+# 7   29  23751     3276      4   351       A29        A28  (S4 x S25) cap A29   S29        2      2           7                      true             true             true             true                 8                      complete  
+# 8   29  23751     20475     25  17550     A29        A28  (S25 x S4) cap A29   S29        2      2           7                      true             true             true             true                 7                      complete  
+# 9   29  118755    20475     5   2925      A29        A28  (S5 x S24) cap A29   S29        2      2           7                      true             true             true             true                 10                     complete  
+# 10  29  118755    98280     24  80730     A29        A28  (S24 x S5) cap A29   S29        2      2           7                      true             true             true             true                 9                      complete  
+# 11  29  475020    98280     6   17550     A29        A28  (S6 x S23) cap A29   S29        2      2           7                      true             true             true             true                 12                     complete  
+# 12  29  475020    376740    23  296010    A29        A28  (S23 x S6) cap A29   S29        2      2           7                      true             true             true             true                 11                     complete  
+# 13  29  1560780   376740    7   80730     A29        A28  (S7 x S22) cap A29   S29        2      2           7                      true             true             true             true                 14                     complete  
+# 14  29  1560780   1184040   22  888030    A29        A28  (S22 x S7) cap A29   S29        2      2           7                      true             true             true             true                 13                     complete  
+# 15  29  4292145   1184040   8   296010    A29        A28  (S8 x S21) cap A29   S29        2      2           7                      true             true             true             true                 16                     complete  
+# 16  29  4292145   3108105   21  2220075   A29        A28  (S21 x S8) cap A29   S29        2      2           7                      true             true             true             true                 15                     complete  
+# 17  29  10015005  3108105   9   888030    A29        A28  (S9 x S20) cap A29   S29        2      2           7                      true             true             true             true                 18                     complete  
+# 18  29  10015005  6906900   20  4686825   A29        A28  (S20 x S9) cap A29   S29        2      2           7                      true             true             true             true                 17                     complete  
+# 19  29  20030010  6906900   10  2220075   A29        A28  (S10 x S19) cap A29  S29        2      2           7                      true             true             true             true                 20                     complete  
+# 20  29  20030010  13123110  19  8436285   A29        A28  (S19 x S10) cap A29  S29        2      2           7                      true             true             true             true                 19                     complete  
+# 21  29  34597290  13123110  11  4686825   A29        A28  (S11 x S18) cap A29  S29        2      2           7                      true             true             true             true                 22                     complete  
+# 22  29  34597290  21474180  18  13037895  A29        A28  (S18 x S11) cap A29  S29        2      2           7                      true             true             true             true                 21                     complete  
+# 23  29  51895935  21474180  12  8436285   A29        A28  (S12 x S17) cap A29  S29        2      2           7                      true             true             true             true                 24                     complete  
+# 24  29  51895935  30421755  17  17383860  A29        A28  (S17 x S12) cap A29  S29        2      2           7                      true             true             true             true                 23                     complete  
+# 25  29  67863915  30421755  13  13037895  A29        A28  (S13 x S16) cap A29  S29        2      2           7                      true             true             true             true                 26                     complete  
+# 26  29  67863915  37442160  16  20058300  A29        A28  (S16 x S13) cap A29  S29        2      2           7                      true             true             true             true                 25                     complete  
+# 27  29  77558760  37442160  14  17383860  A29        A28  (S14 x S15) cap A29  S29        2      2           7                      true             true             true             true                 28                     complete  
+# 28  29  77558760  40116600  15  20058300  A29        A28  (S15 x S14) cap A29  S29        2      2           7                      true             true             true             true                 27                     complete  
+# 29  29  406       378       27  351       S29        S28  S27 x S2             S29        2      2           8                      true             true             true             true                                        complete  
+# 30  29  3654      378       3   27        S29        S28  S3 x S26             S29        2      2           8                      true             true             true             true                 6                      complete  
+# 31  29  3654      3276      26  2925      S29        S28  S26 x S3             S29        2      2           8                      true             true             true             true                 5                      complete  
+# 32  29  23751     3276      4   351       S29        S28  S4 x S25             S29        2      2           8                      true             true             true             true                 8                      complete  
+# 33  29  23751     20475     25  17550     S29        S28  S25 x S4             S29        2      2           8                      true             true             true             true                 7                      complete  
+# 34  29  118755    20475     5   2925      S29        S28  S5 x S24             S29        2      2           8                      true             true             true             true                 10                     complete  
+# 35  29  118755    98280     24  80730     S29        S28  S24 x S5             S29        2      2           8                      true             true             true             true                 9                      complete  
+# 36  29  475020    98280     6   17550     S29        S28  S6 x S23             S29        2      2           8                      true             true             true             true                 12                     complete  
+# 37  29  475020    376740    23  296010    S29        S28  S23 x S6             S29        2      2           8                      true             true             true             true                 11                     complete  
+# 38  29  1560780   376740    7   80730     S29        S28  S7 x S22             S29        2      2           8                      true             true             true             true                 14                     complete  
+# 39  29  1560780   1184040   22  888030    S29        S28  S22 x S7             S29        2      2           8                      true             true             true             true                 13                     complete  
+# 40  29  4292145   1184040   8   296010    S29        S28  S8 x S21             S29        2      2           8                      true             true             true             true                 16                     complete  
+# 41  29  4292145   3108105   21  2220075   S29        S28  S21 x S8             S29        2      2           8                      true             true             true             true                 15                     complete  
+# 42  29  10015005  3108105   9   888030    S29        S28  S9 x S20             S29        2      2           8                      true             true             true             true                 18                     complete  
+# 43  29  10015005  6906900   20  4686825   S29        S28  S20 x S9             S29        2      2           8                      true             true             true             true                 17                     complete  
+# 44  29  20030010  6906900   10  2220075   S29        S28  S10 x S19            S29        2      2           8                      true             true             true             true                 20                     complete  
+# 45  29  20030010  13123110  19  8436285   S29        S28  S19 x S10            S29        2      2           8                      true             true             true             true                 19                     complete  
+# 46  29  34597290  13123110  11  4686825   S29        S28  S11 x S18            S29        2      2           8                      true             true             true             true                 22                     complete  
+# 47  29  34597290  21474180  18  13037895  S29        S28  S18 x S11            S29        2      2           8                      true             true             true             true                 21                     complete  
+# 48  29  51895935  21474180  12  8436285   S29        S28  S12 x S17            S29        2      2           8                      true             true             true             true                 24                     complete  
+# 49  29  51895935  30421755  17  17383860  S29        S28  S17 x S12            S29        2      2           8                      true             true             true             true                 23                     complete  
+# 50  29  67863915  30421755  13  13037895  S29        S28  S13 x S16            S29        2      2           8                      true             true             true             true                 26                     complete  
+# 51  29  67863915  37442160  16  20058300  S29        S28  S16 x S13            S29        2      2           8                      true             true             true             true                 25                     complete  
+# 52  29  77558760  37442160  14  17383860  S29        S28  S14 x S15            S29        2      2           8                      true             true             true             true                 28                     complete  
+# 53  29  77558760  40116600  15  20058300  S29        S28  S15 x S14            S29        2      2           8                      true             true             true             true                 27                     complete  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -910,7 +910,7 @@
 # Block-primitive type                                                 
 # ---------------------------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_29 :=  [
@@ -1307,9 +1307,9 @@ lD_29 :=  [
   t := 2 ),
   v:= 29)
 ]; 
-for D in lD_29 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_29 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
-# 5. Designs (reduced within each group): 
+# 6. Designs (reduced within each group): 
 # ----------------------------------------
 
 lD_29_reduced :=  [
@@ -1369,38 +1369,10 @@ lD_29_reduced :=  [
   lambdas := [ 351 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 406, 378, 27, 351 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 27 ],
-  blockSizes := [ 27 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 378,
-  tSubsetStructure := rec(
-  lambdas := [ 351 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 3654, 378, 3, 27 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 378,
-  tSubsetStructure := rec(
-  lambdas := [ 27 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 3654, 378, 3, 27 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -1425,38 +1397,10 @@ lD_29_reduced :=  [
   lambdas := [ 2925 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 3654, 3276, 26, 2925 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 26 ],
-  blockSizes := [ 26 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3276,
-  tSubsetStructure := rec(
-  lambdas := [ 2925 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 23751, 3276, 4, 351 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3276,
-  tSubsetStructure := rec(
-  lambdas := [ 351 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 23751, 3276, 4, 351 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -1481,38 +1425,10 @@ lD_29_reduced :=  [
   lambdas := [ 17550 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 23751, 20475, 25, 17550 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 25 ],
-  blockSizes := [ 25 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 20475,
-  tSubsetStructure := rec(
-  lambdas := [ 17550 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 118755, 20475, 5, 2925 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 20475,
-  tSubsetStructure := rec(
-  lambdas := [ 2925 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 118755, 20475, 5, 2925 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -1537,38 +1453,10 @@ lD_29_reduced :=  [
   lambdas := [ 80730 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 118755, 98280, 24, 80730 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 24 ],
-  blockSizes := [ 24 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 98280,
-  tSubsetStructure := rec(
-  lambdas := [ 80730 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 475020, 98280, 6, 17550 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 98280,
-  tSubsetStructure := rec(
-  lambdas := [ 17550 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 475020, 98280, 6, 17550 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 6 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -1593,38 +1481,10 @@ lD_29_reduced :=  [
   lambdas := [ 296010 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 475020, 376740, 23, 296010 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 23 ],
-  blockSizes := [ 23 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 376740,
-  tSubsetStructure := rec(
-  lambdas := [ 296010 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 1560780, 376740, 7, 80730 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 376740,
-  tSubsetStructure := rec(
-  lambdas := [ 80730 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 1560780, 376740, 7, 80730 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 7 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -1649,38 +1509,10 @@ lD_29_reduced :=  [
   lambdas := [ 888030 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 1560780, 1184040, 22, 888030 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 22 ],
-  blockSizes := [ 22 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1184040,
-  tSubsetStructure := rec(
-  lambdas := [ 888030 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 4292145, 1184040, 8, 296010 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 8 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1184040,
-  tSubsetStructure := rec(
-  lambdas := [ 296010 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 4292145, 1184040, 8, 296010 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -1705,38 +1537,10 @@ lD_29_reduced :=  [
   lambdas := [ 2220075 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 4292145, 3108105, 21, 2220075 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 21 ],
-  blockSizes := [ 21 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3108105,
-  tSubsetStructure := rec(
-  lambdas := [ 2220075 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 10015005, 3108105, 9, 888030 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 9 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3108105,
-  tSubsetStructure := rec(
-  lambdas := [ 888030 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 10015005, 3108105, 9, 888030 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 9 ],
   blockSizes := [ 9 ],
   isBinary := true,
@@ -1761,38 +1565,10 @@ lD_29_reduced :=  [
   lambdas := [ 4686825 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 10015005, 6906900, 20, 4686825 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 20 ],
-  blockSizes := [ 20 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6906900,
-  tSubsetStructure := rec(
-  lambdas := [ 4686825 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 20030010, 6906900, 10, 2220075 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6906900,
-  tSubsetStructure := rec(
-  lambdas := [ 2220075 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 20030010, 6906900, 10, 2220075 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 10 ],
   blockSizes := [ 10 ],
   isBinary := true,
@@ -1817,38 +1593,10 @@ lD_29_reduced :=  [
   lambdas := [ 8436285 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 20030010, 13123110, 19, 8436285 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 19 ],
-  blockSizes := [ 19 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 13123110,
-  tSubsetStructure := rec(
-  lambdas := [ 8436285 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 34597290, 13123110, 11, 4686825 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 13123110,
-  tSubsetStructure := rec(
-  lambdas := [ 4686825 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 34597290, 13123110, 11, 4686825 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 11 ],
   blockSizes := [ 11 ],
   isBinary := true,
@@ -1873,38 +1621,10 @@ lD_29_reduced :=  [
   lambdas := [ 13037895 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 34597290, 21474180, 18, 13037895 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 18 ],
-  blockSizes := [ 18 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 21474180,
-  tSubsetStructure := rec(
-  lambdas := [ 13037895 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 51895935, 21474180, 12, 8436285 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 21474180,
-  tSubsetStructure := rec(
-  lambdas := [ 8436285 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 51895935, 21474180, 12, 8436285 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 12 ],
   blockSizes := [ 12 ],
   isBinary := true,
@@ -1929,38 +1649,10 @@ lD_29_reduced :=  [
   lambdas := [ 17383860 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 51895935, 30421755, 17, 17383860 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 17 ],
-  blockSizes := [ 17 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 30421755,
-  tSubsetStructure := rec(
-  lambdas := [ 17383860 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 67863915, 30421755, 13, 13037895 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 13 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 30421755,
-  tSubsetStructure := rec(
-  lambdas := [ 13037895 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 67863915, 30421755, 13, 13037895 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 13 ],
   blockSizes := [ 13 ],
   isBinary := true,
@@ -1985,38 +1677,10 @@ lD_29_reduced :=  [
   lambdas := [ 20058300 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 67863915, 37442160, 16, 20058300 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 16 ],
-  blockSizes := [ 16 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 37442160,
-  tSubsetStructure := rec(
-  lambdas := [ 20058300 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 77558760, 37442160, 14, 17383860 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 14 ],
-  blockSizes := [ 14 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 37442160,
-  tSubsetStructure := rec(
-  lambdas := [ 17383860 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 77558760, 37442160, 14, 17383860 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 14 ],
   blockSizes := [ 14 ],
   isBinary := true,
@@ -2041,6 +1705,342 @@ lD_29_reduced :=  [
   lambdas := [ 20058300 ],
   t := 2 ),
   v:= 29),
+ rec( parameters := [ 29, 406, 378, 27, 351 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 27 ],
+  blockSizes := [ 27 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 378,
+  tSubsetStructure := rec(
+  lambdas := [ 351 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 3654, 378, 3, 27 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 378,
+  tSubsetStructure := rec(
+  lambdas := [ 27 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 3654, 3276, 26, 2925 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 26 ],
+  blockSizes := [ 26 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3276,
+  tSubsetStructure := rec(
+  lambdas := [ 2925 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 23751, 3276, 4, 351 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3276,
+  tSubsetStructure := rec(
+  lambdas := [ 351 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 23751, 20475, 25, 17550 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 25 ],
+  blockSizes := [ 25 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 20475,
+  tSubsetStructure := rec(
+  lambdas := [ 17550 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 118755, 20475, 5, 2925 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 20475,
+  tSubsetStructure := rec(
+  lambdas := [ 2925 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 118755, 98280, 24, 80730 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 24 ],
+  blockSizes := [ 24 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 98280,
+  tSubsetStructure := rec(
+  lambdas := [ 80730 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 475020, 98280, 6, 17550 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 98280,
+  tSubsetStructure := rec(
+  lambdas := [ 17550 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 475020, 376740, 23, 296010 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 23 ],
+  blockSizes := [ 23 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 376740,
+  tSubsetStructure := rec(
+  lambdas := [ 296010 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 1560780, 376740, 7, 80730 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 7 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 376740,
+  tSubsetStructure := rec(
+  lambdas := [ 80730 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 1560780, 1184040, 22, 888030 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 22 ],
+  blockSizes := [ 22 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1184040,
+  tSubsetStructure := rec(
+  lambdas := [ 888030 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 4292145, 1184040, 8, 296010 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 8 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1184040,
+  tSubsetStructure := rec(
+  lambdas := [ 296010 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 4292145, 3108105, 21, 2220075 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 21 ],
+  blockSizes := [ 21 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3108105,
+  tSubsetStructure := rec(
+  lambdas := [ 2220075 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 10015005, 3108105, 9, 888030 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 9 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3108105,
+  tSubsetStructure := rec(
+  lambdas := [ 888030 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 10015005, 6906900, 20, 4686825 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 20 ],
+  blockSizes := [ 20 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6906900,
+  tSubsetStructure := rec(
+  lambdas := [ 4686825 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 20030010, 6906900, 10, 2220075 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6906900,
+  tSubsetStructure := rec(
+  lambdas := [ 2220075 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 20030010, 13123110, 19, 8436285 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 19 ],
+  blockSizes := [ 19 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 13123110,
+  tSubsetStructure := rec(
+  lambdas := [ 8436285 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 34597290, 13123110, 11, 4686825 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 13123110,
+  tSubsetStructure := rec(
+  lambdas := [ 4686825 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 34597290, 21474180, 18, 13037895 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 18 ],
+  blockSizes := [ 18 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 21474180,
+  tSubsetStructure := rec(
+  lambdas := [ 13037895 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 51895935, 21474180, 12, 8436285 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 21474180,
+  tSubsetStructure := rec(
+  lambdas := [ 8436285 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 51895935, 30421755, 17, 17383860 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 17 ],
+  blockSizes := [ 17 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 30421755,
+  tSubsetStructure := rec(
+  lambdas := [ 17383860 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 67863915, 30421755, 13, 13037895 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 13 ],
+  blockSizes := [ 13 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 30421755,
+  tSubsetStructure := rec(
+  lambdas := [ 13037895 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 67863915, 37442160, 16, 20058300 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 16 ],
+  blockSizes := [ 16 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 37442160,
+  tSubsetStructure := rec(
+  lambdas := [ 20058300 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 77558760, 37442160, 14, 17383860 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 14 ],
+  blockSizes := [ 14 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 37442160,
+  tSubsetStructure := rec(
+  lambdas := [ 17383860 ],
+  t := 2 ),
+  v:= 29),
  rec( parameters:= [ 29, 77558760, 40116600, 15, 20058300 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
@@ -2056,9 +2056,9 @@ lD_29_reduced :=  [
   t := 2 ),
   v:= 29)
 ]; 
-for D in lD_29_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_29_reduced do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
-# 6. Designs (all): 
+# 7. Designs (all): 
 # -----------------
 
 lD_29_all :=  [
@@ -2118,38 +2118,10 @@ lD_29_all :=  [
   lambdas := [ 351 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 406, 378, 27, 351 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 27 ],
-  blockSizes := [ 27 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 378,
-  tSubsetStructure := rec(
-  lambdas := [ 351 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 3654, 378, 3, 27 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 378,
-  tSubsetStructure := rec(
-  lambdas := [ 27 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 3654, 378, 3, 27 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 3 ],
   blockSizes := [ 3 ],
   isBinary := true,
@@ -2174,38 +2146,10 @@ lD_29_all :=  [
   lambdas := [ 2925 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 3654, 3276, 26, 2925 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 26 ],
-  blockSizes := [ 26 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3276,
-  tSubsetStructure := rec(
-  lambdas := [ 2925 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 23751, 3276, 4, 351 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3276,
-  tSubsetStructure := rec(
-  lambdas := [ 351 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 23751, 3276, 4, 351 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 4 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -2230,38 +2174,10 @@ lD_29_all :=  [
   lambdas := [ 17550 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 23751, 20475, 25, 17550 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 25 ],
-  blockSizes := [ 25 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 20475,
-  tSubsetStructure := rec(
-  lambdas := [ 17550 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 118755, 20475, 5, 2925 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 20475,
-  tSubsetStructure := rec(
-  lambdas := [ 2925 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 118755, 20475, 5, 2925 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -2286,38 +2202,10 @@ lD_29_all :=  [
   lambdas := [ 80730 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 118755, 98280, 24, 80730 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 24 ],
-  blockSizes := [ 24 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 98280,
-  tSubsetStructure := rec(
-  lambdas := [ 80730 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 475020, 98280, 6, 17550 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 98280,
-  tSubsetStructure := rec(
-  lambdas := [ 17550 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 475020, 98280, 6, 17550 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 6 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -2342,38 +2230,10 @@ lD_29_all :=  [
   lambdas := [ 296010 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 475020, 376740, 23, 296010 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 23 ],
-  blockSizes := [ 23 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 376740,
-  tSubsetStructure := rec(
-  lambdas := [ 296010 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 1560780, 376740, 7, 80730 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 376740,
-  tSubsetStructure := rec(
-  lambdas := [ 80730 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 1560780, 376740, 7, 80730 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 7 ],
   blockSizes := [ 7 ],
   isBinary := true,
@@ -2398,38 +2258,10 @@ lD_29_all :=  [
   lambdas := [ 888030 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 1560780, 1184040, 22, 888030 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 22 ],
-  blockSizes := [ 22 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1184040,
-  tSubsetStructure := rec(
-  lambdas := [ 888030 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 4292145, 1184040, 8, 296010 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 8 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1184040,
-  tSubsetStructure := rec(
-  lambdas := [ 296010 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 4292145, 1184040, 8, 296010 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -2454,38 +2286,10 @@ lD_29_all :=  [
   lambdas := [ 2220075 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 4292145, 3108105, 21, 2220075 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 21 ],
-  blockSizes := [ 21 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3108105,
-  tSubsetStructure := rec(
-  lambdas := [ 2220075 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 10015005, 3108105, 9, 888030 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 9 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 3108105,
-  tSubsetStructure := rec(
-  lambdas := [ 888030 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 10015005, 3108105, 9, 888030 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 9 ],
   blockSizes := [ 9 ],
   isBinary := true,
@@ -2510,38 +2314,10 @@ lD_29_all :=  [
   lambdas := [ 4686825 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 10015005, 6906900, 20, 4686825 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 20 ],
-  blockSizes := [ 20 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6906900,
-  tSubsetStructure := rec(
-  lambdas := [ 4686825 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 20030010, 6906900, 10, 2220075 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6906900,
-  tSubsetStructure := rec(
-  lambdas := [ 2220075 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 20030010, 6906900, 10, 2220075 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 10 ],
   blockSizes := [ 10 ],
   isBinary := true,
@@ -2566,38 +2342,10 @@ lD_29_all :=  [
   lambdas := [ 8436285 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 20030010, 13123110, 19, 8436285 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 19 ],
-  blockSizes := [ 19 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 13123110,
-  tSubsetStructure := rec(
-  lambdas := [ 8436285 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 34597290, 13123110, 11, 4686825 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 13123110,
-  tSubsetStructure := rec(
-  lambdas := [ 4686825 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 34597290, 13123110, 11, 4686825 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 11 ],
   blockSizes := [ 11 ],
   isBinary := true,
@@ -2622,38 +2370,10 @@ lD_29_all :=  [
   lambdas := [ 13037895 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 34597290, 21474180, 18, 13037895 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 18 ],
-  blockSizes := [ 18 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 21474180,
-  tSubsetStructure := rec(
-  lambdas := [ 13037895 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 51895935, 21474180, 12, 8436285 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 21474180,
-  tSubsetStructure := rec(
-  lambdas := [ 8436285 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 51895935, 21474180, 12, 8436285 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 12 ],
   blockSizes := [ 12 ],
   isBinary := true,
@@ -2678,38 +2398,10 @@ lD_29_all :=  [
   lambdas := [ 17383860 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 51895935, 30421755, 17, 17383860 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 17 ],
-  blockSizes := [ 17 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 30421755,
-  tSubsetStructure := rec(
-  lambdas := [ 17383860 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 67863915, 30421755, 13, 13037895 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 13 ],
-  blockSizes := [ 13 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 30421755,
-  tSubsetStructure := rec(
-  lambdas := [ 13037895 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 67863915, 30421755, 13, 13037895 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 13 ],
   blockSizes := [ 13 ],
   isBinary := true,
@@ -2734,38 +2426,10 @@ lD_29_all :=  [
   lambdas := [ 20058300 ],
   t := 2 ),
   v:= 29),
- rec( parameters := [ 29, 67863915, 37442160, 16, 20058300 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
-  baseBlock := [ 1 .. 16 ],
-  blockSizes := [ 16 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 37442160,
-  tSubsetStructure := rec(
-  lambdas := [ 20058300 ],
-  t := 2 ),
-  v:= 29),
  rec( parameters := [ 29, 77558760, 37442160, 14, 17383860 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (27,28,29) ] ),
   groupNumbers := [ 7, " ", " " ],
-  baseBlock := [ 1 .. 14 ],
-  blockSizes := [ 14 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 37442160,
-  tSubsetStructure := rec(
-  lambdas := [ 17383860 ],
-  t := 2 ),
-  v:= 29),
- rec( parameters := [ 29, 77558760, 37442160, 14, 17383860 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
-  groupNumbers := [ 8, " ", " " ],
   baseBlock := [ 1 .. 14 ],
   blockSizes := [ 14 ],
   isBinary := true,
@@ -2790,6 +2454,342 @@ lD_29_all :=  [
   lambdas := [ 20058300 ],
   t := 2 ),
   v:= 29),
+ rec( parameters := [ 29, 406, 378, 27, 351 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 27 ],
+  blockSizes := [ 27 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 378,
+  tSubsetStructure := rec(
+  lambdas := [ 351 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 3654, 378, 3, 27 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 378,
+  tSubsetStructure := rec(
+  lambdas := [ 27 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 3654, 3276, 26, 2925 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 26 ],
+  blockSizes := [ 26 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3276,
+  tSubsetStructure := rec(
+  lambdas := [ 2925 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 23751, 3276, 4, 351 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3276,
+  tSubsetStructure := rec(
+  lambdas := [ 351 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 23751, 20475, 25, 17550 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 25 ],
+  blockSizes := [ 25 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 20475,
+  tSubsetStructure := rec(
+  lambdas := [ 17550 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 118755, 20475, 5, 2925 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 20475,
+  tSubsetStructure := rec(
+  lambdas := [ 2925 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 118755, 98280, 24, 80730 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 24 ],
+  blockSizes := [ 24 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 98280,
+  tSubsetStructure := rec(
+  lambdas := [ 80730 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 475020, 98280, 6, 17550 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 98280,
+  tSubsetStructure := rec(
+  lambdas := [ 17550 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 475020, 376740, 23, 296010 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 23 ],
+  blockSizes := [ 23 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 376740,
+  tSubsetStructure := rec(
+  lambdas := [ 296010 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 1560780, 376740, 7, 80730 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 7 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 376740,
+  tSubsetStructure := rec(
+  lambdas := [ 80730 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 1560780, 1184040, 22, 888030 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 22 ],
+  blockSizes := [ 22 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1184040,
+  tSubsetStructure := rec(
+  lambdas := [ 888030 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 4292145, 1184040, 8, 296010 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 8 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1184040,
+  tSubsetStructure := rec(
+  lambdas := [ 296010 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 4292145, 3108105, 21, 2220075 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 21 ],
+  blockSizes := [ 21 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3108105,
+  tSubsetStructure := rec(
+  lambdas := [ 2220075 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 10015005, 3108105, 9, 888030 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 9 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 3108105,
+  tSubsetStructure := rec(
+  lambdas := [ 888030 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 10015005, 6906900, 20, 4686825 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 20 ],
+  blockSizes := [ 20 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6906900,
+  tSubsetStructure := rec(
+  lambdas := [ 4686825 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 20030010, 6906900, 10, 2220075 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6906900,
+  tSubsetStructure := rec(
+  lambdas := [ 2220075 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 20030010, 13123110, 19, 8436285 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 19 ],
+  blockSizes := [ 19 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 13123110,
+  tSubsetStructure := rec(
+  lambdas := [ 8436285 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 34597290, 13123110, 11, 4686825 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 13123110,
+  tSubsetStructure := rec(
+  lambdas := [ 4686825 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 34597290, 21474180, 18, 13037895 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 18 ],
+  blockSizes := [ 18 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 21474180,
+  tSubsetStructure := rec(
+  lambdas := [ 13037895 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 51895935, 21474180, 12, 8436285 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 21474180,
+  tSubsetStructure := rec(
+  lambdas := [ 8436285 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 51895935, 30421755, 17, 17383860 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 17 ],
+  blockSizes := [ 17 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 30421755,
+  tSubsetStructure := rec(
+  lambdas := [ 17383860 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 67863915, 30421755, 13, 13037895 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 13 ],
+  blockSizes := [ 13 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 30421755,
+  tSubsetStructure := rec(
+  lambdas := [ 13037895 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 67863915, 37442160, 16, 20058300 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 16 ],
+  blockSizes := [ 16 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 37442160,
+  tSubsetStructure := rec(
+  lambdas := [ 20058300 ],
+  t := 2 ),
+  v:= 29),
+ rec( parameters := [ 29, 77558760, 37442160, 14, 17383860 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
+  groupNumbers := [ 8, " ", " " ],
+  baseBlock := [ 1 .. 14 ],
+  blockSizes := [ 14 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 37442160,
+  tSubsetStructure := rec(
+  lambdas := [ 17383860 ],
+  t := 2 ),
+  v:= 29),
  rec( parameters:= [ 29, 77558760, 40116600, 15, 20058300 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29), (1,2) ] ),
@@ -2805,5 +2805,5 @@ lD_29_all :=  [
   t := 2 ),
   v:= 29)
 ]; 
-for D in lD_29_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_29_all do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 

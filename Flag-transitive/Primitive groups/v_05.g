@@ -6,11 +6,11 @@
 #               lD_5 is the list of the designs
 # References:    
 
-# 1. number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          1              1      
 # Point-imprimitive    0          0              0      
@@ -24,7 +24,7 @@
 # Total                0          1              1      
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -50,7 +50,7 @@
 # 2   5  10  6  3  3  S5  S4  S3 x S2           S5      2      2           5      1       1       true             true             true             true                                        complete  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -79,7 +79,7 @@
 # Block-primitive type                                            
 # ----------------------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_5 :=  [
@@ -98,9 +98,9 @@ lD_5 :=  [
   t := 2 ),
   v:= 5)
 ]; 
-for D in lD_5 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_5 do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
-# 5. Designs (reduced within each group): 
+# 6. Designs (reduced within each group): 
 # ----------------------------------------
 
 lD_5_reduced :=  [
@@ -133,9 +133,9 @@ lD_5_reduced :=  [
   t := 2 ),
   v:= 5)
 ]; 
-for D in lD_5_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_5_reduced do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
-# 6. Designs (all): 
+# 7. Designs (all): 
 # -----------------
 
 lD_5_all :=  [
@@ -168,5 +168,5 @@ lD_5_all :=  [
   t := 2 ),
   v:= 5)
 ]; 
-for D in lD_5_all do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
+for D in lD_5_all do D.blocks := Set( Orbit( D.autSubgroup, D.baseBlock, OnSets ) ); od;
 
