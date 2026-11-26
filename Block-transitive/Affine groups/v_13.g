@@ -6,11 +6,11 @@
 #               lD_13 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      2          85             87     
 # Point-imprimitive    0          0              0      
@@ -24,7 +24,7 @@
 # Total                2          85             87     
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -124,72 +124,72 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr   v   b    r    k   λ   G          Gα  GB  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                3           true       PG(2,3) parameters                
-# 2    13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                4           true       PG(2,3) parameters                
-# 3    13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                1           true       complement of PG(2,3) parameters  
-# 4    13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                2           true       complement of PG(2,3) parameters  
-# 5    13  26   8    4   2   D26        2   1   13:6       7      3           2      1       1       true             false            false            false                11                                                       
-# 6    13  26   8    4   2   13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                12                                                       
-# 7    13  26   12   6   5   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                9                                                        
-# 8    13  26   12   6   5   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            true             false                10                                                       
-# 9    13  26   14   7   7   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                7                                                        
-# 10   13  26   14   7   7   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            true             false                8                                                        
-# 11   13  26   18   9   12  D26        2   1   13:6       7      3           2      1       1       true             false            false            false                5                                                        
-# 12   13  26   18   9   12  13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                6                                                        
-# 13   13  39   12   4   3   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                28                                                       
-# 14   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                27                                                       
-# 15   13  39   12   4   3   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                29                                                       
-# 16   13  39   12   4   3   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            true             false                30                                                       
-# 17   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                24                                                       
-# 18   13  39   15   5   5   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                22                                                       
-# 19   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                23                                                       
-# 20   13  39   15   5   5   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                25                                                       
-# 21   13  39   15   5   5   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                26                                                       
-# 22   13  39   24   8   14  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                18                                                       
-# 23   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                19                                                       
-# 24   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                17                                                       
-# 25   13  39   24   8   14  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                20                                                       
-# 26   13  39   24   8   14  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                21                                                       
-# 27   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                14                                                       
-# 28   13  39   27   9   18  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                13                                                       
-# 29   13  39   27   9   18  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                15                                                       
-# 30   13  39   27   9   18  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            true             false                16                                                       
-# 31   13  52   12   3   2   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                43                                                       
-# 32   13  52   12   3   2   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            true             false                44                                                       
-# 33   13  52   16   4   4   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                41                                                       
-# 34   13  52   16   4   4   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                42                                                       
-# 35   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                38                                                       
-# 36   13  52   24   6   10  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                39                                                       
-# 37   13  52   24   6   10  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                40                                                       
-# 38   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                35                                                       
-# 39   13  52   28   7   14  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                36                                                       
-# 40   13  52   28   7   14  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                37                                                       
-# 41   13  52   36   9   24  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                33                                                       
-# 42   13  52   36   9   24  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                34                                                       
-# 43   13  52   40   10  30  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                31                                                       
-# 44   13  52   40   10  30  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            true             false                32                                                       
-# 45   13  78   18   3   3   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                66                                                       
-# 46   13  78   24   4   6   13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                63                                                       
-# 47   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                65                                                       
-# 48   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                64                                                       
-# 49   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                59                                                       
-# 50   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                60                                                       
-# 51   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                62                                                       
-# 52   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                61                                                       
-# 53   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                58                                                       
-# 54   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                56                                                       
-# 55   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                57                                                       
-# 56   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                54                                                       
-# 57   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                55                                                       
-# 58   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                53                                                       
-# 59   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                49                                                       
-# 60   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                50                                                       
-# 61   13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                52                                                       
-# 62   13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                51                                                       
-# 63   13  78   54   9   36  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                46                                                       
-# 64   13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                48                                                       
-# 65   13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                47                                                       
-# 66   13  78   60   10  45  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                45                                                       
+# 1    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                2           true       PG(2,3) parameters                
+# 2    13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                1           true       complement of PG(2,3) parameters  
+# 3    13  26   8    4   2   D26        2   1   13:6       7      3           2      1       1       true             false            false            false                4                                                        
+# 4    13  26   18   9   12  D26        2   1   13:6       7      3           2      1       1       true             false            false            false                3                                                        
+# 5    13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                6           true       PG(2,3) parameters                
+# 6    13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                5           true       complement of PG(2,3) parameters  
+# 7    13  39   12   4   3   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                16                                                       
+# 8    13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                15                                                       
+# 9    13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                14                                                       
+# 10   13  39   15   5   5   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                12                                                       
+# 11   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                13                                                       
+# 12   13  39   24   8   14  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                10                                                       
+# 13   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                11                                                       
+# 14   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                9                                                        
+# 15   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                8                                                        
+# 16   13  39   27   9   18  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                7                                                        
+# 17   13  26   12   6   5   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                18                                                       
+# 18   13  26   14   7   7   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                17                                                       
+# 19   13  52   12   3   2   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                26                                                       
+# 20   13  52   16   4   4   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                25                                                       
+# 21   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                23                                                       
+# 22   13  52   24   6   10  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                24                                                       
+# 23   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                21                                                       
+# 24   13  52   28   7   14  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                22                                                       
+# 25   13  52   36   9   24  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                20                                                       
+# 26   13  52   40   10  30  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                19                                                       
+# 27   13  26   8    4   2   13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                28                                                       
+# 28   13  26   18   9   12  13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                27                                                       
+# 29   13  39   12   4   3   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                32                                                       
+# 30   13  39   15   5   5   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                31                                                       
+# 31   13  39   24   8   14  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                30                                                       
+# 32   13  39   27   9   18  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                29                                                       
+# 33   13  78   24   4   6   13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                38                                                       
+# 34   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                36                                                       
+# 35   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                37                                                       
+# 36   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                34                                                       
+# 37   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                35                                                       
+# 38   13  78   54   9   36  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                33                                                       
+# 39   13  26   12   6   5   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            true             false                40                                                       
+# 40   13  26   14   7   7   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            false            true                 39                                                       
+# 41   13  39   12   4   3   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            true             false                44                                                       
+# 42   13  39   15   5   5   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                43                                                       
+# 43   13  39   24   8   14  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                42                                                       
+# 44   13  39   27   9   18  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            true                 41                                                       
+# 45   13  52   12   3   2   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            true             false                50                                                       
+# 46   13  52   16   4   4   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                49                                                       
+# 47   13  52   24   6   10  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                48                                                       
+# 48   13  52   28   7   14  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                47                                                       
+# 49   13  52   36   9   24  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                46                                                       
+# 50   13  52   40   10  30  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            true                 45                                                       
+# 51   13  78   18   3   3   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                66                                                       
+# 52   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                65                                                       
+# 53   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                64                                                       
+# 54   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                63                                                       
+# 55   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                62                                                       
+# 56   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                61                                                       
+# 57   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                59                                                       
+# 58   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                60                                                       
+# 59   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                57                                                       
+# 60   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                58                                                       
+# 61   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                56                                                       
+# 62   13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                55                                                       
+# 63   13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                54                                                       
+# 64   13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                53                                                       
+# 65   13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                52                                                       
+# 66   13  78   60   10  45  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                51                                                       
 # 67   13  78   66   11  55  AGL(1,13)  12  2   S13        2      2           6      1       2       true             false            false            true                                        complete                          
 # 68   13  156  36   3   6   AGL(1,13)  12  1   AGL(1,13)  2      2           6      1       3       true             false            false            false                107                                                      
 # 69   13  156  48   4   12  AGL(1,13)  12  1   AGL(1,13)  2      2           6      1       3       true             false            false            false                105                                                      
@@ -237,116 +237,116 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr   v   b    r    k   λ   G          Gα  GB  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                          
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                9           true       PG(2,3) parameters                
-# 2    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                10          true       PG(2,3) parameters                
-# 3    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                11          true       PG(2,3) parameters                
-# 4    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                12          true       PG(2,3) parameters                
-# 5    13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                15          true       PG(2,3) parameters                
-# 6    13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                16          true       PG(2,3) parameters                
-# 7    13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                13          true       PG(2,3) parameters                
-# 8    13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                14          true       PG(2,3) parameters                
-# 9    13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                1           true       complement of PG(2,3) parameters  
-# 10   13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                2           true       complement of PG(2,3) parameters  
-# 11   13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                3           true       complement of PG(2,3) parameters  
-# 12   13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                4           true       complement of PG(2,3) parameters  
-# 13   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                7           true       complement of PG(2,3) parameters  
-# 14   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                8           true       complement of PG(2,3) parameters  
-# 15   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                5           true       complement of PG(2,3) parameters  
-# 16   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                6           true       complement of PG(2,3) parameters  
-# 17   13  26   8    4   2   D26        2   1   13:6       7      3           2      1       1       true             false            false            false                26                                                       
-# 18   13  26   8    4   2   D26        2   1   13:6       7      3           2      1       1       true             false            false            false                25                                                       
-# 19   13  26   8    4   2   13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                28                                                       
-# 20   13  26   8    4   2   13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                27                                                       
-# 21   13  26   12   6   5   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                23                                                       
-# 22   13  26   12   6   5   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            true             false                24                                                       
-# 23   13  26   14   7   7   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                21                                                       
-# 24   13  26   14   7   7   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            true             false                22                                                       
-# 25   13  26   18   9   12  D26        2   1   13:6       7      3           2      1       1       true             false            false            false                18                                                       
-# 26   13  26   18   9   12  D26        2   1   13:6       7      3           2      1       1       true             false            false            false                17                                                       
-# 27   13  26   18   9   12  13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                20                                                       
-# 28   13  26   18   9   12  13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                19                                                       
-# 29   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                60                                                       
-# 30   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                59                                                       
-# 31   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                58                                                       
-# 32   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                62                                                       
-# 33   13  39   12   4   3   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                61                                                       
-# 34   13  39   12   4   3   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                63                                                       
-# 35   13  39   12   4   3   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            true             false                64                                                       
-# 36   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                53                                                       
-# 37   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                54                                                       
-# 38   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                50                                                       
-# 39   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                47                                                       
-# 40   13  39   15   5   5   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                51                                                       
-# 41   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                55                                                       
-# 42   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                48                                                       
-# 43   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                52                                                       
-# 44   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                49                                                       
-# 45   13  39   15   5   5   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                56                                                       
-# 46   13  39   15   5   5   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                57                                                       
-# 47   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                39                                                       
-# 48   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                42                                                       
-# 49   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                44                                                       
-# 50   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                38                                                       
-# 51   13  39   24   8   14  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                40                                                       
-# 52   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                43                                                       
-# 53   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                36                                                       
-# 54   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                37                                                       
-# 55   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                41                                                       
-# 56   13  39   24   8   14  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                45                                                       
-# 57   13  39   24   8   14  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                46                                                       
-# 58   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                31                                                       
-# 59   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                30                                                       
-# 60   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                29                                                       
-# 61   13  39   27   9   18  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                33                                                       
-# 62   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                32                                                       
-# 63   13  39   27   9   18  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                34                                                       
-# 64   13  39   27   9   18  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            true             false                35                                                       
-# 65   13  52   12   3   2   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                81                                                       
-# 66   13  52   12   3   2   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            true             false                82                                                       
-# 67   13  52   16   4   4   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                79                                                       
-# 68   13  52   16   4   4   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                80                                                       
-# 69   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                74                                                       
-# 70   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                77                                                       
-# 71   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                76                                                       
-# 72   13  52   24   6   10  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                75                                                       
-# 73   13  52   24   6   10  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                78                                                       
-# 74   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                69                                                       
-# 75   13  52   28   7   14  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                72                                                       
-# 76   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                71                                                       
-# 77   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                70                                                       
-# 78   13  52   28   7   14  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                73                                                       
-# 79   13  52   36   9   24  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                67                                                       
-# 80   13  52   36   9   24  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                68                                                       
-# 81   13  52   40   10  30  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                65                                                       
-# 82   13  52   40   10  30  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            true             false                66                                                       
-# 83   13  78   18   3   3   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                110                                                      
-# 84   13  78   24   4   6   13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                107                                                      
-# 85   13  78   24   4   6   13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                106                                                      
-# 86   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                109                                                      
-# 87   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                108                                                      
-# 88   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                101                                                      
-# 89   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                102                                                      
-# 90   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                103                                                      
-# 91   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                100                                                      
-# 92   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                105                                                      
-# 93   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                104                                                      
-# 94   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                99                                                       
-# 95   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                97                                                       
-# 96   13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                98                                                       
-# 97   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                95                                                       
-# 98   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                96                                                       
-# 99   13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                94                                                       
-# 100  13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                91                                                       
-# 101  13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                88                                                       
-# 102  13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                89                                                       
-# 103  13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                90                                                       
-# 104  13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                93                                                       
-# 105  13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                92                                                       
-# 106  13  78   54   9   36  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                85                                                       
-# 107  13  78   54   9   36  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                84                                                       
-# 108  13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                87                                                       
-# 109  13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                86                                                       
-# 110  13  78   60   10  45  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                83                                                       
+# 1    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                5           true       PG(2,3) parameters                
+# 2    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                6           true       PG(2,3) parameters                
+# 3    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                7           true       PG(2,3) parameters                
+# 4    13  13   4    4   1   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                8           true       PG(2,3) parameters                
+# 5    13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                1           true       complement of PG(2,3) parameters  
+# 6    13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                2           true       complement of PG(2,3) parameters  
+# 7    13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                3           true       complement of PG(2,3) parameters  
+# 8    13  13   9    9   6   C13        1   1   PSL(3,3)   13     2           1      1       1       true             true             false            false                4           true       complement of PG(2,3) parameters  
+# 9    13  26   8    4   2   D26        2   1   13:6       7      3           2      1       1       true             false            false            false                12                                                       
+# 10   13  26   8    4   2   D26        2   1   13:6       7      3           2      1       1       true             false            false            false                11                                                       
+# 11   13  26   18   9   12  D26        2   1   13:6       7      3           2      1       1       true             false            false            false                10                                                       
+# 12   13  26   18   9   12  D26        2   1   13:6       7      3           2      1       1       true             false            false            false                9                                                        
+# 13   13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                19          true       PG(2,3) parameters                
+# 14   13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                20          true       PG(2,3) parameters                
+# 15   13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                17          true       PG(2,3) parameters                
+# 16   13  13   4    4   1   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                18          true       PG(2,3) parameters                
+# 17   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                15          true       complement of PG(2,3) parameters  
+# 18   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                16          true       complement of PG(2,3) parameters  
+# 19   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                13          true       complement of PG(2,3) parameters  
+# 20   13  13   9    9   6   13:3       3   3   PSL(3,3)   5      2           3      1       1       true             true             false            false                14          true       complement of PG(2,3) parameters  
+# 21   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                46                                                       
+# 22   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                45                                                       
+# 23   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                44                                                       
+# 24   13  39   12   4   3   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                48                                                       
+# 25   13  39   12   4   3   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                47                                                       
+# 26   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                41                                                       
+# 27   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                42                                                       
+# 28   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                38                                                       
+# 29   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                35                                                       
+# 30   13  39   15   5   5   13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                39                                                       
+# 31   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                43                                                       
+# 32   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                36                                                       
+# 33   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                40                                                       
+# 34   13  39   15   5   5   13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                37                                                       
+# 35   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                29                                                       
+# 36   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                32                                                       
+# 37   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                34                                                       
+# 38   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                28                                                       
+# 39   13  39   24   8   14  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                30                                                       
+# 40   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                33                                                       
+# 41   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                26                                                       
+# 42   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                27                                                       
+# 43   13  39   24   8   14  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                31                                                       
+# 44   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                23                                                       
+# 45   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                22                                                       
+# 46   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                21                                                       
+# 47   13  39   27   9   18  13:3       3   1   AGL(1,13)  5      2           3      1       2       true             false            false            false                25                                                       
+# 48   13  39   27   9   18  13:3       3   1   13:3       5      5           3      1       2       true             false            false            false                24                                                       
+# 49   13  26   12   6   5   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                50                                                       
+# 50   13  26   14   7   7   13:4       4   2   AGL(1,13)  4      2           4      1       2       true             false            false            false                49                                                       
+# 51   13  52   12   3   2   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                62                                                       
+# 52   13  52   16   4   4   13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                61                                                       
+# 53   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                57                                                       
+# 54   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                60                                                       
+# 55   13  52   24   6   10  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                59                                                       
+# 56   13  52   24   6   10  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                58                                                       
+# 57   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                53                                                       
+# 58   13  52   28   7   14  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                56                                                       
+# 59   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                55                                                       
+# 60   13  52   28   7   14  13:4       4   1   13:4       4      4           4      1       1       true             false            false            false                54                                                       
+# 61   13  52   36   9   24  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                52                                                       
+# 62   13  52   40   10  30  13:4       4   1   AGL(1,13)  4      2           4      1       1       true             false            false            false                51                                                       
+# 63   13  26   8    4   2   13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                66                                                       
+# 64   13  26   8    4   2   13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                65                                                       
+# 65   13  26   18   9   12  13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                64                                                       
+# 66   13  26   18   9   12  13:6       6   3   13:6       3      3           5      1       1       true             false            false            false                63                                                       
+# 67   13  39   12   4   3   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                70                                                       
+# 68   13  39   15   5   5   13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                69                                                       
+# 69   13  39   24   8   14  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                68                                                       
+# 70   13  39   27   9   18  13:6       6   2   AGL(1,13)  3      2           5      1       2       true             false            false            false                67                                                       
+# 71   13  78   24   4   6   13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                82                                                       
+# 72   13  78   24   4   6   13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                81                                                       
+# 73   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                78                                                       
+# 74   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                79                                                       
+# 75   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                80                                                       
+# 76   13  78   30   5   10  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                77                                                       
+# 77   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                76                                                       
+# 78   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                73                                                       
+# 79   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                74                                                       
+# 80   13  78   48   8   28  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                75                                                       
+# 81   13  78   54   9   36  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                72                                                       
+# 82   13  78   54   9   36  13:6       6   1   13:6       3      3           5      1       3       true             false            false            false                71                                                       
+# 83   13  26   12   6   5   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            true             false                84                                                       
+# 84   13  26   14   7   7   AGL(1,13)  12  6   AGL(1,13)  2      2           6      1       5       true             false            false            true                 83                                                       
+# 85   13  39   12   4   3   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            true             false                88                                                       
+# 86   13  39   15   5   5   AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                87                                                       
+# 87   13  39   24   8   14  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            false                86                                                       
+# 88   13  39   27   9   18  AGL(1,13)  12  4   AGL(1,13)  2      2           6      1       4       true             false            false            true                 85                                                       
+# 89   13  52   12   3   2   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            true             false                94                                                       
+# 90   13  52   16   4   4   AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                93                                                       
+# 91   13  52   24   6   10  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                92                                                       
+# 92   13  52   28   7   14  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                91                                                       
+# 93   13  52   36   9   24  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            false                90                                                       
+# 94   13  52   40   10  30  AGL(1,13)  12  3   AGL(1,13)  2      2           6      1       1       true             false            false            true                 89                                                       
+# 95   13  78   18   3   3   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                110                                                      
+# 96   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                109                                                      
+# 97   13  78   24   4   6   AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                108                                                      
+# 98   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                107                                                      
+# 99   13  78   30   5   10  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                106                                                      
+# 100  13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                105                                                      
+# 101  13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                103                                                      
+# 102  13  78   36   6   15  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                104                                                      
+# 103  13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                101                                                      
+# 104  13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                102                                                      
+# 105  13  78   42   7   21  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                100                                                      
+# 106  13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                99                                                       
+# 107  13  78   48   8   28  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                98                                                       
+# 108  13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                97                                                       
+# 109  13  78   54   9   36  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                96                                                       
+# 110  13  78   60   10  45  AGL(1,13)  12  2   AGL(1,13)  2      2           6      1       2       true             false            false            false                95                                                       
 # 111  13  78   66   11  55  AGL(1,13)  12  2   S13        2      2           6      1       2       true             false            false            true                                        complete                          
 # 112  13  156  36   3   6   AGL(1,13)  12  1   AGL(1,13)  2      2           6      1       3       true             false            false            false                151                                                      
 # 113  13  156  48   4   12  AGL(1,13)  12  1   AGL(1,13)  2      2           6      1       3       true             false            false            false                149                                                      
@@ -390,7 +390,7 @@
 # 151  13  156  120  10  90  AGL(1,13)  12  1   AGL(1,13)  2      2           6      1       3       true             false            false            false                112                                                      
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -513,8 +513,8 @@
 # Orbit structure of block-stabiliser                    
 # Point-transitive                     true   true       
 # Block-transitive                     true   true       
-# Flag-transitive                      false  true       
-# Anti-flag-transitive                 false  false      
+# Flag-transitive                      false  false      
+# Anti-flag-transitive                 false  true       
 # Flag-semiregular                     true   true       
 # Flag-regular                         false  true       
 # Point-primitive                      true   true       
@@ -773,8 +773,8 @@
 # Orbit structure of block-stabiliser                    
 # Point-transitive                     true   true       
 # Block-transitive                     true   true       
-# Flag-transitive                      false  true       
-# Anti-flag-transitive                 false  false      
+# Flag-transitive                      false  false      
+# Anti-flag-transitive                 false  true       
 # Flag-semiregular                     true   true       
 # Flag-regular                         false  true       
 # Point-primitive                      true   true       
@@ -1007,8 +1007,8 @@
 # Orbit structure of block-stabiliser                    
 # Point-transitive                     true   true       
 # Block-transitive                     true   true       
-# Flag-transitive                      false  true       
-# Anti-flag-transitive                 false  false      
+# Flag-transitive                      false  false      
+# Anti-flag-transitive                 false  true       
 # Flag-semiregular                     true   true       
 # Flag-regular                         false  true       
 # Point-primitive                      true   true       
@@ -2655,7 +2655,7 @@
 # Block-primitive type                                       
 # -----------------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_13 :=  [
@@ -3880,7 +3880,7 @@ lD_13 :=  [
 ]; 
 for D in lD_13 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 5. Designs (reduced within each group): 
+# 6. Designs (reduced within each group): 
 # ----------------------------------------
 
 lD_13_reduced :=  [
@@ -3898,6 +3898,48 @@ lD_13_reduced :=  [
   lambdas := [ 1 ],
   t := 2 ),
   v:= 13),
+ rec( parameters := [ 13, 13, 9, 9, 6 ],
+  autGroup := Group( [ ( 1, 5, 2)( 3,10, 8)( 4, 6,11)( 9,12,13), ( 1,12, 3)( 4,13,11)( 5,10, 8)( 6, 9, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 9,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 8, 4, 2 ],
+  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 4, 10 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 18, 9, 12 ],
+  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 13),
  rec( parameters := [ 13, 13, 4, 4, 1 ],
   autGroup := Group( [ ( 1, 7, 4, 6, 8,10, 2, 9,11,13,12, 5, 3), ( 1, 5, 7, 2)( 3,12)( 4, 6)( 8,13, 9,10) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
@@ -3913,20 +3955,6 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 5, 2)( 3,10, 8)( 4, 6,11)( 9,12,13), ( 1,12, 3)( 4,13,11)( 5,10, 8)( 6, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 9,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 13, 9, 9, 6 ],
   autGroup := Group( [ ( 1, 7, 4, 6, 8,10, 2, 9,11,13,12, 5, 3), ( 1, 5, 7, 2)( 3,12)( 4, 6)( 8,13, 9,10) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   groupNumbers := [ 3, 1, 1 ],
@@ -3938,118 +3966,6 @@ lD_13_reduced :=  [
   r := 9,
   tSubsetStructure := rec(
   lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 8, 4, 2 ],
-  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 1, 2, 4, 10 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 8, 4, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 1 ],
-  baseBlock := [ 1, 2, 4, 10 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 14, 7, 7 ],
-  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 7 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 14, 7, 7 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 5 ],
-  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 7 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 18, 9, 12 ],
-  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 18, 9, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 39, 12, 4, 3 ],
@@ -4071,34 +3987,6 @@ lD_13_reduced :=  [
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 1, 2, 4, 12 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
-  baseBlock := [ 1, 2, 4, 12 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -4141,34 +4029,6 @@ lD_13_reduced :=  [
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   groupNumbers := [ 3, 1, 2 ],
   baseBlock := [ 1, 2, 3, 5, 8 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 15,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 15, 5, 5 ],
-  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 7, 10 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 15,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 15, 5, 5 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
-  baseBlock := [ 1, 2, 3, 7, 10 ],
   blockSizes := [ 5 ],
   isBinary := true,
   isBlockDesign := true,
@@ -4220,34 +4080,6 @@ lD_13_reduced :=  [
   lambdas := [ 14 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 39, 24, 8, 14 ],
-  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 14 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 24, 8, 14 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 14 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 39, 27, 9, 18 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
@@ -4276,32 +4108,32 @@ lD_13_reduced :=  [
   lambdas := [ 18 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 39, 27, 9, 18 ],
-  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
-  blockSizes := [ 9 ],
+ rec( parameters := [ 13, 26, 12, 6, 5 ],
+  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
+  blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  r := 27,
+  r := 12,
   tSubsetStructure := rec(
-  lambdas := [ 18 ],
+  lambdas := [ 5 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 39, 27, 9, 18 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
-  blockSizes := [ 9 ],
+ rec( parameters := [ 13, 26, 14, 7, 7 ],
+  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
+  blockSizes := [ 7 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  r := 27,
+  r := 14,
   tSubsetStructure := rec(
-  lambdas := [ 18 ],
+  lambdas := [ 7 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
@@ -4318,38 +4150,10 @@ lD_13_reduced :=  [
   lambdas := [ 2 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 1, 2, 5 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 52, 16, 4, 4 ],
   autGroup := Group( [ ( 1,10, 3, 7)( 4,12,13, 5)( 6, 9,11, 8), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
   groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 4, 10 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 52, 16, 4, 4 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 4, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -4388,20 +4192,6 @@ lD_13_reduced :=  [
   lambdas := [ 10 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 24, 6, 10 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 1, 2, 3, 5, 6, 9 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 10 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 52, 28, 7, 14 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
@@ -4430,38 +4220,10 @@ lD_13_reduced :=  [
   lambdas := [ 14 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 28, 7, 14 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 4, 7, 8, 10, 11, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 14 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 52, 36, 9, 24 ],
   autGroup := Group( [ ( 1,10, 3, 7)( 4,12,13, 5)( 6, 9,11, 8), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
   groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 36,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 52, 36, 9, 24 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
   blockSizes := [ 9 ],
   isBinary := true,
@@ -4486,32 +4248,88 @@ lD_13_reduced :=  [
   lambdas := [ 30 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 40, 10, 30 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 3, 4, 6, 7, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 10 ],
+ rec( parameters := [ 13, 26, 8, 4, 2 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
+  baseBlock := [ 1, 2, 4, 10 ],
+  blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  r := 40,
+  r := 8,
   tSubsetStructure := rec(
-  lambdas := [ 30 ],
+  lambdas := [ 2 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 78, 18, 3, 3 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 2 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
+ rec( parameters := [ 13, 26, 18, 9, 12 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
   r := 18,
   tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 12, 4, 3 ],
+  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 1, 2, 4, 12 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
   lambdas := [ 3 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 15, 5, 5 ],
+  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 7, 10 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 15,
+  tSubsetStructure := rec(
+  lambdas := [ 5 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 24, 8, 14 ],
+  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 14 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 27, 9, 18 ],
+  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 27,
+  tSubsetStructure := rec(
+  lambdas := [ 18 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 24, 4, 6 ],
@@ -4519,34 +4337,6 @@ lD_13_reduced :=  [
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
   groupNumbers := [ 5, 1, 3 ],
   baseBlock := [ 1, 2, 3, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 24, 4, 6 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 24, 4, 6 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 2 ],
-  baseBlock := [ 1, 2, 4, 5 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -4582,6 +4372,258 @@ lD_13_reduced :=  [
   r := 30,
   tSubsetStructure := rec(
   lambdas := [ 10 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 48, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 48,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 48, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 4, 6, 7, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 48,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 54, 9, 36 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 54,
+  tSubsetStructure := rec(
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 12, 6, 5 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 5 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 14, 7, 7 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 5 ],
+  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 14,
+  tSubsetStructure := rec(
+  lambdas := [ 7 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 12, 4, 3 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 1, 2, 4, 12 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 15, 5, 5 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 7, 10 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 15,
+  tSubsetStructure := rec(
+  lambdas := [ 5 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 24, 8, 14 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 14 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 27, 9, 18 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 27,
+  tSubsetStructure := rec(
+  lambdas := [ 18 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 12, 3, 2 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 1, 2, 5 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 16, 4, 4 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 1, 2, 4, 10 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 16,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 24, 6, 10 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 1, 2, 3, 5, 6, 9 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 10 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 28, 7, 14 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 4, 7, 8, 10, 11, 12, 13 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 28,
+  tSubsetStructure := rec(
+  lambdas := [ 14 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 36, 9, 24 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 36,
+  tSubsetStructure := rec(
+  lambdas := [ 24 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 40, 10, 30 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 3, 4, 6, 7, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 40,
+  tSubsetStructure := rec(
+  lambdas := [ 30 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 18, 3, 3 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 24, 4, 6 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 24, 4, 6 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 1, 2, 4, 5 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 30, 5, 10 ],
@@ -4697,34 +4739,6 @@ lD_13_reduced :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 48, 8, 28 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 48, 8, 28 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 48, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
   groupNumbers := [ 6, 1, 2 ],
@@ -4750,20 +4764,6 @@ lD_13_reduced :=  [
   r := 48,
   tSubsetStructure := rec(
   lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 54, 9, 36 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 54,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 54, 9, 36 ],
@@ -5385,7 +5385,7 @@ lD_13_reduced :=  [
 ]; 
 for D in lD_13_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 6. Designs (all): 
+# 7. Designs (all): 
 # -----------------
 
 lD_13_all :=  [
@@ -5445,6 +5445,118 @@ lD_13_all :=  [
   lambdas := [ 1 ],
   t := 2 ),
   v:= 13),
+ rec( parameters := [ 13, 13, 9, 9, 6 ],
+  autGroup := Group( [ ( 1, 5, 2)( 3,10, 8)( 4, 6,11)( 9,12,13), ( 1,12, 3)( 4,13,11)( 5,10, 8)( 6, 9, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 9,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 13, 9, 9, 6 ],
+  autGroup := Group( [ ( 1, 4, 2, 3)( 5, 9)( 6,11)( 8,10,13,12), ( 1, 6,11, 2)( 4, 5)( 7,13, 9,12)( 8,10) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 4, 6, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 9,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 13, 9, 9, 6 ],
+  autGroup := Group( [ ( 1, 7,11, 8,13,12)( 2, 9, 4)( 6,10), ( 1, 9, 4, 7, 5,11,12,13, 3,10, 2, 6, 8) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 4, 5, 7, 8, 9, 10, 11, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 9,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 13, 9, 9, 6 ],
+  autGroup := Group( [ ( 1, 6, 5, 7, 2,11, 8, 9,12, 3,13,10, 4), ( 1, 5,13, 8, 3,11,12, 2)( 4, 6,10, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 4, 5, 6, 7, 8, 10, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 9,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 8, 4, 2 ],
+  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 4, 10 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 8, 4, 2 ],
+  autGroup := Group( [ ( 1, 5, 6, 3,12,11)( 4, 9, 7,13, 8,10), ( 1, 2, 5)( 3, 8,10)( 4,11, 6)( 9,13,12) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 5, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 18, 9, 12 ],
+  autGroup := Group( [ ( 1, 5, 6, 3,12,11)( 4, 9, 7,13, 8,10), ( 1, 2, 5)( 3, 8,10)( 4,11, 6)( 9,13,12) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 3, 4, 6, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 18, 9, 12 ],
+  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 13),
  rec( parameters := [ 13, 13, 4, 4, 1 ],
   autGroup := Group( [ ( 1,11)( 2, 4, 6, 5)( 3,10)( 7,12,13, 9), ( 1,12, 8, 9)( 2,11,13,10, 3, 5, 4, 7) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
@@ -5502,62 +5614,6 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 5, 2)( 3,10, 8)( 4, 6,11)( 9,12,13), ( 1,12, 3)( 4,13,11)( 5,10, 8)( 6, 9, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 9,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 4, 2, 3)( 5, 9)( 6,11)( 8,10,13,12), ( 1, 6,11, 2)( 4, 5)( 7,13, 9,12)( 8,10) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 4, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 9,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 7,11, 8,13,12)( 2, 9, 4)( 6,10), ( 1, 9, 4, 7, 5,11,12,13, 3,10, 2, 6, 8) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 4, 5, 7, 8, 9, 10, 11, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 9,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 13, 9, 9, 6 ],
-  autGroup := Group( [ ( 1, 6, 5, 7, 2,11, 8, 9,12, 3,13,10, 4), ( 1, 5,13, 8, 3,11,12, 2)( 4, 6,10, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 4, 5, 6, 7, 8, 10, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 9,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 13, 9, 9, 6 ],
   autGroup := Group( [ ( 1, 4, 6,13, 7,11)( 2,12,10)( 5, 9), ( 1, 9, 6,11,10, 8, 5,13, 3, 2, 4,12, 7) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   groupNumbers := [ 3, 1, 1 ],
@@ -5611,174 +5667,6 @@ lD_13_all :=  [
   r := 9,
   tSubsetStructure := rec(
   lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 8, 4, 2 ],
-  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 1, 2, 4, 10 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 8, 4, 2 ],
-  autGroup := Group( [ ( 1, 5, 6, 3,12,11)( 4, 9, 7,13, 8,10), ( 1, 2, 5)( 3, 8,10)( 4,11, 6)( 9,13,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 1, 2, 5, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 8, 4, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 1 ],
-  baseBlock := [ 1, 2, 5, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 8, 4, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 1 ],
-  baseBlock := [ 1, 2, 4, 10 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 12, 6, 5 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 14, 7, 7 ],
-  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 7 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 14, 7, 7 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 5 ],
-  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 14,
-  tSubsetStructure := rec(
-  lambdas := [ 7 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 18, 9, 12 ],
-  autGroup := Group( [ ( 1, 5, 6, 3,12,11)( 4, 9, 7,13, 8,10), ( 1, 2, 5)( 3, 8,10)( 4,11, 6)( 9,13,12) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 3, 4, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 18, 9, 12 ],
-  autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1,12)( 2,11)( 3,10)( 4, 9)( 5, 8)( 6, 7) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 18, 9, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 26, 18, 9, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 1 ],
-  baseBlock := [ 3, 4, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 18,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 39, 12, 4, 3 ],
@@ -5841,34 +5729,6 @@ lD_13_all :=  [
   autGroup := Group( [ ( 1, 4, 8, 9, 6, 2)( 3,11,13, 7,12,10), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 1, 2, 4, 12 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 1, 2, 4, 12 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 12, 4, 3 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
   baseBlock := [ 1, 2, 4, 12 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -6005,34 +5865,6 @@ lD_13_all :=  [
   lambdas := [ 5 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 39, 15, 5, 5 ],
-  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 7, 10 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 15,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 15, 5, 5 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
-  baseBlock := [ 1, 2, 3, 7, 10 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 15,
-  tSubsetStructure := rec(
-  lambdas := [ 5 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 39, 24, 8, 14 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
@@ -6159,34 +5991,6 @@ lD_13_all :=  [
   lambdas := [ 14 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 39, 24, 8, 14 ],
-  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 14 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 39, 24, 8, 14 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 14 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 39, 27, 9, 18 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 3, 9)( 2, 6, 5)( 4,12,10)( 7, 8,11) ] ),
@@ -6257,32 +6061,32 @@ lD_13_all :=  [
   lambdas := [ 18 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 39, 27, 9, 18 ],
-  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 2 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
-  blockSizes := [ 9 ],
+ rec( parameters := [ 13, 26, 12, 6, 5 ],
+  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
+  blockSizes := [ 6 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  r := 27,
+  r := 12,
   tSubsetStructure := rec(
-  lambdas := [ 18 ],
+  lambdas := [ 5 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 39, 27, 9, 18 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 4 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
-  blockSizes := [ 9 ],
+ rec( parameters := [ 13, 26, 14, 7, 7 ],
+  autGroup := Group( [ ( 2, 3, 5, 9, 4, 7,13,12,10, 6,11, 8), ( 1, 7, 2, 4,11, 3)( 5, 8,12,13,10, 6), ( 1, 7, 5,10, 4, 6)( 2,11, 8, 9,13, 3) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
+  blockSizes := [ 7 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  r := 27,
+  r := 14,
   tSubsetStructure := rec(
-  lambdas := [ 18 ],
+  lambdas := [ 7 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 52, 12, 3, 2 ],
@@ -6299,38 +6103,10 @@ lD_13_all :=  [
   lambdas := [ 2 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 12, 3, 2 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 1, 2, 5 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 52, 16, 4, 4 ],
   autGroup := Group( [ ( 1,10, 3, 7)( 4,12,13, 5)( 6, 9,11, 8), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
   groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 4, 10 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 16,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 52, 16, 4, 4 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 1, 2, 4, 10 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -6397,20 +6173,6 @@ lD_13_all :=  [
   lambdas := [ 10 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 24, 6, 10 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 1, 2, 3, 5, 6, 9 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 10 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 52, 28, 7, 14 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
@@ -6467,38 +6229,10 @@ lD_13_all :=  [
   lambdas := [ 14 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 28, 7, 14 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 4, 7, 8, 10, 11, 12, 13 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 28,
-  tSubsetStructure := rec(
-  lambdas := [ 14 ],
-  t := 2 ),
-  v:= 13),
  rec( parameters := [ 13, 52, 36, 9, 24 ],
   autGroup := Group( [ ( 1,10, 3, 7)( 4,12,13, 5)( 6, 9,11, 8), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 5,12, 8)( 2,10,11, 3)( 4, 7, 9, 6) ] ),
   groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 36,
-  tSubsetStructure := rec(
-  lambdas := [ 24 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 52, 36, 9, 24 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
   baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
   blockSizes := [ 9 ],
   isBinary := true,
@@ -6523,32 +6257,116 @@ lD_13_all :=  [
   lambdas := [ 30 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 52, 40, 10, 30 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 1 ],
-  baseBlock := [ 3, 4, 6, 7, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 10 ],
+ rec( parameters := [ 13, 26, 8, 4, 2 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
+  baseBlock := [ 1, 2, 5, 7 ],
+  blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
-  r := 40,
+  r := 8,
   tSubsetStructure := rec(
-  lambdas := [ 30 ],
+  lambdas := [ 2 ],
   t := 2 ),
   v:= 13),
- rec( parameters := [ 13, 78, 18, 3, 3 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 2 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
+ rec( parameters := [ 13, 26, 8, 4, 2 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
+  baseBlock := [ 1, 2, 4, 10 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 18, 9, 12 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
   r := 18,
   tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 18, 9, 12 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 1 ],
+  baseBlock := [ 3, 4, 6, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 12, 4, 3 ],
+  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 1, 2, 4, 12 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
   lambdas := [ 3 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 15, 5, 5 ],
+  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 7, 10 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 15,
+  tSubsetStructure := rec(
+  lambdas := [ 5 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 24, 8, 14 ],
+  autGroup := Group( [ ( 1, 7, 3,10)( 4, 5,13,12)( 6, 8,11, 9), ( 2,10, 4)( 3, 6, 7)( 5,11,13)( 8,12, 9) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 14 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 27, 9, 18 ],
+  autGroup := Group( [ ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7), ( 1, 4, 2,12)( 3, 7,13, 9)( 5,10,11, 6) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 2 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 27,
+  tSubsetStructure := rec(
+  lambdas := [ 18 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 24, 4, 6 ],
@@ -6570,34 +6388,6 @@ lD_13_all :=  [
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
   groupNumbers := [ 5, 1, 3 ],
   baseBlock := [ 1, 2, 3, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 24, 4, 6 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 24,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 24, 4, 6 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
-  groupNumbers := [ 6, 1, 2 ],
-  baseBlock := [ 1, 2, 4, 5 ],
   blockSizes := [ 4 ],
   isBinary := true,
   isBlockDesign := true,
@@ -6661,6 +6451,300 @@ lD_13_all :=  [
   r := 30,
   tSubsetStructure := rec(
   lambdas := [ 10 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 48, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 4, 6, 7, 8, 10, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 48,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 48, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 4, 6, 7, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 48,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 48, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 4, 6, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 48,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 48, 8, 28 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 48,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 54, 9, 36 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 54,
+  tSubsetStructure := rec(
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 54, 9, 36 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
+  groupNumbers := [ 5, 1, 3 ],
+  baseBlock := [ 3, 5, 7, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 54,
+  tSubsetStructure := rec(
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 12, 6, 5 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 7, 11 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 5 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 26, 14, 7, 7 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 5 ],
+  baseBlock := [ 5, 6, 8, 9, 10, 12, 13 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 14,
+  tSubsetStructure := rec(
+  lambdas := [ 7 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 12, 4, 3 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 1, 2, 4, 12 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 15, 5, 5 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 7, 10 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 15,
+  tSubsetStructure := rec(
+  lambdas := [ 5 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 24, 8, 14 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 4, 5, 6, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 14 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 39, 27, 9, 18 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 4 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 10, 11, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 27,
+  tSubsetStructure := rec(
+  lambdas := [ 18 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 12, 3, 2 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 1, 2, 5 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 16, 4, 4 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 1, 2, 4, 10 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 16,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 24, 6, 10 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 1, 2, 3, 5, 6, 9 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 10 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 28, 7, 14 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 4, 7, 8, 10, 11, 12, 13 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 28,
+  tSubsetStructure := rec(
+  lambdas := [ 14 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 36, 9, 24 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7, 8, 9, 11, 12, 13 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 36,
+  tSubsetStructure := rec(
+  lambdas := [ 24 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 52, 40, 10, 30 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 1 ],
+  baseBlock := [ 3, 4, 6, 7, 8, 9, 10, 11, 12, 13 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 40,
+  tSubsetStructure := rec(
+  lambdas := [ 30 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 18, 3, 3 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 18,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 24, 4, 6 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 13),
+ rec( parameters := [ 13, 78, 24, 4, 6 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
+  groupNumbers := [ 6, 1, 2 ],
+  baseBlock := [ 1, 2, 4, 5 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 24,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 30, 5, 10 ],
@@ -6776,62 +6860,6 @@ lD_13_all :=  [
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 48, 8, 28 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 4, 6, 7, 8, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 48, 8, 28 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 4, 6, 7, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 48, 8, 28 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 4, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 48, 8, 28 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 48,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 48, 8, 28 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 2, 4, 8, 3, 6,12,11, 9, 5,10, 7) ] ),
   groupNumbers := [ 6, 1, 2 ],
@@ -6857,34 +6885,6 @@ lD_13_all :=  [
   r := 48,
   tSubsetStructure := rec(
   lambdas := [ 28 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 54, 9, 36 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 4, 5, 6, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 54,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 13),
- rec( parameters := [ 13, 78, 54, 9, 36 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), ( 1, 4, 3,12, 9,10)( 2, 8, 6,11, 5, 7) ] ),
-  groupNumbers := [ 5, 1, 3 ],
-  baseBlock := [ 3, 5, 7, 8, 9, 10, 11, 12, 13 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 54,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
   t := 2 ),
   v:= 13),
  rec( parameters := [ 13, 78, 54, 9, 36 ],

@@ -6,11 +6,11 @@
 #               lD_23 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      2          33157          33159  
 # Point-imprimitive    0          0              0      
@@ -24,7 +24,7 @@
 # Total                2          33157          33159  
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -116668,7 +116668,7 @@
 # 49930  23  506  440  20  380  AGL(1,23)  22  1   AGL(1,23)  2      2           4      1       2       true             false            false            false                33539                                                              
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -116713,8 +116713,8 @@
 # Orbit structure of block-stabiliser                 
 # Point-transitive                     true   true    
 # Block-transitive                     true   true    
-# Flag-transitive                      false  true    
-# Anti-flag-transitive                 false  false   
+# Flag-transitive                      false  false   
+# Anti-flag-transitive                 false  true    
 # Flag-semiregular                     true   true    
 # Flag-regular                         false  true    
 # Point-primitive                      true   true    
@@ -116765,8 +116765,8 @@
 # Orbit structure of block-stabiliser                    
 # Point-transitive                     true   true       
 # Block-transitive                     true   true       
-# Flag-transitive                      false  true       
-# Anti-flag-transitive                 false  false      
+# Flag-transitive                      false  false      
+# Anti-flag-transitive                 false  true       
 # Flag-semiregular                     true   true       
 # Flag-regular                         false  true       
 # Point-primitive                      true   true       
@@ -978805,7 +978805,7 @@
 # Block-primitive type                                       
 # -----------------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_23 :=  [

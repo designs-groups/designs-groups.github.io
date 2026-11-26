@@ -6,11 +6,11 @@
 #               lD_6 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          3              3      
 # Point-imprimitive    0          0              0      
@@ -24,7 +24,7 @@
 # Total                0          3              3      
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -43,10 +43,10 @@
 # 1   6  10  5   3  2  PSL(2,5)  D10  S3                PSL(2,5)  2      2           12     1       1       true             true             true             true                                                  
 # 2   6  15  10  4  6  PSL(2,5)  D10  2^2               S6        2      2           12     1       2       true             false            false            true                                        complete  
 # 3   6  15  10  4  6  PGL(2,5)  5:4  D8                S6        2      2           14     1       2       true             false            true             true                                        complete  
-# 4   6  15  10  4  6  A6        A5   (S4 x S2) cap A6  S6        2      2           15     1       2       true             true             true             true                                        complete  
-# 5   6  15  10  4  6  S6        S5   S4 x S2           S6        2      2           16     1       2       true             true             true             true                                        complete  
-# 6   6  20  10  3  4  PGL(2,5)  5:4  S3                S6        2      2           14     1       1       true             false            true             true                 6                      complete  
-# 7   6  20  10  3  4  A6        A5   (S3 x S3) cap A6  S6        2      2           15     1       1       true             false            true             true                 7                      complete  
+# 4   6  20  10  3  4  PGL(2,5)  5:4  S3                S6        2      2           14     1       1       true             false            true             true                 4                      complete  
+# 5   6  15  10  4  6  A6        A5   (S4 x S2) cap A6  S6        2      2           15     1       2       true             true             true             true                                        complete  
+# 6   6  20  10  3  4  A6        A5   (S3 x S3) cap A6  S6        2      2           15     1       1       true             false            true             true                 6                      complete  
+# 7   6  15  10  4  6  S6        S5   S4 x S2           S6        2      2           16     1       2       true             true             true             true                                        complete  
 # 8   6  20  10  3  4  S6        S5   S3 x S3           S6        2      2           16     1       1       true             false            true             true                 8                      complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -58,14 +58,14 @@
 # 2   6  10  5   3  2  PSL(2,5)  D10  S3                PSL(2,5)  2      2           12     1       1       true             true             true             true                 1                                
 # 3   6  15  10  4  6  PSL(2,5)  D10  2^2               S6        2      2           12     1       2       true             false            false            true                                        complete  
 # 4   6  15  10  4  6  PGL(2,5)  5:4  D8                S6        2      2           14     1       2       true             false            true             true                                        complete  
-# 5   6  15  10  4  6  A6        A5   (S4 x S2) cap A6  S6        2      2           15     1       2       true             true             true             true                                        complete  
-# 6   6  15  10  4  6  S6        S5   S4 x S2           S6        2      2           16     1       2       true             true             true             true                                        complete  
-# 7   6  20  10  3  4  PGL(2,5)  5:4  S3                S6        2      2           14     1       1       true             false            true             true                 7                      complete  
-# 8   6  20  10  3  4  A6        A5   (S3 x S3) cap A6  S6        2      2           15     1       1       true             false            true             true                 8                      complete  
+# 5   6  20  10  3  4  PGL(2,5)  5:4  S3                S6        2      2           14     1       1       true             false            true             true                 5                      complete  
+# 6   6  15  10  4  6  A6        A5   (S4 x S2) cap A6  S6        2      2           15     1       2       true             true             true             true                                        complete  
+# 7   6  20  10  3  4  A6        A5   (S3 x S3) cap A6  S6        2      2           15     1       1       true             false            true             true                 7                      complete  
+# 8   6  15  10  4  6  S6        S5   S4 x S2           S6        2      2           16     1       2       true             true             true             true                                        complete  
 # 9   6  20  10  3  4  S6        S5   S3 x S3           S6        2      2           16     1       1       true             false            true             true                 9                      complete  
 # -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -146,7 +146,7 @@
 # Block-primitive type                                   
 # -------------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_6 :=  [
@@ -195,7 +195,7 @@ lD_6 :=  [
 ]; 
 for D in lD_6 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 5. Designs (reduced within each group): 
+# 6. Designs (reduced within each group): 
 # ----------------------------------------
 
 lD_6_reduced :=  [
@@ -241,34 +241,6 @@ lD_6_reduced :=  [
   lambdas := [ 6 ],
   t := 2 ),
   v:= 6),
- rec( parameters := [ 6, 15, 10, 4, 6 ],
-  autGroup := Group( [ (1,2), (1,2,3,4,5,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5), (4,5,6) ] ),
-  groupNumbers := [ 15, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 10,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 6),
- rec( parameters := [ 6, 15, 10, 4, 6 ],
-  autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
-  groupNumbers := [ 16, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 10,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 6),
  rec( parameters := [ 6, 20, 10, 3, 4 ],
   autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,6), (1,2)(3,4)(5,6) ] ),
@@ -283,6 +255,20 @@ lD_6_reduced :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 6),
+ rec( parameters := [ 6, 15, 10, 4, 6 ],
+  autGroup := Group( [ (1,2), (1,2,3,4,5,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5), (4,5,6) ] ),
+  groupNumbers := [ 15, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 10,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 6),
  rec( parameters := [ 6, 20, 10, 3, 4 ],
   autGroup := Group( [ (1,2), (1,2,3,4,5,6) ] ),
   autSubgroup := Group( [ (1,2,3,4,5), (4,5,6) ] ),
@@ -295,6 +281,20 @@ lD_6_reduced :=  [
   r := 10,
   tSubsetStructure := rec(
   lambdas := [ 4 ],
+  t := 2 ),
+  v:= 6),
+ rec( parameters := [ 6, 15, 10, 4, 6 ],
+  autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  groupNumbers := [ 16, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 10,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
   t := 2 ),
   v:= 6),
  rec( parameters:= [ 6, 20, 10, 3, 4 ],
@@ -314,7 +314,7 @@ lD_6_reduced :=  [
 ]; 
 for D in lD_6_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 6. Designs (all): 
+# 7. Designs (all): 
 # -----------------
 
 lD_6_all :=  [
@@ -374,34 +374,6 @@ lD_6_all :=  [
   lambdas := [ 6 ],
   t := 2 ),
   v:= 6),
- rec( parameters := [ 6, 15, 10, 4, 6 ],
-  autGroup := Group( [ (1,2), (1,2,3,4,5,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5), (4,5,6) ] ),
-  groupNumbers := [ 15, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 10,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 6),
- rec( parameters := [ 6, 15, 10, 4, 6 ],
-  autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
-  groupNumbers := [ 16, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 10,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 6),
  rec( parameters := [ 6, 20, 10, 3, 4 ],
   autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,6), (1,2)(3,4)(5,6) ] ),
@@ -416,6 +388,20 @@ lD_6_all :=  [
   lambdas := [ 4 ],
   t := 2 ),
   v:= 6),
+ rec( parameters := [ 6, 15, 10, 4, 6 ],
+  autGroup := Group( [ (1,2), (1,2,3,4,5,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5), (4,5,6) ] ),
+  groupNumbers := [ 15, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 10,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 6),
  rec( parameters := [ 6, 20, 10, 3, 4 ],
   autGroup := Group( [ (1,2), (1,2,3,4,5,6) ] ),
   autSubgroup := Group( [ (1,2,3,4,5), (4,5,6) ] ),
@@ -428,6 +414,20 @@ lD_6_all :=  [
   r := 10,
   tSubsetStructure := rec(
   lambdas := [ 4 ],
+  t := 2 ),
+  v:= 6),
+ rec( parameters := [ 6, 15, 10, 4, 6 ],
+  autGroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6), (1,2) ] ),
+  groupNumbers := [ 16, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 10,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
   t := 2 ),
   v:= 6),
  rec( parameters:= [ 6, 20, 10, 3, 4 ],

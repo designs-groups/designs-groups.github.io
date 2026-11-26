@@ -6,11 +6,11 @@
 #               lD_7 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      2          5              7      
 # Point-imprimitive    0          0              0      
@@ -24,7 +24,7 @@
 # Total                2          5              7      
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -44,19 +44,19 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα  GB  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                3           true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   3   3  1   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                4           true       PG(2,2), Hadamard or Paley parameters                
-# 3   7  7   4   4  2   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                1           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 4   7  7   4   4  2   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                2           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 5   7  14  6   3  2   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                7                                                                           
-# 6   7  14  6   3  2   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            true             false                8                                                                           
-# 7   7  14  8   4  4   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                5                                                                           
-# 8   7  14  8   4  4   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            true             false                6                                                                           
-# 9   7  21  9   3  3   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                11                                                                          
-# 10  7  21  9   3  3   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                12                                                                          
-# 11  7  21  12  4  6   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                9                                                                           
-# 12  7  21  12  4  6   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                10                                                                          
-# 13  7  21  15  5  10  7:3       3   1   S7        3      2           3      1       2       true             false            false            false                                       complete                                             
+# 1   7  7   3   3  1   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                2           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   4   4  2   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 3   7  14  6   3  2   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                4                                                                           
+# 4   7  14  8   4  4   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                3                                                                           
+# 5   7  7   3   3  1   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                6           true       PG(2,2), Hadamard or Paley parameters                
+# 6   7  7   4   4  2   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             false            true                 5           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 7   7  21  9   3  3   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                8                                                                           
+# 8   7  21  12  4  6   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                7                                                                           
+# 9   7  21  15  5  10  7:3       3   1   S7        3      2           3      1       2       true             false            false            false                                       complete                                             
+# 10  7  14  6   3  2   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            true             false                11                                                                          
+# 11  7  14  8   4  4   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            false            true                 10                                                                          
+# 12  7  21  9   3  3   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                13                                                                          
+# 13  7  21  12  4  6   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                12                                                                          
 # 14  7  21  15  5  10  AGL(1,7)  6   2   S7        2      2           4      1       2       true             false            false            true                                        complete                                             
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -64,27 +64,27 @@
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Nr  v  b   r   k  λ   G         Gα  GB  Aut(D)    rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments                                             
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# 1   7  7   3   3  1   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                5           true       PG(2,2), Hadamard or Paley parameters                
-# 2   7  7   3   3  1   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                6           true       PG(2,2), Hadamard or Paley parameters                
-# 3   7  7   3   3  1   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                7           true       PG(2,2), Hadamard or Paley parameters                
-# 4   7  7   3   3  1   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                8           true       PG(2,2), Hadamard or Paley parameters                
-# 5   7  7   4   4  2   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                1           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 6   7  7   4   4  2   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                2           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 7   7  7   4   4  2   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                3           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 8   7  7   4   4  2   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                4           true       complement of PG(2,2), Hadamard or Paley parameters  
-# 9   7  14  6   3  2   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                11                                                                          
-# 10  7  14  6   3  2   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            true             false                12                                                                          
-# 11  7  14  8   4  4   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                9                                                                           
-# 12  7  14  8   4  4   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            true             false                10                                                                          
-# 13  7  21  9   3  3   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                15                                                                          
-# 14  7  21  9   3  3   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                16                                                                          
-# 15  7  21  12  4  6   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                13                                                                          
-# 16  7  21  12  4  6   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                14                                                                          
-# 17  7  21  15  5  10  7:3       3   1   S7        3      2           3      1       2       true             false            false            false                                       complete                                             
+# 1   7  7   3   3  1   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                3           true       PG(2,2), Hadamard or Paley parameters                
+# 2   7  7   3   3  1   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                4           true       PG(2,2), Hadamard or Paley parameters                
+# 3   7  7   4   4  2   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                1           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 4   7  7   4   4  2   C7        1   1   PSL(3,2)  7      2           1      1       1       true             true             false            false                2           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 5   7  14  6   3  2   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                6                                                                           
+# 6   7  14  8   4  4   D14       2   1   AGL(1,7)  4      2           2      1       1       true             false            false            false                5                                                                           
+# 7   7  7   3   3  1   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                9           true       PG(2,2), Hadamard or Paley parameters                
+# 8   7  7   3   3  1   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             true             false                10          true       PG(2,2), Hadamard or Paley parameters                
+# 9   7  7   4   4  2   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             false            true                 7           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 10  7  7   4   4  2   7:3       3   3   PSL(3,2)  3      2           3      1       1       true             true             false            true                 8           true       complement of PG(2,2), Hadamard or Paley parameters  
+# 11  7  21  9   3  3   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                12                                                                          
+# 12  7  21  12  4  6   7:3       3   1   AGL(1,7)  3      2           3      1       2       true             false            false            false                11                                                                          
+# 13  7  21  15  5  10  7:3       3   1   S7        3      2           3      1       2       true             false            false            false                                       complete                                             
+# 14  7  14  6   3  2   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            true             false                15                                                                          
+# 15  7  14  8   4  4   AGL(1,7)  6   3   AGL(1,7)  2      2           4      1       1       true             false            false            true                 14                                                                          
+# 16  7  21  9   3  3   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                17                                                                          
+# 17  7  21  12  4  6   AGL(1,7)  6   2   AGL(1,7)  2      2           4      1       2       true             false            false            false                16                                                                          
 # 18  7  21  15  5  10  AGL(1,7)  6   2   S7        2      2           4      1       2       true             false            false            true                                        complete                                             
 # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -181,8 +181,8 @@
 # Orbit structure of block-stabiliser                   
 # Point-transitive                     true   true      
 # Block-transitive                     true   true      
-# Flag-transitive                      false  true      
-# Anti-flag-transitive                 false  false     
+# Flag-transitive                      false  false     
+# Anti-flag-transitive                 false  true      
 # Flag-semiregular                     true   true      
 # Flag-regular                         false  true      
 # Point-primitive                      true   true      
@@ -269,7 +269,7 @@
 # Block-primitive type                                
 # ----------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_7 :=  [
@@ -374,7 +374,7 @@ lD_7 :=  [
 ]; 
 for D in lD_7 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 5. Designs (reduced within each group): 
+# 6. Designs (reduced within each group): 
 # ----------------------------------------
 
 lD_7_reduced :=  [
@@ -392,6 +392,48 @@ lD_7_reduced :=  [
   lambdas := [ 1 ],
   t := 2 ),
   v:= 7),
+ rec( parameters := [ 7, 7, 4, 4, 2 ],
+  autGroup := Group( [ (1,4,7,6)(2,5), (1,4,5,2,7,3,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 4,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 14, 6, 3, 2 ],
+  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 4 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 14, 8, 4, 4 ],
+  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 7),
  rec( parameters := [ 7, 7, 3, 3, 1 ],
   autGroup := Group( [ (1,3,7)(2,5,4), (1,4,6,2,3,7,5) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
@@ -407,20 +449,6 @@ lD_7_reduced :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 4, 4, 2 ],
-  autGroup := Group( [ (1,4,7,6)(2,5), (1,4,5,2,7,3,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 4,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 7, 4, 4, 2 ],
   autGroup := Group( [ (1,3,7)(2,5,4), (1,4,6,2,3,7,5) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
   groupNumbers := [ 3, 1, 1 ],
@@ -434,62 +462,6 @@ lD_7_reduced :=  [
   lambdas := [ 2 ],
   t := 2 ),
   v:= 7),
- rec( parameters := [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 1, 2, 4 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 4 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 14, 8, 4, 4 ],
-  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 14, 8, 4, 4 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 7),
  rec( parameters := [ 7, 21, 9, 3, 3 ],
   autGroup := Group( [ (1,3,6,7,5,2), (1,3)(4,7)(5,6) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
@@ -504,38 +476,10 @@ lD_7_reduced :=  [
   lambdas := [ 3 ],
   t := 2 ),
   v:= 7),
- rec( parameters := [ 7, 21, 9, 3, 3 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 9,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 7),
  rec( parameters := [ 7, 21, 12, 4, 6 ],
   autGroup := Group( [ (1,3,6,7,5,2), (1,3)(4,7)(5,6) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
   groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 4, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 21, 12, 4, 6 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 2 ],
   baseBlock := [ 4, 5, 6, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -560,6 +504,62 @@ lD_7_reduced :=  [
   lambdas := [ 10 ],
   t := 2 ),
   v:= 7),
+ rec( parameters := [ 7, 14, 6, 3, 2 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1, 2, 4 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 14, 8, 4, 4 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 21, 9, 3, 3 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 9,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 21, 12, 4, 6 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
+  t := 2 ),
+  v:= 7),
  rec( parameters:= [ 7, 21, 15, 5, 10 ],
   autGroup := Group( [ (1,2,3,4,5,6,7), (1,2) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
@@ -577,7 +577,7 @@ lD_7_reduced :=  [
 ]; 
 for D in lD_7_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 6. Designs (all): 
+# 7. Designs (all): 
 # -----------------
 
 lD_7_all :=  [
@@ -609,6 +609,62 @@ lD_7_all :=  [
   lambdas := [ 1 ],
   t := 2 ),
   v:= 7),
+ rec( parameters := [ 7, 7, 4, 4, 2 ],
+  autGroup := Group( [ (1,4,7,6)(2,5), (1,4,5,2,7,3,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 4,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 7, 4, 4, 2 ],
+  autGroup := Group( [ (1,2)(3,5), (1,7,6,2,3,5,4) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7) ] ),
+  groupNumbers := [ 1, 1, 1 ],
+  baseBlock := [ 3, 4, 5, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 4,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 14, 6, 3, 2 ],
+  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 4 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 14, 8, 4, 4 ],
+  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 7),
  rec( parameters := [ 7, 7, 3, 3, 1 ],
   autGroup := Group( [ (1,3,7)(2,5,4), (1,4,6,2,3,7,5) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
@@ -638,34 +694,6 @@ lD_7_all :=  [
   t := 2 ),
   v:= 7),
  rec( parameters := [ 7, 7, 4, 4, 2 ],
-  autGroup := Group( [ (1,4,7,6)(2,5), (1,4,5,2,7,3,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 4,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 7, 4, 4, 2 ],
-  autGroup := Group( [ (1,2)(3,5), (1,7,6,2,3,5,4) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7) ] ),
-  groupNumbers := [ 1, 1, 1 ],
-  baseBlock := [ 3, 4, 5, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 4,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 7, 4, 4, 2 ],
   autGroup := Group( [ (1,3,7)(2,5,4), (1,4,6,2,3,7,5) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
   groupNumbers := [ 3, 1, 1 ],
@@ -693,62 +721,6 @@ lD_7_all :=  [
   lambdas := [ 2 ],
   t := 2 ),
   v:= 7),
- rec( parameters := [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 1, 2, 4 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 14, 6, 3, 2 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1, 2, 4 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 6,
-  tSubsetStructure := rec(
-  lambdas := [ 2 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 14, 8, 4, 4 ],
-  autGroup := Group( [ (1,4,2)(3,5,6), (1,2)(3,7)(4,6) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,6)(2,5)(3,4) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 14, 8, 4, 4 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 3, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 8,
-  tSubsetStructure := rec(
-  lambdas := [ 4 ],
-  t := 2 ),
-  v:= 7),
  rec( parameters := [ 7, 21, 9, 3, 3 ],
   autGroup := Group( [ (1,3,6,7,5,2), (1,3)(4,7)(5,6) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
@@ -763,38 +735,10 @@ lD_7_all :=  [
   lambdas := [ 3 ],
   t := 2 ),
   v:= 7),
- rec( parameters := [ 7, 21, 9, 3, 3 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 9,
-  tSubsetStructure := rec(
-  lambdas := [ 3 ],
-  t := 2 ),
-  v:= 7),
  rec( parameters := [ 7, 21, 12, 4, 6 ],
   autGroup := Group( [ (1,3,6,7,5,2), (1,3)(4,7)(5,6) ] ),
   autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,2,4)(3,6,5) ] ),
   groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 4, 5, 6, 7 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 12,
-  tSubsetStructure := rec(
-  lambdas := [ 6 ],
-  t := 2 ),
-  v:= 7),
- rec( parameters := [ 7, 21, 12, 4, 6 ],
-  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
-  groupNumbers := [ 4, 1, 2 ],
   baseBlock := [ 4, 5, 6, 7 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -817,6 +761,62 @@ lD_7_all :=  [
   r := 15,
   tSubsetStructure := rec(
   lambdas := [ 10 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 14, 6, 3, 2 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1, 2, 4 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 6,
+  tSubsetStructure := rec(
+  lambdas := [ 2 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 14, 8, 4, 4 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 3, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 8,
+  tSubsetStructure := rec(
+  lambdas := [ 4 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 21, 9, 3, 3 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 9,
+  tSubsetStructure := rec(
+  lambdas := [ 3 ],
+  t := 2 ),
+  v:= 7),
+ rec( parameters := [ 7, 21, 12, 4, 6 ],
+  autGroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  autSubgroup := Group( [ (1,2,3,4,5,6,7), (1,3,2,6,4,5) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 4, 5, 6, 7 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 12,
+  tSubsetStructure := rec(
+  lambdas := [ 6 ],
   t := 2 ),
   v:= 7),
  rec( parameters:= [ 7, 21, 15, 5, 10 ],

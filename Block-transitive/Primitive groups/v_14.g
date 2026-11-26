@@ -6,11 +6,11 @@
 #               lD_14 is the list of the designs
 # References:    
 
-# 1. Number of non-isomorphic designs: 
-# ------------------------------------
+# 2. Number of designs:
+# ---------------------
 
 # ------------------------------------------------------
-#                      Symmetric  Non-symmetric  Total  
+#                      symmetric  non-symmetric  total  
 # ------------------------------------------------------
 # Point-primitive      0          54             54     
 # Point-imprimitive    0          0              0      
@@ -18,13 +18,13 @@
 # Block-primitive      0          14             14     
 # Block-imprimitive    0          40             40     
 #                                                       
-# Flag-transitive      0          23             23     
-# AntiFlag-transitive  0          10             10     
+# Flag-transitive      0          16             16     
+# AntiFlag-transitive  0          17             17     
 # ------------------------------------------------------
 # Total                0          54             54     
 # ------------------------------------------------------
 
-# 2. Summary: 
+# 3. Summary: 
 # -----------
 
 #    Non-isomorphic designs:
@@ -35,9 +35,9 @@
 # 2   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                7                                
 # 3   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                6                                
 # 4   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                5                                
-# 5   14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                4                                
-# 6   14  91    52    8   28   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                3                                
-# 7   14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                2                                
+# 5   14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             false            true                 4                                
+# 6   14  91    52    8   28   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             false            true                 3                                
+# 7   14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             false            true                 2                                
 # 8   14  91    78    12  66   PSL(2,13)  13:6   D12                 S14        2      2           1      1       6       true             true             false            true                                        complete  
 # 9   14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       10      true             false            true             true                 9                                
 # 10  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                18                               
@@ -45,10 +45,10 @@
 # 12  14  182   65    5   20   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                16                               
 # 13  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                15                               
 # 14  14  182   91    7   42   PSL(2,13)  13:6   6                   PSL(2,13)  2      2           1      1       9       true             false            false            false                                                 
-# 15  14  182   104   8   56   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                13                               
+# 15  14  182   104   8   56   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            false            true                 13                               
 # 16  14  182   117   9   72   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                12                               
-# 17  14  182   130   10  90   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                11                               
-# 18  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                10                               
+# 17  14  182   130   10  90   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            false            true                 11                               
+# 18  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            true                 10                               
 # 19  14  273   78    4   18   PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                20                               
 # 20  14  273   195   10  135  PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                19                               
 # 21  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                26                     complete  
@@ -56,7 +56,7 @@
 # 23  14  364   182   7   84   PSL(2,13)  13:6   3                   PSL(2,13)  2      2           1      1       10      true             false            false            false                                                 
 # 24  14  364   182   7   84   PGL(2,13)  13:12  6                   PGL(2,13)  2      2           2      1       11      true             false            false            false                24                               
 # 25  14  364   234   9   144  PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                22                               
-# 26  14  364   286   11  220  PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                21                     complete  
+# 26  14  364   286   11  220  PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            false            true                 21                     complete  
 # 27  14  546   156   4   36   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                38                               
 # 28  14  546   195   5   60   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                37                               
 # 29  14  546   195   5   60   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                36                               
@@ -92,84 +92,84 @@
 # Nr  v   b     r     k   λ    G          Gα     GB                  Aut(D)     rk(G)  rk(Aut(D))  nr(G)  nr(Gα)  nr(GB)  point-primitive  block-primitive  flag-transitive  antiflag-transitive  complement  symmetric  comments  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   14  78    39    7   18   PSL(2,13)  13:6   D14                 PSL(2,13)  2      2           1      1       8       true             true             true             true                                                  
-# 2   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                9                                
-# 3   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                6                                
-# 4   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                7                                
-# 5   14  91    39    6   15   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 8                                
-# 6   14  91    52    8   28   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                3                                
-# 7   14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                4                                
-# 8   14  91    52    8   28   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 5                                
-# 9   14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                2                                
-# 10  14  91    78    12  66   PSL(2,13)  13:6   D12                 S14        2      2           1      1       6       true             true             false            true                                        complete  
-# 11  14  91    78    12  66   PGL(2,13)  13:12  D24                 S14        2      2           2      1       13      true             true             true             true                                        complete  
-# 12  14  91    78    12  66   A14        A13    (S12 x S2) cap A14  S14        2      2           3      1       6       true             true             true             true                                        complete  
-# 13  14  91    78    12  66   S14        S13    S12 x S2            S14        2      2           4      1       6       true             true             true             true                                        complete  
-# 14  14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       10      true             false            true             true                 14                               
-# 15  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                23                               
-# 16  14  182   52    4   12   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                22                               
-# 17  14  182   65    5   20   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                21                               
-# 18  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                20                               
-# 19  14  182   91    7   42   PSL(2,13)  13:6   6                   PSL(2,13)  2      2           1      1       9       true             false            false            false                                                 
-# 20  14  182   104   8   56   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                18                               
-# 21  14  182   117   9   72   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                17                               
-# 22  14  182   130   10  90   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                16                               
-# 23  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                15                               
-# 24  14  273   78    4   18   PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                26                               
-# 25  14  273   78    4   18   PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                27                               
-# 26  14  273   195   10  135  PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                24                               
-# 27  14  273   195   10  135  PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                25                               
-# 28  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                35                     complete  
-# 29  14  364   78    3   12   A14        A13    (S3 x S11) cap A14  S14        2      2           3      1       1       true             true             true             true                 36                     complete  
-# 30  14  364   78    3   12   S14        S13    S3 x S11            S14        2      2           4      1       1       true             true             true             true                 37                     complete  
-# 31  14  364   130   5   40   PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                34                               
-# 32  14  364   182   7   84   PSL(2,13)  13:6   3                   PSL(2,13)  2      2           1      1       10      true             false            false            false                                                 
-# 33  14  364   182   7   84   PGL(2,13)  13:12  6                   PGL(2,13)  2      2           2      1       11      true             false            false            false                33                               
-# 34  14  364   234   9   144  PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                31                               
-# 35  14  364   286   11  220  PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                28                     complete  
-# 36  14  364   286   11  220  A14        A13    (S11 x S3) cap A14  S14        2      2           3      1       1       true             true             true             true                 29                     complete  
-# 37  14  364   286   11  220  S14        S13    S11 x S3            S14        2      2           4      1       1       true             true             true             true                 30                     complete  
-# 38  14  546   156   4   36   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                54                               
-# 39  14  546   156   4   36   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                55                               
-# 40  14  546   195   5   60   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                52                               
-# 41  14  546   195   5   60   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                51                               
-# 42  14  546   195   5   60   PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                53                               
-# 43  14  546   234   6   90   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                48                               
-# 44  14  546   234   6   90   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                49                               
-# 45  14  546   234   6   90   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                50                               
-# 46  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                                                 
-# 47  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                                                 
-# 48  14  546   312   8   168  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                43                               
-# 49  14  546   312   8   168  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                44                               
-# 50  14  546   312   8   168  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                45                               
-# 51  14  546   351   9   216  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                41                               
-# 52  14  546   351   9   216  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                40                               
-# 53  14  546   351   9   216  PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                42                               
-# 54  14  546   390   10  270  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                38                               
-# 55  14  546   390   10  270  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                39                               
-# 56  14  728   364   7   168  PGL(2,13)  13:12  3                   PGL(2,13)  2      2           2      1       12      true             false            false            false                56                               
-# 57  14  1001  286   4   66   A14        A13    (S4 x S10) cap A14  S14        2      2           3      1       2       true             true             true             true                 59                     complete  
-# 58  14  1001  286   4   66   S14        S13    S4 x S10            S14        2      2           4      1       2       true             true             true             true                 60                     complete  
-# 59  14  1001  715   10  495  A14        A13    (S10 x S4) cap A14  S14        2      2           3      1       2       true             true             true             true                 57                     complete  
-# 60  14  1001  715   10  495  S14        S13    S10 x S4            S14        2      2           4      1       2       true             true             true             true                 58                     complete  
-# 61  14  1092  390   5   120  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                70                               
-# 62  14  1092  468   6   180  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                67                               
-# 63  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                68                               
-# 64  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                69                               
-# 65  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                65                               
-# 66  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                66                               
-# 67  14  1092  624   8   336  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                62                               
-# 68  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                63                               
-# 69  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                64                               
-# 70  14  1092  702   9   432  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                61                               
-# 71  14  2002  715   5   220  A14        A13    (S5 x S9) cap A14   S14        2      2           3      1       3       true             true             true             true                 73                     complete  
-# 72  14  2002  715   5   220  S14        S13    S5 x S9             S14        2      2           4      1       3       true             true             true             true                 74                     complete  
-# 73  14  2002  1287  9   792  A14        A13    (S9 x S5) cap A14   S14        2      2           3      1       3       true             true             true             true                 71                     complete  
-# 74  14  2002  1287  9   792  S14        S13    S9 x S5             S14        2      2           4      1       3       true             true             true             true                 72                     complete  
-# 75  14  3003  1287  6   495  A14        A13    (S6 x S8) cap A14   S14        2      2           3      1       4       true             true             true             true                 77                     complete  
-# 76  14  3003  1287  6   495  S14        S13    S6 x S8             S14        2      2           4      1       4       true             true             true             true                 78                     complete  
-# 77  14  3003  1716  8   924  A14        A13    (S8 x S6) cap A14   S14        2      2           3      1       4       true             true             true             true                 75                     complete  
-# 78  14  3003  1716  8   924  S14        S13    S8 x S6             S14        2      2           4      1       4       true             true             true             true                 76                     complete  
-# 79  14  3432  1716  7   792  A14        A13    (S7 x S7) cap A14   S14        2      2           3      1       5       true             false            true             true                 79                     complete  
+# 2   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                7                                
+# 3   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                5                                
+# 4   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                6                                
+# 5   14  91    52    8   28   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             false            true                 3                                
+# 6   14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             false            true                 4                                
+# 7   14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             false            true                 2                                
+# 8   14  91    78    12  66   PSL(2,13)  13:6   D12                 S14        2      2           1      1       6       true             true             false            true                                        complete  
+# 9   14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                13                               
+# 10  14  182   65    5   20   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                12                               
+# 11  14  182   91    7   42   PSL(2,13)  13:6   6                   PSL(2,13)  2      2           1      1       9       true             false            false            false                                                 
+# 12  14  182   117   9   72   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                10                               
+# 13  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            true                 9                                
+# 14  14  273   78    4   18   PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                15                               
+# 15  14  273   195   10  135  PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                14                               
+# 16  14  364   182   7   84   PSL(2,13)  13:6   3                   PSL(2,13)  2      2           1      1       10      true             false            false            false                                                 
+# 17  14  546   156   4   36   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                28                               
+# 18  14  546   195   5   60   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                27                               
+# 19  14  546   195   5   60   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                26                               
+# 20  14  546   234   6   90   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                24                               
+# 21  14  546   234   6   90   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                25                               
+# 22  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                                                 
+# 23  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                                                 
+# 24  14  546   312   8   168  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                20                               
+# 25  14  546   312   8   168  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                21                               
+# 26  14  546   351   9   216  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                19                               
+# 27  14  546   351   9   216  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                18                               
+# 28  14  546   390   10  270  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                17                               
+# 29  14  1092  468   6   180  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                30                               
+# 30  14  1092  624   8   336  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                29                               
+# 31  14  91    39    6   15   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 32                               
+# 32  14  91    52    8   28   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 31                               
+# 33  14  91    78    12  66   PGL(2,13)  13:12  D24                 S14        2      2           2      1       13      true             true             true             true                                        complete  
+# 34  14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       10      true             false            true             true                 34                               
+# 35  14  182   52    4   12   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                38                               
+# 36  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                37                               
+# 37  14  182   104   8   56   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            false            true                 36                               
+# 38  14  182   130   10  90   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            false            true                 35                               
+# 39  14  273   78    4   18   PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                40                               
+# 40  14  273   195   10  135  PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            false            true                 39                               
+# 41  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                45                     complete  
+# 42  14  364   130   5   40   PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                44                               
+# 43  14  364   182   7   84   PGL(2,13)  13:12  6                   PGL(2,13)  2      2           2      1       11      true             false            false            false                43                               
+# 44  14  364   234   9   144  PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                42                               
+# 45  14  364   286   11  220  PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            false            true                 41                     complete  
+# 46  14  546   156   4   36   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                51                               
+# 47  14  546   195   5   60   PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                50                               
+# 48  14  546   234   6   90   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                49                               
+# 49  14  546   312   8   168  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                48                               
+# 50  14  546   351   9   216  PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                47                               
+# 51  14  546   390   10  270  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            true                 46                               
+# 52  14  728   364   7   168  PGL(2,13)  13:12  3                   PGL(2,13)  2      2           2      1       12      true             false            false            false                52                               
+# 53  14  1092  390   5   120  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                60                               
+# 54  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                58                               
+# 55  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                59                               
+# 56  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                56                               
+# 57  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                57                               
+# 58  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                54                               
+# 59  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                55                               
+# 60  14  1092  702   9   432  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                53                               
+# 61  14  91    78    12  66   A14        A13    (S12 x S2) cap A14  S14        2      2           3      1       6       true             true             true             true                                        complete  
+# 62  14  364   78    3   12   A14        A13    (S3 x S11) cap A14  S14        2      2           3      1       1       true             true             true             true                 63                     complete  
+# 63  14  364   286   11  220  A14        A13    (S11 x S3) cap A14  S14        2      2           3      1       1       true             true             true             true                 62                     complete  
+# 64  14  1001  286   4   66   A14        A13    (S4 x S10) cap A14  S14        2      2           3      1       2       true             true             true             true                 65                     complete  
+# 65  14  1001  715   10  495  A14        A13    (S10 x S4) cap A14  S14        2      2           3      1       2       true             true             true             true                 64                     complete  
+# 66  14  2002  715   5   220  A14        A13    (S5 x S9) cap A14   S14        2      2           3      1       3       true             true             true             true                 67                     complete  
+# 67  14  2002  1287  9   792  A14        A13    (S9 x S5) cap A14   S14        2      2           3      1       3       true             true             true             true                 66                     complete  
+# 68  14  3003  1287  6   495  A14        A13    (S6 x S8) cap A14   S14        2      2           3      1       4       true             true             true             true                 69                     complete  
+# 69  14  3003  1716  8   924  A14        A13    (S8 x S6) cap A14   S14        2      2           3      1       4       true             true             true             true                 68                     complete  
+# 70  14  3432  1716  7   792  A14        A13    (S7 x S7) cap A14   S14        2      2           3      1       5       true             false            true             true                 70                     complete  
+# 71  14  91    78    12  66   S14        S13    S12 x S2            S14        2      2           4      1       6       true             true             true             true                                        complete  
+# 72  14  364   78    3   12   S14        S13    S3 x S11            S14        2      2           4      1       1       true             true             true             true                 73                     complete  
+# 73  14  364   286   11  220  S14        S13    S11 x S3            S14        2      2           4      1       1       true             true             true             true                 72                     complete  
+# 74  14  1001  286   4   66   S14        S13    S4 x S10            S14        2      2           4      1       2       true             true             true             true                 75                     complete  
+# 75  14  1001  715   10  495  S14        S13    S10 x S4            S14        2      2           4      1       2       true             true             true             true                 74                     complete  
+# 76  14  2002  715   5   220  S14        S13    S5 x S9             S14        2      2           4      1       3       true             true             true             true                 77                     complete  
+# 77  14  2002  1287  9   792  S14        S13    S9 x S5             S14        2      2           4      1       3       true             true             true             true                 76                     complete  
+# 78  14  3003  1287  6   495  S14        S13    S6 x S8             S14        2      2           4      1       4       true             true             true             true                 79                     complete  
+# 79  14  3003  1716  8   924  S14        S13    S8 x S6             S14        2      2           4      1       4       true             true             true             true                 78                     complete  
 # 80  14  3432  1716  7   792  S14        S13    S7 x S7             S14        2      2           4      1       5       true             false            true             true                 80                     complete  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -179,104 +179,104 @@
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # 1   14  78    39    7   18   PSL(2,13)  13:6   D14                 PSL(2,13)  2      2           1      1       8       true             true             true             true                 2                                
 # 2   14  78    39    7   18   PSL(2,13)  13:6   D14                 PSL(2,13)  2      2           1      1       8       true             true             true             true                 1                                
-# 3   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                13                               
-# 4   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                14                               
-# 5   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                9                                
-# 6   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                10                               
-# 7   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                11                               
-# 8   14  91    39    6   15   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 12                               
-# 9   14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                5                                
-# 10  14  91    52    8   28   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                6                                
-# 11  14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                7                                
-# 12  14  91    52    8   28   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 8                                
-# 13  14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                3                                
-# 14  14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                4                                
-# 15  14  91    78    12  66   PSL(2,13)  13:6   D12                 S14        2      2           1      1       6       true             true             false            true                                        complete  
-# 16  14  91    78    12  66   PGL(2,13)  13:12  D24                 S14        2      2           2      1       13      true             true             true             true                                        complete  
-# 17  14  91    78    12  66   A14        A13    (S12 x S2) cap A14  S14        2      2           3      1       6       true             true             true             true                                        complete  
-# 18  14  91    78    12  66   S14        S13    S12 x S2            S14        2      2           4      1       6       true             true             true             true                                        complete  
-# 19  14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       10      true             false            true             true                 19                               
-# 20  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                32                               
-# 21  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            true             false                33                               
-# 22  14  182   52    4   12   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                31                               
-# 23  14  182   65    5   20   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                29                               
-# 24  14  182   65    5   20   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            false            false                30                               
-# 25  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                28                               
-# 26  14  182   91    7   42   PSL(2,13)  13:6   6                   PSL(2,13)  2      2           1      1       9       true             false            false            false                27                               
-# 27  14  182   91    7   42   PSL(2,13)  13:6   6                   PSL(2,13)  2      2           1      1       9       true             false            false            false                26                               
-# 28  14  182   104   8   56   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                25                               
-# 29  14  182   117   9   72   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                23                               
-# 30  14  182   117   9   72   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            false            false                24                               
-# 31  14  182   130   10  90   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                22                               
-# 32  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                20                               
-# 33  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            true             false                21                               
-# 34  14  273   78    4   18   PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                36                               
-# 35  14  273   78    4   18   PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                37                               
-# 36  14  273   195   10  135  PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                34                               
-# 37  14  273   195   10  135  PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                35                               
-# 38  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                46                     complete  
-# 39  14  364   78    3   12   A14        A13    (S3 x S11) cap A14  S14        2      2           3      1       1       true             true             true             true                 47                     complete  
-# 40  14  364   78    3   12   S14        S13    S3 x S11            S14        2      2           4      1       1       true             true             true             true                 48                     complete  
-# 41  14  364   130   5   40   PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                45                               
-# 42  14  364   182   7   84   PSL(2,13)  13:6   3                   PSL(2,13)  2      2           1      1       10      true             false            false            false                43                               
-# 43  14  364   182   7   84   PSL(2,13)  13:6   3                   PSL(2,13)  2      2           1      1       10      true             false            false            false                42                               
-# 44  14  364   182   7   84   PGL(2,13)  13:12  6                   PGL(2,13)  2      2           2      1       11      true             false            false            false                44                               
-# 45  14  364   234   9   144  PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                41                               
-# 46  14  364   286   11  220  PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                38                     complete  
-# 47  14  364   286   11  220  A14        A13    (S11 x S3) cap A14  S14        2      2           3      1       1       true             true             true             true                 39                     complete  
-# 48  14  364   286   11  220  S14        S13    S11 x S3            S14        2      2           4      1       1       true             true             true             true                 40                     complete  
-# 49  14  546   156   4   36   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                71                               
-# 50  14  546   156   4   36   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                72                               
-# 51  14  546   195   5   60   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                67                               
-# 52  14  546   195   5   60   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                69                               
-# 53  14  546   195   5   60   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                68                               
-# 54  14  546   195   5   60   PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                70                               
-# 55  14  546   234   6   90   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                64                               
-# 56  14  546   234   6   90   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                65                               
-# 57  14  546   234   6   90   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                63                               
-# 58  14  546   234   6   90   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                66                               
-# 59  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                62                               
-# 60  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                61                               
-# 61  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                60                               
-# 62  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                59                               
-# 63  14  546   312   8   168  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                57                               
-# 64  14  546   312   8   168  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                55                               
-# 65  14  546   312   8   168  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                56                               
-# 66  14  546   312   8   168  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                58                               
-# 67  14  546   351   9   216  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                51                               
-# 68  14  546   351   9   216  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                53                               
-# 69  14  546   351   9   216  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                52                               
-# 70  14  546   351   9   216  PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                54                               
-# 71  14  546   390   10  270  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                49                               
-# 72  14  546   390   10  270  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                50                               
-# 73  14  728   364   7   168  PGL(2,13)  13:12  3                   PGL(2,13)  2      2           2      1       12      true             false            false            false                73                               
-# 74  14  1001  286   4   66   A14        A13    (S4 x S10) cap A14  S14        2      2           3      1       2       true             true             true             true                 76                     complete  
-# 75  14  1001  286   4   66   S14        S13    S4 x S10            S14        2      2           4      1       2       true             true             true             true                 77                     complete  
-# 76  14  1001  715   10  495  A14        A13    (S10 x S4) cap A14  S14        2      2           3      1       2       true             true             true             true                 74                     complete  
-# 77  14  1001  715   10  495  S14        S13    S10 x S4            S14        2      2           4      1       2       true             true             true             true                 75                     complete  
-# 78  14  1092  390   5   120  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                87                               
-# 79  14  1092  468   6   180  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                84                               
-# 80  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                86                               
-# 81  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                85                               
-# 82  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                82                               
-# 83  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                83                               
-# 84  14  1092  624   8   336  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                79                               
-# 85  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                81                               
-# 86  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                80                               
-# 87  14  1092  702   9   432  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                78                               
-# 88  14  2002  715   5   220  A14        A13    (S5 x S9) cap A14   S14        2      2           3      1       3       true             true             true             true                 90                     complete  
-# 89  14  2002  715   5   220  S14        S13    S5 x S9             S14        2      2           4      1       3       true             true             true             true                 91                     complete  
-# 90  14  2002  1287  9   792  A14        A13    (S9 x S5) cap A14   S14        2      2           3      1       3       true             true             true             true                 88                     complete  
-# 91  14  2002  1287  9   792  S14        S13    S9 x S5             S14        2      2           4      1       3       true             true             true             true                 89                     complete  
-# 92  14  3003  1287  6   495  A14        A13    (S6 x S8) cap A14   S14        2      2           3      1       4       true             true             true             true                 94                     complete  
-# 93  14  3003  1287  6   495  S14        S13    S6 x S8             S14        2      2           4      1       4       true             true             true             true                 95                     complete  
-# 94  14  3003  1716  8   924  A14        A13    (S8 x S6) cap A14   S14        2      2           3      1       4       true             true             true             true                 92                     complete  
-# 95  14  3003  1716  8   924  S14        S13    S8 x S6             S14        2      2           4      1       4       true             true             true             true                 93                     complete  
-# 96  14  3432  1716  7   792  A14        A13    (S7 x S7) cap A14   S14        2      2           3      1       5       true             false            true             true                 96                     complete  
+# 3   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                11                               
+# 4   14  91    26    4   6    PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             true             false                12                               
+# 5   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                8                                
+# 6   14  91    39    6   15   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             true             false                9                                
+# 7   14  91    39    6   15   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             true             false                10                               
+# 8   14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             false            true                 5                                
+# 9   14  91    52    8   28   PSL(2,13)  13:6   A4                  PGL(2,13)  2      2           1      1       3       true             true             false            true                 6                                
+# 10  14  91    52    8   28   PSL(2,13)  13:6   D12                 PSL(2,13)  2      2           1      1       6       true             true             false            true                 7                                
+# 11  14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             false            true                 3                                
+# 12  14  91    65    10  45   PSL(2,13)  13:6   A4                  PSL(2,13)  2      2           1      1       3       true             true             false            true                 4                                
+# 13  14  91    78    12  66   PSL(2,13)  13:6   D12                 S14        2      2           1      1       6       true             true             false            true                                        complete  
+# 14  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            true             false                22                               
+# 15  14  182   39    3   6    PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            true             false                23                               
+# 16  14  182   65    5   20   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                20                               
+# 17  14  182   65    5   20   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            false            false                21                               
+# 18  14  182   91    7   42   PSL(2,13)  13:6   6                   PSL(2,13)  2      2           1      1       9       true             false            false            false                19                               
+# 19  14  182   91    7   42   PSL(2,13)  13:6   6                   PSL(2,13)  2      2           1      1       9       true             false            false            false                18                               
+# 20  14  182   117   9   72   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            false                16                               
+# 21  14  182   117   9   72   PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            false            false                17                               
+# 22  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       1       true             false            false            true                 14                               
+# 23  14  182   143   11  110  PSL(2,13)  13:6   S3                  PSL(2,13)  2      2           1      1       2       true             false            false            true                 15                               
+# 24  14  273   78    4   18   PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                25                               
+# 25  14  273   195   10  135  PSL(2,13)  13:6   2^2                 PGL(2,13)  2      2           1      1       4       true             false            false            false                24                               
+# 26  14  364   182   7   84   PSL(2,13)  13:6   3                   PSL(2,13)  2      2           1      1       10      true             false            false            false                27                               
+# 27  14  364   182   7   84   PSL(2,13)  13:6   3                   PSL(2,13)  2      2           1      1       10      true             false            false            false                26                               
+# 28  14  546   156   4   36   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                45                               
+# 29  14  546   195   5   60   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                42                               
+# 30  14  546   195   5   60   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                44                               
+# 31  14  546   195   5   60   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                43                               
+# 32  14  546   234   6   90   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                40                               
+# 33  14  546   234   6   90   PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                41                               
+# 34  14  546   234   6   90   PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                39                               
+# 35  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                38                               
+# 36  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                37                               
+# 37  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                36                               
+# 38  14  546   273   7   126  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                35                               
+# 39  14  546   312   8   168  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                34                               
+# 40  14  546   312   8   168  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                32                               
+# 41  14  546   312   8   168  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                33                               
+# 42  14  546   351   9   216  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                29                               
+# 43  14  546   351   9   216  PSL(2,13)  13:6   2                   PSL(2,13)  2      2           1      1       5       true             false            false            false                31                               
+# 44  14  546   351   9   216  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                30                               
+# 45  14  546   390   10  270  PSL(2,13)  13:6   2                   PGL(2,13)  2      2           1      1       5       true             false            false            false                28                               
+# 46  14  1092  468   6   180  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                47                               
+# 47  14  1092  624   8   336  PSL(2,13)  13:6   1                   PGL(2,13)  2      2           1      1       7       true             false            false            false                46                               
+# 48  14  91    39    6   15   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 49                               
+# 49  14  91    52    8   28   PGL(2,13)  13:12  S4                  PGL(2,13)  2      2           2      1       7       true             true             true             true                 48                               
+# 50  14  91    78    12  66   PGL(2,13)  13:12  D24                 S14        2      2           2      1       13      true             true             true             true                                        complete  
+# 51  14  156   78    7   36   PGL(2,13)  13:12  D14                 PGL(2,13)  2      2           2      1       10      true             false            true             true                 51                               
+# 52  14  182   52    4   12   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            true             false                55                               
+# 53  14  182   78    6   30   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            true             false                54                               
+# 54  14  182   104   8   56   PGL(2,13)  13:12  D12                 PGL(2,13)  2      2           2      1       8       true             false            false            true                 53                               
+# 55  14  182   130   10  90   PGL(2,13)  13:12  A4                  PGL(2,13)  2      2           2      1       2       true             false            false            true                 52                               
+# 56  14  273   78    4   18   PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            true             false                57                               
+# 57  14  273   195   10  135  PGL(2,13)  13:12  D8                  PGL(2,13)  2      2           2      1       3       true             false            false            true                 56                               
+# 58  14  364   78    3   12   PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            true             false                62                     complete  
+# 59  14  364   130   5   40   PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                61                               
+# 60  14  364   182   7   84   PGL(2,13)  13:12  6                   PGL(2,13)  2      2           2      1       11      true             false            false            false                60                               
+# 61  14  364   234   9   144  PGL(2,13)  13:12  S3                  PGL(2,13)  2      2           2      1       1       true             false            false            false                59                               
+# 62  14  364   286   11  220  PGL(2,13)  13:12  S3                  S14        2      2           2      1       1       true             false            false            true                 58                     complete  
+# 63  14  546   156   4   36   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            true             false                68                               
+# 64  14  546   195   5   60   PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                67                               
+# 65  14  546   234   6   90   PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                66                               
+# 66  14  546   312   8   168  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            false                65                               
+# 67  14  546   351   9   216  PGL(2,13)  13:12  4                   PGL(2,13)  2      2           2      1       5       true             false            false            false                64                               
+# 68  14  546   390   10  270  PGL(2,13)  13:12  2^2                 PGL(2,13)  2      2           2      1       4       true             false            false            true                 63                               
+# 69  14  728   364   7   168  PGL(2,13)  13:12  3                   PGL(2,13)  2      2           2      1       12      true             false            false            false                69                               
+# 70  14  1092  390   5   120  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                77                               
+# 71  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                76                               
+# 72  14  1092  468   6   180  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                75                               
+# 73  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                73                               
+# 74  14  1092  546   7   252  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                74                               
+# 75  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                72                               
+# 76  14  1092  624   8   336  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       9       true             false            false            false                71                               
+# 77  14  1092  702   9   432  PGL(2,13)  13:12  2                   PGL(2,13)  2      2           2      1       6       true             false            false            false                70                               
+# 78  14  91    78    12  66   A14        A13    (S12 x S2) cap A14  S14        2      2           3      1       6       true             true             true             true                                        complete  
+# 79  14  364   78    3   12   A14        A13    (S3 x S11) cap A14  S14        2      2           3      1       1       true             true             true             true                 80                     complete  
+# 80  14  364   286   11  220  A14        A13    (S11 x S3) cap A14  S14        2      2           3      1       1       true             true             true             true                 79                     complete  
+# 81  14  1001  286   4   66   A14        A13    (S4 x S10) cap A14  S14        2      2           3      1       2       true             true             true             true                 82                     complete  
+# 82  14  1001  715   10  495  A14        A13    (S10 x S4) cap A14  S14        2      2           3      1       2       true             true             true             true                 81                     complete  
+# 83  14  2002  715   5   220  A14        A13    (S5 x S9) cap A14   S14        2      2           3      1       3       true             true             true             true                 84                     complete  
+# 84  14  2002  1287  9   792  A14        A13    (S9 x S5) cap A14   S14        2      2           3      1       3       true             true             true             true                 83                     complete  
+# 85  14  3003  1287  6   495  A14        A13    (S6 x S8) cap A14   S14        2      2           3      1       4       true             true             true             true                 86                     complete  
+# 86  14  3003  1716  8   924  A14        A13    (S8 x S6) cap A14   S14        2      2           3      1       4       true             true             true             true                 85                     complete  
+# 87  14  3432  1716  7   792  A14        A13    (S7 x S7) cap A14   S14        2      2           3      1       5       true             false            true             true                 87                     complete  
+# 88  14  91    78    12  66   S14        S13    S12 x S2            S14        2      2           4      1       6       true             true             true             true                                        complete  
+# 89  14  364   78    3   12   S14        S13    S3 x S11            S14        2      2           4      1       1       true             true             true             true                 90                     complete  
+# 90  14  364   286   11  220  S14        S13    S11 x S3            S14        2      2           4      1       1       true             true             true             true                 89                     complete  
+# 91  14  1001  286   4   66   S14        S13    S4 x S10            S14        2      2           4      1       2       true             true             true             true                 92                     complete  
+# 92  14  1001  715   10  495  S14        S13    S10 x S4            S14        2      2           4      1       2       true             true             true             true                 91                     complete  
+# 93  14  2002  715   5   220  S14        S13    S5 x S9             S14        2      2           4      1       3       true             true             true             true                 94                     complete  
+# 94  14  2002  1287  9   792  S14        S13    S9 x S5             S14        2      2           4      1       3       true             true             true             true                 93                     complete  
+# 95  14  3003  1287  6   495  S14        S13    S6 x S8             S14        2      2           4      1       4       true             true             true             true                 96                     complete  
+# 96  14  3003  1716  8   924  S14        S13    S8 x S6             S14        2      2           4      1       4       true             true             true             true                 95                     complete  
 # 97  14  3432  1716  7   792  S14        S13    S7 x S7             S14        2      2           4      1       5       true             false            true             true                 97                     complete  
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 3. Further information (up to isomorphism): 
+# 4. Further information (up to isomorphism): 
 # -------------------------------------------
 
 # Design: 1
@@ -399,8 +399,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      true       true       
-# Anti-flag-transitive                 false      false      
+# Flag-transitive                      false      false      
+# Anti-flag-transitive                 true       true       
 # Flag-semiregular                     false      false      
 # Flag-regular                         false      false      
 # Point-primitive                      true       true       
@@ -425,8 +425,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      true       true       
-# Anti-flag-transitive                 false      true       
+# Flag-transitive                      false      true       
+# Anti-flag-transitive                 true       true       
 # Flag-semiregular                     false      false      
 # Flag-regular                         false      false      
 # Point-primitive                      true       true       
@@ -451,8 +451,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      true       true       
-# Anti-flag-transitive                 false      false      
+# Flag-transitive                      false      false      
+# Anti-flag-transitive                 true       true       
 # Flag-semiregular                     false      false      
 # Flag-regular                         false      false      
 # Point-primitive                      true       true       
@@ -659,8 +659,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      true       true       
-# Anti-flag-transitive                 false      false      
+# Flag-transitive                      false      false      
+# Anti-flag-transitive                 true       true       
 # Flag-semiregular                     false      false      
 # Flag-regular                         false      false      
 # Point-primitive                      true       true       
@@ -711,8 +711,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      true       true       
-# Anti-flag-transitive                 false      false      
+# Flag-transitive                      false      false      
+# Anti-flag-transitive                 true       true       
 # Flag-semiregular                     false      false      
 # Flag-regular                         false      false      
 # Point-primitive                      true       true       
@@ -737,8 +737,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      true       true       
-# Anti-flag-transitive                 false      false      
+# Flag-transitive                      false      false      
+# Anti-flag-transitive                 true       true       
 # Flag-semiregular                     false      false      
 # Flag-regular                         false      false      
 # Point-primitive                      true       true       
@@ -789,8 +789,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      false      true       
-# Anti-flag-transitive                 false      false      
+# Flag-transitive                      false      false      
+# Anti-flag-transitive                 false      true       
 # Flag-semiregular                     false      false      
 # Flag-regular                         false      false      
 # Point-primitive                      true       true       
@@ -945,8 +945,8 @@
 # Orbit structure of block-stabiliser                     
 # Point-transitive                     true       true    
 # Block-transitive                     true       true    
-# Flag-transitive                      true       true    
-# Anti-flag-transitive                 false      true    
+# Flag-transitive                      false      true    
+# Anti-flag-transitive                 true       true    
 # Flag-semiregular                     false      false   
 # Flag-regular                         false      false   
 # Point-primitive                      true       true    
@@ -1257,8 +1257,8 @@
 # Orbit structure of block-stabiliser                        
 # Point-transitive                     true       true       
 # Block-transitive                     true       true       
-# Flag-transitive                      false      true       
-# Anti-flag-transitive                 false      false      
+# Flag-transitive                      false      false      
+# Anti-flag-transitive                 false      true       
 # Flag-semiregular                     true       true       
 # Flag-regular                         false      true       
 # Point-primitive                      true       true       
@@ -1683,7 +1683,7 @@
 # Block-primitive type                                             
 # -----------------------------------------------------------------
 
-# 4. Designs (up to isomorphism): 
+# 5. Designs (up to isomorphism): 
 # -------------------------------
 
 lD_14 :=  [
@@ -2446,7 +2446,7 @@ lD_14 :=  [
 ]; 
 for D in lD_14 do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 5. Designs (reduced within each group): 
+# 6. Designs (reduced within each group): 
 # ----------------------------------------
 
 lD_14_reduced :=  [
@@ -2506,20 +2506,6 @@ lD_14_reduced :=  [
   lambdas := [ 15 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 91, 39, 6, 15 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 7 ],
-  baseBlock := [ 1, 2, 3, 4, 8, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 39,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 91, 52, 8, 28 ],
   autGroup := Group( [ ( 1, 6, 9, 7)( 2,13,11,14)( 3,10, 5, 4), ( 1,13, 9, 8, 5, 6, 7, 4, 3,11, 2,10,12,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -2539,20 +2525,6 @@ lD_14_reduced :=  [
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   groupNumbers := [ 1, 1, 6 ],
   baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 52,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 91, 52, 8, 28 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 7 ],
-  baseBlock := [ 5, 6, 7, 9, 10, 12, 13, 14 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
@@ -2590,62 +2562,6 @@ lD_14_reduced :=  [
   lambdas := [ 66 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 91, 78, 12, 66 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 13 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 91, 78, 12, 66 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 6 ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 91, 78, 12, 66 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 6 ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 156, 78, 7, 36 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 10 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 182, 39, 3, 6 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -2658,20 +2574,6 @@ lD_14_reduced :=  [
   r := 39,
   tSubsetStructure := rec(
   lambdas := [ 6 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 182, 52, 4, 12 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 5 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 52,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 182, 65, 5, 20 ],
@@ -2688,20 +2590,6 @@ lD_14_reduced :=  [
   lambdas := [ 20 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 182, 78, 6, 30 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 8 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 182, 91, 7, 42 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -2716,20 +2604,6 @@ lD_14_reduced :=  [
   lambdas := [ 42 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 182, 104, 8, 56 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 8 ],
-  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 104,
-  tSubsetStructure := rec(
-  lambdas := [ 56 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 182, 117, 9, 72 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -2742,20 +2616,6 @@ lD_14_reduced :=  [
   r := 117,
   tSubsetStructure := rec(
   lambdas := [ 72 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 182, 130, 10, 90 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 2 ],
-  baseBlock := [ 4, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 130,
-  tSubsetStructure := rec(
-  lambdas := [ 90 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 182, 143, 11, 110 ],
@@ -2786,20 +2646,6 @@ lD_14_reduced :=  [
   lambdas := [ 18 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 273, 78, 4, 18 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 273, 195, 10, 135 ],
   autGroup := Group( [ ( 1, 3, 2)( 4,14, 9)( 6,11,10)( 7,12, 8), ( 2, 4)( 5,10)( 6,14)( 7, 9)( 8,11)(12,13), ( 1, 2)( 3, 4)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -2812,6 +2658,342 @@ lD_14_reduced :=  [
   r := 195,
   tSubsetStructure := rec(
   lambdas := [ 135 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 182, 7, 84 ],
+  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 10 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 9 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 182,
+  tSubsetStructure := rec(
+  lambdas := [ 84 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 156, 4, 36 ],
+  autGroup := Group( [ ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11), ( 1, 3)( 5,13)( 6, 7)( 8,11)( 9,14)(10,12), ( 1, 3)( 2, 6)( 4,14)( 5, 7)( 8,13)( 9,10)(11,12) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 6 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 156,
+  tSubsetStructure := rec(
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 195, 5, 60 ],
+  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 195,
+  tSubsetStructure := rec(
+  lambdas := [ 60 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 195, 5, 60 ],
+  autGroup := Group( [ ( 1, 3, 4, 6, 8, 9, 2)( 5,10,14, 7,13,12,11), ( 1, 2, 3, 4)( 5, 9,12, 6)( 7,10,14,13), ( 2, 4)( 5,10)( 6,14)( 7, 9)( 8,11)(12,13) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 195,
+  tSubsetStructure := rec(
+  lambdas := [ 60 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 234, 6, 90 ],
+  autGroup := Group( [ ( 2, 5)( 3, 7)( 6,11)( 8,10)( 9,12)(13,14), ( 1, 2)( 3, 5)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 4)( 2, 3)( 5, 7)( 6,10)( 8,11)( 9,13)(12,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 7 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 234,
+  tSubsetStructure := rec(
+  lambdas := [ 90 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 234, 6, 90 ],
+  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 8 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 234,
+  tSubsetStructure := rec(
+  lambdas := [ 90 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 273, 7, 126 ],
+  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 7 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 273,
+  tSubsetStructure := rec(
+  lambdas := [ 126 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 273, 7, 126 ],
+  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 8 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 273,
+  tSubsetStructure := rec(
+  lambdas := [ 126 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 312, 8, 168 ],
+  autGroup := Group( [ ( 2, 5)( 3, 7)( 6,11)( 8,10)( 9,12)(13,14), ( 1, 2)( 3, 5)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 4)( 2, 3)( 5, 7)( 6,10)( 8,11)( 9,13)(12,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 312,
+  tSubsetStructure := rec(
+  lambdas := [ 168 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 312, 8, 168 ],
+  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 6, 7, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 312,
+  tSubsetStructure := rec(
+  lambdas := [ 168 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 351, 9, 216 ],
+  autGroup := Group( [ ( 1, 3, 4, 6, 8, 9, 2)( 5,10,14, 7,13,12,11), ( 1, 2, 3, 4)( 5, 9,12, 6)( 7,10,14,13), ( 2, 4)( 5,10)( 6,14)( 7, 9)( 8,11)(12,13) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 351,
+  tSubsetStructure := rec(
+  lambdas := [ 216 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 351, 9, 216 ],
+  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 351,
+  tSubsetStructure := rec(
+  lambdas := [ 216 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 390, 10, 270 ],
+  autGroup := Group( [ ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11), ( 1, 3)( 5,13)( 6, 7)( 8,11)( 9,14)(10,12), ( 1, 3)( 2, 6)( 4,14)( 5, 7)( 8,13)( 9,10)(11,12) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 5 ],
+  baseBlock := [ 4, 5, 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 390,
+  tSubsetStructure := rec(
+  lambdas := [ 270 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1092, 468, 6, 180 ],
+  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 7 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 468,
+  tSubsetStructure := rec(
+  lambdas := [ 180 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1092, 624, 8, 336 ],
+  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 7 ],
+  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 624,
+  tSubsetStructure := rec(
+  lambdas := [ 336 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 91, 39, 6, 15 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 7 ],
+  baseBlock := [ 1, 2, 3, 4, 8, 11 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 39,
+  tSubsetStructure := rec(
+  lambdas := [ 15 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 91, 52, 8, 28 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 7 ],
+  baseBlock := [ 5, 6, 7, 9, 10, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 52,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 91, 78, 12, 66 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 13 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 156, 78, 7, 36 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 10 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 8, 12 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 52, 4, 12 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 5 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 52,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 78, 6, 30 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 8 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 30 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 104, 8, 56 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 8 ],
+  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 104,
+  tSubsetStructure := rec(
+  lambdas := [ 56 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 130, 10, 90 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 2 ],
+  baseBlock := [ 4, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 130,
+  tSubsetStructure := rec(
+  lambdas := [ 90 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 273, 78, 4, 18 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 18 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 273, 195, 10, 135 ],
@@ -2842,34 +3024,6 @@ lD_14_reduced :=  [
   lambdas := [ 12 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 364, 78, 3, 12 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 78, 3, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 364, 130, 5, 40 ],
   autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -2882,20 +3036,6 @@ lD_14_reduced :=  [
   r := 130,
   tSubsetStructure := rec(
   lambdas := [ 40 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 182, 7, 84 ],
-  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 10 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 9 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 182,
-  tSubsetStructure := rec(
-  lambdas := [ 84 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 364, 182, 7, 84 ],
@@ -2940,48 +3080,6 @@ lD_14_reduced :=  [
   lambdas := [ 220 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 364, 286, 11, 220 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 286, 11, 220 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 156, 4, 36 ],
-  autGroup := Group( [ ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11), ( 1, 3)( 5,13)( 6, 7)( 8,11)( 9,14)(10,12), ( 1, 3)( 2, 6)( 4,14)( 5, 7)( 8,13)( 9,10)(11,12) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 6 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 156,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 546, 156, 4, 36 ],
   autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -2994,34 +3092,6 @@ lD_14_reduced :=  [
   r := 156,
   tSubsetStructure := rec(
   lambdas := [ 36 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 195, 5, 60 ],
-  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 5 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 195,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 195, 5, 60 ],
-  autGroup := Group( [ ( 1, 3, 4, 6, 8, 9, 2)( 5,10,14, 7,13,12,11), ( 1, 2, 3, 4)( 5, 9,12, 6)( 7,10,14,13), ( 2, 4)( 5,10)( 6,14)( 7, 9)( 8,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 8 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 195,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 546, 195, 5, 60 ],
@@ -3039,34 +3109,6 @@ lD_14_reduced :=  [
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 546, 234, 6, 90 ],
-  autGroup := Group( [ ( 2, 5)( 3, 7)( 6,11)( 8,10)( 9,12)(13,14), ( 1, 2)( 3, 5)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 4)( 2, 3)( 5, 7)( 6,10)( 8,11)( 9,13)(12,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 7 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 234,
-  tSubsetStructure := rec(
-  lambdas := [ 90 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 234, 6, 90 ],
-  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 8 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 234,
-  tSubsetStructure := rec(
-  lambdas := [ 90 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 234, 6, 90 ],
   autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   groupNumbers := [ 2, 1, 4 ],
@@ -3078,62 +3120,6 @@ lD_14_reduced :=  [
   r := 234,
   tSubsetStructure := rec(
   lambdas := [ 90 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 273, 7, 126 ],
-  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 273,
-  tSubsetStructure := rec(
-  lambdas := [ 126 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 273, 7, 126 ],
-  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 8 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 273,
-  tSubsetStructure := rec(
-  lambdas := [ 126 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 312, 8, 168 ],
-  autGroup := Group( [ ( 2, 5)( 3, 7)( 6,11)( 8,10)( 9,12)(13,14), ( 1, 2)( 3, 5)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 4)( 2, 3)( 5, 7)( 6,10)( 8,11)( 9,13)(12,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 312,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 312, 8, 168 ],
-  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 6, 7, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 312,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 546, 312, 8, 168 ],
@@ -3148,34 +3134,6 @@ lD_14_reduced :=  [
   r := 312,
   tSubsetStructure := rec(
   lambdas := [ 168 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 351, 9, 216 ],
-  autGroup := Group( [ ( 1, 3, 4, 6, 8, 9, 2)( 5,10,14, 7,13,12,11), ( 1, 2, 3, 4)( 5, 9,12, 6)( 7,10,14,13), ( 2, 4)( 5,10)( 6,14)( 7, 9)( 8,11)(12,13) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 351,
-  tSubsetStructure := rec(
-  lambdas := [ 216 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 351, 9, 216 ],
-  autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 351,
-  tSubsetStructure := rec(
-  lambdas := [ 216 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 546, 351, 9, 216 ],
@@ -3190,20 +3148,6 @@ lD_14_reduced :=  [
   r := 351,
   tSubsetStructure := rec(
   lambdas := [ 216 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 390, 10, 270 ],
-  autGroup := Group( [ ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11), ( 1, 3)( 5,13)( 6, 7)( 8,11)( 9,14)(10,12), ( 1, 3)( 2, 6)( 4,14)( 5, 7)( 8,13)( 9,10)(11,12) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 4, 5, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 390,
-  tSubsetStructure := rec(
-  lambdas := [ 270 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 546, 390, 10, 270 ],
@@ -3234,62 +3178,6 @@ lD_14_reduced :=  [
   lambdas := [ 168 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 1001, 286, 4, 66 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1001, 286, 4, 66 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1001, 715, 10, 495 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 715,
-  tSubsetStructure := rec(
-  lambdas := [ 495 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1001, 715, 10, 495 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 715,
-  tSubsetStructure := rec(
-  lambdas := [ 495 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 1092, 390, 5, 120 ],
   autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -3302,20 +3190,6 @@ lD_14_reduced :=  [
   r := 390,
   tSubsetStructure := rec(
   lambdas := [ 120 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1092, 468, 6, 180 ],
-  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 7 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 468,
-  tSubsetStructure := rec(
-  lambdas := [ 180 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 1092, 468, 6, 180 ],
@@ -3372,20 +3246,6 @@ lD_14_reduced :=  [
   r := 546,
   tSubsetStructure := rec(
   lambdas := [ 252 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1092, 624, 8, 336 ],
-  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 7 ],
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 624,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 1092, 624, 8, 336 ],
@@ -3430,24 +3290,80 @@ lD_14_reduced :=  [
   lambdas := [ 432 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 2002, 715, 5, 220 ],
+ rec( parameters := [ 14, 91, 78, 12, 66 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 3 ],
-  baseBlock := [ 1 .. 5 ],
-  blockSizes := [ 5 ],
+  groupNumbers := [ 3, 1, 6 ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 78, 3, 12 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 286, 11, 220 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 220 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 286, 4, 66 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 715, 10, 495 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 2 ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
   r := 715,
   tSubsetStructure := rec(
-  lambdas := [ 220 ],
+  lambdas := [ 495 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 2002, 715, 5, 220 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1 .. 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -3472,20 +3388,6 @@ lD_14_reduced :=  [
   lambdas := [ 792 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 2002, 1287, 9, 792 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
-  baseBlock := [ 1 .. 9 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1287,
-  tSubsetStructure := rec(
-  lambdas := [ 792 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 3003, 1287, 6, 495 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
@@ -3500,38 +3402,10 @@ lD_14_reduced :=  [
   lambdas := [ 495 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 3003, 1287, 6, 495 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
-  baseBlock := [ 1 .. 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1287,
-  tSubsetStructure := rec(
-  lambdas := [ 495 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 3003, 1716, 8, 924 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
   groupNumbers := [ 3, 1, 4 ],
-  baseBlock := [ 1 .. 8 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1716,
-  tSubsetStructure := rec(
-  lambdas := [ 924 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 3003, 1716, 8, 924 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
   baseBlock := [ 1 .. 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -3556,6 +3430,132 @@ lD_14_reduced :=  [
   lambdas := [ 792 ],
   t := 2 ),
   v:= 14),
+ rec( parameters := [ 14, 91, 78, 12, 66 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 6 ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 78, 3, 12 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 286, 11, 220 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 220 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 286, 4, 66 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 715, 10, 495 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 715,
+  tSubsetStructure := rec(
+  lambdas := [ 495 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 2002, 715, 5, 220 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 715,
+  tSubsetStructure := rec(
+  lambdas := [ 220 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 2002, 1287, 9, 792 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 9 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1287,
+  tSubsetStructure := rec(
+  lambdas := [ 792 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 3003, 1287, 6, 495 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1287,
+  tSubsetStructure := rec(
+  lambdas := [ 495 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 3003, 1716, 8, 924 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 8 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1716,
+  tSubsetStructure := rec(
+  lambdas := [ 924 ],
+  t := 2 ),
+  v:= 14),
  rec( parameters:= [ 14, 3432, 1716, 7, 792 ],
   autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
@@ -3573,7 +3573,7 @@ lD_14_reduced :=  [
 ]; 
 for D in lD_14_reduced do D.blocks := Set( Orbit( D.autSubgroup , D.baseBlock , OnSets ) ); od; 
 
-# 6. Designs (all): 
+# 7. Designs (all): 
 # -----------------
 
 lD_14_all :=  [
@@ -3675,20 +3675,6 @@ lD_14_all :=  [
   lambdas := [ 15 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 91, 39, 6, 15 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 7 ],
-  baseBlock := [ 1, 2, 3, 4, 8, 11 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 39,
-  tSubsetStructure := rec(
-  lambdas := [ 15 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 91, 52, 8, 28 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -3722,20 +3708,6 @@ lD_14_all :=  [
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   groupNumbers := [ 1, 1, 6 ],
   baseBlock := [ 5, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 52,
-  tSubsetStructure := rec(
-  lambdas := [ 28 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 91, 52, 8, 28 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 7 ],
-  baseBlock := [ 5, 6, 7, 9, 10, 12, 13, 14 ],
   blockSizes := [ 8 ],
   isBinary := true,
   isBlockDesign := true,
@@ -3787,62 +3759,6 @@ lD_14_all :=  [
   lambdas := [ 66 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 91, 78, 12, 66 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 13 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 91, 78, 12, 66 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 6 ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 91, 78, 12, 66 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 6 ],
-  baseBlock := [ 1 .. 12 ],
-  blockSizes := [ 12 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 156, 78, 7, 36 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 10 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 8, 12 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 182, 39, 3, 6 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -3869,20 +3785,6 @@ lD_14_all :=  [
   r := 39,
   tSubsetStructure := rec(
   lambdas := [ 6 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 182, 52, 4, 12 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 2 ],
-  baseBlock := [ 1, 2, 3, 5 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 52,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 182, 65, 5, 20 ],
@@ -3913,20 +3815,6 @@ lD_14_all :=  [
   lambdas := [ 20 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 182, 78, 6, 30 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 8 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 30 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 182, 91, 7, 42 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -3955,20 +3843,6 @@ lD_14_all :=  [
   lambdas := [ 42 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 182, 104, 8, 56 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 8 ],
-  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 104,
-  tSubsetStructure := rec(
-  lambdas := [ 56 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 182, 117, 9, 72 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -3995,20 +3869,6 @@ lD_14_all :=  [
   r := 117,
   tSubsetStructure := rec(
   lambdas := [ 72 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 182, 130, 10, 90 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 2 ],
-  baseBlock := [ 4, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 130,
-  tSubsetStructure := rec(
-  lambdas := [ 90 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 182, 143, 11, 110 ],
@@ -4053,20 +3913,6 @@ lD_14_all :=  [
   lambdas := [ 18 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 273, 78, 4, 18 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 3 ],
-  baseBlock := [ 1, 2, 3, 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 18 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 273, 195, 10, 135 ],
   autGroup := Group( [ ( 1, 3, 2)( 4,14, 9)( 6,11,10)( 7,12, 8), ( 2, 4)( 5,10)( 6,14)( 7, 9)( 8,11)(12,13), ( 1, 2)( 3, 4)( 5,14)( 6,13)( 7,12)( 8,11)( 9,10) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -4079,76 +3925,6 @@ lD_14_all :=  [
   r := 195,
   tSubsetStructure := rec(
   lambdas := [ 135 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 273, 195, 10, 135 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 3 ],
-  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 195,
-  tSubsetStructure := rec(
-  lambdas := [ 135 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 78, 3, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 1, 2, 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 78, 3, 12 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 78, 3, 12 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 3 ],
-  blockSizes := [ 3 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 78,
-  tSubsetStructure := rec(
-  lambdas := [ 12 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 130, 5, 40 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 1, 2, 3, 5, 7 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 130,
-  tSubsetStructure := rec(
-  lambdas := [ 40 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 364, 182, 7, 84 ],
@@ -4179,94 +3955,10 @@ lD_14_all :=  [
   lambdas := [ 84 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 364, 182, 7, 84 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 11 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6, 10 ],
-  blockSizes := [ 7 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 182,
-  tSubsetStructure := rec(
-  lambdas := [ 84 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 234, 9, 144 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 4, 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 234,
-  tSubsetStructure := rec(
-  lambdas := [ 144 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 286, 11, 220 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 1 ],
-  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 286, 11, 220 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 1 ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 364, 286, 11, 220 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 1 ],
-  baseBlock := [ 1 .. 11 ],
-  blockSizes := [ 11 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 220 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 546, 156, 4, 36 ],
   autGroup := Group( [ ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11), ( 1, 3)( 5,13)( 6, 7)( 8,11)( 9,14)(10,12), ( 1, 3)( 2, 6)( 4,14)( 5, 7)( 8,13)( 9,10)(11,12) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 6 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 156,
-  tSubsetStructure := rec(
-  lambdas := [ 36 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 156, 4, 36 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 4 ],
   baseBlock := [ 1, 2, 3, 6 ],
   blockSizes := [ 4 ],
   isBinary := true,
@@ -4319,20 +4011,6 @@ lD_14_all :=  [
   lambdas := [ 60 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 546, 195, 5, 60 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 8 ],
-  blockSizes := [ 5 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 195,
-  tSubsetStructure := rec(
-  lambdas := [ 60 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 546, 234, 6, 90 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -4365,20 +4043,6 @@ lD_14_all :=  [
   autGroup := Group( [ ( 2, 5)( 3, 7)( 6,11)( 8,10)( 9,12)(13,14), ( 1, 2)( 3, 5)( 6,14)( 7,13)( 8,12)( 9,11), ( 1, 4)( 2, 3)( 5, 7)( 6,10)( 8,11)( 9,13)(12,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   groupNumbers := [ 1, 1, 5 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 7 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 234,
-  tSubsetStructure := rec(
-  lambdas := [ 90 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 546, 234, 6, 90 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 4 ],
   baseBlock := [ 1, 2, 3, 4, 5, 7 ],
   blockSizes := [ 6 ],
   isBinary := true,
@@ -4487,20 +4151,6 @@ lD_14_all :=  [
   lambdas := [ 168 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 546, 312, 8, 168 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 4 ],
-  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 312,
-  tSubsetStructure := rec(
-  lambdas := [ 168 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 546, 351, 9, 216 ],
   autGroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -4543,20 +4193,6 @@ lD_14_all :=  [
   lambdas := [ 216 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 546, 351, 9, 216 ],
-  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 2, 1, 5 ],
-  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 351,
-  tSubsetStructure := rec(
-  lambdas := [ 216 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 546, 390, 10, 270 ],
   autGroup := Group( [ ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11), ( 1, 3)( 5,13)( 6, 7)( 8,11)( 9,14)(10,12), ( 1, 3)( 2, 6)( 4,14)( 5, 7)( 8,13)( 9,10)(11,12) ] ),
   autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -4569,6 +4205,314 @@ lD_14_all :=  [
   r := 390,
   tSubsetStructure := rec(
   lambdas := [ 270 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1092, 468, 6, 180 ],
+  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 7 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 468,
+  tSubsetStructure := rec(
+  lambdas := [ 180 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1092, 624, 8, 336 ],
+  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
+  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 1, 1, 7 ],
+  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 624,
+  tSubsetStructure := rec(
+  lambdas := [ 336 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 91, 39, 6, 15 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 7 ],
+  baseBlock := [ 1, 2, 3, 4, 8, 11 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 39,
+  tSubsetStructure := rec(
+  lambdas := [ 15 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 91, 52, 8, 28 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 7 ],
+  baseBlock := [ 5, 6, 7, 9, 10, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 52,
+  tSubsetStructure := rec(
+  lambdas := [ 28 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 91, 78, 12, 66 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 13 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 156, 78, 7, 36 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 10 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 8, 12 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 52, 4, 12 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 2 ],
+  baseBlock := [ 1, 2, 3, 5 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 52,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 78, 6, 30 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 8 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 10 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 30 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 104, 8, 56 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 8 ],
+  baseBlock := [ 6, 7, 8, 9, 11, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 104,
+  tSubsetStructure := rec(
+  lambdas := [ 56 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 182, 130, 10, 90 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 2 ],
+  baseBlock := [ 4, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 130,
+  tSubsetStructure := rec(
+  lambdas := [ 90 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 273, 78, 4, 18 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 3 ],
+  baseBlock := [ 1, 2, 3, 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 18 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 273, 195, 10, 135 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 3 ],
+  baseBlock := [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 195,
+  tSubsetStructure := rec(
+  lambdas := [ 135 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 78, 3, 12 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 130, 5, 40 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 1, 2, 3, 5, 7 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 130,
+  tSubsetStructure := rec(
+  lambdas := [ 40 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 182, 7, 84 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 11 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 6, 10 ],
+  blockSizes := [ 7 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 182,
+  tSubsetStructure := rec(
+  lambdas := [ 84 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 234, 9, 144 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 4, 6, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 234,
+  tSubsetStructure := rec(
+  lambdas := [ 144 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 286, 11, 220 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 1 ],
+  baseBlock := [ 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 220 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 156, 4, 36 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 6 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 156,
+  tSubsetStructure := rec(
+  lambdas := [ 36 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 195, 5, 60 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 5 ],
+  baseBlock := [ 1, 2, 3, 4, 8 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 195,
+  tSubsetStructure := rec(
+  lambdas := [ 60 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 234, 6, 90 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 4 ],
+  baseBlock := [ 1, 2, 3, 4, 5, 7 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 234,
+  tSubsetStructure := rec(
+  lambdas := [ 90 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 312, 8, 168 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 4 ],
+  baseBlock := [ 6, 8, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 312,
+  tSubsetStructure := rec(
+  lambdas := [ 168 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 546, 351, 9, 216 ],
+  autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
+  groupNumbers := [ 2, 1, 5 ],
+  baseBlock := [ 5, 6, 7, 9, 10, 11, 12, 13, 14 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 351,
+  tSubsetStructure := rec(
+  lambdas := [ 216 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 546, 390, 10, 270 ],
@@ -4599,62 +4543,6 @@ lD_14_all :=  [
   lambdas := [ 168 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 1001, 286, 4, 66 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1001, 286, 4, 66 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1 .. 4 ],
-  blockSizes := [ 4 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 286,
-  tSubsetStructure := rec(
-  lambdas := [ 66 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1001, 715, 10, 495 ],
-  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 2 ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 715,
-  tSubsetStructure := rec(
-  lambdas := [ 495 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1001, 715, 10, 495 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 2 ],
-  baseBlock := [ 1 .. 10 ],
-  blockSizes := [ 10 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 715,
-  tSubsetStructure := rec(
-  lambdas := [ 495 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 1092, 390, 5, 120 ],
   autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
@@ -4667,20 +4555,6 @@ lD_14_all :=  [
   r := 390,
   tSubsetStructure := rec(
   lambdas := [ 120 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1092, 468, 6, 180 ],
-  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 7 ],
-  baseBlock := [ 1, 2, 3, 4, 5, 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 468,
-  tSubsetStructure := rec(
-  lambdas := [ 180 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 1092, 468, 6, 180 ],
@@ -4740,20 +4614,6 @@ lD_14_all :=  [
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 1092, 624, 8, 336 ],
-  autGroup := Group( [ ( 2, 4, 3, 6,10, 7,14,12, 8, 9,11, 5), ( 1, 4, 3, 2)( 5, 6,12, 9)( 7,13,14,10), ( 1, 2)( 3, 6)( 4, 5)( 7,14)( 8,13)( 9,12)(10,11) ] ),
-  autSubgroup := Group( [ ( 3,13,11, 9, 7, 5)( 4,14,12,10, 8, 6), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
-  groupNumbers := [ 1, 1, 7 ],
-  baseBlock := [ 7, 8, 9, 10, 11, 12, 13, 14 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 624,
-  tSubsetStructure := rec(
-  lambdas := [ 336 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 1092, 624, 8, 336 ],
   autGroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   autSubgroup := Group( [ ( 3,14,13,12,11,10, 9, 8, 7, 6, 5, 4), ( 1, 2, 9)( 3, 8,10)( 4, 5,12)( 6,13,14) ] ),
   groupNumbers := [ 2, 1, 6 ],
@@ -4795,24 +4655,80 @@ lD_14_all :=  [
   lambdas := [ 432 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 2002, 715, 5, 220 ],
+ rec( parameters := [ 14, 91, 78, 12, 66 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
-  groupNumbers := [ 3, 1, 3 ],
-  baseBlock := [ 1 .. 5 ],
-  blockSizes := [ 5 ],
+  groupNumbers := [ 3, 1, 6 ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 78, 3, 12 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 286, 11, 220 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 1 ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 220 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 286, 4, 66 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 715, 10, 495 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 2 ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
   isBinary := true,
   isBlockDesign := true,
   isSimple := true,
   r := 715,
   tSubsetStructure := rec(
-  lambdas := [ 220 ],
+  lambdas := [ 495 ],
   t := 2 ),
   v:= 14),
  rec( parameters := [ 14, 2002, 715, 5, 220 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
+  autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
+  groupNumbers := [ 3, 1, 3 ],
   baseBlock := [ 1 .. 5 ],
   blockSizes := [ 5 ],
   isBinary := true,
@@ -4837,20 +4753,6 @@ lD_14_all :=  [
   lambdas := [ 792 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 2002, 1287, 9, 792 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 3 ],
-  baseBlock := [ 1 .. 9 ],
-  blockSizes := [ 9 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1287,
-  tSubsetStructure := rec(
-  lambdas := [ 792 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 3003, 1287, 6, 495 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
@@ -4865,38 +4767,10 @@ lD_14_all :=  [
   lambdas := [ 495 ],
   t := 2 ),
   v:= 14),
- rec( parameters := [ 14, 3003, 1287, 6, 495 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
-  baseBlock := [ 1 .. 6 ],
-  blockSizes := [ 6 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1287,
-  tSubsetStructure := rec(
-  lambdas := [ 495 ],
-  t := 2 ),
-  v:= 14),
  rec( parameters := [ 14, 3003, 1716, 8, 924 ],
   autGroup := Group( [ (1,2), ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14) ] ),
   autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13), (12,13,14) ] ),
   groupNumbers := [ 3, 1, 4 ],
-  baseBlock := [ 1 .. 8 ],
-  blockSizes := [ 8 ],
-  isBinary := true,
-  isBlockDesign := true,
-  isSimple := true,
-  r := 1716,
-  tSubsetStructure := rec(
-  lambdas := [ 924 ],
-  t := 2 ),
-  v:= 14),
- rec( parameters := [ 14, 3003, 1716, 8, 924 ],
-  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
-  groupNumbers := [ 4, 1, 4 ],
   baseBlock := [ 1 .. 8 ],
   blockSizes := [ 8 ],
   isBinary := true,
@@ -4919,6 +4793,132 @@ lD_14_all :=  [
   r := 1716,
   tSubsetStructure := rec(
   lambdas := [ 792 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 91, 78, 12, 66 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 6 ],
+  baseBlock := [ 1 .. 12 ],
+  blockSizes := [ 12 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 78, 3, 12 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 3 ],
+  blockSizes := [ 3 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 78,
+  tSubsetStructure := rec(
+  lambdas := [ 12 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 364, 286, 11, 220 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 1 ],
+  baseBlock := [ 1 .. 11 ],
+  blockSizes := [ 11 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 220 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 286, 4, 66 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 4 ],
+  blockSizes := [ 4 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 286,
+  tSubsetStructure := rec(
+  lambdas := [ 66 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 1001, 715, 10, 495 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 2 ],
+  baseBlock := [ 1 .. 10 ],
+  blockSizes := [ 10 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 715,
+  tSubsetStructure := rec(
+  lambdas := [ 495 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 2002, 715, 5, 220 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 5 ],
+  blockSizes := [ 5 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 715,
+  tSubsetStructure := rec(
+  lambdas := [ 220 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 2002, 1287, 9, 792 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 3 ],
+  baseBlock := [ 1 .. 9 ],
+  blockSizes := [ 9 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1287,
+  tSubsetStructure := rec(
+  lambdas := [ 792 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 3003, 1287, 6, 495 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 6 ],
+  blockSizes := [ 6 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1287,
+  tSubsetStructure := rec(
+  lambdas := [ 495 ],
+  t := 2 ),
+  v:= 14),
+ rec( parameters := [ 14, 3003, 1716, 8, 924 ],
+  autGroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  autSubgroup := Group( [ ( 1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14), (1,2) ] ),
+  groupNumbers := [ 4, 1, 4 ],
+  baseBlock := [ 1 .. 8 ],
+  blockSizes := [ 8 ],
+  isBinary := true,
+  isBlockDesign := true,
+  isSimple := true,
+  r := 1716,
+  tSubsetStructure := rec(
+  lambdas := [ 924 ],
   t := 2 ),
   v:= 14),
  rec( parameters:= [ 14, 3432, 1716, 7, 792 ],
