@@ -56,26 +56,26 @@
 # Parameter set: [ 5, 10, 6, 3, 3 ]
 # Complement:    [ 5, 10, 4, 2, 1 ]
 # -------------------------------------------------------
-#                                      G         Aut(D)  
-# -------------------------------------------------------
-# Structure                            AGL(1,5)  S5      
-# Rank                                 2         2       
-# 2-Homogeneous                        true      true    
-# Point-stabiliser                     4         S4      
-# Block-stabiliser                     2         D12     
-# Orbit structure of point-stabiliser                    
-# Orbit structure of block-stabiliser                    
-# Point-transitive                     true      true    
-# Block-transitive                     true      true    
-# Flag-transitive                      false     true    
-# Anti-flag-transitive                 true      true    
-# Flag-semiregular                     true      false   
-# Flag-regular                         false     false   
-# Point-primitive                      true      true    
-# Point-primitive type                 1         2       
-# Block-primitive                      false     true    
-# Block-primitive type                                   
-# -------------------------------------------------------
+#                                      G           Aut(D)      
+# -------------------------------------------------------------
+# Structure                            AGL(1,5)    S5          
+# Rank                                 2           2           
+# 2-Homogeneous                        true        true        
+# Point-stabiliser                     4           S4          
+# Block-stabiliser                     2           D12         
+# Orbit structure of point-stabiliser  1^{1}4^{1}  1^{1}4^{1}  
+# Orbit structure of block-stabiliser  1^{1}2^{2}  2^{1}3^{1}  
+# Point-transitive                     true        true        
+# Block-transitive                     true        true        
+# Flag-transitive                      false       true        
+# Anti-flag-transitive                 true        true        
+# Flag-semiregular                     false       false       
+# Flag-regular                         false       false       
+# Point-primitive                      true        true        
+# Point-primitive type                 1           2           
+# Block-primitive                      false       true        
+# Block-primitive type                                         
+# -------------------------------------------------------------
 
 # 5. Designs (up to isomorphism): 
 # -------------------------------

@@ -138,7 +138,7 @@
 # Flag-regular                         false               false                     
 # Point-primitive                      true                true                      
 # Point-primitive type                 2                   2                         
-# Block-primitive                      false                                         
+# Block-primitive                      false               false                     
 # Block-primitive type                 0                                             
 # -----------------------------------------------------------------------------------
 
@@ -216,7 +216,7 @@
 # Flag-regular                         false                                             false                                             
 # Point-primitive                      true                                              true                                              
 # Point-primitive type                 2                                                 2                                                 
-# Block-primitive                      false                                                                                               
+# Block-primitive                      false                                             false                                             
 # Block-primitive type                 0                                                                                                   
 # -----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -242,7 +242,7 @@
 # Flag-regular                         true                                    false                                  
 # Point-primitive                      true                                    true                                   
 # Point-primitive type                 2                                       2                                      
-# Block-primitive                      false                                                                          
+# Block-primitive                      false                                   false                                  
 # Block-primitive type                 0                                                                              
 # --------------------------------------------------------------------------------------------------------------------
 

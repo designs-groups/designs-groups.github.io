@@ -307,1612 +307,1612 @@
 # Parameter set: [ 30, 406, 203, 15, 98 ]
 # Complement:    [ 30, 406, 203, 15, 98 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     D30        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 true       true                
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      true       true                
-# Block-primitive type                 2          2                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     D30          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  15^{2}       15^{2}              
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 true         true                
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      true         true                
+# Block-primitive type                 2            2                   
+# ----------------------------------------------------------------------
 
 # Design: 2
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 435, 203, 14, 91 ]
 # Complement:    [ 30, 435, 232, 16, 120 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     D28        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      true       true                
-# Block-primitive type                 2          2                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     D28          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}14^{2}  2^{1}14^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      true         true                
+# Block-primitive type                 2            2                   
+# ----------------------------------------------------------------------
 
 # Design: 3
 # -------------------------------------------------------------------------------------------------------------
 # Parameter set: [ 30, 435, 406, 28, 378 ]
 # Complement:    [ 30, 435, 29, 2, 1 ]
 # -------------------------------------------------------------------------------------------------------------
-#                                      G          Aut(D)                                                       
-# -------------------------------------------------------------------------------------------------------------
-# Structure                            PGL(2,29)  S30                                                          
-# Rank                                 2          2                                                            
-# 2-Homogeneous                        true       true                                                         
-# Point-stabiliser                     AGL(1,29)  group of order 8841761993739701954543616000000 on 29 points  
-# Block-stabiliser                     D56        group of order 609776689223427721003008000000 on 30 points   
-# Orbit structure of point-stabiliser                                                                          
-# Orbit structure of block-stabiliser                                                                          
-# Point-transitive                     true       true                                                         
-# Block-transitive                     true       true                                                         
-# Flag-transitive                      true       true                                                         
-# Anti-flag-transitive                 true       true                                                         
-# Flag-semiregular                     false      false                                                        
-# Flag-regular                         false      false                                                        
-# Point-primitive                      true       true                                                         
-# Point-primitive type                 2          2                                                            
-# Block-primitive                      true       true                                                         
-# Block-primitive type                 2          2                                                            
-# -------------------------------------------------------------------------------------------------------------
+#                                      G            Aut(D)                                                       
+# ---------------------------------------------------------------------------------------------------------------
+# Structure                            PGL(2,29)    S30                                                          
+# Rank                                 2            2                                                            
+# 2-Homogeneous                        true         true                                                         
+# Point-stabiliser                     AGL(1,29)    group of order 8841761993739701954543616000000 on 29 points  
+# Block-stabiliser                     D56          group of order 609776689223427721003008000000 on 30 points   
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}                                                  
+# Orbit structure of block-stabiliser  2^{1}28^{1}  2^{1}28^{1}                                                  
+# Point-transitive                     true         true                                                         
+# Block-transitive                     true         true                                                         
+# Flag-transitive                      true         true                                                         
+# Anti-flag-transitive                 true         true                                                         
+# Flag-semiregular                     false        false                                                        
+# Flag-regular                         false        false                                                        
+# Point-primitive                      true         true                                                         
+# Point-primitive type                 2            2                                                            
+# Block-primitive                      true         true                                                         
+# Block-primitive type                 2            2                                                            
+# ---------------------------------------------------------------------------------------------------------------
 
 # Design: 4
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 812, 406, 15, 196 ]
 # Complement:    [ 30, 812, 406, 15, 196 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D30        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 true       true                
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D30          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  15^{2}       15^{2}              
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 true         true                
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 5
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 870, 203, 7, 42 ]
 # Complement:    [ 30, 870, 667, 23, 506 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     D14        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G                 Aut(D)              
+# ---------------------------------------------------------------------------
+# Structure                            PSL(2,29)         PSL(2,29)           
+# Rank                                 2                 2                   
+# 2-Homogeneous                        true              true                
+# Point-stabiliser                     29:14             group on 29 points  
+# Block-stabiliser                     D14               group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}       1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}7^{2}14^{1}  2^{1}7^{2}14^{1}    
+# Point-transitive                     true              true                
+# Block-transitive                     true              true                
+# Flag-transitive                      true              true                
+# Anti-flag-transitive                 false             false               
+# Flag-semiregular                     false             false               
+# Flag-regular                         false             false               
+# Point-primitive                      true              true                
+# Point-primitive type                 2                 2                   
+# Block-primitive                      false             false               
+# Block-primitive type                 0                 0                   
+# ---------------------------------------------------------------------------
 
 # Design: 6
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 870, 406, 14, 182 ]
 # Complement:    [ 30, 870, 464, 16, 240 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D28        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D28          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}14^{2}  2^{1}14^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 7
 # ---------------------------------------------------------------------------------
 # Parameter set: [ 30, 1015, 203, 6, 35 ]
 # Complement:    [ 30, 1015, 812, 24, 644 ]
 # ---------------------------------------------------------------------------------
-#                                      G          Aut(D)                           
-# ---------------------------------------------------------------------------------
-# Structure                            PSL(2,29)  PGL(2,29)                        
-# Rank                                 2          2                                
-# 2-Homogeneous                        true       true                             
-# Point-stabiliser                     29:14      group of order 812 on 29 points  
-# Block-stabiliser                     A4         group of order 24 on 30 points   
-# Orbit structure of point-stabiliser                                              
-# Orbit structure of block-stabiliser                                              
-# Point-transitive                     true       true                             
-# Block-transitive                     true       true                             
-# Flag-transitive                      true       true                             
-# Anti-flag-transitive                 false      true                             
-# Flag-semiregular                     false      false                            
-# Flag-regular                         false      false                            
-# Point-primitive                      true       true                             
-# Point-primitive type                 2          2                                
-# Block-primitive                      false                                       
-# Block-primitive type                 0                                           
-# ---------------------------------------------------------------------------------
+#                                      G            Aut(D)                           
+# -----------------------------------------------------------------------------------
+# Structure                            PSL(2,29)    PGL(2,29)                        
+# Rank                                 2            2                                
+# 2-Homogeneous                        true         true                             
+# Point-stabiliser                     29:14        group of order 812 on 29 points  
+# Block-stabiliser                     A4           group of order 24 on 30 points   
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}                      
+# Orbit structure of block-stabiliser  6^{1}12^{2}  6^{1}24^{1}                      
+# Point-transitive                     true         true                             
+# Block-transitive                     true         true                             
+# Flag-transitive                      true         true                             
+# Anti-flag-transitive                 false        true                             
+# Flag-semiregular                     false        false                            
+# Flag-regular                         false        false                            
+# Point-primitive                      true         true                             
+# Point-primitive type                 2            2                                
+# Block-primitive                      false                                         
+# Block-primitive type                 0                                             
+# -----------------------------------------------------------------------------------
 
 # Design: 8
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1015, 406, 12, 154 ]
 # Complement:    [ 30, 1015, 609, 18, 357 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     A4         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     A4           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  6^{1}12^{2}  6^{1}12^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 9
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1015, 812, 24, 644 ]
 # Complement:    [ 30, 1015, 203, 6, 35 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     S4         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 true       true                
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      true       true                
-# Block-primitive type                 2          2                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     S4           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  6^{1}24^{1}  6^{1}24^{1}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 true         true                
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      true         true                
+# Block-primitive type                 2            2                   
+# ----------------------------------------------------------------------
 
 # Design: 10
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1218, 203, 5, 28 ]
 # Complement:    [ 30, 1218, 1015, 25, 840 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     D10        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     D10          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  5^{2}10^{2}  5^{2}10^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 11
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1218, 406, 10, 126 ]
 # Complement:    [ 30, 1218, 812, 20, 532 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     D10        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     D10          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  5^{2}10^{2}  5^{2}10^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 12
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1218, 406, 10, 126 ]
 # Complement:    [ 30, 1218, 812, 20, 532 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D20        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 true       true                
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G             Aut(D)              
+# -----------------------------------------------------------------------
+# Structure                            PGL(2,29)     PGL(2,29)           
+# Rank                                 2             2                   
+# 2-Homogeneous                        true          true                
+# Point-stabiliser                     AGL(1,29)     group on 29 points  
+# Block-stabiliser                     D20           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}   1^{1}29^{1}         
+# Orbit structure of block-stabiliser  10^{1}20^{1}  10^{1}20^{1}        
+# Point-transitive                     true          true                
+# Block-transitive                     true          true                
+# Flag-transitive                      true          true                
+# Anti-flag-transitive                 true          true                
+# Flag-semiregular                     false         false               
+# Flag-regular                         false         false               
+# Point-primitive                      true          true                
+# Point-primitive type                 2             2                   
+# Block-primitive                      false         false               
+# Block-primitive type                 0             0                   
+# -----------------------------------------------------------------------
 
 # Design: 13
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1218, 812, 20, 532 ]
 # Complement:    [ 30, 1218, 406, 10, 126 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D20        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 true       true                
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G             Aut(D)              
+# -----------------------------------------------------------------------
+# Structure                            PGL(2,29)     PGL(2,29)           
+# Rank                                 2             2                   
+# 2-Homogeneous                        true          true                
+# Point-stabiliser                     AGL(1,29)     group on 29 points  
+# Block-stabiliser                     D20           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}   1^{1}29^{1}         
+# Orbit structure of block-stabiliser  10^{1}20^{1}  10^{1}20^{1}        
+# Point-transitive                     true          true                
+# Block-transitive                     true          true                
+# Flag-transitive                      true          true                
+# Anti-flag-transitive                 true          true                
+# Flag-semiregular                     true          true                
+# Flag-regular                         true          true                
+# Point-primitive                      true          true                
+# Point-primitive type                 2             2                   
+# Block-primitive                      false         false               
+# Block-primitive type                 0             0                   
+# -----------------------------------------------------------------------
 
 # Design: 14
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1740, 406, 7, 84 ]
 # Complement:    [ 30, 1740, 1334, 23, 1012 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D14        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G                 Aut(D)              
+# ---------------------------------------------------------------------------
+# Structure                            PGL(2,29)         PGL(2,29)           
+# Rank                                 2                 2                   
+# 2-Homogeneous                        true              true                
+# Point-stabiliser                     AGL(1,29)         group on 29 points  
+# Block-stabiliser                     D14               group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}       1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}7^{2}14^{1}  2^{1}7^{2}14^{1}    
+# Point-transitive                     true              true                
+# Block-transitive                     true              true                
+# Flag-transitive                      true              true                
+# Anti-flag-transitive                 false             false               
+# Flag-semiregular                     false             false               
+# Flag-regular                         false             false               
+# Point-primitive                      true              true                
+# Point-primitive type                 2                 2                   
+# Block-primitive                      false             false               
+# Block-primitive type                 0                 0                   
+# ---------------------------------------------------------------------------
 
 # Design: 15
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 1740, 812, 14, 364 ]
 # Complement:    [ 30, 1740, 928, 16, 480 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D14        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D14          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}14^{2}  2^{1}14^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 16
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2030, 203, 3, 14 ]
 # Complement:    [ 30, 2030, 1827, 27, 1638 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     S3         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     S3           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  3^{2}6^{4}   3^{2}6^{4}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 17
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2030, 406, 6, 70 ]
 # Complement:    [ 30, 2030, 1624, 24, 1288 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     S3         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     S3           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  3^{2}6^{4}   3^{2}6^{4}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 18
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2030, 406, 6, 70 ]
 # Complement:    [ 30, 2030, 1624, 24, 1288 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     S3         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     S3           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  3^{2}6^{4}   3^{2}6^{4}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 19
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2030, 406, 6, 70 ]
 # Complement:    [ 30, 2030, 1624, 24, 1288 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D12        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D12          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  6^{1}12^{2}  6^{1}12^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 20
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2030, 812, 12, 308 ]
 # Complement:    [ 30, 2030, 1218, 18, 714 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     A4         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     A4           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  6^{1}12^{2}  6^{1}12^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 21
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2030, 812, 12, 308 ]
 # Complement:    [ 30, 2030, 1218, 18, 714 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D12        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D12          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  6^{1}12^{2}  6^{1}12^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 22
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2030, 812, 12, 308 ]
 # Complement:    [ 30, 2030, 1218, 18, 714 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D12        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D12          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  6^{1}12^{2}  6^{1}12^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 23
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2436, 406, 5, 56 ]
 # Complement:    [ 30, 2436, 2030, 25, 1680 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D10        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D10          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  5^{2}10^{2}  5^{2}10^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     false        false               
+# Flag-regular                         false        false               
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 24
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2436, 812, 10, 252 ]
 # Complement:    [ 30, 2436, 1624, 20, 1064 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D10        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D10          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  10^{3}       10^{3}              
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 25
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 2436, 812, 10, 252 ]
 # Complement:    [ 30, 2436, 1624, 20, 1064 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D10        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     D10          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  5^{2}10^{2}  5^{2}10^{2}         
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 26
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 3045, 406, 4, 42 ]
 # Complement:    [ 30, 3045, 2639, 26, 2275 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PSL(2,29)  PSL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     29:14      group on 29 points  
-# Block-stabiliser                     2^2        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PSL(2,29)    PSL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     29:14        group on 29 points  
+# Block-stabiliser                     2^2          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{3}4^{6}   2^{3}4^{6}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 27
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 3045, 406, 4, 42 ]
 # Complement:    [ 30, 3045, 2639, 26, 2275 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D8         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     false      false               
-# Flag-regular                         false      false               
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G                Aut(D)              
+# --------------------------------------------------------------------------
+# Structure                            PGL(2,29)        PGL(2,29)           
+# Rank                                 2                2                   
+# 2-Homogeneous                        true             true                
+# Point-stabiliser                     AGL(1,29)        group on 29 points  
+# Block-stabiliser                     D8               group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}      1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}4^{1}8^{3}  2^{1}4^{1}8^{3}     
+# Point-transitive                     true             true                
+# Block-transitive                     true             true                
+# Flag-transitive                      true             true                
+# Anti-flag-transitive                 false            false               
+# Flag-semiregular                     false            false               
+# Flag-regular                         false            false               
+# Point-primitive                      true             true                
+# Point-primitive type                 2                2                   
+# Block-primitive                      false            false               
+# Block-primitive type                 0                0                   
+# --------------------------------------------------------------------------
 
 # Design: 28
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 3045, 812, 8, 196 ]
 # Complement:    [ 30, 3045, 2233, 22, 1617 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D8         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G                Aut(D)              
+# --------------------------------------------------------------------------
+# Structure                            PGL(2,29)        PGL(2,29)           
+# Rank                                 2                2                   
+# 2-Homogeneous                        true             true                
+# Point-stabiliser                     AGL(1,29)        group on 29 points  
+# Block-stabiliser                     D8               group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}      1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}4^{1}8^{3}  2^{1}4^{1}8^{3}     
+# Point-transitive                     true             true                
+# Block-transitive                     true             true                
+# Flag-transitive                      true             true                
+# Anti-flag-transitive                 false            false               
+# Flag-semiregular                     true             true                
+# Flag-regular                         true             true                
+# Point-primitive                      true             true                
+# Point-primitive type                 2                2                   
+# Block-primitive                      false            false               
+# Block-primitive type                 0                0                   
+# --------------------------------------------------------------------------
 
 # Design: 29
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 3045, 812, 8, 196 ]
 # Complement:    [ 30, 3045, 2233, 22, 1617 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D8         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G                Aut(D)              
+# --------------------------------------------------------------------------
+# Structure                            PGL(2,29)        PGL(2,29)           
+# Rank                                 2                2                   
+# 2-Homogeneous                        true             true                
+# Point-stabiliser                     AGL(1,29)        group on 29 points  
+# Block-stabiliser                     D8               group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}      1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}4^{1}8^{3}  2^{1}4^{1}8^{3}     
+# Point-transitive                     true             true                
+# Block-transitive                     true             true                
+# Flag-transitive                      true             true                
+# Anti-flag-transitive                 false            false               
+# Flag-semiregular                     true             true                
+# Flag-regular                         true             true                
+# Point-primitive                      true             true                
+# Point-primitive type                 2                2                   
+# Block-primitive                      false            false               
+# Block-primitive type                 0                0                   
+# --------------------------------------------------------------------------
 
 # Design: 30
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 3045, 812, 8, 196 ]
 # Complement:    [ 30, 3045, 2233, 22, 1617 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     D8         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G                Aut(D)              
+# --------------------------------------------------------------------------
+# Structure                            PGL(2,29)        PGL(2,29)           
+# Rank                                 2                2                   
+# 2-Homogeneous                        true             true                
+# Point-stabiliser                     AGL(1,29)        group on 29 points  
+# Block-stabiliser                     D8               group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}      1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}4^{1}8^{3}  2^{1}4^{1}8^{3}     
+# Point-transitive                     true             true                
+# Block-transitive                     true             true                
+# Flag-transitive                      true             true                
+# Anti-flag-transitive                 false            false               
+# Flag-semiregular                     true             true                
+# Flag-regular                         true             true                
+# Point-primitive                      true             true                
+# Point-primitive type                 2                2                   
+# Block-primitive                      false            false               
+# Block-primitive type                 0                0                   
+# --------------------------------------------------------------------------
 
 # Design: 31
 # -------------------------------------------------------------------------------------------------------------
 # Parameter set: [ 30, 4060, 406, 3, 28 ]
 # Complement:    [ 30, 4060, 3654, 27, 3276 ]
 # -------------------------------------------------------------------------------------------------------------
-#                                      G          Aut(D)                                                       
-# -------------------------------------------------------------------------------------------------------------
-# Structure                            PGL(2,29)  S30                                                          
-# Rank                                 2          2                                                            
-# 2-Homogeneous                        true       true                                                         
-# Point-stabiliser                     AGL(1,29)  group of order 8841761993739701954543616000000 on 29 points  
-# Block-stabiliser                     S3         group of order 65333216702510112964608000000 on 30 points    
-# Orbit structure of point-stabiliser                                                                          
-# Orbit structure of block-stabiliser                                                                          
-# Point-transitive                     true       true                                                         
-# Block-transitive                     true       true                                                         
-# Flag-transitive                      true       true                                                         
-# Anti-flag-transitive                 false      true                                                         
-# Flag-semiregular                     false      false                                                        
-# Flag-regular                         false      false                                                        
-# Point-primitive                      true       true                                                         
-# Point-primitive type                 2          2                                                            
-# Block-primitive                      false                                                                   
-# Block-primitive type                 0                                                                       
-# -------------------------------------------------------------------------------------------------------------
+#                                      G            Aut(D)                                                       
+# ---------------------------------------------------------------------------------------------------------------
+# Structure                            PGL(2,29)    S30                                                          
+# Rank                                 2            2                                                            
+# 2-Homogeneous                        true         true                                                         
+# Point-stabiliser                     AGL(1,29)    group of order 8841761993739701954543616000000 on 29 points  
+# Block-stabiliser                     S3           group of order 65333216702510112964608000000 on 30 points    
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}                                                  
+# Orbit structure of block-stabiliser  3^{2}6^{4}   3^{1}27^{1}                                                  
+# Point-transitive                     true         true                                                         
+# Block-transitive                     true         true                                                         
+# Flag-transitive                      true         true                                                         
+# Anti-flag-transitive                 false        true                                                         
+# Flag-semiregular                     false        false                                                        
+# Flag-regular                         false        false                                                        
+# Point-primitive                      true         true                                                         
+# Point-primitive type                 2            2                                                            
+# Block-primitive                      false                                                                     
+# Block-primitive type                 0                                                                         
+# ---------------------------------------------------------------------------------------------------------------
 
 # Design: 32
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 4060, 812, 6, 140 ]
 # Complement:    [ 30, 4060, 3248, 24, 2576 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     S3         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     S3           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  3^{2}6^{4}   3^{2}6^{4}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 33
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 4060, 812, 6, 140 ]
 # Complement:    [ 30, 4060, 3248, 24, 2576 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     S3         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     S3           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  3^{2}6^{4}   3^{2}6^{4}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 34
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 4060, 812, 6, 140 ]
 # Complement:    [ 30, 4060, 3248, 24, 2576 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     S3         group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     S3           group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  6^{5}        6^{5}               
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 35
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 4060, 3654, 27, 3276 ]
 # Complement:    [ 30, 4060, 406, 3, 28 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S27 x S3) cap A30  S27 x S3  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S27 x S3) cap A30  S27 x S3     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  3^{1}27^{1}         3^{1}27^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 36
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 6090, 812, 4, 84 ]
 # Complement:    [ 30, 6090, 5278, 26, 4550 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     2^2        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     2^2          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{3}4^{6}   2^{3}4^{6}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 37
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 6090, 812, 4, 84 ]
 # Complement:    [ 30, 6090, 5278, 26, 4550 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     2^2        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     2^2          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}4^{7}   2^{1}4^{7}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 38
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 6090, 812, 4, 84 ]
 # Complement:    [ 30, 6090, 5278, 26, 4550 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     2^2        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     2^2          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}4^{7}   2^{1}4^{7}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 39
 # --------------------------------------------------------------------
 # Parameter set: [ 30, 6090, 812, 4, 84 ]
 # Complement:    [ 30, 6090, 5278, 26, 4550 ]
 # --------------------------------------------------------------------
-#                                      G          Aut(D)              
-# --------------------------------------------------------------------
-# Structure                            PGL(2,29)  PGL(2,29)           
-# Rank                                 2          2                   
-# 2-Homogeneous                        true       true                
-# Point-stabiliser                     AGL(1,29)  group on 29 points  
-# Block-stabiliser                     2^2        group on 30 points  
-# Orbit structure of point-stabiliser                                 
-# Orbit structure of block-stabiliser                                 
-# Point-transitive                     true       true                
-# Block-transitive                     true       true                
-# Flag-transitive                      true       true                
-# Anti-flag-transitive                 false      false               
-# Flag-semiregular                     true       true                
-# Flag-regular                         true       true                
-# Point-primitive                      true       true                
-# Point-primitive type                 2          2                   
-# Block-primitive                      false      false               
-# Block-primitive type                 0          0                   
-# --------------------------------------------------------------------
+#                                      G            Aut(D)              
+# ----------------------------------------------------------------------
+# Structure                            PGL(2,29)    PGL(2,29)           
+# Rank                                 2            2                   
+# 2-Homogeneous                        true         true                
+# Point-stabiliser                     AGL(1,29)    group on 29 points  
+# Block-stabiliser                     2^2          group on 30 points  
+# Orbit structure of point-stabiliser  1^{1}29^{1}  1^{1}29^{1}         
+# Orbit structure of block-stabiliser  2^{1}4^{7}   2^{1}4^{7}          
+# Point-transitive                     true         true                
+# Block-transitive                     true         true                
+# Flag-transitive                      true         true                
+# Anti-flag-transitive                 false        false               
+# Flag-semiregular                     true         true                
+# Flag-regular                         true         true                
+# Point-primitive                      true         true                
+# Point-primitive type                 2            2                   
+# Block-primitive                      false        false               
+# Block-primitive type                 0            0                   
+# ----------------------------------------------------------------------
 
 # Design: 40
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 27405, 3654, 4, 378 ]
 # Complement:    [ 30, 27405, 23751, 26, 20475 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S4 x S26) cap A30  S4 x S26  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S4 x S26) cap A30  S4 x S26     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  4^{1}26^{1}         4^{1}26^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 41
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 27405, 23751, 26, 20475 ]
 # Complement:    [ 30, 27405, 3654, 4, 378 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S26 x S4) cap A30  S26 x S4  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S26 x S4) cap A30  S26 x S4     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  4^{1}26^{1}         4^{1}26^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 42
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 142506, 23751, 5, 3276 ]
 # Complement:    [ 30, 142506, 118755, 25, 98280 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S5 x S25) cap A30  S5 x S25  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S5 x S25) cap A30  S5 x S25     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  5^{1}25^{1}         5^{1}25^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 43
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 142506, 118755, 25, 98280 ]
 # Complement:    [ 30, 142506, 23751, 5, 3276 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S25 x S5) cap A30  S25 x S5  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S25 x S5) cap A30  S25 x S5     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  5^{1}25^{1}         5^{1}25^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 44
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 593775, 118755, 6, 20475 ]
 # Complement:    [ 30, 593775, 475020, 24, 376740 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S6 x S24) cap A30  S6 x S24  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S6 x S24) cap A30  S6 x S24     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  6^{1}24^{1}         6^{1}24^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 45
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 593775, 475020, 24, 376740 ]
 # Complement:    [ 30, 593775, 118755, 6, 20475 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S24 x S6) cap A30  S24 x S6  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S24 x S6) cap A30  S24 x S6     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  6^{1}24^{1}         6^{1}24^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 46
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 2035800, 475020, 7, 98280 ]
 # Complement:    [ 30, 2035800, 1560780, 23, 1184040 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S7 x S23) cap A30  S7 x S23  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S7 x S23) cap A30  S7 x S23     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  7^{1}23^{1}         7^{1}23^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 47
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 2035800, 1560780, 23, 1184040 ]
 # Complement:    [ 30, 2035800, 475020, 7, 98280 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S23 x S7) cap A30  S23 x S7  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S23 x S7) cap A30  S23 x S7     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  7^{1}23^{1}         7^{1}23^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 48
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 5852925, 1560780, 8, 376740 ]
 # Complement:    [ 30, 5852925, 4292145, 22, 3108105 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S8 x S22) cap A30  S8 x S22  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S8 x S22) cap A30  S8 x S22     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  8^{1}22^{1}         8^{1}22^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 49
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 5852925, 4292145, 22, 3108105 ]
 # Complement:    [ 30, 5852925, 1560780, 8, 376740 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S22 x S8) cap A30  S22 x S8  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S22 x S8) cap A30  S22 x S8     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  8^{1}22^{1}         8^{1}22^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 50
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 14307150, 4292145, 9, 1184040 ]
 # Complement:    [ 30, 14307150, 10015005, 21, 6906900 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S9 x S21) cap A30  S9 x S21  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S9 x S21) cap A30  S9 x S21     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  9^{1}21^{1}         9^{1}21^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 51
 # -------------------------------------------------------------------
 # Parameter set: [ 30, 14307150, 10015005, 21, 6906900 ]
 # Complement:    [ 30, 14307150, 4292145, 9, 1184040 ]
 # -------------------------------------------------------------------
-#                                      G                   Aut(D)    
-# -------------------------------------------------------------------
-# Structure                            A30                 S30       
-# Rank                                 2                   2         
-# 2-Homogeneous                        true                true      
-# Point-stabiliser                     A29                 S29       
-# Block-stabiliser                     (S21 x S9) cap A30  S21 x S9  
-# Orbit structure of point-stabiliser                                
-# Orbit structure of block-stabiliser                                
-# Point-transitive                     true                true      
-# Block-transitive                     true                true      
-# Flag-transitive                      true                true      
-# Anti-flag-transitive                 true                true      
-# Flag-semiregular                     false               false     
-# Flag-regular                         false               false     
-# Point-primitive                      true                true      
-# Point-primitive type                 2                   2         
-# Block-primitive                      true                true      
-# Block-primitive type                                               
-# -------------------------------------------------------------------
+#                                      G                   Aut(D)       
+# ----------------------------------------------------------------------
+# Structure                            A30                 S30          
+# Rank                                 2                   2            
+# 2-Homogeneous                        true                true         
+# Point-stabiliser                     A29                 S29          
+# Block-stabiliser                     (S21 x S9) cap A30  S21 x S9     
+# Orbit structure of point-stabiliser  1^{1}29^{1}         1^{1}29^{1}  
+# Orbit structure of block-stabiliser  9^{1}21^{1}         9^{1}21^{1}  
+# Point-transitive                     true                true         
+# Block-transitive                     true                true         
+# Flag-transitive                      true                true         
+# Anti-flag-transitive                 true                true         
+# Flag-semiregular                     false               false        
+# Flag-regular                         false               false        
+# Point-primitive                      true                true         
+# Point-primitive type                 2                   2            
+# Block-primitive                      true                true         
+# Block-primitive type                                                  
+# ----------------------------------------------------------------------
 
 # Design: 52
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 30045015, 10015005, 10, 3108105 ]
 # Complement:    [ 30, 30045015, 20030010, 20, 13123110 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S10 x S20) cap A30  S10 x S20  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S10 x S20) cap A30  S10 x S20     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  10^{1}20^{1}         10^{1}20^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 53
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 30045015, 20030010, 20, 13123110 ]
 # Complement:    [ 30, 30045015, 10015005, 10, 3108105 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S20 x S10) cap A30  S20 x S10  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S20 x S10) cap A30  S20 x S10     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  10^{1}20^{1}         10^{1}20^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 54
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 54627300, 20030010, 11, 6906900 ]
 # Complement:    [ 30, 54627300, 34597290, 19, 21474180 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S11 x S19) cap A30  S11 x S19  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S11 x S19) cap A30  S11 x S19     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  11^{1}19^{1}         11^{1}19^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 55
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 54627300, 34597290, 19, 21474180 ]
 # Complement:    [ 30, 54627300, 20030010, 11, 6906900 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S19 x S11) cap A30  S19 x S11  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S19 x S11) cap A30  S19 x S11     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  11^{1}19^{1}         11^{1}19^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 56
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 86493225, 34597290, 12, 13123110 ]
 # Complement:    [ 30, 86493225, 51895935, 18, 30421755 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S12 x S18) cap A30  S12 x S18  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S12 x S18) cap A30  S12 x S18     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  12^{1}18^{1}         12^{1}18^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 57
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 86493225, 51895935, 18, 30421755 ]
 # Complement:    [ 30, 86493225, 34597290, 12, 13123110 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S18 x S12) cap A30  S18 x S12  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S18 x S12) cap A30  S18 x S12     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  12^{1}18^{1}         12^{1}18^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 58
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 119759850, 51895935, 13, 21474180 ]
 # Complement:    [ 30, 119759850, 67863915, 17, 37442160 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S13 x S17) cap A30  S13 x S17  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S13 x S17) cap A30  S13 x S17     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  13^{1}17^{1}         13^{1}17^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 59
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 119759850, 67863915, 17, 37442160 ]
 # Complement:    [ 30, 119759850, 51895935, 13, 21474180 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S17 x S13) cap A30  S17 x S13  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S17 x S13) cap A30  S17 x S13     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  13^{1}17^{1}         13^{1}17^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 60
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 145422675, 67863915, 14, 30421755 ]
 # Complement:    [ 30, 145422675, 77558760, 16, 40116600 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S14 x S16) cap A30  S14 x S16  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S14 x S16) cap A30  S14 x S16     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  14^{1}16^{1}         14^{1}16^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 61
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 145422675, 77558760, 16, 40116600 ]
 # Complement:    [ 30, 145422675, 67863915, 14, 30421755 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S16 x S14) cap A30  S16 x S14  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      true                 true       
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)        
+# ------------------------------------------------------------------------
+# Structure                            A30                  S30           
+# Rank                                 2                    2             
+# 2-Homogeneous                        true                 true          
+# Point-stabiliser                     A29                  S29           
+# Block-stabiliser                     (S16 x S14) cap A30  S16 x S14     
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}   
+# Orbit structure of block-stabiliser  14^{1}16^{1}         14^{1}16^{1}  
+# Point-transitive                     true                 true          
+# Block-transitive                     true                 true          
+# Flag-transitive                      true                 true          
+# Anti-flag-transitive                 true                 true          
+# Flag-semiregular                     false                false         
+# Flag-regular                         false                false         
+# Point-primitive                      true                 true          
+# Point-primitive type                 2                    2             
+# Block-primitive                      true                 true          
+# Block-primitive type                                                    
+# ------------------------------------------------------------------------
 
 # Design: 62
 # ---------------------------------------------------------------------
 # Parameter set: [ 30, 155117520, 77558760, 15, 37442160 ]
 # Complement:    [ 30, 155117520, 77558760, 15, 37442160 ]
 # ---------------------------------------------------------------------
-#                                      G                    Aut(D)     
-# ---------------------------------------------------------------------
-# Structure                            A30                  S30        
-# Rank                                 2                    2          
-# 2-Homogeneous                        true                 true       
-# Point-stabiliser                     A29                  S29        
-# Block-stabiliser                     (S15 x S15) cap A30  S15 x S15  
-# Orbit structure of point-stabiliser                                  
-# Orbit structure of block-stabiliser                                  
-# Point-transitive                     true                 true       
-# Block-transitive                     true                 true       
-# Flag-transitive                      true                 true       
-# Anti-flag-transitive                 true                 true       
-# Flag-semiregular                     false                false      
-# Flag-regular                         false                false      
-# Point-primitive                      true                 true       
-# Point-primitive type                 2                    2          
-# Block-primitive                      false                false      
-# Block-primitive type                                                 
-# ---------------------------------------------------------------------
+#                                      G                    Aut(D)       
+# -----------------------------------------------------------------------
+# Structure                            A30                  S30          
+# Rank                                 2                    2            
+# 2-Homogeneous                        true                 true         
+# Point-stabiliser                     A29                  S29          
+# Block-stabiliser                     (S15 x S15) cap A30  S15 x S15    
+# Orbit structure of point-stabiliser  1^{1}29^{1}          1^{1}29^{1}  
+# Orbit structure of block-stabiliser  15^{2}               15^{2}       
+# Point-transitive                     true                 true         
+# Block-transitive                     true                 true         
+# Flag-transitive                      true                 true         
+# Anti-flag-transitive                 true                 true         
+# Flag-semiregular                     false                false        
+# Flag-regular                         false                false        
+# Point-primitive                      true                 true         
+# Point-primitive type                 2                    2            
+# Block-primitive                      false                false        
+# Block-primitive type                                                   
+# -----------------------------------------------------------------------
 
 # 5. Designs (up to isomorphism): 
 # -------------------------------

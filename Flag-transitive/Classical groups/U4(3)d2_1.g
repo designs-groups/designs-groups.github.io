@@ -69,52 +69,52 @@
 # Parameter set: [ 280, 34020, 3888, 32, 432 ]
 # Complement:    [ 280, 34020, 30132, 248, 26676 ]
 # -------------------------------------------------------------------------------------------------------
-#                                      G                                   Aut(D)                        
-# -------------------------------------------------------------------------------------------------------
-# Structure                            PSU(4,3).2                          PSU(4,3).2^2                  
-# Rank                                 3                                   3                             
-# 2-Homogeneous                        false                               false                         
-# Point-stabiliser                     (3x((3^2):3)):3:(2.S4=SL(2,3).2):2  (3x((3^2):3)):3:(2xQ8):3:2:2  
-# Block-stabiliser                     SL(2,3):4:2                         2^3:2^2:2:3:2                 
-# Orbit structure of point-stabiliser                                                                    
-# Orbit structure of block-stabiliser                                                                    
-# Point-transitive                     true                                true                          
-# Block-transitive                     true                                true                          
-# Flag-transitive                      true                                true                          
-# Anti-flag-transitive                 false                               false                         
-# Flag-semiregular                     false                               false                         
-# Flag-regular                         false                               false                         
-# Point-primitive                      true                                true                          
-# Point-primitive type                 2                                   2                             
-# Block-primitive                      false                                                             
-# Block-primitive type                                                                                   
-# -------------------------------------------------------------------------------------------------------
+#                                      G                                   Aut(D)                         
+# --------------------------------------------------------------------------------------------------------
+# Structure                            PSU(4,3).2                          PSU(4,3).2^2                   
+# Rank                                 3                                   3                              
+# 2-Homogeneous                        false                               false                          
+# Point-stabiliser                     (3x((3^2):3)):3:(2.S4=SL(2,3).2):2  (3x((3^2):3)):3:(2xQ8):3:2:2   
+# Block-stabiliser                     SL(2,3):4:2                         2^3:2^2:2:3:2                  
+# Orbit structure of point-stabiliser  1^{1}36^{1}243^{1}                  1^{1}36^{1}243^{1}             
+# Orbit structure of block-stabiliser  4^{2}32^{2}48^{1}64^{1}96^{1}       4^{2}32^{2}48^{1}64^{1}96^{1}  
+# Point-transitive                     true                                true                           
+# Block-transitive                     true                                true                           
+# Flag-transitive                      true                                true                           
+# Anti-flag-transitive                 false                               false                          
+# Flag-semiregular                     false                               false                          
+# Flag-regular                         false                               false                          
+# Point-primitive                      true                                true                           
+# Point-primitive type                 2                                   2                              
+# Block-primitive                      false                               false                          
+# Block-primitive type                                                                                    
+# --------------------------------------------------------------------------------------------------------
 
 # Design: 2
 # -----------------------------------------------------------------------------------------------------
 # Parameter set: [ 280, 51030, 5832, 32, 648 ]
 # Complement:    [ 280, 51030, 45198, 248, 40014 ]
 # -----------------------------------------------------------------------------------------------------
-#                                      G                                   Aut(D)                      
-# -----------------------------------------------------------------------------------------------------
-# Structure                            PSU(4,3).2                          PSU(4,3).D_8                
-# Rank                                 3                                   3                           
-# 2-Homogeneous                        false                               false                       
-# Point-stabiliser                     (3x((3^2):3)):3:(2.S4=SL(2,3).2):2  (3x((3^2):3)):3:Q8:3:4:2:2  
-# Block-stabiliser                     4^2:2:2:2                           4^2:2:2:2:2:2               
-# Orbit structure of point-stabiliser                                                                  
-# Orbit structure of block-stabiliser                                                                  
-# Point-transitive                     true                                true                        
-# Block-transitive                     true                                true                        
-# Flag-transitive                      true                                true                        
-# Anti-flag-transitive                 false                               false                       
-# Flag-semiregular                     false                               false                       
-# Flag-regular                         false                               false                       
-# Point-primitive                      true                                true                        
-# Point-primitive type                 2                                   2                           
-# Block-primitive                      false                                                           
-# Block-primitive type                                                                                 
-# -----------------------------------------------------------------------------------------------------
+#                                      G                                   Aut(D)                          
+# ---------------------------------------------------------------------------------------------------------
+# Structure                            PSU(4,3).2                          PSU(4,3).D_8                    
+# Rank                                 3                                   3                               
+# 2-Homogeneous                        false                               false                           
+# Point-stabiliser                     (3x((3^2):3)):3:(2.S4=SL(2,3).2):2  (3x((3^2):3)):3:Q8:3:4:2:2      
+# Block-stabiliser                     4^2:2:2:2                           4^2:2:2:2:2:2                   
+# Orbit structure of point-stabiliser  1^{1}36^{1}243^{1}                  1^{1}36^{1}243^{1}              
+# Orbit structure of block-stabiliser  4^{2}16^{1}32^{4}64^{2}             4^{2}16^{1}32^{2}64^{1}128^{1}  
+# Point-transitive                     true                                true                            
+# Block-transitive                     true                                true                            
+# Flag-transitive                      true                                true                            
+# Anti-flag-transitive                 false                               false                           
+# Flag-semiregular                     false                               false                           
+# Flag-regular                         false                               false                           
+# Point-primitive                      true                                true                            
+# Point-primitive type                 2                                   2                               
+# Block-primitive                      false                               false                           
+# Block-primitive type                                                                                     
+# ---------------------------------------------------------------------------------------------------------
 
 # Design: 3
 # -----------------------------------------------------------------------------------------------------------------
@@ -128,8 +128,8 @@
 # 2-Homogeneous                        false                               false                                   
 # Point-stabiliser                     (3x((3^2):3)):3:(2.S4=SL(2,3).2):2  (3x((3^2):3)):3:(2.S4=SL(2,3).2):2:2:2  
 # Block-stabiliser                     4^2:2:2                             8:2:2:2:2:2                             
-# Orbit structure of point-stabiliser                                                                              
-# Orbit structure of block-stabiliser                                                                              
+# Orbit structure of point-stabiliser  1^{1}36^{1}243^{1}                  1^{1}36^{1}243^{1}                      
+# Orbit structure of block-stabiliser  8^{3}32^{8}                         8^{1}16^{1}32^{2}64^{3}                 
 # Point-transitive                     true                                true                                    
 # Block-transitive                     true                                true                                    
 # Flag-transitive                      true                                true                                    
@@ -138,7 +138,7 @@
 # Flag-regular                         false                               false                                   
 # Point-primitive                      true                                true                                    
 # Point-primitive type                 2                                   2                                       
-# Block-primitive                      false                                                                       
+# Block-primitive                      false                               false                                   
 # Block-primitive type                                                                                             
 # -----------------------------------------------------------------------------------------------------------------
 
