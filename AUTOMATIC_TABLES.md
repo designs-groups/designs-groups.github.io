@@ -550,3 +550,24 @@ mappings are deliberately retained. They remain accessible by direct URL and
 continue to contribute to data-table builds, Parameter sets and Search. The
 `hidden_catalogue_folders` setting in `data/table_sources.json` affects only
 visible landing-page categories and sidebars, not data ingestion.
+
+
+## Projects folders (Flag-transitive and Block-transitive)
+
+Project data files are read automatically from the **case-sensitive** GitHub
+repository folders `Flag-transitive/Projects/` and `Block-transitive/Projects/`.
+Each `.g` file must have a `# Project: ...` header and a standard
+`# 1. Number of designs:` enumeration. The Project header supplies the
+**Project Description**; the enumeration populates the ten numerical columns.
+
+The two Projects pages are rebuilt by the **same** GitHub Actions pipeline as
+the group-family pages. Adding, replacing, renaming or removing a `.g` file
+on `main` automatically updates the Projects table, the Projects total on the
+respective main catalogue page, and any applicable Search/Parameter sets data.
+The raw-file links retain the exact `Projects/` path and open in a new tab;
+Download `.g` uses the same mechanism as the group-family pages.
+
+The website archive may contain empty `Projects/` folders with `.gitkeep`;
+these are placeholders, not copies of the private or historical GAP files.
+Do not replace or delete the existing GitHub data folders when deploying a
+website update: merge the website code while retaining the repository data.

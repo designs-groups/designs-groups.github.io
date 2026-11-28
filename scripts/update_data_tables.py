@@ -174,7 +174,7 @@ def is_conditional_remark(comment: str) -> bool:
     return True
 
 def is_project_source(source_path: str) -> bool:
-    return source_path.startswith(("Flag-transitive/project/", "Block-transitive/project/"))
+    return source_path.startswith(("Flag-transitive/Projects/", "Block-transitive/Projects/"))
 
 
 def parse_project_description(lines: list[str], source_path: str) -> str:

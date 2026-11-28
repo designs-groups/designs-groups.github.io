@@ -206,8 +206,8 @@ false
 ## Project catalogues
 
 The **Flag-transitive/Projects** and **Block-transitive/Projects** pages are generated
-from GAP `.g` files placed respectively in `Flag-transitive/project/` and
-`Block-transitive/project/` (lower-case, singular `project`). Each file must
+from GAP `.g` files placed respectively in `Flag-transitive/Projects/` and
+`Block-transitive/Projects/` (case-sensitive, plural `Projects`). Each file must
 have a `# Project: ...` header; that text becomes its **Project Description**.
 The usual `# 1. Number of designs:` summary provides the project-table counts.
 The individual file's raw GitHub URL is the destination for every data row,

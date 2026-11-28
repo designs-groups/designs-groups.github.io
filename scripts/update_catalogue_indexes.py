@@ -266,7 +266,7 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
             f'    <h2><a href="{table_href}">{title}</a></h2>\n'
             '    <div class="catalogue-family-actions">\n'
             f'      <a href="{table_href}">Enumeration information '
-            '(number of designs with certain symmetries)</a>\n'
+            '(number of designs with certain conditions)</a>\n'
             f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\n'
             '    </div>\n'
             '  </div>\n'
@@ -307,7 +307,7 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
         f'    <h2><a href="{table_href}">{title}</a></h2>\n'
         f'    <div class="catalogue-family-actions">\n'
         f'      <a href="{table_href}">Enumeration information '
-        f'(number of designs with certain symmetries)</a>\n'
+        f'(number of designs with certain conditions)</a>\n'
         f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\n'
         f'    </div>\n'
         f'  </div>\n'
@@ -321,7 +321,7 @@ def landing_notice() -> str:
         '<p class="notice catalogue-notice">\n'
         '  Click a <strong>group or degree</strong> name to open the corresponding raw GAP data file.<br>\n'
         '  Click a <strong>group type heading</strong>, <strong>Parameter sets</strong>, or <strong>Projects</strong> to open the corresponding detailed table.<br>\n'
-        '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.<br>\n  The designs for the groups indicated by <span class=\"conditional-star\">*</span> are obtained under some restricted conditions.\n'
+        '  Click <strong>Enumeration information (number of designs with certain conditions)</strong> to see the recorded symmetry counts.<br>\n  The designs for the groups indicated by <span class=\"conditional-star\">*</span> are obtained under some restricted conditions.\n'
         '</p>'
     )
 
@@ -385,7 +385,7 @@ def main() -> int:
         visible_folders = [
             (folder, page_rel)
             for folder, page_rel in folder_pages.items()
-            if folder.startswith(prefix + "/") and folder not in hidden_folders
+            if folder.startswith(prefix + "/") and folder not in hidden_folders and folder not in special_pages
         ]
         miscellaneous_folder = prefix + "/Miscellaneous groups"
         sporadic_folder = prefix + "/Sporadic groups"
@@ -412,7 +412,7 @@ def main() -> int:
         for folder, page_rel in special_pages.items():
             if folder.startswith(prefix + "/"):
                 rows = (
-                    rows_from_gap_files(args.data_root, prefix + "/project", repository, branch, tools)
+                    rows_from_gap_files(args.data_root, prefix + "/Projects", repository, branch, tools)
                     if folder.endswith("/Projects") else []
                 )
                 sections.append(build_family_section(index_page, folder, page_rel, rows))

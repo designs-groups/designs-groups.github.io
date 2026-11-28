@@ -124,20 +124,20 @@ def main() -> int:
 
 
     # Both Projects pages are special catalogue sections after Parameter sets,
-    # while their source .g files live in independent lower-case `project` dirs.
-    # The Projects sidebar link has the same style as Search and comes above it.
+    # with their .g files in the case-sensitive `Projects` directories.
+    # Projects uses the same ordinary category-item style as Alternating groups.
     for prefix, slug in (("Flag-transitive", "flag-transitive"),
                          ("Block-transitive", "block-transitive")):
-        mapping = f"{prefix}/project"
+        mapping = f"{prefix}/Projects"
         page_rel = f"docs/{slug}/projects.html"
         if config.get("folder_pages", {}).get(mapping) != page_rel:
-            errors.append(f"{prefix}: project/ folder is not mapped to its Projects page")
+            errors.append(f"{prefix}: Projects/ folder is not mapped to its Projects page")
         if config.get("special_pages", {}).get(f"{prefix}/Projects") != page_rel:
             errors.append(f"{prefix}: Projects is not a special catalogue section")
-        if mapping not in hidden_folders:
-            errors.append(f"{prefix}: project/ must not appear as a duplicate category")
+        if mapping in hidden_folders:
+            errors.append(f"{prefix}: Projects/ must not be hidden from its special catalogue section")
         if not (root / mapping).is_dir():
-            errors.append(f"{prefix}: missing project/ data folder")
+            errors.append(f"{prefix}: missing Projects/ data folder")
 
         projects = root / page_rel
         if projects.exists():
@@ -151,6 +151,11 @@ def main() -> int:
                              "Download .g", "How to read"):
                 if fragment not in page_text:
                     errors.append(f"{page_rel}: missing Projects notice: {fragment}")
+            if not re.search(
+                r'In the enumeration columns,\s*<strong>—</strong>\s*means that the number of designs with the corresponding property has not been computed or is not available from the data file\.',
+                page_text,
+            ):
+                errors.append(f"{page_rel}: missing explanation of unavailable enumeration counts")
             head = re.search(r"<thead>(.*?)</thead>", page_text, flags=re.S)
             if head is None:
                 errors.append(f"{page_rel}: missing projects table header")
@@ -165,11 +170,17 @@ def main() -> int:
                     errors.append(f"{page_rel}: Projects table must have 10 count columns")
             if 'class="database-table"' not in page_text:
                 errors.append(f"{page_rel}: missing family-style table")
-            if 'class="sidebar-how"><a class="sidebar-current" href="projects.html">Projects</a>' not in page_text:
-                errors.append(f"{page_rel}: Projects sidebar entry is not highlighted")
+            if '<li><a class="sidebar-current" href="projects.html">Projects</a></li>' not in page_text:
+                errors.append(f"{page_rel}: Projects sidebar entry is not highlighted as a category")
+            if page_text.count('href="projects.html">Projects</a></li>') != 1:
+                errors.append(f"{page_rel}: Projects must appear exactly once in the sidebar")
         index = docs / slug / "index.html"
         if index.exists():
             text = index.read_text(encoding="utf-8")
+            if "Enumeration information (number of designs with certain symmetries)" in text:
+                errors.append(f"docs/{slug}/index.html: obsolete symmetry wording remains")
+            if "Enumeration information (number of designs with certain conditions)" not in text:
+                errors.append(f"docs/{slug}/index.html: missing new enumeration wording")
             catalogue_match = re.search(
                 r"<!-- CATALOGUE_GROUPS_START -->(.*?)<!-- CATALOGUE_GROUPS_END -->",
                 text, flags=re.S,
@@ -181,6 +192,8 @@ def main() -> int:
                 headings = re.findall(r'<h2><a href="([^"]+)">', content)
                 if headings[-2:] != ["parameters.html", "projects.html"]:
                     errors.append(f"docs/{slug}/index.html: Projects must follow Parameter sets")
+                if headings.count("projects.html") != 1:
+                    errors.append(f"docs/{slug}/index.html: Projects must appear exactly once")
                 project_section = re.search(
                     r'<h2><a href="projects.html">Projects</a>.*?</section>',
                     content, flags=re.S,
@@ -190,7 +203,7 @@ def main() -> int:
                 else:
                     section = project_section.group(0)
                     for fragment in ("Click to access the data",
-                                     "Enumeration information (number of designs with certain symmetries)",
+                                     "Enumeration information (number of designs with certain conditions)",
                                      "Number of designs:"):
                         if fragment not in section:
                             errors.append(f"docs/{slug}/index.html: missing Projects access text: {fragment}")
@@ -199,7 +212,7 @@ def main() -> int:
                 nav = sidebar.group(1)
                 positions = [nav.find(x) for x in (
                     'href="parameters.html">Parameter sets</a>',
-                    'class="sidebar-how"><a href="projects.html">Projects</a>',
+                    '<li><a href="projects.html">Projects</a></li>',
                     'href="../search.html">Search the database</a>',
                 )]
                 if any(pos < 0 for pos in positions) or positions != sorted(positions):

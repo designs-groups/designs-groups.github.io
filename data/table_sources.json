@@ -18,8 +18,8 @@
     "Block-transitive/Primitive groups": "docs/block-transitive/primitive.html",
     "Block-transitive/Miscellaneous groups": "docs/block-transitive/miscellaneous.html",
     "Block-transitive/Affine groups": "docs/block-transitive/affine.html",
-    "Flag-transitive/project": "docs/flag-transitive/projects.html",
-    "Block-transitive/project": "docs/block-transitive/projects.html"
+    "Flag-transitive/Projects": "docs/flag-transitive/projects.html",
+    "Block-transitive/Projects": "docs/block-transitive/projects.html"
   },
   "file_page_overrides": {
     "Block-transitive/A5.g": "docs/block-transitive/alternating.html"
@@ -32,8 +32,6 @@
   },
   "hidden_catalogue_folders": [
     "Flag-transitive/Affine groups",
-    "Block-transitive/Affine groups",
-    "Flag-transitive/project",
-    "Block-transitive/project"
+    "Block-transitive/Affine groups"
   ]
 }
