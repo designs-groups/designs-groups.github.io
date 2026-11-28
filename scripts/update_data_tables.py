@@ -35,6 +35,7 @@ class RowData:
     comment: str
     refkeys: str
     conditional: bool
+    project_description: str = ""
 
 
 def clean_comment_line(line: str) -> str:
@@ -171,6 +172,19 @@ def is_conditional_remark(comment: str) -> bool:
         return False
 
     return True
+
+def is_project_source(source_path: str) -> bool:
+    return source_path.startswith(("Flag-transitive/project/", "Block-transitive/project/"))
+
+
+def parse_project_description(lines: list[str], source_path: str) -> str:
+    """The Project: field in the GAP header is the displayed project label."""
+    for line in lines:
+        match = re.match(r"^Project\s*:\s*(.*?)\s*$", line.strip(), re.I)
+        if match and match.group(1):
+            return match.group(1)
+    raise RuntimeError(f"Missing '# Project: ...' header in {source_path}")
+
 
 def parse_group_label(lines: list[str], filename_stem: str) -> str:
     for line in lines:
@@ -406,6 +420,7 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
     block_prim = parse_three_count(lines, r"Block-primitive")
     block_imprim = parse_three_count(lines, r"Block-imprimitive")
     flag_trans = parse_three_count(lines, r"Flag-(?:transitive|trasnitive)")
+    anti_flag_summary = parse_three_count(lines, r"Anti[- ]?flag-transitive")
 
     if total_row is None:
         raise RuntimeError(f"Could not parse Total row from {source_path}")
@@ -481,10 +496,17 @@ def parse_gap_file(path: Path, source_path: str) -> RowData:
             if source_path.startswith("Block-transitive/")
             else missing_count_cell()
         ),
-        anti_flag_transitive=anti_flag,
+        anti_flag_transitive=(
+            anti_flag_summary[2] if is_project_source(source_path) and anti_flag_summary
+            else anti_flag
+        ),
         comment=comment,
         refkeys=parse_reference_keys(lines),
         conditional=is_conditional_remark(comment),
+        project_description=(
+            parse_project_description(lines, source_path) if is_project_source(source_path)
+            else ""
+        ),
     )
 
 def raw_url(repository: str, branch: str, source_path: str) -> str:
@@ -744,6 +766,41 @@ def build_row(row, repository, branch):
 </tr>'''
 
 
+def build_project_row(row: RowData, repository: str, branch: str) -> str:
+    """Projects reuse family enumeration counts but have no Name/Comments/References."""
+    url = raw_url(repository, branch, row.source_path)
+    url_attr = html.escape(url, quote=True)
+    filename = html.escape(Path(row.source_path).name, quote=True)
+    source = html.escape(row.source_path, quote=True)
+    label = html.escape(row.project_description)
+    counts = [
+        row.total, row.symmetric, row.nonsymmetric,
+        row.point_primitive, row.point_imprimitive,
+        row.block_primitive, row.block_imprimitive,
+        row.flag_transitive, row.anti_flag_transitive,
+        row.flag_regular if row.source_path.startswith("Flag-transitive/")
+        else row.flag_semiregular,
+    ]
+    numeric_cells = "\n  ".join(
+        f'<td><a class="row-cell-link" href="{url_attr}" target="_blank" '
+        f'rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">'
+        f'{html.escape(str(value))}</a></td>' for value in counts
+    )
+    # onclick and keyboard activation match the existing linked-row behaviour.
+    return f'''<tr id="{html.escape(row_anchor(row.source_path), quote=True)}" class="linked-row project-row" tabindex="0"
+    data-source-path="{source}"
+    data-view-url="{url_attr}"
+    data-download-url="{url_attr}"
+    aria-label="Open project data: {html.escape(row.project_description, quote=True)}"
+    onclick="recordDataAccess(); window.open('{url_attr}', '_blank', 'noopener')"
+    onkeydown="if(event.key==='Enter'||event.key===' '){{event.preventDefault();recordDataAccess();window.open('{url_attr}', '_blank', 'noopener');}}">
+  <th class="project-description"><a class="row-cell-link" href="{url_attr}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation(); recordDataAccess();">{label}</a></th>
+  {numeric_cells}
+  <td class="file-actions"><a class="download file-download-button" href="{url_attr}" target="_blank" rel="noopener noreferrer"
+    onclick="event.preventDefault(); event.stopPropagation(); recordDataAccess(); downloadRawFile('{url_attr}', '{filename}');">Download .g</a></td>
+</tr>'''
+
+
 def replace_tbody(page_text: str, rows_html: str) -> str:
     replacement = f"<tbody>\n{rows_html}\n        </tbody>"
     updated, count = re.subn(
@@ -877,17 +934,20 @@ def main() -> int:
             raise FileNotFoundError(page_rel)
 
         text = page_path.read_text(encoding="utf-8")
+        projects_page = page_path.name == "projects.html"
         if rows:
-            rows_html = "\n".join(
-                build_row(row, repository, branch)
-                for row in sorted(rows, key=row_sort_key)
+            sorted_rows = (
+                sorted(rows, key=lambda row: (row.project_description.casefold(), row.source_path))
+                if projects_page else sorted(rows, key=row_sort_key)
             )
+            builder = build_project_row if projects_page else build_row
+            rows_html = "\n".join(builder(row, repository, branch) for row in sorted_rows)
+        elif projects_page:
+            rows_html = ('<tr class="empty-row"><td colspan="12">'
+                         'No project data files are currently available.</td></tr>')
         else:
-            rows_html = (
-                '<tr class="empty-row"><td colspan="15">'
-                "No data files are currently available for this family."
-                "</td></tr>"
-            )
+            rows_html = ('<tr class="empty-row"><td colspan="15">'
+                         'No data files are currently available for this family.</td></tr>')
 
         page_path.write_text(replace_tbody(text, rows_html), encoding="utf-8")
         updated_pages += 1

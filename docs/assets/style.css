@@ -1894,3 +1894,15 @@ h2 {
     row-gap: 10px;
   }
 }
+
+/* Project pages: retain the family enumeration columns; make descriptions readable. */
+.database-table .project-description {
+  min-width: 260px;
+  max-width: 520px;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.database-table .project-description .row-cell-link {
+  text-align: left;
+}

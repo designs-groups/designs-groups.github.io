@@ -11,9 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def entries_for_prefix(prefix: str, config: dict) -> list[tuple[str, str]]:
     entries: list[tuple[str, str]] = []
+    hidden_folders = set(config.get("hidden_catalogue_folders", []))
     for mapping_name in ("folder_pages", "special_pages"):
         for key, page_rel in config.get(mapping_name, {}).items():
-            if key.startswith(prefix + "/"):
+            if key.startswith(prefix + "/") and key not in hidden_folders:
                 entries.append((key.rsplit("/", 1)[1], Path(page_rel).name))
     return entries
 
@@ -22,7 +23,8 @@ def sidebar_links(prefix: str, current_file: str, config: dict) -> str:
     lines = []
     for label, href in entries_for_prefix(prefix, config):
         current = ' class="sidebar-current"' if href == current_file else ""
-        lines.append(f'<li><a{current} href="{href}">{label}</a></li>')
+        list_class = ' class="sidebar-how"' if label == "Projects" else ""
+        lines.append(f'<li{list_class}><a{current} href="{href}">{label}</a></li>')
     return "".join(lines)
 
 

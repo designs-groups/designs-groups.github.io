@@ -30,7 +30,9 @@ REQUIRED_PAGES = (
     "docs/flag-transitive/transitive.html",
     "docs/flag-transitive/primitive.html",
     "docs/flag-transitive/affine.html",
+    "docs/flag-transitive/miscellaneous.html",
     "docs/flag-transitive/parameters.html",
+    "docs/flag-transitive/projects.html",
     "docs/block-transitive/index.html",
     "docs/block-transitive/alternating.html",
     "docs/block-transitive/classical.html",
@@ -39,7 +41,9 @@ REQUIRED_PAGES = (
     "docs/block-transitive/transitive.html",
     "docs/block-transitive/primitive.html",
     "docs/block-transitive/affine.html",
+    "docs/block-transitive/miscellaneous.html",
     "docs/block-transitive/parameters.html",
+    "docs/block-transitive/projects.html",
 )
 
 
@@ -97,6 +101,109 @@ def main() -> int:
                     errors.append("BDGroup resource must remain unlinked")
 
     config = json.loads((root / "data" / "table_sources.json").read_text(encoding="utf-8"))
+    hidden_folders = set(config.get("hidden_catalogue_folders", []))
+
+    # Affine sources and detailed pages must remain available, but their
+    # catalogue entries are replaced in visible navigation by Miscellaneous.
+    for prefix, slug in (("Flag-transitive", "flag-transitive"),
+                         ("Block-transitive", "block-transitive")):
+        affine = f"{prefix}/Affine groups"
+        miscellaneous = f"{prefix}/Miscellaneous groups"
+        folders = config.get("folder_pages", {})
+        if affine not in folders or miscellaneous not in folders:
+            errors.append(f"{prefix}: Affine and Miscellaneous folder mappings must both be preserved")
+        if affine not in hidden_folders:
+            errors.append(f"{prefix}: Affine must be hidden from the visible catalogue")
+        if not (root / "docs" / slug / "affine.html").is_file():
+            errors.append(f"{prefix}: original Affine page missing")
+        misc_page = root / "docs" / slug / "miscellaneous.html"
+        if misc_page.exists():
+            text = misc_page.read_text(encoding="utf-8")
+            if "<h1>Miscellaneous groups</h1>" not in text or 'class="database-table"' not in text:
+                errors.append(f"{prefix}: Miscellaneous page does not use the required family-table format")
+
+
+    # Both Projects pages are special catalogue sections after Parameter sets,
+    # while their source .g files live in independent lower-case `project` dirs.
+    # The Projects sidebar link has the same style as Search and comes above it.
+    for prefix, slug in (("Flag-transitive", "flag-transitive"),
+                         ("Block-transitive", "block-transitive")):
+        mapping = f"{prefix}/project"
+        page_rel = f"docs/{slug}/projects.html"
+        if config.get("folder_pages", {}).get(mapping) != page_rel:
+            errors.append(f"{prefix}: project/ folder is not mapped to its Projects page")
+        if config.get("special_pages", {}).get(f"{prefix}/Projects") != page_rel:
+            errors.append(f"{prefix}: Projects is not a special catalogue section")
+        if mapping not in hidden_folders:
+            errors.append(f"{prefix}: project/ must not appear as a duplicate category")
+        if not (root / mapping).is_dir():
+            errors.append(f"{prefix}: missing project/ data folder")
+
+        projects = root / page_rel
+        if projects.exists():
+            page_text = projects.read_text(encoding="utf-8")
+            if "<h1>Projects</h1>" not in page_text:
+                errors.append(f"{page_rel}: missing Projects heading")
+            if (f"admitting a {slug}" not in page_text or
+                    "symmetries of automorphism groups." not in page_text):
+                errors.append(f"{page_rel}: incorrect Projects introduction")
+            for fragment in ("Click anywhere on a data row to open the raw GAP file.",
+                             "Download .g", "How to read"):
+                if fragment not in page_text:
+                    errors.append(f"{page_rel}: missing Projects notice: {fragment}")
+            head = re.search(r"<thead>(.*?)</thead>", page_text, flags=re.S)
+            if head is None:
+                errors.append(f"{page_rel}: missing projects table header")
+            else:
+                header = head.group(1)
+                if ("Project Description" not in header or
+                        '<th colspan="10">Number of designs</th>' not in header or
+                        "Data file" not in header or
+                        "Comments" in header or "References" in header):
+                    errors.append(f"{page_rel}: Projects table has incorrect columns")
+                if len(re.findall(r"<th(?:\s|>)", header)) != 13:
+                    errors.append(f"{page_rel}: Projects table must have 10 count columns")
+            if 'class="database-table"' not in page_text:
+                errors.append(f"{page_rel}: missing family-style table")
+            if 'class="sidebar-how"><a class="sidebar-current" href="projects.html">Projects</a>' not in page_text:
+                errors.append(f"{page_rel}: Projects sidebar entry is not highlighted")
+        index = docs / slug / "index.html"
+        if index.exists():
+            text = index.read_text(encoding="utf-8")
+            catalogue_match = re.search(
+                r"<!-- CATALOGUE_GROUPS_START -->(.*?)<!-- CATALOGUE_GROUPS_END -->",
+                text, flags=re.S,
+            )
+            if catalogue_match is None:
+                errors.append(f"docs/{slug}/index.html: missing catalogue markers")
+            else:
+                content = catalogue_match.group(1)
+                headings = re.findall(r'<h2><a href="([^"]+)">', content)
+                if headings[-2:] != ["parameters.html", "projects.html"]:
+                    errors.append(f"docs/{slug}/index.html: Projects must follow Parameter sets")
+                project_section = re.search(
+                    r'<h2><a href="projects.html">Projects</a>.*?</section>',
+                    content, flags=re.S,
+                )
+                if project_section is None:
+                    errors.append(f"docs/{slug}/index.html: missing Projects section")
+                else:
+                    section = project_section.group(0)
+                    for fragment in ("Click to access the data",
+                                     "Enumeration information (number of designs with certain symmetries)",
+                                     "Number of designs:"):
+                        if fragment not in section:
+                            errors.append(f"docs/{slug}/index.html: missing Projects access text: {fragment}")
+            sidebar = re.search(r'<ul class="sidebar-links">(.*?)</ul>', text, flags=re.S)
+            if sidebar:
+                nav = sidebar.group(1)
+                positions = [nav.find(x) for x in (
+                    'href="parameters.html">Parameter sets</a>',
+                    'class="sidebar-how"><a href="projects.html">Projects</a>',
+                    'href="../search.html">Search the database</a>',
+                )]
+                if any(pos < 0 for pos in positions) or positions != sorted(positions):
+                    errors.append(f"docs/{slug}/index.html: incorrect Projects sidebar order")
 
     # The published Pages workflow must run the complete site pipeline, not a
     # hand-maintained subset of generators.  This makes the validation below
@@ -519,10 +626,33 @@ def main() -> int:
         ("Block-transitive", "docs/block-transitive/index.html"),
     ):
         index_text = (root / index_rel).read_text(encoding="utf-8")
+        if 'href="affine.html"' in index_text:
+            errors.append(f"{index_rel} must not visibly link to Affine groups")
+        if 'href="miscellaneous.html"' not in index_text:
+            errors.append(f"{index_rel} must link to Miscellaneous groups")
+        catalogue = re.search(
+            r'<!-- CATALOGUE_GROUPS_START -->(.*?)<!-- CATALOGUE_GROUPS_END -->',
+            index_text, flags=re.S,
+        )
+        if catalogue is not None:
+            landing_headings = re.findall(r'<h2><a href="([^"]+)">', catalogue.group(1))
+            if ("sporadic.html" not in landing_headings
+                    or "miscellaneous.html" not in landing_headings
+                    or landing_headings.index("miscellaneous.html")
+                       != landing_headings.index("sporadic.html") + 1):
+                errors.append(f"{index_rel} must place Miscellaneous immediately after Sporadic")
         for mapping in ("folder_pages", "special_pages"):
             for key, page_rel in config.get(mapping, {}).items():
-                if key.startswith(prefix + "/") and Path(page_rel).name not in index_text:
+                if key.startswith(prefix + "/") and key not in hidden_folders and Path(page_rel).name not in index_text:
                     errors.append(f"{index_rel} does not link to {page_rel}")
+        slug = "flag-transitive" if prefix == "Flag-transitive" else "block-transitive"
+        for page in (root / "docs" / slug).glob("*.html"):
+            text = page.read_text(encoding="utf-8")
+            sidebar = re.search(r'<ul class="sidebar-links">(.*?)</ul>', text, flags=re.S)
+            if sidebar is None:
+                errors.append(f"{page.relative_to(root)} lacks category sidebar")
+            elif 'href="affine.html"' in sidebar.group(1) or 'href="miscellaneous.html"' not in sidebar.group(1):
+                errors.append(f"{page.relative_to(root)} must display Miscellaneous instead of Affine in sidebar")
 
     # Global invariant: every website URL that targets a .g file must open
     # the raw file. This covers detailed catalogue pages, catalogue indexes,

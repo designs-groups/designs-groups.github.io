@@ -250,6 +250,30 @@ def build_family_section(index_page: Path, folder: str, page_rel: str, rows: lis
     title = html.escape(class_title(folder))
     table_href = table_link(index_page, page_rel)
 
+    if folder.endswith("/Projects"):
+        total_designs = sum(int(item["total"]) for item in rows if str(item["total"]).isdigit())
+        access_grid = (
+            '<table class="catalogue-group-grid catalogue-parameter-access-grid" '
+            'data-columns="1" aria-label="Project data">\n'
+            '    <tbody>\n'
+            f'      <tr><td><a class="catalogue-parameter-access-link" href="{table_href}">Click to access the data</a></td></tr>\n'
+            '    </tbody>\n'
+            '</table>'
+        )
+        return (
+            '<section class="catalogue-family">\n'
+            '  <div class="catalogue-family-header">\n'
+            f'    <h2><a href="{table_href}">{title}</a></h2>\n'
+            '    <div class="catalogue-family-actions">\n'
+            f'      <a href="{table_href}">Enumeration information '
+            '(number of designs with certain symmetries)</a>\n'
+            f'      <span class="catalogue-design-total">Number of designs: {total_designs}</span>\n'
+            '    </div>\n'
+            '  </div>\n'
+            f'  {access_grid}\n'
+            '</section>'
+        )
+
     if is_parameter_sets_family(folder):
         total_parameters = parameter_count_from_page(page_rel)
         access_grid = (
@@ -296,7 +320,7 @@ def landing_notice() -> str:
     return (
         '<p class="notice catalogue-notice">\n'
         '  Click a <strong>group or degree</strong> name to open the corresponding raw GAP data file.<br>\n'
-        '  Click a <strong>group type heading</strong> or <strong>Parameter sets</strong> to open the corresponding detailed table.<br>\n'
+        '  Click a <strong>group type heading</strong>, <strong>Parameter sets</strong>, or <strong>Projects</strong> to open the corresponding detailed table.<br>\n'
         '  Click <strong>Enumeration information (number of designs with certain symmetries)</strong> to see the recorded symmetry counts.<br>\n  The designs for the groups indicated by <span class=\"conditional-star\">*</span> are obtained under some restricted conditions.\n'
         '</p>'
     )
@@ -345,6 +369,7 @@ def main() -> int:
     branch = config.get("branch", "main")
     folder_pages = config["folder_pages"]
     special_pages = config.get("special_pages", {})
+    hidden_folders = set(config.get("hidden_catalogue_folders", []))
 
     families = [
         ("Flag-transitive", ROOT / "docs" / "flag-transitive" / "index.html"),
@@ -354,10 +379,30 @@ def main() -> int:
     updated_pages = 0
     for prefix, index_page in families:
         sections = []
-        for folder, page_rel in folder_pages.items():
-            if not folder.startswith(prefix + "/"):
-                continue
+        # The landing-page order is intentionally different from the sidebar:
+        # Miscellaneous follows Sporadic here, while navigation retains the
+        # ordering defined by folder_pages in table_sources.json.
+        visible_folders = [
+            (folder, page_rel)
+            for folder, page_rel in folder_pages.items()
+            if folder.startswith(prefix + "/") and folder not in hidden_folders
+        ]
+        miscellaneous_folder = prefix + "/Miscellaneous groups"
+        sporadic_folder = prefix + "/Sporadic groups"
+        miscellaneous_entry = next(
+            (entry for entry in visible_folders if entry[0] == miscellaneous_folder), None
+        )
+        if miscellaneous_entry is not None:
+            visible_folders.remove(miscellaneous_entry)
+            sporadic_position = next(
+                (i for i, entry in enumerate(visible_folders) if entry[0] == sporadic_folder), None
+            )
+            if sporadic_position is not None:
+                visible_folders.insert(sporadic_position + 1, miscellaneous_entry)
+            else:
+                visible_folders.append(miscellaneous_entry)
 
+        for folder, page_rel in visible_folders:
             rows = rows_from_gap_files(args.data_root, folder, repository, branch, tools)
             if not rows:
                 rows = fallback_rows_from_table(page_rel, branch, tools)
@@ -366,7 +411,11 @@ def main() -> int:
 
         for folder, page_rel in special_pages.items():
             if folder.startswith(prefix + "/"):
-                sections.append(build_family_section(index_page, folder, page_rel, []))
+                rows = (
+                    rows_from_gap_files(args.data_root, prefix + "/project", repository, branch, tools)
+                    if folder.endswith("/Projects") else []
+                )
+                sections.append(build_family_section(index_page, folder, page_rel, rows))
 
         text = index_page.read_text(encoding="utf-8")
         updated = replace_catalogue(text, "\n".join(sections))

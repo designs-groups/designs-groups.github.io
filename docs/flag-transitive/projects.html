@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects on flag-transitive 2-designs with prescribed parameters and automorphism-group symmetries | Designs by Groups.">
+<link rel="canonical" href="https://designs-groups.github.io/flag-transitive/projects.html">
+  <title>Projects — Flag-transitive designs | Designs by Groups</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<script>
+
+function recordDataAccess() {
+  const tracker = document.createElement("img");
+  tracker.alt = "";
+  tracker.setAttribute("aria-hidden", "true");
+  tracker.style.display = "none";
+  tracker.onload = tracker.onerror = () => tracker.remove();
+  tracker.src =
+    "https://hits.sh/designs-groups.github.io.svg" +
+    "?label=Visits&color=1f5f99&labelColor=17365d" +
+    "&data_access=" + Date.now() + "-" + Math.random();
+  document.body.appendChild(tracker);
+}
+
+async function downloadRawFile(url, filename) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Download failed");
+    const blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = objectUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(objectUrl);
+  } catch (error) {
+    window.open(url, "_blank", "noopener");
+  }
+}
+</script>
+
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <p class="site-title">Designs by Groups</p>
+    <p class="site-subtitle">constructions and classifications of combinatorial block designs</p>
+  </div>
+</header>
+<nav class="top-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+<a href="../index.html">Home</a>
+<a href="../flag-transitive/index.html" aria-current="page">Flag-transitive</a>
+<a href="../block-transitive/index.html">Block-transitive</a>
+<a href="../search.html">Search</a>
+<a href="../how-to-read.html">How to read</a>
+<a href="../how-to-cite.html">How to cite</a>
+<a href="../software.html">Software and Packages</a>
+<a href="../bibliography.html">Bibliography</a>
+<a href="../authors.html">About authors</a>
+<a href="../contact.html">Contact us</a>
+<a href="../licence.html">Licence</a>
+  </div>
+</nav>
+<main>
+
+<div class="page-grid">
+  <article class="content-panel">
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a> ›
+      <a href="index.html">Flag-transitive designs</a> ›
+      Projects
+    </div>
+    <h1>Projects</h1>
+    <p>
+      This section provide information on 2-designs admitting a flag-transitive
+      automorphism group satisfying certain conditions on parameter sets
+      and/or symmetries of automorphism groups.
+    </p>
+    <p class="notice">
+      Click anywhere on a data row to open the raw GAP file. Use <strong>Download .g</strong> to start a direct browser download.<br>
+      For an explanation of the information stored in each data file, see <a href="../how-to-read.html">How to read</a>.
+    </p>
+
+<div class="table-wrap">
+      <table class="database-table">
+        
+<thead>
+  <tr>
+    <th rowspan="2">Project Description</th>
+    <th colspan="10">Number of designs</th>
+    <th rowspan="2">Data file</th>
+  </tr>
+  <tr>
+    <th>Total</th>
+    <th>Symmetric</th>
+    <th>Non-symmetric</th>
+    <th>Point-primitive</th>
+    <th>Point-imprimitive</th>
+    <th>Block-primitive</th>
+    <th>Block-imprimitive</th>
+    <th>Flag-transitive</th>
+    <th>Anti-flag-transitive</th>
+    <th>Flag-regular</th>
+  </tr>
+</thead>
+
+        <tbody>
+<tr class="empty-row"><td colspan="12">No project data files are currently available.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </article>
+  
+
+
+<aside>
+  <section class="sidebar-box">
+    <h3><a href="index.html">Flag-transitive designs</a></h3>
+    <ul class="sidebar-links">
+      <li><a href="alternating.html">Alternating groups</a></li><li><a href="classical.html">Classical groups</a></li><li><a href="exceptional.html">Exceptional groups</a></li><li><a href="sporadic.html">Sporadic groups</a></li><li><a href="transitive.html">Transitive groups</a></li><li><a href="primitive.html">Primitive groups</a></li><li><a href="miscellaneous.html">Miscellaneous groups</a></li><li><a href="parameters.html">Parameter sets</a></li><li class="sidebar-how"><a class="sidebar-current" href="projects.html">Projects</a></li>
+      <li class="sidebar-how"><a href="../search.html">Search the database</a></li>
+      <li class="sidebar-how"><a href="../how-to-read.html">How to read</a></li>
+      <li class="sidebar-how"><a href="../how-to-cite.html">How to cite</a></li>
+      <li class="sidebar-package"><a href="../software.html">Software and Packages</a></li>
+      <li class="sidebar-license"><a href="../licence.html">Licence</a></li>
+    </ul>
+  </section>
+
+  <section class="sidebar-box sidebar-useful-links">
+    <h3>Useful links</h3>
+    <ul class="sidebar-links">
+      <li><a href="http://atlas.math.rwth-aachen.de/Atlas/v3/" target="_blank" rel="noopener noreferrer">ATLAS</a></li>
+      <li><a href="https://www.gap-system.org" target="_blank" rel="noopener noreferrer">GAP</a></li>
+    </ul>
+  </section>
+
+  <section class="report-box">
+  <h3>Report an error</h3>
+  <p>Found an error or missing reference?</p>
+  <p><a href="../contact.html">Contact us</a></p>
+</section>
+</aside>
+
+
+
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-text">
+      <strong>Designs by Groups</strong> — Constructions and classifications of combinatorial block designs.<br>
+    Seyed Hassan Alavi and Ashraf Daneshkhah<br>
+    Updated: 4 August 2026
+      <div class="footer-visits">
+      <a href="https://hits.sh/designs-groups.github.io/" target="_blank" rel="noopener noreferrer"
+         aria-label="View visit statistics">
+        <img src="https://hits.sh/designs-groups.github.io.svg?label=Visits&amp;color=1f5f99&amp;labelColor=17365d"
+             alt="Site visits">
+      </a>
+    </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

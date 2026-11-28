@@ -534,3 +534,19 @@ is composited onto the same author-box background colour without face alteration
 - Version 63: one automatic pipeline (`scripts/update_site.py`) rebuilds all detailed tables from their associated `.g` folders, Parameter sets, catalogue pages, navigation, bibliography, footer and SEO, applies final text/symbol formatting, and runs `scripts/validate_site.py` before deployment.
 
 - Version 64: Parameter sets now use the exact Alternating-groups count headings and measured column widths, keep the five parameter columns at 58 px, force the Group heading and entries left, and retain automatic `.g`-driven rebuilding through `scripts/update_site.py`.
+
+## Version 102: Miscellaneous groups (visible) and Affine groups (retained)
+
+On both Flag-transitive and Block-transitive landing pages, the visible
+**Affine groups** catalogue section is replaced by **Miscellaneous groups**.
+The sidebar likewise lists Miscellaneous groups in that position. The new
+`miscellaneous.html` pages follow the same layout, notice and enumeration table
+as the Alternating groups pages and will automatically read `.g` files added
+to `Flag-transitive/Miscellaneous groups/` and
+`Block-transitive/Miscellaneous groups/`.
+
+The existing `affine.html` pages and the `Affine groups/` source-folder
+mappings are deliberately retained. They remain accessible by direct URL and
+continue to contribute to data-table builds, Parameter sets and Search. The
+`hidden_catalogue_folders` setting in `data/table_sources.json` affects only
+visible landing-page categories and sidebars, not data ingestion.

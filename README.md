@@ -202,3 +202,16 @@ gap> lD;
 gap> IsIsomorphicBlockDesign( lD[ 1 ] , lD[ 2 ] );
 false
 ```
+
+## Project catalogues
+
+The **Flag-transitive/Projects** and **Block-transitive/Projects** pages are generated
+from GAP `.g` files placed respectively in `Flag-transitive/project/` and
+`Block-transitive/project/` (lower-case, singular `project`). Each file must
+have a `# Project: ...` header; that text becomes its **Project Description**.
+The usual `# 1. Number of designs:` summary provides the project-table counts.
+The individual file's raw GitHub URL is the destination for every data row,
+while **Download .g** downloads the corresponding file. Empty folders are
+kept in Git by `.gitkeep` and show an empty-data message until data are added.
+
+Run `python3 scripts/update_site.py --data-root .` to regenerate the pages.
