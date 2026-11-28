@@ -1819,11 +1819,18 @@ h2 {
   font-weight: bold;
 }
 
+/* Keep each group identifier and its notation on one uninterrupted line.
+   The existing results wrapper scrolls horizontally when the table needs more
+   space; this preserves the full labels without overlap or truncation. */
 .search-results-table,
 .search-results-table.search-results-single-kind {
-  width: 100% !important;
-  min-width: 0 !important;
-  table-layout: fixed !important;
+  width: max-content !important;
+  min-width: 100% !important;
+  table-layout: auto !important;
+}
+
+.search-results-table col {
+  width: auto !important;
 }
 
 .search-results-table th,
@@ -1866,9 +1873,10 @@ h2 {
 }
 
 .search-group-links a {
-  max-width: 100%;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  display: block;
+  max-width: none;
+  white-space: nowrap;
+  overflow-wrap: normal;
   word-break: normal;
   text-align: left;
 }
