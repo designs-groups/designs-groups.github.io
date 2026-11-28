@@ -1,9 +1,9 @@
 """Conservative display names for catalogue-numbered permutation groups.
 
-Recognise entire standard group names, never just substrings.  Orders are
-computed only from unambiguous descriptions; ambiguous cases retain the
-catalogue identifier without a guessed order.  This module is for the Search
-index display and does not participate in design counts or deduplication.
+Recognise entire standard names and short readable group products/extensions,
+never arbitrary substrings.  Unwieldy structures fall back to the group order
+when it can be determined reliably.  This module controls Search labels only;
+it does not modify design counts, group identities or Parameter sets.
 """
 from __future__ import annotations
 
@@ -21,21 +21,78 @@ _SIMPLE = re.compile(
     r")",
     re.I,
 )
-_SHORT_EXTENSION = re.compile(r"(?:[:.]\s*(?:\d+(?:_\d+)?|[CASDQ]\d+|S\d+))?$")
+_NUMERIC_FACTOR = re.compile(r"[1-9]\d*(?:\^[1-9]\d*)?")
+_ATLAS_EXTENSION = re.compile(r"[1-9]\d*_[1-9]\d*")  # e.g. PSL(2,25).2_3
+
+
+def _is_parenthesised(value: str) -> bool:
+    """True only if a pair of outer parentheses encloses the whole expression."""
+    if not (value.startswith("(") and value.endswith(")")):
+        return False
+    depth = 0
+    for pos, char in enumerate(value):
+        if char == "(":
+            depth += 1
+        elif char == ")":
+            depth -= 1
+            if depth < 0 or (depth == 0 and pos != len(value) - 1):
+                return False
+    return depth == 0
+
+
+def _readable_factors(value: str):
+    """Return (factor_count, named_count, structural_nesting), or None.
+
+    Parse the complete structure, not a substring. Parentheses on named groups
+    such as GL(2,3) are part of a single group name. Other parentheses group
+    products and extensions. Commas inside standard group names are untouched.
+    """
+    if _SIMPLE.fullmatch(value):
+        return (1, 1, 0)
+    if _NUMERIC_FACTOR.fullmatch(value) or _ATLAS_EXTENSION.fullmatch(value):
+        return (1, 0, 0)
+
+    if _is_parenthesised(value):
+        inner = _readable_factors(value[1:-1])
+        return (inner[0], inner[1], inner[2] + 1) if inner else None
+
+    parts = _balanced_chunks(value)
+    if parts is None or len(parts) < 2 or any(not part for part in parts):
+        return None
+    parsed = [_readable_factors(part) for part in parts]
+    if any(p is None for p in parsed):
+        return None
+    return (
+        sum(p[0] for p in parsed),
+        sum(p[1] for p in parsed),
+        max(p[2] for p in parsed),
+    )
 
 
 def recognised_name(structure: str) -> bool:
-    """Allow an entire standard name, an elementary extension, or two names joined by x."""
+    """Accept standard names and short, syntactically clear group structures.
+
+    Test 1: every atomic factor must be a recognised name, a plain positive
+    integer or a positive integer power (e.g. 2^4). Structural operators are
+    x, :, and .; bare parentheses group factors. Thus 2^4:A5, (A5xA5):2,
+    3^4:A5:S3 and 4:2 are admissible, but arbitrary strings containing A5
+    are not.
+
+    Test 2: compounds have at most three atomic factors and one level of
+    structural grouping. Deeper nested structures, e.g.
+    (2x((4x2):2)):4:3:2, are shown as [order] when possible. A lone integer
+    is an order rather than a readable group name.
+    """
     value = re.sub(r"\s+", "", structure).replace("×", "x")
     if not value or len(value) > 58:
         return False
-    # First check for a single standard group name and an optional short extension.
-    match = _SIMPLE.match(value)
-    if match and _SHORT_EXTENSION.fullmatch(value[match.end():]):
-        return True
-    # Do not split a name containing 'x' at random; both factors must themselves be names.
-    parts = re.split(r"(?<=[0-9)])x(?=[A-Z])", value)
-    return len(parts) == 2 and all(bool(_SIMPLE.fullmatch(part)) for part in parts)
+    profile = _readable_factors(value)
+    if profile is None:
+        return False
+    factors, named, nesting = profile
+    if factors == 1:
+        return bool(named or ("^" in value and not _ATLAS_EXTENSION.fullmatch(value)))
+    return factors <= 3 and nesting <= 1
 
 
 def _balanced_chunks(value: str) -> list[str] | None:
