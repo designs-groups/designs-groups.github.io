@@ -42,6 +42,7 @@ class DesignEntry:
     block_primitive: bool | None = None
     flag_transitive: bool | None = None
     antiflag_transitive: bool | None = None
+    catalogue_number: int | None = None
 
 
 @dataclass
@@ -181,7 +182,7 @@ def comment_content(raw: str) -> str:
 def summary_table_entries(text: str, table: str | None = None) -> list[DesignEntry]:
     """Read one fixed-width design summary table without shifting blank columns.
 
-    ``table`` may be ``"all designs"`` or ``"non-isomorphic designs"`` for
+    ``table`` may also be ``"reduced designs"`` for
     degree-based files that contain both tables.  With ``table=None`` the
     ordinary group-type Summary table is read in the same way as before.
     """
@@ -197,9 +198,9 @@ def summary_table_entries(text: str, table: str | None = None) -> list[DesignEnt
         if not line or set(line) <= {"-", "="}:
             continue
 
-        table_heading = re.fullmatch(r"(Non-isomorphic designs|All designs)\s*:", line, re.I)
+        table_heading = re.fullmatch(r"(Non-isomorphic designs|All designs|Reduced designs(?: \(within each group\))?)\s*:", line, re.I)
         if table_heading:
-            active_table = table_heading.group(1).casefold()
+            active_table = table_heading.group(1).casefold().split(" (")[0]
             spans = None
             continue
 
@@ -217,7 +218,7 @@ def summary_table_entries(text: str, table: str | None = None) -> list[DesignEnt
             spans = {}
             for position, match in enumerate(token_matches):
                 name = normalized[position]
-                if name not in required | {"point-primitive", "block-primitive", "flag-transitive", "antiflag-transitive"} or name in spans:
+                if name not in required | {"nr(g)", "point-primitive", "block-primitive", "flag-transitive", "antiflag-transitive"} or name in spans:
                     continue
                 end = token_matches[position + 1].start() if position + 1 < len(token_matches) else None
                 spans[name] = (match.start(), end)
@@ -263,6 +264,7 @@ def summary_table_entries(text: str, table: str | None = None) -> list[DesignEnt
                 block_primitive=bool_value(field_value("block-primitive")),
                 flag_transitive=bool_value(field_value("flag-transitive")),
                 antiflag_transitive=bool_value(field_value("antiflag-transitive")),
+                catalogue_number=int(field_value("nr(g)")) if field_value("nr(g)").isdigit() else None,
             )
         )
 
@@ -535,11 +537,12 @@ def add_named_group(record: ParameterRecord, group_label: str, url: str, tools) 
     record.groups.setdefault("group:" + sort_label, (label, url))
 
 
-def add_degree_source_group(record: ParameterRecord, role: str, degree: int, url: str) -> None:
-    """Add Aff(v), Prim(v), or Trans(v) as a literal linked degree-source label."""
+def add_degree_source_group(record: ParameterRecord, role: str, degree: int, url: str, nr: int | None = None) -> None:
+    """Add an individual Trans(v,nr)/Prim(v,nr) or the original Aff(v) link."""
     labels = {"affine": "Aff", "primitive": "Prim", "transitive": "Trans"}
-    label = f"{labels[role]}({degree})"
-    record.groups.setdefault("degree:" + role + f":{degree:010d}", (html.escape(label), url))
+    label = f"{labels[role]}({degree},{nr})" if nr is not None else f"{labels[role]}({degree})"
+    key = "degree:" + role + f":{degree:010d}:{nr if nr is not None else 0:010d}"
+    record.groups.setdefault(key, (html.escape(label), url))
 
 
 def merge_counts(record: ParameterRecord, counts: CountRecord) -> None:
@@ -574,6 +577,7 @@ def enrich_summary_entries(summary_entries: list[DesignEntry], detailed_entries:
             block_primitive=summary.block_primitive if summary.block_primitive is not None else detail.block_primitive,
             flag_transitive=summary.flag_transitive if summary.flag_transitive is not None else detail.flag_transitive,
             antiflag_transitive=summary.antiflag_transitive if summary.antiflag_transitive is not None else detail.antiflag_transitive,
+            catalogue_number=summary.catalogue_number,
         )
         for summary, detail in zip(summary_entries, detailed_entries)
     ]
@@ -785,7 +789,18 @@ def collect_records(data_root: Path, repository: str, branch: str, source_folder
                 stats[kind].contributing += 1
                 for param, entries in by_param.items():
                     record = records[kind].setdefault(param, ParameterRecord(param=param))
-                    add_degree_source_group(record, role, degree, url)
+                    if role in {"transitive", "primitive"}:
+                        # Expand the link into individual group IDs, but do not
+                        # change design counting or its source-priority rules.
+                        for entry in entries:
+                            if entry.catalogue_number is None:
+                                stats[kind].unresolved.append(
+                                    f"{source.source_path}: no nr(G) for parameter {list(param)}"
+                                )
+                                continue
+                            add_degree_source_group(record, role, degree, url, entry.catalogue_number)
+                    else:
+                        add_degree_source_group(record, role, degree, url)
                     role_map = contributions[kind].setdefault(param, {})
                     role_map.setdefault(role, []).append(
                         SourceParamContribution(source_path=source.source_path, role=role, entries=entries)
@@ -806,6 +821,8 @@ def collect_records(data_root: Path, repository: str, branch: str, source_folder
             # source-level group name as the corresponding main FT/BT catalogue
             # page.  Do not derive a separate display name from individual
             # Summary-table rows: the main pages use parse_group_label().
+            # Preserve the established readable catalogue name: some GAP
+            # filenames encode punctuation (for example A5d2.g -> A5.2).
             main_group_label = tools.parse_group_label(
                 source.text.splitlines(), Path(source.source_path).stem
             )

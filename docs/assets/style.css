@@ -1833,13 +1833,14 @@ h2 {
   min-width: 0 !important;
   width: auto !important;
   vertical-align: top;
+  text-align: left !important;
 }
 
 .search-group-links {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
 }
 
@@ -1848,7 +1849,7 @@ h2 {
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: normal;
-  text-align: center;
+  text-align: left;
 }
 
 .sidebar-how a.sidebar-current,

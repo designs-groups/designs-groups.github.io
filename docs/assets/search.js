@@ -116,7 +116,7 @@
       a.href = group.url;
       a.target = "_blank";
       a.rel = "noopener noreferrer";
-      a.innerHTML = group.label;
+      a.textContent = group.label;
       a.addEventListener("click", function () {
         if (typeof window.recordDataAccess === "function") window.recordDataAccess();
       });
@@ -171,6 +171,20 @@
     return false;
   }
 
+  function compareGroups(a, b) {
+    function key(value) {
+      const match = /^(Trans|Prim)\((\d+),(\d+)\)/.exec(String(value.label));
+      if (match) return [match[1] === "Trans" ? 0 : 1, Number(match[2]), Number(match[3]), ""];
+      return [2, 0, 0, String(value.label).toLowerCase()];
+    }
+    const left = key(a), right = key(b);
+    for (let i = 0; i < left.length; i += 1) {
+      if (left[i] < right[i]) return -1;
+      if (left[i] > right[i]) return 1;
+    }
+    return 0;
+  }
+
   function groupsForCell(record, kindKey, propertyKey) {
     const choice = selectedKind();
     if (choice === "flag-transitive" && kindKey === "block_transitive") return [];
@@ -179,13 +193,13 @@
     const unique = new Map();
     kindProfiles(record, kindKey).forEach(function (profile) {
       if (!profileMatchesActions(profile) || !profileHasProperty(profile, propertyKey)) return;
-      if (!unique.has(profile.url)) {
-        unique.set(profile.url, { label: profile.label, url: profile.url, source: profile.source });
+      const matched = /^(?:Trans|Prim)\(\d+,\d+\)/.exec(profile.label);
+      const identity = matched ? matched[0] : profile.label;
+      if (!unique.has(identity)) {
+        unique.set(identity, { label: profile.label, url: profile.url, source: profile.source });
       }
     });
-    return Array.from(unique.values()).sort(function (a, b) {
-      return String(a.label).localeCompare(String(b.label));
-    });
+    return Array.from(unique.values()).sort(compareGroups);
   }
 
   function currentFilters() {

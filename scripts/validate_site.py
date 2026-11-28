@@ -398,8 +398,9 @@ def main() -> int:
                             f"for Parameter-set source {source}"
                         )
 
-    # Degree-based Parameter-set sources must be displayed by source label
-    # (Trans(v), Prim(v), Aff(v)) and link to their own .g file.
+    # Degree-based Parameter-set sources must link every recorded catalogue
+    # number, while Affine retains the existing degree-file label.  Never
+    # mistake the row number Nr for nr(G).
     if parameter_module is not None:
         for kind, prefix in parameter_module.CATEGORY_PREFIXES.items():
             page_rel = parameter_module.PARAMETER_SET_PAGES[kind]
@@ -413,8 +414,8 @@ def main() -> int:
                     continue
                 for gfile in sorted(folder_path.rglob("*.g")):
                     source = gfile.relative_to(root).as_posix()
-                    text = gfile.read_text(encoding="utf-8", errors="replace")
-                    entries = parameter_module.summary_table_entries(text, "all designs")
+                    source_text = gfile.read_text(encoding="utf-8", errors="replace")
+                    entries = parameter_module.summary_table_entries(source_text, "all designs")
                     if not entries:
                         continue
                     degree = parameter_module.degree_from_source_path(source)
@@ -422,12 +423,17 @@ def main() -> int:
                         errors.append(f"Degree-based Parameter-set source has invalid filename: {source}")
                         continue
                     labels = {"transitive": "Trans", "primitive": "Prim", "affine": "Aff"}
-                    label = f"{labels[role]}({degree})"
+                    nums = sorted({entry.catalogue_number for entry in entries if entry.catalogue_number is not None})
+                    if role != "affine" and len(nums) == 0:
+                        errors.append(f"Degree-based source has no nr(G) values: {source}")
+                        continue
+                    expected_labels = [f"{labels[role]}({degree},{nr})" for nr in nums] if role != "affine" else [f"Aff({degree})"]
                     encoded_source = urllib.parse.quote(source, safe="/")
                     branch = config.get("branch", "main")
                     view = f"https://raw.githubusercontent.com/{config.get('repository', 'designs-groups/designs-groups.github.io')}/{branch}/{encoded_source}"
-                    if f'>{label}</a>' not in page_text or f'href="{view}"' not in page_text:
-                        errors.append(f"{page_rel} does not display/link degree source {label} from {source}")
+                    for label in expected_labels:
+                        if f'>{label}</a>' not in page_text or f'href="{view}"' not in page_text:
+                            errors.append(f"{page_rel} does not display/link degree source {label} from {source}")
 
     # Search page/data are generated from the same configured .g sources and
     # must preserve the site's raw-file linking rule.
@@ -514,7 +520,12 @@ def main() -> int:
                     for property_key in ("point_primitive", "point_imprimitive", "block_primitive", "block_imprimitive"):
                         groups = record.get(kind_key, {}).get(property_key, [])
                         classified_totals[kind_key] += len(groups)
+                        labels_in_cell = [group.get("label", "") for group in groups]
+                        if len(labels_in_cell) != len(set(labels_in_cell)):
+                            errors.append(f"Search data have repeated group labels for {kind_key} and parameter {record['param']}")
                         for group in groups:
+                            if "/Affine%20groups/" in group.get("url", "") or "/Affine groups/" in group.get("url", ""):
+                                errors.append("Search data must exclude Affine groups")
                             url = group.get("url", "")
                             if not url.startswith("https://raw.githubusercontent.com/") or not urllib.parse.unquote(urllib.parse.urlsplit(url).path).lower().endswith(".g"):
                                 errors.append(f"Search data contain a non-raw .g link: {url}")

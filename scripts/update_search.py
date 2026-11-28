@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 import update_parameter_sets as ps
+from group_notation import display_catalogue_group
 
 PROPERTY_KEYS = (
     "point_primitive",
@@ -22,8 +23,17 @@ def blank_design_entry_map():
     return {}
 
 
+def group_identity(label: str) -> str:
+    import re
+    match = re.match(r"^(?:Trans|Prim)\(\d+,\d+\)", label)
+    return match.group(0) if match else label
+
+
 def add_group(bucket, key: str, label: str, url: str, source_path: str) -> None:
-    bucket[key].setdefault(url, {
+    # Deduplicate by group identifier, not by degree-file URL or structure.
+    # Distinct Trans(v,nr) groups share one file, while one catalogue ID
+    # must occur only once in each result cell.
+    bucket[key].setdefault(group_identity(label), {
         "label": label,
         "url": url,
         "source": source_path,
@@ -50,7 +60,7 @@ def add_entry_properties(bucket, design_entries, entry: ps.DesignEntry, label: s
         "antiflag_transitive": entry.antiflag_transitive,
     }
     key = "|".join([
-        url,
+        group_identity(label),
         str(entry.point_primitive),
         str(entry.block_primitive),
         str(entry.flag_transitive),
@@ -61,20 +71,38 @@ def add_entry_properties(bucket, design_entries, entry: ps.DesignEntry, label: s
 
 def group_type_entries(source: ps.SourceText):
     text = source.text
-    fallback_group = ps.group_label_from_text(text, Path(source.source_path).stem)
-    summary_entries = ps.summary_table_entries(text, "non-isomorphic designs") or ps.summary_table_entries(text)
+    fallback_group = Path(source.source_path).stem
+    summary_entries = (
+        ps.summary_table_entries(text, "reduced designs")
+        or ps.summary_table_entries(text, "all designs")
+        or ps.summary_table_entries(text, "non-isomorphic designs")
+        or ps.summary_table_entries(text)
+    )
     detailed_entries = ps.detailed_design_entries(text, fallback_group)
     record_entries = ps.gap_record_entries(text, fallback_group)
     entries = ps.enrich_summary_entries(summary_entries, detailed_entries) if summary_entries else []
-    entries = entries or detailed_entries or record_entries
-    return entries
+    return entries or detailed_entries or record_entries
+
+
+def group_sort_key(item: dict) -> tuple:
+    import re
+    label = item["label"]
+    match = re.match(r"^(Trans|Prim)\((\d+),(\d+)\)", label)
+    if match:
+        name, degree, nr = match.groups()
+        return (0 if name == "Trans" else 1, int(degree), int(nr), "")
+    return (2, 0, 0, label.casefold())
 
 
 def collect_search_records(data_root: Path, repository: str, branch: str):
     config = json.loads((data_root / "data" / "table_sources.json").read_text(encoding="utf-8"))
     source_folders = ps.relevant_source_folders(config)
-    tools = ps.load_data_tools()
+    # Affine remains in the repository and the Parameter sets builder,
+    # but is explicitly excluded from Search the database.
+    for kind, locations in source_folders.items():
+        source_folders[kind] = {p for p in locations if "/Affine groups" not in p}
     sources, _remote_counts = ps.obtain_sources(data_root, repository, branch, source_folders)
+    tools = ps.load_data_tools()
 
     records = {}
     unresolved = []
@@ -87,12 +115,21 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
             role = ps.parameter_source_role(source.source_path)
             url = ps.raw_url(repository, branch, source.source_path)
 
-            if role in {"transitive", "primitive", "affine"}:
-                by_param, recognized, error = ps.parse_degree_source(source, role)
-                if error:
-                    unresolved.append(error)
-                    continue
-                if not by_param:
+            if role in {"transitive", "primitive"}:
+                # Use the reduced design list when available, then All
+                # designs, then Non-isomorphic designs.  This preference
+                # does not modify Parameter sets enumeration rules.
+                text = source.text
+                entries = (
+                    ps.summary_table_entries(text, "reduced designs")
+                    or ps.summary_table_entries(text, "all designs")
+                    or ps.summary_table_entries(text, "non-isomorphic designs")
+                )
+                if not entries:
+                    if ps.has_no_designs_remark(text):
+                        continue
+                    if ps.all_valid_parameters(text):
+                        unresolved.append(f"{source.source_path}: no parseable degree summary table")
                     continue
                 degree = ps.degree_from_source_path(source.source_path)
                 if degree is None:
@@ -100,9 +137,13 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
                         f"{source.source_path}: {role.title()} search source filename must have the form v_<degree>.g"
                     )
                     continue
-                label = {"transitive": "Trans", "primitive": "Prim", "affine": "Aff"}[role] + f"({degree})"
-                label = html.escape(label)
-                for param, entries in by_param.items():
+                prefix = "Trans" if role == "transitive" else "Prim"
+                for entry in entries:
+                    if entry.param[0] != degree or entry.catalogue_number is None:
+                        unresolved.append(f"{source.source_path}: inconsistent degree or missing nr(G) for {list(entry.param)}")
+                        continue
+                    label = display_catalogue_group(prefix, degree, entry.catalogue_number, entry.group_label)
+                    param = entry.param
                     record = records.setdefault(param, {
                         "param": list(param),
                         "flag_transitive": blank_property_map(),
@@ -110,10 +151,7 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
                         "flag_transitive_design_entries": blank_design_entry_map(),
                         "block_transitive_design_entries": blank_design_entry_map(),
                     })
-                    bucket = record[kind_key]
-                    design_entries = record[kind_key + "_design_entries"]
-                    for entry in entries:
-                        add_entry_properties(bucket, design_entries, entry, label, url, source.source_path)
+                    add_entry_properties(record[kind_key], record[kind_key + "_design_entries"], entry, label, url, source.source_path)
                 continue
 
             entries = group_type_entries(source)
@@ -129,10 +167,11 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
                     continue
                 entries = [ps.DesignEntry(param=candidates[0], group_label="")]
 
-            main_group_label = tools.parse_group_label(
+            # Use the same readable filename convention as the group pages;
+            # A5d2.g, for example, is displayed there as A5.2.
+            label = tools.parse_group_label(
                 source.text.splitlines(), Path(source.source_path).stem
             )
-            label = tools.math_label(main_group_label)
 
             by_param = ps.entries_by_parameter(entries)
             for param, param_entries in by_param.items():
@@ -176,11 +215,11 @@ def collect_search_records(data_root: Path, repository: str, branch: str):
             output[kind_key] = {}
             for property_key in PROPERTY_KEYS:
                 values = list(record[kind_key][property_key].values())
-                values.sort(key=lambda item: (item["label"].casefold(), item["source"].casefold()))
+                values.sort(key=group_sort_key)
                 output[kind_key][property_key] = values
                 kind_group_totals[kind_key] += len(values)
             profiles = list(record[kind_key + "_design_entries"].values())
-            profiles.sort(key=lambda item: (item["label"].casefold(), item["source"].casefold(), str(item["point_primitive"]), str(item["block_primitive"]), str(item["flag_transitive"]), str(item["antiflag_transitive"])))
+            profiles.sort(key=lambda item: (group_sort_key(item), str(item["point_primitive"]), str(item["block_primitive"]), str(item["flag_transitive"]), str(item["antiflag_transitive"])))
             output[kind_key + "_design_entries"] = profiles
         serialized.append(output)
 
