@@ -613,6 +613,12 @@ def main() -> int:
             "Point-<br>imprimitive",
             "Block-<br>primitive",
             "Block-<br>imprimitive",
+            "Flag-<br>transitive",
+            "Antiflag-<br>transitive",
+            'colspan="7" class="count-group-heading"',
+            'data-column="12" data-type="text"',
+            'class="count-column count-flag-transitive"',
+            'class="count-column count-antiflag-transitive"',
             'class="parameter-column"',
             'class="count-column',
             'class="group-column"',
@@ -625,8 +631,11 @@ def main() -> int:
         ):
             if item not in text:
                 errors.append(f"{rel} missing: {item}")
-        if 'class="parameter-set-row"' not in text:
+        rows = re.findall(r'<tr class="parameter-set-row"[^>]*>(.*?)</tr>', text, flags=re.S)
+        if not rows:
             errors.append(f"{rel} contains no generated Parameter sets rows")
+        elif any(len(re.findall(r'<td\b', row)) != 13 for row in rows):
+            errors.append(f"{rel} Parameter sets rows must have 13 cells (seven design-count columns)")
         if "No parameter sets are currently available." in text:
             errors.append(f"{rel} still contains the empty Parameter sets message")
         if re.search(r">(?:transitive|primitive|affine)_\d+</a>", text, re.I):
@@ -635,7 +644,7 @@ def main() -> int:
             errors.append(f"{rel} Parameter-set group links are not raw GAP-file links")
 
     css = (docs / "assets" / "style.css").read_text(encoding="utf-8")
-    for item in ("width: 58px !important", "width: 50.296875px !important", "width: 78px !important", "width: 94px !important", "td:nth-child(11)", "text-align: left !important"):
+    for item in ("width: 58px !important", "width: 50.296875px !important", "width: 78px !important", "width: 94px !important", "td:nth-child(13)", "text-align: left !important"):
         if item not in css:
             errors.append(f"style.css missing: {item}")
 

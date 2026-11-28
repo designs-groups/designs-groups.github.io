@@ -1646,6 +1646,21 @@ h2 {
   max-width: 94px !important;
 }
 
+/* New symmetry counts match the existing number-of-designs columns. */
+.parameter-set-table th.count-flag-transitive,
+.parameter-set-table td.count-flag-transitive-cell {
+  width: 94px !important;
+  min-width: 94px !important;
+  max-width: 94px !important;
+}
+
+.parameter-set-table th.count-antiflag-transitive,
+.parameter-set-table td.count-antiflag-transitive-cell {
+  width: 108px !important;
+  min-width: 108px !important;
+  max-width: 108px !important;
+}
+
 .parameter-set-table th.count-group-heading,
 .parameter-set-table th.count-column,
 .parameter-set-table td.parameter-count {
@@ -1657,7 +1672,7 @@ h2 {
 .parameter-set-table th.group-column,
 .parameter-set-table td.parameter-groups,
 .parameter-set-table td.group-cell,
-.parameter-set-table td:nth-child(11),
+.parameter-set-table td:nth-child(13),
 .parameter-set-table td.parameter-groups a,
 .parameter-set-table td.group-cell a {
   text-align: left !important;
@@ -1667,7 +1682,7 @@ h2 {
 .parameter-set-table th.group-column,
 .parameter-set-table td.parameter-groups,
 .parameter-set-table td.group-cell,
-.parameter-set-table td:nth-child(11) {
+.parameter-set-table td:nth-child(13) {
   width: auto !important;
   min-width: 220px !important;
 }
@@ -1829,10 +1844,16 @@ h2 {
   line-height: 1.15;
 }
 
+/* Each Search data cell begins at the top of its row so group lists
+   in neighbouring FT/BT columns start at the same vertical position. */
+.search-results-table tbody td {
+  vertical-align: top !important;
+}
+
 .search-group-cell {
   min-width: 0 !important;
   width: auto !important;
-  vertical-align: top;
+  vertical-align: top !important;
   text-align: left !important;
 }
 

@@ -55,6 +55,10 @@ class CountRecord:
     block_primitive: int = 0
     block_imprimitive: int = 0
     block_classified: int = 0
+    flag_transitive: int = 0
+    flag_classified: int = 0
+    antiflag_transitive: int = 0
+    antiflag_classified: int = 0
 
 
 @dataclass
@@ -358,6 +362,12 @@ def parse_count_summary_table(text: str) -> CountRecord | None:
         elif label == "block-imprimitive":
             counts.block_imprimitive = value
             found.add("block_imprimitive")
+        elif label == "flag-transitive":
+            counts.flag_transitive = value
+            found.add("flag_transitive")
+        elif label in {"antiflag-transitive", "anti-flag-transitive"}:
+            counts.antiflag_transitive = value
+            found.add("antiflag_transitive")
         elif label == "total":
             counts.total = value
             found.add("total")
@@ -366,6 +376,10 @@ def parse_count_summary_table(text: str) -> CountRecord | None:
         return None
     counts.point_classified = counts.point_primitive + counts.point_imprimitive if {"point_primitive", "point_imprimitive"} <= found else 0
     counts.block_classified = counts.block_primitive + counts.block_imprimitive if {"block_primitive", "block_imprimitive"} <= found else 0
+    # The source's enumeration explicitly covers every design when the
+    # corresponding property has a complete summary row.
+    counts.flag_classified = counts.total if "flag_transitive" in found else 0
+    counts.antiflag_classified = counts.total if "antiflag_transitive" in found else 0
     return counts
 
 
@@ -398,6 +412,14 @@ def add_entry(counts: CountRecord, entry: DesignEntry) -> None:
     elif entry.block_primitive is False:
         counts.block_imprimitive += 1
         counts.block_classified += 1
+    if entry.flag_transitive is not None:
+        counts.flag_classified += 1
+        if entry.flag_transitive:
+            counts.flag_transitive += 1
+    if entry.antiflag_transitive is not None:
+        counts.antiflag_classified += 1
+        if entry.antiflag_transitive:
+            counts.antiflag_transitive += 1
 
 
 def counts_by_parameter(entries: list[DesignEntry]) -> dict[tuple[int, int, int, int, int], CountRecord]:
@@ -554,6 +576,10 @@ def merge_counts(record: ParameterRecord, counts: CountRecord) -> None:
     record.block_primitive += counts.block_primitive
     record.block_imprimitive += counts.block_imprimitive
     record.block_classified += counts.block_classified
+    record.flag_transitive += counts.flag_transitive
+    record.flag_classified += counts.flag_classified
+    record.antiflag_transitive += counts.antiflag_transitive
+    record.antiflag_classified += counts.antiflag_classified
 
 
 def entries_by_parameter(entries: list[DesignEntry]) -> dict[tuple[int, int, int, int, int], list[DesignEntry]]:
@@ -874,7 +900,7 @@ def group_links(record: ParameterRecord) -> tuple[str, str]:
 
 def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) -> str:
     if not records:
-        return '          <tr><td colspan="11" class="empty-row">No parameter sets are currently available.</td></tr>'
+        return '          <tr><td colspan="13" class="empty-row">No parameter sets are currently available.</td></tr>'
 
     lines = []
     for index, param in enumerate(sorted(records)):
@@ -888,6 +914,10 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
         pi_text, pi_sort = display_number(record.point_imprimitive, point_complete)
         bp_text, bp_sort = display_number(record.block_primitive, block_complete)
         bi_text, bi_sort = display_number(record.block_imprimitive, block_complete)
+        flag_complete = record.total_complete and record.flag_classified == record.total
+        antiflag_complete = record.total_complete and record.antiflag_classified == record.total
+        ft_text, ft_sort = display_number(record.flag_transitive, flag_complete)
+        aft_text, aft_sort = display_number(record.antiflag_transitive, antiflag_complete)
         lines.extend([
             f'          <tr class="parameter-set-row" data-original-index="{index}">',
             f'            <td data-sort="{v}">{v}</td>',
@@ -900,6 +930,8 @@ def render_rows(records: dict[tuple[int, int, int, int, int], ParameterRecord]) 
             f'            <td class="parameter-count count-point-imprimitive-cell" data-sort="{pi_sort}">{pi_text}</td>',
             f'            <td class="parameter-count count-block-primitive-cell" data-sort="{bp_sort}">{bp_text}</td>',
             f'            <td class="parameter-count count-block-imprimitive-cell" data-sort="{bi_sort}">{bi_text}</td>',
+            f'            <td class="parameter-count count-flag-transitive-cell" data-sort="{ft_sort}">{ft_text}</td>',
+            f'            <td class="parameter-count count-antiflag-transitive-cell" data-sort="{aft_sort}">{aft_text}</td>',
             f'            <td class="parameter-groups group-cell" style="text-align: left !important;" data-sort="{html.escape(sort_groups, quote=True)}">{links}</td>',
             '          </tr>',
         ])
@@ -915,8 +947,8 @@ def replace_table_header(page: Path) -> None:
             <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="2" data-type="number">\(r\)</button></th>
             <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="3" data-type="number">\(k\)</button></th>
             <th rowspan="2" class="parameter-column"><button type="button" class="parameter-sort" data-column="4" data-type="number">\(\lambda\)</button></th>
-            <th colspan="5" class="count-group-heading">Number of designs</th>
-            <th rowspan="2" class="group-column" style="text-align: left !important;"><button type="button" class="parameter-sort" data-column="10" data-type="text">Group</button></th>
+            <th colspan="7" class="count-group-heading">Number of designs</th>
+            <th rowspan="2" class="group-column" style="text-align: left !important;"><button type="button" class="parameter-sort" data-column="12" data-type="text">Group</button></th>
           </tr>
           <tr>
             <th class="count-column count-total"><button type="button" class="parameter-sort" data-column="5" data-type="number">Total</button></th>
@@ -924,6 +956,8 @@ def replace_table_header(page: Path) -> None:
             <th class="count-column count-point-imprimitive"><button type="button" class="parameter-sort" data-column="7" data-type="number">Point-<br>imprimitive</button></th>
             <th class="count-column count-block-primitive"><button type="button" class="parameter-sort" data-column="8" data-type="number">Block-<br>primitive</button></th>
             <th class="count-column count-block-imprimitive"><button type="button" class="parameter-sort" data-column="9" data-type="number">Block-<br>imprimitive</button></th>
+            <th class="count-column count-flag-transitive"><button type="button" class="parameter-sort" data-column="10" data-type="number">Flag-<br>transitive</button></th>
+            <th class="count-column count-antiflag-transitive"><button type="button" class="parameter-sort" data-column="11" data-type="number">Antiflag-<br>transitive</button></th>
           </tr>
         </thead>'''
     updated, count = re.subn(r"\s*<thead>.*?</thead>", lambda _match: "\n" + thead, text, count=1, flags=re.S)
